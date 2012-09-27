@@ -1,0 +1,1 @@
+http://www.example.com/answers?q_id=1&gt;&quot;&gt;&lt;ScRiPt %0D%0A&gt;alert(413587968783)%3B&lt;/ScRiPt&gt;

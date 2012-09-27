@@ -1,0 +1,1 @@
+javascript:document.cookie=&quot;awse_logged=1;path=/&quot;;

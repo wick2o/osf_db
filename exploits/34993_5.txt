@@ -1,0 +1,28 @@
+GET /..%c0%af/protected/protected.zip HTTP/1.1
+Translate: f
+Connection: close
+Host: www.example.com
+
+GET /prot%c0%afected/protected.zip HTTP/1.1
+Translate: f
+Connection: close
+Host: www.example.com
+
+
+PROPFIND /protec%c0%afted/ HTTP/1.1
+Host: www.example.com
+User-Agent: neo/0.12.2
+Connection: TE
+TE: trailers
+Depth: 1
+Content-Length: 288
+Content-Type: application/xml
+<?xml version="1.0" encoding="utf-8"?>
+<propfind xmlns="DAV:"><prop>
+<getcontentlength xmlns="DAV:"/>
+<getlastmodified xmlns="DAV:"/>
+<executable xmlns="http://apache.org/dav/props/"/>
+<resourcetype xmlns="DAV:"/>
+<checked-in xmlns="DAV:"/>
+<checked-out xmlns="DAV:"/>
+</prop></propfind>

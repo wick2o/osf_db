@@ -1,0 +1,2 @@
+SQLi: POST http://www.example.com/tcexam/admin/code/{script}.php HTTP/1.0
+       - {parameter}={value}[SQLi]

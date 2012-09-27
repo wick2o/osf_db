@@ -1,0 +1,10 @@
+http://obm-host/publication/publication_index.php?tf_title=&amp;sel_type=_ALL_&amp;tf_year=&amp;tf_lang=[XSS]
+http://obm-host/group/group_index.php?action=search&amp;tf_name=[XSS]
+http://obm-host/group/group_index.php?action=search&amp;tf_name=&amp;tf_user=[XSS]
+http://obm-host/user/user_index.php?action=search&amp;tf_login=&amp;tf_lastname=[XSS]
+http://obm-host/list/list_index.php?action=search&amp;tf_name=[XSS]
+http://obm-host/list/list_index.php?action=search&amp;tf_name=&amp;tf_contact=[XSS]
+http://obm-host/company/company_index.php?action=search&amp;tf_name=&amp;tf_phone=&amp;sel_kind=&amp;sel_cat=&amp;tf_cat_code=&amp;cb_cat_tree=&amp;sel_act=&amp;sel_naf=&amp;tf_zip=&amp;cb_archive=&amp;sel_market=&amp;tf_town=&amp;sel_ctry=&amp;sel
+_dsrc=&amp;tf_dateafter=&amp;tf_datebefore=[XSS]
+http://obm-host/company/company_index.php?action=search&amp;tf_name=&amp;tf_phone=&amp;sel_kind=&amp;sel_cat=&amp;tf_cat_code=&amp;cb_cat_tree=&amp;sel_act=&amp;sel_naf=&amp;tf_zip=&amp;cb_archive=&amp;sel_market=&amp;tf_town=&amp;sel_ctry=&amp;sel
+_dsrc=&amp;tf_dateafter=[XSS]

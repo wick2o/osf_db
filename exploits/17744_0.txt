@@ -1,0 +1,1 @@
+http://www.example.com/weblog_posting.php?mode=quote&amp;r=[SQL]&amp;w=1

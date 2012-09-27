@@ -1,0 +1,2 @@
+http://www.example.com/search.jsp?q=%25%22%3Cscript%3Ealert(1)%3C/script%3E
+http://www.example.com/swr.jsp?q=%25&quot;&lt;script&gt;alert(1)&lt;/script&gt;&amp;swrnum=1 

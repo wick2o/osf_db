@@ -1,0 +1,1 @@
+http://www.example.com/ezarticles/articles_1/articles.php?id=6&amp;title=1&lt;script&gt;alert(309558774901)&lt;/script&gt;

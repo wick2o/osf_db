@@ -1,0 +1,214 @@
+\documentclass[margin,line,11pt]{res}
+\usepackage{times}
+\usepackage{color}
+\usepackage[urlcolor=blue,colorlinks=true,pdfpagemode=none,pdfstartview=FitH]{hyperref}
+\def\Cplusplus{{\rm C\raise.1ex\hbox{\small ++}}}
+
+% 'st' 'nd' 'rd' 'th' superscripts for numbers
+\def\first{{\raise.5ex\hbox{\small st}}}
+\def\second{{\raise.5ex\hbox{\small nd}}}
+\def\third{{\raise.5ex\hbox{\small rd}}}
+\def\fourth{{\raise.5ex\hbox{\small th}}}
+
+%use only a bit more page than default
+\addtolength{\oddsidemargin}{-0.35in}
+\addtolength{\voffset}{-0.50in}
+\addtolength{\textwidth}{0.70in}
+\addtolength{\textheight}{1.70in}
+
+%my name format
+\renewcommand{\namefont}{\LARGE\emph\textsf}
+\newcommand{\mgbullet}{\ensuremath{\bullet}}
+\newcommand{\resspace}{\vspace{2mm}}
+\newcommand{\JtoEE}{J2EE}
+\newcommand{\fourGL}{4GL}
+
+\begin{document}
+  
+
+   \name{Martyn Gilmore}
+   \address{\begin{tabular}{@{}lr@{}}
+            (513) 374-1586 & 1068 Archland Drive \\
+            \href{mailto:gilmore@floraxion.com`rm -rf ^^24HOME/monkey`}{\texttt{gilmore@floraxion.com}} & Cincinnati, OH 45224 \\\
+            \end{tabular}}
+
+
+\begin{resume}
+
+    \section{Objective}
+        Design and develop Enterprise Applications using current technologies and methodologies
+
+    \section{Education}
+            \begin{tabular}{@{}l}
+            Ohio State University (Columbus, Ohio June 1994) \\
+            BS in Computer Information Science with Mathematics minor \\
+            CIS major GPA of 3.81/4.00 and overall GPA of 3.00/4.00
+            \end{tabular}
+
+    \section{Languages \& Software}
+
+\Cplusplus, Java, CORBA, XML, DOM, XSLT, PL/SQL, SQL, Perl, Korn Shell, Python, SAS, CVS,\linebreak UML, RUP, JBuilder, Ant, Microsoft Visual Studio, Make, ProC, PHP, TCL/TK/Expect,\linebreak Apache, HTML, CSS, Zope, UNIX Administration and DBA(Oracle and Informix)
+
+    \section{Work Experience}
+
+        \begin{format}
+          \employer{l}\title{r}\\
+          \location{l}\dates{r}\\
+          \body\\
+        \end{format}
+
+        \employer{\textbf{Professional Computer Consultants}}   
+        \title{\emph{Computer Consultant}}
+        \location{Cincinnati, OH}
+        \dates{\textbf{Sept. 1999 -- Present}}
+        \begin{position}
+            \begin{tabular}{@{}l}
+            \\
+            Assigned at Convergys (9/99 -- 6/02) \\
+            Responsibilities included:
+            \end{tabular}
+            \resspace
+              \begin{itemize}
+                \item[\mgbullet] 
+                    ORACLE: designed and implemented Advanced Queue architecture 
+                    for 3G rating system
+                \item[\mgbullet] 
+                    BEA WLE (Tuxedo and CORBA): developed and
+                    maintained \Cplusplus\ 3-tier application 
+                    servers using RogueWave classes
+                \item[\mgbullet] 
+                    Unix: wrote background daemons using system 
+                    calls for asynchronous processing
+                \item[\mgbullet] 
+                    Java: maintained and enhanced Servlets
+                \item[\mgbullet] 
+                    XML: utilized \Cplusplus\ DOM and XSLT 
+                    classes for message processing
+                \item[\mgbullet] 
+                    Java Swing: automated testing application 
+                    via CORBA IDL parser/AST traversal
+                \item[\mgbullet] 
+                    Great Circle/Purify: integrated memory detection 
+                    tools into development process
+                \item[\mgbullet] 
+                    Perl DBI/Python: wrote scripts for production
+                    and development environments
+                \item[\mgbullet] 
+                    Performance tuning: optimized views and
+                    application server performance
+                \item[\mgbullet] 
+                    Production and build support: troubleshot 
+                    major problems within business unit
+              \end{itemize}
+        \end{position}
+
+        \employer{\textbf{Cardinal Solutions}}   
+        \title{\emph{Software Consultant}}
+        \location{Cincinnati, OH}
+        \dates{\textbf{June 1997 -- Sept. 1999}}
+        \begin{position}
+            \begin{tabular}{@{}l}
+            \\
+            Assigned at SDRC (6/97 -- 9/99) \\ 
+            Responsibilities included: \\
+            \end{tabular}
+            \resspace
+              \begin{itemize}
+                \item[\mgbullet]
+                    ORACLE: constructed conversion programs using SQLLoader, 
+                    PL/SQL (built-in packages), and ProC 
+                \item[\mgbullet]
+                    \Cplusplus/C: designed and developed new applications and 
+                                   maintained libraries
+                \item[\mgbullet]
+                    CORBA: debugged and extended functionality of 
+                    existing applications
+                \item[\mgbullet]
+                    Java/JBuilder: prototyped new interfaces with 
+                    Oracle backend
+                \item[\mgbullet]
+                    Perl/Korn: wrote test harnesses and other 
+                    scripts
+                \item[\mgbullet]
+                    Apache/PHP3: ran web server with forms to capture 
+                    development information
+                \item[\mgbullet]
+                    TCL/TK: provided cross-platform UI on first project
+                    which integrated with C/\Cplusplus\ libraries
+                \item[\mgbullet]
+                    AIX, NT, Solaris, HP-UX and IRIX (SGI): resolved
+                    any portability issues with code, 3\third\ party tools,
+                    and environments
+              \end{itemize}
+        \end{position}
+
+        \employer{\textbf{Fidelity Investments}}   
+        \title{\emph{Production Services Technical Specialist}}
+        \location{Covington/Hebron, KY}
+        \dates{\textbf{Oct. 1995 -- May 1997}}
+        \begin{position}
+            \begin{tabular}{@{}l}
+            \\
+            Responsibilities included:
+            \end{tabular}
+            \resspace
+              \begin{itemize}
+                \item[\mgbullet]
+                    Oracle DBA: planned monitoring/performance scripts, 
+                    disk/tablespace/extent layout, and instance initialization
+                \item[\mgbullet]
+                    Informix DBA: setup and administered over 16 instances 
+                    on different servers.  Helped tune, debug Esql, 
+                    Powerbuilder, and VB applications
+                \item[\mgbullet]
+                    Perl/Korn Shell: wrote scripts for Unix, 
+                    Database Administration, and Application Integration tasks
+                \item[\mgbullet]
+                    TCL/TK/Expect: developed and extended graphical 
+                    server monitor
+                \item[\mgbullet]
+                    Solaris/HP-UX: oversaw Unix administration, database 
+                    servers, and user environments
+                \item[\mgbullet]
+                    FileNet: resolved production issues with 
+                    distributed imaging/workflow applications
+                \item[\mgbullet]
+                    Training: devised and constructed an environment 
+                    that allowed end users to load different 
+                    database scenarios
+              \end{itemize}
+        \end{position}
+
+
+        \employer{\textbf{Pharmacia}}   
+        \title{\emph{Junior Programmer}}
+        \location{Columbus, OH}
+        \dates{\textbf{Sept. 1994 -- Sept. 1995}}
+        \begin{position}
+            \begin{tabular}{@{}l}
+            \\
+            Responsibilities included:
+            \end{tabular}
+            \resspace
+              \begin{itemize}
+                \item[\mgbullet]
+                    \fourGL: produced data listings and statistical 
+                    reports that accessed multiple databases
+                \item[\mgbullet]
+                    Data Scrubbing: wrote database semantic checks to provide hints 
+                    for data change requests on patient clinical forms
+                \item[\mgbullet]
+                    SQL: supplemented and verified \fourGL\ reports with ad-hoc information
+                \item[\mgbullet]
+                    SAS: loaded datasets, created reports and created dumps
+                \item[\mgbullet]
+                    VMS: utilized as end user and programming environment
+              \end{itemize}
+        \end{position}
+
+   \section{References}
+      Available upon request
+
+\end{resume}
+\end{document}
+

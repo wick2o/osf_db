@@ -1,0 +1,16 @@
+Vulnerable page : add_ons.php
+Extract from the source :
+ 
+-------------[ add_ons.php ]--------------
+   // On stocke dans une variable simple le add_on demand.
+    $add_on = stripslashes($_GET['add_ons']);
+ 
+    // On recherche si l'add_on est install.
+ 
+    echo 'SELECT id,nom FROM '.$db_prefix.'add_ons WHERE nom="'.$add_on.'"
+AND actif="1"';
+ 
+    $query_add_ons = mysql_query('SELECT id,nom FROM '.$db_prefix.'add_ons
+WHERE nom="'.$add_on.'" AND actif="1"');
+ 
+-------------[ add_ons.php ]----------------

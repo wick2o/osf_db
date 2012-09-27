@@ -1,0 +1,1 @@
+http://www.example.com/[path]/index.php?ukey=news&amp;blog_id=&lt;script&gt;alert(123)&lt;/script&gt;

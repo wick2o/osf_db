@@ -1,0 +1,1 @@
+http://www.example.com/sitecore/login/default.aspx?sc_error=&lt;script&gt;alert(0)&lt;/script&gt;

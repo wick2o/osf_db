@@ -1,0 +1,16 @@
+&lt;html&gt;
+&lt;head&gt;
+ &lt;script language=&quot;JavaScript&quot; DEFER&gt;
+  function Check() {
+   var out = fileUtil.ReadTextFile(somePath);
+   var out = regUtil.ReadValue(somePath);
+
+  }
+ &lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body onload=&quot;JavaScript: return Check();&quot;&gt;
+ &lt;object id=&quot;fileUtil&quot; classid=&quot;clsid:CDAF9CEC-F3EC-4B22-ABA3-9726713560F8&quot; /&gt;
+ &lt;object id=&quot;regUtil&quot;  classid=&quot;clsid:0C378864-D5C4-4D9C-854C-432E3BEC9CCB&quot; /&gt;
+&lt;/body&gt;
+&lt;/html&gt;

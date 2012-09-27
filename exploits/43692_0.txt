@@ -1,0 +1,2 @@
+http://www.example.com/index.php?Login=&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt;
+http://www.example.com/index.php?Password=&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt;

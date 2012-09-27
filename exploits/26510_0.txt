@@ -1,0 +1,6 @@
+/bin/ls -al
+echo
+echo
+echo "heise Security: You are vulnerable."
+echo
+echo

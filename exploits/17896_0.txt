@@ -1,0 +1,4 @@
+http://www.example.com/index.php?pfad=/tmp/
+http://www.example.com/galerie.php?pfad=/home/
+http://www.example.com/index.php?pfad=[XSS]
+http://www.example.com/galerie.php?id=[XSS]

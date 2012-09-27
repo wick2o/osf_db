@@ -1,0 +1,8 @@
+<html>
+<head>
+<title> [XSS String] </title>
+</head>
+<body>
+<a href="http://www.example.com/01-some-forum-thread.html">SEKSCY INJECT TIEM!</a>
+</body>
+</html>

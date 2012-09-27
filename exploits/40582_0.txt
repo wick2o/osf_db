@@ -1,0 +1,1 @@
+http://www.example.com/?%22%3E%3Cscript%3Ealert(/XSS/)%3C/script%3E

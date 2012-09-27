@@ -1,0 +1,1 @@
+http://www.example.com/Aris/wflogin.jsp?errmsg=XSS msg<script>alert('Test XSS')</script>

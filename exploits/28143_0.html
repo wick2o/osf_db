@@ -1,0 +1,105 @@
+<script language="JavaScript">
+
+
+
+	// load new XML document.
+
+	var xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+
+
+
+	function XML(file,list) {
+
+
+
+		/* 
+
+		Available error messages:
+
+		------------------------
+
+		:: parseError.errorCode
+
+		:: parseError.reason
+
+		:: parseError.line
+
+		:: parseError.linePos
+
+		:: parseError.srcText 
+
+		------------------------
+
+		*/
+
+		
+
+    	xmlDoc.async="false";
+
+		xmlDoc.validateOnParse = "true";
+
+		xmlDoc.onreadystatechange=chk;
+
+    	xmlDoc.load(file);
+
+		
+
+		if(list) {
+
+		listXML(xmlDoc.documentElement)
+
+		} else {
+
+		document.write(xmlDoc.parseError.srcText);
+
+		}
+
+	
+
+	}
+
+	
+
+	function chk() {  
+
+ 		return (xmlDoc.readyState!=4) ? false:true;
+
+	} 
+
+
+
+	function listXML(xmlsrc) {
+
+		// for valid DTD files, list the complete tree
+
+		if(xmlsrc.hasChildNodes()) {
+
+		document.write('<ul><li>');
+
+		document.write(xmlsrc.tagName +' => ');
+
+		for(i = 0; i < xmlsrc.childNodes.length; ++i) {
+
+			// recursive walk
+
+			listXML(xmlsrc.childNodes(i));
+
+		}
+
+		document.write('</li></ul>');
+
+		} else {
+
+		document.write(xmlsrc.text);
+
+		}
+
+	}
+
+	
+
+	XML("28143.xml");
+
+	
+
+</script>

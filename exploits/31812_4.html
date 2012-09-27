@@ -1,0 +1,99 @@
+&lt;!--
+* FCKeditor - The text editor for Internet - http://www.Sun
+* Test page for the File Browser connectors.
+--&gt;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+&lt;title&gt;FCKeditor - By Net.Edit0r&lt;/title&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+ 
+&lt;/head&gt;
+&lt;body&gt;
+&lt;table height=&quot;100%&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; width=&quot;100%&quot;
+border=&quot;0&quot;&gt;
+&lt;tr&gt;
+ 
+&lt;td&gt;
+&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Connector:&lt;br /&gt;
+&lt;select id=&quot;cmbConnector&quot; name=&quot;cmbConnector&quot;&gt;
+&lt;option value=&quot;asp/connector.asp&quot; selected=&quot;selected&quot;&gt;ASP&lt;/option&gt;
+&lt;option value=&quot;aspx/connector.aspx&quot;&gt;ASP.Net&lt;/option&gt;
+ 
+&lt;option value=&quot;cfm/connector.cfm&quot;&gt;ColdFusion&lt;/option&gt;
+&lt;option value=&quot;lasso/connector.lasso&quot;&gt;Lasso&lt;/option&gt;
+&lt;option value=&quot;perl/connector.cgi&quot;&gt;Perl&lt;/option&gt;
+&lt;option value=&quot;
+http://www.example.com/includes/FCKeditor/editor/filemanager/browser/default/connectors/php/connector.php
+&quot;&gt;PHP&lt;/option&gt;
+&lt;option value=&quot;py/connector.py&quot;&gt;Python&lt;/option&gt;
+&lt;/select&gt;
+ 
+&lt;/td&gt;
+&lt;td&gt;
+   &lt;/td&gt;
+&lt;td&gt;
+Current Folder&lt;br /&gt;
+&lt;input id=&quot;txtFolder&quot; type=&quot;text&quot; value=&quot;/&quot; name=&quot;txtFolder&quot; /&gt;&lt;/td&gt;
+&lt;td&gt;
+   &lt;/td&gt;
+ 
+&lt;td&gt;
+Resource Type&lt;br /&gt;
+&lt;select id=&quot;cmbType&quot; name=&quot;cmbType&quot;&gt;
+&lt;option value=&quot;File&quot; selected=&quot;selected&quot;&gt;File&lt;/option&gt;
+&lt;option value=&quot;Image&quot;&gt;Image&lt;/option&gt;
+&lt;option value=&quot;Flash&quot;&gt;Flash&lt;/option&gt;
+&lt;option value=&quot;Media&quot;&gt;Media&lt;/option&gt;
+ 
+&lt;option value=&quot;Invalid&quot;&gt;Invalid Type (for testing)&lt;/option&gt;
+&lt;/select&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br /&gt;
+&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; border=&quot;0&quot;&gt;
+&lt;tr&gt;
+ 
+&lt;td valign=&quot;top&quot;&gt;
+&lt;a href=&quot;#&quot; onclick=&quot;GetFolders();&quot;&gt;Get Folders&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+   &lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;a href=&quot;#&quot; onclick=&quot;GetFoldersAndFiles();&quot;&gt;Get Folders and Files&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+   &lt;/td&gt;
+ 
+&lt;td valign=&quot;top&quot;&gt;
+&lt;a href=&quot;#&quot; onclick=&quot;CreateFolder();&quot;&gt;Create Folder&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;
+   &lt;/td&gt;
+&lt;td valign=&quot;top&quot;&gt;
+&lt;form id=&quot;frmUpload&quot; action=&quot;&quot; target=&quot;eRunningFrame&quot; method=&quot;post&quot;
+enctype=&quot;multipart/form-data&quot;&gt;
+File Upload&lt;br /&gt;
+&lt;input id=&quot;txtFileUpload&quot; type=&quot;file&quot; name=&quot;NewFile&quot; /&gt;
+ 
+&lt;input type=&quot;submit&quot; value=&quot;Upload&quot; onclick=&quot;SetAction();&quot; /&gt;
+&lt;/form&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br /&gt;
+URL: &lt;span id=&quot;eUrl&quot;&gt;&lt;/span&gt;
+&lt;/td&gt;
+ 
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height=&quot;100%&quot; valign=&quot;top&quot;&gt;
+&lt;iframe id=&quot;eRunningFrame&quot; src=&quot;javascript:void(0)&quot; name=&quot;eRunningFrame&quot;
+width=&quot;100%&quot;
+height=&quot;100%&quot;&gt;&lt;/iframe&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;

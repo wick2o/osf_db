@@ -1,0 +1,2 @@
+http://www.example.com/images/index.php?gallery=[gallery name]&amp;image=&lt;iframe%20src=&quot;http://www.example.com&quot;&gt;
+http://www.example.com/images/index.php?gallery=[gallery name]&amp;image=&lt;script&gt;alert(&quot;lol&quot;)&lt;script&gt;

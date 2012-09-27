@@ -1,0 +1,14 @@
+Open any userdatail you want (Ex: /userdetails.php?id=1)
+Paste in url bar this code for:
+javascript:TSAjaxRequest('showuploaded'); <---- See Uploaded Torrent
+javascript:TSAjaxRequest('showcompleted'); <---- See Completed Torrent
+javascript:TSAjaxRequest('showleechs'); <---- See In Leech Torrents
+javascript:TSAjaxRequest('showseeds'); <---- See In Seed Torrents
+javascript:TSAjaxRequest('showsnatches'); <---- See Recently Downloaded
+
+Open any torrent file datail (Ex: /details.php?id=1)
+Edit HTML Source code with FireBug or Opera
+Search 'form id="quickrate"' and edit these information:
+<input type="hidden" value="CHAGE_YOUR_ID_HERE" name="userid">
+javascript:TSQuickRate('torrent_1', 'CHAGE_YOUR_ID_HERE');
+Apply changes and vote the torrent every time you want

@@ -1,0 +1,7 @@
+&lt;form method=&quot;pst&quot; action=&quot;http://www.example.com/[admin_Path]/index.php&quot;&gt;
+&lt;input type=&quot;text&quot; name=&quot;txtuserid&quot; class=&quot;INPUT&quot; size=&quot;30&quot; value=&quot;xss injection code&quot;&gt;
+&lt;br&gt;
+&lt;input type=&quot;password&quot; name=&quot;txtpass&quot; class=&quot;INPUT&quot; size=&quot;30&quot; value=&quot;xss injection code&quot;&gt;
+&lt;br&gt;
+&lt;input &lt;input type=&quot;submit&quot; value=&quot;submit&quot; class=&quot;button&quot;&gt;
+&lt;/form&gt;

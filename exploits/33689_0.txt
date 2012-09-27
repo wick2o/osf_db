@@ -1,0 +1,4 @@
+Login: &nbsp;
+Password: 123456
+
+http://www.example.com/bitrix/help/en/index.html?page=javascript:alert(%27XSS%27);

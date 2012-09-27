@@ -1,0 +1,2 @@
+http://www.example.com/forum.php?action=liste&amp;cat=%22%3E%3Cscript%
+3Ealert%281%29;%3C/script%3E

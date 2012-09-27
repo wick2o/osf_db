@@ -1,0 +1,3 @@
+http://www.example.com/header.php?siteName=&lt;XSS&gt;&amp;title=&lt;XSS&gt;&amp;style=&lt;XSS&gt;
+http://www.example.com/search.php?query=&lt;XSS&gt;
+

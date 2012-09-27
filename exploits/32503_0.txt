@@ -1,0 +1,1 @@
+http://www.example.com/path/?DisplayFormat=&gt;&quot;&gt;&lt;ScRiPt&gt;alert(1369)%3B&lt;/ScRiPt&gt;&amp;Action=Pouya_Server

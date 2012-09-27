@@ -1,0 +1,1 @@
+http://www.example.com/index.php?start=&quot;&gt;&lt;script&gt;alert()&lt;/script&gt;

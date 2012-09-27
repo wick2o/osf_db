@@ -1,0 +1,1 @@
+http://www.example.com/[hpc_path]/administration/tblcontent/login1.php?msg=[xss]

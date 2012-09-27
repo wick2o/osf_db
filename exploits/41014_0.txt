@@ -1,0 +1,2 @@
+http://www.example.com/iboutique/index.php?page=[sqli]
+http://www.example.com/iboutique/index.php?page=&#039;&quot;--&gt;&lt;script&gt;alert(0x000872)&lt;/script&gt;

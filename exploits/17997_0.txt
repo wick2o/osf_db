@@ -1,0 +1,2 @@
+http://www.example.com/path/search.php/&quot;&gt;&lt;script&gt;alert(/Soot/)&lt;/script&gt;
+http://www.example.com/path/search.php?category=&quot;&gt;&lt;script&gt;alert(/Soot/)&lt;/script&gt;

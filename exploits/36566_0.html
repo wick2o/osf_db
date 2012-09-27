@@ -1,0 +1,11 @@
+&lt;object classid=&#039;clsid:00200338-3D33-4FFC-AC20-67AA234325F3&#039; id=&#039;test&#039;&gt;&lt;/object&gt;
+
+&lt;input language=VBScript onclick=tryMe() type=button value=&#039;Click here to start the test&#039;&gt;
+
+&lt;script language=&#039;vbscript&#039;&gt;
+ Sub tryMe
+  test.SetLogLevel 1
+  test.SetLogFileName &quot;c:\some.txt&quot;
+  test.WriteToLog 1, &quot;Hello World!&quot;
+ End Sub
+&lt;/script&gt;

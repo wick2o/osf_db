@@ -1,0 +1,3 @@
+javascript:document.cookie="username_cookie=admin";
+javascript:document.cookie="right_cookie=1";
+javascript:document.cookie="id_cookie=1";

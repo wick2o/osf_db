@@ -1,0 +1,1 @@
+Http://www.example.com/[Path]/war.php?page=[SQL] &amp; [XSS]

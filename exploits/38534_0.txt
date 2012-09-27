@@ -1,0 +1,2 @@
+
+http://www.example.com/sas5/index.jsp?error_msg_parameter=%3CScRiPt%3Ealert%28%27XSS%27%29%3C/ScRiPt%3E

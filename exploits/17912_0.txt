@@ -1,0 +1,1 @@
+http://www.example.com/linkdirectory/search_result.asp?Category=2&amp;keyword=%27+or+%27%3D%27&amp;mode=date

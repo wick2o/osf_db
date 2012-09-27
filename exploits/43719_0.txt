@@ -1,0 +1,3 @@
+http://www.example.com/index.php?catid=1&gt;&#039;&gt;&lt;Script%20%0d%0a&gt;Alert XSS(406115679152)%3B&lt;/Script&gt;
+http://www.example.com/index.php?id=1&lt;script&gt;Alert XSS&lt;/script&gt;
+

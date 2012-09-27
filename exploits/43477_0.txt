@@ -1,0 +1,1 @@
+http://www.example.com/account.php?smw&amp;red_url=1&gt;&quot;&gt;&lt;ScRiPt %0A%0D&gt;alert(322094267678)%3B&lt;/ScRiPt&gt;

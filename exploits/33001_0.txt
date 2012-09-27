@@ -1,0 +1,1 @@
+http://www.example.com/index.php?mode=select&amp;category=&gt;&quot;&gt;&lt;ScRiPt%20%0a%0d&gt;alert(0)%3B&lt;/ScRiPt&gt;

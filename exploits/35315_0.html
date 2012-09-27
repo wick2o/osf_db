@@ -1,0 +1,21 @@
+&lt;html&gt;
+&lt;body onunload=&#039;intercept()&#039;&gt;
+&lt;script&gt;
+
+function intercept() {
+  setTimeout(&#039;update_page()&#039;,10);
+  stop();
+}
+
+function update_page() {
+  document.getElementById(&#039;hideme&#039;).style.visibility = &quot;hidden&quot;;
+  document.getElementById(&#039;showme&#039;).style.visibility = &quot;visible&quot;;
+  document.getElementById(&#039;sitename&#039;).innerHTML = document.location;
+}
+
+&lt;/script&gt;
+&lt;span id=showme style=&quot;visibility: hidden&quot;&gt;
+&lt;font size=+1 color=teal&gt;This is a spoofed version of &lt;b&gt;&lt;span id=sitename&gt;&lt;/span&gt;&lt;/b&gt;&lt;/font&gt;
+&lt;/span&gt;
+&lt;br&gt;
+&lt;span id=hideme&gt;Please navigate away from this page.&lt;/span&gt;

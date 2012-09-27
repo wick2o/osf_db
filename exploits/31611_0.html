@@ -1,0 +1,33 @@
+&lt;script&gt;
+function a()
+{
+s=&quot;&quot;;
+h=&quot;&quot;;
+for(i=0;i&lt;window.frames.length;i++)
+{
+    d=window.frames[i].document;
+    for(j=0;j&lt;d.links.length;j++)
+    {
+        u=d.links[j].text
+        s+=u+&quot;\n&quot;;
+        h+=&quot;&lt;img src=\&quot;&quot;+u+&quot;\&quot;&gt;&quot;;
+    }
+}
+document.getElementById(&quot;t&quot;).value=s;
+document.getElementById(&quot;x&quot;).innerHTML=h;
+}
+&lt;/script&gt;
+&lt;a href=&quot;javascript:a();&quot;&gt;Start Test&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;javascript:window.location=location.href&quot;&gt;Load This Page Again&lt;/a&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;List of files that you recently fetched from the internet:&lt;/b&gt;&lt;br&gt;
+&lt;textarea rows=&quot;10&quot; cols=&quot;100&quot; id=t wrap=off&gt;&lt;/textarea&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;List of images that you recently viewed on the internet:&lt;/b&gt;&lt;br&gt;
+&lt;div id=x&gt;&lt;/div&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;iframe width=300 height=200 src=&quot;testurl1.url&quot;&gt;&lt;/iframe&gt;
+&lt;iframe width=300 height=200 src=&quot;testurl2.url&quot;&gt;&lt;/iframe&gt;

@@ -1,0 +1,2 @@
+https://www.example.com/sx-users?op=setUsr&amp;ag=&amp;rg=&amp;nm=root&amp;hd=%2Froot&amp;pw=test&amp;pwc=test&amp;grpSlct=
+

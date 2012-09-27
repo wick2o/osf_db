@@ -1,0 +1,1 @@
+http://www.example.com/error.php?err=200&amp;uname=victim&amp;email=attacker@example.com

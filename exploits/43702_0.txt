@@ -1,0 +1,2 @@
+javascript:document.cookie=&quot;logged=696d29e0940a4957748fe3fc9efd22a3; path=/&quot;;
+696d29e0940a4957748fe3fc9efd22a3 = password

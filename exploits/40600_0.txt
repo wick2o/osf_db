@@ -1,0 +1,1 @@
+https://www.example.com/forum/bookmarks/insert/2/1.page?action=insertSave&description=<XSS>&module=bookmarks&relation_id=1&relation_type=2&title=<XSS>&visible=1

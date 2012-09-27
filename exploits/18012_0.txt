@@ -1,0 +1,2 @@
+http://www.example.com/admin.php/"><script>alert('xss')</script>
+

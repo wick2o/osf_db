@@ -1,0 +1,8 @@
+http://www.example.com/show.php?UserID=$UserID&amp;MAINID=6&amp;sobjectID=[SQl]
+http://www.example.com/show.php?UserID=$UserID&amp;MAINID=[SQL]
+http://www.example.com/language.php?Action=[SQL]
+http://www.example.com/meaning.php?Action=1&amp;ShowByQuranID=1&amp;QuranID=[SQL]
+http://www.example.com/meaning.php?Action=1&amp;ShowByQuranID=[SQL]
+http://www.example.com/meaning.php?Action=[SQL]
+http://www.example.com/subject.php?MainID=[SQL]
+

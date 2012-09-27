@@ -1,0 +1,6 @@
+http://www.example.com/templates/deluxe/postreply.php?templatefolder=[file]
+http://www.example.com/templates/deluxe/posting.php?templatefolder=[file]
+http://www.example.com/templates/deluxe/pm/newpm.php?templatefolder=[file]
+http://www.example.com/templates/default/postreply.php?templatefolder=[file]
+http://www.example.com/templates/default/posting.php?templatefolder=[file]
+http://www.example.com/templates/default/pm/newpm.php?templatefolder=[file]

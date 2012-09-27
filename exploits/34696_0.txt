@@ -1,0 +1,10 @@
+<object classid='clsid:7972D5BE-2213-4B28-884C-F8F82432EAA5' id='test'></object>
+
+<input language=VBScript onclick=tryMe() type=button value='Click here to start the test'>
+
+<script language='vbscript'>
+ Sub tryMe
+  test.SetupDeleteVolume()
+ End Sub
+</script>
+

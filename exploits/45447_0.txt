@@ -1,0 +1,1 @@
+http://www.example.com/slickmsg/views/Site/error.php?error=&lt;script&gt;alert(&#039;XSS&#039;)&lt;/script&gt;

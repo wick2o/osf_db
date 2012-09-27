@@ -1,0 +1,16 @@
+SQL injection vulnerability affects:
+ 
+- http://www.example.com/path/index.php?cat_id=%27
+ 
+- http://www.example.com/path/view_product.php?product=%27
+ 
+- http://www.example.com/path/view_cart.php?add=%27
+ 
+ 
+XSS vulnerability affects:
+ 
+- http://www.example.com/path/search.php
+ 
+admin page:
+ 
+- http://www.example.com/path/admin/login.php

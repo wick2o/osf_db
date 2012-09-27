@@ -1,0 +1,1 @@
+$ mysql --html --execute &quot;select &#039;&lt;a&gt;&#039;&quot; ... &lt;TABLE BORDER=1&gt;&lt;TR&gt;&lt;TH&gt;&lt;a&gt;&lt;/TH&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;a&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;

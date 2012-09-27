@@ -1,0 +1,23 @@
+#/usr/bin/env python
+import sys
+import random
+
+CHAR_SET = [chr(x) for x in range(0x20)]
+CHAR_SET += [chr(x) for x in range(128, 256)]
+
+def send_file():
+      l = 800000 + 4096
+      print "Content-Type: text/plain"
+      print "Content-Length: %d" % l
+      print "Cache-Control: no-cache, no-store, must-revalidate"
+      # this is not standardized, but use it anyway
+      print "Pragma: no-cache"
+      print ""
+      # bypass IE download dialog
+      sys.stdout.write("a" * 4096)
+      # print junks
+      for i in xrange(l):
+              sys.stdout.write(random.choice(CHAR_SET))
+      sys.exit()
+
+send_file()

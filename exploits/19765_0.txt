@@ -1,0 +1,3 @@
+http://www.example.com/[script_path]/confirm.php?include_location=http://www.example.com?
+http://www.example.com/[script_path]/index.php?include_location=http://www.example.com?
+http://www.example.com/[script_path]/login.php?include_location=http://www.example.com?

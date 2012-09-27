@@ -1,0 +1,1 @@
+http://www.example.com/awcm/search.php?search=&lt;script&gt;alert(&quot;SecPod-XSS-Test&quot;)&lt;/script&gt;&amp;where=all 

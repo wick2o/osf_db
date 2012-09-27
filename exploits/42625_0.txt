@@ -1,0 +1,8 @@
+# cat t/tst.test
+# The file might exist or not, it does not make any difference.
+# --send is important
+
+CREATE TABLE test.t_load (id INT NOT NULL);
+--send LOAD DATA LOCAL INFILE 'tb.txt' INTO TABLE test.t_load
+
+#<EOF>

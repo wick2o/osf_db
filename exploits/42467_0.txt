@@ -1,0 +1,30 @@
+&lt;script type=&quot;text/javascript&quot;&gt;
+function fuckie()
+{
+var szInput = document.shit.input.value;
+var szStaticHTML = toStaticHTML(szInput);
+
+ResultComment = szStaticHTML;
+document.shit.output.value = ResultComment;
+}
+&lt;/script&gt;
+
+&lt;form name=&quot;shit&quot;&gt;
+&lt;textarea name=&#039;input&#039; cols=40 rows=20&gt;
+&lt;/textarea&gt;
+&lt;textarea name=&#039;output&#039; cols=40 rows=20&gt;
+&lt;/textarea&gt;
+
+&lt;input type=button value=&quot;fuck_me&quot; name=&quot;fuck&quot; onclick=fuckie();&gt;
+&lt;/form&gt;
+
+
+&lt;style&gt;
+
+} () import &lt;%7D () import&gt; url(&#039;//127.0.0.1/1.css&#039;);aaa
+
+{;}
+
+&lt;/style&gt;
+
+&lt;div id=&quot;x&quot;&gt;Fuck Ie&lt;/div&gt;

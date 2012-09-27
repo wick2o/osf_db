@@ -1,0 +1,1 @@
+http://www.example.com/?s=&amp;quot;%20%3e%3c/input%3e%3cScRiPt%3ealert(123)%3c/ScRiPt%3e

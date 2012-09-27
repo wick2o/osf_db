@@ -1,0 +1,22 @@
+&lt;html&gt;
+&lt;script&gt;
+function test()
+{
+var obj;
+var x;
+
+x = &quot;AAAA&quot;;
+
+for (i=0;i&lt;=21;++i)
+x += x;
+
+obj = document.getElementById(&#039;testObj&#039;);
+obj.StoreLicense(x);
+}
+&lt;/script&gt;
+&lt;body onload=&quot;test();&quot;&gt;
+&lt;object id=&#039;testObj&#039;
+classid=&quot;CLSID:{760c4b83-e211-11d2-bf3e-00805fbe84a6}&quot;&gt;
+&lt;/object&gt;
+&lt;/body&gt;
+&lt;/html&gt;

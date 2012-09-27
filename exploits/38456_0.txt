@@ -1,0 +1,1 @@
+http://www.example.com/htim_enu/start.swe/?>'"><script>alert('XSS by Lament')</script>

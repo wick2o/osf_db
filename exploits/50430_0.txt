@@ -1,0 +1,8 @@
+<html>
+<body>
+<object id="target" classid="CLSID:19BA6EE6-4BB4-11D1-8085-0020AFC8C4AF"></object>
+<script>
+    target.GetPromoticSite();
+</script>
+</body>
+</html>

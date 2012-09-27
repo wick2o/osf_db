@@ -1,0 +1,1 @@
+http://www.example.com/index.php?action=login&amp;message=&lt;IMG SRC=javascript:alert(&#039;XSS&#039;)&gt;+email&amp;lang=

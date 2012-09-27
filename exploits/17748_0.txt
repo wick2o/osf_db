@@ -1,0 +1,2 @@
+http://www.example.com/top.php?sessionid=[SQL]
+http://www.example.com/member.php?action=mailform&amp;user_id=366&amp;sessionid=[SQL]

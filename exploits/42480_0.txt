@@ -1,0 +1,1 @@
+http://www.example.com/questiondetail.php?questionid=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;

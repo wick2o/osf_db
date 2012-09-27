@@ -1,0 +1,13 @@
+
+Since the vendor did not reply we attempted to create our own
+fixes for this issue. The vulnerability exist in “login2.php”
+on lines 20 and 21.
+17	if(!isset($_POST['username'])) header("Location: login.php?error_username");
+18	if(!isset($_POST['password'])) header("Location: login.php?error_password");
+19
+20	$user = $_POST['username'];
+21	$pass = $_POST['password'];
+If the lines 20 and 21 are changed to:
+$user = mysql_real_escape_string($_POST['username']);
+$pass = mysql_real_escape_string($_POST['password']);
+This will prevent the sql injection from happening in the user name field.

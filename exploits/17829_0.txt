@@ -1,0 +1,7 @@
+http://www.example.com/login.asp?SessionID=[SQL]
+http://www.example.com/browse0.htm?ProductIndex=[SQL]
+http://www.example.com/login.asp?SessionID=[XSS]
+http://www.example.com/browse0.htm?ProductIndex=[XSS]
+http://www.example.com/include/result.asp?debug=print&amp;cols=3&amp;linecolor=%23AAAAAA&amp;menu=category&amp;body=bodyblue&amp;bold=bodyheading&amp;hlcolor=%2388C4FF&amp;bgcolor=%23E0FFE0&amp;menucolor=%23E0FFE0&amp;hdcolor=%23B0B0B0&amp;idcolor=%23FFFFFF&amp;header=bodywhite&amp;rowcolor=[XSS]
+http://www.example.com/include/result.asp?debug=print&amp;cols=3&amp;linec
+olor=%23AAAAAA&amp;menu=category&amp;body=bodyblue&amp;bold=bodyheading&amp;hlcolor=%2388C4FF&amp;bgcolor=%23E0FFE0&amp;menucolor=%23E0FFE0&amp;hdcolor=%23B0B0B0&amp;idcolor=%23FFFFFF&amp;header=bodywhite&amp;rowcolor=%23E0FFE0&amp;row=bodyblack&amp;label=bodyblue&amp;heading=[XSS]

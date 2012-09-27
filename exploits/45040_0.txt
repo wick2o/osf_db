@@ -1,0 +1,1 @@
+Email: email@example.com&lt;/textarea&gt;&lt;script&gt;alert(&#039;XSS vulnerability&#039;)&lt;/script&gt;

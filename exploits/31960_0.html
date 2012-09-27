@@ -1,0 +1,22 @@
+&lt;a 
+href=&quot;http://www.example.com&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;n &lt;http://www.example.com&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;n/&gt; 
+bsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;
+nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbs
+p;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nb
+sp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;n
+bsp;&amp;nbsp;.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;.phish.site/&quot;&gt;Example&lt;/a&gt;
+(In words, this is &lt;a href=&quot;http://www.example.com &lt;http://www.example.com/&gt; 
+followed by 30 ampersand-NBSP-semicolon, followed by a dot followed by 
+another 31 ampersand-NBSP-semicolon followed by a dot, followed by 
+13 ampersand-NBSP-semicolon followed by a dot followed by 
+phish.site/&quot;&gt;Example&lt;/a&gt;)
+
+This causes a link whose URL appears, IN THE ADDRESS BAR, as (may wrap around):
+http://www.example.com                              .
+.             .phish.site/
+
+(In words, this appears like &quot;http://www.example.com&quot; &lt;http://www.example.com%22/&gt; ; followed by
+30 spaces, a dot, 31 spaces, a dot, 13 spaces, a dot and finally &quot;phish.site/&quot;)
+

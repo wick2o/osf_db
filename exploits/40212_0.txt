@@ -1,0 +1,8 @@
+HTML Injection
+
+&lt;script&gt;alert('Stored XSS')&lt;/script&gt;
+
+SQL Injection
+
+aa' OR [SQL] OR 'a'='1
+

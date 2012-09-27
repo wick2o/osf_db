@@ -1,0 +1,1 @@
+http://www.example.com/theme/META-INF/&gt;+ACJ-+AD4APB-SCRIPT+AD7-alert(+ACI-DSecRG_XSS+ACI-)+ADz-/SCRIPT+AD7-

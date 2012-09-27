@@ -1,0 +1,1 @@
+http://www.example.com/[ubbpath]/index.php?debug=[xss]

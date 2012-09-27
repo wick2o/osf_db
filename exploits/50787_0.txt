@@ -1,0 +1,8 @@
+GET: https://www.example.com/index.php?main_page=gv_send&amp;action=send
+POST: message=&lt;/textarea&gt;&lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;&lt;textarea&gt; 
+
+line 72: echo &#039;&lt;br /&gt;&lt;strong&gt;TESTING INFO:&lt;/strong&gt; Time page: &lt;strong&gt;&#039; . $_GET[&#039;main_page&#039;] . &#039;&lt;/strong&gt; was loaded is: &lt;strong&gt;&#039; . date(&#039;H:i:s&#039;, time()) . &#039;&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&#039;;
+...
+line 75: echo &quot;GLOBALS[$main_page] and HTTP_GET_VARS[&#039;main_page&#039;] and _GET[&#039;main_page&#039;] = &quot; . $GLOBALS[&#039;main_page&#039;] . &#039; - &#039; . $HTTP_GET_VARS[&#039;main_page&#039;] . &#039; - &#039; . $_GET[&#039;main_page&#039;] . &#039;&lt;br /&gt;&lt;br /&gt;&#039;;
+...
+line 76: echo &quot;_SERVER[&#039;PHP_SELF&#039;] and _GET[&#039;PHP_SELF&#039;] and PHP_SELF and _SESSION[&#039;PHP_SELF&#039;] = &quot; . $_SERVER[&#039;PHP_SELF&#039;] . &#039; - &#039; . $_GET[&#039;PHP_SELF&#039;] . &#039; - &#039; . $PHP_SELF . &#039; - &#039; . $_SESSION[&#039;PHP_SELF&#039;] . &#039;&lt;br /&gt;&lt;br /&gt;&#039;; 

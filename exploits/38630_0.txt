@@ -1,0 +1,2 @@
+
+http://www.example.com/forum1/post.aspx?action=reply&amp;threadid=&quot;&gt;&lt;script&gt;alert(/liscker/);&lt;/script&gt;

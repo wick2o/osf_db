@@ -1,0 +1,1 @@
+http://www.example.com/links.php?new_input=[XSS]&amp;new_url=[XSS]&amp;new_name=[XSS]

@@ -1,0 +1,75 @@
+Source code snippet from vulnerable script "like.php":
+-----------------[ source code start ]---------------------------------
+protected function _unsubscribe()
+{
+/* Fetch data */
+$key = trim( IPSText::base64_decode_urlSafe( $this->request['key'] ) );
+
+list( $app, $area, $relId, $likeMemberId, $memberId, $email ) = explode( ';', $key );
+
+/* Member? */
+if ( ! $this->memberData['member_id'] )
+{
+$this->registry->output->showError( 'no_permission', 'pcgl-1' );
+}
+
+if ( ! $app || ! $area || ! $relId )
+{
+$this->registry->output->showError( 'no_permission', 'pcgl-1' );
+}
+
+if ( ( $memberId != $likeMemberId ) || ( $memberId != $this->memberData['member_id'] ) )
+{
+$this->registry->output->showError( 'no_permission', 'pcgl-2' );
+}
+
+if ( $email != $this->memberData['email'] )
+{
+$this->registry->output->showError( 'no_permission', 'pcgl-3' );
+}
+
+/* Think we're safe... */
+$this->_like = classes_like::bootstrap( $app, $area );
+-----------------[ source code end ]-----------------------------------
+
+As seen above, user submitted parameter "key" is first base64 decoded and then
+splitted to six variables. After multiple checks function "bootstrap()" is called,
+using unvalidated user submitted data for arguments.
+
+Source code snippet from vulnerable script "composite.php":
+-----------------[ source code start ]---------------------------------
+static public function bootstrap( $app=null, $area=null )
+{
+...
+if( $area != 'default' )
+{
+$_file = IPSLib::getAppDir( $app ) . '/extensions/like/' . $area . '.php';
+...
+}
+...
+if ( ! is_file( $_file ) )
+{
+...
+throw new Exception( "No like class available for $app - $area" );
+...
+}
+...
+$classToLoad = IPSLib::loadLibrary( $_file, $_class, $app );
+-----------------[ source code end ]-----------------------------------
+
+We can see, that variable "$_file" is composed using unvalidated argument "area".
+Next there is check for file existence and in case of success next function,
+"loadLibrary", is called, using unvalidated argument "$_file".
+
+
+Source code snippet from vulnerable script "core.php":
+-----------------[ source code start ]---------------------------------
+static public function loadLibrary( $filePath, $className, $app='core' )
+{
+/* Get the class */
+if ( $filePath != '' )
+{
+require_once( $filePath );/*noLibHook*/
+}
+-----------------[ source code end ]-----------------------------------
+

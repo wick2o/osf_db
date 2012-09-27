@@ -1,0 +1,13 @@
+&lt;html&gt;&lt;head&gt;&lt;title&gt; Bug 489647 -  New 1.9.0.9 topcrash [@nsTextFrame::ClearTextRun()]&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;a&quot; style=&quot;white-space: pre;&quot;&gt;
+m&lt;/div&gt;
+&lt;script&gt;
+function doe() {
+  document.getElementById(&#039;a&#039;).childNodes[0].splitText(1);
+}
+setTimeout(doe, 100);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+

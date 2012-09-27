@@ -1,0 +1,5 @@
+http://www.example.com/path/login.asp
+
+Use this information:
+Username:admin
+Password:&#039;OR&#039;

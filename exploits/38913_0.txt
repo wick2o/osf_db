@@ -1,0 +1,2 @@
+Paste the following code into the description field:
+<SCRIPT>alert("XSS Vulnerable")</SCRIPT>

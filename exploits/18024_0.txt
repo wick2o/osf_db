@@ -1,0 +1,1 @@
+http://www.example.com/cgi-bin/lshop.cgi?action=showdetail&artnum=10[' UNION SELECT OR OTHER SQL]&wkid=2002g&ls=d&nocache=

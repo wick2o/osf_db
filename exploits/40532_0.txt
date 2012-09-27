@@ -1,0 +1,1 @@
+http://www.example.com/cms_data.php?page=%22%3E%3Cscript%3Ealert%281%29;%3C/script%3E

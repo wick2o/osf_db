@@ -1,0 +1,23 @@
+
+&lt;html&gt;&lt;body&gt; 
+&lt;script&gt; 
+ 
+  function G(str){
+    var cobj=document.createElement(str);
+    document.body.appendChild(cobj);
+    cobj.scrollWidth;
+  }
+ 
+  function crashme() {
+    document.write(&quot;fooFOO&quot;);
+    G(&quot;a&quot;);
+    document.write(&quot;&lt;a lang&gt;&lt;/a&gt;a&quot;);
+    G(&quot;base&quot;);
+    document.write(&quot;barBAR&quot;);
+    G(&quot;audio&quot;);
+  }
+&lt;/script&gt; 
+&lt;script&gt;crashme();&lt;/script&gt; 
+&lt;/body&gt; 
+&lt;/html&gt; 
+

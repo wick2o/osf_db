@@ -1,0 +1,32 @@
+&lt;form method=&quot;post&quot; action=&quot;http://www.example.com/metabbs/admin/settings/?&quot;&gt;
+&lt;dl&gt;
+        &lt;dt&gt;&lt;label for=&quot;settings_admin_password&quot;&gt;Admin password&lt;/label&gt;&lt;/dt&gt;
+        &lt;dd&gt;&lt;input id=&quot;settings_admin_password&quot; size=&quot;20&quot; name=&quot;settings[admin_password]&quot; value=&quot;&quot; type=&quot;password&quot; /&gt;&lt;/dd&gt;
+        
+        &lt;dt&gt;&lt;label for=&quot;settings_global_header&quot;&gt;Header file&lt;/label&gt;&lt;/dt&gt;
+        &lt;dd&gt;&lt;input id=&quot;settings_global_header&quot; size=&quot;30&quot; name=&quot;settings[global_header]&quot; value=&quot;&quot; type=&quot;text&quot; /&gt;&lt;/dd&gt;
+
+        &lt;dt&gt;&lt;label for=&quot;settings_global_footer&quot;&gt;Footer File&lt;/label&gt;&lt;/dt&gt;
+        &lt;dd&gt;&lt;input id=&quot;settings_global_footer&quot; size=&quot;30&quot; name=&quot;settings[global_footer]&quot; value=&quot;&quot; type=&quot;text&quot; /&gt;&lt;/dd&gt;
+
+        &lt;dt&gt;&lt;label for=&quot;settings_theme&quot;&gt;Site theme&lt;/label&gt;&lt;/dt&gt;
+        &lt;dd&gt;&lt;input id=&quot;settings_theme&quot; size=&quot;30&quot; name=&quot;settings[theme]&quot; value=&quot;&quot; type=&quot;text&quot; /&gt;&lt;/dd&gt;
+
+        &lt;dt&gt;&lt;label for=&quot;settings_default_language&quot;&gt;Language&lt;/label&gt;&lt;/dt&gt;
+        &lt;dd&gt;
+                &lt;dd&gt;&lt;input id=&quot;ettings_default_language&quot; size=&quot;30&quot; name=&quot;settings[default_language]&quot; value=&quot;&quot; type=&quot;text&quot; /&gt;&lt;/dd&gt;
+                &lt;input name=&quot;settings[always_use_default_language]&quot; value=&quot;0&quot; type=&quot;hidden&quot; /&gt;&lt;input id=&quot;settings_always_use_default_language&quot; name=&quot;settings[always_use_default_language]&quot; value=&quot;1&quot; type=&quot;checkbox&quot; /&gt;                
+        &lt;label for=&quot;settings_always_use_default_language&quot;&gt;Always Use Default Language&lt;/label&gt;   &lt;/dd&gt;
+
+        &lt;dt&gt;&lt;label for=&quot;settings_timezone&quot;&gt;TimeZone&lt;/label&gt;&lt;/dt&gt;
+        &lt;dd&gt;
+                &lt;dd&gt;&lt;input id=&quot;settings_timezone&quot; size=&quot;30&quot; name=&quot;settings[timezone]&quot; value=&quot;&quot; type=&quot;text&quot; /&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h2&gt;Advanced Setting&lt;/h2&gt;
+&lt;p&gt;&lt;input name=&quot;settings[force_fancy_url]&quot; value=&quot;0&quot; type=&quot;hidden&quot; /&gt;
+&lt;input id=&quot;settings_force_fancy_url&quot; name=&quot;settings[force_fancy_url]&quot; value=&quot;1&quot; type=&quot;checkbox&quot; /&gt; 
+&lt;label for=&quot;settings_force_fancy_url&quot;&gt;Fancy URL Force Apply&lt;/label&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;input type=&quot;submit&quot; value=&quot;OK&quot; /&gt;&lt;/p&gt;
+&lt;/form&gt;

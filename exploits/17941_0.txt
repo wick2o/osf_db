@@ -1,0 +1,3 @@
+http://www.example.com/Results.cfm?category=[SQL]
+http://www.example.com/Results.cfm?keywords=[SQL]
+http://www.example.com/Details.cfm?ProdID=[SQL]

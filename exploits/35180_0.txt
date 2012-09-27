@@ -1,0 +1,1 @@
+http://www.example.com/modules.php?name=Downloads&amp;d_op=search&amp;query=&#039;&#039;;!--&quot;[script]alert(document.cookie)[/script]

@@ -1,0 +1,1 @@
+http://www.example.com/Simpnews/wap_short_news.php?path_simpnews=Command-Shell

@@ -1,0 +1,1 @@
+http://www.example.com/files/index.php/&gt;&quot;&gt;&lt;ScRiPt&gt;alert(213771818860)&lt;/ScRiPt&gt;

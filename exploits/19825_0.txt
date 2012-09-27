@@ -1,0 +1,1 @@
+http://www.example.com/modules.php?op=modload&name=MyHeadlines&file=index&myh=user&myh_op=show_all[code]&eid=2474

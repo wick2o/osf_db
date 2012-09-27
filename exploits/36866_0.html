@@ -1,0 +1,27 @@
+&lt;html&gt;&lt;head&gt;&lt;script&gt;
+function doe2(i) {
+document.getElementById(&#039;a&#039;).setAttribute(&#039;style&#039;, &#039;display: -moz-box; &#039;);
+document.getElementById(&#039;c&#039;).style.display= &#039;none&#039;;
+}
+setTimeout(doe2,500,0);
+&lt;/script&gt;
+&lt;style&gt;
+div::first-letter {float: right; }
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div style=&quot;width: 50px; -moz-column-count: 2;&quot;&gt;
+a
+&lt;span style=&quot;display: table-cell;&quot;&gt;&lt;/span&gt;&lt;div style=&quot;display: -moz-box; font-size: 43px;&quot;&gt;
+&lt;span id=&quot;a&quot;&gt;
+  &lt;span style=&quot;display: -moz-box;&quot;&gt;
+    &lt;span id=&quot;c&quot;&gt;m&lt;/span&gt;
+  &lt;/span&gt;
+
+&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;

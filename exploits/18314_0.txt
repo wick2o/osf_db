@@ -1,0 +1,2 @@
+http://www.example.com/print/month.php?cid=&amp;catid=[SQL]
+http://www.example.com/print/month.php?cid=[SQL]

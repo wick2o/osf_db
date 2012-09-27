@@ -1,0 +1,2 @@
+GET: http://www.example.com/search.php?func=&lt;script&gt;alert(&#039;XSS&#039;);&lt;/script&gt;
+GET: http://www.example.com/search.php?func=&lt;script&gt;alert(&#039;XSS&#039;);&lt;/script&gt;

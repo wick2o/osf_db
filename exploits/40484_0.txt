@@ -1,0 +1,2 @@
+http://www.example.com/c?a=&lt;script&gt;&quot; \
+--header &quot;&lt;script&gt;alert(1)&lt;/script&gt;: aa&quot;

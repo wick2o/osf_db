@@ -1,0 +1,2 @@
+http://www.example.com/dlisting.php?cid=1[XSS]
+http://www.example.com/showpic.php?aid=21&amp;uuid=175&amp;pid=172&amp;slide_show=1&amp;slide_show_secs=0&amp;preloadSlideShow=[XSS]

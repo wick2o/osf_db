@@ -1,0 +1,1 @@
+http://www.example.com/forms/survey_result.php?sid=1&gt;&#039;&gt;&lt;ScRiPt%20%0a%0d&gt;alert(407605250012)%3B&lt;/ScRiPt&gt;

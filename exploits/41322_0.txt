@@ -1,0 +1,7 @@
+opt/xplico/xi/app/views/pols/add.ctp:13
+echo $form-&gt;input(&#039;Pol.name&#039;,  array(&#039;maxlength&#039;=&gt; 50, &#039;size&#039; =&gt;
+&#039;50&#039;,&#039;label&#039; =&gt; &#039;Case
+name&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&#039;));
+
+Attack: Case name=[XSS] (POST)
+

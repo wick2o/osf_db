@@ -1,0 +1,22 @@
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot;?&gt;
+&lt;dxstudio version=&quot;1.0.0&quot; width=&quot;800&quot; height=&quot;600&quot; defaultscriptlanguage=&quot;javascript&quot;&gt;
+  &lt;display frame=&quot;yes&quot; hidecursor=&quot;no&quot; hideconsole=&quot;no&quot; hidecontext=&quot;no&quot; maxfps=&quot;100&quot; unthrottled=&quot;no&quot; priority=&quot;normal&quot; syncrefresh=&quot;yes&quot; changeresolution=&quot;no&quot; userresize=&quot;yes&quot; workarea=&quot;no&quot; windowmask=&quot;no&quot; src=&quot;&quot; minplayerversion=&quot;1.0.0&quot;&gt;
+    &lt;loading console=&quot;yes&quot; custom=&quot;no&quot; custombackground=&quot;no&quot; customlogo=&quot;yes&quot; showversion=&quot;no&quot;&gt;
+      &lt;prop id=&quot;background&quot; type=&quot;color&quot; r=&quot;0&quot; g=&quot;0&quot; b=&quot;0&quot; a=&quot;1&quot; /&gt;
+      &lt;logo src=&quot;&quot; /&gt;
+      &lt;customprogress /&gt;
+    &lt;/loading&gt;
+  &lt;/display&gt;
+  &lt;script&gt;
+    &lt;![CDATA[function onInit()
+{
+shell.execute(&quot;cmd.exe&quot;,&quot;/k cls|@echo this is wrong, very wrong.&quot;)
+} ] ]&gt; 
+  &lt;/script&gt;
+  &lt;licenseinfo stamp=&quot;cgdaaaaa&quot; /&gt;
+  &lt;security&gt;
+    &lt;prop id=&quot;password&quot; type=&quot;string&quot; value=&quot;&quot; /&gt;
+    &lt;prop id=&quot;allowplayer&quot; type=&quot;bool&quot; state=&quot;no&quot; /&gt;
+    &lt;prop id=&quot;nocache&quot; type=&quot;bool&quot; state=&quot;yes&quot; /&gt;
+  &lt;/security&gt;
+&lt;/dxstudio&gt;

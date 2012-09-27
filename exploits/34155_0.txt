@@ -1,0 +1,1 @@
+http://www.example.com/uwc/base/UWCMain?anon=true&amp;calid=test@test.com&amp;caltype=temporaryCalids&amp;date=20081223T143836Z&amp;category=All&amp;viewctx=day&amp;temporaryCalendars=test@test.com%27;alert(%27hello%27);a=%27

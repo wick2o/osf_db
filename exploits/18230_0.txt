@@ -1,0 +1,1 @@
+http://www.example.com/index.php?id=&lt;IMG%20SRC=http://www.example.com/somecommand.php?somevariables=maliciouscode&gt;

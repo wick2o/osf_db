@@ -1,0 +1,9 @@
+- logon as LUA user
+- rename traysser.exe to traysser.exe.BAK
+- copy program.exe to eScan installation directory
+- rename program.exe to traysser.exe
+- restart the computer
+- "rootshell" ;)
+
+NOTE: traysser.exe is eScan Server Updater Service that
+runs as NT AUTHORITY\SYSTEM. 

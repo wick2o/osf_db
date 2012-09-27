@@ -1,0 +1,7 @@
+http://www.example.com/path/modules.php?op=modload&amp;name=News&amp;file=index&amp;catid=[SQL]
+http://www.example.com/path/modules.php?op=modload&amp;name=News&amp;file=article&amp;sid=[SQL]
+
+http://www.example.com/path/modules.php?op=modload&amp;name=News&amp;file=index&amp;catid=[XSS]
+http://www.example.com/path/modules.php?op=modload&amp;name=News&amp;file=article&amp;sid=[XSS]
+http://www.example.com/path/modules.php?op=modload&amp;name=Events_Calendar&amp;file=[XSS]
+

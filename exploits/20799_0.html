@@ -1,0 +1,18 @@
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+function do_crash()
+{
+        var     range;
+
+        range = document.createRange();
+        range.selectNode(document.firstChild);
+        range.createContextualFragment(&#039;&lt;span&gt;&lt;/span&gt;&#039;);
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload=&quot;do_crash()&quot;&gt;
+&lt;p&gt;Good bye Firefox!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;

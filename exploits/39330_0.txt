@@ -1,0 +1,1 @@
+http://www.example.com/Istgah/view_ad.php?id=/&quot;&#039;&gt;&lt;ScRiPt&gt;alert(213771818860)&lt;/ScRiPt&gt;

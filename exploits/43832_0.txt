@@ -1,0 +1,1 @@
+http://www.example.com/text.php?tid=&lt;script&gt;alert(1)&lt;/script&gt;

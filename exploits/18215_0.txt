@@ -1,0 +1,1 @@
+http://www.example.com/module/article/article/article.asp?articleid=[SQL]

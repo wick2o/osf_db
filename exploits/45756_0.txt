@@ -1,0 +1,11 @@
+
+
+Vulnerability Details:
+The vulnerability exists due to failure in the &quot;core/modules/shop/components/ProductList.class.php&quot; script to properly sanitize user-supplied input in &quot;product&quot; variable. Attacker can alter queries to the application SQL database, execute arbitrary queries to the database, compromise the application, access or modify sensitive data, or exploit various vulnerabilities in the underlying SQL database.
+
+Attacker can use browser to exploit this vulnerability. The following PoC is available:
+http://host/shop/search-results/?product=%22+ANY_SQL
+
+
+
+

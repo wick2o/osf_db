@@ -1,0 +1,1 @@
+http://www.example.com/configuration/httpListenerEdit.jsf?name=&lt;IMG SRC=javascript:alert(&#039;DSecRG_XSS&#039;)&gt;&amp;configName=server-config

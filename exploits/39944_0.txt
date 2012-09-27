@@ -1,0 +1,10 @@
+SQL Injection:
+http://www.example.com/[host]/blog/index.php?view=noentryid&amp;noentryid=[SQLi]
+HTML Injection:
+http://www.example.com/linuxbox/ulgabusinessportak/blog/index.php?view=noentryid&amp;noentryid=20
+Inject &quot;&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;&quot; into the portal using Comment Box
+
+
+
+
+

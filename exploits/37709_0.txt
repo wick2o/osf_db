@@ -1,0 +1,1 @@
+http://www.example.com/test.php/&quot;&gt;&lt;script&gt;document.body.innerHTML=&#039;XSS&#039;;&lt;/script&gt;

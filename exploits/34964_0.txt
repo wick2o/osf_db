@@ -1,0 +1,24 @@
+POST /Common/WebServices/SOAPWrapperCommon/SOAPWrapperCommonWS.asmx
+HTTP/1.1
+Host: 10.1.2.3
+Content-Type: text/xml; charset=utf-8
+SOAPAction:
+&quot;http://www.example.com/SOAPWrapperCommon_UsersWS_GetServers_Wrapper&quot;
+Content-Length: 661
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;soap:Envelope xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;
+xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;
+  &lt;soap:Body&gt;
+    &lt;SOAPWrapperCommon_UsersWS_GetServers_Wrapper
+xmlns=&quot;http://SoapWrapperCommon.CCMA.Applications.Nortel.com&quot;&gt;
+      &lt;ccmaUserName&gt;string&lt;/ccmaUserName&gt;
+      &lt;clientIP&gt;string&lt;/clientIP&gt;
+      &lt;componentID&gt;string&lt;/componentID&gt;
+      &lt;sessionID&gt;string&lt;/sessionID&gt;
+      &lt;strUserID&gt;string&lt;/strUserID&gt;
+      &lt;strPassword&gt;string&lt;/strPassword&gt;
+    &lt;/SOAPWrapperCommon_UsersWS_GetServers_Wrapper&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;

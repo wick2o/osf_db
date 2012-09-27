@@ -1,0 +1,2 @@
+http://www.example.com/folder/themes/kategorie/index.php?kategorieid=6[SQL]
+http://www.example.com/folder/themes/kategorie/index.php?katid=40[SQL]

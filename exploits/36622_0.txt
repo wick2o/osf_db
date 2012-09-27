@@ -1,0 +1,3 @@
+HTTP/.\nContent-Encoding:deflate\r\t\n\r\n\x20\x20
+
+HTTP \nContent-Encoding:deflate\nContent-Range:\n\n”

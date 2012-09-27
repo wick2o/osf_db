@@ -1,0 +1,6 @@
+<form method="post" name="add_admin" id="add_admin" action="http://www.example.com/admin/options.php?action=manage_admin">
+  <label for="username_new" class="label_newpage">Username:</label><br /><input type="text" name="username_new" id="username_new" class="input_newpage" value="" />
+  <br /><br /><label for="password" class="label_newpage">New Password:</label><br /><input type="password" name="password" id="password" class="input_newpage" value="" />
+  <br /><br /><label for="con_password" class="label_newpage">Confirm Password:</label><br /><input type="password" name="con_password" id="con_password" class="input_newpage" value="" />
+  <br /><input type="submit" name="add_admin" id="add_admin" value="Add Admin" class="submit_newpage" />
+  </form></div>

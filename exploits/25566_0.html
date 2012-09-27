@@ -1,0 +1,13 @@
+<script language="javascript">
+function document::OnClick() {
+        var agent, character, url;
+        agent = new ActiveXObject("Agent.Control.2");
+        agent.connected = true;
+        agent.Characters.Load("Genie", "http:///");
+        character = agent.Characters.Character("Genie");
+        character.Show();
+        character.Think ("brazil owns!");
+        character.Speak('brazil owns!');
+        character.Play('Processing');
+}
+</script>

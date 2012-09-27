@@ -1,0 +1,1 @@
+http://www.example.com/openqrm-4.8/src/plugins/zfs-storage/web/zfs-storage-action.php?source_tab=&quot;&lt;script&gt;alert(0)&lt;/script&gt;

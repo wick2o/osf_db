@@ -1,0 +1,3 @@
+http://www.example.com/News/cat.asp?iCat=&#039; [SQL INJECTION]&amp;iChannel=1&amp;nChannel=News
+http://www.example.com/Articles/cat.asp?iCat=&#039; [SQL INJECTION]&amp;iChannel=2&amp;nChannel=Articles
+http://www.example.com/Pictures/cat.asp?iCat=&#039; [SQL INJECTION]&amp;iChannel=3&amp;nChannel=Pictures

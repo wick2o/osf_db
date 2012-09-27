@@ -1,0 +1,12 @@
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
+&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot;&gt;
+&lt;head&gt;&lt;title&gt;IE crash bug&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+var li = document.createElement(&quot;li&quot;);
+li.setAttribute(&quot;value&quot;, &quot;1&quot;); // this crashes IE!
+li.value = &quot;1&quot;; // this also crashes IE!
+&lt;/script&gt;
+&lt;/head&gt;&lt;body&gt;
+&lt;h1&gt;IE crash bug test&lt;/h1&gt;
+&lt;/body&gt;&lt;/html&gt;

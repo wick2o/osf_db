@@ -1,0 +1,1 @@
+http://www.example.com/cgi-bin/forum/showflat.pl?Cat=&amp;Board=forum&amp;Number=111&amp;page=0&amp;view=&quot;&lt;XSS&gt;expanded&amp;sb=1&amp;part=all&amp;vc=1

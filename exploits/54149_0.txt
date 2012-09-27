@@ -1,0 +1,58 @@
+/-----
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE        ispXCF    SYSTEM    "IspXCF.dtd" >
+<ispXCF
+version="8.9.09.09999999999AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
+    <Comment></Comment>
+    <Chain>
+        <Comm>JTAG</Comm>
+        <Device>
+            <Pos>1</Pos>
+            <Vendor>Lattice</Vendor>
+            <Family>ispLSI 5000VE</Family>
+            <Name>5256VE</Name>
+            <IDCode>0x00368043</IDCode>
+            <Package>128-pin TQFP</Package>
+            <PON>ispLSI5256VE-XXLT128</PON>
+            <Bypass>
+                <InstrLen>5</InstrLen>
+                <InstrVal>11111</InstrVal>
+                <BScanLen>1</BScanLen>
+                <BScanVal>0</BScanVal>
+            </Bypass>
+            <File>C:\ispTOOLS\ispvmsystem\TutorialU6vea.jed</File>
+            <FileTime>05/17/02 18:15:33</FileTime>
+            <JedecChecksum>0xF9BD</JedecChecksum>
+            <Operation>Erase,Program,Verify</Operation>
+            <Option>
+                <SVFVendor>JTAG STANDARD</SVFVendor>
+                <IOState>HighZ</IOState>
+               
+<IOVectorData>0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</IOVectorData>
+                <Reinitialize value="TRUE"/>
+                <OverideUES value="TRUE"/>
+                <TCKFrequency>1.000000 MHz</TCKFrequency>
+                <SVFProcessor>ispVM</SVFProcessor>
+                <Usercode>0x0000F9BD</Usercode>
+            </Option>
+        </Device>
+    </Chain>
+    <ProjectOptions>
+        <Program>SEQUENTIAL</Program>
+        <Process>ENTIRED CHAIN</Process>
+        <OperationOverride>No Override</OperationOverride>
+        <StartTAP>TLR</StartTAP>
+        <EndTAP>TLR</EndTAP>
+        <DeGlitch value="TRUE"/>
+        <VerifyUsercode value="TRUE"/>
+        <PinSetting>
+            TMS    LOW;
+            TCK    LOW;
+            TDI    LOW;
+            TDO    LOW;
+            TRST    ABSENT;
+            CableEN    HIGH;
+        </PinSetting>
+    </ProjectOptions>
+</ispXCF>
+-----/

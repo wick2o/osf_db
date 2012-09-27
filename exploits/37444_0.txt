@@ -1,0 +1,4 @@
+Enter the url , use this code :
+
+&quot;&gt;&quot;&quot;&gt;&gt;&lt;meta http-equiv=&quot;Refresh&quot; content=&quot;0;url=http://example.com&quot;&gt;&quot;&quot;&gt;
+

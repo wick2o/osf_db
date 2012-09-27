@@ -1,0 +1,1 @@
+http://www.example.com/list.php?page=&lt;script&gt;alert(&quot;MajorSecurity&quot;)&lt;/script&gt;

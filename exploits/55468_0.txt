@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<wml><card id="orion" title="einfold">
+<p><table title="Tab" columns="1" align="LCR" class="AAA" id="AAA">
+<tr><td>one</td><td>two</td><td>three</td></tr>
+</table></p></card></wml>
+ 
+<!-- Orion Einfold -->
+

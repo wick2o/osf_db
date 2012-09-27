@@ -1,0 +1,1 @@
+http://www.example.com/index.php?page=<script>alert('hacking%20xss')</script>

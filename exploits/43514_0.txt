@@ -1,0 +1,2 @@
+http://www.example.com/script/honesttraffic/index.php?msg=1%3Cscript%3Ealert(313706764927)%3C/script%3E
+

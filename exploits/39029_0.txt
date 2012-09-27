@@ -1,0 +1,2 @@
+http://www.example.com/forum/forum.php?cat=post&id_forum=%22%3E%3Cscri
+pt%3Ealert(1);%3C/script%3E

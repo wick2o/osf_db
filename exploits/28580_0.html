@@ -1,0 +1,25 @@
+<script>
+
+// trying prototype hijacking here.
+
+xdr = XDomainRequest;
+
+XDomainRequest = function() 
+
+return new XDomainRequest();
+
+}
+
+
+
+ping = 'hello';
+
+xdr = new XDomainRequest(); 
+
+xdr.open("POST", "http://cnn.com"); 
+
+xdr.send(ping);
+
+
+
+</script>

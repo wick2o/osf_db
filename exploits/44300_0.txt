@@ -1,0 +1,3 @@
+&lt;/legend&gt;&lt;script&gt; alert(&#039;XSS-Test&#039;)&lt;/script&gt; &lt;!--
+&lt;/legend&gt;&lt;script&gt; alert(&#039;XSS-Test&#039;)&lt;/script&gt;
+&lt;script&gt; alert(&#039;XSS-Test&#039;)&lt;/script&gt;

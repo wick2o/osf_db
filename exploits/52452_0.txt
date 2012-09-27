@@ -1,0 +1,6 @@
+/usr/sbin/guest-account has this cleanup:
+
+# remove leftovers in /tmp
+find /tmp -mindepth 1 -maxdepth 1 -uid "$UID" | xargs rm -rf || true
+
+This runs with the cwd of the last logged in user. If the user creates a file "/tmp/x a", the file "a" gets removed from the last user's login.

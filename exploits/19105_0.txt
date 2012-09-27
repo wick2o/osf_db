@@ -1,0 +1,1 @@
+http://www.example.com/[path_advanced_poll]/admin/common.inc.php?base_path=http:www.example.com

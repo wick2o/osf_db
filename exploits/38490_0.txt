@@ -1,0 +1,3 @@
+
+http://www.example.com/catalog/good.php?good_id=[SQLi]
+http://www.example.com/catalog/good.php?good_id=164&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;

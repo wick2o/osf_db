@@ -1,0 +1,2 @@
+
+http://www.example.com/login/prompt?message=%3Cscript%3Ealert%28%27Reflected%20XSS%27%29%3C/script%3E

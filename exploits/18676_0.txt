@@ -1,0 +1,1 @@
+http://www.example.com/[scriptpath]/admin/admin.php?page=[code]

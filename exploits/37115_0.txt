@@ -1,0 +1,4 @@
+&lt;img
+src=&quot;http://www.example.com/Quick.Cart/demo/admin.php?p=orders-delete&amp;iOrder=2&quot; /&gt;
+&lt;iframe
+src=&quot;http://www.example.com/Quick.Cms/demo_lite/admin.php?p=p-delete&amp;iPage=1&quot;&gt;&lt;/iframe&gt;

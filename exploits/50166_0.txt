@@ -1,0 +1,7 @@
+my $file = "bluepwn.zap";
+my $head = "BZAP200BK";
+my $junk = "A" x 20;
+ 
+open($File, ">$file");
+print $File $head.$junk;
+close($FILE);

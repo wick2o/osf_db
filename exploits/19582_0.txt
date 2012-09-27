@@ -1,0 +1,6 @@
+Reproduce code:
+---------------
+<?php
+$im=imagecreatefromgif("http://www.example.com/boutique/images_
+produits/26HEBOITIER0010_1.gif");
+?>

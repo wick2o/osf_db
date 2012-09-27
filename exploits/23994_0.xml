@@ -1,0 +1,14 @@
+&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;rss version=&quot;2.0&quot;&gt;
+
+&lt;channel&gt;
+        &lt;title&gt;Test&lt;/title&gt;
+        &lt;link&gt;&lt;/link&gt;
+        &lt;description&gt;&lt;/description&gt;
+
+        &lt;item&gt;
+                &lt;title&gt;Remote DoS PoC&lt;/title&gt;
+                &lt;enclosure url=&quot;%s&quot;/&gt;
+        &lt;/item&gt;
+&lt;/channel&gt;
+&lt;/rss&gt;

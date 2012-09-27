@@ -1,0 +1,11 @@
+PHP:
+ 
+<?php
+header("Content-type: audio/x-mpegurl");
+echo $_SERVER["SCRIPT_URI"]."/blah.m3u";
+?>
+ 
+ 
+ 
+Local M3U:
+echo "a.m3u" > a.m3u

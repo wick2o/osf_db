@@ -1,0 +1,4 @@
+http://www.example.com/path/admin/main.asp?date=[SQL]
+http://www.example.com/path/admin/view.asp?SearchFor=[SQL]
+http://www.example.com/patj/admin/edit.asp?ID=[SLQ]
+http://www.example.com/path/admin/main.asp?date=[CSS]

@@ -1,0 +1,1 @@
+http://www.example.com/destek/admin/a_login.php?message=&lt;b&gt;security-testing-roott3r&lt;/b&gt;

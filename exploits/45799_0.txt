@@ -1,0 +1,3 @@
+referer:
+http://www.example.com/lifetype-1.2.10/index.php?op=Template&amp;blogId=1&amp;show=archives
+&quot;&gt;&lt;script&gt;alert(&#039;XSS&#039;)&lt;/script&gt;

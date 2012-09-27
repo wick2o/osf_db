@@ -1,0 +1,1 @@
+http://www.example.com/public/index.php?search=&quot;&#039;&gt;&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt;&amp;rub=resultats-recherche&amp;valid.x=4&amp;valid.y=6&amp;valid=valider

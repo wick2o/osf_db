@@ -1,0 +1,3 @@
+&lt;script&gt; alert('XSS-Test')&lt;/script&gt;
+  in "* Name" textbox in comment section and fill other sections properly.
+

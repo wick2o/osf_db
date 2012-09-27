@@ -1,0 +1,3 @@
+http://www.example.com/modules.php?name=Downloads&amp;d_op=viewdownloaddetails&amp;lid=[SQL]
+http://www.example.com/modules.php?name=Content&amp;pa=list_pages_categories&amp;cid=[SQL]
+http://www.example.com/modules.php?name=Content&amp;pa=showpage&amp;pid=[SQL]

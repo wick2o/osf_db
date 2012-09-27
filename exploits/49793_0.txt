@@ -1,0 +1,361 @@
+Code Review: Input Validation Vulnerabilities (Persistent)
+
+http://www.example.com/userslist.html?
+
+&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tabdata&quot;
+width=&#039;98%&#039;&gt;
+&lt;tr bgcolor=&quot;#ff9900&quot;&gt;
+&lt;td width=90%&gt;&lt;b&gt;Benutzername&lt;/b&gt;&lt;/td&gt;
+&lt;td align=center&gt;&lt;b&gt;Zugriffsrechte&lt;/b&gt;&lt;/td&gt;
+&lt;td align=center&gt;&lt;b&gt;Löschen&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr bgcolor=&#039;#ffef95&#039;&gt;&lt;td style=&#039;padding-left:3px;padding-right:3px;&#039;&gt;&lt;a
+href=&#039;/usersettingsedit.html?username=
+&gt; &gt;&quot;&lt;INSERT SCRIPTCODE HERE!&gt;&amp;&#039;&gt;&gt;&quot;&lt;INSERT OWN PERSISTENT SCRIPTCODE
+HERE!!!&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td align=center&gt;&lt;a href=&quot;/usersettingsedit.html?username=&gt;&quot;&lt;INSERT OWN
+PERSISTENT SCRIPTCODE HERE!!!&gt;&quot;&gt;
+&lt;img src=&quot;/output/images/security.gif&quot; border=0&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td align=center&gt;&lt;a href=&#039;&#039; onclick=&quot;return deleteit(&#039;0&#039;);&quot;&gt;&lt;img
+src=&#039;/output/images/delete.gif?&#039; border=0&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;&lt;tr &gt;&lt;td style=&#039;padding-left:3px;padding-right:3px;&#039;&gt;&lt;a
+href=&#039;/usersettingsedit.html
+?username=&gt;&quot;&lt;iframe src=http://test.de&gt;&amp;&#039;&gt;&gt;&quot;&lt;INSERT OWN PERSISTENT
+SCRIPTCODE HERE!!!&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td align=center&gt;&lt;a href=&quot;/usersettingsedit.html?username=&gt;&quot;&lt;INSERT OWN
+PERSISTENT SCRIPTCODE HERE!!!&gt;&quot;&gt;
+&lt;img src=&quot;/output/images/security.gif&quot; border=0&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td align=center&gt;&lt;a href=&#039;&#039; onclick=&quot;return deleteit(&#039;1&#039;);&quot;&gt;&lt;img
+src=&#039;/output/images/delete.gif?&#039; border=0&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;&lt;/table&gt;&lt;br&gt;&lt;form action=usersadd.html method=post&gt;&lt;td&gt;&lt;input
+type=hidden name=add value=yes&gt;
+&lt;input type=submit value=&quot;NEUEN BENUTZER HINZUFüGEN&quot; &gt;&lt;/form&gt;
+
+
+http://www.example.com/downtime.html
+
+&lt;body bgcolor=&quot;white&quot; leftmargin=0 topmargin=0 rightmargin=0 marginwidth=0&gt;
+&lt;div style=&#039;padding-left:5px;padding-top:5px;&#039;&gt;&lt;font color=black
+style=&quot;font-size: 16px;&quot;&gt;&lt;strong&gt;
+Downtime Bericht &gt;&quot;&lt;INSERT OWN PERSISTENT SCRIPTCODE HERE!!!&gt; (1171011122)
+&lt;/strong&gt;&lt;/font&gt;
+&lt;hr align=&quot;left&quot; width=&quot;97%&quot; size=&quot;1&quot; color=&quot;#ff9900&quot; noshade
+style=&quot;padding-top:0px; filter:progid:DXImageTransform.Microsoft.
+Gradient(startColorStr=&#039;#ffcc00&#039;, endColorStr=&#039;white&#039;, gradientType=&#039;1&#039;)&quot;&gt;
+&lt;br&gt;&lt;div id=&quot;overDiv&quot; style=&quot;position:absolute; visibility:hidden;
+z-index:1000;&quot;&gt;&lt;/div&gt;
+
+
+http://www.example.com/windowsaccountslist.html
+
+&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tabdata&quot;&gt;
+&lt;tr bgcolor=&quot;#ff9900&quot;&gt;
+&lt;td&gt;&lt;b&gt;Benutzername&lt;/b&gt;&lt;/td&gt;
+&lt;td align=center&gt;&lt;b&gt;Löschen&lt;/b&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr bgcolor=&#039;#ffef95&#039;&gt;&lt;td style=&#039;padding-left:3px;padding-right:3px;&#039;&gt;&lt;a
+href=&#039;/windowsaccountsedit.html?id=
+1269018355&amp;&#039;&gt;&gt;&quot;&lt;INSERT OWN PERSISTENT SCRIPTCODE HERE!!!&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td align=center&gt;&lt;a href=&#039;&#039; onclick=&quot;return
+deleteit(&#039;1269018355&#039;);&quot;&gt;&lt;img src=&#039;/output/images/delete.gif?&#039;
+border=0&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;&lt;/table&gt;&lt;br&gt;
+&lt;form action=windowsaccountsedit.html method=post&gt;&lt;td&gt;&lt;input type=hidden
+name=add value=yes&gt;
+&lt;input type=submit value=&quot;NEUEN BENUTZER HINZUFüGEN&quot; &gt;&lt;/form&gt;
+
+
+http://www.example.com/msnsettings.html
+
+&lt;div id=&quot;overDiv&quot; style=&quot;position:absolute; visibility:hidden;
+z-index:1000;&quot;&gt;&lt;/div&gt;
+&lt;script langauge=&quot;JavaScript&quot; src=&quot;/output/js/overlib.js?&quot;&gt;&lt;/script&gt;
+&lt;div style=&#039;padding-left:5px;padding-top:5px;&#039;&gt;&lt;font color=black
+style=&quot;font-size: 16px;&quot;&gt;&lt;strong&gt;
+Konfiguriere MSN Warnung
+&lt;/strong&gt;&lt;/font&gt;
+&lt;hr align=&quot;left&quot; width=&quot;97%&quot; size=&quot;1&quot; color=&quot;#ff9900&quot; noshade
+style=&quot;padding-top:0px; filter:progid:DXImageTransform.Microsoft.Gradient
+(startColorStr=&#039;#ffcc00&#039;, endColorStr=&#039;white&#039;, gradientType=&#039;1&#039;)&quot;&gt;
+&lt;br&gt;Sie müssen ein MSN Konto festlegen, von dem das MSN basierten
+Warnungen geschickt werden.&lt;br&gt;
+&lt;script language=&quot;JavaScript&quot;&gt;
+alert(&#039;Einstellungen gespeichert&#039;);
+&lt;/script&gt;&lt;div id=&#039;stylized&#039; class=&#039;settingsform&#039;&gt;
+&lt;form method=post action=msnsettings.html name=msn&gt;
+&lt;input type=hidden name=setting value=&#039;MSN&#039;&gt;
+&lt;label&gt;MSN Konto Name&lt;/label&gt;&lt;input type=text name=account size=30
+value=&quot;&gt;&quot;&lt;INSERT OWN PERSISTENT SCRIPTCODE HERE!!!&gt;&quot;&gt;&lt;br&gt;
+&lt;label&gt;MSN Konto Passwort&lt;/label&gt;&lt;input type=password name=password
+size=10 value=&quot;&gt;&quot;&lt;INSERT OWN PERSISTENT SCRIPTCODE HERE!!!&gt;&quot;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;&lt;input type=submit class=&#039;buttonok&#039; value=&quot;EINSTELLUNGEN
+SPEICHERN&quot; &gt;&lt;/form&gt;&lt;/div&gt;
+&lt;br&gt;&lt;br&gt;&lt;/table&gt;&lt;br&gt;&lt;br&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+
+http://www.example.com/enterprisesettings2.html
+
+&lt;form method=post action=enterprisesettings2.html&gt;
+&lt;input type=hidden name=setting value=&#039;SNMPTRAP&#039;&gt;
+&lt;input type=hidden name=stop value=&#039;&#039;&gt;
+&lt;label&gt;IP, an die die Traps gesendet werden&lt;/label&gt;&lt;input type=text
+name=newsetting0 size=30 value=&quot;127.0.0.1&quot; &gt;
+&lt;a onmouseover=&quot;return overlib(&#039;Geben Sie eine IP Adresse oder einen
+Domänennamen ein, an welche die Traps gesendet
+werden&#039;, LEFT);&quot; onmouseout=&quot;return nd();&quot;&gt;&lt;img
+src=&quot;/output/images/info.gif?&quot; border=0 alt=&#039;Info&#039;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;label&gt;Port&lt;/label&gt;&lt;input type=text name=newsetting1 size=30
+value=&quot;&gt;&quot;&lt;INSERT OWN PERSISTENT SCRIPTCODE HERE!!!&gt;&lt;br&gt;
+&lt;label&gt;Der Community String.&lt;/label&gt;&lt;input type=text name=newsetting2
+size=30 value=&quot;&quot; &gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;&lt;input type=hidden value=&quot;127.0.0.1&lt;X&gt;&gt;&quot;&lt;INSERT OWN PERSISTENT
+SCRIPTCODE HERE!!!&gt;&quot; name=previoussetting&gt;&lt;input type=hidden value=&quot;&quot;
+name=check&gt;&lt;input type=submit class=&#039;buttonok&#039; value=&quot;EINSTELLUNGEN
+SPEICHERN&quot; &gt; &lt;input type=button
+value=&quot;SENDUNG VON SNMP TRAPS BEENDEN&quot; class=&#039;buttonnok&#039;
+Onclick=&quot;this.form.stop.value=1; this.form.submit();&quot;&gt;&lt;/form&gt;&lt;/div&gt;
+&lt;br&gt;&lt;br&gt;&lt;/table&gt;&lt;br&gt;&lt;br&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+
+http://www.example.com/settings.html?setting=LOGGING&amp;
+
+&lt;label&gt;Datenbank Vorlagen&lt;/label&gt;&lt;select name=odbctemplate
+onchange=&quot;javascript:changetemplate();&quot;&gt;
+&lt;option value=&quot;&quot;&gt;Wähle eine Datenbank Vorlage&lt;/option&gt;
+&lt;option value=&quot;Driver={Oracle ODBC
+Driver};Dbq=myDBName;Uid=myUsername;Pwd=myPassword&quot;&gt;Oracle ODBC
+Driver&lt;/option&gt;
+&lt;option value=&quot;Driver={Microsoft ODBC for
+Oracle};Server=OracleServer.world;Uid=myUsername;Pwd=myPassword&quot;&gt;Microsoft
+Oracle ODBC Driver&lt;/option&gt;
+&lt;option value=&quot;Driver={INFORMIX 3.30 32
+BIT};Host=hostname;Server=myserver;Service=service-name;Protocol=olsoctcp;Database=mydb;UID=username;PWD=myPwd
+
+&quot;&gt;Informix 3.30 ODBC Driver&lt;/option&gt;
+&lt;option value=&quot;Driver={Pervasive ODBC Client
+Interface};ServerName=srvname;dbq=&quot;&gt;Pervasive ODBC Driver&lt;/option&gt;
+&lt;option value=&quot;Driver={SQL Server}; Server=(local); Database=myDBName;
+UID=sa; PWD=;&quot;&gt;MS SQL ODBC Driver&lt;/option&gt;
+&lt;option value=&quot;Driver={SQL Server Native Client 10.0};
+Server=enter_IP_here; Database=enter_db_name_here;
+UID=enter_account_name_here;
+PWD=enter_password_here;&quot;&gt;MS SQL 2008&lt;/option&gt;
+&lt;option value=&quot;Driver={Microsoft Access Driver (*.mdb)};
+DBQ=C:myDBName.mdb&quot;&gt;MS Access ODBC Driver&lt;/option&gt;
+&lt;option value=&quot;Driver={Microsoft Excel Driver (*.xls)};DBQ=physical path
+to .xls file; DriverID=278;&quot;&gt;MS Excel ODBC Driver&lt;/option&gt;
+&lt;option value=&quot;Driver={Microsoft Text Driver
+(*.txt;*.csv)};DefaultDir=physical path to .txt file;&quot;&gt;Text ODBC
+Driver&lt;/option&gt;
+&lt;option value=&quot;DRIVER={MySQL ODBC 3.51
+Driver};SERVER=;DATABASE=;USER=;Password=&quot;&gt;mySQL ODBC 3.51&lt;/option&gt;
+&lt;/select&gt;&lt;br&gt;&lt;label&gt;ODBC Verbindungsstring&lt;/label&gt;&lt;input type=text
+name=newsetting0 size=50 value=&quot;&gt;&quot;&lt;INSERT SCRIPTCODE HERE!&gt;&quot; &gt;&lt;br&gt;&lt;br&gt;
+&lt;label&gt;Speichere Werte in der Datenbank&lt;/label&gt;&lt;input type=checkbox
+name=newsetting1 value=&quot;true&quot; &gt; Ja&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;input type=hidden value=&quot;&gt;&quot;&lt;INSERT OWN PERSISTENT SCRIPTCODE
+HERE!!!&gt;&lt;X&gt;&lt;X&gt;&lt;X&gt;&lt;X&gt;&quot; name=previoussetting&gt;&lt;input
+type=hidden value=&quot;ODBC&quot; name=check&gt;
+&lt;input type=submit value=&quot;EINSTELLUNGEN SPEICHERN&quot; class=&#039;buttonok&#039;&gt;
+&lt;input type=button class=&#039;buttonnok&#039; value=&quot;DATABANKERFASSUNG BEENDEN&quot;
+Onclick=&quot;this.form.stop.value=1; this.form.submit();&quot;&gt;&lt;/form&gt;
+&lt;/div&gt;&lt;br&gt;&lt;br&gt;&lt;/table&gt;&lt;br&gt;&lt;br&gt; &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;label&gt;ODBC Verbindungsstring&lt;/label&gt;&lt;input type=text name=newsetting0
+size=50 value=&quot;&gt;&quot;&lt;iframe src=http://vulnerability-lab.com width=600
+height=600&gt;&quot;
+&gt; &gt;&lt;br&gt;&lt;br&gt;&lt;label&gt;Speichere Werte in der Datenbank&lt;/label&gt;&lt;input
+type=checkbox name=newsetting1 value=&quot;true&quot; &gt; Ja&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;input type=hidden value=&quot;&gt;&quot;&lt;INSERT OWN PERSISTENT SCRIPTCODE
+HERE!!!&gt;&lt;X&gt;&lt;X&gt;&lt;X&gt;&lt;X&gt;&quot; name=previoussetting&gt;&lt;input type=hidden
+value=&quot;ODBC&quot; name=check&gt;
+&lt;input type=submit value=&quot;EINSTELLUNGEN SPEICHERN&quot; class=&#039;buttonok&#039;&gt;
+&lt;input type=button class=&#039;buttonnok&#039; value=&quot;DATABANKERFASSUNG BEENDEN&quot;
+Onclick=&quot;this.form.stop.value=1; this.form.submit();&quot;&gt;&lt;/form&gt;
+&lt;/div&gt;
+
+
+
+References:
+http://www.example.com/userslist.html?
+http://www.example.com/teamslist.html?
+http://www.example.com/windowsaccountsedit.html
+http://www.example.com/bulkedit.html?
+http://www.example.com/msnsettings.html
+http://www.example.com/enterprisesettings2.html
+http://www.example.com/settings.html?setting=LOGGING&amp;
+
+
+
+
+
+1.2
+Code Review: Input Validation Vulnerabilities (Non Persistent)
+
+http://www.example.com/checks2def.html
+
+&lt;form action=checks3other.html method=post name=checksdef
+onSubmit=&#039;return checkrequired(this)&#039;&gt;
+&lt;input type=hidden name=linenumber value=&quot;&gt;&quot;&lt;NON-PERSITENT SCRIPTCODE
+HERE!&gt;&quot;&gt;&lt;input type=hidden name=type value=&quot;&quot;&gt;
+&lt;input type=hidden name=addcheck value=&quot;&quot;&gt;&lt;input type=hidden
+name=editsettings value=&quot;1&quot;&gt;
+&lt;input type=hidden name=uidrule value=&quot;1171011122&quot;&gt;
+&lt;input type=hidden name=id value=&quot;1171011122&quot;&gt;
+&lt;input type=hidden name=required_label value=&quot;1171011122&quot;&gt;
+&lt;input type=hidden name=devicegraphs value=&quot;&quot;&gt;&lt;tr&gt;
+&lt;td&gt;Überwachungregel Bezeichnung&lt;/td&gt;&lt;td&gt;&lt;input type=text size=35
+name=namevisible value=&quot;WINDOWSHEALTH&quot; style=&#039;width:250px;&#039;&gt;&lt;/td&gt;&lt;td&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Geräte-Name&lt;/td&gt;&lt;td&gt;
+
+
+http://www.example.com/check2alerts.html
+
+&lt;form method=post action=checks2alerts.html name=alerts
+target=&quot;main&quot;&gt;&lt;td&gt; &lt;td&gt;&lt;input type=hidden value=&quot;&quot;
+name=linenumber&gt;&lt;input type=hidden value=&quot;&quot; name=check&gt; &lt;input
+type=button value=&#039;FEHLER MELDUNGEN&#039; alt=&quot;/checks2alerts.html?
+linenumber=&amp;check=&amp;type=down&amp;KeepThis=true&amp;TB_iframe=true&amp;height=400&amp;width=850&quot;
+title=&#039;Bearbeite Alarme für den FEHLER
+– Status&#039; class=&#039;thickbox buttonalertsdown&#039;&gt;&lt;/td&gt;&lt;/form&gt;
+&lt;form method=post action=&quot;&quot; name=alerts target=&quot;main&quot; &gt;&lt;td&gt;
+&lt;/td&gt;&lt;td&gt;&lt;input class=&#039;buttonnok&#039; type=submit value=&quot;
+REGEL LöSCHEN&quot; onclick=&quot;return deleteit(&#039;&gt;&quot;&lt;NON-PERSITENT SCRIPTCODE
+HERE!&#039;,&#039;&#039;);&quot; onmouseover=&quot;return overlib(&#039;Durch klicken auf dieses Icon
+können
+Sie die Überwachungsregel löschen. Diese Operation kann nicht rückgängig
+gemacht werden.&#039;, LEFT);&quot; onmouseout=&quot;return nd();&quot;&gt;&lt;/td&gt;&lt;/form&gt;
+&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+
+
+http://www.example.com/viewalerts.html
+
+&lt;div style=&#039;padding-left:5px;padding-top:5px;&#039;&gt;&lt;font color=black
+style=&quot;font-size: 16px;&quot;&gt;&lt;strong&gt;
+Regel Historie &gt;&quot;&lt;NON-PERSITENT SCRIPTCODE HERE!&gt; (&lt;a
+href=&quot;/viewfile.html?file=\checkslogs\1171011122.log&quot;&gt;1171011122&lt;/a&gt;)
+&lt;/strong&gt;&lt;/font&gt;&lt;hr align=&quot;left&quot; width=&quot;97%&quot; size=&quot;1&quot; color=&quot;#ff9900&quot;
+noshade style=&quot;padding-top:0px; filter:
+progid:DXImageTransform.Microsoft.Gradient(startColorStr=&#039;#ffcc00&#039;,
+endColorStr=&#039;white&#039;, gradientType=&#039;1&#039;)&quot;&gt;
+&lt;br&gt;
+
+
+http://www.example.com/downtime.html
+
+&lt;body bgcolor=&quot;white&quot; leftmargin=0 topmargin=0 rightmargin=0 marginwidth=0&gt;
+&lt;div style=&#039;padding-left:5px;padding-top:5px;&#039;&gt;&lt;font color=black
+style=&quot;font-size: 16px;&quot;&gt;&lt;strong&gt;
+Downtime Bericht &gt;&quot;&lt;NON-PERSITENT SCRIPTCODE HERE!&gt; (1171011122)
+&lt;/strong&gt;&lt;/font&gt;
+&lt;hr align=&quot;left&quot; width=&quot;97%&quot; size=&quot;1&quot; color=&quot;#ff9900&quot; noshade
+style=&quot;padding-top:0px; filter:progid:DXImageTransform.Microsoft.
+Gradient(startColorStr=&#039;#ffcc00&#039;, endColorStr=&#039;white&#039;, gradientType=&#039;1&#039;)&quot;&gt;
+&lt;br&gt;&lt;div id=&quot;overDiv&quot; style=&quot;position:absolute; visibility:hidden;
+z-index:1000;&quot;&gt;&lt;/div&gt;
+
+
+Non Persistent References:
+http://www.example.com/checks2def.html?id=
+http://www.example.com/checks2def.html?id=1171011122&amp;linenumber=6&amp;check=
+http://www.example.com/checks2def.html?id=1171011122&amp;linenumber=
+http://www.example.com/downtime.html?label=
+http://www.example.com/downtime.html?label=1171011122&amp;keyz=1171011122WINDOWSHEALTH&amp;labelvisible=
+http://www.example.com/timeline/timeline.html?xml=
+http://www.example.com/devicegraphs.html?device=
+http://www.example.com/viewgraphs.html?label=
+http://www.example.com/viewalerts.html?label=1171011122&amp;labelvisible=
+
+
+
+1.3
+Code Review: Cross Site Request Forgery (Force|Non Persistent)
+
+&lt;body bgcolor=&quot;white&quot; leftmargin=0 topmargin=0 rightmargin=0 marginwidth=0&gt;
+&lt;div
+style=&quot;padding-left:5px;padding-right:5px;padding-top:10px;padding-bottom:10px;width:90%&quot;&gt;
+&lt;img src=&quot;/output/images/generalsettings.jpg&quot; border=&quot;0&quot; align=&quot;left&quot;&gt;
+&lt;div style=&#039;padding-left:5px;padding-top:5px;&#039;&gt;&lt;font color=black
+style=&quot;font-size: 16px;&quot;&gt;&lt;strong&gt;
+Definere Einstellungen zur Dienstanmeldung.
+&lt;/strong&gt;&lt;/font&gt;
+&lt;hr align=&quot;left&quot; width=&quot;97%&quot; size=&quot;1&quot; color=&quot;#ff9900&quot; noshade
+style=&quot;padding-top:0px; filter:progid:DXImageTransform.Microsoft.Gradient
+(startColorStr=&#039;#ffcc00&#039;, endColorStr=&#039;white&#039;, gradientType=&#039;1&#039;)&quot;&gt; &lt;br&gt;
+ServersCheck läuft als ein Dienst auf diesem Computer. Standardmäßig
+laufen alle Dienste von Windows unter dem lokalen Systemkonto.
+Ein Dienst hat Zugang auf die Maschine, wo er gerade läuft, aber es ist
+ihm ein Remotezugriff andere Computer untersagt. Für Windows
+basierende Checks (Plattenspeicherplatz, Speicher, CPU...), muss der
+ServersCheck Monitoring-Dienst unter einem Windows Admin-Konto
+laufen.&lt;br&gt;&lt;br&gt;
+Setze hier die Domäne oder den System-Admin Benutzernamen mit Passwort.
+Zum Auslassen dieser Option bitte leer lassen.&lt;br&gt;&lt;br&gt;
+&lt;form action=popup_service2.html method=post name=service setting&gt;&lt;table
+cellpadding=5&gt;&lt;tr&gt;&lt;td&gt;
+Administrator Benutzername&lt;/td&gt;&lt;td align=right&gt;
+&lt;input type=text size=20 name=user&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;
+Administrator Passwort&lt;/td&gt;&lt;td align=right&gt;
+&lt;input type=password size=20 name=pass&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;br&gt;&lt;br&gt;&lt;input type=submit class=&#039;buttonok&#039; value=&quot;&gt;&gt; AKTUALISIERUNG&quot; &gt;
+&lt;input type=button class=&#039;buttonnok&#039;
+value=&quot;SKIP&quot; Onclick=&quot;window.location=&#039;/popup1.html&#039;;&quot;&gt;
+&lt;/form&gt;&lt;/div&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+
+
+
+1.4
+Code Review: Local Directory Traversal &amp; Information Disclosure
+
+http://www.example.com/viewlogfile2.html?file=scan.txt&amp;
+
+&lt;body bgcolor=&quot;white&quot; leftmargin=0 topmargin=0 rightmargin=0 marginwidth=0&gt;
+&lt;div style=&#039;padding-left:5px;padding-top:5px;&#039;&gt;&lt;font color=black
+style=&quot;font-size: 16px;&quot;&gt;&lt;strong&gt;
+ServersCheck Protokolldateibetrachter: scan.txt
+&lt;/strong&gt;&lt;/font&gt;
+&lt;hr align=&quot;left&quot; width=&quot;97%&quot; size=&quot;1&quot; color=&quot;#ff9900&quot; noshade
+style=&quot;padding-top:0px;
+filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr=&#039;#ffcc00&#039;,
+endColorStr=&#039;white&#039;, gradientType=&#039;1&#039;)&quot;&gt;&lt;br&gt;
+&lt;a href=&quot;/emptyfile.html?file=logging\scan.txt&amp;&quot;&gt;Leere Datei&lt;/a&gt;
+&lt;a href=&quot;/emptyfile.html?file=logging\scan.txt&amp;delete=true&amp;&quot;&gt;Löschen
+Protokolldatei&lt;/a&gt;
+&lt;hr noshade width=100%&gt;&lt;ul&gt;&lt;font color=black&gt;
+# Fri Mar 19 17:37:52 2010 Scanning &gt;&lt;iframe
+src=http://vulnerability-lab.com width=600 height=600&gt;..: Ping Failed
+&lt;br&gt;&lt;/font&gt;&lt;/ul&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt; &lt;/BODY&gt;&lt;/HTML&gt;
+
+
+or ...
+
+
+&lt;HTML&gt;
+&lt;HEAD&gt;
+&lt;TITLE&gt;ServersCheck 21 Day Evaluation Edition - version 8.0.8&lt;/TITLE&gt;
+&lt;META http-equiv=content-type content=&quot;text/html&quot;&gt;
+&lt;LINK HREF=&quot;/output/css/serverscheck.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+&lt;LINK HREF=&quot;/output/css/thickbox.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;
+media=&quot;screen&quot; /&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/output/js/jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/output/js/thickbox.js&quot;&gt;&lt;/script&gt;
+&lt;META HTTP-EQUIV=&quot;Pragma&quot; CONTENT=&quot;no-cache&quot;&gt;
+&lt;/HEAD&gt;&lt;!-- DE --&gt;
+&lt;body bgcolor=&quot;white&quot; leftmargin=0 topmargin=0 rightmargin=0 marginwidth=0&gt;
+&lt;div style=&#039;padding-left:5px;padding-top:5px;&#039;&gt;&lt;font color=black
+style=&quot;font-size: 16px;&quot;&gt;&lt;strong&gt;
+ServersCheck Protokolldateien&lt;/strong&gt;&lt;/font&gt;
+&lt;hr align=&quot;left&quot; width=&quot;97%&quot; size=&quot;1&quot; color=&quot;#ff9900&quot; noshade
+style=&quot;padding-top:0px; filter:progid:DXImageTransform.Microsoft.
+Gradient(startColorStr=&#039;#ffcc00&#039;, endColorStr=&#039;white&#039;,
+gradientType=&#039;1&#039;)&quot;&gt;&lt;br&gt;
+Um die Protokolldatei anzusehen, klicken Sie auf den Hyperlink, um sie
+zu öffnen.&lt;br&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a
+href=&quot;/viewlogfile2.html?file=graphs-errors.log&amp;&quot;&gt;graphs-errors.log&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a
+href=&quot;/viewlogfile2.html?file=monitoring_manager_2010-3-19.log&amp;&quot;&gt;monitoring_manager_2010-3-19.log&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a
+href=&quot;/viewlogfile2.html?file=statuschange_2010-3-19.log&amp;&quot;&gt;statuschange_2010-3-19.log&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/viewlogfile2.html?file=watcher.log&amp;&quot;&gt;watcher.log&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt; &lt;/BODY&gt;&lt;/HTML&gt;
+

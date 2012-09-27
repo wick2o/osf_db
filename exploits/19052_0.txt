@@ -1,0 +1,1 @@
+http://www.example.com/deluxebb/misc.php?sub=login&amp;redirect=http://www.badsite.com/

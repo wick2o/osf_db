@@ -1,0 +1,1 @@
+document.createElement(&#039;li&#039;).setattribute(&#039;value&#039;, &#039;KillIE7&#039;); 

@@ -1,0 +1,2 @@
+http://www.example.com/GeoAuctionsEnterprise/index.php?a=1030&amp;b=~ID_NUMBER~&amp;d=[SQL]
+http://www.example.com/GeoAuctions/index.php?a=2&amp;b=[SQL]

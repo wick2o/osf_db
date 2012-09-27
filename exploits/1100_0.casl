@@ -1,0 +1,18 @@
+    #!/usr/local/casl/bin/casl
+
+    #include "tcpip.casl"
+    #include "packets.casl"
+    #include "tcp.casl"
+
+    srchost = 10.0.0.1;
+    dsthost = 10.0.0.2;
+
+    IPH = copy UDPIP;
+
+    IPH.ip_hl = 5;
+    IPH.ip_src = srchost;
+    IPH.ip_dst = dsthost;
+    IPH.ip_length = 27;
+
+    packet = [ IPH ];
+    ip_output(packet);

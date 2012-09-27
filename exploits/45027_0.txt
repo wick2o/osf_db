@@ -1,0 +1,1 @@
+http://www.example.com/Forms/home_1?&amp;HomeCurrent_Date=&#039;&lt;sCript&gt;alert(1);&lt;/ScRiPt&gt;&#039;01%2F01%2F2000

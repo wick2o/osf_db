@@ -1,0 +1,1 @@
+http://www.example.com/[path_of_application]/admin/radera/tabort.asp?delID=119

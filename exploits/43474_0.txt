@@ -1,0 +1,2 @@
+http://www.example.com/hubscript/demo/single_winner1.php?bid_id= XSS TO ADD: 1&lt;script&gt;alert(412798982398)&lt;/script&gt;
+

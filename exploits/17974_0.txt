@@ -1,0 +1,2 @@
+http://www.example.com/auction/item.php?id=&#039;[SQL]
+http://www.example.com/auction/email_request.php?user_id=[malicious code]

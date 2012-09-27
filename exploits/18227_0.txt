@@ -1,0 +1,3 @@
+http://www.example.com/index.php?l=[XSS]
+http://www.example.com/forum.php?l=[XSS]
+http://www.example.com/articles.php?l=[XSS]

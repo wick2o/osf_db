@@ -1,0 +1,6 @@
+http://www.example.com/vwar/war.php?s=[SQL]
+http://www.example.com/vwar/war.php?page=[SQL]or[xss]
+http://www.example.com/vwar/war.php?showgame=[SQL]
+http://www.example.com/vwar/war.php?sortby=[sql]
+http://www.example.com/vwar/war.php?sortorder=[sql]
+http://www.example.com/vwar/calendar.php?year=[xss]

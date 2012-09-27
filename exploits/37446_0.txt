@@ -1,0 +1,1 @@
+http://www.example.com:82/public/proxy.php?url=&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;

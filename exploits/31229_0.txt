@@ -1,0 +1,9 @@
+$ echo &quot;This is line 1&quot; &gt; file1
+$ echo &quot;file1line1&lt;TAB&gt;file1&lt;TAB&gt;:1|!touch gotcha&quot; &gt; tags
+$ ls
+file1   tags
+$ vi -t file1line1
+:q!
+$ ls
+file1   gotcha   tags
+$

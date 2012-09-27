@@ -1,0 +1,3 @@
+http://www.example.com/imagegallery/subList.asp?CatID=&#039;
+http://www.example.com/imagegallery/imageList.asp?CatID=2&amp;SubjectID=&#039;
+http://www.example.com/imagegallery/view.asp?CatID=1&amp;Pic=&#039;

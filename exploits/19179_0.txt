@@ -1,0 +1,5 @@
+http://www.example.com/phpbb/auction_room.php?ar=[num][sql]
+http://www.example.com/phpbb/auction_rating.php?mode=view&amp;u=[num][sql]
+http://www.example.com/phpbb/auction_store.php?mode=store&amp;u=[num][sql]
+http://www.example.com/phpbb/auction_room.php?order=price_asc&amp;ar=[num][sql]
+

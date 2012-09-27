@@ -1,0 +1,4 @@
+
+http://www.example.com/socialshare/save.php?title=&lt;XSS&gt;
+
+http://www.example.com/socialshare/save.php?url=&quot;&gt;&lt;XSS&gt;

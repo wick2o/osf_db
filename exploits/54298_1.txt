@@ -1,0 +1,9 @@
+lib/banners/bannerlib.php:28:                   $views = unserialize($_COOKIE[$cookieName]);
+ lib/banners/bannerlib.php:136:                  $views = unserialize($_COOKIE[$cookieName]);
+ tiki-print_multi_pages.php:19:          $printpages = unserialize(urldecode($_REQUEST['printpages']));
+ tiki-print_multi_pages.php:24:          $printstructures = unserialize(urldecode($_REQUEST['printstructures']));
+ tiki-print_pages.php:31:        $printpages = unserialize(urldecode($_REQUEST["printpages"]));
+ tiki-print_pages.php:32:        $printstructures = unserialize(urldecode($_REQUEST['printstructures']));
+ tiki-send_objects.php:42:       $sendpages = unserialize(urldecode($_REQUEST['sendpages']));
+ tiki-send_objects.php:48:       $sendstructures = unserialize(urldecode($_REQUEST['sendstructures']));
+ tiki-send_objects.php:54:       $sendarticles = unserialize(urldecode($_REQUEST['sendarticles']));

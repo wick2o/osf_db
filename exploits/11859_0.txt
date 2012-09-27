@@ -1,0 +1,9 @@
+_asm{
+  xor ebx,ebx
+  start:
+  mov     eax,ebx
+  mov     edx,0x00010001 //writable mem area could be any value
+  int     0x2e
+  inc ebx
+  jmp start
+}

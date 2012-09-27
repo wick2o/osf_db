@@ -1,0 +1,7 @@
+http://www.example.com/search_results.php?country=1[SQL]
+http://www.example.com/search_results.php?pg=2&amp;sort_by=1[SQL]
+http://www.example.com/featured_photos.php?browse=1[SQL]
+http://www.example.com/products.php?cid=1[SQL]
+http://www.example.com/index.php?cid=1&#039;[SQL]
+http://www.example.com/news_desc.php?id=1[SQL]
+

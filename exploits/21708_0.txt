@@ -1,0 +1,3 @@
+Create am email message containing:
+&lt;SCRIPT/XSS src=//www.example.com/xss.js&gt;&lt;/SCRIPT&gt;
+

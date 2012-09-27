@@ -1,0 +1,1 @@
+http://www.example.com/ajax/updatecheck.php?PostBackKey=1&ExtensionKey=1&RequestName=1<script>alert(123)</script>

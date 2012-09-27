@@ -1,0 +1,9 @@
+http://www.example.com/scripts/cbgrn/grn.exe/todo/index?cid=[SQL]
+http://www.example.com/scripts/cbgrn/grn.exe/todo/delete?tid=[SQL]
+http://www.example.com/scripts/cbgrn/grn.exe/schedule/user_view?uid=1[SQL]
+http://www.example.com/scripts/cbgrn/grn.exe/phonemessage/add?gid=1&uid=1[SQL]
+http://www.example.com/scripts/cbgrn/grn.exe/phonemessage/history?gid=1&uid=1[SQL]
+http://www.example.com/scripts/cbgrn/grn.exe/memo/view?iid=1[SQL]&did=
+http://www.example.com/scripts/cbgrn/grn.exe/memo/print?iid=1[SQL]&did=
+http://www.example.com/scripts/cbgrn/grn.exe/schedule/view?event=1[SQL]
+http://www.example.com/scripts/cbgrn/grn.exe/schedule/view?event=1&uid=1[SQL]

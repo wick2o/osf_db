@@ -1,0 +1,2 @@
+http://www.example.com/wp/?s=&lt;/script&gt;&lt;script&gt;alert(0)&lt;/script&gt;
+http://www.example.com/wp/?s=&quot;);alert(0);document.write(&quot;

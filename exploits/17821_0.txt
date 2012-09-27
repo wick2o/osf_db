@@ -1,0 +1,3 @@
+http://www.example.com/custdemos/cmuuugy61u0m/index.php?action=add&amp;transtype=|SQL]
+http://www.example.com/custdemos/cmuuugy61u0m/index.php?action=edit&amp;start=0&amp;transtype=1&amp;entry=|SQL|
+

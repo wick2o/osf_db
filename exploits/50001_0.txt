@@ -1,0 +1,2 @@
+http://www.example.com/activecms/admin/admin?action=module&amp;mod=&#039;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+

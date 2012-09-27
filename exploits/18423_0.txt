@@ -1,0 +1,3 @@
+http://www.example.com/wbb2/profile.php?userid=[SQL]
+http://www.example.com/studienplatztausch.php?sid=[SQL]
+http://www.example.com/wbb2/thread.php?threadid=[SQL]

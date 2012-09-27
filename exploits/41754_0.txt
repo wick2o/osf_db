@@ -1,0 +1,2 @@
+http://www.example.com/ez_blog/index.php?act=bmonth&m=12&yr=&lt;script&gt;alert(1)&lt;/script&gt;
+

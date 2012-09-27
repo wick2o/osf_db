@@ -1,0 +1,10 @@
+1.  Install Drupal 6-19, CCK module, and Embedded Media Field module version 6.x-1.25
+2.  Enable the Content, Embedded Media Field, Embedded Media Thumbnail and Embedded Video Field modules from ?q=/admin/build/modules
+3.  Alter the default 'Story' content type at ?q=admin/content/node-type/story/fields
+4.  Add a 'New Field' in the form at the bottom of this page with the label 'video' the field name 'field_video' the type 'Embedded Video' and the form element '3rd Party Video' then click the 'Save' button
+5.  Configure the new video field from ?q=admin/content/node-type/story/fields/field_video
+6.  Select YouTube as a content provider for convenience and be sure 'Allow custom thumbnails for this field' is checked and click 'Save field settings' button at the bottom of the form
+7.  Create a new piece of story content from ?q=node/add/story entering arbitrary values.  For the 'Video custom thumbnail' choose an image with
+a name like "<image src='no.jpg' onerror='alert("xss")'>.png" and click the 'Upload' button
+8.  Observe the rendered javascript alert dialogue
+9.  Click the 'Save' button so that the XSS persists to future node edits

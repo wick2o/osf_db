@@ -1,0 +1,1 @@
+http://www.example.com/index.php/?mmod=&gt;&quot;&#039;&gt;&lt;script&gt;alert(4135)&lt;/script&gt;&amp;file=&gt;&quot;&#039;&gt;&lt;script&gt;alert(4135)&lt;/script&gt;

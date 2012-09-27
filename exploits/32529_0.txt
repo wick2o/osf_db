@@ -1,0 +1,1 @@
+http://www.example.com/[patch]/blog.asp?=&gt;&quot;&#039;&gt;&lt;ScRiPt&gt;alert(1369)&lt;/ScRiPt&gt;

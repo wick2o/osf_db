@@ -1,0 +1,6 @@
+drop table if exists `t1`;
+create table `t1`(`a` int)engine=myisam;
+insert into `t1` values (1);
+/*crash1*/select (`a` in (`a`,`a`)) from `t1` group by `a` with rollup;
+/*crash2*/select (case (`a`) when (`a`) then (`a`) end) as `a` from `t1` group by `a`
+with rollup;

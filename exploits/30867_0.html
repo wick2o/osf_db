@@ -1,0 +1,9 @@
+&lt;script runat=&quot;server&quot;&gt;
+void Page_Load(object o, EventArgs e) {
+    // Query parameter text is not checked before saving in user cookie
+    NameValueCollection request = Request.QueryString;
+
+    // Adding cookies to the response
+    Response.Cookies[&quot;userName&quot;].Value = request[&quot;text&quot;]; 
+}
+&lt;/script&gt;

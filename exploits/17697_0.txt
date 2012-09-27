@@ -1,0 +1,2 @@
+http://www.example.com/dcforum/dcboard.cgi?az=[XSS]
+http://www.example.com/dcforum/dcboard.cgi?az=[SQL]

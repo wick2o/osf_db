@@ -1,0 +1,1 @@
+http://www.example.com:6100/StoresAndCalendars List.cgi?session=%d%d%d%d%d

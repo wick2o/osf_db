@@ -1,0 +1,7 @@
+A malicious user with local write access (such as an FTP user on shared
+hosting environments) may create two directories
+  &lt;/
+  a&gt;&lt;script&gt;alert(&quot;XSS&quot;)&lt;/
+and create a file named
+  script&gt;.php
+in the latter directory, then access this file via HTTP.

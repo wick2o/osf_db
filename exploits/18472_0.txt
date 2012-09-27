@@ -1,0 +1,1 @@
+http://www.example.com/vz/forum.php?UserID=1&MainID=[sql]&Page=

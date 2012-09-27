@@ -1,0 +1,17 @@
+<textarea cols="0" rows="0" id="x_OtherInfo" name="x_OtherInfo"></textarea> 
+  <script> 
+       var textarea = document.getElementsByName("x_OtherInfo"); 
+       textarea=textarea.item(0); 
+           var htmlarea = document.createElement("div"); 
+       htmlarea.className = "htmlarea";  
+       textarea.parentNode.insertBefore(htmlarea, textarea); 
+       var iframe = document.createElement("iframe"); 
+       htmlarea.appendChild(iframe);
+            var doc = iframe.contentWindow.document; 
+                 doc.designMode = "on"; 
+                 doc.open(); 
+                 doc.write("<iframe src=''>");
+          iframe.contentWindow.focus() 
+  doc.close(); 
+  </script>
+</textarea>

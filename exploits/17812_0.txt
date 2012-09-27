@@ -1,0 +1,3 @@
+http://www.example.com/index.php?path=/etc
+http://www.example.com/index.ph?path=/tmp
+http://www.example.com/index.php?path=[XSS]

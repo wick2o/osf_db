@@ -1,0 +1,6 @@
+Insert in your message :
+
+<script>alert("Hacked by mdk")</script>
+
+then go to monochat_affichage.php3
+

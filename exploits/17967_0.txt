@@ -1,0 +1,4 @@
+http://www.example.com/index.php?rep=[xss]
+http://www.example.com/diapo.php?rep=[xss]
+http://www.example.com/affich.php?image=[xss]
+http://www.example.com/index.php?rep=../../../

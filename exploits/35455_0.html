@@ -1,0 +1,16 @@
+&lt;STYLE&gt;@import &#039;javascript:alert(&quot;xss1&quot;)&#039;;&lt;/STYLE&gt;
+&lt;IMG SRC=javascript:alert(&#039;XSS2&#039;)&gt;
+&lt;BODY BACKGROUND=&quot;javascript:alert(&#039;XSS3&#039;)&quot;&gt;
+&lt;LINK REL=&quot;stylesheet&quot; HREF=&quot;javascript:alert(&#039;XSS4&#039;);&quot;&gt;
+&lt;META HTTP-EQUIV=&quot;refresh&quot; CONTENT=&quot;0;url=javascript:alert(&#039;XSS5&#039;);&quot;&gt;
+&lt;IFRAME SRC=&quot;javascript:alert(&#039;XSS6&#039;);&quot;&gt;&lt;/IFRAME&gt;
+&lt;DIV STYLE=&quot;background-image: url(javascript:alert(&#039;XSS7&#039;))&quot;&gt;
+&lt;STYLE&gt;.XSS{background-image:url(&quot;javascript:alert(&#039;XSS8&#039;)&quot;);}&lt;/STYLE&gt;&lt;A CLASS=XSS&gt;&lt;/A&gt;
+&lt;STYLE type=&quot;text/css&quot;&gt;BODY{background:url(&quot;javascript:alert(&#039;XSS9&#039;)&quot;)}&lt;/STYLE&gt;
+&lt;OBJECT classid=clsid:ae24fdae-03c6-11d1-8b76-0080c744f389&gt;&lt;param name=url value=javascript:alert(&#039;XSS10&#039;)&gt;&lt;/OBJECT&gt;
+&lt;STYLE&gt;@import&#039;http://example.com/xss.css&#039;;&lt;/STYLE&gt;
+&lt;script SRC=&quot;javascript:alert(&#039;xss11&#039;);&quot;&gt;&lt;/script&gt;
+&lt;video SRC=&quot;javascript:alert(&#039;xss12&#039;);&quot;&lt;/video&gt;
+&lt;LAYER SRC=&quot;javascript:alert(&#039;xss13&#039;)&quot;&gt;&lt;/LAYER&gt;
+&lt;embed src=&quot;javascript:alert(&#039;xss14&#039;)&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; width=&quot;0&quot; height=&quot;0&quot;&gt;&lt;/embed&gt;
+&lt;applet src=&quot;javascript:alert(&#039;xss15&#039;)&quot; type=text/html&gt;

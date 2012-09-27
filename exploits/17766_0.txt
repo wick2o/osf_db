@@ -1,0 +1,2 @@
+http://www.example.com/signup.php?referral=[XSS]
+http://www.example.com/members.php?login=r0t&amp;p=pwd&amp;func=useinvestplan&amp;id=[XSS]

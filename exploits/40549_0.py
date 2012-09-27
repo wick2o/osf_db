@@ -1,0 +1,1 @@
+http://www.exmaple.com/NonExistantUser?action=edit?template=<script>alert(document.cookie);</script>

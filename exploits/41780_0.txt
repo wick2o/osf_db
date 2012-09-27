@@ -1,0 +1,1 @@
+&lt;marquee&gt;&lt;h1&gt;XSS3d By D4rk357&lt;/h1&gt;&lt;marquee&gt;

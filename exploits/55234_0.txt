@@ -1,0 +1,5 @@
+javascript:document.location.replace('http://'+exampleIP+'/home.htm&apos;);
+
+javascript:document.cookie="2L:CH3ENAS"
+
+javascript:document.location.replace('http://'+exampleIP+'/index.html&apos;);

