@@ -43,7 +43,7 @@ if __name__ == "__main__":
 				cur.execute('select vulnerable_yes.bid, vulnerable_yes.info, exploits.class, exploits.remote, exploits.local, exploit_files.info from vulnerable_yes INNER JOIN exploits on vulnerable_yes.bid = exploits.bid INNER JOIN exploit_files on vulnerable_yes.bid = exploit_files.bid where vulnerable_yes.info = "' + args.software_string + '" and vulnerable_yes.info not like "-%" and vulnerable_yes.info not like "+%" and exploits.remote = "No" and exploits.local = "Yes" order by vulnerable_yes.bid desc')
 			rows = cur.fetchall()
 			for row in rows:
-				print "Class: %s Remote: %s Local %s File: ./explots/%s" % (row[2],row[3],row[4],row[5])
+				print "Class: %s Remote: %s Local %s File: ./exploits/%s" % (row[2],row[3],row[4],row[5])
 
 	except sql.Error, e:
 		print "Error %s:" % (e.args[0])
